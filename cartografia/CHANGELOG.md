@@ -7,6 +7,23 @@ Formato:
 
 ---
 
+## [2026-04-25] v0.6.0 — Sync con grafo storie v0.10.0 (S1-S12)
+
+Allineamento alla nuova versione del grafo storie (v0.6.0 → v0.10.0, +S9-S12). S1-S8 invariate. Backward-compat 100% mantenuta.
+
+**Modifiche puntuali:**
+- **Aggiunta** `radura_dei_pini` (Polygon, `provvisorio`, quartiere `terra`) — landmark interno alla Foresta Intrecciata, margine NE verso i Pascoli Alti. Citato in S12 (threshold_moment, resolution_mode, visual_anchors hook_04).
+- **Promotion** `sentiero_roccia_burrone` da `provvisorio` a `canonico`. Giustificazione S12: "la cengia che sale a Roccia Alta — i fratelli la sanno senza che nessuno la indichi".
+- **Annotazione** in `roccia_alta.note`: la "cengia" di S12 coincide con `sentiero_roccia_burrone` (non entità autonoma).
+- **Alias** `guado_nord` aggiunto a `guado_di_pietre_piatte` (citato in S12: "guado nord dove l'acqua trema piano").
+- **Decisione richiamata:** "casa_fratelli non entity, l'isola è protagonista" (blocco_0). Il "cortile" citato in `s10.wind_notes` non è mappato per coerenza.
+
+**Stato:** 104 feature totali. Grafo↔cartografia: 35/35 ID coperti.
+
+**Nota operativa:** Ray ha annunciato manutenzione imminente sul grafo storie. La versione manutenuta diventerà la nuova baseline; eventuali incoerenze emerse da quella manutenzione si risolveranno in v0.6.x o v0.7.
+
+---
+
 ## [2026-04-24] v0.5 — Mappa urbanistica completa navigabile
 
 **Decisione (Ray):** chiusura sessione con mappa urbanistica stampabile, navigabile come Google Maps — "così posso percorrere i sentieri con la mente".

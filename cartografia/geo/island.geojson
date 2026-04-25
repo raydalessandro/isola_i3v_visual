@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "version": "0.5",
-    "date": "2026-04-24",
+    "version": "0.6.0",
+    "date": "2026-04-25",
     "project": "Isola dei Tre Venti - Cartografia Tecnica",
     "coordinate_system": "WGS84 (EPSG:4326)",
     "anchor_lat_origin": 34.4685,
@@ -36,7 +36,15 @@
       "ogni_edificio_raggiungibile": true,
       "fascia_costiera_nord": "inaccessibile normalmente (oltre la Sorgente)",
       "braccio_est_silente": "sentiero riva est esiste ma poco battuto"
-    }
+    },
+    "changes_from_v0_5": [
+      "Sync con grafo storie v0.10.0 (S1-S12). Backward-compat 100% mantenuta.",
+      "Nuovo landmark radura_dei_pini (Polygon, provvisorio, quartiere terra) interno alla Foresta Intrecciata, margine NE verso Pascoli Alti — citato in S12.",
+      "Promotion sentiero_roccia_burrone da provvisorio a canonico (giustificazione S12: la cengia che sale a Roccia Alta).",
+      "Annotazione su roccia_alta.note: la cengia di S12 coincide con sentiero_roccia_burrone, non e' entita' autonoma.",
+      "Alias guado_nord aggiunto a guado_di_pietre_piatte (citato in S12: 'guado nord dove l'acqua trema piano').",
+      "Decisione richiamata: 'casa_fratelli non entity, l'isola e' protagonista' (blocco_0). Il 'cortile' citato in s10.wind_notes non e' mappato per coerenza con questa decisione."
+    ]
   },
   "features": [
     {
@@ -1367,7 +1375,10 @@
         "type": "ford",
         "status": "canonico",
         "quarter": "aria",
-        "note": "Sul tratto Capo. Unico passaggio pedonale dell'anello fluviale. Acqua bassa d'estate, pietre piatte affioranti a distanza di passo. Canonico Bible §8. Partenza S7."
+        "note": "Sul tratto Capo. Unico passaggio pedonale dell'anello fluviale. Acqua bassa d'estate, pietre piatte affioranti a distanza di passo. Canonico Bible §8. Partenza S7.",
+        "aliases": [
+          "guado_nord"
+        ]
       },
       "geometry": {
         "type": "Point",
@@ -3909,7 +3920,7 @@
         "status": "canonico",
         "quarter": "aria",
         "elevation_m": 550,
-        "note": "Sperone roccioso panoramico. ~2h a piedi dal Villaggio. Si vede tutta l'isola."
+        "note": "Sperone roccioso panoramico. ~2h a piedi dal Villaggio. Si vede tutta l'isola. La via di accesso da sud (S12: \"la cengia che sale a Roccia Alta\") coincide con il sentiero canonico sentiero_roccia_burrone — la \"cengia\" non e' entita' autonoma, e' la salita stessa vista dal lato Burrone."
       },
       "geometry": {
         "type": "Point",
@@ -4193,10 +4204,10 @@
         "id": "sentiero_roccia_burrone",
         "name": "Sentiero Roccia-Burrone",
         "type": "path",
-        "status": "provvisorio",
+        "status": "canonico",
         "quarter": "aria",
         "category": "sentiero_montano",
-        "note": "Prosecuzione Via che Sale oltre Roccia Alta, sale al Burrone alla Grotta di Grunto."
+        "note": "Prosecuzione Via che Sale oltre Roccia Alta, sale al Burrone alla Grotta di Grunto. Promosso a canonico in v0.6.0: in S12 (resolution_mode) e' \"la cengia che sale a Roccia Alta — i fratelli la sanno senza che nessuno la indichi\" — peso architettonico massimo (threshold di Gabriel sulla Roccia Alta)."
       },
       "geometry": {
         "type": "LineString",
@@ -5853,6 +5864,60 @@
             34.526158
           ]
         ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.985406,
+              34.503365
+            ],
+            [
+              17.985297,
+              34.50359
+            ],
+            [
+              17.984969,
+              34.503635
+            ],
+            [
+              17.984641,
+              34.50359
+            ],
+            [
+              17.984531,
+              34.503365
+            ],
+            [
+              17.984641,
+              34.50314
+            ],
+            [
+              17.984969,
+              34.503095
+            ],
+            [
+              17.985297,
+              34.50314
+            ],
+            [
+              17.985406,
+              34.503365
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": "radura_dei_pini",
+        "name": "Radura dei Pini",
+        "type": "clearing",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Radura interna alla Foresta Intrecciata, margine NE verso i Pascoli Alti. Citato in S12 come tappa del cammino verso il Concerto: \"attraversano la radura dei pini caduti e i Pascoli Alti vuoti, su fino al Burrone\" (threshold_moment) e \"non rifanno la radura dei pini\" (resolution_mode). Visual_anchor S12.hook_04: pini neri verticali in piedi, foglie autunnali cadute sugli aghi di pino. \"Caduti\" si riferisce alle foglie autunnali, non ai tronchi. Estensione e perimetro provvisori, da raffinare."
       }
     }
   ]

@@ -20,12 +20,20 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 - README di radice riscritto per riflettere il nuovo scope.
 - **`AGENT_INSTRUCTIONS.md` rifattorizzato in cartella `skills/`**: orchestratore (`skills/README.md` con regole comuni), `skills/cartografo.md` (skill cartografia, scope `cartografia/`), `skills/visual.md` (skill visual, scope `visual/`, in attesa brief Ray). L'agente sceglie una skill per task e si attiene al proprio scope di scrittura.
 
-**Subito dopo il bootstrap (in questa stessa sessione):**
-- Diff grafo v0.6.0 → v0.10.0: storie e location nuove (S9-S12, eventuali aggiornamenti a S1-S8).
-- Verificare backward-compat 100% grafo v0.10.0 ↔ cartografia v0.5.
-- Estrarre riferimenti geografici da S9-S12 (sub-agente per non saturare il contesto).
-- Proporre a Ray nuove feature / alias / sentieri / aggiornamenti `status`.
-- Bump cartografia (probabile v0.5 → v0.6).
+**Cartografia v0.5 → v0.6.0 (sync grafo v0.10.0):**
+- Diff grafo: S1-S8 identiche; S9-S12 nuove ma riusano i 35 ID di luogo già esistenti. 0 location aggiunte/rimosse formalmente.
+- Backward-compat grafo↔cartografia: 100% verificata (pre e post modifiche).
+- Estrazione esaustiva toponimi S9-S12 (24 distinti, 21 coperti, 2 orfani veri, 1 ambiguo).
+- Modifiche cartografiche puntuali (vedi `cartografia/CHANGELOG.md` v0.6.0):
+  - Aggiunta `radura_dei_pini` (Polygon provvisorio, dentro Foresta Intrecciata).
+  - Promotion `sentiero_roccia_burrone` provvisorio→canonico.
+  - Annotazione cengia su `roccia_alta.note`.
+  - Alias `guado_nord` → `guado_di_pietre_piatte`.
+- Creato `SYNC_LOG.md` in radice per tracciare i cambiamenti che impattano altre repo del sistema.
+
+**Pendente (prossima sessione):**
+- **Manutenzione grafo storie** (annunciata da Ray): la versione manutenuta diventerà la nuova baseline. Possibili incoerenze emerse si risolveranno in v0.6.x o v0.7.
+- **Visual:** brief Ray atteso. Setup struttura `visual/` posticipato.
 
 ---
 
@@ -45,12 +53,13 @@ Sessione dedicata alla **nascita e costruzione della cartografia tecnica**, da z
 
 ## Stato attuale
 
-- **Cartografia:** `cartografia/geo/island.geojson` v0.5 — 103 feature.
-- **Grafo storie:** `pipeline_narrativa/story_graph.json` v0.10.0 — 12 storie S1-S12 (sync con cartografia da verificare).
-- **Visual:** `visual/` directory creata, contenuto da definire.
+- **Cartografia:** `cartografia/geo/island.geojson` **v0.6.0** — 104 feature (+1 radura).
+- **Grafo storie:** `pipeline_narrativa/story_graph.json` v0.10.0 — 12 storie S1-S12.
+- **Visual:** `visual/` directory creata, contenuto da definire (brief Ray atteso).
 - **Documenti progetto:** corpus canonico completo in `pipeline_narrativa/documenti_progetto/` (Bible, Glossario, voce, pattern AI da bandire, archi 12 storie, EAR framework, ecc.).
 - **Apparato:** v0.2, trattato come giacimento di estrazione non autoritativo (vedi disclaimer).
-- **Backward-compatibility grafo ↔ cartografia:** verificata al 100% per v0.6.0; **da riverificare per v0.10.0**.
+- **Backward-compatibility grafo ↔ cartografia:** **100%** (35/35 ID coperti, verificata 2026-04-25).
+- **SYNC_LOG.md:** attivo in radice per tracciare cambiamenti cross-repo.
 
 ---
 
