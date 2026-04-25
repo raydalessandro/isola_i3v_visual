@@ -84,6 +84,45 @@ def geo_metadata(feat):
     }
 
 
+def path_metadata(feat):
+    """Metadati specializzati per LineString (strade): lunghezza, endpoints, n_punti."""
+    base = geo_metadata(feat)
+    g = feat["geometry"]
+    if g["type"] != "LineString":
+        return base
+    coords_local = [to_local_meters(*c[:2]) for c in g["coordinates"]]
+    # Lunghezza: somma distanze euclidee fra punti consecutivi
+    length = 0.0
+    for i in range(len(coords_local) - 1):
+        x0, y0 = coords_local[i]
+        x1, y1 = coords_local[i + 1]
+        length += math.hypot(x1 - x0, y1 - y0)
+    a = coords_local[0]
+    b = coords_local[-1]
+    base.update({
+        "lunghezza_m_local": round(length),
+        "n_punti": len(coords_local),
+        "endpoint_a_m": [round(a[0]), round(a[1])],
+        "endpoint_b_m": [round(b[0]), round(b[1])],
+        "endpoints_inferiti_dal_id": _parse_endpoints_from_id(feat["properties"].get("id", "")),
+    })
+    return base
+
+
+def _parse_endpoints_from_id(fid):
+    """Estrai token semantici dall'id strada (rimosso prefix sentiero_/viottolo_).
+
+    Approccio greedy: split su '_' e ritorno la lista. Indicativo, non autoritativo —
+    serve solo come hint per consultazione veloce. Il body della scheda chiarisce.
+    """
+    s = fid
+    for prefix in ("sentiero_", "viottolo_", "via_"):
+        if s.startswith(prefix):
+            s = s[len(prefix):]
+            break
+    return s.split("_")
+
+
 # ------------------------------------------------------------------ structures
 
 # Mappatura sottotipi personaggi (da entities.characters.*.type)
@@ -94,6 +133,16 @@ CHAR_TYPE_TO_SUBTYPE = {
     "cucciolo_scuola": "cuccioli",
     "abitante_minore_mestiere": "secondari",
     "gruppo_istituzione": "collettivo",
+}
+
+# Mappatura quarter (GeoJSON) -> nome cartella visual/luoghi/<x>/
+QUARTER_TO_FOLDER = {
+    "centro": "villaggio_centrale",
+    "terra": "quartiere_terra",
+    "fuoco": "quartiere_fuoco",
+    "acqua": "quartiere_acqua",
+    "aria": "quartiere_aria",
+    "perimetro": "perimetro",
 }
 
 # Albero geografico frattale (chiave = parent path relativo a visual/luoghi/)
@@ -513,7 +562,91 @@ def main():
         }
         write(folder, meta)
 
-    # 6) CATALOGO MD
+    # 6) STRADE (sentieri/viottoli del GeoJSON, NON in entities.locations)
+    strade_per_quartiere = {}  # per indice
+    for f in geo["features"]:
+        p = f["properties"]
+        fid = p.get("id", "")
+        if not any(fid.startswith(prefix) for prefix in ("sentiero_", "viottolo_")):
+            continue
+        if fid in graph["entities"]["locations"]:
+            continue  # gia' gestito come location del grafo (vie principali)
+        quarter = p.get("quarter")
+        sub = QUARTER_TO_FOLDER.get(quarter)
+        if not sub:
+            print(f"[warn] strada {fid} ha quarter '{quarter}' non mappato — skip")
+            continue
+        folder = VISUAL / "luoghi" / sub / "strade" / fid
+        gmeta = path_metadata(f)
+        meta = {
+            "id": fid,
+            "name": p.get("name", fid.replace("_", " ").title()),
+            "famiglia": "luogo",
+            "sottotipo": "strada",
+            "categoria_strada": p.get("category"),
+            "quartiere": quarter,
+            "status": "stub",
+            "ultima_modifica": today,
+            "fonti": [
+                f"cartografia/geo/island.geojson#features.id={fid}",
+            ],
+            "appare_in_storie": [],
+            "cartografia": gmeta,
+        }
+        write(folder, meta)
+        strade_per_quartiere.setdefault(sub, []).append({
+            "id": fid,
+            "name": p.get("name", fid),
+            "category": p.get("category"),
+            "status": p.get("status"),
+            "lunghezza_m": gmeta.get("lunghezza_m_local"),
+            "endpoint_a_m": gmeta.get("endpoint_a_m"),
+            "endpoint_b_m": gmeta.get("endpoint_b_m"),
+            "path": str((folder / "scheda.md").relative_to(ROOT)),
+        })
+
+    # 6b) Indice strade
+    idx_lines = [
+        "# Indice strade",
+        "",
+        "Generato automaticamente da `scripts/build_visual_skeleton.py`. Non modificare a mano.",
+        "",
+        "Le **5 Vie principali** (canoniche, in `entities.locations`) sono catalogate paritetiche con gli altri luoghi del rispettivo quartiere — non in questo indice. Qui solo le **strade secondarie** (solo cartografiche).",
+        "",
+    ]
+    quartiere_label = {
+        "villaggio_centrale": "centro",
+        "quartiere_terra": "terra",
+        "quartiere_fuoco": "fuoco",
+        "quartiere_acqua": "acqua",
+        "quartiere_aria": "aria",
+        "perimetro": "perimetro / inter-quartiere",
+    }
+    quartiere_order = ["villaggio_centrale", "quartiere_terra", "quartiere_fuoco",
+                       "quartiere_acqua", "quartiere_aria", "perimetro"]
+    total_strade = sum(len(v) for v in strade_per_quartiere.values())
+    idx_lines.append(f"Totale strade: **{total_strade}**.\n")
+    for q in quartiere_order:
+        if q not in strade_per_quartiere:
+            continue
+        rows = sorted(strade_per_quartiere[q], key=lambda r: (r["status"] or "", r["id"]))
+        label = quartiere_label.get(q, q)
+        idx_lines.append(f"## Quartiere {label} ({len(rows)})")
+        idx_lines.append("")
+        idx_lines.append("| id | nome | category | status | len m | endpoint A → B | scheda |")
+        idx_lines.append("|---|---|---|---|---|---|---|")
+        for r in rows:
+            ea = r["endpoint_a_m"] or [None, None]
+            eb = r["endpoint_b_m"] or [None, None]
+            ep = f"({ea[0]},{ea[1]}) → ({eb[0]},{eb[1]})"
+            rel_link = r["path"].replace("visual/", "", 1)
+            idx_lines.append(
+                f"| `{r['id']}` | {r['name']} | {r['category'] or ''} | {r['status']} | {r['lunghezza_m']} | {ep} | [`{r['path']}`](./{rel_link}) |"
+            )
+        idx_lines.append("")
+    (VISUAL / "luoghi" / "_strade_index.md").write_text("\n".join(idx_lines), encoding="utf-8")
+
+    # 7) CATALOGO MD
     catalog_rows.sort(key=lambda r: (r["famiglia"] or "", r["sottotipo"] or "", r["id"]))
     lines = [
         "# Catalogo entita' visual",

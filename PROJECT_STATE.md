@@ -47,8 +47,15 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 - `skills/README.md` aggiunto `scripts/` come directory condivisa.
 - `visual/README.md` + `visual/_template_scheda.md` + `visual/catalogo.md` (auto-rigenerabile).
 
+**Visual — strade aggiunte (stessa sessione):**
+- Esteso `scripts/build_visual_skeleton.py` con sezione strade + funzione `path_metadata()` (lunghezza, endpoints) + generazione `visual/luoghi/_strade_index.md`.
+- 31 strade secondarie create come schede stub in `<quartiere>/strade/<id>/`. Le 5 Vie principali (in `entities.locations`) restano paritetiche.
+- Distribuzione: centro 4, terra 9, fuoco 2, acqua 6, aria 4, perimetro 6.
+- Frontmatter strade arricchito con metadati cartografici specifici (`lunghezza_m_local`, `n_punti`, `endpoint_a_m`, `endpoint_b_m`, `categoria_strada`).
+- **Totale schede visual: 112** (era 81, +31 strade).
+
 **Pendente per visual:**
-- Estrazione contenuti body schede per famiglia (sub-agenti) — popolare le 81 schede stub partendo da grafo + Bible + altri doc.
+- Estrazione contenuti body schede per famiglia (sub-agenti). **In corso:** sub-agente background sui 3 bambini (gabriel, elias, noah) come prima famiglia di test.
 - Generazione immagini di riferimento (modello/i da decidere caso per caso).
 - Static site interno (tecnologia da definire).
 

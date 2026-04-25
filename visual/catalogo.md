@@ -2,7 +2,7 @@
 
 Generato automaticamente da `scripts/build_visual_skeleton.py`. Non modificare a mano: rilanciare lo script.
 
-Totale schede: **81**.
+Totale schede: **112**.
 
 | id | nome | famiglia | sottotipo | status | path |
 |---|---|---|---|---|---|
@@ -44,6 +44,37 @@ Totale schede: **81**.
 | `bocca` | Bocca | luogo | river_mouth | stub | [`visual/luoghi/quartiere_acqua/bocca/scheda.md`](./luoghi/quartiere_acqua/bocca/scheda.md) |
 | `fiume_che_gira` | Fiume che Gira | luogo | river_system | stub | [`visual/luoghi/perimetro/fiume_che_gira/scheda.md`](./luoghi/perimetro/fiume_che_gira/scheda.md) |
 | `piazza_villaggio` | Piazza del Villaggio | luogo | square | stub | [`visual/luoghi/villaggio_centrale/piazza_villaggio/scheda.md`](./luoghi/villaggio_centrale/piazza_villaggio/scheda.md) |
+| `sentiero_al_guado` | Sentiero al Guado | luogo | strada | stub | [`visual/luoghi/quartiere_aria/strade/sentiero_al_guado/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_al_guado/scheda.md) |
+| `sentiero_capanne_pastori_pascoli` | Sentiero Capanne-Pascoli | luogo | strada | stub | [`visual/luoghi/quartiere_aria/strade/sentiero_capanne_pastori_pascoli/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_capanne_pastori_pascoli/scheda.md) |
+| `sentiero_casa_salvia_casa_zolla` | Sentiero Salvia-Zolla | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_casa_salvia_casa_zolla/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_casa_salvia_casa_zolla/scheda.md) |
+| `sentiero_casa_salvia_margine_foresta` | Sentiero Salvia-Margine Foresta | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_casa_salvia_margine_foresta/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_casa_salvia_margine_foresta/scheda.md) |
+| `sentiero_casa_zolla_tana_rovo` | Sentiero Casa Zolla-Tana Rovo | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_casa_zolla_tana_rovo/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_casa_zolla_tana_rovo/scheda.md) |
+| `sentiero_case_basse_bocca` | Sentiero Case Basse-Bocca | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_case_basse_bocca/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_case_basse_bocca/scheda.md) |
+| `sentiero_costiero_est` | Sentiero Costiero Est | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_costiero_est/scheda.md`](./luoghi/perimetro/strade/sentiero_costiero_est/scheda.md) |
+| `sentiero_costiero_ovest` | Sentiero Costiero Ovest | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_costiero_ovest/scheda.md`](./luoghi/perimetro/strade/sentiero_costiero_ovest/scheda.md) |
+| `sentiero_foresta_traversata_ovest` | Sentiero di traversata Foresta | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_foresta_traversata_ovest/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_foresta_traversata_ovest/scheda.md) |
+| `sentiero_forno_case_mattino` | Sentiero Forno-Case del Mattino | luogo | strada | stub | [`visual/luoghi/quartiere_fuoco/strade/sentiero_forno_case_mattino/scheda.md`](./luoghi/quartiere_fuoco/strade/sentiero_forno_case_mattino/scheda.md) |
+| `sentiero_forno_orti_diretto` | Sentiero Forno-Orti diretto | luogo | strada | stub | [`visual/luoghi/villaggio_centrale/strade/sentiero_forno_orti_diretto/scheda.md`](./luoghi/villaggio_centrale/strade/sentiero_forno_orti_diretto/scheda.md) |
+| `sentiero_fuoco_ring` | Viottolo del Quartiere di Fuoco | luogo | strada | stub | [`visual/luoghi/quartiere_fuoco/strade/sentiero_fuoco_ring/scheda.md`](./luoghi/quartiere_fuoco/strade/sentiero_fuoco_ring/scheda.md) |
+| `sentiero_orti_casa_salvia` | Sentiero Orti-Casa Salvia | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_casa_salvia/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_casa_salvia/scheda.md) |
+| `sentiero_orti_casa_zolla` | Sentiero Orti-Casa Zolla | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_casa_zolla/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_casa_zolla/scheda.md) |
+| `sentiero_orti_tana_rovo` | Sentiero Orti-Tana | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_tana_rovo/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_tana_rovo/scheda.md) |
+| `sentiero_orti_torrente_foresta` | Sentiero Orti-Torrente | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_torrente_foresta/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_torrente_foresta/scheda.md) |
+| `sentiero_pascoli_burrone_diretto` | Sentiero Pascoli-Burrone | luogo | strada | stub | [`visual/luoghi/quartiere_aria/strade/sentiero_pascoli_burrone_diretto/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_pascoli_burrone_diretto/scheda.md) |
+| `sentiero_pontile_case_basse` | Sentiero Pontile-Case Basse | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_pontile_case_basse/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_pontile_case_basse/scheda.md) |
+| `sentiero_pontile_forno` | Sentiero Pontile-Forno | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_pontile_forno/scheda.md`](./luoghi/perimetro/strade/sentiero_pontile_forno/scheda.md) |
+| `sentiero_pontile_spiaggia` | Sentiero Pontile-Spiaggia | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_pontile_spiaggia/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_pontile_spiaggia/scheda.md) |
+| `sentiero_ritorno_bocca_orti` | Sentiero Bocca-Orti | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_ritorno_bocca_orti/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_ritorno_bocca_orti/scheda.md) |
+| `sentiero_riva_est_parziale` | Sentiero Riva Est parziale | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_riva_est_parziale/scheda.md`](./luoghi/perimetro/strade/sentiero_riva_est_parziale/scheda.md) |
+| `sentiero_riva_ovest` | Sentiero della Riva Ovest | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_riva_ovest/scheda.md`](./luoghi/perimetro/strade/sentiero_riva_ovest/scheda.md) |
+| `sentiero_roccia_burrone` | Sentiero Roccia-Burrone | luogo | strada | stub | [`visual/luoghi/quartiere_aria/strade/sentiero_roccia_burrone/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_roccia_burrone/scheda.md) |
+| `sentiero_roccia_orti_tangenziale` | Sentiero Roccia-Orti | luogo | strada | stub | [`visual/luoghi/perimetro/strade/sentiero_roccia_orti_tangenziale/scheda.md`](./luoghi/perimetro/strade/sentiero_roccia_orti_tangenziale/scheda.md) |
+| `sentiero_scogliera_casa_amo` | Sentiero Scogliera-Casa Amo | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_scogliera_casa_amo/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_scogliera_casa_amo/scheda.md) |
+| `sentiero_spiaggia_casa_amo` | Sentiero Spiaggia-Casa Amo | luogo | strada | stub | [`visual/luoghi/quartiere_acqua/strade/sentiero_spiaggia_casa_amo/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_spiaggia_casa_amo/scheda.md) |
+| `sentiero_tana_rovo_casa_salvia` | Sentiero Tana Rovo-Casa Salvia | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_tana_rovo_casa_salvia/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_tana_rovo_casa_salvia/scheda.md) |
+| `viottolo_perimetrale_piazza` | Viottolo Perimetrale della Piazza | luogo | strada | stub | [`visual/luoghi/villaggio_centrale/strade/viottolo_perimetrale_piazza/scheda.md`](./luoghi/villaggio_centrale/strade/viottolo_perimetrale_piazza/scheda.md) |
+| `viottolo_piazza_bottega_nodo` | Viottolo Piazza-Bottega Nodo | luogo | strada | stub | [`visual/luoghi/villaggio_centrale/strade/viottolo_piazza_bottega_nodo/scheda.md`](./luoghi/villaggio_centrale/strade/viottolo_piazza_bottega_nodo/scheda.md) |
+| `viottolo_piazza_casa_memolo` | Viottolo Piazza-Casetta Mèmolo | luogo | strada | stub | [`visual/luoghi/villaggio_centrale/strade/viottolo_piazza_casa_memolo/scheda.md`](./luoghi/villaggio_centrale/strade/viottolo_piazza_casa_memolo/scheda.md) |
 | `torrente_affluente_foresta` | Torrente della Foresta | luogo | stream | stub | [`visual/luoghi/quartiere_terra/foresta_intrecciata/torrente_affluente_foresta/scheda.md`](./luoghi/quartiere_terra/foresta_intrecciata/torrente_affluente_foresta/scheda.md) |
 | `burrone` | Burrone | luogo | valley | stub | [`visual/luoghi/quartiere_aria/burrone/scheda.md`](./luoghi/quartiere_aria/burrone/scheda.md) |
 | `zona_di_lavoro_salvia` | Zona di Lavoro di Salvia | luogo | work_area | stub | [`visual/luoghi/quartiere_terra/foresta_intrecciata/zona_di_lavoro_salvia/scheda.md`](./luoghi/quartiere_terra/foresta_intrecciata/zona_di_lavoro_salvia/scheda.md) |

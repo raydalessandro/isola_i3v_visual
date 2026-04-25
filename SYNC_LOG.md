@@ -55,6 +55,22 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-04-25-005 — Visual: aggiunta delle 31 strade (sentieri/viottoli)
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** visual
+- **Repo target:** n/a (interna).
+- **Cambiamento:**
+  - `scripts/build_visual_skeleton.py` esteso con sezione strade + helper `path_metadata()` (calcolo lunghezza euclidea, endpoint_a/b, n_punti, parsing token id).
+  - 31 schede stub aggiunte in `visual/luoghi/<quartiere>/strade/<id>/`. Le 5 Vie principali (`entities.locations`) restano paritetiche con gli altri luoghi del quartiere.
+  - File auto-generato `visual/luoghi/_strade_index.md` per consultazione veloce (tabella per quartiere con id, name, category, status, lunghezza, endpoints, link).
+  - Frontmatter strade contiene `categoria_strada` (top-level) + metadati cartografici estesi nel sotto-dizionario `cartografia` (lunghezza, n_punti, endpoint_a_m, endpoint_b_m, endpoints_inferiti_dal_id).
+- **Convenzione richiamata da Ray:** strade che attraversano piu' quartieri restano nel `quarter` indicato dal GeoJSON (tipicamente `perimetro`). Se in futuro l'organizzazione diventa scomoda, si valuta split per tratti.
+- **Commit:** _da inserire dopo commit_.
+- **File toccati:** `scripts/build_visual_skeleton.py`, `visual/luoghi/<vari>/strade/`, `visual/luoghi/_strade_index.md`, `visual/catalogo.md`, `skills/visual.md`, `PROJECT_STATE.md`.
+- **Da riflettere altrove:** quando il sito interno verrà costruito, dovrà includere anche le strade.
+
+---
+
 ## SYNC-2026-04-25-004 — Visual: bootstrap struttura entità + `scripts/`
 - **Stato:** DA_RIFLETTERE
 - **Tipo:** visual + governance

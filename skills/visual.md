@@ -56,7 +56,16 @@ visual/
 │       ├── fiume_che_gira/        + 6 sotto-tratti come sotto-cartelle
 │       │                          (capo, braccio_ovest_alto/medio/basso, stretta_due_massi,
 │       │                          braccio_est, guado_di_pietre_piatte)
-│       └── fascia_costiera/
+│       ├── fascia_costiera/
+│       └── strade/                strade perimetrali / inter-quartiere lunghe
+│
+│   <quartiere>/strade/            in OGNI quartiere: cartella per le strade
+│                                  secondarie del quartiere (sentieri, viottoli).
+│                                  Le 5 Vie principali (via_dell_alba/del_pontile/
+│                                  degli_orti/che_sale/scuola) sono in entities.locations
+│                                  del grafo, quindi paritetiche con i landmark — NON
+│                                  in strade/. Per panoramica veloce: visual/luoghi/
+│                                  _strade_index.md (auto-generato).
 │
 ├── oggetti/                       (13) flat
 ├── venti/                         (3) flat — taglio, intreccio, mulinello
@@ -64,7 +73,11 @@ visual/
 └── sito/                          static site (futuro)
 ```
 
-**Conteggio attuale:** 81 schede totali (23 personaggi + 41 luoghi + 13 oggetti + 3 venti + 1 visual_signature).
+**Conteggio attuale:** 112 schede totali (23 personaggi + 41 luoghi + **31 strade** + 13 oggetti + 3 venti + 1 visual_signature). Le strade vivono in `<quartiere>/strade/<id>/` (basate sul campo `quarter` del GeoJSON); le **5 Vie principali** in `entities.locations` del grafo restano paritetiche con gli altri luoghi del rispettivo quartiere. Per consultazione veloce: `visual/luoghi/_strade_index.md`.
+
+**Per le strade nel frontmatter** lo script aggiunge metadati specifici (`lunghezza_m_local`, `n_punti`, `endpoint_a_m`, `endpoint_b_m`, `endpoints_inferiti_dal_id`, `categoria_strada`).
+
+**Avvertenza nesting:** strade che attraversano più quartieri restano alla cartella indicata da `quarter` GeoJSON (tipicamente `perimetro`). Se in futuro l'organizzazione diventa scomoda, valutiamo lo split per tratti.
 
 **Cartella entità — contenuto canonico:**
 ```
