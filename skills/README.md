@@ -5,7 +5,9 @@ Questo è il **punto d'ingresso** per un agente IA che opera su questo repo. Con
 1. Le **regole comuni** che valgono per qualsiasi lavoro su questo progetto (sotto, §1-§5).
 2. Una **skill per ogni ambito di lavoro**, autosufficiente:
    - [`cartografo.md`](./cartografo.md) — manutenzione e estensione della cartografia tecnica.
-   - [`visual.md`](./visual.md) — descrizioni visive, vincoli prompt, immagini di riferimento, sito interno.
+   - [`visual/`](./visual/) — famiglia visual con sotto-skill specializzate:
+     - [`visual/README.md`](./visual/README.md) — skill generale: descrizioni visive, vincoli prompt, immagini di riferimento, sito interno.
+     - [`visual/compilatore.md`](./visual/compilatore.md) — sotto-skill: compilazione body schede entità da fonti canoniche, con principio "completa, non rimuovere".
 
 **Convenzione di lavoro:** quando inizi una sessione, Ray (o tu stesso, leggendo il task) **identifichi la skill** e ti attieni al suo scope. Non è un vincolo tecnico — è disciplina. Ray ti chiede esplicitamente di "stare nel tuo" quando hai un ruolo chiaro: leggi solo la skill che serve, non mescolarle, non scrivere fuori dal tuo scope se la skill non lo prevede.
 
@@ -38,10 +40,11 @@ Se pensi servano modifiche lì, **proponile a Ray, non farle**.
 
 Ogni skill ha il proprio scope di scrittura. Fuori scope = chiedi a Ray.
 
-| Skill | Scrive in | Non tocca |
+| Skill / sotto-skill | Scrive in | Non tocca |
 |---|---|---|
 | **cartografo** | `cartografia/`, `scripts/` (tool condivisi) | `visual/`, `pipeline_narrativa/` |
-| **visual** | `visual/`, `scripts/` (tool condivisi) | `cartografia/`, `pipeline_narrativa/` |
+| **visual** (famiglia) | `visual/`, `scripts/` (tool condivisi) | `cartografia/`, `pipeline_narrativa/` |
+| **visual / compilatore** | `visual/<famiglia>/.../<id>/scheda.md` (solo body) | tutto il resto |
 
 **`scripts/`** è directory di **tool Python condivisi** fra le skill. Vedi `scripts/README.md`. Idempotenti, dichiarano in testa quali path toccano. Quando uno script diventa stabile, citarlo come metodo uniformante nelle skill.
 

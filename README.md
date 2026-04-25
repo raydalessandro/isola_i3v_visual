@@ -42,7 +42,7 @@ Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern A
 
 Vedi `skills/README.md` (orchestratore) e le skill specifiche:
 - [`skills/cartografo.md`](./skills/cartografo.md) — manutenzione cartografia.
-- [`skills/visual.md`](./skills/visual.md) — descrizioni visive, prompt, sito interno.
+- [`skills/visual/`](./skills/visual/) — famiglia visual: [`README.md`](./skills/visual/README.md) (skill generale) + sotto-skill specializzate (es. [`compilatore.md`](./skills/visual/compilatore.md) per la compilazione delle schede entità).
 
 In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (`cartografia/` o `visual/`), non tocca mai `pipeline_narrativa/`, non decide canone narrativo, segnala invece di reinterpretare.
 

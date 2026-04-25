@@ -8,6 +8,20 @@
 
 ---
 
+## Sotto-skill della famiglia visual
+
+La skill visual si articola in sotto-skill specializzate per fasi operative. Quando un task ricade in una fase precisa, indossa la sotto-skill corrispondente e segui il suo file.
+
+| Sotto-skill | File | Scope operativo |
+|---|---|---|
+| **compilatore** | [`compilatore.md`](./compilatore.md) | Compila il body delle schede entità da fonti canoniche; completa i vuoti con inferenza marcata. |
+| _(futuro)_ prompter | _(da creare)_ | Genera prompt operativi per IA generative a partire dalle schede. |
+| _(futuro)_ generatore_immagini | _(da creare)_ | Cura immagini di riferimento (4 vedute 3D + variazioni IA). |
+
+Aggiungi nuove sotto-skill solo quando servono effettivamente. Niente sovrapproduzione.
+
+---
+
 ## 1. Struttura `visual/`
 
 Ogni entità è una **cartella autocontenuta** con `scheda.md` + `immagini/` + eventuali file di espansione (prompt dedicati, varianti, riferimenti). I luoghi seguono una **struttura frattale** che rispecchia la geografia dell'isola (quartiere → luogo → sotto-luoghi).
@@ -101,7 +115,7 @@ Frontmatter YAML strutturato (derivato da `pipeline_narrativa/story_graph.json` 
 - Luogo: `quartiere`, `cartografia.{feature_id, type_geo, status_geo, quarter, category, centroid_m_local, bbox_m_local, size_m_local, altitudine_m, geometry_type, parent_geo, children_geo, aliases_geo}`. Quando l'altitudine viene aggiunta al GeoJSON, basta rilanciare lo script di scaffolding e i frontmatter si aggiornano.
 - Oggetto: `relazioni.{associato_a_personaggio, associato_a_luogo}`.
 
-**Sezioni body** (modulari — eliminare quelle non applicabili):
+**Sezioni body** (tutte e 14 vanno compilate — vedi sotto-skill `compilatore.md` per il principio "completa, non rimuovere"):
 1. Identità visuale (sintesi)
 2. Aspetto / forma
 3. Abbigliamento / stato d'uso
@@ -169,9 +183,9 @@ Approccio: una famiglia per volta (personaggi → luoghi → oggetti → venti �
 Per ogni entità l'agente:
 1. Legge `scheda.md` esistente (frontmatter già popolato, body stub).
 2. Estrae da `pipeline_narrativa/story_graph.json` (entità + scene di apparizione + visual_anchors), Bible (sezioni rilevanti), `EAR_PERSONAGGI_*` (per personaggi), `cartografia/geo/island.geojson` (per luoghi), `MITI_FONDATORI_BREVI_v1.md` (se applicabile).
-3. Compila le sezioni body **citando ogni dato in "Riferimenti puntuali"**.
+3. Compila tutte le 14 sezioni body **citando ogni dato in "Riferimenti puntuali"**. Sezioni con dati canonici: scrivi il dato e cita la fonte. Sezioni con dati assenti dal canone: completa con inferenza marcata (`[inf]` o `[prop]`) — vedi sotto-skill `compilatore.md`.
 4. Stato: passa da `stub` a `provvisorio`.
-5. Sezioni non applicabili: **eliminale** (non lasciare placeholder vuoti).
+5. **Niente rimozione di sezioni.** In casi davvero non applicabili (es. "abbigliamento" per un vento), reinterpreta il campo in coerenza con la natura dell'entità.
 6. Disallineamenti rilevati: registrali nella sezione apposita, non risolverli in autonomia.
 
 ### Task C — Generare immagine di riferimento

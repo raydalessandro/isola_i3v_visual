@@ -14,7 +14,7 @@ Tool Python condivisi tra le skill `cartografo` e `visual`. Idempotenti: riesegu
 - **Letture:** consentite ovunque (incluso `pipeline_narrativa/` read-only).
 - **Scritture:** ogni script dichiara in testa quali directory tocca.
 - **Niente segreti:** mai credenziali o token nei file di questa cartella.
-- **Aggiunte future:** quando uno script diventa stabile, citarlo nelle skill (`skills/cartografo.md`, `skills/visual.md`) come metodo uniformante.
+- **Aggiunte future:** quando uno script diventa stabile, citarlo nelle skill (`skills/cartografo.md`, `skills/visual/README.md` o sotto-skill) come metodo uniformante.
 
 ## Uso tipico
 

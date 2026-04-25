@@ -20,7 +20,7 @@ relazioni:
 
 # Liu
 
-> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il 2026-04-25 (estrazione manuale, dopo timeout sub-agenti).
+> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il 2026-04-25 con metodo "compilatore" (completa-non-rimuovere). Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
 
 ## Identità visuale (sintesi)
 
@@ -32,6 +32,17 @@ Libellulina minuscola, lunga come il dito di un bambino. Ali trasparenti con rif
 - **Ali:** quattro, trasparenti, con riflessi azzurro-verdi che cambiano col taglio della luce.
 - **Occhi:** sproporzionatamente grandi rispetto alla testa — caratteristica delle libellule reali, accentuata.
 - **Volo:** velocissimo a tratti rettilinei, capace di **stop assoluto a mezz'aria** (hover immobile), ripartenza di scatto.
+
+## Abbigliamento / stato d'uso
+
+Liu non porta abiti propriamente detti — è una libellula dell'isola, non antropomorfa nel vestiario. La sezione viene reinterpretata come **stato del corpo** ed eventuali **accessori effimeri**.
+
+- **Stato delle ali:** in saga sempre intatte e perfettamente operative; nessun graffio o membrana lacerata. `[inf]` da apparizioni S6/S8/S9/S12 dove vola sempre normalmente con *frrr* regolare, hover immobile, ripartenza di scatto — niente segnali di danno.
+- **Marcature dell'addome:** sottili bande cromatiche più scure del corpo lungo i segmenti, coerenti con anatomia di libellula reale. `[prop]` pattern visivo che rende Liu riconoscibile anche di profilo o controluce; da fissare prima di generare i modelli IA per garantire continuità cross-scena.
+- **Accessori effimeri:** occasionalmente granelli di polline, particelle di farina (quando passa al Forno), o frammenti vegetali raccolti in volo. `[prop]` non identificativi: variano per scena, utili per IA generative a differenziare apparizioni senza rompere coerenza.
+- **Stato di pulizia:** sempre asciutta. `[inf]` da Bible §4.17 (si appende a cornicioni, foglie, davanzali — superfici asciutte) e da S8 (arriva *prima* del picco Mulinello, non durante; evita pioggia/vento forte).
+
+**Notazione per IA / 3D:** l'iridescenza azzurro-verde delle ali è il dettaglio più caratterizzante; lo stato delle ali sempre intatto la distingue da libellule selvatiche più vissute.
 
 ## Espressione / comportamento
 

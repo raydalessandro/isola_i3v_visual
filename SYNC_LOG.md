@@ -55,6 +55,28 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-04-25-006 — Visual: introduzione sotto-skill `compilatore` + cambio metodo "completa, non rimuovere"
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** skills + visual (governance)
+- **Repo target:** n/a (interna).
+- **Cambiamento di metodo (richiesto da Ray):**
+  - Principio precedente: "sezioni non applicabili → rimuovile dalla scheda".
+  - Principio nuovo: "completa tutte le 14 sezioni, anche con inferenza canone-coerente marcata. Niente rimozioni: una sezione vuota è un'occasione persa per la narrativa futura. Le schede diventano serbatoio di proposte che la narrativa puo' raccogliere."
+  - Marcatori di provenienza in linea: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
+- **Cambiamenti strutturali:**
+  - `skills/visual.md` spostato in `skills/visual/README.md` (la skill visual diventa cartella per ospitare sotto-skill specializzate).
+  - Nuova sotto-skill: `skills/visual/compilatore.md` — formalizza il metodo di compilazione body schede (estrazione mirata, lettura fonti, completamento marcato, citazioni, vincoli operativi, esempio canonico Liu).
+  - `visual/_template_scheda.md` aggiornato col nuovo principio.
+  - `skills/README.md` aggiornato con riferimento alle sotto-skill e tabella permessi estesa.
+  - Path aggiornati in `README.md` (radice), `visual/README.md`, `scripts/README.md`.
+- **Esempio applicato:** `visual/personaggi/individuali/cuccioli/liu/scheda.md` ricompilata col nuovo principio (sezione "Abbigliamento / stato d'uso" reinserita come stato ali / marcature / accessori effimeri / pulizia, marcata con `[inf]` e `[prop]`).
+- **Sotto-skill future previste (placeholder, non create finche' non servono):** `prompter.md` (genera prompt da schede), `generatore_immagini.md` (4 vedute 3D + variazioni IA).
+- **Commit:** _da inserire dopo commit_.
+- **File toccati:** `skills/visual/{README.md,compilatore.md}`, `skills/README.md`, `visual/_template_scheda.md`, `visual/personaggi/individuali/cuccioli/liu/scheda.md`, `visual/README.md`, `README.md` (radice), `scripts/README.md`, `SYNC_LOG.md`, `PROJECT_STATE.md`.
+- **Da riflettere altrove:** se in altre repo ci sono sub-flussi di compilazione visiva, allinearli al principio "completa, non rimuovere" e ai marcatori `[inf]`/`[prop]`.
+
+---
+
 ## SYNC-2026-04-25-005 — Visual: aggiunta delle 31 strade (sentieri/viottoli)
 - **Stato:** DA_RIFLETTERE
 - **Tipo:** visual

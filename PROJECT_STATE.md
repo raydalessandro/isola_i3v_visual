@@ -54,9 +54,19 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 - Frontmatter strade arricchito con metadati cartografici specifici (`lunghezza_m_local`, `n_punti`, `endpoint_a_m`, `endpoint_b_m`, `categoria_strada`).
 - **Totale schede visual: 112** (era 81, +31 strade).
 
-**Pendente per visual:**
-- Estrazione contenuti body schede per famiglia (sub-agenti). **In corso:** sub-agente background sui 3 bambini (gabriel, elias, noah) come prima famiglia di test.
-- Generazione immagini di riferimento (modello/i da decidere caso per caso).
+**Visual — sotto-skill `compilatore` + cambio metodo (stessa sessione):**
+- Sub-agenti general-purpose hanno avuto stream idle timeout su tutti e 3 i tentativi (gabriel/elias/noah). Estrazione manuale di **Liu** come scheda pilota. Validazione qualità: OK.
+- **Cambio principio operativo** (richiesta Ray): da "sezioni non applicabili → rimuovile" a **"completa tutte le 14 sezioni con inferenza canone-coerente marcata"**. Razionale: serbatoio di proposte per narrativa futura.
+- Marcatori provenienza in linea: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare con Ray.
+- **`skills/visual.md` spostato in `skills/visual/README.md`** — la skill visual diventa cartella per ospitare sotto-skill specializzate.
+- Nuova sotto-skill: **`skills/visual/compilatore.md`** — formalizza il metodo di compilazione (estrazione mirata, lettura fonti, completamento marcato, citazioni, vincoli, esempio Liu).
+- `visual/_template_scheda.md` aggiornato col nuovo principio.
+- `skills/README.md` esteso con tabella permessi sotto-skill.
+- Sotto-skill future previste come placeholder: `prompter.md`, `generatore_immagini.md` (non create finché non servono).
+
+**Pendente per visual (bulk in chat con la zip):**
+- Compilazione body delle restanti ~111 schede (Ray fa il bulk in chat con la zip allegata, una entità per volta, con il metodo del `compilatore`). Liu è il riferimento.
+- Generazione immagini di riferimento (modello/i da decidere caso per caso, futura sotto-skill `generatore_immagini`).
 - Static site interno (tecnologia da definire).
 
 ---

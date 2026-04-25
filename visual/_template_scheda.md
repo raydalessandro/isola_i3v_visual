@@ -49,6 +49,14 @@ relazioni:
 
 # <Nome Visualizzato>
 
+> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il YYYY-MM-DD con metodo "compilatore" (completa-non-rimuovere). Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
+
+## Principio di compilazione (rimuovere prima di salvare)
+
+**Tutte le 14 sezioni vanno compilate.** Anche quando il canone non dichiara nulla su un aspetto, si propone un'inferenza coerente, marcata con `[inf]` (deduzione logica dal canone) o `[prop]` (scelta creativa coerente, da validare con Ray). Non rimuovere sezioni: una sezione vuota e' un'occasione persa per la narrativa futura.
+
+In casi davvero non applicabili (es. "abbigliamento" per un fenomeno acustico come un vento, o "espressione del volto" per un oggetto inanimato), **reinterpretare il campo** in modo coerente con la natura dell'entita' (es. per un vento "abbigliamento" → manifestazione sensibile / vestitura percettiva).
+
 ## Identita' visuale (sintesi)
 
 Una-due frasi che fissano l'entita' in modo specifico, niente cliché.
