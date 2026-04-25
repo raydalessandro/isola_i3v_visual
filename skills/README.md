@@ -40,10 +40,12 @@ Ogni skill ha il proprio scope di scrittura. Fuori scope = chiedi a Ray.
 
 | Skill | Scrive in | Non tocca |
 |---|---|---|
-| **cartografo** | `cartografia/` (tutto) | `visual/`, `pipeline_narrativa/` |
-| **visual** | `visual/` (tutto) | `cartografia/`, `pipeline_narrativa/` |
+| **cartografo** | `cartografia/`, `scripts/` (tool condivisi) | `visual/`, `pipeline_narrativa/` |
+| **visual** | `visual/`, `scripts/` (tool condivisi) | `cartografia/`, `pipeline_narrativa/` |
 
-**File di radice** (`README.md`, `PROJECT_STATE.md`, `.gitignore`, `skills/*`) — manutenzione di governance, non appartengono a una skill specifica. Toccali solo se il task lo richiede esplicitamente; preferisci segnalare a Ray.
+**`scripts/`** è directory di **tool Python condivisi** fra le skill. Vedi `scripts/README.md`. Idempotenti, dichiarano in testa quali path toccano. Quando uno script diventa stabile, citarlo come metodo uniformante nelle skill.
+
+**File di radice** (`README.md`, `PROJECT_STATE.md`, `SYNC_LOG.md`, `.gitignore`, `skills/*`) — manutenzione di governance, non appartengono a una skill specifica. Toccali solo se il task lo richiede esplicitamente; preferisci segnalare a Ray.
 
 ---
 

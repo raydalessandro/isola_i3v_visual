@@ -1,0 +1,83 @@
+---
+id: coltivatori_del_cerchio
+name: Coltivatori Del Cerchio
+famiglia: personaggio
+sottotipo: collettivo
+specie: null
+tipo_grafo: gruppo_istituzione
+ruolo_saga: coralita_del_lavoro_agricolo
+status: stub
+ultima_modifica: 2026-04-25
+fonti: ["pipeline_narrativa/story_graph.json#entities.characters.coltivatori_del_cerchio"]
+appare_in_storie: []
+relazioni:
+  dimora: orti_del_cerchio
+  quadrante_grafo: terra_ovest
+  related_to: []
+  cross_skill:
+    cartografia: null
+---
+
+# Coltivatori Del Cerchio
+
+## Identita' visuale (sintesi)
+
+[stub — da compilare]
+
+## Aspetto / forma
+
+[stub]
+
+## Abbigliamento / stato d'uso
+
+[stub — applicare se personaggio o oggetto]
+
+## Espressione / comportamento
+
+[stub — applicare se personaggio o vento]
+
+## Palette e atmosfera
+
+[stub]
+
+## Contesto e ambientazioni ricorrenti
+
+[stub]
+
+## Coerenza cross-scena (cose che NON cambiano)
+
+[stub]
+
+## Variabilita' ammessa
+
+[stub]
+
+## Cliche' da evitare
+
+Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+
+[stub]
+
+## Per stampa 3D
+
+Volumi, proporzioni, scala, orientamento canonico.
+
+[stub]
+
+## Per narrativa e social
+
+Registri d'uso testuale, tono, parole-chiave da usare/evitare.
+
+[stub]
+
+## Storie / scene di apparizione
+
+[stub — popolare con elenco s01..s12 e ruolo per scena]
+
+## Disallineamenti / domande aperte
+
+[vuoto se nulla]
+
+## Riferimenti puntuali (citazioni dirette dalle fonti)
+
+[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]

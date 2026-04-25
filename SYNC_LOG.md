@@ -55,6 +55,27 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-04-25-004 — Visual: bootstrap struttura entità + `scripts/`
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** visual + governance
+- **Repo target:** n/a (interna). Le altre repo del sistema dovranno sapere che `visual/` è la fonte unica per descrizioni visive di tutte le entità della saga.
+- **Cambiamento:**
+  - Creata `scripts/` (tool condivisi tra skill); aggiunto `scripts/build_visual_skeleton.py` (idempotente).
+  - Generata struttura `visual/` con **81 schede stub** in cartelle frattali (personaggi diviso in bambini/primari/cuccioli/secondari + collettivi; luoghi con nesting geografico per quartiere; oggetti/venti/visual_signatures flat).
+  - Ogni entità: cartella autocontenuta con `scheda.md` (frontmatter YAML + body stub a 14 sezioni) + `immagini/` (predisposta per riferimenti IA + 4 vedute 3D).
+  - Frontmatter luoghi popolato con metadati cartografici (centroide, bbox, dimensioni m, quartiere, parent/children, geometry_type, altitudine quando ci sarà).
+  - `visual/README.md` + `visual/_template_scheda.md` + `visual/catalogo.md` auto-rigenerabile.
+  - `skills/visual.md` riscritto con workflow concreto e gerarchia fonti (verità tendenzialmente nel grafo).
+  - `skills/README.md` aggiunto `scripts/` come directory condivisa.
+- **Decisioni Ray richiamate:**
+  - Niente prompt-string pronti come asset principale: schede contengono descrizioni ricche multi-uso (IA, 3D, narrativa, social). Eventuali prompt dedicati per modello vivono nella cartella entità come file aggiuntivi.
+  - Disallineamenti grafo↔Bible: debito tecnico noto, gestito fuori repo. Per visual la verità tendenzialmente è nel grafo; caso per caso si segnala.
+- **Commit:** _da inserire dopo commit_.
+- **File toccati:** `scripts/`, `visual/`, `skills/visual.md`, `skills/README.md`, `PROJECT_STATE.md`.
+- **Da riflettere altrove:** quando partirà la pipeline immagini effettiva, dovrà attingere da `visual/<entita>/scheda.md` come fonte; se altre repo avevano descrizioni visive isolate, considerare la migrazione qui.
+
+---
+
 ## Note
 
 - Ray ha annunciato che a breve farà manutenzione sul grafo storie e porterà qui la versione manutenuta come **nuova baseline**. Quando arriverà, registrarla qui come entry SYNC dedicata.

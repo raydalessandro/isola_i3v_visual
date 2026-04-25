@@ -1,100 +1,187 @@
 # skill: visual
 
-**Scope:** costruisci e mantieni il **serbatoio di descrizioni visive e vincoli per prompt** di tutte le entità della storia (luoghi, personaggi, oggetti, venti-spiriti). Cura le immagini di riferimento per i modelli generativi. Costruisci il **piccolo sito web interno** ordinato per sezioni di entità, ad uso interno.
+**Scope:** costruisci e mantieni il **serbatoio di descrizioni visive** di tutte le entità della saga (personaggi, luoghi, oggetti, venti, visual_signatures), con immagini di riferimento per modelli generativi e per stampa 3D. La repo `visual/` è la **fonte unica** per tutto ciò che è visivo: IA generative, illustrazioni di riferimento, modelli 3D, descrizioni per narrativa e campagne social.
 
-**Scrivi in:** `visual/` (tutto). **Non tocchi:** `cartografia/`, `pipeline_narrativa/`, file di radice (a meno che il task non lo richieda esplicitamente).
+**Scrivi in:** `visual/` (tutto), `scripts/` (tool condivisi). **Non tocchi:** `cartografia/`, `pipeline_narrativa/`, file di radice (a meno che il task non lo richieda esplicitamente).
 
-**Premessa:** prima di operare, leggi sempre `skills/README.md` per le **regole comuni** (autorità, isolamento `pipeline_narrativa/` read-only, comunicazione con Ray, pattern di rifiuto).
-
----
-
-## 0. Stato attuale
-
-**In bootstrap.** La directory `visual/` è stata creata vuota il 2026-04-25. Materiale, struttura interna, formato schede, vincoli prompt, criteri di selezione immagini di riferimento, e architettura del sito interno **saranno definiti da Ray in un brief separato**.
-
-Quando Ray fornisce il brief:
-1. Aggiorna questo file con: schema schede entità, lista categorie, formato prompt, struttura sito.
-2. Definisci `visual/README.md` con istruzioni d'uso.
-3. Crea le sotto-directory ragionevoli (ipotesi indicativa, non vincolante: `entita/luoghi/`, `entita/personaggi/`, `entita/oggetti/`, `entita/venti/`, `immagini/`, `sito/`).
+**Premessa:** prima di operare, leggi sempre `skills/README.md` per le **regole comuni**.
 
 ---
 
-## 1. Cosa leggere quando opererai (dopo il brief Ray)
+## 1. Struttura `visual/`
 
-### Sempre, prima di qualsiasi task visual
+Ogni entità è una **cartella autocontenuta** con `scheda.md` + `immagini/` + eventuali file di espansione (prompt dedicati, varianti, riferimenti). I luoghi seguono una **struttura frattale** che rispecchia la geografia dell'isola (quartiere → luogo → sotto-luoghi).
 
-1. `skills/README.md` — regole comuni.
-2. Questo file.
-3. `visual/README.md` (quando esisterà) — schema schede e formato prompt.
+```
+visual/
+├── README.md                      come usare il serbatoio
+├── _template_scheda.md            template scheda
+├── catalogo.md                    indice generato (rieseguibile)
+│
+├── personaggi/
+│   ├── individuali/
+│   │   ├── bambini/               (3) gabriel, elias, noah
+│   │   ├── primari/               (6) fiamma, bartolo, rovo, stria, memolo, grunto
+│   │   ├── cuccioli/              (5) pun, toba, bru, cardo, liu
+│   │   └── secondari/             (4) salvia, nodo, amo, zolla
+│   └── collettivi/                (5) coltivatori_del_cerchio, mercato_del_mezzogiorno,
+│                                  mantenitori, camminanti, pastori
+│
+├── luoghi/                        ← FRATTALE per quartiere
+│   ├── villaggio_centrale/        (centro)
+│   │   ├── piazza_villaggio/
+│   │   │   ├── albero_vecchio/
+│   │   │   │   ├── panca_di_pietra/
+│   │   │   │   └── cespuglio_dietro_albero_vecchio/
+│   │   │   └── pozzo_piazza/
+│   │   ├── scuola_stria/
+│   │   ├── via_scuola/
+│   │   └── casa_memolo_cortile/
+│   ├── quartiere_terra/
+│   │   ├── orti_del_cerchio/
+│   │   ├── via_degli_orti/
+│   │   ├── casa_salvia/
+│   │   ├── casa_zolla/
+│   │   └── foresta_intrecciata/
+│   │       ├── radura_dei_pini/
+│   │       ├── tana_rovo/
+│   │       ├── torrente_affluente_foresta/
+│   │       └── zona_di_lavoro_salvia/
+│   ├── quartiere_fuoco/           forno, case_del_mattino, via_dell_alba
+│   ├── quartiere_acqua/           pontile_bocca, bocca, spiaggia_conchiglie,
+│   │                              casa_amo, case_basse_pescatori, via_del_pontile
+│   ├── quartiere_aria/            pascoli_alti, roccia_alta, montagne_gemelle,
+│   │                              burrone/grotta_grunto, via_che_sale
+│   └── perimetro/
+│       ├── fiume_che_gira/        + 6 sotto-tratti come sotto-cartelle
+│       │                          (capo, braccio_ovest_alto/medio/basso, stretta_due_massi,
+│       │                          braccio_est, guado_di_pietre_piatte)
+│       └── fascia_costiera/
+│
+├── oggetti/                       (13) flat
+├── venti/                         (3) flat — taglio, intreccio, mulinello
+├── visual_signatures/             (1) quando_acqua_trema
+└── sito/                          static site (futuro)
+```
 
-### Per ricavare descrizioni visive coerenti
+**Conteggio attuale:** 81 schede totali (23 personaggi + 41 luoghi + 13 oggetti + 3 venti + 1 visual_signature).
 
-4. `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` — fonte primaria su mondo, personaggi, atmosfere.
-5. `pipeline_narrativa/documenti_progetto/GLOSSARIO_ISOLA.md` — nomi canonici.
-6. `pipeline_narrativa/documenti_progetto/CARTA_VOCE_v1_2.md` e `VOCE_AUTORE_ESTRATTA_v1_1.md` — registro stilistico (utile anche per il tono delle descrizioni visive).
-7. `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md` — cliché visivi/narrativi da evitare anche in prompt.
-8. `pipeline_narrativa/story_graph.json` — campo `visual_anchors.scene_hooks` per ogni storia: già contiene aggancio visivo.
-9. `pipeline_narrativa/documenti_progetto/EAR_PERSONAGGI_Manuale_Completo.txt` — caratterizzazione personaggi.
-10. `cartografia/geo/island.geojson` (read-only dal punto di vista visual) — note canoniche e materiali per coerenza con la cartografia.
-
-### Per vincoli prompt e generazione immagini
-
-11. (Quando Ray brifferà) — modello di riferimento (BFL FLUX, Grok), formato prompt, vincoli stilistici, palette, stile illustrativo target.
+**Cartella entità — contenuto canonico:**
+```
+<entita>/
+├── scheda.md          frontmatter YAML + descrizione strutturata (italiano)
+├── immagini/          riferimenti generati: viste IA + 4 vedute per stampa 3D
+└── (opzionale)        prompt dedicati, varianti, materiale di espansione
+```
 
 ---
 
-## 2. Principi non negoziabili (specifici visual)
+## 2. Schema `scheda.md`
 
-### Principio 1 — Coerenza con il canone narrativo e cartografico
+Frontmatter YAML strutturato (derivato da `pipeline_narrativa/story_graph.json` + `cartografia/geo/island.geojson`) + corpo Markdown a sezioni.
 
-Le descrizioni visive **non possono contraddire** Bible, grafo storie, cartografia. Se rilevi conflitti:
-- Bible vs. apparato → vince Bible.
-- Bible vs. cartografia → vince Bible (la cartografia dettaglia senza contraddire).
-- Cartografia vs. tua intuizione visiva → vince cartografia (materiali, colori, orientamenti, dimensioni).
+**Campi frontmatter sempre presenti:**
+- `id`, `name`, `famiglia` (personaggio | luogo | oggetto | vento | visual_signature), `sottotipo`, `status`, `ultima_modifica`, `fonti` (lista citazioni puntuali con path + ancora), `appare_in_storie`.
 
-Se la fonte canonica non dice nulla su un dettaglio visivo, **non inventarlo come se fosse canonico**: marcalo `provvisorio` (o equivalente nel formato scheda) e segnala come domanda aperta a Ray.
+**Campi specializzati:**
+- Personaggio: `specie`, `tipo_grafo`, `ruolo_saga`, `relazioni.{dimora, quadrante_grafo, related_to, cross_skill.cartografia}`.
+- Luogo: `quartiere`, `cartografia.{feature_id, type_geo, status_geo, quarter, category, centroid_m_local, bbox_m_local, size_m_local, altitudine_m, geometry_type, parent_geo, children_geo, aliases_geo}`. Quando l'altitudine viene aggiunta al GeoJSON, basta rilanciare lo script di scaffolding e i frontmatter si aggiornano.
+- Oggetto: `relazioni.{associato_a_personaggio, associato_a_luogo}`.
 
-### Principio 2 — Niente cliché AI
+**Sezioni body** (modulari — eliminare quelle non applicabili):
+1. Identità visuale (sintesi)
+2. Aspetto / forma
+3. Abbigliamento / stato d'uso
+4. Espressione / comportamento
+5. Palette e atmosfera
+6. Contesto e ambientazioni ricorrenti
+7. Coerenza cross-scena (cose che NON cambiano)
+8. Variabilità ammessa
+9. Cliché da evitare (riferimento a `PATTERN_AI_DA_BANDIRE_v1.md`)
+10. Per stampa 3D (volumi, proporzioni, scala, orientamento)
+11. Per narrativa e social (registri d'uso testuale)
+12. Storie / scene di apparizione
+13. Disallineamenti / domande aperte
+14. Riferimenti puntuali (citazioni dirette dalle fonti)
+
+**Stati delle schede:** `stub` (header compilato, body vuoto), `provvisorio` (body popolato, in revisione), `canonico` (approvato da Ray).
+
+---
+
+## 3. Principi non negoziabili (specifici visual)
+
+### Principio 1 — Niente prompt-string pronti
+
+Non scriviamo prompt-string per IA generative come asset principale. Le schede contengono **descrizioni ricche e strutturate** che servono come **fonte** per costruire prompt al volo per qualsiasi modello (BFL FLUX, Grok, altro), per stampa 3D, e per narrativa/social. Se in futuro un'entità ha bisogno di un prompt dedicato per uno specifico modello, lo si mette nella sua cartella come file separato (es. `gabriel/prompt_flux.md`) — **non** sostituisce la scheda.
+
+### Principio 2 — Gerarchia delle fonti (visual)
+
+In conflitto fra fonti, **tendenzialmente prevale il grafo storie** (`pipeline_narrativa/story_graph.json`). Bible e altri documenti restano fonti primarie ma il grafo è il riferimento operativo più recente. Disallineamenti grafo↔Bible sono **debito tecnico noto** (Ray gestisce fuori repo); valutare caso per caso senza decidere in autonomia su elementi narrativi sostanziali — segnalare a Ray nella sezione "Disallineamenti / domande aperte" della scheda.
+
+### Principio 3 — Ogni dato visivo ha una fonte citata
+
+Niente affermazioni visive senza ancora. La sezione "Riferimenti puntuali" deve contenere la citazione esatta (path + ancora YAML, es. `pipeline_narrativa/story_graph.json#entities.characters.gabriel`). Questo permette a `cartografo` di attingere alle stesse fonti per popolare la mappa, e mantiene auditability.
+
+### Principio 4 — Niente cliché AI
 
 Applica `PATTERN_AI_DA_BANDIRE_v1.md` anche in dominio visivo: niente "tramonto epico", "occhi che brillano di saggezza", "antico e magico" generico. Le descrizioni visive devono essere **specifiche e situate** sull'Isola, non template fantasy.
 
-### Principio 3 — Vincoli prompt = contratto
+### Principio 5 — Coerenza con cartografia
 
-I vincoli per prompt (negative prompts, stile fisso, palette obbligata, character consistency tokens) sono **contratto operativo**. Una volta concordati con Ray, vanno applicati uniformemente. Se proponi una modifica, segnalala come proposta — non la cambi in silenzio.
+Per i luoghi: il frontmatter porta i metadati cartografici (centroide, bbox, dimensioni, quartiere, parent/children). Il body non può contraddirli. Se descrivi una "casa piccola" ma il GeoJSON dice 200m², segnalalo come domanda aperta — non riscriverla.
 
-### Principio 4 — Immagini di riferimento
+### Principio 6 — Immagini di riferimento, non illustrazioni finali
 
-Le immagini generate o curate come riferimento per i modelli **non sono illustrazioni finali del libro**. Servono a fissare modello visivo per i personaggi, materiali, atmosfere. Vivono in `visual/immagini/` con metadati che ne dichiarano: entità rappresentata, prompt usato, modello, seed, stato (riferimento approvato / candidato / scartato).
-
----
-
-## 3. Task tipici (template, da rifinire dopo brief Ray)
-
-### Task A — Compilare scheda entità
-
-1. Identifica entità (es. personaggio Gabriel, luogo Forno, oggetto braccialetto S9, vento Mulinello).
-2. Estrai descrizione canonica da Bible / grafo / cartografia.
-3. Scrivi scheda secondo schema definito in `visual/README.md`.
-4. Aggiungi vincoli prompt (positivi + negativi + stile + palette).
-5. Se mancano dati canonici, marca `[da definire]` e annota domanda aperta.
-6. Commit con riferimento alle fonti citate.
-
-### Task B — Generare immagine di riferimento
-
-1. Scrivi prompt completo a partire dalla scheda.
-2. Genera (modello e workflow definiti nel brief).
-3. Cura: salva versione approvata + metadati (prompt, modello, seed, data).
-4. Linka l'immagine alla scheda dell'entità.
-
-### Task C — Aggiornare il sito interno
-
-1. Il sito è ad uso interno (non per lettori finali). Sezionato per categorie di entità.
-2. Mostra schede + immagini per consultazione rapida.
-3. Tecnologia: da decidere col brief Ray (probabile static site, simile per spirito al viewer cartografia).
+Le immagini in `<entita>/immagini/` sono **riferimenti** per modelli e illustratori — non illustrazioni finali del libro. Per stampa 3D, ogni entità tridimensionale (personaggi, oggetti) avrà tipicamente **4 vedute** (fronte, retro, profilo dx, profilo sx). Convenzione di naming consigliata: `<id>_<vista>_<varianteN>.png` (es. `gabriel_fronte_v1.png`).
 
 ---
 
-## 4. Pattern di rifiuto (specifici visual)
+## 4. Workflow tipici
+
+### Task A — Bootstrap struttura (già fatto al 2026-04-25)
+
+```bash
+python3 scripts/build_visual_skeleton.py
+```
+
+Lo script è **idempotente**:
+- Crea cartelle e schede mancanti.
+- Su schede esistenti, **rigenera solo il frontmatter** (derivato da fonti) e **preserva il body** (lavoro umano/agenti).
+- Rigenera `visual/catalogo.md`.
+
+### Task B — Compilare body schede (estrazione)
+
+Approccio: una famiglia per volta (personaggi → luoghi → oggetti → venti → visual_signatures), con sub-agenti dedicati per non saturare il contesto.
+
+Per ogni entità l'agente:
+1. Legge `scheda.md` esistente (frontmatter già popolato, body stub).
+2. Estrae da `pipeline_narrativa/story_graph.json` (entità + scene di apparizione + visual_anchors), Bible (sezioni rilevanti), `EAR_PERSONAGGI_*` (per personaggi), `cartografia/geo/island.geojson` (per luoghi), `MITI_FONDATORI_BREVI_v1.md` (se applicabile).
+3. Compila le sezioni body **citando ogni dato in "Riferimenti puntuali"**.
+4. Stato: passa da `stub` a `provvisorio`.
+5. Sezioni non applicabili: **eliminale** (non lasciare placeholder vuoti).
+6. Disallineamenti rilevati: registrali nella sezione apposita, non risolverli in autonomia.
+
+### Task C — Generare immagine di riferimento
+
+1. Scrivi prompt completo a partire dalla scheda (compositing dei campi descrittivi).
+2. Genera con il modello scelto.
+3. Salva in `<entita>/immagini/` con metadati (file `<id>_<vista>_<varianteN>.png` + opzionale `<id>_<vista>_<varianteN>.meta.md` con prompt usato, modello, seed, data, stato).
+
+### Task D — Aggiornare metadati cartografici
+
+Quando il GeoJSON viene aggiornato (es. arriva l'altitudine):
+```bash
+python3 scripts/build_visual_skeleton.py
+```
+I frontmatter delle schede luogo si rigenerano automaticamente. Body preservato.
+
+### Task E — Aggiornare il sito interno (futuro)
+
+Tecnologia da decidere. Probabile static site che legge `visual/catalogo.md` + le schede e produce navigazione per famiglia/quartiere/sottotipo + viewer immagini.
+
+---
+
+## 5. Pattern di rifiuto (specifici visual)
 
 Oltre alle regole comuni in `skills/README.md` §5, **rifiuta** se la richiesta:
 - Ti chiede di modificare la cartografia per giustificare una scelta visual → vai in skill cartografo o segnala a Ray.
@@ -103,16 +190,13 @@ Oltre alle regole comuni in `skills/README.md` §5, **rifiuta** se la richiesta:
 
 ---
 
-## 5. Domande specifiche da fare a Ray (visual)
+## 6. Domande specifiche da fare a Ray (visual)
 
-(Oltre a quelle comuni in `skills/README.md` §6:)
-
-- "Il modello generativo target è BFL FLUX, Grok, altro? Workflow?"
-- "Schema schede entità: campi obbligatori, opzionali, formato (Markdown? YAML frontmatter? altro)?"
-- "Sito interno: solo HTML statico, o serve generatore (MkDocs, Astro, ecc.)?"
+- "Il modello generativo target per questa entità è X o Y? Workflow?"
+- "Per i sotto-tratti del Fiume e gli altri elementi cartografici non in `entities.locations` (es. `radura_dei_pini`), li promuovo a entità grafo o restano carto-only?"
 - "Per le immagini di riferimento: quale percentuale di coerenza dobbiamo raggiungere prima di considerare un personaggio 'fissato'?"
-- "Le descrizioni visive sono in italiano, inglese, o doppia lingua (italiano per lettura interna, inglese per prompt)?"
+- "Per le 4 vedute 3D: convenzione fronte/retro/profilo dx/profilo sx ti va, o preferisci altre angolature canoniche?"
 
 ---
 
-**Ultimo aggiornamento:** 2026-04-25 — placeholder, in attesa brief Ray.
+**Ultimo aggiornamento:** 2026-04-25.

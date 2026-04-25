@@ -33,7 +33,24 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 
 **Pendente (prossima sessione):**
 - **Manutenzione grafo storie** (annunciata da Ray): la versione manutenuta diventerà la nuova baseline. Possibili incoerenze emerse si risolveranno in v0.6.x o v0.7.
-- **Visual:** brief Ray atteso. Setup struttura `visual/` posticipato.
+
+**Visual — bootstrap (sessione 2026-04-25, stessa sessione):**
+- Brief Ray ricevuto: scope = serbatoio descrizioni visive + 4 vedute 3D, fonte unica per IA generative / illustrazioni / 3D / narrativa / social. Niente prompt-string pronti, descrizioni ricche multi-uso. Verità tendenzialmente nel grafo (debito tecnico disallineamenti grafo↔Bible noto, fuori repo).
+- Creati `scripts/` (tool condivisi) e `scripts/build_visual_skeleton.py` (idempotente, frontmatter rigenerato, body preservato).
+- Struttura `visual/` generata: 81 schede stub in cartelle frattali.
+  - Personaggi (23): individuali split in `bambini` (3) / `primari` (6) / `cuccioli` (5) / `secondari` (4) + `collettivi` (5).
+  - Luoghi (41): albero geografico per quartiere (centro, terra, fuoco, acqua, aria, perimetro), nesting frattale (es. piazza→albero_vecchio→panca, foresta→radura/tana/torrente, fiume→6 sotto-tratti+guado).
+  - Oggetti (13), Venti (3), Visual_signatures (1).
+  - Ogni cartella ha `scheda.md` (frontmatter YAML compilato + body stub) + `immagini/` (per riferimenti IA + 4 vedute 3D).
+- Schema scheda con 14 sezioni modulari; metadati cartografici nei frontmatter dei luoghi (centroide, bbox, dimensioni, quartiere, parent/children — l'altitudine si aggiungerà rilanciando lo script quando il GeoJSON la includerà).
+- `skills/visual.md` aggiornato con regole concrete e workflow estrazione.
+- `skills/README.md` aggiunto `scripts/` come directory condivisa.
+- `visual/README.md` + `visual/_template_scheda.md` + `visual/catalogo.md` (auto-rigenerabile).
+
+**Pendente per visual:**
+- Estrazione contenuti body schede per famiglia (sub-agenti) — popolare le 81 schede stub partendo da grafo + Bible + altri doc.
+- Generazione immagini di riferimento (modello/i da decidere caso per caso).
+- Static site interno (tecnologia da definire).
 
 ---
 
