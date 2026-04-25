@@ -1,0 +1,5859 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "version": "0.5",
+    "date": "2026-04-24",
+    "project": "Isola dei Tre Venti - Cartografia Tecnica",
+    "coordinate_system": "WGS84 (EPSG:4326)",
+    "anchor_lat_origin": 34.4685,
+    "anchor_lon_origin": 17.956,
+    "island_extent_m": [
+      8000,
+      7000
+    ],
+    "changes_from_v0_3": [
+      "Backward-compatibility ID grafo storie: aggiunte feature aggregate e alias",
+      "fiume_che_gira: feature MultiLineString aggregato + parent su sotto-tratti",
+      "montagne_gemelle: feature MultiPoint aggregato + parent sui due point",
+      "villaggio_centrale -> alias di piazza_villaggio",
+      "mercato_del_mezzogiorno_panca_di_pietra -> alias di panca_di_pietra",
+      "Nuovi luoghi canonici da storie: pozza_dei_pascoli (S2), noce_della_scuola (S8), zona_di_lavoro_salvia (S4)",
+      "Nuovi sentieri canonici: sentiero_foresta_traversata_ovest (S3), sentiero_ritorno_bocca_orti (S7), sentiero_casa_salvia_margine_foresta (S4), sentiero_orti_torrente_foresta (S5)"
+    ],
+    "changes_from_v0_4": [
+      "Urbanistica completa: 18 sentieri aggiunti per raggiungibilita' di ogni edificio",
+      "Quartiere Terra: sentieri Orti-Salvia, Orti-Zolla, Tana-Salvia, Zolla-Tana",
+      "Quartiere Fuoco: sentiero Forno-Case Mattino, ring road interno",
+      "Quartiere Acqua: sentieri Scogliera-Amo, Spiaggia-Amo, CaseBasse-Bocca",
+      "Quartiere Aria: Capanne-Pascoli, sentiero diretto Pascoli-Burrone",
+      "Villaggio centrale: viottolo perimetrale Piazza, micro-viottoli case",
+      "Tangenziali inter-quartiere: Forno-Orti diretto, Roccia-Orti, Pontile-Forno",
+      "Sentiero riva est parziale, sentieri costieri ovest/est (completezza)",
+      "Tutti i sentieri nuovi: status provvisorio (inferiti, non canonici da storie)"
+    ],
+    "navigation_notes": {
+      "urbanistica_completa": true,
+      "ogni_edificio_raggiungibile": true,
+      "fascia_costiera_nord": "inaccessibile normalmente (oltre la Sorgente)",
+      "braccio_est_silente": "sentiero riva est esiste ma poco battuto"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "island_outline",
+        "name": "Isola dei Tre Venti",
+        "type": "island_outline",
+        "status": "canonico",
+        "quarter": "perimetro"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.044687,
+              34.500032
+            ],
+            [
+              18.043993,
+              34.504089
+            ],
+            [
+              18.043597,
+              34.508215
+            ],
+            [
+              18.041483,
+              34.512072
+            ],
+            [
+              18.039171,
+              34.515884
+            ],
+            [
+              18.034921,
+              34.518828
+            ],
+            [
+              18.030179,
+              34.521223
+            ],
+            [
+              18.025312,
+              34.52323
+            ],
+            [
+              18.020121,
+              34.524599
+            ],
+            [
+              18.015346,
+              34.526243
+            ],
+            [
+              18.010137,
+              34.527005
+            ],
+            [
+              18.004934,
+              34.527392
+            ],
+            [
+              17.999764,
+              34.528594
+            ],
+            [
+              17.994348,
+              34.528694
+            ],
+            [
+              17.988798,
+              34.528546
+            ],
+            [
+              17.983053,
+              34.52814
+            ],
+            [
+              17.97759,
+              34.52679
+            ],
+            [
+              17.971955,
+              34.525282
+            ],
+            [
+              17.966872,
+              34.522949
+            ],
+            [
+              17.964288,
+              34.518998
+            ],
+            [
+              17.960259,
+              34.515923
+            ],
+            [
+              17.958802,
+              34.511853
+            ],
+            [
+              17.958312,
+              34.50777
+            ],
+            [
+              17.958198,
+              34.503844
+            ],
+            [
+              17.959784,
+              34.500032
+            ],
+            [
+              17.959969,
+              34.496381
+            ],
+            [
+              17.960792,
+              34.492756
+            ],
+            [
+              17.962403,
+              34.489249
+            ],
+            [
+              17.965422,
+              34.486217
+            ],
+            [
+              17.967161,
+              34.482601
+            ],
+            [
+              17.969824,
+              34.479171
+            ],
+            [
+              17.973109,
+              34.475828
+            ],
+            [
+              17.977373,
+              34.473011
+            ],
+            [
+              17.982004,
+              34.470159
+            ],
+            [
+              17.987962,
+              34.469343
+            ],
+            [
+              17.993782,
+              34.468376
+            ],
+            [
+              17.999764,
+              34.468222
+            ],
+            [
+              18.005541,
+              34.469459
+            ],
+            [
+              18.010895,
+              34.471087
+            ],
+            [
+              18.015703,
+              34.47322
+            ],
+            [
+              18.019927,
+              34.475698
+            ],
+            [
+              18.024533,
+              34.47754
+            ],
+            [
+              18.02809,
+              34.480295
+            ],
+            [
+              18.031536,
+              34.483045
+            ],
+            [
+              18.035191,
+              34.48578
+            ],
+            [
+              18.038067,
+              34.488977
+            ],
+            [
+              18.040786,
+              34.492373
+            ],
+            [
+              18.042886,
+              34.496076
+            ],
+            [
+              18.044687,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "terra_interna",
+        "name": "Terra Interna",
+        "type": "inner_land",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Area interna racchiusa dal Fiume che Gira. Contiene Villaggio, Quartieri Fuoco/Acqua/Terra/Aria, Orti, Foresta."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.024059,
+              34.49868
+            ],
+            [
+              18.023879,
+              34.501682
+            ],
+            [
+              18.023095,
+              34.504639
+            ],
+            [
+              18.021479,
+              34.507377
+            ],
+            [
+              18.019392,
+              34.509889
+            ],
+            [
+              18.016807,
+              34.512076
+            ],
+            [
+              18.013849,
+              34.513918
+            ],
+            [
+              18.010566,
+              34.515344
+            ],
+            [
+              18.007084,
+              34.516388
+            ],
+            [
+              18.003463,
+              34.51704
+            ],
+            [
+              17.999764,
+              34.517441
+            ],
+            [
+              17.996017,
+              34.517271
+            ],
+            [
+              17.99232,
+              34.516687
+            ],
+            [
+              17.988734,
+              34.515695
+            ],
+            [
+              17.985412,
+              34.514206
+            ],
+            [
+              17.982567,
+              34.512197
+            ],
+            [
+              17.979933,
+              34.510005
+            ],
+            [
+              17.978041,
+              34.50738
+            ],
+            [
+              17.976781,
+              34.50455
+            ],
+            [
+              17.976077,
+              34.501629
+            ],
+            [
+              17.975873,
+              34.49868
+            ],
+            [
+              17.976212,
+              34.495748
+            ],
+            [
+              17.977221,
+              34.492923
+            ],
+            [
+              17.978512,
+              34.490169
+            ],
+            [
+              17.980413,
+              34.48763
+            ],
+            [
+              17.982762,
+              34.485317
+            ],
+            [
+              17.985561,
+              34.483315
+            ],
+            [
+              17.988715,
+              34.481637
+            ],
+            [
+              17.992222,
+              34.480436
+            ],
+            [
+              17.995931,
+              34.479659
+            ],
+            [
+              17.999764,
+              34.479541
+            ],
+            [
+              18.003553,
+              34.479875
+            ],
+            [
+              18.007194,
+              34.480707
+            ],
+            [
+              18.010597,
+              34.481968
+            ],
+            [
+              18.013737,
+              34.483564
+            ],
+            [
+              18.016567,
+              34.485473
+            ],
+            [
+              18.018876,
+              34.487766
+            ],
+            [
+              18.02093,
+              34.490203
+            ],
+            [
+              18.022554,
+              34.49286
+            ],
+            [
+              18.023629,
+              34.495709
+            ],
+            [
+              18.024059,
+              34.49868
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fascia_costiera",
+        "name": "Fascia Costiera",
+        "type": "coastal_belt",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "note": "Cintura tra contorno isola e Fiume. Spiagge, scogliere, sentieri di sale. Larga 500-800m (Bible §2)."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.044687,
+              34.500032
+            ],
+            [
+              18.043993,
+              34.504089
+            ],
+            [
+              18.043597,
+              34.508215
+            ],
+            [
+              18.041483,
+              34.512072
+            ],
+            [
+              18.039171,
+              34.515884
+            ],
+            [
+              18.034921,
+              34.518828
+            ],
+            [
+              18.030179,
+              34.521223
+            ],
+            [
+              18.025312,
+              34.52323
+            ],
+            [
+              18.020121,
+              34.524599
+            ],
+            [
+              18.015346,
+              34.526243
+            ],
+            [
+              18.010137,
+              34.527005
+            ],
+            [
+              18.004934,
+              34.527392
+            ],
+            [
+              17.999764,
+              34.528594
+            ],
+            [
+              17.994348,
+              34.528694
+            ],
+            [
+              17.988798,
+              34.528546
+            ],
+            [
+              17.983053,
+              34.52814
+            ],
+            [
+              17.97759,
+              34.52679
+            ],
+            [
+              17.971955,
+              34.525282
+            ],
+            [
+              17.966872,
+              34.522949
+            ],
+            [
+              17.964288,
+              34.518998
+            ],
+            [
+              17.960259,
+              34.515923
+            ],
+            [
+              17.958802,
+              34.511853
+            ],
+            [
+              17.958312,
+              34.50777
+            ],
+            [
+              17.958198,
+              34.503844
+            ],
+            [
+              17.959784,
+              34.500032
+            ],
+            [
+              17.959969,
+              34.496381
+            ],
+            [
+              17.960792,
+              34.492756
+            ],
+            [
+              17.962403,
+              34.489249
+            ],
+            [
+              17.965422,
+              34.486217
+            ],
+            [
+              17.967161,
+              34.482601
+            ],
+            [
+              17.969824,
+              34.479171
+            ],
+            [
+              17.973109,
+              34.475828
+            ],
+            [
+              17.977373,
+              34.473011
+            ],
+            [
+              17.982004,
+              34.470159
+            ],
+            [
+              17.987962,
+              34.469343
+            ],
+            [
+              17.993782,
+              34.468376
+            ],
+            [
+              17.999764,
+              34.468222
+            ],
+            [
+              18.005541,
+              34.469459
+            ],
+            [
+              18.010895,
+              34.471087
+            ],
+            [
+              18.015703,
+              34.47322
+            ],
+            [
+              18.019927,
+              34.475698
+            ],
+            [
+              18.024533,
+              34.47754
+            ],
+            [
+              18.02809,
+              34.480295
+            ],
+            [
+              18.031536,
+              34.483045
+            ],
+            [
+              18.035191,
+              34.48578
+            ],
+            [
+              18.038067,
+              34.488977
+            ],
+            [
+              18.040786,
+              34.492373
+            ],
+            [
+              18.042886,
+              34.496076
+            ],
+            [
+              18.044687,
+              34.500032
+            ]
+          ],
+          [
+            [
+              18.024059,
+              34.49868
+            ],
+            [
+              18.023879,
+              34.501682
+            ],
+            [
+              18.023095,
+              34.504639
+            ],
+            [
+              18.021479,
+              34.507377
+            ],
+            [
+              18.019392,
+              34.509889
+            ],
+            [
+              18.016807,
+              34.512076
+            ],
+            [
+              18.013849,
+              34.513918
+            ],
+            [
+              18.010566,
+              34.515344
+            ],
+            [
+              18.007084,
+              34.516388
+            ],
+            [
+              18.003463,
+              34.51704
+            ],
+            [
+              17.999764,
+              34.517441
+            ],
+            [
+              17.996017,
+              34.517271
+            ],
+            [
+              17.99232,
+              34.516687
+            ],
+            [
+              17.988734,
+              34.515695
+            ],
+            [
+              17.985412,
+              34.514206
+            ],
+            [
+              17.982567,
+              34.512197
+            ],
+            [
+              17.979933,
+              34.510005
+            ],
+            [
+              17.978041,
+              34.50738
+            ],
+            [
+              17.976781,
+              34.50455
+            ],
+            [
+              17.976077,
+              34.501629
+            ],
+            [
+              17.975873,
+              34.49868
+            ],
+            [
+              17.976212,
+              34.495748
+            ],
+            [
+              17.977221,
+              34.492923
+            ],
+            [
+              17.978512,
+              34.490169
+            ],
+            [
+              17.980413,
+              34.48763
+            ],
+            [
+              17.982762,
+              34.485317
+            ],
+            [
+              17.985561,
+              34.483315
+            ],
+            [
+              17.988715,
+              34.481637
+            ],
+            [
+              17.992222,
+              34.480436
+            ],
+            [
+              17.995931,
+              34.479659
+            ],
+            [
+              17.999764,
+              34.479541
+            ],
+            [
+              18.003553,
+              34.479875
+            ],
+            [
+              18.007194,
+              34.480707
+            ],
+            [
+              18.010597,
+              34.481968
+            ],
+            [
+              18.013737,
+              34.483564
+            ],
+            [
+              18.016567,
+              34.485473
+            ],
+            [
+              18.018876,
+              34.487766
+            ],
+            [
+              18.02093,
+              34.490203
+            ],
+            [
+              18.022554,
+              34.49286
+            ],
+            [
+              18.023629,
+              34.495709
+            ],
+            [
+              18.024059,
+              34.49868
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_capo",
+        "name": "Capo del Fiume",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud",
+        "width_m": 4,
+        "speed": "lenta_bassa_portata",
+        "seasonal_feature": "guado_di_pietre_piatte_affiorante_estate",
+        "note": "Sorgente -> Biforcazione. Il Guado di Pietre Piatte sta su questo tratto.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.520752
+          ],
+          [
+            17.999709,
+            34.519851
+          ],
+          [
+            17.999764,
+            34.51895
+          ],
+          [
+            17.999818,
+            34.51823
+          ],
+          [
+            17.999764,
+            34.517599
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_braccio_ovest_alto",
+        "name": "Braccio Ovest — tratto alto",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud_lato_ovest",
+        "width_m": 7,
+        "speed": "media_veloce",
+        "braccio_parent": "braccio_ovest",
+        "note": "Dalla Biforcazione alla Stretta dei Due Massi. Tracciato S7 mattino.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.517599
+          ],
+          [
+            17.997961,
+            34.517545
+          ],
+          [
+            17.996169,
+            34.517383
+          ],
+          [
+            17.9944,
+            34.517114
+          ],
+          [
+            17.992664,
+            34.516739
+          ],
+          [
+            17.990971,
+            34.516262
+          ],
+          [
+            17.989333,
+            34.515684
+          ],
+          [
+            17.987759,
+            34.51501
+          ],
+          [
+            17.986259,
+            34.514244
+          ],
+          [
+            17.984842,
+            34.51339
+          ],
+          [
+            17.983517,
+            34.512454
+          ],
+          [
+            17.982293,
+            34.511441
+          ],
+          [
+            17.981176,
+            34.510357
+          ],
+          [
+            17.980173,
+            34.509211
+          ],
+          [
+            17.979292,
+            34.508007
+          ],
+          [
+            17.978537,
+            34.506754
+          ],
+          [
+            17.977912,
+            34.50546
+          ],
+          [
+            17.977423,
+            34.504133
+          ],
+          [
+            17.977071,
+            34.50278
+          ],
+          [
+            17.976859,
+            34.50141
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_stretta_due_massi",
+        "name": "Stretta dei Due Massi",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud_lato_ovest",
+        "width_m": 3,
+        "speed": "accelerata_per_strozzatura",
+        "braccio_parent": "braccio_ovest",
+        "note": "Punto canonico S7: il letto del Fiume si stringe tra due grandi massi, la zattera si incastra. Narrativamente: luogo del threshold moment S7. Mezzogiorno estivo.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.976859,
+            34.50141
+          ],
+          [
+            17.976788,
+            34.500032
+          ],
+          [
+            17.976859,
+            34.498653
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "due_massi",
+        "name": "I Due Massi",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "note": "Due grandi massi nel letto del Fiume che ne strozzano la corrente. Canonico S7. Luogo del 'strapp', terzo rametto incastrato. Punto esatto sulla stretta del Braccio Ovest, a meta' percorso dal Guado alla Bocca."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.976788,
+          34.500032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_braccio_ovest_medio",
+        "name": "Braccio Ovest — tratto medio",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud_lato_ovest",
+        "width_m": 8,
+        "speed": "media",
+        "braccio_parent": "braccio_ovest",
+        "note": "Dalla Stretta alla curva sud. Tracciato S7 pomeriggio.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.976859,
+            34.498653
+          ],
+          [
+            17.977071,
+            34.497283
+          ],
+          [
+            17.977423,
+            34.49593
+          ],
+          [
+            17.977912,
+            34.494603
+          ],
+          [
+            17.978537,
+            34.493309
+          ],
+          [
+            17.979292,
+            34.492056
+          ],
+          [
+            17.980173,
+            34.490853
+          ],
+          [
+            17.981176,
+            34.489706
+          ],
+          [
+            17.982293,
+            34.488622
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_braccio_ovest_basso",
+        "name": "Braccio Ovest — tratto basso",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud_lato_ovest",
+        "width_m": 9,
+        "speed": "media_placida",
+        "braccio_parent": "braccio_ovest",
+        "note": "Dalla curva sud alla Bocca. Acqua si fa salmastra avvicinandosi al mare. Tracciato S7 tardo pomeriggio-tramonto.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.983517,
+            34.487609
+          ],
+          [
+            17.984842,
+            34.486673
+          ],
+          [
+            17.986259,
+            34.485819
+          ],
+          [
+            17.987759,
+            34.485053
+          ],
+          [
+            17.989333,
+            34.484379
+          ],
+          [
+            17.990971,
+            34.483801
+          ],
+          [
+            17.992664,
+            34.483324
+          ],
+          [
+            17.9944,
+            34.482949
+          ],
+          [
+            17.996169,
+            34.48268
+          ],
+          [
+            17.997961,
+            34.482518
+          ],
+          [
+            17.999764,
+            34.476608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_braccio_est",
+        "name": "Braccio Est",
+        "type": "river",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "flow_direction": "nord_verso_sud_lato_est",
+        "width_m": 12,
+        "speed": "lenta_placida",
+        "depth": "profonda",
+        "note": "Braccio piu' lungo, piu' ampio, piu' lento. Tortuoso. Silente S1-S8.",
+        "parent": "fiume_che_gira"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.517599
+          ],
+          [
+            18.002361,
+            34.519584
+          ],
+          [
+            18.00539,
+            34.518839
+          ],
+          [
+            18.007677,
+            34.518751
+          ],
+          [
+            18.009989,
+            34.517575
+          ],
+          [
+            18.011624,
+            34.517009
+          ],
+          [
+            18.014622,
+            34.515913
+          ],
+          [
+            18.016423,
+            34.51484
+          ],
+          [
+            18.01871,
+            34.514129
+          ],
+          [
+            18.019954,
+            34.512768
+          ],
+          [
+            18.021118,
+            34.511074
+          ],
+          [
+            18.023332,
+            34.508848
+          ],
+          [
+            18.024248,
+            34.507497
+          ],
+          [
+            18.025389,
+            34.505393
+          ],
+          [
+            18.025561,
+            34.504155
+          ],
+          [
+            18.026047,
+            34.501758
+          ],
+          [
+            18.025564,
+            34.500428
+          ],
+          [
+            18.025867,
+            34.49858
+          ],
+          [
+            18.025125,
+            34.496534
+          ],
+          [
+            18.025234,
+            34.494787
+          ],
+          [
+            18.023496,
+            34.492504
+          ],
+          [
+            18.022431,
+            34.491128
+          ],
+          [
+            18.021438,
+            34.489684
+          ],
+          [
+            18.019925,
+            34.487991
+          ],
+          [
+            18.018733,
+            34.4861
+          ],
+          [
+            18.016484,
+            34.485471
+          ],
+          [
+            18.014381,
+            34.4838
+          ],
+          [
+            18.011887,
+            34.483207
+          ],
+          [
+            18.009476,
+            34.48223
+          ],
+          [
+            18.007447,
+            34.481544
+          ],
+          [
+            18.004481,
+            34.481177
+          ],
+          [
+            18.002793,
+            34.480592
+          ],
+          [
+            17.999764,
+            34.476608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "torrente_affluente_foresta",
+        "name": "Torrente della Foresta",
+        "type": "stream",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Attraversa la Foresta Intrecciata, sfocia nel Braccio Ovest basso. Canonico Bible §8. Luogo di S5 (Ponte di Rami)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.977882,
+            34.502734
+          ],
+          [
+            17.976788,
+            34.500032
+          ],
+          [
+            17.977335,
+            34.497329
+          ],
+          [
+            17.978429,
+            34.494626
+          ],
+          [
+            17.98007,
+            34.492824
+          ],
+          [
+            17.978537,
+            34.493309
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sorgente",
+        "name": "Sorgente del Fiume",
+        "type": "river_source",
+        "status": "canonico",
+        "quarter": "aria",
+        "water_origin": "falda_profonda_infiltrazione",
+        "note": "Sgorga da falda profonda, non scende visibilmente dalle Montagne. Le Montagne alimentano la falda. Ruscelli superficiali solo occasionali/stagionali — si vedono greti vuoti d'estate. Nome operativo 'Sorgente', ridenominabile in sede narrativa."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.520752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_biforcazione",
+        "name": "Biforcazione del Fiume",
+        "type": "river_fork",
+        "status": "canonico",
+        "quarter": "aria",
+        "note": "Punto di divisione in Braccio Ovest e Braccio Est. Subito a sud del Guado."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.517599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "guado_di_pietre_piatte",
+        "name": "Guado di Pietre Piatte",
+        "type": "ford",
+        "status": "canonico",
+        "quarter": "aria",
+        "note": "Sul tratto Capo. Unico passaggio pedonale dell'anello fluviale. Acqua bassa d'estate, pietre piatte affioranti a distanza di passo. Canonico Bible §8. Partenza S7."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.51895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bocca",
+        "name": "Bocca",
+        "type": "river_mouth",
+        "status": "canonico",
+        "quarter": "acqua",
+        "note": "Confluenza Braccio Ovest + Braccio Est e foce nel mare. Acqua mista (dolce + salata). Larghezza stimata 50-80m."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.476608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "greto_montagna_est",
+        "name": "Greto della Montagna Est",
+        "type": "seasonal_streambed",
+        "status": "canonico",
+        "quarter": "aria",
+        "seasonal": true,
+        "note": "Solcatura sul terreno dalla Montagna Gemella Est. D'estate asciutto. D'autunno-primavera acqua occasionale di dilavamento. Non e' un affluente idraulicamente significativo — la Sorgente viene da falda."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.003046,
+            34.524806
+          ],
+          [
+            18.001952,
+            34.523005
+          ],
+          [
+            18.000858,
+            34.521653
+          ],
+          [
+            17.999764,
+            34.520752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "greto_montagna_ovest",
+        "name": "Greto della Montagna Ovest",
+        "type": "seasonal_streambed",
+        "status": "canonico",
+        "quarter": "aria",
+        "seasonal": true,
+        "note": "Solcatura dalla Montagna Gemella Ovest. Stesso regime stagionale del greto est."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.996481,
+            34.524806
+          ],
+          [
+            17.997575,
+            34.523005
+          ],
+          [
+            17.99867,
+            34.521653
+          ],
+          [
+            17.999764,
+            34.520752
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "villaggio",
+        "name": "Villaggio",
+        "type": "quarter",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Area urbana centrale. Diametro ~500m."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.002827,
+              34.500032
+            ],
+            [
+              18.002723,
+              34.500684
+            ],
+            [
+              18.002417,
+              34.501293
+            ],
+            [
+              18.00193,
+              34.501815
+            ],
+            [
+              18.001295,
+              34.502216
+            ],
+            [
+              18.000557,
+              34.502468
+            ],
+            [
+              17.999764,
+              34.502554
+            ],
+            [
+              17.998971,
+              34.502468
+            ],
+            [
+              17.998232,
+              34.502216
+            ],
+            [
+              17.997597,
+              34.501815
+            ],
+            [
+              17.997111,
+              34.501293
+            ],
+            [
+              17.996805,
+              34.500684
+            ],
+            [
+              17.9967,
+              34.500032
+            ],
+            [
+              17.996805,
+              34.499379
+            ],
+            [
+              17.997111,
+              34.49877
+            ],
+            [
+              17.997597,
+              34.498248
+            ],
+            [
+              17.998232,
+              34.497847
+            ],
+            [
+              17.998971,
+              34.497595
+            ],
+            [
+              17.999764,
+              34.497509
+            ],
+            [
+              18.000557,
+              34.497595
+            ],
+            [
+              18.001295,
+              34.497847
+            ],
+            [
+              18.00193,
+              34.498248
+            ],
+            [
+              18.002417,
+              34.49877
+            ],
+            [
+              18.002723,
+              34.499379
+            ],
+            [
+              18.002827,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "piazza_villaggio",
+        "name": "Piazza del Villaggio",
+        "type": "square",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Piazza circolare al centro del Villaggio. Diametro ~25m. Al centro l'Albero Vecchio.",
+        "aliases": [
+          "villaggio_centrale"
+        ]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.9999,
+              34.500032
+            ],
+            [
+              17.99989,
+              34.500075
+            ],
+            [
+              17.99986,
+              34.500111
+            ],
+            [
+              17.999816,
+              34.500136
+            ],
+            [
+              17.999764,
+              34.500144
+            ],
+            [
+              17.999711,
+              34.500136
+            ],
+            [
+              17.999667,
+              34.500111
+            ],
+            [
+              17.999637,
+              34.500075
+            ],
+            [
+              17.999627,
+              34.500032
+            ],
+            [
+              17.999637,
+              34.499988
+            ],
+            [
+              17.999667,
+              34.499952
+            ],
+            [
+              17.999711,
+              34.499927
+            ],
+            [
+              17.999764,
+              34.499919
+            ],
+            [
+              17.999816,
+              34.499927
+            ],
+            [
+              17.99986,
+              34.499952
+            ],
+            [
+              17.99989,
+              34.499988
+            ],
+            [
+              17.9999,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "albero_vecchio",
+        "name": "Albero Vecchio",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Al centro esatto della Piazza, del Villaggio, e dell'isola. Tronco ~1.3m diametro. Chioma ~13m diametro."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.500032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pozzo_piazza",
+        "name": "Pozzo della Piazza",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Pozzo circolare accanto all'Albero Vecchio, lato sud. Sotto l'ombra estiva della chioma."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999764,
+          34.500005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "panca_di_pietra",
+        "name": "Panca di Pietra",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Panca di pietra adiacente al Pozzo, orientata verso ovest/piazza. Siedono qui le Vecchie del Mercato al Mercato del Mezzogiorno (canonico apparato P.24).",
+        "aliases": [
+          "mercato_del_mezzogiorno_panca_di_pietra"
+        ]
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999786,
+          34.500005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "scuola_stria",
+        "name": "Scuola di Stria",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "centro",
+        "category": "school",
+        "inhabitant": "stria",
+        "note": "Scuola a sud-ovest della Piazza. Casa stretta e alta con tetto molto spiovente (firma architettonica: Stria ci atterra sopra prima di entrare). Su piccolo prato tra Albero Vecchio e orti cerchio interno."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999304,
+          34.499653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_stria",
+        "name": "Casa di Stria",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "centro",
+        "category": "dwelling",
+        "inhabitant": "stria",
+        "note": "Casa adiacente alla Scuola, architettura simile (tetto spiovente) ma piu' piccola."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999249,
+          34.499599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bottega_nodo",
+        "name": "Bottega di Nodo",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "centro",
+        "category": "workshop",
+        "inhabitant": "nodo",
+        "note": "Bottega sulla Piazza, facciata segnata da piccoli buchi (firma di Nodo che becca il legno). Portico aperto adiacente con attrezzi appesi."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999961,
+          34.500104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_nodo",
+        "name": "Casa di Nodo",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "centro",
+        "category": "dwelling",
+        "inhabitant": "nodo",
+        "note": "Casa adiacente alla Bottega."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999982,
+          34.500149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_memolo",
+        "name": "Casetta di Mèmolo",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "centro",
+        "category": "dwelling",
+        "inhabitant": "memolo",
+        "note": "Casetta tonda sulla Piazza, parzialmente nascosta da cespuglio. Mèmolo abita qui con Pun. Dal grafo S6: cortile canonico ('casa_memolo_cortile')."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999578,
+          34.500149
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_memolo_cortile",
+        "name": "Cortile di Mèmolo",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Cortile adiacente alla Casetta di Mèmolo. Canonico da S6, S8."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999578,
+          34.500167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cespuglio_dietro_albero_vecchio",
+        "name": "Cespuglio dietro l'Albero",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Cespuglio vicino all'Albero Vecchio, verso nord-ovest. Luogo canonico da S6."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999742,
+          34.500068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "quartiere_fuoco",
+        "name": "Quartiere di Fuoco",
+        "type": "quarter",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "note": "Quartiere est. Lungo Via dell'Alba. Contiene Forno di Fiamma, Case del Mattino, Fabbro, Conceria, Essiccatoio."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.026219,
+              34.500032
+            ],
+            [
+              18.026181,
+              34.501124
+            ],
+            [
+              18.025524,
+              34.502157
+            ],
+            [
+              18.024595,
+              34.50312
+            ],
+            [
+              18.023156,
+              34.503864
+            ],
+            [
+              18.021543,
+              34.504442
+            ],
+            [
+              18.019782,
+              34.504812
+            ],
+            [
+              18.018029,
+              34.505149
+            ],
+            [
+              18.016175,
+              34.505234
+            ],
+            [
+              18.014277,
+              34.505269
+            ],
+            [
+              18.012363,
+              34.505084
+            ],
+            [
+              18.01053,
+              34.504669
+            ],
+            [
+              18.008937,
+              34.504005
+            ],
+            [
+              18.007744,
+              34.503124
+            ],
+            [
+              18.006869,
+              34.502148
+            ],
+            [
+              18.006555,
+              34.501082
+            ],
+            [
+              18.006643,
+              34.500032
+            ],
+            [
+              18.006947,
+              34.499024
+            ],
+            [
+              18.007301,
+              34.498014
+            ],
+            [
+              18.008149,
+              34.497087
+            ],
+            [
+              18.009234,
+              34.496221
+            ],
+            [
+              18.010585,
+              34.495439
+            ],
+            [
+              18.012308,
+              34.494907
+            ],
+            [
+              18.014177,
+              34.494517
+            ],
+            [
+              18.016175,
+              34.494485
+            ],
+            [
+              18.01812,
+              34.494664
+            ],
+            [
+              18.019888,
+              34.49511
+            ],
+            [
+              18.021457,
+              34.495692
+            ],
+            [
+              18.022931,
+              34.496323
+            ],
+            [
+              18.024047,
+              34.497144
+            ],
+            [
+              18.025122,
+              34.497997
+            ],
+            [
+              18.025882,
+              34.498972
+            ],
+            [
+              18.026219,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "quartiere_acqua",
+        "name": "Quartiere d'Acqua",
+        "type": "quarter",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "note": "Quartiere sud. Include Pontile, Bocca, Case Basse Pescatori, Spiaggia Conchiglie, Casa di Amo."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.009924,
+              34.483815
+            ],
+            [
+              18.009666,
+              34.484716
+            ],
+            [
+              18.009235,
+              34.48561
+            ],
+            [
+              18.008141,
+              34.486376
+            ],
+            [
+              18.006755,
+              34.487014
+            ],
+            [
+              18.005141,
+              34.487497
+            ],
+            [
+              18.003371,
+              34.4878
+            ],
+            [
+              18.001629,
+              34.488106
+            ],
+            [
+              17.999764,
+              34.488148
+            ],
+            [
+              17.997862,
+              34.48819
+            ],
+            [
+              17.995962,
+              34.488014
+            ],
+            [
+              17.994149,
+              34.487659
+            ],
+            [
+              17.992518,
+              34.48713
+            ],
+            [
+              17.991391,
+              34.486375
+            ],
+            [
+              17.990521,
+              34.485567
+            ],
+            [
+              17.990133,
+              34.484692
+            ],
+            [
+              17.990086,
+              34.483815
+            ],
+            [
+              17.990377,
+              34.482961
+            ],
+            [
+              17.990933,
+              34.482142
+            ],
+            [
+              17.991739,
+              34.481363
+            ],
+            [
+              17.992827,
+              34.480642
+            ],
+            [
+              17.9942,
+              34.480006
+            ],
+            [
+              17.99584,
+              34.479482
+            ],
+            [
+              17.997752,
+              34.479189
+            ],
+            [
+              17.999764,
+              34.479148
+            ],
+            [
+              18.001711,
+              34.479338
+            ],
+            [
+              18.003487,
+              34.479703
+            ],
+            [
+              18.005056,
+              34.480192
+            ],
+            [
+              18.0064,
+              34.480779
+            ],
+            [
+              18.007674,
+              34.481397
+            ],
+            [
+              18.008741,
+              34.482114
+            ],
+            [
+              18.009462,
+              34.482933
+            ],
+            [
+              18.009924,
+              34.483815
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "quartiere_terra",
+        "name": "Quartiere di Terra",
+        "type": "quarter",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Quartiere ovest. Orti del Cerchio (3 anelli), Foresta Intrecciata, tane di Rovo/Salvia/Zolla."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.994578,
+              34.500032
+            ],
+            [
+              17.99457,
+              34.501318
+            ],
+            [
+              17.993811,
+              34.502529
+            ],
+            [
+              17.992692,
+              34.503629
+            ],
+            [
+              17.991121,
+              34.504509
+            ],
+            [
+              17.989319,
+              34.505179
+            ],
+            [
+              17.987378,
+              34.505634
+            ],
+            [
+              17.985395,
+              34.505951
+            ],
+            [
+              17.983352,
+              34.506114
+            ],
+            [
+              17.981233,
+              34.506172
+            ],
+            [
+              17.979128,
+              34.505909
+            ],
+            [
+              17.977037,
+              34.505479
+            ],
+            [
+              17.975279,
+              34.504685
+            ],
+            [
+              17.974004,
+              34.503632
+            ],
+            [
+              17.973042,
+              34.502493
+            ],
+            [
+              17.972656,
+              34.501258
+            ],
+            [
+              17.972651,
+              34.500032
+            ],
+            [
+              17.972993,
+              34.498844
+            ],
+            [
+              17.97354,
+              34.497689
+            ],
+            [
+              17.974417,
+              34.49659
+            ],
+            [
+              17.975641,
+              34.495587
+            ],
+            [
+              17.977153,
+              34.494684
+            ],
+            [
+              17.979043,
+              34.494035
+            ],
+            [
+              17.98113,
+              34.493591
+            ],
+            [
+              17.983352,
+              34.493486
+            ],
+            [
+              17.985502,
+              34.493801
+            ],
+            [
+              17.987499,
+              34.494262
+            ],
+            [
+              17.989301,
+              34.4949
+            ],
+            [
+              17.990765,
+              34.495759
+            ],
+            [
+              17.992168,
+              34.496636
+            ],
+            [
+              17.993293,
+              34.497658
+            ],
+            [
+              17.99412,
+              34.498797
+            ],
+            [
+              17.994578,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "quartiere_aria",
+        "name": "Quartiere d'Aria",
+        "type": "quarter",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "note": "Quartiere nord. Pascoli Alti, Roccia Alta. Sopra inizia il dominio montuoso (Montagne Gemelle, Burrone)."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.013297,
+              34.515347
+            ],
+            [
+              18.012992,
+              34.516791
+            ],
+            [
+              18.012343,
+              34.518207
+            ],
+            [
+              18.010933,
+              34.519444
+            ],
+            [
+              18.009086,
+              34.520464
+            ],
+            [
+              18.006936,
+              34.52124
+            ],
+            [
+              18.004627,
+              34.521792
+            ],
+            [
+              18.002225,
+              34.522139
+            ],
+            [
+              17.999764,
+              34.522364
+            ],
+            [
+              17.997236,
+              34.522322
+            ],
+            [
+              17.994668,
+              34.5221
+            ],
+            [
+              17.992224,
+              34.521541
+            ],
+            [
+              17.990236,
+              34.520577
+            ],
+            [
+              17.988372,
+              34.519525
+            ],
+            [
+              17.987418,
+              34.518154
+            ],
+            [
+              17.986944,
+              34.516747
+            ],
+            [
+              17.986961,
+              34.515347
+            ],
+            [
+              17.987356,
+              34.513992
+            ],
+            [
+              17.988192,
+              34.512716
+            ],
+            [
+              17.989064,
+              34.511422
+            ],
+            [
+              17.990503,
+              34.510263
+            ],
+            [
+              17.992294,
+              34.50921
+            ],
+            [
+              17.994599,
+              34.508502
+            ],
+            [
+              17.997121,
+              34.508054
+            ],
+            [
+              17.999764,
+              34.507942
+            ],
+            [
+              18.002359,
+              34.508185
+            ],
+            [
+              18.004736,
+              34.508758
+            ],
+            [
+              18.006914,
+              34.509473
+            ],
+            [
+              18.008755,
+              34.510411
+            ],
+            [
+              18.010386,
+              34.511451
+            ],
+            [
+              18.011751,
+              34.512621
+            ],
+            [
+              18.012708,
+              34.513933
+            ],
+            [
+              18.013297,
+              34.515347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "orti_cerchio_interno",
+        "name": "Orti del Cerchio — anello interno",
+        "type": "fields",
+        "status": "canonico",
+        "quarter": "terra",
+        "category": "herbs_vegetables",
+        "note": "Anello interno (raggio 0-120m). Erbe, ortaggi, piante basse. Apparato P.06."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.99123,
+              34.500032
+            ],
+            [
+              17.991205,
+              34.500242
+            ],
+            [
+              17.99113,
+              34.500445
+            ],
+            [
+              17.991008,
+              34.500632
+            ],
+            [
+              17.990845,
+              34.500796
+            ],
+            [
+              17.990646,
+              34.50093
+            ],
+            [
+              17.990419,
+              34.50103
+            ],
+            [
+              17.990173,
+              34.501092
+            ],
+            [
+              17.989917,
+              34.501113
+            ],
+            [
+              17.989661,
+              34.501092
+            ],
+            [
+              17.989414,
+              34.50103
+            ],
+            [
+              17.989187,
+              34.50093
+            ],
+            [
+              17.988988,
+              34.500796
+            ],
+            [
+              17.988825,
+              34.500632
+            ],
+            [
+              17.988704,
+              34.500445
+            ],
+            [
+              17.988629,
+              34.500242
+            ],
+            [
+              17.988604,
+              34.500032
+            ],
+            [
+              17.988629,
+              34.499821
+            ],
+            [
+              17.988704,
+              34.499618
+            ],
+            [
+              17.988825,
+              34.499431
+            ],
+            [
+              17.988988,
+              34.499267
+            ],
+            [
+              17.989187,
+              34.499133
+            ],
+            [
+              17.989414,
+              34.499033
+            ],
+            [
+              17.989661,
+              34.498971
+            ],
+            [
+              17.989917,
+              34.49895
+            ],
+            [
+              17.990173,
+              34.498971
+            ],
+            [
+              17.990419,
+              34.499033
+            ],
+            [
+              17.990646,
+              34.499133
+            ],
+            [
+              17.990845,
+              34.499267
+            ],
+            [
+              17.991008,
+              34.499431
+            ],
+            [
+              17.99113,
+              34.499618
+            ],
+            [
+              17.991205,
+              34.499821
+            ],
+            [
+              17.99123,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "orti_cerchio_medio",
+        "name": "Orti del Cerchio — anello medio",
+        "type": "fields",
+        "status": "canonico",
+        "quarter": "terra",
+        "category": "grains_legumes",
+        "note": "Anello medio (raggio 130-280m). Legumi, cereali, grano. Apparato P.06."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.99298,
+              34.500032
+            ],
+            [
+              17.992934,
+              34.50047
+            ],
+            [
+              17.992796,
+              34.500894
+            ],
+            [
+              17.99257,
+              34.501293
+            ],
+            [
+              17.992264,
+              34.501653
+            ],
+            [
+              17.991886,
+              34.501964
+            ],
+            [
+              17.991449,
+              34.502216
+            ],
+            [
+              17.990965,
+              34.502402
+            ],
+            [
+              17.990449,
+              34.502516
+            ],
+            [
+              17.989917,
+              34.502554
+            ],
+            [
+              17.989385,
+              34.502516
+            ],
+            [
+              17.988869,
+              34.502402
+            ],
+            [
+              17.988385,
+              34.502216
+            ],
+            [
+              17.987948,
+              34.501964
+            ],
+            [
+              17.98757,
+              34.501653
+            ],
+            [
+              17.987264,
+              34.501293
+            ],
+            [
+              17.987038,
+              34.500894
+            ],
+            [
+              17.9869,
+              34.50047
+            ],
+            [
+              17.986853,
+              34.500032
+            ],
+            [
+              17.9869,
+              34.499594
+            ],
+            [
+              17.987038,
+              34.499169
+            ],
+            [
+              17.987264,
+              34.49877
+            ],
+            [
+              17.98757,
+              34.49841
+            ],
+            [
+              17.987948,
+              34.498099
+            ],
+            [
+              17.988385,
+              34.497847
+            ],
+            [
+              17.988869,
+              34.497661
+            ],
+            [
+              17.989385,
+              34.497547
+            ],
+            [
+              17.989917,
+              34.497509
+            ],
+            [
+              17.990449,
+              34.497547
+            ],
+            [
+              17.990965,
+              34.497661
+            ],
+            [
+              17.991449,
+              34.497847
+            ],
+            [
+              17.991886,
+              34.498099
+            ],
+            [
+              17.992264,
+              34.49841
+            ],
+            [
+              17.99257,
+              34.49877
+            ],
+            [
+              17.992796,
+              34.499169
+            ],
+            [
+              17.992934,
+              34.499594
+            ],
+            [
+              17.99298,
+              34.500032
+            ]
+          ],
+          [
+            [
+              17.991339,
+              34.500032
+            ],
+            [
+              17.991312,
+              34.499803
+            ],
+            [
+              17.991231,
+              34.499583
+            ],
+            [
+              17.991099,
+              34.499381
+            ],
+            [
+              17.990923,
+              34.499203
+            ],
+            [
+              17.990707,
+              34.499058
+            ],
+            [
+              17.990461,
+              34.49895
+            ],
+            [
+              17.990194,
+              34.498883
+            ],
+            [
+              17.989917,
+              34.49886
+            ],
+            [
+              17.989639,
+              34.498883
+            ],
+            [
+              17.989373,
+              34.49895
+            ],
+            [
+              17.989127,
+              34.499058
+            ],
+            [
+              17.988911,
+              34.499203
+            ],
+            [
+              17.988734,
+              34.499381
+            ],
+            [
+              17.988603,
+              34.499583
+            ],
+            [
+              17.988522,
+              34.499803
+            ],
+            [
+              17.988495,
+              34.500032
+            ],
+            [
+              17.988522,
+              34.50026
+            ],
+            [
+              17.988603,
+              34.50048
+            ],
+            [
+              17.988734,
+              34.500682
+            ],
+            [
+              17.988911,
+              34.50086
+            ],
+            [
+              17.989127,
+              34.501005
+            ],
+            [
+              17.989373,
+              34.501114
+            ],
+            [
+              17.989639,
+              34.50118
+            ],
+            [
+              17.989917,
+              34.501203
+            ],
+            [
+              17.990194,
+              34.50118
+            ],
+            [
+              17.990461,
+              34.501114
+            ],
+            [
+              17.990707,
+              34.501005
+            ],
+            [
+              17.990923,
+              34.50086
+            ],
+            [
+              17.991099,
+              34.500682
+            ],
+            [
+              17.991231,
+              34.50048
+            ],
+            [
+              17.991312,
+              34.50026
+            ],
+            [
+              17.991339,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "orti_cerchio_esterno",
+        "name": "Orti del Cerchio — anello esterno",
+        "type": "fields",
+        "status": "canonico",
+        "quarter": "terra",
+        "category": "orchards",
+        "note": "Anello esterno (raggio 290-450m). Frutteti, meli, peri, noci. Apparato P.06."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.99484,
+              34.500032
+            ],
+            [
+              17.99478,
+              34.500666
+            ],
+            [
+              17.994599,
+              34.501284
+            ],
+            [
+              17.994304,
+              34.501872
+            ],
+            [
+              17.9939,
+              34.502414
+            ],
+            [
+              17.993398,
+              34.502898
+            ],
+            [
+              17.992811,
+              34.503311
+            ],
+            [
+              17.992152,
+              34.503644
+            ],
+            [
+              17.991438,
+              34.503887
+            ],
+            [
+              17.990687,
+              34.504036
+            ],
+            [
+              17.989917,
+              34.504086
+            ],
+            [
+              17.989147,
+              34.504036
+            ],
+            [
+              17.988395,
+              34.503887
+            ],
+            [
+              17.987682,
+              34.503644
+            ],
+            [
+              17.987023,
+              34.503311
+            ],
+            [
+              17.986435,
+              34.502898
+            ],
+            [
+              17.985934,
+              34.502414
+            ],
+            [
+              17.98553,
+              34.501872
+            ],
+            [
+              17.985234,
+              34.501284
+            ],
+            [
+              17.985054,
+              34.500666
+            ],
+            [
+              17.984993,
+              34.500032
+            ],
+            [
+              17.985054,
+              34.499397
+            ],
+            [
+              17.985234,
+              34.498779
+            ],
+            [
+              17.98553,
+              34.498191
+            ],
+            [
+              17.985934,
+              34.497649
+            ],
+            [
+              17.986435,
+              34.497165
+            ],
+            [
+              17.987023,
+              34.496752
+            ],
+            [
+              17.987682,
+              34.496419
+            ],
+            [
+              17.988395,
+              34.496176
+            ],
+            [
+              17.989147,
+              34.496027
+            ],
+            [
+              17.989917,
+              34.495977
+            ],
+            [
+              17.990687,
+              34.496027
+            ],
+            [
+              17.991438,
+              34.496176
+            ],
+            [
+              17.992152,
+              34.496419
+            ],
+            [
+              17.992811,
+              34.496752
+            ],
+            [
+              17.993398,
+              34.497165
+            ],
+            [
+              17.9939,
+              34.497649
+            ],
+            [
+              17.994304,
+              34.498191
+            ],
+            [
+              17.994599,
+              34.498779
+            ],
+            [
+              17.99478,
+              34.499397
+            ],
+            [
+              17.99484,
+              34.500032
+            ]
+          ],
+          [
+            [
+              17.99309,
+              34.500032
+            ],
+            [
+              17.993042,
+              34.499578
+            ],
+            [
+              17.992898,
+              34.499138
+            ],
+            [
+              17.992665,
+              34.498725
+            ],
+            [
+              17.992347,
+              34.498352
+            ],
+            [
+              17.991956,
+              34.49803
+            ],
+            [
+              17.991503,
+              34.497769
+            ],
+            [
+              17.991002,
+              34.497576
+            ],
+            [
+              17.990468,
+              34.497459
+            ],
+            [
+              17.989917,
+              34.497419
+            ],
+            [
+              17.989366,
+              34.497459
+            ],
+            [
+              17.988832,
+              34.497576
+            ],
+            [
+              17.98833,
+              34.497769
+            ],
+            [
+              17.987877,
+              34.49803
+            ],
+            [
+              17.987486,
+              34.498352
+            ],
+            [
+              17.987169,
+              34.498725
+            ],
+            [
+              17.986935,
+              34.499138
+            ],
+            [
+              17.986792,
+              34.499578
+            ],
+            [
+              17.986744,
+              34.500032
+            ],
+            [
+              17.986792,
+              34.500485
+            ],
+            [
+              17.986935,
+              34.500925
+            ],
+            [
+              17.987169,
+              34.501338
+            ],
+            [
+              17.987486,
+              34.501711
+            ],
+            [
+              17.987877,
+              34.502033
+            ],
+            [
+              17.98833,
+              34.502294
+            ],
+            [
+              17.988832,
+              34.502487
+            ],
+            [
+              17.989366,
+              34.502604
+            ],
+            [
+              17.989917,
+              34.502644
+            ],
+            [
+              17.990468,
+              34.502604
+            ],
+            [
+              17.991002,
+              34.502487
+            ],
+            [
+              17.991503,
+              34.502294
+            ],
+            [
+              17.991956,
+              34.502033
+            ],
+            [
+              17.992347,
+              34.501711
+            ],
+            [
+              17.992665,
+              34.501338
+            ],
+            [
+              17.992898,
+              34.500925
+            ],
+            [
+              17.993042,
+              34.500485
+            ],
+            [
+              17.99309,
+              34.500032
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "orti_del_cerchio",
+        "name": "Orti del Cerchio",
+        "type": "fields",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Riferimento centroide. Vedi polygon per i 3 anelli reali."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.989917,
+          34.500032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "foresta_intrecciata",
+        "name": "Foresta Intrecciata",
+        "type": "forest",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Foresta oltre gli Orti. Canopy intrecciato, poco praticata, nessun sentiero preciso. Contiene Tana di Rovo ai margini. Torrente affluente l'attraversa."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.987346,
+              34.49823
+            ],
+            [
+              17.98755,
+              34.499445
+            ],
+            [
+              17.987277,
+              34.500675
+            ],
+            [
+              17.985961,
+              34.501622
+            ],
+            [
+              17.984585,
+              34.50242
+            ],
+            [
+              17.982976,
+              34.502953
+            ],
+            [
+              17.981358,
+              34.503299
+            ],
+            [
+              17.979833,
+              34.503588
+            ],
+            [
+              17.97832,
+              34.503796
+            ],
+            [
+              17.976788,
+              34.504055
+            ],
+            [
+              17.975129,
+              34.504255
+            ],
+            [
+              17.973348,
+              34.504283
+            ],
+            [
+              17.971414,
+              34.504191
+            ],
+            [
+              17.969704,
+              34.503636
+            ],
+            [
+              17.968334,
+              34.502773
+            ],
+            [
+              17.967606,
+              34.501625
+            ],
+            [
+              17.967196,
+              34.500466
+            ],
+            [
+              17.967237,
+              34.499308
+            ],
+            [
+              17.967763,
+              34.49823
+            ],
+            [
+              17.967977,
+              34.497235
+            ],
+            [
+              17.968417,
+              34.496279
+            ],
+            [
+              17.969229,
+              34.495435
+            ],
+            [
+              17.969503,
+              34.494315
+            ],
+            [
+              17.970293,
+              34.493273
+            ],
+            [
+              17.971479,
+              34.492341
+            ],
+            [
+              17.973002,
+              34.491568
+            ],
+            [
+              17.974872,
+              34.491273
+            ],
+            [
+              17.976788,
+              34.491497
+            ],
+            [
+              17.978572,
+              34.491748
+            ],
+            [
+              17.9801,
+              34.492402
+            ],
+            [
+              17.981376,
+              34.49314
+            ],
+            [
+              17.982613,
+              34.493784
+            ],
+            [
+              17.983741,
+              34.494493
+            ],
+            [
+              17.984646,
+              34.495324
+            ],
+            [
+              17.985801,
+              34.496129
+            ],
+            [
+              17.986662,
+              34.497115
+            ],
+            [
+              17.987346,
+              34.49823
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pascoli_alti",
+        "name": "Pascoli Alti",
+        "type": "fields",
+        "status": "canonico",
+        "quarter": "aria",
+        "category": "pasture",
+        "note": "Prati in pendenza dolce. Pascolo di capre e pecore. Capanne stagionali dei Pastori (leggere, montate estate)."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.0101,
+              34.513995
+            ],
+            [
+              18.009857,
+              34.514914
+            ],
+            [
+              18.009544,
+              34.515849
+            ],
+            [
+              18.008204,
+              34.516575
+            ],
+            [
+              18.006761,
+              34.517197
+            ],
+            [
+              18.005034,
+              34.517604
+            ],
+            [
+              18.00335,
+              34.517957
+            ],
+            [
+              18.00157,
+              34.518149
+            ],
+            [
+              17.999764,
+              34.51834
+            ],
+            [
+              17.997885,
+              34.518317
+            ],
+            [
+              17.995905,
+              34.518257
+            ],
+            [
+              17.994093,
+              34.517878
+            ],
+            [
+              17.992489,
+              34.517323
+            ],
+            [
+              17.991154,
+              34.516627
+            ],
+            [
+              17.990412,
+              34.515767
+            ],
+            [
+              17.990182,
+              34.514867
+            ],
+            [
+              17.990258,
+              34.513995
+            ],
+            [
+              17.990696,
+              34.51317
+            ],
+            [
+              17.991069,
+              34.512348
+            ],
+            [
+              17.991824,
+              34.511569
+            ],
+            [
+              17.992827,
+              34.510822
+            ],
+            [
+              17.99413,
+              34.510138
+            ],
+            [
+              17.995786,
+              34.509603
+            ],
+            [
+              17.997719,
+              34.509294
+            ],
+            [
+              17.999764,
+              34.509224
+            ],
+            [
+              18.001713,
+              34.509513
+            ],
+            [
+              18.003471,
+              34.509901
+            ],
+            [
+              18.004984,
+              34.510421
+            ],
+            [
+              18.006186,
+              34.511057
+            ],
+            [
+              18.007576,
+              34.511608
+            ],
+            [
+              18.008645,
+              34.512313
+            ],
+            [
+              18.009482,
+              34.513111
+            ],
+            [
+              18.0101,
+              34.513995
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "forno",
+        "name": "Forno di Fiamma",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "fuoco",
+        "category": "bakery",
+        "inhabitant": "fiamma",
+        "note": "Prima casa del Quartiere Fuoco, lungo la Via dell'Alba. Porta principale rivolta a ovest (verso Villaggio). Camino alto che fuma prima dell'alba. Cortile sul retro con legna catastata."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.011799,
+          34.500032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "forno_cortile",
+        "name": "Cortile del Forno",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "fuoco",
+        "note": "Cortile sul retro del Forno, con legna catastata."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.011853,
+          34.500122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_del_mattino",
+        "name": "Case del Mattino",
+        "type": "building",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "category": "dwelling_cluster",
+        "note": "Cluster di 3-4 case basse orientate a est (porte verso alba). Apparato P.04."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.015081,
+          34.500032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fabbro",
+        "name": "Fabbro",
+        "type": "building",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "category": "forge",
+        "note": "Bottega del fabbro. Piccola forgia. Suono di martello sull'incudine parte del soundscape del quartiere."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.015081,
+          34.499131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "conceria",
+        "name": "Conceria",
+        "type": "building",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "category": "tanner",
+        "note": "Conceria — prepara le pelli. Apparato P.04."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.016175,
+          34.499581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "essiccatoio",
+        "name": "Essiccatoio",
+        "type": "building",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "category": "drying_rack",
+        "note": "Essiccatoio per frutta, sotto canopy. Autunno stagione principale."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.015628,
+          34.500482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pontile_bocca",
+        "name": "Pontile di Bartolo",
+        "type": "pier",
+        "status": "canonico",
+        "quarter": "acqua",
+        "inhabitant": "bartolo",
+        "note": "Pontile dentro la Bocca, riva est. Assi scure, pali nell'acqua, capanna al tetto di canne in cima."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.477509
+          ],
+          [
+            17.999873,
+            34.476158
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "capanna_bartolo",
+        "name": "Capanna di Bartolo",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "acqua",
+        "inhabitant": "bartolo",
+        "category": "dwelling",
+        "note": "Capanna bassa col tetto di canne in cima al Pontile. Bartolo ci vive; d'estate dorme in barca."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999873,
+          34.476158
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "spiaggia_conchiglie",
+        "name": "Spiaggia delle Conchiglie",
+        "type": "beach",
+        "status": "canonico",
+        "quarter": "acqua",
+        "note": "Spiaggia sassoso-sabbiosa a SE della Bocca, accessibile via piccolo ponte di legno. Sulla costa est, scogliera sopra (Casa di Amo)."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.001952,
+              34.475707
+            ],
+            [
+              18.003593,
+              34.475527
+            ],
+            [
+              18.00414,
+              34.474806
+            ],
+            [
+              18.003046,
+              34.474356
+            ],
+            [
+              18.001952,
+              34.474806
+            ],
+            [
+              18.001952,
+              34.475707
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_amo",
+        "name": "Casa di Amo",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "acqua",
+        "inhabitant": "amo",
+        "category": "dwelling",
+        "elevation_m": 12,
+        "note": "Casa scavata nel legno e nella roccia sulla scogliera est della Spiaggia. Scala di pietra scende al mare. Isolata."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.004468,
+          34.475077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "scogliera_est",
+        "name": "Scogliera Est",
+        "type": "cliff",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "elevation_m": 15,
+        "note": "Scogliera a est della Spiaggia. Casa di Amo scavata qui."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.004578,
+          34.474986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "case_basse_pescatori",
+        "name": "Case Basse dei Pescatori",
+        "type": "building",
+        "status": "canonico",
+        "quarter": "acqua",
+        "category": "fisher_house_cluster",
+        "note": "Cluster case basse sulla riva interna della Bocca, dietro il Pontile. Costruite per il vento di sud (basse, larghe, porte a nord)."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.99867,
+          34.47841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tana_rovo",
+        "name": "Tana di Rovo",
+        "type": "burrow",
+        "status": "canonico",
+        "quarter": "terra",
+        "inhabitant": "rovo",
+        "note": "Ai margini della Foresta Intrecciata, sotto ceppo coperto di muschio. Tre uscite distinte."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.982258,
+          34.501833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_salvia",
+        "name": "Casa di Salvia",
+        "type": "burrow",
+        "status": "canonico",
+        "quarter": "terra",
+        "inhabitant": "salvia",
+        "category": "burrow_dwelling",
+        "note": "Casa-tana semicoperta di terra, inizio Orti del Cerchio verso la Foresta. Giardino erbe in file davanti."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.987729,
+          34.502734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "casa_zolla",
+        "name": "Casa di Zolla",
+        "type": "burrow",
+        "status": "canonico",
+        "quarter": "terra",
+        "inhabitant": "zolla",
+        "category": "burrow_dwelling",
+        "note": "Casa-tana al margine degli Orti verso la Foresta. Una dispensa in casa, altre due nascoste fuori — solo lui sa dove."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.986635,
+          34.497329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "roccia_alta",
+        "name": "Roccia Alta",
+        "type": "landmark",
+        "status": "canonico",
+        "quarter": "aria",
+        "elevation_m": 550,
+        "note": "Sperone roccioso panoramico. ~2h a piedi dal Villaggio. Si vede tutta l'isola."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.001952,
+          34.516248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "montagna_gemella_est",
+        "name": "Montagna Gemella Est",
+        "type": "mountain_peak",
+        "status": "canonico",
+        "quarter": "aria",
+        "elevation_m": 1050,
+        "note": "Cima est delle Montagne Gemelle. Alimenta la falda della Sorgente.",
+        "parent": "montagne_gemelle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.003046,
+          34.524806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "montagna_gemella_ovest",
+        "name": "Montagna Gemella Ovest",
+        "type": "mountain_peak",
+        "status": "canonico",
+        "quarter": "aria",
+        "elevation_m": 980,
+        "note": "Cima ovest delle Montagne Gemelle.",
+        "parent": "montagne_gemelle"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.996481,
+          34.524806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "burrone",
+        "name": "Burrone",
+        "type": "valley",
+        "status": "canonico",
+        "quarter": "aria",
+        "note": "Gola profonda tra le due Montagne. Cengia centrale con Grotta di Grunto."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.997028,
+            34.524806
+          ],
+          [
+            17.999764,
+            34.523455
+          ],
+          [
+            18.002499,
+            34.524806
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "grotta_grunto",
+        "name": "Grotta di Grunto",
+        "type": "cave",
+        "status": "canonico",
+        "quarter": "aria",
+        "elevation_m": 850,
+        "inhabitant": "grunto",
+        "note": "Grotta poco profonda su cengia riparata da sperone di roccia. Apertura verso l'esterno del Burrone."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.999982,
+          34.524176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "capanne_stagionali_pastori",
+        "name": "Capanne Stagionali dei Pastori",
+        "type": "building",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "category": "seasonal_shelter",
+        "note": "Capanne leggere di legno e canne, montate dai Pastori d'estate. Smontate fine stagione. Apparato P.27."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.997575,
+          34.514446
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "via_dell_alba",
+        "name": "Via dell'Alba",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "fuoco",
+        "category": "via_principale",
+        "note": "Dal Villaggio al Forno al Quartiere Fuoco."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.500032
+          ],
+          [
+            18.005234,
+            34.500032
+          ],
+          [
+            18.011799,
+            34.500032
+          ],
+          [
+            18.016175,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "via_del_pontile",
+        "name": "Via del Pontile",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "acqua",
+        "category": "via_principale",
+        "note": "Dal Villaggio al Pontile di Bartolo."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.500032
+          ],
+          [
+            17.999764,
+            34.491923
+          ],
+          [
+            17.999764,
+            34.484716
+          ],
+          [
+            17.999873,
+            34.477509
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "via_degli_orti",
+        "name": "Via degli Orti",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "terra",
+        "category": "via_principale",
+        "note": "Dal Villaggio agli Orti del Cerchio."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.500032
+          ],
+          [
+            17.992105,
+            34.500032
+          ],
+          [
+            17.989917,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "via_che_sale",
+        "name": "Via che Sale",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "aria",
+        "category": "via_principale",
+        "note": "Dal Villaggio ai Pascoli Alti alla Roccia Alta."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.500032
+          ],
+          [
+            17.999764,
+            34.506338
+          ],
+          [
+            17.999764,
+            34.510842
+          ],
+          [
+            18.000858,
+            34.514446
+          ],
+          [
+            18.001952,
+            34.516248
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "via_scuola",
+        "name": "Via della Scuola",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "centro",
+        "category": "via_secondaria",
+        "note": "Dalla Piazza alla Scuola di Stria."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.499581
+          ],
+          [
+            17.999435,
+            34.499806
+          ],
+          [
+            17.999304,
+            34.499653
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_roccia_burrone",
+        "name": "Sentiero Roccia-Burrone",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "category": "sentiero_montano",
+        "note": "Prosecuzione Via che Sale oltre Roccia Alta, sale al Burrone alla Grotta di Grunto."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.001952,
+            34.516248
+          ],
+          [
+            18.001405,
+            34.519851
+          ],
+          [
+            18.000858,
+            34.522104
+          ],
+          [
+            17.999982,
+            34.524176
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_al_guado",
+        "name": "Sentiero al Guado",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "category": "sentiero_secondario",
+        "note": "Diramazione Via che Sale verso il Guado di Pietre Piatte."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.510842
+          ],
+          [
+            17.999764,
+            34.514446
+          ],
+          [
+            17.999764,
+            34.517149
+          ],
+          [
+            17.999764,
+            34.51895
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_pontile_spiaggia",
+        "name": "Sentiero Pontile-Spiaggia",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "category": "sentiero_costiero",
+        "note": "Piccolo ponte di legno tra Pontile e Spiaggia delle Conchiglie."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.476608
+          ],
+          [
+            18.000858,
+            34.476158
+          ],
+          [
+            18.001952,
+            34.475707
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_pontile_case_basse",
+        "name": "Sentiero Pontile-Case Basse",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "category": "sentiero_secondario",
+        "note": "Pontile -> cluster Case Basse Pescatori."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.477509
+          ],
+          [
+            17.999217,
+            34.477959
+          ],
+          [
+            17.99867,
+            34.47841
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_orti_tana_rovo",
+        "name": "Sentiero Orti-Tana",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "category": "sentiero_interno_quartiere",
+        "note": "Dagli Orti alla Tana di Rovo ai margini della Foresta."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.989917,
+            34.500032
+          ],
+          [
+            17.986635,
+            34.501383
+          ],
+          [
+            17.982258,
+            34.501833
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_casa_salvia_casa_zolla",
+        "name": "Sentiero Salvia-Zolla",
+        "type": "path",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "category": "sentiero_interno_quartiere",
+        "note": "Lungo il margine interno degli Orti."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.987729,
+            34.502734
+          ],
+          [
+            17.987182,
+            34.500032
+          ],
+          [
+            17.986635,
+            34.497329
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_riva_ovest",
+        "name": "Sentiero della Riva Ovest",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "category": "sentiero_costeggiante",
+        "note": "Costeggia la riva interna del Braccio Ovest dal Guado alla Bocca. Canonico S7 (percorso zattera)."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.5185
+          ],
+          [
+            17.991328,
+            34.515604
+          ],
+          [
+            17.988241,
+            34.514409
+          ],
+          [
+            17.985435,
+            34.51286
+          ],
+          [
+            17.982978,
+            34.510993
+          ],
+          [
+            17.980934,
+            34.508854
+          ],
+          [
+            17.979354,
+            34.506496
+          ],
+          [
+            17.978277,
+            34.503976
+          ],
+          [
+            17.977732,
+            34.501357
+          ],
+          [
+            17.977732,
+            34.498706
+          ],
+          [
+            17.978277,
+            34.496087
+          ],
+          [
+            17.979354,
+            34.493567
+          ],
+          [
+            17.980934,
+            34.491209
+          ],
+          [
+            17.982978,
+            34.48907
+          ],
+          [
+            17.985435,
+            34.487204
+          ],
+          [
+            17.988241,
+            34.485654
+          ],
+          [
+            17.991328,
+            34.484459
+          ],
+          [
+            17.999764,
+            34.477509
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "isola_orizzonte_se",
+        "name": "Isola all'Orizzonte (sud-est)",
+        "type": "island_outline",
+        "status": "stub",
+        "quarter": "perimetro",
+        "note": "Soglia narrativa Fase F, appena visibile all'orizzonte."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              18.07088,
+              34.450482
+            ],
+            [
+              18.074162,
+              34.450482
+            ],
+            [
+              18.073068,
+              34.452284
+            ],
+            [
+              18.07088,
+              34.450482
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "isola_orizzonte_so",
+        "name": "Isola all'Orizzonte (sud-ovest)",
+        "type": "island_outline",
+        "status": "stub",
+        "quarter": "perimetro",
+        "note": "Soglia narrativa Fase F."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.936306,
+              34.454986
+            ],
+            [
+              17.939589,
+              34.454986
+            ],
+            [
+              17.938495,
+              34.456788
+            ],
+            [
+              17.936306,
+              34.454986
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "fiume_che_gira",
+        "name": "Fiume che Gira",
+        "type": "river_system",
+        "status": "canonico",
+        "quarter": "perimetro",
+        "children": [
+          "fiume_capo",
+          "fiume_braccio_ovest_alto",
+          "fiume_stretta_due_massi",
+          "fiume_braccio_ovest_medio",
+          "fiume_braccio_ovest_basso",
+          "fiume_braccio_est"
+        ],
+        "aggregate": true,
+        "note": "Feature aggregato logico. Riferisce l'intero sistema fluviale. Per geometria granulare usare i sotto-tratti in children. Backward-compat con grafo storie."
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [
+            [
+              17.999764,
+              34.520752
+            ],
+            [
+              17.999709,
+              34.519851
+            ],
+            [
+              17.999764,
+              34.51895
+            ],
+            [
+              17.999818,
+              34.51823
+            ],
+            [
+              17.999764,
+              34.517599
+            ]
+          ],
+          [
+            [
+              17.999764,
+              34.517599
+            ],
+            [
+              17.997961,
+              34.517545
+            ],
+            [
+              17.996169,
+              34.517383
+            ],
+            [
+              17.9944,
+              34.517114
+            ],
+            [
+              17.992664,
+              34.516739
+            ],
+            [
+              17.990971,
+              34.516262
+            ],
+            [
+              17.989333,
+              34.515684
+            ],
+            [
+              17.987759,
+              34.51501
+            ],
+            [
+              17.986259,
+              34.514244
+            ],
+            [
+              17.984842,
+              34.51339
+            ],
+            [
+              17.983517,
+              34.512454
+            ],
+            [
+              17.982293,
+              34.511441
+            ],
+            [
+              17.981176,
+              34.510357
+            ],
+            [
+              17.980173,
+              34.509211
+            ],
+            [
+              17.979292,
+              34.508007
+            ],
+            [
+              17.978537,
+              34.506754
+            ],
+            [
+              17.977912,
+              34.50546
+            ],
+            [
+              17.977423,
+              34.504133
+            ],
+            [
+              17.977071,
+              34.50278
+            ],
+            [
+              17.976859,
+              34.50141
+            ]
+          ],
+          [
+            [
+              17.976859,
+              34.50141
+            ],
+            [
+              17.976788,
+              34.500032
+            ],
+            [
+              17.976859,
+              34.498653
+            ]
+          ],
+          [
+            [
+              17.976859,
+              34.498653
+            ],
+            [
+              17.977071,
+              34.497283
+            ],
+            [
+              17.977423,
+              34.49593
+            ],
+            [
+              17.977912,
+              34.494603
+            ],
+            [
+              17.978537,
+              34.493309
+            ],
+            [
+              17.979292,
+              34.492056
+            ],
+            [
+              17.980173,
+              34.490853
+            ],
+            [
+              17.981176,
+              34.489706
+            ],
+            [
+              17.982293,
+              34.488622
+            ]
+          ],
+          [
+            [
+              17.983517,
+              34.487609
+            ],
+            [
+              17.984842,
+              34.486673
+            ],
+            [
+              17.986259,
+              34.485819
+            ],
+            [
+              17.987759,
+              34.485053
+            ],
+            [
+              17.989333,
+              34.484379
+            ],
+            [
+              17.990971,
+              34.483801
+            ],
+            [
+              17.992664,
+              34.483324
+            ],
+            [
+              17.9944,
+              34.482949
+            ],
+            [
+              17.996169,
+              34.48268
+            ],
+            [
+              17.997961,
+              34.482518
+            ],
+            [
+              17.999764,
+              34.476608
+            ]
+          ],
+          [
+            [
+              17.999764,
+              34.517599
+            ],
+            [
+              18.002361,
+              34.519584
+            ],
+            [
+              18.00539,
+              34.518839
+            ],
+            [
+              18.007677,
+              34.518751
+            ],
+            [
+              18.009989,
+              34.517575
+            ],
+            [
+              18.011624,
+              34.517009
+            ],
+            [
+              18.014622,
+              34.515913
+            ],
+            [
+              18.016423,
+              34.51484
+            ],
+            [
+              18.01871,
+              34.514129
+            ],
+            [
+              18.019954,
+              34.512768
+            ],
+            [
+              18.021118,
+              34.511074
+            ],
+            [
+              18.023332,
+              34.508848
+            ],
+            [
+              18.024248,
+              34.507497
+            ],
+            [
+              18.025389,
+              34.505393
+            ],
+            [
+              18.025561,
+              34.504155
+            ],
+            [
+              18.026047,
+              34.501758
+            ],
+            [
+              18.025564,
+              34.500428
+            ],
+            [
+              18.025867,
+              34.49858
+            ],
+            [
+              18.025125,
+              34.496534
+            ],
+            [
+              18.025234,
+              34.494787
+            ],
+            [
+              18.023496,
+              34.492504
+            ],
+            [
+              18.022431,
+              34.491128
+            ],
+            [
+              18.021438,
+              34.489684
+            ],
+            [
+              18.019925,
+              34.487991
+            ],
+            [
+              18.018733,
+              34.4861
+            ],
+            [
+              18.016484,
+              34.485471
+            ],
+            [
+              18.014381,
+              34.4838
+            ],
+            [
+              18.011887,
+              34.483207
+            ],
+            [
+              18.009476,
+              34.48223
+            ],
+            [
+              18.007447,
+              34.481544
+            ],
+            [
+              18.004481,
+              34.481177
+            ],
+            [
+              18.002793,
+              34.480592
+            ],
+            [
+              17.999764,
+              34.476608
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "montagne_gemelle",
+        "name": "Montagne Gemelle",
+        "type": "mountain_system",
+        "status": "canonico",
+        "quarter": "aria",
+        "children": [
+          "montagna_gemella_est",
+          "montagna_gemella_ovest"
+        ],
+        "aggregate": true,
+        "note": "Feature aggregato. Le due cime sono mappate separatamente in children. Backward-compat con grafo storie."
+      },
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            18.003046,
+            34.524806
+          ],
+          [
+            17.996481,
+            34.524806
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "pozza_dei_pascoli",
+        "name": "Pozza dei Pascoli",
+        "type": "water_pool",
+        "status": "canonico",
+        "quarter": "aria",
+        "note": "Pozza d'acqua scoperta a metà cammino tra Villaggio e centro Pascoli Alti. Canonico S2: i fratelli si chinano a bere, vedono i loro riflessi. Acqua piovana raccolta in avvallamento naturale."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.000311,
+          34.510842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "noce_della_scuola",
+        "name": "Noce della Scuola",
+        "type": "landmark",
+        "category": "tree",
+        "status": "canonico",
+        "quarter": "centro",
+        "note": "Grande noce che fa ombra sulla Via della Scuola. Canonico S8: l'albero che cade di sera durante tempesta. Noah vede l'alzata del Pozzo che devia la massa (nessuno ferito). STATO POST-S8: caduto. Il punto resta landmark anche dopo la caduta come riferimento."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.99949,
+          34.499761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "zona_di_lavoro_salvia",
+        "name": "Zona di Lavoro di Salvia",
+        "type": "work_area",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Area al margine est della Foresta Intrecciata, primi metri dentro la Foresta, dove Salvia raccoglie erbe (ortica, mallo, ecc.). Canonico S4: oltre questa zona comincia la Foresta vera — Elias la attraversa senza accorgersi. Perimetro approssimativo, da raffinare."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              17.986088,
+              34.503185
+            ],
+            [
+              17.984993,
+              34.503635
+            ],
+            [
+              17.984446,
+              34.502734
+            ],
+            [
+              17.98554,
+              34.502284
+            ],
+            [
+              17.986635,
+              34.502734
+            ],
+            [
+              17.986088,
+              34.503185
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_foresta_traversata_ovest",
+        "name": "Sentiero di traversata Foresta",
+        "type": "path",
+        "category": "sentiero_foresta",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Traccia (non sentiero vero) che attraversa la Foresta Intrecciata da est a ovest. Non battuta — Foresta Intrecciata 'senza sentieri precisi' (apparato P.06). Canonico implicito S3: il pallone vola oltre la Foresta, i fratelli attraversano per recuperarlo."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.98554,
+            34.500482
+          ],
+          [
+            17.982258,
+            34.500032
+          ],
+          [
+            17.978976,
+            34.499131
+          ],
+          [
+            17.975694,
+            34.49823
+          ],
+          [
+            17.972411,
+            34.497329
+          ],
+          [
+            17.969129,
+            34.496428
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_ritorno_bocca_orti",
+        "name": "Sentiero Bocca-Orti",
+        "type": "path",
+        "category": "sentiero_interno",
+        "status": "canonico",
+        "quarter": "acqua",
+        "note": "Dal Pontile alla Bocca verso nord, tagliando dentro attraverso la terra interna (non lungo il Fiume) fino agli Orti del Cerchio. Canonico S7: ritorno off-screen dei fratelli dalla Bocca. Attraversa il Quartiere d'Acqua interno verso Quartiere di Terra."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.47841
+          ],
+          [
+            17.997575,
+            34.482014
+          ],
+          [
+            17.995387,
+            34.486518
+          ],
+          [
+            17.993199,
+            34.491023
+          ],
+          [
+            17.991011,
+            34.495527
+          ],
+          [
+            17.989917,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_casa_salvia_margine_foresta",
+        "name": "Sentiero Salvia-Margine Foresta",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Dalla Casa di Salvia al margine est della Foresta Intrecciata (zona di lavoro di Salvia). Canonico S4: Salvia porta i fratelli, loro restano al margine mentre lei entra."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.987729,
+            34.502734
+          ],
+          [
+            17.986635,
+            34.502914
+          ],
+          [
+            17.98554,
+            34.502824
+          ],
+          [
+            17.984993,
+            34.503005
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_orti_torrente_foresta",
+        "name": "Sentiero Orti-Torrente",
+        "type": "path",
+        "category": "sentiero_foresta",
+        "status": "canonico",
+        "quarter": "terra",
+        "note": "Dagli Orti del Cerchio entra nella Foresta verso ovest-sud-ovest, porta al torrente dopo 20-30 minuti di cammino (~1.5-2km). Canonico S5: percorso del Ponte di Rami."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.989917,
+            34.500032
+          ],
+          [
+            17.986635,
+            34.500032
+          ],
+          [
+            17.983352,
+            34.499131
+          ],
+          [
+            17.98007,
+            34.49823
+          ],
+          [
+            17.977882,
+            34.497329
+          ],
+          [
+            17.977335,
+            34.496428
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_orti_casa_salvia",
+        "name": "Sentiero Orti-Casa Salvia",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Collega Orti del Cerchio alla Casa di Salvia. Inferito — usato quando i fratelli vanno a cercare Salvia."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.989917,
+            34.500032
+          ],
+          [
+            17.98937,
+            34.500932
+          ],
+          [
+            17.988604,
+            34.501833
+          ],
+          [
+            17.987729,
+            34.502734
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_orti_casa_zolla",
+        "name": "Sentiero Orti-Casa Zolla",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Orti del Cerchio -> Casa di Zolla. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.989917,
+            34.500032
+          ],
+          [
+            17.988823,
+            34.499131
+          ],
+          [
+            17.987729,
+            34.49823
+          ],
+          [
+            17.986635,
+            34.497329
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_tana_rovo_casa_salvia",
+        "name": "Sentiero Tana Rovo-Casa Salvia",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Collega Tana di Rovo e Casa di Salvia lungo il margine Foresta. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.982258,
+            34.501833
+          ],
+          [
+            17.983899,
+            34.502284
+          ],
+          [
+            17.98554,
+            34.502734
+          ],
+          [
+            17.987729,
+            34.502734
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_casa_zolla_tana_rovo",
+        "name": "Sentiero Casa Zolla-Tana Rovo",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "terra",
+        "note": "Collega Casa di Zolla alla Tana di Rovo lungo i margini ovest degli Orti e Foresta. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.986635,
+            34.497329
+          ],
+          [
+            17.98554,
+            34.499131
+          ],
+          [
+            17.984446,
+            34.500482
+          ],
+          [
+            17.983352,
+            34.501383
+          ],
+          [
+            17.982258,
+            34.501833
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_forno_case_mattino",
+        "name": "Sentiero Forno-Case del Mattino",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "note": "Prosecuzione Via dell'Alba oltre il Forno, verso le Case del Mattino."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.011799,
+            34.500032
+          ],
+          [
+            18.01344,
+            34.500032
+          ],
+          [
+            18.015081,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_fuoco_ring",
+        "name": "Viottolo del Quartiere di Fuoco",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "fuoco",
+        "note": "Ring road interno del Quartiere di Fuoco che collega Case del Mattino, Fabbro, Conceria, Essiccatoio. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.015081,
+            34.500032
+          ],
+          [
+            18.015081,
+            34.499131
+          ],
+          [
+            18.016175,
+            34.499581
+          ],
+          [
+            18.015628,
+            34.500482
+          ],
+          [
+            18.015081,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_scogliera_casa_amo",
+        "name": "Sentiero Scogliera-Casa Amo",
+        "type": "path",
+        "category": "sentiero_costiero",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "note": "Viottolo breve tra Scogliera Est e Casa di Amo. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.004578,
+            34.474986
+          ],
+          [
+            18.004468,
+            34.475077
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_spiaggia_casa_amo",
+        "name": "Sentiero Spiaggia-Casa Amo",
+        "type": "path",
+        "category": "sentiero_costiero",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "note": "Salita dalla Spiaggia delle Conchiglie alla Casa di Amo sulla scogliera. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.003046,
+            34.474806
+          ],
+          [
+            18.003921,
+            34.474896
+          ],
+          [
+            18.004468,
+            34.475077
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_case_basse_bocca",
+        "name": "Sentiero Case Basse-Bocca",
+        "type": "path",
+        "category": "sentiero_costiero",
+        "status": "provvisorio",
+        "quarter": "acqua",
+        "note": "Dal cluster Case Basse alla Bocca lungo la riva interna. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.99867,
+            34.47841
+          ],
+          [
+            17.999217,
+            34.477509
+          ],
+          [
+            17.999764,
+            34.476608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_capanne_pastori_pascoli",
+        "name": "Sentiero Capanne-Pascoli",
+        "type": "path",
+        "category": "sentiero_interno_quartiere",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "note": "Dalle Capanne Stagionali attraverso i Pascoli Alti. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.997575,
+            34.514446
+          ],
+          [
+            17.99867,
+            34.513995
+          ],
+          [
+            17.999764,
+            34.513545
+          ],
+          [
+            18.000858,
+            34.513095
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_pascoli_burrone_diretto",
+        "name": "Sentiero Pascoli-Burrone",
+        "type": "path",
+        "category": "sentiero_montano",
+        "status": "provvisorio",
+        "quarter": "aria",
+        "note": "Sentiero alternativo alla salita via Roccia Alta. Piu' diretto ma piu' faticoso. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999764,
+            34.513545
+          ],
+          [
+            18.000311,
+            34.517149
+          ],
+          [
+            18.000639,
+            34.520752
+          ],
+          [
+            18.000311,
+            34.523455
+          ],
+          [
+            17.999982,
+            34.524176
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "viottolo_perimetrale_piazza",
+        "name": "Viottolo Perimetrale della Piazza",
+        "type": "path",
+        "category": "viottolo",
+        "status": "provvisorio",
+        "quarter": "centro",
+        "note": "Anello stretto intorno alla Piazza che collega le case sul suo perimetro. Inferito — urbanisticamente necessario."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999906,
+            34.499923
+          ],
+          [
+            17.999961,
+            34.500104
+          ],
+          [
+            17.999982,
+            34.500149
+          ],
+          [
+            17.999578,
+            34.500149
+          ],
+          [
+            17.999545,
+            34.499986
+          ],
+          [
+            17.9996,
+            34.499923
+          ],
+          [
+            17.999906,
+            34.499923
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "viottolo_piazza_bottega_nodo",
+        "name": "Viottolo Piazza-Bottega Nodo",
+        "type": "path",
+        "category": "viottolo",
+        "status": "provvisorio",
+        "quarter": "centro",
+        "note": "Micro-viottolo dalla Piazza alla Bottega di Nodo."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.500032
+          ],
+          [
+            17.999961,
+            34.500104
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "viottolo_piazza_casa_memolo",
+        "name": "Viottolo Piazza-Casetta Mèmolo",
+        "type": "path",
+        "category": "viottolo",
+        "status": "provvisorio",
+        "quarter": "centro",
+        "note": "Micro-viottolo dalla Piazza alla Casetta di Mèmolo."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999687,
+            34.500032
+          ],
+          [
+            17.999578,
+            34.500149
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_forno_orti_diretto",
+        "name": "Sentiero Forno-Orti diretto",
+        "type": "path",
+        "category": "sentiero_inter_quartiere",
+        "status": "provvisorio",
+        "quarter": "centro",
+        "note": "Taglio diretto est-ovest che evita la Piazza. Usato per traffico di lavoro (Camminanti, Mantenitori). Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.011799,
+            34.500032
+          ],
+          [
+            18.007422,
+            34.49868
+          ],
+          [
+            18.003046,
+            34.49823
+          ],
+          [
+            17.99867,
+            34.49823
+          ],
+          [
+            17.994293,
+            34.49868
+          ],
+          [
+            17.989917,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_roccia_orti_tangenziale",
+        "name": "Sentiero Roccia-Orti",
+        "type": "path",
+        "category": "sentiero_inter_quartiere",
+        "status": "provvisorio",
+        "quarter": "perimetro",
+        "note": "Tangenziale che collega Quartiere Aria a Quartiere Terra senza passare dal centro. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.001952,
+            34.516248
+          ],
+          [
+            17.997575,
+            34.510842
+          ],
+          [
+            17.994293,
+            34.506338
+          ],
+          [
+            17.992105,
+            34.502734
+          ],
+          [
+            17.989917,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_pontile_forno",
+        "name": "Sentiero Pontile-Forno",
+        "type": "path",
+        "category": "sentiero_inter_quartiere",
+        "status": "provvisorio",
+        "quarter": "perimetro",
+        "note": "Tangenziale sud-est. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999873,
+            34.477509
+          ],
+          [
+            18.003046,
+            34.482914
+          ],
+          [
+            18.006328,
+            34.48832
+          ],
+          [
+            18.009063,
+            34.493725
+          ],
+          [
+            18.011252,
+            34.49823
+          ],
+          [
+            18.011799,
+            34.500032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_riva_est_parziale",
+        "name": "Sentiero Riva Est parziale",
+        "type": "path",
+        "category": "sentiero_costeggiante",
+        "status": "provvisorio",
+        "quarter": "perimetro",
+        "note": "Sentiero lungo la riva interna del Braccio Est. Non battuto quanto la riva ovest (nessuna storia canonica lo tocca). Inferito come completezza urbanistica."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.001952,
+            34.517149
+          ],
+          [
+            18.008516,
+            34.511743
+          ],
+          [
+            18.013987,
+            34.506338
+          ],
+          [
+            18.016175,
+            34.500032
+          ],
+          [
+            18.015081,
+            34.492824
+          ],
+          [
+            18.010705,
+            34.485617
+          ],
+          [
+            18.00414,
+            34.479311
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_costiero_ovest",
+        "name": "Sentiero Costiero Ovest",
+        "type": "path",
+        "category": "sentiero_costiero",
+        "status": "provvisorio",
+        "quarter": "perimetro",
+        "note": "Sentiero lungo la fascia costiera ovest. Quasi mai battuto. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.997575,
+            34.477509
+          ],
+          [
+            17.991011,
+            34.481113
+          ],
+          [
+            17.983352,
+            34.489221
+          ],
+          [
+            17.977882,
+            34.500032
+          ],
+          [
+            17.978976,
+            34.511743
+          ],
+          [
+            17.986635,
+            34.520752
+          ],
+          [
+            17.996481,
+            34.526158
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "sentiero_costiero_est",
+        "name": "Sentiero Costiero Est",
+        "type": "path",
+        "category": "sentiero_costiero",
+        "status": "provvisorio",
+        "quarter": "perimetro",
+        "note": "Sentiero lungo la fascia costiera est. Mai battuto dalle storie. Inferito."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            18.00414,
+            34.477509
+          ],
+          [
+            18.012893,
+            34.482014
+          ],
+          [
+            18.020551,
+            34.491023
+          ],
+          [
+            18.023834,
+            34.500032
+          ],
+          [
+            18.02274,
+            34.510842
+          ],
+          [
+            18.016175,
+            34.520752
+          ],
+          [
+            18.005234,
+            34.526158
+          ]
+        ]
+      }
+    }
+  ]
+}

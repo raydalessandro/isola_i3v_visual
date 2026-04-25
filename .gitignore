@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary
+*.tmp
+*.bak
+*.backup
+
+# Archive (non committare il tar.gz di release — quelli vanno su Releases GitHub)
+*.tar.gz
+*.zip
+
+# Log / output generati localmente
+logs/
+output/
+tmp/
+
+# File aggregati/snapshot temporanei
+snapshot_*.json
+diff_*.json
