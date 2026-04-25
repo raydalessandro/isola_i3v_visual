@@ -18,7 +18,7 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 - Sostituito `pipeline_narrativa/story_graph.json` con la versione **v0.10.0** (S1-S12, contro v0.6.0 con S1-S8 della zip).
 - Creata directory `visual/` (vuota, da popolare nelle prossime sessioni dopo brief Ray).
 - README di radice riscritto per riflettere il nuovo scope.
-- AGENT_INSTRUCTIONS estesi con `visual/` come directory scrivibile.
+- **`AGENT_INSTRUCTIONS.md` rifattorizzato in cartella `skills/`**: orchestratore (`skills/README.md` con regole comuni), `skills/cartografo.md` (skill cartografia, scope `cartografia/`), `skills/visual.md` (skill visual, scope `visual/`, in attesa brief Ray). L'agente sceglie una skill per task e si attiene al proprio scope di scrittura.
 
 **Subito dopo il bootstrap (in questa stessa sessione):**
 - Diff grafo v0.6.0 → v0.10.0: storie e location nuove (S9-S12, eventuali aggiornamenti a S1-S8).

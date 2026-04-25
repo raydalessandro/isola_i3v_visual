@@ -8,7 +8,8 @@ Questo repo contiene **due tracce di lavoro** + un input read-only:
 /
 ├── cartografia/           ← tecnica: GeoJSON, schede luogo, viewer, convenzioni
 ├── visual/                ← descrizioni visive, vincoli prompt, immagini, sito interno
-└── pipeline_narrativa/    ← INPUT read-only: grafo storie + corpus canonico narrativo
+├── pipeline_narrativa/    ← INPUT read-only: grafo storie + corpus canonico narrativo
+└── skills/                ← skill dell'agente IA (cartografo, visual) + regole comuni
 ```
 
 ---
@@ -39,7 +40,11 @@ Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern A
 
 ## 4. Istruzioni per agenti IA
 
-Vedi `AGENT_INSTRUCTIONS.md`. In sintesi: l'agente ha autorità su **geografia** (cartografia/) e **descrizioni visive** (visual/); non tocca mai `pipeline_narrativa/`; non decide canone narrativo; segnala invece di reinterpretare.
+Vedi `skills/README.md` (orchestratore) e le skill specifiche:
+- [`skills/cartografo.md`](./skills/cartografo.md) — manutenzione cartografia.
+- [`skills/visual.md`](./skills/visual.md) — descrizioni visive, prompt, sito interno.
+
+In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (`cartografia/` o `visual/`), non tocca mai `pipeline_narrativa/`, non decide canone narrativo, segnala invece di reinterpretare.
 
 ## 5. Stato e contesto
 
