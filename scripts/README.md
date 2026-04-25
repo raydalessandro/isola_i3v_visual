@@ -6,7 +6,8 @@ Tool Python condivisi tra le skill `cartografo` e `visual`. Idempotenti: riesegu
 
 | Script | Scopo | Skill |
 |---|---|---|
-| `build_visual_skeleton.py` | Genera struttura `visual/` (cartelle frattali, schede stub, catalogo) a partire da `pipeline_narrativa/story_graph.json` + `cartografia/geo/island.geojson`. **Non sovrascrive** schede esistenti. | visual |
+| `build_visual_skeleton.py` | Genera struttura `visual/` (cartelle frattali, schede stub, catalogo, indice strade) a partire da `pipeline_narrativa/story_graph.json` + `cartografia/geo/island.geojson`. Idempotente: rigenera frontmatter, preserva body. | visual |
+| `build_catalogo_web.py` | Scansiona `visual/` ricorsivamente, parsa frontmatter YAML + body MD, raccoglie immagini, scrive `catalogo_web/data/entities.json` per il sito interno. Richiede `PyYAML`. | governance |
 
 ## Principi
 

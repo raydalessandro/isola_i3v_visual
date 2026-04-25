@@ -6,10 +6,14 @@ Questo repo contiene **due tracce di lavoro** + un input read-only:
 
 ```
 /
-├── cartografia/           ← tecnica: GeoJSON, schede luogo, viewer, convenzioni
-├── visual/                ← descrizioni visive, vincoli prompt, immagini, sito interno
-├── pipeline_narrativa/    ← INPUT read-only: grafo storie + corpus canonico narrativo
-└── skills/                ← skill dell'agente IA (cartografo, visual) + regole comuni
+├── cartografia/           tecnica: GeoJSON, schede luogo, viewer, convenzioni
+├── visual/                descrizioni visive di tutte le entità (personaggi, luoghi, oggetti, venti, signatures)
+├── catalogo_web/          sito statico interno per consultare visual/ da browser (GitHub Pages)
+├── pipeline_narrativa/    INPUT read-only: grafo storie + corpus canonico narrativo
+├── skills/                skill dell'agente IA (cartografo, visual con sotto-skill) + regole comuni
+├── scripts/               tool Python condivisi (idempotenti) tra le skill
+├── PROJECT_STATE.md       snapshot operativo
+└── SYNC_LOG.md            log dei cambiamenti da riflettere altrove
 ```
 
 ---
@@ -25,11 +29,20 @@ Cartografia tecnica canonica dell'Isola. Alimenta la pipeline immagini con coere
 
 ## 2. Visual
 
-Serbatoio di **descrizioni visive e vincoli per prompt** per tutte le entità della storia (luoghi, personaggi, oggetti, venti-spiriti). Sarà fruibile via piccolo sito web interno ordinato per sezioni di entità, con immagini di riferimento per i modelli generativi.
+Serbatoio di **descrizioni visive e vincoli per prompt** per tutte le entità della saga (personaggi, luoghi, oggetti, venti, visual signatures). Fonte unica per IA generative, illustrazioni di riferimento, stampa 3D (4 vedute), narrativa, campagne social.
 
-- **Stato:** in bootstrap. Materiale e struttura da definire nelle prossime sessioni.
+- **Stato:** 112 schede in struttura frattale (23 personaggi + 41 luoghi + 31 strade + 13 oggetti + 3 venti + 1 visual signature). Body di ciascuna scheda da compilare via metodo `compilatore` (vedi [`skills/visual/compilatore.md`](./skills/visual/compilatore.md)). Esempio compilato: `visual/personaggi/individuali/cuccioli/liu/scheda.md`.
 
-## 3. Pipeline narrativa (read-only)
+## 3. Catalogo web (sito interno)
+
+Sito statico HTML+JS in [`catalogo_web/`](./catalogo_web/) per **consultare le entità di `visual/` da browser**. Ad uso interno (Ray + collaboratori senza accesso GitHub).
+
+- **Stack:** HTML + CSS + JS vanilla, no build pipeline. `marked.js` da CDN per rendering MD.
+- **Aggiornamento:** `python3 scripts/build_catalogo_web.py` rilegge `visual/` e rigenera `catalogo_web/data/entities.json`. Idempotente.
+- **Locale:** `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
+- **Deploy:** GitHub Pages (Settings → Pages → Source: main / `/`) → URL `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`.
+
+## 4. Pipeline narrativa (read-only)
 
 Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern AI da bandire, EAR, apparato — più il grafo storie aggiornato.
 
@@ -38,7 +51,7 @@ Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern A
 
 ---
 
-## 4. Istruzioni per agenti IA
+## 5. Istruzioni per agenti IA
 
 Vedi `skills/README.md` (orchestratore) e le skill specifiche:
 - [`skills/cartografo.md`](./skills/cartografo.md) — manutenzione cartografia.
@@ -46,7 +59,7 @@ Vedi `skills/README.md` (orchestratore) e le skill specifiche:
 
 In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (`cartografia/` o `visual/`), non tocca mai `pipeline_narrativa/`, non decide canone narrativo, segnala invece di reinterpretare.
 
-## 5. Stato e contesto
+## 6. Stato e contesto
 
 - **Snapshot operativo:** `PROJECT_STATE.md`.
 - **Autore narrativo e proprietario:** Ray.
@@ -55,5 +68,5 @@ In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (
 ---
 
 **Ultimo aggiornamento:** 2026-04-25
-**Versione cartografia:** v0.5
+**Versione cartografia:** v0.6.0
 **Versione grafo storie:** v0.10.0

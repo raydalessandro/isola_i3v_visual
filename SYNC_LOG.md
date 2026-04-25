@@ -55,6 +55,24 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-04-25-007 — Catalogo web V1 (sito interno statico)
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** governance + tool web
+- **Repo target:** GitHub Pages (URL pubblico interno `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`).
+- **Cambiamento:**
+  - Nuova directory `catalogo_web/` con sito statico HTML+CSS+JS vanilla per consultazione di tutte le entità di `visual/`. Niente React, niente build pipeline.
+  - File: `index.html`, `style.css`, `app.js`, `README.md`, `data/entities.json` (generato).
+  - Nuovo script `scripts/build_catalogo_web.py`: scansiona `visual/` ricorsivamente, parsa frontmatter YAML (richiede PyYAML) + body MD, raccoglie immagini, costruisce albero gerarchico riflesso della struttura folder, sovrascrive `entities.json`. Idempotente. Da rilanciare quando schede o immagini cambiano.
+- **Funzionalità V1:**
+  - Sidebar ad albero navigabile (stesso nesting frattale di `visual/`), search testuale per nome/id, pagina entità con tag/frontmatter/body MD/gallery immagini, pagina indice strade, link al viewer cartografia esistente, hash routing client-side.
+- **Deploy:** GitHub Pages serve `main` dalla root del repo. Da abilitare in Settings → Pages → Source: main, Folder: `/`. Auto-rideploy a ogni push. Path `catalogo_web/` accessibile direttamente.
+- **Test locale:** `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
+- **Commit:** _da inserire dopo commit_.
+- **File toccati:** `catalogo_web/{index.html,style.css,app.js,README.md,data/entities.json}`, `scripts/build_catalogo_web.py`, `PROJECT_STATE.md`.
+- **Da riflettere altrove:** richiede PyYAML come dipendenza Python (`pip install pyyaml`). Documentato in `catalogo_web/README.md` e `scripts/README.md`.
+
+---
+
 ## SYNC-2026-04-25-006 — Visual: introduzione sotto-skill `compilatore` + cambio metodo "completa, non rimuovere"
 - **Stato:** DA_RIFLETTERE
 - **Tipo:** skills + visual (governance)

@@ -64,10 +64,19 @@ Il lavoro si sposta dal vecchio archivio `isola_tre_venti_github` al repo unific
 - `skills/README.md` esteso con tabella permessi sotto-skill.
 - Sotto-skill future previste come placeholder: `prompter.md`, `generatore_immagini.md` (non create finché non servono).
 
-**Pendente per visual (bulk in chat con la zip):**
-- Compilazione body delle restanti ~111 schede (Ray fa il bulk in chat con la zip allegata, una entità per volta, con il metodo del `compilatore`). Liu è il riferimento.
-- Generazione immagini di riferimento (modello/i da decidere caso per caso, futura sotto-skill `generatore_immagini`).
-- Static site interno (tecnologia da definire).
+**Catalogo web — V1 (stessa sessione):**
+- Costruito sito statico interno `catalogo_web/` per consultazione di tutte le entità di `visual/` da browser.
+- Stack: HTML + CSS + JS vanilla (no React, no build pipeline). Markdown via `marked.js` da CDN.
+- Script `scripts/build_catalogo_web.py` (idempotente) scansiona `visual/`, parsa frontmatter YAML (PyYAML) e body MD, raccoglie immagini, costruisce albero gerarchico riflesso della struttura folder, scrive `catalogo_web/data/entities.json` (~390 KB, 112 entità).
+- Funzionalità V1: sidebar ad albero navigabile (stesso nesting frattale), search testuale, pagina entità (tag, frontmatter collassabile, body MD renderizzato, gallery immagini), pagina indice strade, link al viewer cartografia esistente, hash routing.
+- Deploy: GitHub Pages serve `main` da root → URL `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`. Auto-rideploy a ogni push.
+- Test locale: `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
+
+**Pendente:**
+- Compilazione body delle restanti ~111 schede (Ray fa il bulk in chat con la zip, metodo `compilatore`). Liu è il riferimento.
+- Generazione immagini di riferimento (4 vedute 3D + variazioni IA — futura sotto-skill `generatore_immagini`).
+- Auto-promozione status `stub` → `provvisorio` quando il body è compilato (miglioramento allo script `build_visual_skeleton.py`, da fare).
+- Auto-rebuild del catalogo web tramite GitHub Actions (opzionale, V2).
 
 ---
 
