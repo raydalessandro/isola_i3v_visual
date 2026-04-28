@@ -1,0 +1,99 @@
+{
+  "story_id": "s01",
+  "phase": "P2a_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s01_canonical.json",
+  "provvisori": {
+    "season_passage": {
+      "value": "Inverno pieno, mattina fredda con nebbia di inversione termica sui Pascoli Alti; il Vento Taglio scende dall'est all'alba e apre il bianco.",
+      "category": "B",
+      "rationale": "Coerente con il calendario saga (§2.9 CARTA: storie 1-2 = ciclo A inverno) e con i dettagli del nodo (wind_active=vento_taglio, palette bianco-grigio-azzurro freddo, fiato bianco al Forno). Non e' passaggio stagionale ma inverno pieno: lo segnalo come stagione installata."
+    },
+    "key_phrase_indicative": {
+      "value": "A volte fermarsi e' la cosa che muove.",
+      "category": "B",
+      "rationale": "Cattura il nucleo del threshold_moment di Gabriel (decisione contraria all'istinto, 'No. Non muoverci') e il seed_fermarsi_come_gesto_attivo. Indicativa, non frase precisa: il sigillo effettivo sara' immagine del narratore in chiusura (vedi key_phrase_notes), non frase dichiarativa di personaggio."
+    },
+    "hooks": {
+      "s01_h1": {
+        "notes": {
+          "value": "Cornice di apertura della saga: caldo del Forno all'alba, pagnotta consegnata da Fiamma, patto di lettura col narratore installato qui.",
+          "category": "C",
+          "rationale": "Il canonical segnala APERTURA_SAGA + CORNICE_S1_S12 e cammeo Fiamma in modalita' chiacchiera; nota sintetica che fissa atmosfera e funzione strutturale."
+        },
+        "wind_visible": {
+          "value": "Fumo del camino del Forno piegato a ovest visto dalla finestra, fiato bianco dei fratelli appena entrati che si arriccia verso l'interno caldo.",
+          "category": "C",
+          "rationale": "Wind_notes: notte ferma, Taglio atteso all'alba ma non ancora sceso; manifestazione minima coerente con palette terracotta_arancio_forno_fiato_bianco."
+        }
+      },
+      "s01_h2": {
+        "wind_visible": {
+          "value": "Erba alta dei Pascoli piegata a folate brevi, lembi di nebbia che si muovono lenti da est, fiato dei fratelli che resta sospeso piu' del solito nell'aria ferma.",
+          "category": "C",
+          "rationale": "Notes hook: 'Taglio non ancora sceso dall'est; i venti stanno per svegliarsi'. Manifestazione di soglia: vento non ancora pieno, segnali appena percepibili."
+        }
+      },
+      "s01_h3": {
+        "notes": {
+          "value": "Threshold: i fratelli seduti dopo il 'No. Non muoverci' di Gabriel; il Taglio scende da est, apre la nebbia, e il bordo del Burrone appare a due passi. Vertigine che non accade.",
+          "category": "B",
+          "rationale": "Threshold_moment del canonical: decisione contraria all'istinto + rivelazione silenziosa. Scena chiave del ciclo Delta esterno-interno."
+        }
+      },
+      "s01_h4_signature": {
+        "notes": {
+          "value": "Momento iconico: prima apparizione di Grunto. Grunt, zoccolo, manda via; i fratelli restano; lui smette di guardarli (permesso). Gabriel posa la pagnotta su pietra piatta. Una parola sola: 'Buono'. Cornice della saga istituita.",
+          "category": "A",
+          "rationale": "Signature hook: GRUNTO_PRIMA_APPARIZIONE + CORNICE_S1_S12. Resolution_mode del canonical condensa l'intero rito; vincoli grunto attivi (zero frammenti, una parola)."
+        }
+      },
+      "s01_h5": {
+        "notes": {
+          "value": "Chiusura cornice: i fratelli rientrano al Forno prima del buio, fiato bianco contro l'arancio della brace. Fiamma non chiede com'e' andata: presenza calda, non madre piena. Ritorno, non trionfo.",
+          "category": "C",
+          "rationale": "Resolution_mode + ruolo episodico Fiamma + structural_notes su CORNICE_S1_S12: chiusura quieta, sigillo del narratore con immagine, niente frasi-chiave dichiarative."
+        }
+      }
+    }
+  },
+  "quote_consumed": {},
+  "notes_globali": "P2a eseguita in 2 micro-task paralleli (top + hooks). 13 provvisori inizialmente popolati. Verifica post-merge contro schema v1.2 + MIGRATION_PROMPT_FASE_E.md ha rilevato che 5 campi top-level (entry_point_type, closure_type, estimated_length, register, descriptive_pauses_count) sono no_inference_fields: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. Spostati in `rejected_no_inference` come traccia. Nodo canonical riporta gia' null su questi 5 campi: niente da modificare in canonical. Restano legittimi: season_passage (B), key_phrase_indicative (B), e tutti i 6 hook (notes/wind_visible non sono no_inference). Totale provvisori validi P2a: 8 (2 top + 6 hook), categorie: 2 B top + 5 C hook + 1 A hook.",
+  "rejected_no_inference": {
+    "entry_point_type": {
+      "proposed_value": "cornice_quotidiana",
+      "category": "C",
+      "rationale_p2a": "Il primo hook (s01_h1) e' interno Forno, mattino presto, con Fiamma che mette in mano la pagnotta: cornice domestica calda di partenza. Mappabile sul tipo B della §2.1 CARTA (immagine ferma) ma il termine canonico richiesto e' cornice_quotidiana, frame_s1_s12_at_forno_opening conferma.",
+      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+      "schema_constraint": "enum ['A','B','C','D','E','F',null] — A-F sono codici Carta Voce §2.1"
+    },
+    "closure_type": {
+      "proposed_value": "ritorno_simmetrico",
+      "category": "C",
+      "rationale_p2a": "Hook s01_h5 chiude al Forno (stessa location dell'apertura), Fiamma non chiede com'e' andata: cornice S1-S12 esplicitamente dichiarata in structural_notes. La simmetria spaziale prevale; il silenzio_aperto e' presente come sfumatura ma il tratto strutturale dominante e' il ritorno alla cornice.",
+      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+      "schema_constraint": "enum integer [1-7,null] — codici Carta Voce §2.3"
+    },
+    "estimated_length": {
+      "proposed_value": "1050-1200 parole (fascia lunga della saga)",
+      "category": "C",
+      "rationale_p2a": "Range saga §2.5 CARTA = 800-1200; s01 e' apertura con patto di lettura installato, frase-firma narratore esplicita, 5 hook visivi su 10 beat, due ambienti (Forno + Montagne) e tre archi (cornice/nebbia/Grunto): giustifica fascia lunga 1050-1200.",
+      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+      "schema_constraint": "integer (800-1200) — non stringa"
+    },
+    "register": {
+      "proposed_value": "paesaggistico_silenzioso",
+      "category": "B",
+      "rationale_p2a": "Mix dichiarato dal nodo: cammino verso Montagne (paesaggistico_lento nel bianco totale, perdita riferimenti) + threshold silenzioso con Vento Taglio + incontro Grunto a rispettosa distanza con una sola parola. Registro medio-alto della §2.4 CARTA, dominante atmosferica fredda con rivelazione silenziosa.",
+      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4"
+    },
+    "descriptive_pauses_count": {
+      "proposed_value": 2,
+      "category": "C",
+      "rationale_p2a": "§1.6 e §2.7 CARTA: max 2 per storia, distribuzione saga 3-4 storie con due pause. S01 ha due momenti che chiamano pausa descrittiva: il bianco totale della nebbia (s01_h2) e la cengia/incontro Grunto con palette firma (s01_h4). Coerente anche con le memorie lunghe del narratore previste nei voice_notes_essential.",
+      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+      "schema_constraint": "integer (0-2)"
+    }
+  }
+}

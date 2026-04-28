@@ -30,12 +30,30 @@ desktop.ini
 *.tar.gz
 *.zip
 
-# Log / output generati localmente
-logs/
-output/
-tmp/
+# Log / output generati localmente (top-level)
+/logs/
+/output/
+/tmp/
 
 # File aggregati/snapshot temporanei
 snapshot_*.json
 diff_*.json
-_porting_grafo/
+
+# Workspace porting fase E
+# Tracciamo: _porting_grafo/output/ (lavoro per storia) + 2 file rolling nel dossier
+# Non tracciamo: il kit estratto dalla zip (Ray ce l'ha gia' come dossier_fase_e.zip)
+_porting_grafo/dossier_fase_e/dossier/INPUT_NODES/
+_porting_grafo/dossier_fase_e/dossier/GOLD_STANDARDS/
+_porting_grafo/dossier_fase_e/dossier/__pycache__/
+_porting_grafo/dossier_fase_e/dossier/*.py
+_porting_grafo/dossier_fase_e/dossier/character_constraints.json
+_porting_grafo/dossier_fase_e/dossier/debt_classification.json
+_porting_grafo/dossier_fase_e/dossier/entities_snapshot.json
+_porting_grafo/dossier_fase_e/dossier/quadrant_assignment.json
+_porting_grafo/dossier_fase_e/dossier/quote_tracker_per_story.json
+_porting_grafo/dossier_fase_e/dossier/seeds_index.json
+_porting_grafo/dossier_fase_e/dossier/story_graph_schema_canonical_v1_2.json
+_porting_grafo/dossier_fase_e/dossier/validation_checklist.json
+_porting_grafo/dossier_fase_e/dossier/MIGRATION_PROMPT_FASE_E.md
+_porting_grafo/dossier_fase_e/dossier/README.md
+_porting_grafo/dossier_fase_e/dossier/TEMPLATE_catalog_proposals.md

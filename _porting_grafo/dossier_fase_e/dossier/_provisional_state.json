@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-28",
+  "last_story_processed": "s01",
+  "stories_processed": ["s01"],
+  "quotas_consumed": {
+    "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
+    "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
+    "register": {"basso": 0, "medio": 0, "alto": 0},
+    "estimated_length_total": 0,
+    "estimated_length_count": 0,
+    "descriptive_pauses_total": 0,
+    "descriptive_pauses_count_by_value": {"0": 0, "1": 0, "2": 0}
+  },
+  "stories_log": [
+    {
+      "story_id": "s01",
+      "phase_completed": "P2a",
+      "date": "2026-04-28",
+      "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s01/s01_provisional.json",
+      "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s01/s01_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 1,
+          "B": 3,
+          "C": 4
+        },
+        "totale": 8,
+        "dettaglio": [
+          {"field": "season_passage", "category": "B"},
+          {"field": "key_phrase_indicative", "category": "B"},
+          {"field": "visual_anchors.scene_hooks.s01_h1.notes", "category": "C"},
+          {"field": "visual_anchors.scene_hooks.s01_h1.wind_visible", "category": "C"},
+          {"field": "visual_anchors.scene_hooks.s01_h2.wind_visible", "category": "C"},
+          {"field": "visual_anchors.scene_hooks.s01_h3.notes", "category": "B"},
+          {"field": "visual_anchors.scene_hooks.s01_h4_signature.notes", "category": "A"},
+          {"field": "visual_anchors.scene_hooks.s01_h5.notes", "category": "C"}
+        ]
+      },
+      "no_inference_fields_left_null": {
+        "count": 5,
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
+        "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. Le proposte P2a sono tracciate in s01_provisional.json#rejected_no_inference per memoria."
+      },
+      "seeds": {
+        "planted": [
+          "seed_s01_bastoncino_noah",
+          "seed_noah_raccoglie_oggetti",
+          "seed_pagnotta_grunto_rito",
+          "seed_grunto_prima_apparizione",
+          "seed_due_passi_dal_burrone",
+          "seed_gabriel_sa_la_strada_senza_vedere",
+          "seed_paura_noah_buio",
+          "seed_fermarsi_come_gesto_attivo"
+        ],
+        "picked_up": [],
+        "maturing_here": [],
+        "bloomed_here": []
+      },
+      "callbacks_made": [],
+      "debts_opened": [],
+      "debts_closed": [],
+      "misalignments_logged": ["mis_001"],
+      "notes": "Prima storia migrata (apertura saga, ciclo A inverno). 8 provvisori validi popolati in P2a (1A + 3B + 4C). I 5 no_inference_fields restano null nel canonical: decisione Ray in fase C/D. Le quote di saga (entry_point_type, closure_type, register, estimated_length, descriptive_pauses_count) NON vengono incrementate qui: saranno conteggiate solo dopo che Ray avra' deciso i valori autoriali."
+    }
+  ],
+  "quotas_remaining_check": {
+    "_description": "Limiti di saga (totale 12 storie). Statici, non vengono modificati. Servono come riferimento per l'agente in passata 2.",
+    "entry_point_type_max_per_type": 2,
+    "entry_point_type_no_consecutive": true,
+    "closure_type_caps": {
+      "1": 2,
+      "2": 3,
+      "3": 2,
+      "4": 2,
+      "5": 2,
+      "6": 1,
+      "7": [4, 5]
+    },
+    "register_forbidden": ["molto_alto"],
+    "register_distribution_natural": true,
+    "estimated_length_target": {
+      "corte_800_900": 2,
+      "medie_900_1050": 6,
+      "lunghe_1050_1200": 4
+    },
+    "descriptive_pauses_target": {
+      "0": [2, 3],
+      "1": [4, 5],
+      "2": [3, 4]
+    }
+  }
+}

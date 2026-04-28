@@ -1,0 +1,49 @@
+{
+  "story_id": "s01",
+  "phase": "P2a_hooks",
+  "date": "2026-04-28",
+  "provvisori": {
+    "hooks": {
+      "s01_h1": {
+        "notes": {
+          "value": "Cornice di apertura della saga: caldo del Forno all'alba, pagnotta consegnata da Fiamma, patto di lettura col narratore installato qui.",
+          "category": "C",
+          "rationale": "Il canonical segnala APERTURA_SAGA + CORNICE_S1_S12 e cammeo Fiamma in modalita' chiacchiera; nota sintetica che fissa atmosfera e funzione strutturale."
+        },
+        "wind_visible": {
+          "value": "Fumo del camino del Forno piegato a ovest visto dalla finestra, fiato bianco dei fratelli appena entrati che si arriccia verso l'interno caldo.",
+          "category": "C",
+          "rationale": "Wind_notes: notte ferma, Taglio atteso all'alba ma non ancora sceso; manifestazione minima coerente con palette terracotta_arancio_forno_fiato_bianco."
+        }
+      },
+      "s01_h2": {
+        "wind_visible": {
+          "value": "Erba alta dei Pascoli piegata a folate brevi, lembi di nebbia che si muovono lenti da est, fiato dei fratelli che resta sospeso piu' del solito nell'aria ferma.",
+          "category": "C",
+          "rationale": "Notes hook: 'Taglio non ancora sceso dall'est; i venti stanno per svegliarsi'. Manifestazione di soglia: vento non ancora pieno, segnali appena percepibili."
+        }
+      },
+      "s01_h3": {
+        "notes": {
+          "value": "Threshold: i fratelli seduti dopo il 'No. Non muoverci' di Gabriel; il Taglio scende da est, apre la nebbia, e il bordo del Burrone appare a due passi. Vertigine che non accade.",
+          "category": "B",
+          "rationale": "Threshold_moment del canonical: decisione contraria all'istinto + rivelazione silenziosa. Scena chiave del ciclo Delta esterno-interno."
+        }
+      },
+      "s01_h4_signature": {
+        "notes": {
+          "value": "Momento iconico: prima apparizione di Grunto. Grunt, zoccolo, manda via; i fratelli restano; lui smette di guardarli (permesso). Gabriel posa la pagnotta su pietra piatta. Una parola sola: 'Buono'. Cornice della saga istituita.",
+          "category": "A",
+          "rationale": "Signature hook: GRUNTO_PRIMA_APPARIZIONE + CORNICE_S1_S12. Resolution_mode del canonical condensa l'intero rito; vincoli grunto attivi (zero frammenti, una parola)."
+        }
+      },
+      "s01_h5": {
+        "notes": {
+          "value": "Chiusura cornice: i fratelli rientrano al Forno prima del buio, fiato bianco contro l'arancio della brace. Fiamma non chiede com'e' andata: presenza calda, non madre piena. Ritorno, non trionfo.",
+          "category": "C",
+          "rationale": "Resolution_mode + ruolo episodico Fiamma + structural_notes su CORNICE_S1_S12: chiusura quieta, sigillo del narratore con immagine, niente frasi-chiave dichiarative."
+        }
+      }
+    }
+  }
+}

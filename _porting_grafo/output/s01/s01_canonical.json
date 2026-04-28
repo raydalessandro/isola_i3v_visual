@@ -1,0 +1,306 @@
+{
+  "id": "s01",
+  "title_provvisorio": "La Nebbia delle Montagne Gemelle",
+  "cycle": "A",
+  "attribute_dominant": "delta",
+  "block_position": "apertura_blocco_a",
+  "season": "inverno",
+  "season_passage": null,
+  "wind_active": "vento_taglio",
+  "wind_notes": "Taglio all'alba atteso. Notte ferma prima (i tre venti dormono). Quando arriva, apre la nebbia — visibilmente marcato perché la scena lo richiede narrativamente.",
+  "pattern_a_active": "none",
+  "pattern_a_notes": "Pattern A non ancora seminato in saga. S1 non lo tocca.",
+  "night_scene": true,
+  "night_scene_notes": "Scena notturna parziale: notte ferma sui Pascoli prima dell'alba (breve, in passaggio verso il Taglio che arriva). Prima delle 3-4 scene notturne saga.",
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "montagne_gemelle",
+    "note": "Percorso: Forno (apertura) → salita dai Pascoli Alti → nebbia sul sentiero → cengia presso Burrone (non dentro) → ritorno al Forno (chiusura cornice)."
+  },
+  "locations_secondary": [
+    {
+      "id": "forno",
+      "role": "cornice_apertura_e_chiusura"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_azione_dominante",
+      "narrative_weight": "portante_del_ciclo_delta",
+      "key_actions": [
+        "chiede_aiuto_a_fiamma_implicitamente_passando_al_forno",
+        "dice_no_non_muoverci_nella_nebbia_decisione_contraria_istinto",
+        "posa_la_pagnotta_su_pietra_piatta_per_grunto"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_azione",
+      "narrative_weight": "ponte_tra_fratelli",
+      "key_actions": [
+        "propone_di_tenersi_per_mano_nella_nebbia",
+        "tiene_la_mano_di_noah"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_azione",
+      "narrative_weight": "piccolo_che_sente_il_freddo_bianco",
+      "key_actions": [
+        "vuole_correre_nella_nebbia_istinto_di_fuga",
+        "si_stringe_ai_fratelli_senza_dirlo",
+        "raccoglie_bastoncino_in_cammino_gesto_firma_en_passant"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "fiamma",
+      "role": "cammeo_cornice_apertura",
+      "mode": "chiacchiera",
+      "detti_count": 1,
+      "detti_notes": "detto popolare en passant, generico sul carattere di Grunto (es. 'Più di una se la mangia per dispetto e poi non torna'). Da raffinare in D. NON anticipazione nebbia.",
+      "familial_role_episodic": "presenza_calda_di_partenza_non_madre_piena",
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "grunto",
+      "role": "incontro_vero_seconda_parte_storia",
+      "narrative_weight": "altro_da_famiglia",
+      "fragment_used": false,
+      "key_actions": [
+        "grunt_iniziale_zampa_manda_via",
+        "smette_di_guardare_quando_restano_permesso",
+        "annusa_la_pagnotta_posata",
+        "una_parola_sola_buono"
+      ],
+      "constraints_active": [
+        "no_nomi_propri_ariete_ondina_tempesta",
+        "mai_nostalgia",
+        "mai_racconto_pieno",
+        "zero_frammenti_pre_vento_in_questa_storia"
+      ],
+      "quote_count_estimate": 1
+    }
+  ],
+  "characters_offscreen_or_background": [],
+  "seeds_planted": [
+    "seed_s01_bastoncino_noah",
+    "seed_noah_raccoglie_oggetti",
+    "seed_pagnotta_grunto_rito",
+    "seed_grunto_prima_apparizione",
+    "seed_due_passi_dal_burrone",
+    "seed_gabriel_sa_la_strada_senza_vedere",
+    "seed_paura_noah_buio",
+    "seed_fermarsi_come_gesto_attivo"
+  ],
+  "seeds_picked_up": [],
+  "seeds_maturing_here": [],
+  "seeds_bloomed_here": [],
+  "callbacks_made": [],
+  "callback_summary": "Nessun callback (è la prima storia).",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": null,
+  "key_phrase_notes": "Direzione: immagine che sigilla, non regola. Sigillo del narratore in chiusura (non di Fiamma). Nessuna frase-chiave dichiarativa di personaggio. Da scrivere in D.",
+  "premise": "I fratelli decidono di salire alle Montagne Gemelle per vedere l'isola dall'alto. Passano dal Forno per scaldarsi. Fiamma li guarda, capisce dove vanno, gli mette in mano una pagnotta: se passate dal Burrone, una per Grunto, una sola.",
+  "problem": "Sopra i Pascoli Alti, nebbia di inversione termica li avvolge. Bianco totale. Non vedono più sentiero né montagne. Noah vuole correre. Elias propone di tenersi per mano. Gabriel sente che muoversi è sbagliato — ma non sa spiegare perché.",
+  "threshold_moment": "Gabriel dice 'No. Non muoverci' e i fratelli si siedono. Decisione contraria all'istinto. Vento Taglio arriva poco dopo, la nebbia si apre, e davanti a loro — due passi — c'è il bordo del Burrone.",
+  "resolution_mode": "Riprendono il sentiero a sinistra. Salgono. Trovano la cengia di Grunto. Incontro vero: Grunto grunt, batte uno zoccolo, manda via. Loro restano. Lui smette di guardarli (permesso). Gabriel posa la pagnotta su una pietra piatta. Grunto la annusa. Una parola: 'Buono.' I fratelli scendono prima che faccia buio. Tornano al Forno. Fiamma non chiede com'è andata.",
+  "palette_emotiva": "Bianco-grigio-azzurro freddo della nebbia → al diradarsi, oro pallido invernale del primo sole sui Pascoli + verde scuro del muschio nelle pietre + pelo verde di Grunto che si confonde col lichene. Caldo del Forno all'andata e al ritorno (cornice).",
+  "active_constraints_touched": [
+    "grunto_testimone_unico",
+    "grunto_zero_frammenti_qui",
+    "detti_fiamma_esclusivi",
+    "night_not_personified",
+    "no_narrator_reveal_preannouncement",
+    "frame_s1_s12_at_forno_opening"
+  ],
+  "voice_notes_essential": [
+    "apertura_saga_frase_firma_narratore_esplicita_1_di_max_2_in_saga",
+    "address_al_lettore_in_chiusura_1_di_max_6_in_saga",
+    "memoria_lunga_narratore_1_o_2_incisi_su_nebbia_alta_quota_o_burrone",
+    "fiamma_modalita_chiacchiera_con_1_detto_popolare_en_passant_generico_non_anticipazione_trama",
+    "grunto_una_parola_sola_buono_zero_frammenti_pre_vento",
+    "niente_frasi_chiave_dichiarative_di_personaggio_sigillo_narratore_con_immagine"
+  ],
+  "structural_notes": [
+    "APERTURA_SAGA — patto di lettura col narratore installato qui",
+    "CORNICE_S1_S12 — pagnotta a Grunto istituita come frame di apertura; si chiuderà in S12",
+    "GRUNTO_PRIMA_APPARIZIONE — modo del personaggio istituito (grunt→zampa→permesso→una_parola)",
+    "PATTERN_A non ancora seminato (prima scena attiva: S7, preparata da S6)",
+    "DELTA_ESTERNO_E_INTERNO — i confini della nebbia e il confine del Burrone sono entrambi di Gabriel"
+  ],
+  "fear_touched": {
+    "brother": "noah",
+    "fear_id": "buio",
+    "status": "implicita",
+    "mode_of_touch": "disagio_bianco_totale_come_proto_paura_del_buio",
+    "_note": "Prima apparizione (seminata): prepara S10."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s01_h1",
+        "moment": "mattino_presto",
+        "location": {
+          "id": "forno",
+          "qualifier": "interno",
+          "legacy_string": "forno_interno"
+        },
+        "quadrant": "fuoco_est",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "fiamma"
+        ],
+        "elements": [],
+        "palette": "terracotta_arancio_forno_fiato_bianco_vetri_appannati",
+        "notes": null,
+        "focal_action": "Fiamma mette in mano una pagnotta. Dice di portarla a Grunto passando dal Burrone, una sola.",
+        "focal_object": "pagnotta_forno",
+        "atmosphere": "caldo_interno_freddo_fuori_vapore_dal_pane",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s01_h2",
+        "moment": "mattino",
+        "location": {
+          "id": "pascoli_alti",
+          "qualifier": "salita_verso_sentiero_montagne",
+          "legacy_string": "pascoli_alti_salita_verso_sentiero_montagne"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "bianco_grigio_azzurro_freddo_della_nebbia_sagome_sbiadite",
+        "notes": "Taglio non ancora sceso dall'est; i venti stanno per svegliarsi",
+        "focal_action": "i tre entrano nella nebbia bianca, sagome che si sfocano, tenuti per mano su proposta di Elias; Noah ha un bastoncino raccolto che stringe distrattamente",
+        "focal_object": "nebbia",
+        "atmosphere": "bianco_totale_silenzio_ovattato_perdita_di_riferimenti",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s01_h3",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "sentiero_montagne_gemelle",
+          "qualifier": "mezzacosta_cengia_sul_burrone",
+          "legacy_string": "sentiero_montagne_gemelle_mezzacosta_cengia_sul_burrone"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "bianco_che_si_apre_oro_pallido_invernale_primo_sole_grigio_pietra_burrone_profondo_nero_sotto",
+        "notes": null,
+        "focal_action": "i tre seduti sul sentiero dopo il 'no' di Gabriel; il Vento Taglio scende dall'est, apre la nebbia — davanti a loro, a due passi, il bordo del Burrone",
+        "focal_object": "bordo_del_burrone_rivelato",
+        "atmosphere": "rivelazione_silenziosa_luce_che_taglia_nebbia_vertigine_che_non_accade",
+        "wind_visible": "linee_di_luce_gialla_tra_nebbia_che_si_apre_ombre_lunghe_definite_capelli_scolpiti_in_una_direzione",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s01_h4_signature",
+        "moment": "mezzogiorno_montagna",
+        "location": {
+          "id": "grotta_grunto",
+          "qualifier": "cengia_burrone",
+          "legacy_string": "cengia_grotta_grunto_burrone"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "grunto"
+        ],
+        "elements": [],
+        "palette": "verde_scuro_del_muschio_nelle_pietre_pelo_verde_di_grunto_che_si_confonde_con_lichene_oro_pallido_luce_invernale_cicatrice_chiara_sul_fianco_di_grunto",
+        "notes": null,
+        "focal_action": "Gabriel posa la pagnotta su una pietra piatta. Grunto, dopo aver mandato via, annusa. I tre fratelli restano a rispettosa distanza.",
+        "focal_object": "pagnotta_su_pietra_piatta",
+        "atmosphere": "incontro_misurato_silenzio_altitudine_rispetto_reciproco",
+        "wind_visible": "taglio_residuo_in_alta_quota",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s01_h5",
+        "moment": "tardo_pomeriggio_quasi_sera",
+        "location": {
+          "id": "forno",
+          "qualifier": "interno_ritorno",
+          "legacy_string": "forno_interno_ritorno"
+        },
+        "quadrant": "fuoco_est",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "fiamma"
+        ],
+        "elements": [],
+        "palette": "arancio_forno_blu_crepuscolo_dalle_finestre_fiato_bianco_dei_fratelli_che_entrano",
+        "notes": null,
+        "focal_action": "i tre tornano al Forno prima che faccia buio. Fiamma non chiede com'è andata. Probabilmente qualcosa di caldo in mano.",
+        "focal_object": "forno_acceso_cornice_di_chiusura",
+        "atmosphere": "ritorno_calore_quiete_non_trionfo",
+        "wind_visible": "mulinello_sera_leggero_fuori",
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [],
+  "quartieri_attraversati": [
+    "aria_nord",
+    "fuoco_est"
+  ],
+  "oggetti_simbolo_presenti": [],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "fiamma",
+      "vincoli": [
+        "unica_detentrice_detti_popolari",
+        "detti_solo_in_modalita_chiacchiera",
+        "max_2_detti_per_storia",
+        "non_madre_default",
+        "mai_morale_in_corsivo",
+        "mai_sotto_albero_vecchio_solenne"
+      ]
+    },
+    {
+      "personaggio": "grunto",
+      "vincoli": [
+        "no_nomi_propri_ariete_ondina_tempesta",
+        "mai_nostalgia",
+        "mai_racconto_pieno",
+        "zero_frammenti_pre_vento_in_questa_storia",
+        "mai_racconto_pieno_pre_vento",
+        "mai_apertura_storia",
+        "mai_chiusura_storia",
+        "mai_preannunciare_rivelazione"
+      ]
+    }
+  ]
+}

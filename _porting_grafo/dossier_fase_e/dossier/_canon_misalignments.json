@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2026-04-28",
+  "last_updated_story": "s01",
+  "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
+  "_misalignment_schema": {
+    "id": "mis_<NNN> (3 cifre, sequenziale)",
+    "discovered_in_story": "s<NN>",
+    "between": "catalog_vs_graph | catalog_vs_bible | graph_vs_bible | triple_conflict",
+    "type": "name_discrepancy | location_attribute | character_constraint | wind_behavior | event_sequence | seed_origin | object_missing_from_catalog | catalog_pending_enrichment | other",
+    "catalog_reference": "catalogo_web/data/entities.json#<id> oppure null se non applicabile",
+    "graph_reference": "story_graph.json#<path> oppure null",
+    "bible_reference": "§<sezione> oppure null",
+    "description": "stringa libera che descrive il disallineamento",
+    "severity": "alta | media | bassa",
+    "proposed_resolution": "stringa o null (l'agente non risolve, solo segnala)",
+    "status": "open | resolved | wontfix"
+  },
+  "_severity_legend": {
+    "alta": "Contraddizione che impatta la lettura di una storia (es. nome diverso, attributo visivo opposto). Deve essere risolta prima della pubblicazione.",
+    "media": "Incoerenza interna che non rompe la lettura ma indica drift di sviluppo. Da risolvere a fine S12.",
+    "bassa": "Discrepanza minore di lore o dettaglio. Si può lasciare aperta o decidere a fine."
+  },
+  "misalignments": [
+    {
+      "id": "mis_001",
+      "discovered_in_story": "s01",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P2b",
+      "between": "catalog_vs_graph",
+      "type": "location_attribute",
+      "catalog_reference": "catalogo_web/data/entities.json#sentiero_montagne_gemelle (presente da v0.6.1, 2026-04-28)",
+      "graph_reference": "story_graph.json#stories.s01.location_primary.specific_points[1] (sentiero_montagne_gemelle) e visual_anchors.scene_hooks[2].location_precise",
+      "bible_reference": "§8.5 (sistema Pascoli/Montagne/Burrone)",
+      "description": "All'inizio di P0 (s01_catalog_proposals.md), 'sentiero_montagne_gemelle' era assente dal catalogo (72 luoghi, 29 sentieri canonici) e da entities.locations del grafo. Aggiunto al catalogo cartografico durante P0 (cartografia v0.6.0 -> v0.6.1) prima di lanciare P1, su decisione di Ray. Geometria: LineString cengia di mezzacosta dal Burrone (Grotta Grunto) al colle tra le due Montagne Gemelle. Status canonico (citato in s01).",
+      "severity": "bassa",
+      "proposed_resolution": "RISOLTO in cartografia v0.6.1 (commit b5b8473): feature aggiunta come canonica.",
+      "status": "resolved",
+      "notes_p2b": "Promosso da P0 al rolling file. Nessun altro misalignment rilevato durante la migrazione s01: il nodo non cita Memolo, Liu' ne' acqua_trema, quindi gli accenti e casing potenzialmente problematici non sono attivati da questa storia. AGGIORNAMENTO post-P2b: il sub-agente aveva registrato il misalignment basandosi su s01_catalog_proposals.md (datato), ma sentiero_montagne_gemelle era gia' stato aggiunto al catalogo in v0.6.1 prima di P1. Status corretto a 'resolved'.",
+      "resolved_in_phase": "P0_arricchimento_catalogo"
+    }
+  ]
+}

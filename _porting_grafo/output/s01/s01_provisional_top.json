@@ -1,0 +1,42 @@
+{
+  "story_id": "s01",
+  "phase": "P2a_top",
+  "date": "2026-04-28",
+  "provvisori": {
+    "season_passage": {
+      "value": "Inverno pieno, mattina fredda con nebbia di inversione termica sui Pascoli Alti; il Vento Taglio scende dall'est all'alba e apre il bianco.",
+      "category": "B",
+      "rationale": "Coerente con il calendario saga (§2.9 CARTA: storie 1-2 = ciclo A inverno) e con i dettagli del nodo (wind_active=vento_taglio, palette bianco-grigio-azzurro freddo, fiato bianco al Forno). Non e' passaggio stagionale ma inverno pieno: lo segnalo come stagione installata."
+    },
+    "key_phrase_indicative": {
+      "value": "A volte fermarsi e' la cosa che muove.",
+      "category": "B",
+      "rationale": "Cattura il nucleo del threshold_moment di Gabriel (decisione contraria all'istinto, 'No. Non muoverci') e il seed_fermarsi_come_gesto_attivo. Indicativa, non frase precisa: il sigillo effettivo sara' immagine del narratore in chiusura (vedi key_phrase_notes), non frase dichiarativa di personaggio."
+    },
+    "entry_point_type": {
+      "value": "cornice_quotidiana",
+      "category": "C",
+      "rationale": "Il primo hook (s01_h1) e' interno Forno, mattino presto, con Fiamma che mette in mano la pagnotta: cornice domestica calda di partenza. Mappabile sul tipo B della §2.1 CARTA (immagine ferma) ma il termine canonico richiesto e' cornice_quotidiana, frame_s1_s12_at_forno_opening conferma."
+    },
+    "closure_type": {
+      "value": "ritorno_simmetrico",
+      "category": "C",
+      "rationale": "Hook s01_h5 chiude al Forno (stessa location dell'apertura), Fiamma non chiede com'e' andata: cornice S1-S12 esplicitamente dichiarata in structural_notes. La simmetria spaziale prevale; il silenzio_aperto e' presente come sfumatura ma il tratto strutturale dominante e' il ritorno alla cornice."
+    },
+    "register": {
+      "value": "paesaggistico_silenzioso",
+      "category": "B",
+      "rationale": "Mix dichiarato dal nodo: cammino verso Montagne (paesaggistico_lento nel bianco totale, perdita riferimenti) + threshold silenzioso con Vento Taglio + incontro Grunto a rispettosa distanza con una sola parola. Registro medio-alto della §2.4 CARTA, dominante atmosferica fredda con rivelazione silenziosa."
+    },
+    "estimated_length": {
+      "value": "1050-1200 parole (fascia lunga della saga)",
+      "category": "C",
+      "rationale": "Range saga §2.5 CARTA = 800-1200; s01 e' apertura con patto di lettura installato, frase-firma narratore esplicita, 5 hook visivi su 10 beat, due ambienti (Forno + Montagne) e tre archi (cornice/nebbia/Grunto): giustifica fascia lunga 1050-1200."
+    },
+    "descriptive_pauses_count": {
+      "value": 2,
+      "category": "C",
+      "rationale": "§1.6 e §2.7 CARTA: max 2 per storia, distribuzione saga 3-4 storie con due pause. S01 ha due momenti che chiamano pausa descrittiva: il bianco totale della nebbia (s01_h2) e la cengia/incontro Grunto con palette firma (s01_h4). Coerente anche con le memorie lunghe del narratore previste nei voice_notes_essential."
+    }
+  }
+}
