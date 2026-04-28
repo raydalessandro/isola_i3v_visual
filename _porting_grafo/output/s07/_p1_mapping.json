@@ -1,0 +1,41 @@
+{
+  "_description": "Mapping P0 -> P1 per s07 (apertura blocco C, ciclo cambiare, Pattern A attivo, La Zattera dei Tre Rametti). 14/14 entita' nel catalogo, niente bloccanti. Fix quadrant non-whitelist su 4 hook.",
+  "story_id": "s07",
+  "hooks": {
+    "s07_h1": {
+      "location": {"id": "guado_di_pietre_piatte", "qualifier": "partenza_mattino_presto_pietre_piatte", "legacy_string": "guado_di_pietre_piatte_fiume_che_gira_nord"},
+      "quadrant": "acqua_nord"
+    },
+    "s07_h2": {
+      "location": {"id": "fiume_che_gira", "qualifier": "lato_ovest_tratto_accanto_a_foresta_intrecciata", "legacy_string": "fiume_che_gira_lato_ovest_tratto_accanto_a_foresta_intrecciata"},
+      "quadrant": "terra_ovest"
+    },
+    "s07_h3": {
+      "location": {"id": "fiume_che_gira", "qualifier": "lato_ovest_tratto_accanto_a_orti_del_cerchio", "legacy_string": "fiume_che_gira_lato_ovest_tratto_accanto_a_orti_del_cerchio"},
+      "quadrant": "terra_ovest"
+    },
+    "s07_h4": {
+      "location": {"id": "fiume_che_gira", "qualifier": "due_massi_che_stringono_letto_meta_percorso", "legacy_string": "punto_dei_due_massi_che_stringono_il_letto_fiume_meta_percorso"},
+      "quadrant": "perimetro_fiume_che_gira",
+      "_quadrant_note": "Old 'acqua_anello_fluviale_lato_ovest_meta' non in whitelist; mappato a perimetro_fiume_che_gira (whitelist), coerente con location fiume_che_gira."
+    },
+    "s07_h5": {
+      "location": {"id": "fiume_che_gira", "qualifier": "lato_ovest_discesa_verso_bocca", "legacy_string": "fiume_che_gira_lato_ovest_discesa_verso_bocca_pomeriggio"},
+      "quadrant": "acqua_sud",
+      "_quadrant_note": "Old 'acqua_sud_ovest_anello_fluviale' non in whitelist; mappato a acqua_sud (whitelist)."
+    },
+    "s07_h6": {
+      "location": {"id": "pontile_bocca", "qualifier": "arrivo_tramonto_vista_scogliera_est_amo", "legacy_string": "bocca_pontile_di_bartolo_arrivo_tramonto_vista_scogliera_est_amo"},
+      "quadrant": "acqua_sud"
+    }
+  },
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "debts_opened_keep=[] in precomputed_context (archived_seed_refs=4). Canonical: [].",
+  "personaggi_vincoli_attivi": [
+    {"personaggio": "bartolo", "vincoli": ["mai_morale", "mai_correre", "mai_arrabbiato_visibile", "mai_traghetta_abitanti_nominati_con_fratelli"]},
+    {"personaggio": "toba", "vincoli": ["mai_domanda_filosofica", "mai_sola_al_pontile", "mai_corre"]},
+    {"personaggio": "amo", "vincoli": ["mai_spiega_pesca_a_parole", "mai_in_scene_villaggio_salvo_mercato", "mai_nostalgico_o_malinconico", "mai_conflitto_aperto"]}
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints: bartolo + toba + amo (3 prime apparizioni narrative). gabriel/elias/noah/camminanti nessun vincolo specifico."
+}

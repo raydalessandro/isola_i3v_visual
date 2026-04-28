@@ -1,0 +1,112 @@
+{
+  "story_id": "s07",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s07_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato.",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere in fase D."
+  },
+  "provvisori": {
+    "key_phrase_indicative": {
+      "value": "Hai visto? Anche quando una cosa si rompe, l'altra parte arriva lo stesso.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "key_phrase_notes esplicita la direzione: 'hai visto? anche quando una cosa si rompe, l'altra parte arriva lo stesso o equivalente su due rametti che bastano'. Sigillo del narratore in chiusura con ADDRESS AL LETTORE (2 di <=6 saga, primo del blocco C, primo post-S4). Indicativa, frase precisa da limare in fase D. key_phrase_attributed_to lasciato assente nel canonical (REGOLA 0.8), sara' 'narratore' quando Ray decide."
+    },
+    "hooks": {
+      "s07_h1": {
+        "notes": {
+          "value": "Apertura: guado di pietre piatte al mattino presto, alba estiva piena. Elias sulla pietra piu' grande con tre rametti, mazzo di erba lunga tenace (raccolta off-screen la sera prima agli Orti). Lega col nodo marinaro imparato da Nodo (callback s05, primo bloom funzionale fuori dalla radura). Aria gia' calda. Concentrazione silenziosa.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "premise + atmosphere + callback cb_s07_001 (capacita_tecnica_applicata seed_nodo_marinaro). Cornice di apertura con primo bloom tecnico."
+        }
+      },
+      "s07_h2": {
+        "notes": {
+          "value": "Cammino fiducioso prima meta' storia: fratelli in fila lungo riva interna lato ovest. Zattera a fianco sulla destra, spinta da corrente antioraria del Fiume. Sponda di Foresta Intrecciata vista dall'esterno (callback luogo conosciuto s3-s4-s5 ma da fuori). Ritmo trovato, odori di foresta dal verso del fiume.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "atmosphere del hook + locations_secondary (foresta_intrecciata sponda interna, vista da fuori). Tappa di passaggio."
+        }
+      },
+      "s07_h3": {
+        "notes": {
+          "value": "Passaggio tra due mondi lavorati: a sinistra Orti del Cerchio (filari ordinati, terra lavorata, qualche coltivatore chino sullo sfondo, non interagiscono), a destra Fiume e zattera. Eco attivo dell'erba lunga tenace (raccolta qui la sera prima off-screen). Fine mattina verso mezzogiorno.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "locations_secondary (orti_del_cerchio sponda interna, dove avevano raccolto l'erba). atmosphere: passaggio tra due mondi lavorati. Non interazione coi coltivatori (vincolo voce)."
+        }
+      },
+      "s07_h4": {
+        "notes": {
+          "value": "SIGNATURE implicito (PRIMA_SCENA_ATTIVA_PATTERN_A): mezzogiorno punto dei due massi che stringono il letto. Zattera incastrata, corrente preme. Elias allunga il bastoncino per liberarla. STRAPP — onomatopea-oggetto isolata graficamente, secca, irreversibile. Il terzo rametto bloccato tra i sassi, due rametti continuano. I fratelli si fermano sulla riva, sole alto. Elias: 'i sassi tenevano, non c'era modo' (constatazione, non consolazione). Gabriel: 'andiamo avanti' (INVERSIONE_PATTERN_FERMARSI: fermarsi s1 -> continuare s7). Noah: 'pero' due rametti vanno avanti' (constatazione di un bambino di 4-5 anni, non saggezza). Pattern A attivo per la prima volta in saga: cosa rotta che arriva lo stesso. MAI nominato.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal threshold_moment + structural_notes 'PRIMA_SCENA_ATTIVA_PATTERN_A — la zattera incastrata tra i due massi che si strappa e continua con due rametti verso il mare e' la prima manifestazione visibile del Pattern A in saga' + 'INVERSIONE_PATTERN_FERMARSI'. Snodo narrativo della storia, signature implicita (nessun hook marcato _signature ma h4 e' il momento-soglia)."
+        }
+      },
+      "s07_h5": {
+        "notes": {
+          "value": "Cammino verso la Bocca: fratelli proseguono in silenzio dopo lo STRAPP, zattera a due rametti naviga davanti, piu' leggera. Paesaggio cambia: verde sbiadisce, azzurro cresce, aria salata. Cammino stanco ma continuato (fatica al limite per Noah 4-5 anni, NOAH_RESISTENZA_FISICA al limite). Momento di crescita silenziosa. Lessico del cambiamento distribuito (crepe, sotto, si muove, cede) MAI nominato.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "atmosphere 'transizione_dal_verde_al_blu_dal_dolce_al_salato' + voice_notes 'LESSICO_DEL_CAMBIAMENTO_MAI_NOMINATO' + structural_notes (cycle C cambiare entra). Tappa di transizione narrativa e cromatica."
+        }
+      },
+      "s07_h6": {
+        "notes": {
+          "value": "Chiusura tarda-tramonto al Pontile di Bartolo nella Bocca. Acqua mista dolce e salata, Vento Mulinello sera (terzo vento attivo della saga). Bartolo nella barca legata al Pontile, semi-disteso, occhi aperti, ZERO PAROLE (vincolo stretto, un occhio si chiude e si riapre lento — resa visiva). Toba seduta sul bordo accanto al padre (UNA_DOMANDA_SOLA: 'E poi?'). Sulla riva opposta (scogliera est della Spiaggia Conchiglie), Amo: ali aperte, croce nera in controluce contro il cielo crepuscolo. Tra i fratelli sulla riva ovest e Amo a est: l'intera foce della Bocca. Il mondo va per conto suo. La zattera entra nell'acqua mista e si allontana verso il mare aperto. ADDRESS AL LETTORE in chiusura (2 di <=6 saga, primo blocco C). Sigillo: cosa rotta che arriva lo stesso, mai nominato.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal resolution_mode + voice_notes 'ADDRESS_AL_LETTORE_IN_CHIUSURA' + 'BARTOLO_ZERO_PAROLE' + 'TOBA_UNA_DOMANDA_SOLA' + structural_notes 'PRIMA_APPARIZIONE_BARTOLO_TOBA_AMO_CANONICA' + locations_secondary._note (casa_amo: croce nera scogliera est crepuscolo, riva ovest fratelli). Chiusura della storia con tre archetipi blocco D installati."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {"A": 2, "B": 2, "C": 3},
+    "totale": 7,
+    "_note": "season_passage non popolato (old_node era null e la storia non ha passaggio stagionale narrato — fine estate piena, non passaggio). Lasciato null per filosofia stretta del null.",
+    "dettaglio": [
+      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s07_h1.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s07_h2.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s07_h3.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s07_h4.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s07_h5.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s07_h6.notes", "category": "A", "confidence": "high"}
+    ]
+  },
+  "notes_globali": "Settima storia (apertura_blocco_c, ciclo cambiare, signature implicita: 'La Zattera dei Tre Rametti'). PATTERN A ATTIVO per la prima volta in saga (h4 STRAPP: cosa rotta che arriva lo stesso). 7 provvisori (2A + 2B + 3C). Highlights: PRIMA_SCENA_ATTIVA_PATTERN_A in h4. INVERSIONE_PATTERN_FERMARSI (s1 fermarsi -> s7 continuare). PRIMO_BLOOM_FUNZIONALE_NODO_MARINARO (seed s05 in scenario reale). PRIMA_APPARIZIONE_BARTOLO_TOBA_AMO (3 archetipi blocco D installati). TAGLIO_ASSENTE_PRIMA_VOLTA_SAGA. ADDRESS_AL_LETTORE 2/6 saga, primo blocco C, primo post-s4. season=estate (rimappato da estate_piena via REGOLA 0.10). 5 callbacks (2 a s05, 2 a s06, 1 a s04). 14/14 entita' nel catalogo, 0 misalignments.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura preparata: fratelli concentrati sul guado, idea di Noah la sera prima. Possibili candidati: D (azione che inizia) o B (immagine ferma)."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Chiusura con ADDRESS AL LETTORE + immagine zattera che si allontana nel mare. Codice 1-7 da decidere."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera epica del cammino lungo + Pattern A attivo + ADDRESS al lettore. Plausibile alto. Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200)",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "6 hook lungo l'anello fluviale (giornata intera). Probabilmente fascia lunga 1100-1200."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2)",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Cammino lungo + transizione palette (verde -> blu) + Pattern A attivo. Probabile 1-2 pause descrittive."
+    }
+  }
+}
