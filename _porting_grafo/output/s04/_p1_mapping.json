@@ -1,0 +1,66 @@
+{
+  "_description": "Mapping manuale P0 -> P1 per s04. Tutte le entita' nel catalogo, nessun bloccante.",
+  "story_id": "s04",
+  "hooks": {
+    "s04_h1": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "margine_lato_orti", "legacy_string": "margine_foresta_intrecciata_lato_orti"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h2": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "interno_primo_tratto_oltre_soglia_salvia", "legacy_string": "interno_foresta_primo_tratto_oltre_soglia_salvia"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h3_signature": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "interno_radice_esposta_grande_albero", "legacy_string": "interno_foresta_elias_sulla_radice_esposta_grande_albero"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h4": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "interno_tra_radici_grande_albero", "legacy_string": "interno_foresta_noah_tra_radici_grande_albero"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h5": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "interno_punto_di_ritrovamento", "legacy_string": "interno_foresta_punto_di_ritrovamento"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h6": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "interno_arrivo_di_rovo", "legacy_string": "interno_foresta_arrivo_di_rovo"},
+      "quadrant": "terra_ovest"
+    },
+    "s04_h7": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "margine_ritorno_da_salvia", "legacy_string": "margine_foresta_ritorno_da_salvia"},
+      "quadrant": "terra_ovest"
+    }
+  },
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "8 debts_opened raw + 3 debts_closed raw, tutti seed_refs (debt_classification.archived_seed_refs=11, debts_opened_keep=[]). Canonical: [].",
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "salvia",
+      "vincoli": [
+        "max_1_pianta_nominata_per_apparizione",
+        "mai_spiega_perche_pianta_funziona",
+        "mai_risolve_emotivamente"
+      ]
+    },
+    {
+      "personaggio": "rovo",
+      "vincoli": [
+        "tenerezza_sempre_mediata",
+        "mai_confidenza_calorosa",
+        "mai_compagno_viaggio_prolungato_fratelli",
+        "mai_spiegare_perche_bru_con_lui"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: salvia (prima apparizione s04) + rovo + bru hanno vincoli individuali. gabriel/elias/noah/coltivatori_del_cerchio non hanno vincoli specifici."
+}

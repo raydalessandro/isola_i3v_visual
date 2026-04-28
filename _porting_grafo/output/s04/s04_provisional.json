@@ -1,0 +1,131 @@
+{
+  "story_id": "s04",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s04_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima di testo gia' canonico.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato.",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere con Ray in fase D."
+  },
+  "provvisori": {
+    "season_passage": {
+      "value": "Primavera piena: primo tepore vero dopo l'inverno (passaggio gia' segnato in s03 come 'aria un filo piu' tiepida', qui e' pienezza). Mattino inoltrato → mezzogiorno → primo pomeriggio. Foglie nuove, rugiada appena asciugata.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "premise dichiara esplicito 'Primavera piena — primo tepore vero dopo l'inverno'. structural_notes 'PASSAGGIO_STAGIONALE_2 — inverno -> primavera piena (passaggio gia' segnato in S3, qui e' pienezza)'. palette_emotiva conferma (verdi tenerissimi, foglie nuove)."
+    },
+    "key_phrase_indicative": {
+      "value": "Quello che hanno trovato non era il sentiero — era un modo.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "key_phrase_notes dichiara esplicita la direzione: 'quello che hanno trovato non era il sentiero — era un modo'. Sigillo del narratore in chiusura (ADDRESS AL LETTORE, primo della saga, 1 di <=6 totali). Indicativa: la frase precisa va decisa da Ray in fase D, ma la direzione semantica e' fissata. key_phrase_attributed_to lasciato assente nel canonical (REGOLA 0.8): popolato come 'narratore' quando Ray decide."
+    },
+    "hooks": {
+      "s04_h1": {
+        "notes": {
+          "value": "Apertura: Salvia (prima apparizione narrativa) col cesto a tracolla chiede ai fratelli di accompagnarla al margine, deve raccogliere ortica giovane qualche metro dentro. 'Voi qua. Torno presto.' Entra. In lontananza i Coltivatori cantano la cantilena piena di semina (TUM-tum delle zappe, bloom della sommessa di s3, 2 di max 4-5 in saga). Primo tepore di primavera, serenita' breve prima del problem.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "premise + atmosphere + voice_notes 'salvia_voce_lavoro_brevi_asciutte_voi_qua_torno_presto' + 'cantilena_coltivatori_piena_in_lontananza_bloom_della_sommessa_di_s3'. Cornice di apertura con cammeo Salvia."
+        }
+      },
+      "s04_h2": {
+        "notes": {
+          "value": "Problem: Noah vede una farfalla blu (singolo punto cromatico isolato che poi sparisce — gesto caratteriale di Noah, seed_farfalla_blu_seguire_fuori_soglia). La segue passo dopo passo, attraversa senza accorgersi la soglia oltre la zona di Salvia. La farfalla sparisce. Noah si ritrova solo, alberi tutti uguali. Smarrimento silenzioso (variante della paura del buio: maturing).",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "problem del canonical + seeds_planted 'seed_farfalla_blu_seguire_fuori_soglia' + atmosphere 'attrazione_innocente_che_diventa_smarrimento_silenzioso'. Triggering del threshold."
+        }
+      },
+      "s04_h3_signature": {
+        "notes": {
+          "value": "SIGNATURE — CANALE_VIBRAZIONE istituito. Gabriel: 'Gridiamo no. Pensiamo.' (eco diretta di 'Aspettiamo' di s1). Elias inginocchiato sulla radice grossa esposta, palmo che batte TUM-tum-TUM-tum-TUM (ritmo identitario dei tre fratelli, semina seed_tum_tum_tum_codice_fratelli). Non e' suono nell'aria — e' vibrazione che viaggia nel tessuto sotterraneo della Foresta, da radice a radice intrecciata. Principio fisico del mondo (canale tattile-vibratorio).",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal threshold_moment + structural_notes 'CANALE_VIBRAZIONE — la Foresta come tessuto percettivo, non acustico. Principio fisico del mondo istituito qui'. callback cb_s04_001 (fermarsi_come_gesto_attivo bloomed, trasferito in 'pensiamo') + cb_s04_002 (frase eco diretta s1)."
+        }
+      },
+      "s04_h4": {
+        "notes": {
+          "value": "SPECCHIO_VISIVO con h3: Noah seduto tra le radici aggrovigliate di un grande albero, schiena al tronco, palmo destro appoggiato sulla terra tra due radici. Occhi chiusi — ascolta tatticamente. La mano sente vibrare. Risponde nello stesso ritmo. Composizione ad ancora (Elias-radice-esposta) e risposta (Noah-radice-tra-radici). Firma visiva del blocco B. Seed_gesto_della_terra_palmo seminato.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "structural_notes 'SPECCHIO_VISIVO_H3_H4 — due corpi lontani nello stesso gesto, composizione ad ancora e risposta. Firma visiva del blocco B' + threshold_moment (Noah seduto fra radici grande albero) + seeds_planted seed_gesto_della_terra_palmo. Specchio del signature."
+        }
+      },
+      "s04_h5": {
+        "notes": {
+          "value": "Ritrovamento: i tre fratelli abbracciati. Noah aveva gia' smesso di battere forte avvicinandosi a Gabriel — battere piu' piano per non confonderlo (gesto che il bambino di 4 non coglie, il rilettore si'). Elias nell'abbraccio ma con lo sguardo un filo storto: micro-sguardo della paura del non_essere_abbastanza, maturing verso il basso (sotto le parole, dopo la semina alta di s2). Mai nominato nel testo. Bru appoggiato a un tronco poco lontano, occhi neri non sorpresi: ha sentito anche lui dalla sua parte di Foresta (unghie di tassino nell'humus, stesso canale).",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "resolution_mode + structural_notes 'PAURA_ELIAS_MATURING_SOTTO' + 'BRU_PRESENZA_PIENA — da intravisto a presenza concreta silenziosa. Ha sentito la vibrazione dalle unghie nella terra'. fear_touched.mode_of_touch 'micro_sguardo_storto_all_abbraccio_post_ritrovamento_mai_nominato'."
+        }
+      },
+      "s04_h6": {
+        "notes": {
+          "value": "Arrivo di Rovo: passo pesante tra le radici, bandana marrone-grigia sulla fronte. Brontola. I fratelli si staccano dall'abbraccio, Bru si raddrizza e fa un passo verso lo zio. Secondo registro di Rovo: abitante della Foresta (gia' dentro quando tutto comincia), non guardiano del confine come in s3. I due registri coesistono — sintesi via Bru in s11.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'ROVO_SECONDO_REGISTRO — abitante della Foresta, non guardiano del confine come in S3. I due registri coesistono. S11 segnera' via Bru la sintesi'. callback cb_s04_004 (rovo registro diverso) + cb_s04_005 (bru da intravisto a presenza concreta). Vincoli rovo attivi: tenerezza_sempre_mediata."
+        }
+      },
+      "s04_h7": {
+        "notes": {
+          "value": "Chiusura cornice: Salvia esce col cesto pieno di ortica giovane. Non si e' accorta di nulla (per economia narrativa + per coerenza fisica: zampe di lepre sull'humus, canale tattile-vibratorio non attivo per la sua postura). I fratelli arrivano al margine dall'interno: 'Pronti? Andiamo.' I Coltivatori in lontananza ancora cantano. Nulla e' cambiato per chi guarda da fuori — il mondo ha tenuto, dentro qualcosa e' passato senza essere visto.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "resolution_mode + structural_notes 'SALVIA_NON_RISOLUTRICE — presente solo in cornice, non si accorge di nulla per economia narrativa e per coerenza fisica' + atmosphere 'ritorno_al_visibile_nulla_e_cambiato_per_chi_guarda_da_fuori'. Sigillo cornice."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {
+      "A": 2,
+      "B": 5,
+      "C": 2
+    },
+    "totale": 9,
+    "dettaglio": [
+      {"field": "season_passage", "category": "B", "confidence": "medium"},
+      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s04_h1.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s04_h2.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s04_h3_signature.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s04_h4.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s04_h5.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s04_h6.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s04_h7.notes", "category": "C", "confidence": "low"}
+    ]
+  },
+  "notes_globali": "Quarta storia (apertura blocco B, primavera piena, ciclo connettere). 9 provvisori (2A + 5B + 2C) — piu' provvisori del solito perche' s04 ha 7 hook (vs 5 standard). Highlight: 2A signature + specchio visivo (h3+h4 ad ancora-risposta, firma visiva blocco B). CANALE_VIBRAZIONE istituito come principio fisico del mondo. Prima apparizione narrativa di Salvia (cornice non risolutrice). Vento_intreccio prima manifestazione. narrator_address: true (primo della saga). 5 callbacks (3 a s01, 2 a s03), tutti con to_story=s04 derivato dallo script. 8 debts_opened raw + 3 closed: tutti seed_refs archiviati (REGOLA 0ter). Bloomed_here: 3 seeds (fermarsi_come_gesto_attivo trasferito a Noah, gabriel_sa_la_strada_senza_vedere bloomed in 'cammina seguendo il battito da sotto', foresta_tempi_modi_propri bloomed come canale vibrazione). key_phrase_attributed_to lasciato assente nel canonical (REGOLA 0.8): sara' 'narratore' in fase D quando Ray decide la frase precisa.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura con cammeo Salvia che chiede aiuto + cornice serena (cantilena coltivatori). Possibili candidati: C (voce esterna che irrompe) o D. Scelta autoriale."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Chiusura con narratore che parla al lettore (ADDRESS, primo della saga). Codice 1-7 da decidere autoriale, plausibile codice associato a sigillo del narratore."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera con tenuta fisica silenziosa + canale vibrazione + abbraccio. Plausibile medio o alto. Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "7 hook (vs 5 standard), tre archi: cornice apertura, problem+threshold (canale vibrazione), risoluzione+ritorno. Probabilmente fascia lunga 1050-1200. Scelta autoriale."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sulla_foresta_come_tessuto_vivo': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+    }
+  }
+}

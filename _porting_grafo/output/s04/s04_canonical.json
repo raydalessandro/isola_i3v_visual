@@ -1,0 +1,481 @@
+{
+  "id": "s04",
+  "title_provvisorio": "Le Radici che Parlano",
+  "cycle": "B",
+  "attribute_dominant": "connettere",
+  "block_position": "apertura_blocco_b",
+  "season": "primavera",
+  "season_passage": null,
+  "wind_active": "vento_intreccio",
+  "wind_notes": "Intreccio (giorno) in regime pieno — prima storia saga dove Intreccio e' vento attivo protagonista. Porta le voci basse e continue da lontano (la cantilena dei Coltivatori resta riconoscibile dal margine). Disperde invece le voci corte ad alto volume dentro le chiome in movimento — gridare dentro la Foresta non funziona, il suono si confonde nel fruscio. Eco silenziosa nome=cosa: Vento Intreccio + radici intrecciate + fratelli che si ritrovano via canale che intreccia. Mai detto.",
+  "pattern_a_active": "none",
+  "pattern_a_notes": "Pattern A non ancora seminato (prima semina formale: S5 con i rami caduti che diventano materia). S4 non lo tocca direttamente, ma apre il canale-tessuto su cui il Pattern A camminera': se le radici portano vibrazioni attraverso i fratelli, la Foresta e' il tessuto che tiene le cose anche quando sembrano perse. Non e' pre-eco Pattern A — e' pre-fondamento fisico.",
+  "night_scene": false,
+  "night_scene_notes": null,
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "foresta_intrecciata",
+    "note": "Tre fasce di profondita' crescente: margine (dove i fratelli restano, vicino Orti) -> primo tratto interno (dove Salvia raccoglie ortica giovane, qualche metro dentro) -> oltre zona Salvia (dove Noah si perde seguendo la farfalla, alberi tutti uguali, grande albero con radici esposte). La geografia in profondita' crescente e' essenziale per la coerenza della scena — l'ortica giovane cresce ai margini (Bible §4.9), Noah supera quella soglia. | specific_points: ['margine_foresta_intrecciata_lato_orti', 'interno_foresta_primo_tratto_ortica_giovane', 'interno_foresta_oltre_zona_salvia_grande_albero_radici']"
+  },
+  "locations_secondary": [
+    {
+      "id": "orti_del_cerchio",
+      "role": "sfondo_lavoro_coltivatori_cantilena_piena_semina"
+    },
+    {
+      "id": "casa_salvia",
+      "role": "implicita_punto_partenza_e_ritorno_salvia_off_screen"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_azione",
+      "narrative_weight": "delta_che_si_trasferisce_al_connettere_tramite_movimento",
+      "key_actions": [
+        "grida_noah_prima_volta_istinto",
+        "si_accorge_che_gridare_non_funziona_voce_inghiottita",
+        "dice_gridiamo_no_pensiamo_eco_aspettiamo_s1",
+        "cammina_nella_direzione_del_battito_di_noah_movimento_attivo"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_azione",
+      "narrative_weight": "connettere_in_azione_fisica_di_tenuta_ancora_del_ritmo",
+      "key_actions": [
+        "si_inginocchia_trova_radice_grossa_esposta",
+        "comincia_a_battere_TUM_tum_TUM_tum_TUM_ritmo_loro_non_spiegato",
+        "resta_fermo_a_battere_come_ancora_faticoso",
+        "al_ritrovamento_sguardo_storto_mai_nominato_mentre_gli_altri_si_abbracciano"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_azione",
+      "narrative_weight": "piccolo_che_si_ferma_da_solo_pokemon_attivo_da_s3",
+      "key_actions": [
+        "vede_farfalla_blu_la_segue_oltre_soglia_zona_salvia",
+        "si_accorge_di_essere_solo_alberi_tutti_uguali",
+        "si_siede_tra_le_radici_non_piange_si_ferma_da_solo",
+        "tocca_radici_col_palmo_gesto_irriflesso",
+        "sente_vibrare_riconosce_TUM_tum_TUM",
+        "risponde_col_palmo_attivamente",
+        "quando_sente_gabriel_arrivare_batte_piu_piano_per_non_confonderlo"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "salvia",
+      "role": "cornice_apertura_e_chiusura",
+      "mode": "lavoro",
+      "narrative_weight": "consegna_e_riconsegna_breve_non_si_accorge_di_nulla",
+      "key_actions": [
+        "chiede_ai_fratelli_di_accompagnarla_per_ortica_giovane",
+        "entra_solo_qualche_metro_al_margine_per_raccolta",
+        "dice_voi_qua_torno_presto",
+        "esce_dalla_foresta_col_cesto_pieno_di_ortica_pronti_andiamo"
+      ],
+      "plant_named": "ortica_giovane",
+      "familial_role_episodic": "madre_pratica_cornice_non_piena",
+      "constraints_active": [
+        "max_1_pianta_nominata_per_apparizione",
+        "mai_spiega_perche_pianta_funziona",
+        "mai_risolve_emotivamente",
+        "salvia_non_si_accorge_che_i_fratelli_si_sono_persi_per_economia_narrativa_e_per_non_farla_risolutrice_e_per_coerenza_fisica_zampe_lepre_su_humus_al_margine_canale_vibrazione_tattile_non_attivo_per_lei"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "rovo",
+      "role": "apparizione_secondo_registro",
+      "narrative_weight": "abitante_foresta_non_guardiano_confine_gia_dentro_quando_s4_comincia",
+      "key_actions": [
+        "gia_nella_foresta_quando_s4_comincia_tana_al_margine_o_cammino_per_fatti_suoi",
+        "sente_la_vibrazione_del_battito_nel_tessuto_delle_radici_non_suono",
+        "arriva_poco_dopo_che_i_fratelli_si_sono_ritrovati",
+        "brontola_battete_come_capre_tutta_la_foresta_lo_ha_sentito",
+        "non_aiuta_non_ha_aiutato_e_venuto_a_vedere_chi_disturbava_la_sua_foresta",
+        "rientra_nella_foresta_dopo_verifica"
+      ],
+      "constraints_active": [
+        "tenerezza_sempre_mediata",
+        "mai_confidenza_calorosa",
+        "registro_diverso_da_s3_abitante_non_guardiano",
+        "non_compagno_di_viaggio_prolungato",
+        "arriva_guidato_da_vibrazione_non_da_suono_acustico"
+      ],
+      "familial_role_episodic": "zio_severo_secondo_tocco_consecutivo_con_s3_sostenibile_perche_registro_diverso",
+      "quote_count_estimate": 1
+    },
+    {
+      "id": "bru",
+      "role": "presenza_concreta_silenziosa",
+      "narrative_weight": "sa_gia_cosa_e_successo_appoggiato_a_tronco_non_sorpreso",
+      "key_actions": [
+        "appare_appoggiato_a_un_tronco_quando_i_fratelli_si_ritrovano",
+        "occhi_neri_non_sembra_sorpreso",
+        "probabilmente_ha_seguito_il_movimento_attraverso_unghie_nella_terra_ha_sentito_anche_lui",
+        "segue_rovo_quando_rovo_se_ne_va"
+      ],
+      "constraints_active": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe",
+        "nessuna_parola"
+      ],
+      "quote_count_estimate": 0
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "sfondo_lavoro_cantilena_piena",
+      "_note": "Seconda cantilena saga (2 di <=4-5). Modalita': piena della semina primaverile, TUM-tum delle zappe ritmico sullo sfondo. Bloom rispetto alla cantilena sommessa di S3 (passaggio->piena). La cantilena piena e' anche il TAPPETO SONORO del TUM-tum-TUM dei fratelli: i Coltivatori battono nella stessa terra che i fratelli batteranno, ma con ritmo diverso — sovrapposizione mai dichiarata, vive solo nell'orecchio del rilettore."
+    }
+  ],
+  "seeds_planted": [
+    "seed_tum_tum_tum_codice_fratelli",
+    "seed_rovo_abitante_foresta",
+    "seed_farfalla_blu_seguire_fuori_soglia",
+    "seed_gesto_della_terra_palmo"
+  ],
+  "seeds_picked_up": [
+    "seed_fermarsi_come_gesto_attivo",
+    "seed_paura_noah_buio",
+    "seed_rovo_resistenza_che_protegge",
+    "seed_bru_presenza_che_custodisce",
+    "seed_foresta_tempi_modi_propri",
+    "seed_paura_elias_piccolo",
+    "seed_gabriel_sa_la_strada_senza_vedere"
+  ],
+  "seeds_maturing_here": [
+    "seed_paura_elias_piccolo",
+    "seed_bru_presenza_che_custodisce",
+    "seed_rovo_resistenza_che_protegge"
+  ],
+  "seeds_bloomed_here": [
+    "seed_fermarsi_come_gesto_attivo",
+    "seed_gabriel_sa_la_strada_senza_vedere",
+    "seed_foresta_tempi_modi_propri"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s04_001",
+      "from_story": "s01",
+      "element": "fermarsi_come_gesto_attivo",
+      "type": "gesto_trasferito_tra_fratelli",
+      "note": "Il gesto del fermarsi istituito da Gabriel nella nebbia (S1) ora in Noah: si siede tra le radici, non piange, si ferma da solo. Pattern che circola tra fratelli.",
+      "to_story": "s04"
+    },
+    {
+      "callback_id": "cb_s04_002",
+      "from_story": "s01",
+      "element": "aspettiamo_di_gabriel_diventa_pensiamo",
+      "type": "frase_eco_diretta",
+      "note": "'Gridiamo no. Pensiamo.' di Gabriel in S4 e' eco diretta dell''Aspettiamo' di S1. Stesso fratello, stessa struttura di decisione contraria all'istinto, problema diverso.",
+      "to_story": "s04"
+    },
+    {
+      "callback_id": "cb_s04_003",
+      "from_story": "s03",
+      "element": "cantilena_coltivatori",
+      "type": "bloom_sonoro",
+      "note": "La cantilena sommessa dei Coltivatori in S3 diventa cantilena piena della semina in S4. Passaggio stagionale sonoro (inverno->primavera piena).",
+      "to_story": "s04"
+    },
+    {
+      "callback_id": "cb_s04_004",
+      "from_story": "s03",
+      "element": "rovo_registro_diverso",
+      "type": "personaggio_secondo_registro",
+      "note": "Rovo in S4 e' abitante della Foresta (gia' dentro quando tutto comincia), non guardiano del confine come in S3. I due registri coesistono.",
+      "to_story": "s04"
+    },
+    {
+      "callback_id": "cb_s04_005",
+      "from_story": "s03",
+      "element": "bru_da_intravisto_a_presenza_concreta",
+      "type": "personaggio_sviluppo_presenza",
+      "note": "Bru in S3 intravisto dietro Rovo con occhi che brillano; in S4 presenza concreta appoggiata a un tronco, che ha sentito la vibrazione dalle unghie nella terra.",
+      "to_story": "s04"
+    }
+  ],
+  "callback_summary": "Callback a S1: fermarsi come gesto attivo bloomato (trasferito da Gabriel a Noah); 'Gridiamo no. Pensiamo.' eco diretta di 'Aspettiamo'; Gabriel sa la strada senza vedere bloomato (cammina nella direzione del battito). Callback a S3: Rovo (secondo registro, abitante-Foresta), Bru (da intravisto a presenza concreta), cantilena Coltivatori (sommessa -> piena), 'la Foresta ha i suoi modi' bloom del 'loro orario'.",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": null,
+  "key_phrase_notes": "Nessuna frase-chiave dichiarativa di personaggio. Sigillo del narratore in chiusura (ADDRESS AL LETTORE, 1 di <=6, primo della saga). Direzione: quello che hanno trovato non era il sentiero — era un modo. Mai dichiarato come regola, il narratore puo' aprirsi al lettore con una domanda o un'immagine (es. direzione: se tocchi una radice qui, chissa' dove arriva il tocco; il tipo di frase va fissata in D).",
+  "premise": "Primavera piena — primo tepore vero dopo l'inverno. Salvia passa dalla casa dei fratelli e chiede se l'accompagnano fino al margine della Foresta — deve raccogliere foglie di ortica giovane, crescono qualche metro dentro. I fratelli vanno volentieri. Al margine, Salvia dice loro di restare fuori, vicino agli Orti: 'Voi qua. Torno presto.' Entra con il cesto. In lontananza, cantilena piena della semina dei Coltivatori — TUM-tum delle zappe sullo sfondo, portato chiaro dall'Intreccio perche' e' suono basso e continuo.",
+  "problem": "Noah vede una farfalla blu. La segue di qualche passo. Poi qualche altro. Attraversa senza accorgersi la soglia oltre la zona di lavoro di Salvia. La farfalla sparisce. Noah e' solo. Alberi tutti uguali. Gabriel ed Elias si accorgono dopo qualche minuto che Noah non c'e' piu'. Gridano una volta. La Foresta non risponde — l'Intreccio passa tra le chiome e confonde le loro voci corte nel fruscio. Gridare non funziona.",
+  "threshold_moment": "Gabriel dice 'Gridiamo no. Pensiamo.' — eco diretta dell''Aspettiamo' di S1, applicata a problema diverso. Elias si inginocchia, trova una radice grossa esposta che esce dalla terra, comincia a batterla col palmo: TUM-tum-TUM-tum-TUM — il ritmo che solo loro tre sanno. Resta fermo a battere come ancora. Il battito non e' suono che si propaga nell'aria — e' vibrazione che viaggia nel tessuto sotterraneo della Foresta, da radice a radice intrecciata. Noah, seduto tra le radici di un grande albero piu' dentro, ha istintivamente appoggiato il palmo sulla terra. Sente vibrare. Riconosce il ritmo. Risponde col palmo. Gabriel cammina nella direzione del battito di Noah (segue il suono che trafila dal terreno, non l'aria). I tre hanno ruoli simultanei e fisici: Elias e' ancora, Noah e' risposta, Gabriel e' movimento. La Foresta e' il tessuto che porta il ritmo attraverso il corpo vivo delle radici — principio fisico del mondo istituito qui.",
+  "resolution_mode": "Quando Gabriel arriva nel punto dove e' Noah, Noah ha gia' smesso di battere forte — ha battuto piu' piano man mano che sentiva Gabriel avvicinarsi, per non confonderlo (gesto che il bambino di 4 non coglie, il rilettore si'). Si ritrovano. Elias li raggiunge. Si abbracciano. In quel momento, appoggiato a un tronco poco lontano, c'e' Bru — occhi neri, non sorpreso. Le unghie di tassino affondate nell'humus: ha sentito anche lui, dalla sua parte di Foresta. Arriva Rovo poco dopo, passo pesante tra le radici, brontolando: 'Battete come capre. Tutta la Foresta l'ha sentito.' Non aiuta, non ha aiutato — era gia' nella Foresta quando tutto e' cominciato (tana al margine, o cammino per fatti suoi, da decidere in D), e' venuto a vedere chi disturbava la sua casa. Bru lo segue quando Rovo rientra. I fratelli tornano al margine. Salvia sta uscendo col cesto pieno di ortica giovane — non si e' accorta di nulla: zampe di lepre sull'humus al margine, concentrata sulla raccolta, poco legata al tessuto profondo delle radici. 'Pronti? Andiamo.'",
+  "palette_emotiva": "Verdi tenerissimi delle foglie nuove di primavera + marrone scuro umido delle radici esposte (umidita' di rugiada appena asciugata) + grigio-marrone di Rovo con bandana scura + sabbia chiara di Salvia + cesto di ortica verde scuro. Farfalla di Noah: blu, singolo punto cromatico isolato che poi sparisce. Palmi dei fratelli: punti caldi sulla terra, specchio visivo a distanza (h3-h4). Intreccio: velature azzurre diffuse tra rami, chiome in movimento.",
+  "active_constraints_touched": [
+    "salvia_max_1_pianta_nominata_per_apparizione_ortica_giovane",
+    "salvia_mai_spiega_perche_pianta_funziona",
+    "salvia_mai_risolve_emotivamente",
+    "rovo_tenerezza_sempre_mediata",
+    "rovo_non_compagno_viaggio_prolungato",
+    "rovo_mai_confidenza_calorosa",
+    "bru_mai_racconta_sua_storia",
+    "bru_mai_centro_attenzione",
+    "bru_nessuna_parola_in_questa_storia",
+    "detti_fiamma_esclusivi_qui_non_presente",
+    "night_not_personified_non_applicabile_scena_diurna",
+    "no_narrator_reveal_preannouncement",
+    "ear_framework_invisible_connettere_in_azione_fisica_non_concetto",
+    "elias_non_e_quello_delle_idee_tiene_fisico_ritmo_ancora_faticoso"
+  ],
+  "voice_notes_essential": [
+    "address_al_lettore_in_chiusura_1_di_<=6_in_saga_primo_del_blocco_b",
+    "memoria_lunga_narratore_1_o_2_incisi_sulla_foresta_come_tessuto_vivo_mai_detta_come_tessuto_meta_non_testo",
+    "TUM_tum_TUM_tum_TUM_onomatopea_isolata_graficamente_in_riga_propria",
+    "TUM_tum_delle_zappe_coltivatori_onomatopea_di_sfondo_diversa_da_quella_dei_fratelli_per_ritmo_e_volume",
+    "nessun_detto_popolare_fiamma_non_presente",
+    "salvia_voce_lavoro_brevi_asciutte_voi_qua_torno_presto_e_pronti_andiamo",
+    "rovo_frase_secca_battete_come_capre_tutta_la_foresta_lo_ha_sentito_in_carattere_scontroso_pratico",
+    "elias_tiene_fisico_zero_parole_mentre_batte_ritmo_che_parla_al_posto_delle_parole",
+    "noah_irriflesso_nessuna_dichiarazione_di_paura_solo_gesto",
+    "gabriel_gridiamo_no_pensiamo_eco_diretta_aspettiamo_s1_da_scrivere_in_d_come_frase_che_emerge_non_come_sentenza",
+    "canale_vibrazione_mai_spiegato_a_parole_vive_solo_nelle_azioni_gesti_e_in_1_inciso_narratore_max_su_foresta_che_sente",
+    "cantilena_coltivatori_piena_in_lontananza_bloom_della_sommessa_di_s3_2_di_<=4_5_saga",
+    "micro_sguardo_storto_di_elias_all_abbraccio_mai_nominato_nel_testo_segnato_solo_in_visual_anchor_h5"
+  ],
+  "structural_notes": [
+    "APERTURA_BLOCCO_B — ciclo Connettere entra. Connettere in azione fisica (non idea).",
+    "PASSAGGIO_STAGIONALE_2 — inverno -> primavera piena (passaggio gia' segnato in S3, qui e' pienezza).",
+    "CANALE_VIBRAZIONE — la Foresta come tessuto percettivo, non acustico. Principio fisico del mondo istituito qui. Rilevante per S5 (ponte che trasmette tenuta) e S12 (mani sulla terra come eco silenziosa). Il vento disperde le voci nell'aria, le radici portano le vibrazioni. Sistema a due canali che il bambino di 4 sente come 'magia della foresta', il rilettore di 9 come 'principio fisico', l'adulto come 'concetto di tessuto connesso'.",
+    "ROVO_SECONDO_REGISTRO — abitante della Foresta (gia' dentro quando tutto comincia), non guardiano del confine come in S3. I due registri coesistono. S11 segnera' via Bru la sintesi.",
+    "BRU_PRESENZA_PIENA — da intravisto (S3) a presenza concreta silenziosa. Ha sentito la vibrazione dalle unghie nella terra — stesso canale di Noah.",
+    "SALVIA_NON_RISOLUTRICE — presente solo in cornice, non si accorge di nulla per economia narrativa e per coerenza fisica (zampe di lepre sull'humus, canale tattile-vibratorio non attivo per la sua postura).",
+    "FERMARSI_TRASFERITO — il gesto di S1 (Gabriel) ora in Noah (bloomed): si ferma da solo, non piange. Pattern che circola tra fratelli.",
+    "SEMI_NUOVI — TUM-tum-TUM identitario, gesto del palmo come canale, farfalla blu come gesto caratteriale di Noah, Rovo secondo registro.",
+    "PAURA_ELIAS_MATURING_SOTTO — dopo semina S2 (quasi in parola) scende sotto le parole in un micro-sguardo storto all'abbraccio dei fratelli. Traiettoria: S2 alta -> S4 bassa -> S11 bloom.",
+    "SPECCHIO_VISIVO_H3_H4 — due corpi lontani nello stesso gesto (Elias palmo su radice esposta, Noah palmo sulla terra tra radici), composizione ad ancora e risposta. Firma visiva del blocco B.",
+    "PATTERN_A non toccato direttamente — pre-fondamento fisico (il tessuto che tiene) ma prima semina formale e' S5."
+  ],
+  "fear_touched": {
+    "brother": "elias",
+    "fear_id": "non_essere_abbastanza",
+    "status": "maturing",
+    "mode_of_touch": "micro_sguardo_storto_all_abbraccio_post_ritrovamento_mai_nominato",
+    "_note": "Prima variante maturing dopo la semina forte in S2. Traiettoria intenzionale: in S2 affiora quasi in parola ('Voi siete grandi davvero' mormorato); in S4 scende sotto le parole — solo un micro-sguardo storto al momento dell'abbraccio dei fratelli, dopo che lui ha tenuto fisicamente l'ancora del ritmo. La paura matura VERSO IL BASSO (piu' sommersa) prima di risalire in S11. Mai nominata, mai mostrata visibilmente ai fratelli — solo il rilettore la coglie."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s04_h1",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_lato_orti",
+          "legacy_string": "margine_foresta_intrecciata_lato_orti"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "salvia"
+        ],
+        "elements": [],
+        "palette": "sabbia_chiara_di_salvia_verde_tenero_foglie_nuove_ocra_orti_alle_spalle_azzurro_pallido_sopra",
+        "notes": null,
+        "focal_action": "Salvia col cesto a tracolla al margine della Foresta, dice ai fratelli di restare vicino agli Orti. I Coltivatori in lontananza cantano e battono le zappe — TUM-tum sullo sfondo.",
+        "focal_object": "salvia_col_cesto_che_entra_soglia_foresta",
+        "atmosphere": "primo_tepore_primavera_piena_lavoro_di_fondo_serenita_breve",
+        "wind_visible": "intreccio_diffuso_velature_azzurre_tra_rami",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h2",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "interno_primo_tratto_oltre_soglia_salvia",
+          "legacy_string": "interno_foresta_primo_tratto_oltre_soglia_salvia"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "noah"
+        ],
+        "elements": [],
+        "palette": "farfalla_blu_unico_punto_cromatico_isolato_verdi_tenerissimi_primavera_marrone_tronchi_ombre_screziate_luce_di_chiome",
+        "notes": null,
+        "focal_action": "Noah segue la farfalla blu tra i tronchi. Qualche passo. Poi qualche altro. La farfalla sparisce tra due alberi e non c'e' piu'. Noah guarda in giro: alberi tutti uguali.",
+        "focal_object": "farfalla_blu_che_sparisce_tra_due_tronchi",
+        "atmosphere": "attrazione_innocente_che_diventa_smarrimento_silenzioso_alberi_che_si_ripetono",
+        "wind_visible": "intreccio_chiome_in_movimento",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h3_signature",
+        "moment": "mattino_inoltrato_inizio_mezzogiorno",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "interno_radice_esposta_grande_albero",
+          "legacy_string": "interno_foresta_elias_sulla_radice_esposta_grande_albero"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias"
+        ],
+        "elements": [],
+        "palette": "marrone_scuro_umido_della_radice_verdi_tenerissimi_sopra_luce_che_trafila_dall_alto_a_macchie_palmo_chiaro_di_elias_unico_punto_caldo_sulla_radice",
+        "notes": null,
+        "focal_action": "Elias inginocchiato, palmo sulla radice grossa esposta, batte TUM-tum-TUM-tum-TUM. Gabriel dietro di lui in piedi, teso verso l'ascolto, una mano sul tronco dello stesso albero — sente anche lui nel legno.",
+        "focal_object": "palmo_di_elias_sulla_radice_che_batte",
+        "atmosphere": "tenuta_fisica_silenziosa_concentrazione_ritmo_che_parte_nel_tessuto",
+        "wind_visible": "intreccio_chiome_in_movimento_sopra_ma_sotto_aria_piu_ferma",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h4",
+        "moment": "mattino_inoltrato_inizio_mezzogiorno",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "interno_tra_radici_grande_albero",
+          "legacy_string": "interno_foresta_noah_tra_radici_grande_albero"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "noah"
+        ],
+        "elements": [],
+        "palette": "marrone_scuro_umido_delle_radici_verdi_scuri_della_foresta_interna_palmo_chiaro_di_noah_unico_punto_caldo_in_contatto_con_la_terra_specchio_visivo_di_elias_stesso_gesto_due_corpi_lontani",
+        "notes": null,
+        "focal_action": "Noah seduto tra le radici aggrovigliate di un grande albero, schiena al tronco, il palmo destro appoggiato sulla terra tra due radici. Occhi chiusi — non dorme, ascolta. La mano sente vibrare. Risponde col palmo.",
+        "focal_object": "palmo_di_noah_sulla_terra_tra_due_radici",
+        "atmosphere": "solitudine_che_trova_risposta_dal_sottosuolo_ascolto_tattile_che_diventa_canale",
+        "wind_visible": "intreccio_chiome_che_muovono_foglie_sopra",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h5",
+        "moment": "mezzogiorno_nella_foresta",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "interno_punto_di_ritrovamento",
+          "legacy_string": "interno_foresta_punto_di_ritrovamento"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "abbraccio_al_centro_come_nucleo_caldo_verdi_foresta_intorno_bru_grigio_marrone_sullo_sfondo_tronco_scuro",
+        "notes": null,
+        "focal_action": "I tre fratelli abbracciati al punto di ritrovamento. Elias nell'abbraccio ma con lo sguardo un filo storto — non triste, solo storto, cosa che nessuno vede. Bru appoggiato a un tronco poco lontano, unghie nell'humus, occhi neri, non sorpreso.",
+        "focal_object": "abbraccio_dei_tre_con_elias_storto_dentro_e_bru_che_guarda",
+        "atmosphere": "ritrovamento_felice_con_crepa_invisibile_sotto_presenza_silenziosa_che_custodisce",
+        "wind_visible": "intreccio_attutito_nella_radura_interna",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h6",
+        "moment": "mezzogiorno",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "interno_arrivo_di_rovo",
+          "legacy_string": "interno_foresta_arrivo_di_rovo"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru",
+          "rovo"
+        ],
+        "elements": [],
+        "palette": "grigio_marrone_di_rovo_con_bandana_scura_verdi_foresta_interna_bru_piccolo_al_suo_fianco",
+        "notes": null,
+        "focal_action": "Rovo arriva passo pesante tra le radici, bandana marrone-grigia sulla fronte. Brontola. I fratelli si staccano dall'abbraccio. Bru si raddrizza, fa un passo verso lo zio.",
+        "focal_object": "rovo_in_piedi_tra_tronchi_bandana_sulla_fronte_bru_un_passo_verso_di_lui",
+        "atmosphere": "ingresso_brusco_non_minaccioso_zio_che_verifica_e_ripartira",
+        "wind_visible": "intreccio_diffuso",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s04_h7",
+        "moment": "primo_pomeriggio",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_ritorno_da_salvia",
+          "legacy_string": "margine_foresta_ritorno_da_salvia"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "salvia"
+        ],
+        "elements": [],
+        "palette": "cesto_verde_scuro_di_ortica_sabbia_chiara_di_salvia_ocra_orti_alle_spalle_primo_pomeriggio_luce_alta",
+        "notes": null,
+        "focal_action": "Salvia esce dalla Foresta col cesto pieno di ortica giovane. Non si e' accorta di nulla. I fratelli arrivano al margine dall'interno. 'Pronti? Andiamo.' I Coltivatori in lontananza ancora cantano, cantilena piena della semina.",
+        "focal_object": "salvia_col_cesto_pieno_che_esce_al_margine",
+        "atmosphere": "ritorno_al_visibile_nulla_e_cambiato_per_chi_guarda_da_fuori",
+        "wind_visible": "intreccio_diffuso",
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": true,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [
+    "TUM-tum-TUM (fratelli)",
+    "TUM-tum (coltivatori)"
+  ],
+  "quartieri_attraversati": [
+    "terra_ovest"
+  ],
+  "oggetti_simbolo_presenti": [
+    "cesto_salvia",
+    "bandana_rovo"
+  ],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "salvia",
+      "vincoli": [
+        "max_1_pianta_nominata_per_apparizione",
+        "mai_spiega_perche_pianta_funziona",
+        "mai_risolve_emotivamente"
+      ]
+    },
+    {
+      "personaggio": "rovo",
+      "vincoli": [
+        "tenerezza_sempre_mediata",
+        "mai_confidenza_calorosa",
+        "mai_compagno_viaggio_prolungato_fratelli",
+        "mai_spiegare_perche_bru_con_lui"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ]
+}
