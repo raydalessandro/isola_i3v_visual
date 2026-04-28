@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T07:10:32",
+  "generated_at": "2026-04-28T07:16:05",
   "totals": {
     "totale": 112,
     "luogo": 72,
@@ -9,8 +9,8 @@
     "visual_signature": 1
   },
   "by_status": {
-    "stub": 111,
-    "provvisorio": 1
+    "stub": 106,
+    "provvisorio": 6
   },
   "tree": {
     "luoghi": {
@@ -1275,7 +1275,7 @@
                     "name": "Bartolo",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/primari/bartolo"
                   }
@@ -1287,7 +1287,7 @@
                     "name": "Fiamma",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/primari/fiamma"
                   }
@@ -1311,7 +1311,7 @@
                     "name": "Memolo",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/primari/memolo"
                   }
@@ -1323,7 +1323,7 @@
                     "name": "Rovo",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/primari/rovo"
                   }
@@ -1335,7 +1335,7 @@
                     "name": "Stria",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/primari/stria"
                   }
@@ -7325,7 +7325,7 @@
       "name": "Bartolo",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7336,7 +7336,7 @@
         "specie": "tartaruga_di_mare_anziana",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "dilatazione_del_tempo",
-        "status": "stub",
+        "status": "provvisorio",
         "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.bartolo"
@@ -7351,8 +7351,8 @@
           }
         }
       },
-      "body_md": "# Bartolo\n\n## Identita' visuale (sintesi)\n\n[stub — da compilare]\n\n## Aspetto / forma\n\n[stub]\n\n## Abbigliamento / stato d'uso\n\n[stub — applicare se personaggio o oggetto]\n\n## Espressione / comportamento\n\n[stub — applicare se personaggio o vento]\n\n## Palette e atmosfera\n\n[stub]\n\n## Contesto e ambientazioni ricorrenti\n\n[stub]\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n[stub]\n\n## Variabilita' ammessa\n\n[stub]\n\n## Cliche' da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\n[stub]\n\n## Per stampa 3D\n\nVolumi, proporzioni, scala, orientamento canonico.\n\n[stub]\n\n## Per narrativa e social\n\nRegistri d'uso testuale, tono, parole-chiave da usare/evitare.\n\n[stub]\n\n## Storie / scene di apparizione\n\n[stub — popolare con elenco s01..s12 e ruolo per scena]\n\n## Disallineamenti / domande aperte\n\n[vuoto se nulla]\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]",
-      "body_size_chars": 995,
+      "body_md": "# Bartolo\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nIl guscio scuro come un sasso bagnato, segnato di righe pallide che sono cicatrici di mare vecchie (firma visiva). Le zampe pesanti, i passi che lasciano un'impronta tonda. Gli occhi piccoli, lenti a chiudersi e lenti a riaprirsi — tra un battito e l'altro ci sta un pensiero intero.\n\n## Abbigliamento / stato d'uso\n\n_da popolare dal grafo_\n\n## Espressione / comportamento\n\nBartolo fa cose-da-tartaruga di mare. Si muove piano. Resta fermo a lungo. Quando finalmente parte non si ferma più finché non arriva. Galleggia anche a terra — cioè cammina come se l'isola fosse acqua sotto di lui, senza fretta di toccarla davvero. Aspetta. Aspetta gente, vento, che l'altro abbia finito di parlare. Conosce il mare per averci nuotato dentro tanto, e per non averlo mai voluto vincere. Se uno gli sale sulla barca e si lamenta della lentezza, Bartolo non risponde — rema lo stesso.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nVive sul Pontile, Quartiere d'Acqua a sud, in una capanna bassa col tetto di canne accanto al punto in cui il Fiume sfocia nel mare attraverso La Bocca. Dorme nella barca quando fa caldo. Traghettatore — porta gente avanti e indietro lungo il perimetro dell'isola e oltre, per chi deve andare dove non si va a piedi.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nGuscio scuro come un sasso bagnato, righe pallide che sono cicatrici di mare vecchie. Zampe pesanti, impronta tonda. Occhi piccoli, lenti a chiudersi e lenti a riaprirsi.\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.3 \"Note e vincoli\":\n- Mai dare a Bartolo una frase-morale (anche se la sua misura tranquilla la inviterebbe).\n- Mai farlo correre, mai farlo arrabbiare in modo visibile.\n- Quando Bartolo c'è in una storia, i tre fratelli non scappano dall'isola con lui salvo che sia il punto dell'arco.\n- Mai mostrare Bartolo che traghetta dei singoli abitanti già nominati nello stesso viaggio dei fratelli (rimane nostro, non condiviso).\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: assente.\n- s03: assente.\n- s04: assente.\n- s05: assente.\n- s06: assente.\n- s07: maggiore — cornice silenziosa, istituzione del modo (blocco D).\n- s08: assente.\n- s09: assente.\n- s10: cornice silenziosa all'alba sul Pontile, prima della terna (blocco D).\n- s11: cammeo nonno — arrivo al Pontile nel pomeriggio.\n- s12: nonno silenzioso, cornice del mondo (Tratto 9, dilatazione del tempo).\n\n## Disallineamenti / domande aperte\n\n(vuoto)\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.3 BARTOLO:\n  - \"Tartaruga di mare anziana. Traghettatore — porta gente avanti e indietro lungo il perimetro dell'isola e oltre, per chi deve andare dove non si va a piedi. Vive sul Pontile, Quartiere d'Acqua a sud, in una capanna bassa col tetto di canne accanto al punto in cui il Fiume sfocia nel mare attraverso La Bocca. Dorme nella barca quando fa caldo.\"\n  - \"Il guscio scuro come un sasso bagnato, segnato di righe pallide che sono cicatrici di mare vecchie (firma visiva). Le zampe pesanti, i passi che lasciano un'impronta tonda. Gli occhi piccoli, lenti a chiudersi e lenti a riaprirsi — tra un battito e l'altro ci sta un pensiero intero.\"\n  - \"Bartolo fa cose-da-tartaruga di mare. Si muove piano. Resta fermo a lungo. Quando finalmente parte non si ferma più finché non arriva. Galleggia anche a terra — cioè cammina come se l'isola fosse acqua sotto di lui, senza fretta di toccarla davvero.\"\n  - Note e vincoli: \"Mai dare a Bartolo una frase-morale... Mai farlo correre, mai farlo arrabbiare in modo visibile. Quando Bartolo c'è in una storia, i tre fratelli non scappano dall'isola con lui salvo che sia il punto dell'arco. Mai mostrare Bartolo che traghetta dei singoli abitanti già nominati nello stesso viaggio dei fratelli.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.bartolo`: `species: tartaruga_di_mare_anziana`, `type: abitante_maggiore`, `role_saga: dilatazione_del_tempo`.\n- `pipeline_narrativa/story_graph.json#stories.s07.characters_in_scene[bartolo].scene_role`: \"maggiore_cornice_silenziosa_istituzione_del_modo_blocco_d\".\n- `pipeline_narrativa/story_graph.json#stories.s10.characters_in_scene[bartolo].scene_role`: \"cornice_silenziosa_alba_pontile_prima_della_terna_blocco_d\".\n- `pipeline_narrativa/story_graph.json#stories.s11.characters_in_scene[bartolo].scene_role`: \"cammeo_nonno_arrivo_pontile_pomeriggio\".\n- `pipeline_narrativa/story_graph.json#stories.s12.characters_in_scene[bartolo].scene_role`: \"nonno_silenzioso_cornice_mondo_tratto_9_dilatazione_tempo\".",
+      "body_size_chars": 5119,
       "folder_path": "visual/personaggi/individuali/primari/bartolo",
       "scheda_path": "visual/personaggi/individuali/primari/bartolo/scheda.md",
       "breadcrumb": [
@@ -7369,7 +7369,7 @@
       "name": "Fiamma",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7380,7 +7380,7 @@
         "specie": "volpe_rossa",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cammeo_ricorrente_cornice_s1_s12",
-        "status": "stub",
+        "status": "provvisorio",
         "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.fiamma"
@@ -7395,8 +7395,8 @@
           }
         }
       },
-      "body_md": "# Fiamma\n\n## Identita' visuale (sintesi)\n\n[stub — da compilare]\n\n## Aspetto / forma\n\n[stub]\n\n## Abbigliamento / stato d'uso\n\n[stub — applicare se personaggio o oggetto]\n\n## Espressione / comportamento\n\n[stub — applicare se personaggio o vento]\n\n## Palette e atmosfera\n\n[stub]\n\n## Contesto e ambientazioni ricorrenti\n\n[stub]\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n[stub]\n\n## Variabilita' ammessa\n\n[stub]\n\n## Cliche' da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\n[stub]\n\n## Per stampa 3D\n\nVolumi, proporzioni, scala, orientamento canonico.\n\n[stub]\n\n## Per narrativa e social\n\nRegistri d'uso testuale, tono, parole-chiave da usare/evitare.\n\n[stub]\n\n## Storie / scene di apparizione\n\n[stub — popolare con elenco s01..s12 e ruolo per scena]\n\n## Disallineamenti / domande aperte\n\n[vuoto se nulla]\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]",
-      "body_size_chars": 994,
+      "body_md": "# Fiamma\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nPelo color brace — più scuro sul dorso, più chiaro sul ventre, la coda lunga con la punta bianca come una scintilla in fondo. Gli occhi brillano di quel modo che hanno le volpi quando hanno già visto cosa stai per dire. Le zampe veloci, mai ferme del tutto. Le mani sempre infarinate, sempre in movimento.\n\n## Abbigliamento / stato d'uso\n\n**Firma visiva:** grembiule legato in vita, sempre infarinato, di tela ruvida color terracotta.\n\n## Espressione / comportamento\n\nFiamma fa cose-da-fuoco col corpo della volpe. Si accende presto, prima di tutti. Scalda — il forno scalda il pane, lei scalda chi entra. Illumina — la sua casa è il primo posto dell'isola dove c'è luce calda al mattino. Brucia anche, quando serve: se uno dei tre combina qualcosa di grosso, Fiamma alza la voce una volta sola e quella volta brucia. Poi si spegne. Lascia braci — anche quando se ne va da una scena ha lasciato qualcosa che continua a tenere caldo. Si riaccende — torna sempre, mai esaurita.\n\nParla *molto* dentro casa sua, mentre impasta. Ma quando esce di casa o quando una cosa diventa seria, Fiamma diventa volpe: silenziosa, ferma, occhi che guardano. Le due cose convivono — chiacchiera e veggenza.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nVive nel Quartiere di Fuoco a est, nella casa-forno col tetto basso e il camino che fuma prima dell'alba. La porta sul retro dà su un piccolo cortile di legna catastata. Madre episodica per chi entra al momento giusto.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nPelo color brace (dorso più scuro, ventre più chiaro). Coda lunga con punta bianca. Mani sempre infarinate. Grembiule color terracotta legato in vita. Tre modalità di registro: chiacchiera (in casa, mentre lavora), ferma (quando la cosa si fa seria), brace (rara, alza la voce una volta sola).\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.4 \"Note e vincoli\":\n- Mai farla maternamente enfatica — niente \"tesoro\", niente \"piccoli miei\".\n- Mai Fiamma che dà la lezione finale alla fine in corsivo (vecchio pattern v1.1 vietato, eccezione enigma rara).\n- Mai scena \"sotto l'Albero Vecchio in modo solenne\".\n- Fiamma parla impastando, camminando, mentre fa altro.\n- Il silenzio di Fiamma deve restare raro e quindi pesante.\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: cammeo, cornice di apertura.\n- s02: assente.\n- s03: assente.\n- s04: assente.\n- s05: assente.\n- s06: cammeo al Forno, modalità chiacchiera.\n- s07: assente.\n- s08: cornice del Forno — apertura e ritorno.\n- s09: madre/calore, variante distribuita (non default).\n- s10: cammeo all'alba, Forno al ritorno — cuore caldo.\n- s11: madre/calore al banco dolci durante la festa.\n- s12: cornice di apertura e chiusura della saga — modalità ferma, sigillo S1↔S12 (decisione #22).\n\n## Disallineamenti / domande aperte\n\n(vuoto)\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.4 FIAMMA:\n  - \"Volpe rossa, fornaia. Vive nel Quartiere di Fuoco a est, nella casa-forno col tetto basso e il camino che fuma prima dell'alba. La porta sul retro dà su un piccolo cortile di legna catastata. Madre episodica per chi entra al momento giusto.\"\n  - \"Pelo color brace — più scuro sul dorso, più chiaro sul ventre, la coda lunga con la punta bianca come una scintilla in fondo. Gli occhi brillano di quel modo che hanno le volpi quando hanno già visto cosa stai per dire. Le zampe veloci, mai ferme del tutto. Le mani sempre infarinate, sempre in movimento.\"\n  - \"Firma visiva: grembiule legato in vita, sempre infarinato, di tela ruvida color terracotta.\"\n  - \"Fiamma fa cose-da-fuoco col corpo della volpe. Si accende presto, prima di tutti. Scalda... Illumina... Brucia anche, quando serve... Lascia braci... Si riaccende — torna sempre, mai esaurita.\"\n  - \"Parla molto dentro casa sua, mentre impasta. Ma quando esce di casa o quando una cosa diventa seria, Fiamma diventa volpe: silenziosa, ferma, occhi che guardano. Le due cose convivono — chiacchiera e veggenza.\"\n  - Note e vincoli: \"Mai farla maternamente enfatica — niente 'tesoro', niente 'piccoli miei'. Mai Fiamma che dà la lezione finale alla fine in corsivo... Mai scena 'sotto l'Albero Vecchio in modo solenne'. Fiamma parla impastando, camminando, mentre fa altro. Il silenzio di Fiamma deve restare raro e quindi pesante.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.fiamma`: `species: volpe_rossa`, `type: abitante_maggiore`, `role_saga: cammeo_ricorrente_cornice_s1_s12`.\n- `pipeline_narrativa/story_graph.json#stories.s01.characters_in_scene[fiamma].scene_role`: \"cammeo_cornice_apertura\".\n- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[fiamma].scene_role`: \"cammeo_forno_modalita_chiacchiera\".\n- `pipeline_narrativa/story_graph.json#stories.s08.characters_in_scene[fiamma].scene_role`: \"cornice_forno_apertura_e_ritorno\".\n- `pipeline_narrativa/story_graph.json#stories.s09.characters_in_scene[fiamma].scene_role`: \"madre_calore_variante_distribuita_non_default\".\n- `pipeline_narrativa/story_graph.json#stories.s10.characters_in_scene[fiamma].scene_role`: \"cammeo_alba_forno_al_ritorno_cuore_caldo\".\n- `pipeline_narrativa/story_graph.json#stories.s11.characters_in_scene[fiamma].scene_role`: \"madre_calore_banco_dolci_festa\".\n- `pipeline_narrativa/story_graph.json#stories.s12.characters_in_scene[fiamma].scene_role`: \"cornice_apertura_chiusura_saga_ferma_sigillo_s1_s12_decisione_22\".",
+      "body_size_chars": 5971,
       "folder_path": "visual/personaggi/individuali/primari/fiamma",
       "scheda_path": "visual/personaggi/individuali/primari/fiamma/scheda.md",
       "breadcrumb": [
@@ -7457,7 +7457,7 @@
       "name": "Memolo",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7468,7 +7468,7 @@
         "specie": "riccio",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cambio_di_registro_colpo_di_coda",
-        "status": "stub",
+        "status": "provvisorio",
         "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.memolo"
@@ -7485,8 +7485,8 @@
           }
         }
       },
-      "body_md": "# Memolo\n\n## Identita' visuale (sintesi)\n\n[stub — da compilare]\n\n## Aspetto / forma\n\n[stub]\n\n## Abbigliamento / stato d'uso\n\n[stub — applicare se personaggio o oggetto]\n\n## Espressione / comportamento\n\n[stub — applicare se personaggio o vento]\n\n## Palette e atmosfera\n\n[stub]\n\n## Contesto e ambientazioni ricorrenti\n\n[stub]\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n[stub]\n\n## Variabilita' ammessa\n\n[stub]\n\n## Cliche' da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\n[stub]\n\n## Per stampa 3D\n\nVolumi, proporzioni, scala, orientamento canonico.\n\n[stub]\n\n## Per narrativa e social\n\nRegistri d'uso testuale, tono, parole-chiave da usare/evitare.\n\n[stub]\n\n## Storie / scene di apparizione\n\n[stub — popolare con elenco s01..s12 e ruolo per scena]\n\n## Disallineamenti / domande aperte\n\n[vuoto se nulla]\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]",
-      "body_size_chars": 994,
+      "body_md": "# Memolo\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nPiccolo, tondo, con le spine corte e morbide del riccio adulto che non ha più paura di niente. Il muso lungo, gli occhi neri e attenti — più attenti di quanto si direbbe da come cammina. Si confonde nei propri passi quando va di fretta.\n\n## Abbigliamento / stato d'uso\n\n**Firma visiva:** una piccola sciarpa annodata sul collo, sempre annodata male, che sistema mille volte al giorno e non resta mai dritta.\n\n## Espressione / comportamento\n\nMèmolo fa cose-da-riccio. Esce piano, esita sulla soglia. Si arrotola quando una cosa lo spaventa o lo confonde — gesto fisico vero, brevissimo. Trotterella veloce per piccoli tratti, poi si ferma e dimentica perché è uscito. Inciampa nelle proprie spine — *\"ahi\"* — e poi ride. Conosce le buche e le radici della piazza meglio di chiunque, perché ci passa da sotto. Sta vicino alla terra.\n\nConfonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a storia, nel mezzo della confusione, dice una cosa **incredibilmente precisa** — come se per un attimo avesse visto tutto chiaramente. Poi torna confuso. Lui per primo non si accorge di averlo detto.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nAbitante del villaggio centrale — sta in una casetta tonda nascosta dietro un cespuglio sulla piazza, vicino all'Albero Vecchio. Non ha mestiere fisso. Padre di Pun.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nPiccolo e tondo. Spine corte e morbide del riccio adulto. Muso lungo, occhi neri attenti. Sciarpa annodata male sul collo, sistemata mille volte e mai dritta.\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.7 \"Note e vincoli\":\n- Mai un Memolo \"sapientemente confuso\" che fa il finto tonto per insegnare. La sua precisione deve sembrare casuale.\n- Mai due frasi-precise nella stessa storia.\n- Mai usare Memolo per *risolvere* un problema della trama — può aprire una via, mai chiuderla.\n- Pun (suo cucciolo) non lo addomestica.\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: assente.\n- s03: assente.\n- s04: assente.\n- s05: assente.\n- s06: oggetto del dono e cornice di apertura/chiusura.\n- s07: assente.\n- s08: zio buffo in confusione seria.\n- s09: cammeo tenero — primo bloom parziale (seed Memolo sul Pozzo con Gabriel).\n- s10: assente.\n- s11: zio buffo, presenza confusa alla festa.\n- s12: assente.\n\n## Disallineamenti / domande aperte\n\n- Il grafo usa l'id `memolo` (senza accento). La Bible §4.7 usa **\"Mèmolo\"** (con accento grave su È). Il display name nel frontmatter dovrebbe essere \"Mèmolo\"? Se sì, il fix va nel grafo (`entities.characters.memolo.name = \"Mèmolo\"`) e poi rilancio dello script visual per propagare.\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.7 MÈMOLO:\n  - \"Riccio. Abitante del villaggio centrale — sta in una casetta tonda nascosta dietro un cespuglio sulla piazza, vicino all'Albero Vecchio. Non ha mestiere fisso. Padre di Pun.\"\n  - \"Piccolo, tondo, con le spine corte e morbide del riccio adulto che non ha più paura di niente. Il muso lungo, gli occhi neri e attenti — più attenti di quanto si direbbe da come cammina. Si confonde nei propri passi quando va di fretta.\"\n  - \"Firma visiva: una piccola sciarpa annodata sul collo, sempre annodata male, che sistema mille volte al giorno e non resta mai dritta.\"\n  - \"Mèmolo fa cose-da-riccio. Esce piano, esita sulla soglia. Si arrotola quando una cosa lo spaventa o lo confonde... Trotterella veloce per piccoli tratti, poi si ferma e dimentica perché è uscito. Inciampa nelle proprie spine — 'ahi' — e poi ride. Conosce le buche e le radici della piazza meglio di chiunque, perché ci passa da sotto. Sta vicino alla terra.\"\n  - \"Confonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a storia, nel mezzo della confusione, dice una cosa incredibilmente precisa — come se per un attimo avesse visto tutto chiaramente. Poi torna confuso. Lui per primo non si accorge di averlo detto.\"\n  - Note e vincoli: \"Mai un Mèmolo 'sapientemente confuso' che fa il finto tonto per insegnare. La sua precisione deve sembrare casuale. Mai due frasi-precise nella stessa storia. Mai usare Mèmolo per risolvere un problema della trama — può aprire una via, mai chiuderla. Pun (suo cucciolo) non lo addomestica.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.memolo`: `species: riccio`, `type: abitante_maggiore`, `role_saga: cambio_di_registro_colpo_di_coda`, `home_location: casetta_tonda_piazza_centrale`.\n- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[memolo].scene_role`: \"oggetto_del_dono_e_cornice_apertura_chiusura\".\n- `pipeline_narrativa/story_graph.json#stories.s08.characters_in_scene[memolo].scene_role`: \"zio_buffo_in_confusione_seria\".\n- `pipeline_narrativa/story_graph.json#stories.s09.characters_in_scene[memolo].scene_role`: \"cammeo_tenero_primo_bloom_parziale_seed_memolo_sul_pozzo_con_gabriel\".\n- `pipeline_narrativa/story_graph.json#stories.s11.characters_in_scene[memolo].scene_role`: \"zio_buffo_presenza_confusa_festa\".",
+      "body_size_chars": 5579,
       "folder_path": "visual/personaggi/individuali/primari/memolo",
       "scheda_path": "visual/personaggi/individuali/primari/memolo/scheda.md",
       "breadcrumb": [
@@ -7503,7 +7503,7 @@
       "name": "Rovo",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7514,7 +7514,7 @@
         "specie": "tasso",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "resistenza_che_protegge",
-        "status": "stub",
+        "status": "provvisorio",
         "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.rovo"
@@ -7531,8 +7531,8 @@
           }
         }
       },
-      "body_md": "# Rovo\n\n## Identita' visuale (sintesi)\n\n[stub — da compilare]\n\n## Aspetto / forma\n\n[stub]\n\n## Abbigliamento / stato d'uso\n\n[stub — applicare se personaggio o oggetto]\n\n## Espressione / comportamento\n\n[stub — applicare se personaggio o vento]\n\n## Palette e atmosfera\n\n[stub]\n\n## Contesto e ambientazioni ricorrenti\n\n[stub]\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n[stub]\n\n## Variabilita' ammessa\n\n[stub]\n\n## Cliche' da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\n[stub]\n\n## Per stampa 3D\n\nVolumi, proporzioni, scala, orientamento canonico.\n\n[stub]\n\n## Per narrativa e social\n\nRegistri d'uso testuale, tono, parole-chiave da usare/evitare.\n\n[stub]\n\n## Storie / scene di apparizione\n\n[stub — popolare con elenco s01..s12 e ruolo per scena]\n\n## Disallineamenti / domande aperte\n\n[vuoto se nulla]\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]",
-      "body_size_chars": 992,
+      "body_md": "# Rovo\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nRobusto, basso, pelo grigio-scuro con la riga bianca dalla testa alla nuca — la maschera del tasso. Zampe corte e forti, unghie lunghe da scavatore. Una spalla un po' più alta dell'altra. Quando sta fermo si confonde col terreno.\n\n## Abbigliamento / stato d'uso\n\n**Firma visiva:** bandana scura legata stretta sulla fronte sotto le orecchie, sempre marrone-grigio.\n\n## Espressione / comportamento\n\nRovo fa cose-da-rovo (cespuglio) attraverso il corpo del tasso. Punge — verbalmente, secco. Si attacca — quando prende qualcuno sotto la sua protezione non lascia più, anche se non lo dichiara. Ha frutti sotto le spine — la dolcezza c'è ma sta sepolta. Scava — in cerca di radici e tane d'altri animali, ma anche dentro le situazioni: arriva sotto al problema invece che intorno. Conosce la Foresta come si conosce la propria tana.\n\nBru gli sta dietro a rispettosa distanza. Rovo non lo accarezza mai. Ma quando torna a casa la sera, controlla che Bru ci sia.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nVive ai margini della Foresta Intrecciata, Quartiere di Terra a ovest, in una tana scavata sotto un grosso ceppo coperto di muschio. La tana ha tre uscite. Bru sta con lui (nipote affidato, storia mai raccontata).\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nRobusto e basso. Pelo grigio-scuro con riga bianca dalla testa alla nuca (maschera del tasso). Zampe corte e forti, unghie lunghe. Una spalla un po' più alta dell'altra. Bandana marrone-grigio sulla fronte.\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.5 \"Note e vincoli\":\n- Mai una scena di confidenza calorosa — sarebbe rottura.\n- Tenerezza sempre mediata (un gesto pratico, una porta lasciata aperta).\n- Mai spiegare perché Bru sta con Rovo (porta socchiusa).\n- Mai Rovo compagno di viaggio prolungato dei fratelli (perderebbe la firma di abitante-ai-margini).\n- Quando i fratelli vanno da lui, lui li riceve. Lui non va dai fratelli quasi mai.\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: assente.\n- s03: maggiore — prima apparizione.\n- s04: apparizione in secondo registro.\n- s05: assente.\n- s06: assente.\n- s07: assente.\n- s08: assente.\n- s09: assente.\n- s10: assente.\n- s11: assente (in S11 Rovo non viene alla festa: cura a distanza tramite Bru — vedi Bible §4.5 e doc S11).\n- s12: assente.\n\n## Disallineamenti / domande aperte\n\n(vuoto)\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.5 ROVO:\n  - \"Tasso. Vive ai margini della Foresta Intrecciata, Quartiere di Terra a ovest, in una tana scavata sotto un grosso ceppo coperto di muschio. La tana ha tre uscite. Bru sta con lui (nipote affidato, storia mai raccontata).\"\n  - \"Robusto, basso, pelo grigio-scuro con la riga bianca dalla testa alla nuca — la maschera del tasso. Zampe corte e forti, unghie lunghe da scavatore. Una spalla un po' più alta dell'altra. Quando sta fermo si confonde col terreno.\"\n  - \"Firma visiva: bandana scura legata stretta sulla fronte sotto le orecchie, sempre marrone-grigio.\"\n  - \"Rovo fa cose-da-rovo (cespuglio) attraverso il corpo del tasso. Punge — verbalmente, secco. Si attacca... Ha frutti sotto le spine — la dolcezza c'è ma sta sepolta. Scava... Conosce la Foresta come si conosce la propria tana.\"\n  - \"Bru gli sta dietro a rispettosa distanza. Rovo non lo accarezza mai. Ma quando torna a casa la sera, controlla che Bru ci sia.\"\n  - Note e vincoli: \"Mai una scena di confidenza calorosa — sarebbe rottura. Tenerezza sempre mediata... Mai spiegare perché Bru sta con Rovo (porta socchiusa). Mai Rovo compagno di viaggio prolungato dei fratelli.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.rovo`: `species: tasso`, `type: abitante_maggiore`, `role_saga: resistenza_che_protegge`.\n- `pipeline_narrativa/story_graph.json#stories.s03.characters_in_scene[rovo].scene_role`: \"maggiore_prima_apparizione\".\n- `pipeline_narrativa/story_graph.json#stories.s04.characters_in_scene[rovo].scene_role`: \"apparizione_secondo_registro\".",
+      "body_size_chars": 4556,
       "folder_path": "visual/personaggi/individuali/primari/rovo",
       "scheda_path": "visual/personaggi/individuali/primari/rovo/scheda.md",
       "breadcrumb": [
@@ -7549,7 +7549,7 @@
       "name": "Stria",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7560,7 +7560,7 @@
         "specie": "airone_cenerino",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "autorita_calma_scambio_asimmetrico",
-        "status": "stub",
+        "status": "provvisorio",
         "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.stria"
@@ -7575,8 +7575,8 @@
           }
         }
       },
-      "body_md": "# Stria\n\n## Identita' visuale (sintesi)\n\n[stub — da compilare]\n\n## Aspetto / forma\n\n[stub]\n\n## Abbigliamento / stato d'uso\n\n[stub — applicare se personaggio o oggetto]\n\n## Espressione / comportamento\n\n[stub — applicare se personaggio o vento]\n\n## Palette e atmosfera\n\n[stub]\n\n## Contesto e ambientazioni ricorrenti\n\n[stub]\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n[stub]\n\n## Variabilita' ammessa\n\n[stub]\n\n## Cliche' da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\n[stub]\n\n## Per stampa 3D\n\nVolumi, proporzioni, scala, orientamento canonico.\n\n[stub]\n\n## Per narrativa e social\n\nRegistri d'uso testuale, tono, parole-chiave da usare/evitare.\n\n[stub]\n\n## Storie / scene di apparizione\n\n[stub — popolare con elenco s01..s12 e ruolo per scena]\n\n## Disallineamenti / domande aperte\n\n[vuoto se nulla]\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]",
-      "body_size_chars": 993,
+      "body_md": "# Stria\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nAlta, magra, piume grigio-cenere con le punte delle ali più scure. Il collo lungo che si piega elegante quando ascolta. Il becco lungo, dritto, color osso. Le zampe sottilissime. Lo sguardo fermo, gli occhi gialli che non si stancano.\n\n## Abbigliamento / stato d'uso\n\n**Firma visiva:** scialle leggero color cenere chiaro sulle spalle, che le pende lungo le ali. Lo toglie quando vola, lo rimette quando atterra.\n\n## Espressione / comportamento\n\nStria fa cose-da-stria (la traccia in cielo) attraverso il corpo dell'airone. Vede dall'alto. Lascia segno — quando spiega qualcosa ai cuccioli, quel qualcosa resta. Aspetta — sta su una zampa sola, immobile, finché il cucciolo arriva alla risposta da sé. Becca preciso — quando finalmente parla, una sola frase, mai due. Vola con calma.\n\nNon dà mai una risposta diretta. Rilancia. *\"Tu cosa pensi?\"* è la sua frase più frequente. Conosce ogni cucciolo per nome dal primo giorno e ricorda quello che ognuno ha detto a scuola tre anni fa.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nMaestra della scuola del villaggio. Vive in una casa stretta e alta vicino alla scuola — l'unica del villaggio col tetto molto spiovente, perché Stria ci atterra sopra prima di entrare. La scuola è a sud-ovest del villaggio centrale, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nAlta e magra. Piume grigio-cenere con punte delle ali più scure. Collo lungo. Becco lungo, dritto, color osso. Zampe sottilissime. Occhi gialli, sguardo fermo. Scialle color cenere chiaro sulle spalle (tolto in volo, rimesso ad atterraggio).\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.6 \"Note e vincoli\":\n- Mai Stria che dà una lezione esplicita di morale. La sua autorità è nel *come* (rilancio, attesa, riconoscimento), mai nel *cosa*.\n- Mai Stria che si commuove visibilmente.\n- Mai due risposte di Stria nella stessa scena.\n- Mai Stria sopra o sotto l'Albero Vecchio (l'Albero è centro silenzioso del mandala, va lasciato libero).\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: cammeo di apertura.\n- s03: assente.\n- s04: assente.\n- s05: assente.\n- s06: cammeo a scuola — maestra-zia che vede e non interviene.\n- s07: assente.\n- s08: cammeo, mattina dopo: routine che riprende.\n- s09: cornice scuola, mattino — maestra-zia.\n- s10: assente.\n- s11: maestra-zia, cornice scuola — bloom architrave, vede prima.\n- s12: assente.\n\n## Disallineamenti / domande aperte\n\n(vuoto)\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.6 STRIA:\n  - \"Airone cenerino. Maestra della scuola del villaggio. Vive in una casa stretta e alta vicino alla scuola — l'unica del villaggio col tetto molto spiovente, perché Stria ci atterra sopra prima di entrare. La scuola è a sud-ovest del villaggio centrale, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio.\"\n  - \"Alta, magra, piume grigio-cenere con le punte delle ali più scure. Il collo lungo che si piega elegante quando ascolta. Il becco lungo, dritto, color osso. Le zampe sottilissime. Lo sguardo fermo, gli occhi gialli che non si stancano.\"\n  - \"Firma visiva: scialle leggero color cenere chiaro sulle spalle, che le pende lungo le ali. Lo toglie quando vola, lo rimette quando atterra.\"\n  - \"Stria fa cose-da-stria (la traccia in cielo) attraverso il corpo dell'airone. Vede dall'alto. Lascia segno... Aspetta — sta su una zampa sola, immobile, finché il cucciolo arriva alla risposta da sé. Becca preciso — quando finalmente parla, una sola frase, mai due. Vola con calma.\"\n  - \"Non dà mai una risposta diretta. Rilancia. *'Tu cosa pensi?'* è la sua frase più frequente. Conosce ogni cucciolo per nome dal primo giorno e ricorda quello che ognuno ha detto a scuola tre anni fa.\"\n  - Note e vincoli: \"Mai Stria che dà una lezione esplicita di morale... Mai Stria che si commuove visibilmente. Mai due risposte di Stria nella stessa scena. Mai Stria sopra o sotto l'Albero Vecchio.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.stria`: `species: airone_cenerino`, `type: abitante_maggiore`, `role_saga: autorita_calma_scambio_asimmetrico`.\n- `pipeline_narrativa/story_graph.json#stories.s02.characters_in_scene[stria].scene_role`: \"cammeo_apertura\".\n- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[stria].scene_role`: \"cammeo_scuola_maestra_zia_che_vede_e_non_interviene\".\n- `pipeline_narrativa/story_graph.json#stories.s08.characters_in_scene[stria].scene_role`: \"cammeo_mattina_dopo_routine_che_riprende\".\n- `pipeline_narrativa/story_graph.json#stories.s09.characters_in_scene[stria].scene_role`: \"cornice_scuola_mattino_maestra_zia\".\n- `pipeline_narrativa/story_graph.json#stories.s11.characters_in_scene[stria].scene_role`: \"maestra_zia_cornice_scuola_bloom_architrave_vede_prima\".",
+      "body_size_chars": 5403,
       "folder_path": "visual/personaggi/individuali/primari/stria",
       "scheda_path": "visual/personaggi/individuali/primari/stria/scheda.md",
       "breadcrumb": [
