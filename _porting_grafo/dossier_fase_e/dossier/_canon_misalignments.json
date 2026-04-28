@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s02_post_review",
+  "last_updated_story": "s03",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -70,6 +70,22 @@
       "proposed_resolution": "RISOLTO in P1 s02 (post-review Ray): bastoncino_noah_s1 escluso da oggetti_simbolo_presenti (resta solo scialle_stria). Tracking narrativo dell'oggetto-firma resta in seeds_planted/picked_up + callbacks_made + structural_notes. REGOLA 0.6 aggiunta a MIGRATION_PROMPT_FASE_E.md per evitare ricaduta s03-s12. Decisione di design: gli oggetti-firma personaggio vivono nella scheda visual del personaggio (visual/personaggi/<id>/scheda.md) + nel tracking seeds, non come oggetti-simbolo saga.",
       "status": "resolved",
       "resolved_in_phase": "P1_review_Ray"
+    },
+    {
+      "id": "mis_004",
+      "discovered_in_story": "s03",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P0",
+      "between": "catalog_vs_graph",
+      "type": "other",
+      "catalog_reference": "catalogo_web/data/entities.json (13 oggetti canonici, famiglia=oggetto)",
+      "graph_reference": "story_graph.json#stories.s03.visual_anchors.recurring_visual_objects[0] = 'pallone_di_stoffa_cucita'",
+      "bible_reference": null,
+      "description": "Il grafo s03 lista 'pallone_di_stoffa_cucita' tra recurring_visual_objects. Non e' nel catalogo come famiglia=oggetto (13 oggetti canonici saga). Diverso da mis_003/bastoncino_noah_s1 (oggetto-firma personaggio): il pallone e' oggetto di gruppo bambini, ricorrente trasversalmente s03 -> s11 (debt: s11_pallone_ricomparsa_giochi_cuccioli_tentativo). Potenziale 14° oggetto-simbolo saga oppure oggetto_di_scena_ricorrente (sottotipo distinto). Dropped da oggetti_simbolo_presenti del canonical s03 (REGOLA 0.6).",
+      "severity": "bassa",
+      "proposed_resolution": "OPZIONE B scelta da Ray (coerente con mis_003): non aggiunto al catalogo per ora. Tracking narrativo del pallone resta in seeds_planted (seed_pallone_stoffa_cucita) + callbacks futuri (s11). Decisione finale post-saga: se promuovere a 14° oggetto-simbolo o registrare come oggetto_di_scena_ricorrente.",
+      "status": "open",
+      "resolved_in_phase": null
     }
   ]
 }

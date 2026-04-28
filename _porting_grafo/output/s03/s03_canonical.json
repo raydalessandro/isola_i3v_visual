@@ -1,0 +1,321 @@
+{
+  "id": "s03",
+  "title_provvisorio": "Il Pallone oltre la Foresta",
+  "cycle": "A",
+  "attribute_dominant": "distinguere",
+  "block_position": "chiusura_blocco_a_passaggio_stagionale",
+  "season": "inverno",
+  "season_passage": "inverno_a_primavera",
+  "wind_active": null,
+  "wind_notes": "Taglio tramontato (è sera), la sua assenza si sente. Mulinello in arrivo, ancora silenzioso. Nessun vento AGISCE sulla scena — è la pausa tra due venti, tempo sospeso. Da onorare visivamente come aria ferma, foglie immobili, nessuna manifestazione visiva dei venti.",
+  "pattern_a_active": "none",
+  "pattern_a_notes": "Pattern A non seminato né eco. S3 non lo tocca.",
+  "night_scene": false,
+  "night_scene_notes": "Non è scena notturna piena. È crepuscolo, sera che cala. Il buio è implicito come *minaccia nel luogo* (Foresta di sera non si entra), non come tempo attivo della scena.",
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "foresta_intrecciata",
+    "note": "Margine: confine tra Orti del Cerchio e Foresta Intrecciata, dove gli alberi cominciano a infittirsi. Non dentro la Foresta — i fratelli si fermano prima del margine. Solo Rovo esce dalla Foresta. | specific_points: ['margine_foresta_intrecciata', 'orti_del_cerchio_confine']"
+  },
+  "locations_secondary": [
+    {
+      "id": "orti_del_cerchio",
+      "role": "sfondo_coltivatori_cantilena_sommessa"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_azione",
+      "narrative_weight": "delta_che_sente_limite_senza_saperlo_spiegare",
+      "key_actions": [
+        "blocca_noah_che_vuole_entrare",
+        "non_sa_spiegare_perche_non_si_entra_sente_solo_che_non_si_fa",
+        "chiede_a_rovo_perche_non_si_entra_di_sera"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_azione",
+      "narrative_weight": "ponte_che_trova_modo_terzo",
+      "key_actions": [
+        "indeciso_tra_gabriel_e_noah",
+        "ha_l_idea_di_chiamare_nel_buio_foresta",
+        "c_e_nessuno"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_azione_irriflessa",
+      "narrative_weight": "piccolo_che_sente_il_buio_foresta_e_torna_indietro",
+      "key_actions": [
+        "calcio_mal_misurato_pallone_entra_in_foresta",
+        "fa_due_passi_dentro_la_foresta_si_ferma",
+        "torna_indietro_senza_dirlo_resta_arrabbiato"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "rovo",
+      "role": "maggiore_prima_apparizione",
+      "narrative_weight": "guardiano_confine_che_protegge_senza_ammetterlo",
+      "key_actions": [
+        "risponde_brusco_dal_buio_foresta_chi_e",
+        "esce_dalla_foresta_col_pallone_in_mano",
+        "lo_posa_per_terra_a_un_passo_dal_margine_non_lancia",
+        "brontola_cosa_fate_qua_a_quest_ora_e_buio_andate",
+        "frase_chiave_sigillo_le_cose_della_foresta_hanno_il_loro_orario"
+      ],
+      "familial_role_episodic": "zio_severo",
+      "quote_count_estimate": 4
+    },
+    {
+      "id": "bru",
+      "role": "cammeo_intravisto",
+      "narrative_weight": "prima_apparizione_presenza_silenziosa",
+      "key_actions": [
+        "appare_un_attimo_dietro_rovo",
+        "occhi_che_brillano",
+        "si_ritira"
+      ],
+      "quote_count_estimate": 0
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "sfondo_lontano",
+      "_note": "Prima cantilena saga (1 di ≤4-5). Modalità: sommessa, lavori di preparazione pre-semina, lontana. Distinta dalla semina piena di S4."
+    }
+  ],
+  "seeds_planted": [
+    "seed_rovo_resistenza_che_protegge",
+    "seed_bru_presenza_che_custodisce",
+    "seed_pallone_stoffa_cucita",
+    "seed_foresta_tempi_modi_propri"
+  ],
+  "seeds_picked_up": [
+    "seed_fermarsi_come_gesto_attivo",
+    "seed_paura_noah_buio"
+  ],
+  "seeds_maturing_here": [
+    "seed_fermarsi_come_gesto_attivo",
+    "seed_paura_noah_buio"
+  ],
+  "seeds_bloomed_here": [],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s03_001",
+      "from_story": "s01",
+      "element": "fermarsi_come_gesto_attivo",
+      "type": "strutturale_tematico",
+      "note": "Eco strutturale: il fermarsi prima del buio Foresta è eco del fermarsi nella nebbia (S1). Chiusura del ciclo Δ per accumulo silenzioso. Non dichiarato nel testo, tracciato solo a livello di grafo e di note voce.",
+      "to_story": "s03"
+    }
+  ],
+  "callback_summary": "Eco strutturale S1 (fermarsi come gesto attivo maturing). Paura Noah S1 buio → S3 buio Foresta sera (maturing, variante geografica).",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": "Le cose della Foresta hanno il loro orario.",
+  "key_phrase_notes": "ECCEZIONE esplicita: frase-chiave attribuita a un personaggio (non al narratore). Giustificata perché è pratica, non filosofia — Rovo dice un fatto della Foresta, non una massima morale. Embedded en passant, mentre Rovo già si volta per rientrare. Nessun sigillo aggiuntivo del narratore che la commenti.",
+  "premise": "I fratelli giocano col pallone di stoffa cucita ai margini degli Orti, nel tratto dove gli alberi della Foresta cominciano a infittirsi. I Coltivatori chiudono il lavoro lontano con una cantilena sommessa. Si fa tardi.",
+  "problem": "Un calcio mal misurato di Noah: il pallone rotola dentro la Foresta, scompare tra i tronchi. È quasi sera. Tutti sanno (per tradizione orale, nessuno spiega) che nella Foresta di sera non si entra. Noah vuole andare. Gabriel dice no. Elias indeciso.",
+  "threshold_moment": "Elias che chiama nel buio: 'C'è nessuno?'. Una voce risponde da dentro, brusca: 'Chi è?'. È Rovo. Modo diverso di affrontare il limite — non oltrepassarlo, non stare fermi davanti: chiamare chi vi sta dall'altra parte.",
+  "resolution_mode": "Rovo esce dalla Foresta col pallone in mano. Lo posa per terra a un passo dal margine, dalla parte degli Orti — non lo lancia. Brontola: 'Cosa fate qua a quest'ora? È buio. Andate.' Bru appare un attimo dietro Rovo, occhi che brillano, poi si ritira. Gabriel chiede perché non si entra di sera. Rovo non risponde subito. Poi, mentre già si volta: 'Le cose della Foresta hanno il loro orario.' Rientra. Bru lo segue.",
+  "palette_emotiva": "Verde scuro/marrone della Foresta. Tardo pomeriggio: dorato → arancione → blu sera. Pallone color brace = unico punto caldo. Aria un filo più tiepida del solito di gennaio — primo segnale di passaggio stagionale.",
+  "active_constraints_touched": [
+    "rovo_tenerezza_sempre_mediata",
+    "rovo_non_compagno_viaggio_prolungato",
+    "rovo_mai_confidenza_calorosa",
+    "bru_mai_racconta_sua_storia",
+    "bru_mai_centro_attenzione",
+    "frase_chiave_a_personaggio_eccezione_pratica_non_filosofia"
+  ],
+  "voice_notes_essential": [
+    "nessun_address_al_lettore_arriva_in_s4",
+    "memoria_lunga_narratore_1_o_2_incisi_sul_margine_foresta_come_luogo_di_soglia",
+    "cantilena_coltivatori_sommessa_in_lontananza_prima_di_saga_1_di_max_5",
+    "nessun_detto_popolare_fiamma_non_presente",
+    "rovo_frasi_secche_non_commentare_il_sigillo_lasciare_la_frase_asciutta",
+    "frase_chiave_attribuita_a_rovo_eccezione_giustificata_no_sigillo_narratore_che_commenta",
+    "chiusura_ciclo_delta_silenziosa_eco_di_s1_per_accumulo_non_dichiarata"
+  ],
+  "structural_notes": [
+    "CHIUSURA_BLOCCO_A — il fermarsi come gesto attivo si completa per accumulo silenzioso",
+    "PASSAGGIO_STAGIONALE_1 — primo cambio (inverno → primavera), aria un filo più tiepida",
+    "VENTO_ASSENTE_TEMPO_SOSPESO — S3 è l'unica storia con wind_active=null, la pausa tra Taglio e Mulinello",
+    "FRASE_CHIAVE_A_PERSONAGGIO — eccezione esplicita, giustificata da pragma non filosofia",
+    "ROVO_PRIMA_APPARIZIONE — registro 'guardiano del confine', da ricambiare in S4 ('abitante della Foresta')",
+    "BRU_PRIMA_APPARIZIONE — intravisto, prepara S4-S5",
+    "PATTERN_A non toccato (prima scena attiva S7)"
+  ],
+  "fear_touched": {
+    "brother": "noah",
+    "fear_id": "buio",
+    "status": "maturing",
+    "mode_of_touch": "sentore_foresta_di_sera_noah_fa_due_passi_dentro_si_ferma_torna_indietro_senza_dirlo",
+    "_note": "Seconda variante della paura del buio di Noah (la prima in S1 bianco totale). Qui variante geografica: buio della Foresta di sera. Seme: seed_paura_noah_buio (maturing)."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s03_h1",
+        "moment": "tardo_pomeriggio",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_orti_campo_gioco",
+          "legacy_string": "margine_foresta_orti_campo_gioco"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "dorato_tramonto_ocra_orti_verde_scuro_della_foresta_alle_spalle",
+        "notes": null,
+        "focal_action": "i tre giocano col pallone di stoffa cucita al margine degli Orti. In lontananza, Coltivatori che chiudono il lavoro cantano sommessi.",
+        "focal_object": "pallone_di_stoffa_cucita",
+        "atmosphere": "gioco_gia_lungo_luce_che_cala_fatica_dolce",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s03_h2_signature",
+        "moment": "quasi_sera",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_calcio_mal_misurato",
+          "legacy_string": "margine_foresta_momento_del_calcio_mal_misurato"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "pallone_color_brace_come_unico_punto_caldo_che_si_perde_nell_oscurita_della_foresta_arancio_tramonto_sugli_orti_blu_sera_nella_foresta",
+        "notes": null,
+        "focal_action": "Noah dà un calcio al pallone. Il pallone rotola oltre il margine, entra tra i primi tronchi della Foresta, scompare.",
+        "focal_object": "pallone_che_sparisce_tra_i_tronchi",
+        "atmosphere": "errore_piccolo_che_fa_rumore_grande_luce_che_cambia_da_arancione_a_blu",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s03_h3",
+        "moment": "crepuscolo",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_chiamare_elias",
+          "legacy_string": "margine_foresta_momento_del_chiamare_elias"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "blu_scuro_della_foresta_interna_grigio_dei_tronchi_riflessi_azzurrati_della_sera",
+        "notes": null,
+        "focal_action": "Noah ha fatto due passi dentro la Foresta e è tornato indietro. Elias si fa avanti al margine. Chiama verso dentro: 'C'è nessuno?' La Foresta è buia, silenziosa, densa.",
+        "focal_object": "elias_che_chiama_nel_buio",
+        "atmosphere": "tensione_del_margine_buio_che_non_risponde",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s03_h4",
+        "moment": "crepuscolo",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_rovo_esce",
+          "legacy_string": "margine_foresta_rovo_esce"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "rovo",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "grigio_marrone_di_rovo_con_bandana_scura_pallone_color_brace_ai_suoi_piedi_buio_foresta_alle_spalle_con_occhi_di_bru_che_brillano_un_attimo",
+        "notes": null,
+        "focal_action": "Rovo esce dalla Foresta col pallone in mano, la bandana marrone-grigia stretta sulla fronte. Posa il pallone per terra a un passo dal margine dalla parte degli Orti. Bru sbuca un attimo dietro Rovo, occhi che brillano.",
+        "focal_object": "rovo_col_pallone_in_mano_posato_a_terra",
+        "atmosphere": "incontro_brusco_tenerezza_mediata_pallone_restituito_con_gesto_preciso",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s03_h5",
+        "moment": "sera_piena",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "margine_rovo_si_volta_per_rientrare",
+          "legacy_string": "margine_foresta_rovo_si_volta_per_rientrare"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "rovo"
+        ],
+        "elements": [],
+        "palette": "blu_sera_piena_silhouette_di_rovo_e_bru_che_rientrano_nel_verde_scuro",
+        "notes": null,
+        "focal_action": "Rovo si sta già voltando per rientrare nella Foresta quando, senza guardare i fratelli, dice: 'Le cose della Foresta hanno il loro orario.' Bru lo segue dentro. I fratelli restano col pallone in mano.",
+        "focal_object": "rovo_di_spalle_che_rientra_nella_foresta",
+        "atmosphere": "sigillo_laconico_dignita_del_margine",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [
+    "TUM-tum (coltivatori)"
+  ],
+  "quartieri_attraversati": [
+    "terra_ovest"
+  ],
+  "oggetti_simbolo_presenti": [
+    "bandana_rovo"
+  ],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "rovo",
+      "vincoli": [
+        "tenerezza_sempre_mediata",
+        "mai_confidenza_calorosa",
+        "mai_compagno_viaggio_prolungato_fratelli",
+        "mai_spiegare_perche_bru_con_lui"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ]
+}

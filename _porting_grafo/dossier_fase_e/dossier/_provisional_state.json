@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_story_processed": "s02",
-  "stories_processed": ["s01", "s02"],
+  "last_story_processed": "s03",
+  "stories_processed": ["s01", "s02", "s03"],
   "quotas_consumed": {
     "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
     "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
@@ -125,7 +125,57 @@
       "debts_opened": [],
       "debts_closed": [],
       "misalignments_logged": ["mis_002"],
-      "notes": "Seconda storia migrata (centro_blocco_a, ciclo A inverno, signature: 'Il Riflesso nella Pozza'). 7 provvisori validi (0A + 4B + 3C). I 5 no_inference_fields restano null nel canonical (hint_neutro forniti, non proposte). Cambio metodo P1: sub-agente fallito 3/3 con stream timeout, sostituito con script `_porting_grafo/scripts/migrate_p1.py` parametrico (idempotente, applica REGOLA 0.5 automaticamente, riusabile s03-s12). P0 risolto in OPZIONE A (pozza_abbeveratoio_pastori aggiunta al catalogo prima di P1, mis_002 -> resolved). Tutti i debts_opened/closed dell'old_node erano seed_refs: archiviati per REGOLA 0ter, non entrati nel canonical (tracciati nelle migration_notes). Pre-eco Pattern A in s02_h4 (cerchi argentei sull'acqua, mai nominato), prima manifestazione visiva della famiglia Pattern A in saga (semina vera in S6, prima scena attiva S7)."
+      "notes": "Seconda storia migrata (centro_blocco_a, ciclo A inverno, signature: 'Il Riflesso nella Pozza'). 7 provvisori validi (0A + 4B + 3C). I 5 no_inference_fields restano null nel canonical (hint_neutro forniti, non proposte). Cambio metodo P1: sub-agente fallito 3/3 con stream timeout, sostituito con script `_porting_grafo/scripts/migrate_p1.py` parametrico (idempotente, applica REGOLA 0.5 automaticamente, riusabile s03-s12). P0 risolto in OPZIONE A (pozza_abbeveratoio_pastori aggiunta al catalogo prima di P1, mis_002 -> resolved). Tutti i debts_opened/closed dell'old_node erano seed_refs: archiviati per REGOLA 0ter, non entrati nel canonical (tracciati nelle migration_notes). Pre-eco Pattern A in s02_h4 (cerchi argentei sull'acqua, mai nominato), prima manifestazione visiva della famiglia Pattern A in saga (semina vera in S6, prima scena attiva S7). Post-review Ray: FLAG 1 (callbacks.to_story mancante) e FLAG 2 (oggetti_simbolo non filtrato) corretti, REGOLE 0.6 + 0.7 aggiunte al MIGRATION_PROMPT, mis_003 logged."
+    },
+    {
+      "story_id": "s03",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s03/s03_provisional.json",
+      "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s03/s03_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 3,
+          "B": 3,
+          "C": 1
+        },
+        "totale": 7,
+        "dettaglio": [
+          {"field": "season_passage", "category": "B", "confidence": "medium"},
+          {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s03_h4.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s03_h5.notes", "category": "A", "confidence": "high"}
+        ]
+      },
+      "no_inference_fields_left_null": {
+        "count": 5,
+        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md REGOLA 0.2: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. P2 ha aggiunto un hint_neutro per ciascuno in s03_provisional.json#rejected_no_inference."
+      },
+      "seeds": {
+        "planted": [
+          "seed_rovo_resistenza_che_protegge",
+          "seed_bru_presenza_che_custodisce",
+          "seed_pallone_stoffa_cucita",
+          "seed_foresta_tempi_modi_propri"
+        ],
+        "picked_up": [
+          "seed_fermarsi_come_gesto_attivo",
+          "seed_paura_noah_buio"
+        ],
+        "maturing_here": [],
+        "bloomed_here": []
+      },
+      "callbacks_made": [
+        {"callback_id": "cb_s03_001", "from_story": "s01", "to_story": "s03", "element": "fermarsi_come_gesto_attivo", "type": "strutturale_tematico"}
+      ],
+      "debts_opened": [],
+      "debts_closed": [],
+      "misalignments_logged": ["mis_004"],
+      "notes": "Terza storia migrata (chiusura_blocco_a_passaggio_stagionale, ciclo A si chiude per accumulo silenzioso, signature: 'Il Pallone oltre la Foresta'). Distribuzione provvisori migliore di s01-s02: 3A + 3B + 1C (totale 7). CASO SPECIALE: key_phrase_indicative attribuita a personaggio (Rovo: 'Le cose della Foresta hanno il loro orario') — eccezione giustificata in key_phrase_notes + structural_notes 'FRASE_CHIAVE_A_PERSONAGGIO'. P2 ha proposto provvisorio extra `key_phrase_attributed_to: rovo` per campo opzionale schema v1.2 (decisione Ray sul promuovere). Wind_active=null (storia unica con vento assente, structural_note 'VENTO_ASSENTE_TEMPO_SOSPESO'). mis_004 (pallone_di_stoffa_cucita) logged con OPZIONE B scelta da Ray (non in catalogo per ora, decisione post-saga). Prime apparizioni narrative: rovo (registro guardiano del confine) + bru (intravisto, prepara s04-s05). 7 debts_opened raw tutti seed_refs archiviati (REGOLA 0ter), debts_opened/closed canonical = []. P1 via script migrate_p1.py: PASS. Niente API errors questa volta (script + Write piccoli)."
     }
   ],
   "quotas_remaining_check": {

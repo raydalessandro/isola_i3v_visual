@@ -1,0 +1,70 @@
+{
+  "_description": "Mapping manuale P0 -> P1 per s03. Decisioni: hook resolution, quadrant whitelist, debt triage, personaggi_vincoli_attivi.",
+  "story_id": "s03",
+  "hooks": {
+    "s03_h1": {
+      "location": {
+        "id": "foresta_intrecciata",
+        "qualifier": "margine_orti_campo_gioco",
+        "legacy_string": "margine_foresta_orti_campo_gioco"
+      },
+      "quadrant": "terra_ovest"
+    },
+    "s03_h2_signature": {
+      "location": {
+        "id": "foresta_intrecciata",
+        "qualifier": "margine_calcio_mal_misurato",
+        "legacy_string": "margine_foresta_momento_del_calcio_mal_misurato"
+      },
+      "quadrant": "terra_ovest"
+    },
+    "s03_h3": {
+      "location": {
+        "id": "foresta_intrecciata",
+        "qualifier": "margine_chiamare_elias",
+        "legacy_string": "margine_foresta_momento_del_chiamare_elias"
+      },
+      "quadrant": "terra_ovest"
+    },
+    "s03_h4": {
+      "location": {
+        "id": "foresta_intrecciata",
+        "qualifier": "margine_rovo_esce",
+        "legacy_string": "margine_foresta_rovo_esce"
+      },
+      "quadrant": "terra_ovest"
+    },
+    "s03_h5": {
+      "location": {
+        "id": "foresta_intrecciata",
+        "qualifier": "margine_rovo_si_volta_per_rientrare",
+        "legacy_string": "margine_foresta_rovo_si_volta_per_rientrare"
+      },
+      "quadrant": "terra_ovest"
+    }
+  },
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "Tutti i 7 debts_opened raw dell'old_node sono classificati come 'seed_ref' nel precomputed_context (archived_seed_refs=6, debts_opened_keep=[]). Vanno archiviati per REGOLA 0ter, non entrano nel canonical. Tracciamento narrativo via seeds_planted/picked_up + callbacks_made.",
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "rovo",
+      "vincoli": [
+        "tenerezza_sempre_mediata",
+        "mai_confidenza_calorosa",
+        "mai_compagno_viaggio_prolungato_fratelli",
+        "mai_spiegare_perche_bru_con_lui"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: rovo + bru hanno vincoli individuali. gabriel/elias/noah/coltivatori_del_cerchio non hanno vincoli specifici nel catalogo (i 3 fratelli non hanno mai vincoli individuali, i coltivatori sono off-screen come gruppo)."
+}

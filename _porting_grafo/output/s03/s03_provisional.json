@@ -1,0 +1,121 @@
+{
+  "story_id": "s03",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s03_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima di testo gia' canonico.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato (canonical fields, Carta Voce, structural_notes).",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere con Ray in fase D."
+  },
+  "provvisori": {
+    "season_passage": {
+      "value": "Inverno tardo, primo segnale di passaggio stagionale verso la primavera: aria un filo piu' tiepida del solito di gennaio. Tardo pomeriggio in transizione verso la sera (luce dorato → arancione → blu).",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "structural_notes esplicita: 'PASSAGGIO_STAGIONALE_1 — primo cambio (inverno → primavera), aria un filo piu' tiepida'. block_position 'chiusura_blocco_a_passaggio_stagionale' conferma. palette_emotiva descrive transizione luce sera. Non e' inverno pieno (s01-s02) ne' primavera (storie successive): e' la soglia."
+    },
+    "key_phrase_indicative": {
+      "value": "Le cose della Foresta hanno il loro orario.",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Quote letterale dal resolution_mode + key_phrase_notes esplicita: 'ECCEZIONE esplicita: frase-chiave attribuita a un personaggio (non al narratore). Rovo dice un fatto della Foresta, non una massima morale. Embedded en passant, mentre Rovo gia' si volta per rientrare.' structural_notes 'FRASE_CHIAVE_A_PERSONAGGIO' conferma. Caso unico in saga: provvisorio A high confidence."
+    },
+    "key_phrase_attributed_to": {
+      "value": "rovo",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Esplicito in key_phrase_notes + structural_notes. Campo opzionale schema v1.2 (non popolato dallo script migrate_p1.py). Provvisorio A high: se Ray approva, va promosso al canonical (Edit manuale), altrimenti resta solo nel provisional come nota.",
+      "_note_meta": "Questo provvisorio e' per un campo NON popolato nel canonical. P1 lo lascia assente per sicurezza (script generico). Ray decide se promuovere al canonical."
+    },
+    "hooks": {
+      "s03_h1": {
+        "notes": {
+          "value": "Apertura: i tre fratelli giocano col pallone di stoffa cucita al margine degli Orti, nel tratto dove gli alberi della Foresta cominciano a infittirsi. In lontananza i Coltivatori chiudono il lavoro con cantilena sommessa (TUM-tum, prima di max 5 in saga). Tardo pomeriggio, luce che cala, fatica dolce. Si fa tardi.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "premise + atmosphere + voice_notes 'cantilena_coltivatori_sommessa_in_lontananza_prima_di_saga_1_di_max_5'. Nota di apertura con ambientazione sociale (coltivatori come sfondo)."
+        }
+      },
+      "s03_h2_signature": {
+        "notes": {
+          "value": "Signature hook: calcio mal misurato di Noah, il pallone rotola oltre il margine, entra tra i primi tronchi della Foresta, scompare. Errore piccolo che fa rumore grande. Luce che vira da arancione a blu — quasi sera, soglia del 'nella Foresta di sera non si entra' (tradizione orale, mai dichiarata).",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "problem + atmosphere del hook + voice_notes 'memoria_lunga_narratore_1_o_2_incisi_sul_margine_foresta_come_luogo_di_soglia'. Signature image della storia (l'errore che innesca tutto)."
+        }
+      },
+      "s03_h3": {
+        "notes": {
+          "value": "Threshold: Noah ha fatto due passi dentro la Foresta e e' tornato indietro (variante della sua paura del buio, status maturing). Elias si fa avanti al margine, chiama nel buio: 'C'e' nessuno?'. La Foresta e' buia, silenziosa, densa. Modo diverso di affrontare il limite — non oltrepassarlo, non stare fermi davanti: chiamare chi sta dall'altra parte.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "threshold_moment del canonical + fear_touched.mode_of_touch (noah due passi dentro/torna indietro) + atmosphere 'tensione_del_margine_buio_che_non_risponde'. Scena cardine del threshold con scelta strutturale (chiamare invece di entrare/restare)."
+        }
+      },
+      "s03_h4": {
+        "notes": {
+          "value": "Rovo esce dalla Foresta col pallone in mano, bandana marrone-grigia stretta sulla fronte. Posa il pallone per terra a un passo dal margine — dalla parte degli Orti, non lo lancia. Brontola: 'Cosa fate qua a quest'ora? E' buio. Andate.' Bru sbuca un attimo dietro Rovo, occhi che brillano, poi si ritira. Prima apparizione di entrambi: registro 'guardiano del margine' per Rovo, presenza intravista per Bru.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "resolution_mode + structural_notes 'ROVO_PRIMA_APPARIZIONE — registro guardiano del confine' + 'BRU_PRIMA_APPARIZIONE — intravisto, prepara S4-S5'. Vincoli rovo attivi: tenerezza_sempre_mediata + mai_confidenza_calorosa (gesto di posare il pallone, non lanciarlo: tenerezza mediata)."
+        }
+      },
+      "s03_h5": {
+        "notes": {
+          "value": "Sigillo laconico: Rovo si volta gia' per rientrare nella Foresta quando, senza guardare i fratelli, dice 'Le cose della Foresta hanno il loro orario.' Bru lo segue dentro. I fratelli restano col pallone in mano. Sera piena. Eccezione giustificata: la frase-chiave e' attribuita a un personaggio (non al narratore), perche' pratica non filosofia. Chiusura del ciclo distinguere per accumulo silenzioso (eco di s01).",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale + structural_notes 'CHIUSURA_BLOCCO_A — il fermarsi come gesto attivo si completa per accumulo silenzioso' + voice_notes 'rovo_frasi_secche_non_commentare_il_sigillo_lasciare_la_frase_asciutta' + voice_notes 'chiusura_ciclo_delta_silenziosa_eco_di_s1_per_accumulo_non_dichiarata'. callback cb_s03_001 strutturale a s01."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {
+      "A": 3,
+      "B": 3,
+      "C": 1
+    },
+    "totale": 7,
+    "_note_extra_provvisorio": "Oltre ai 7 provvisori conteggiati (2 top + 5 hook notes), c'e' un provvisorio top-level aggiuntivo per il campo opzionale `key_phrase_attributed_to` (categoria A high). Non conteggiato perche' non e' uno dei campi P2 standard ma una proposta di promozione campo opzionale schema v1.2.",
+    "dettaglio": [
+      {"field": "season_passage", "category": "B", "confidence": "medium"},
+      {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s03_h4.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s03_h5.notes", "category": "A", "confidence": "high"}
+    ]
+  },
+  "notes_globali": "Terza storia migrata (chiusura blocco A, passaggio stagionale inverno→primavera, ciclo A si chiude per accumulo silenzioso). 7 provvisori validi: 3A + 3B + 1C — distribuzione piu' alta in confidence rispetto a s01/s02 grazie alla key_phrase esplicita di Rovo + sigillo signature h5. CASO SPECIALE: s03 e' l'unica storia con key_phrase_indicative attribuita a personaggio (eccezione giustificata in key_phrase_notes + structural_notes). Provvisorio extra propone `key_phrase_attributed_to: rovo` per il campo opzionale schema v1.2 — Ray decide se promuovere al canonical. mis_004 (pallone_di_stoffa_cucita) status open, OPZIONE B coerente con mis_003.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2 MIGRATION_PROMPT): nessuna proposta P2 perche' richiedono decisione autoriale Ray in fase C/D.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura con i tre fratelli che giocano (no cammeo introduttivo come s02). Cantilena coltivatori sommessa in lontananza. Possibili candidati: B (immagine ferma) o D. Scelta autoriale."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Chiusura con sigillo laconico di Rovo + accumulo silenzioso ciclo distinguere + eco strutturale a s01. Codice 1-7 da decidere autoriale."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera di soglia + tensione del margine + sigillo asciutto. Plausibile medio, possibile basso (Rovo registro pratico). Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "5 hook compatti su unica location (margine foresta), tre archi: gioco/calcio/threshold, incontro Rovo+Bru, sigillo. Probabile fascia media. Scelta autoriale."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sul_margine_foresta_come_luogo_di_soglia': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+    }
+  }
+}
