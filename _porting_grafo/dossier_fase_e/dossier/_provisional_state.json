@@ -949,37 +949,42 @@
       "canonical_file": "output/s09/s09_canonical.json",
       "quote_consumed": {
         "by_category": {
-          "A": 5,
-          "B": 0,
+          "A": 1,
+          "B": 5,
           "C": 0
         },
-        "totale": 5,
-        "_note": "Provvisori solo Famiglia A (5 no_inference_fields). Niente Famiglia B/C: i campi B (season_passage, key_phrase) sono già popolati in P1 da grafo o da decisione Ray. I campi C (hook notes, wind_visible) sono già pieni nel grafo originale.",
+        "totale": 6,
+        "_note": "Allineato post-realign al pattern s01-s08+s11 (REGOLA 0.2: i 5 no_inference_fields NON sono provvisori P2). Provvisori sono hook.notes + season_passage/key_phrase se popolati.",
         "dettaglio": [
           {
-            "field": "entry_point_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "closure_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "register",
-            "category": "A",
+            "field": "season_passage",
+            "category": "B",
             "confidence": "medium"
           },
           {
-            "field": "estimated_length",
-            "category": "A",
-            "confidence": "low"
-          },
-          {
-            "field": "descriptive_pauses_count",
+            "field": "key_phrase_indicative",
             "category": "A",
             "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.vh_s09_mattino_scuola_stria_frase_rilancio_cuccioli_individuati.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.vh_s09_pomeriggio_forno_castagna_memolo_a_gabriel.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.vh_s09_sera_tavolo_dolce_fette_diseguali_poi_uguali.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.vh_s09_fine_sera_braccialetto_in_mano_gabriel_noah_ride.notes",
+            "category": "B",
+            "confidence": "medium"
           }
         ]
       },
@@ -1012,36 +1017,41 @@
       "canonical_file": "output/s10/s10_canonical.json",
       "quote_consumed": {
         "by_category": {
-          "A": 5,
-          "B": 0,
+          "A": 1,
+          "B": 5,
           "C": 0
         },
-        "totale": 5,
-        "_note": "Solo provvisori Famiglia A (5 no_inference per C/D). Niente Famiglia B/C: il grafo s10 è denso (palette in tutti i 4 hooks già nel grafo, key_phrase top-level già popolata, voice_notes complete). season_passage decisione Ray applicata in P1.",
+        "totale": 6,
+        "_note": "Allineato post-realign al pattern s01-s08+s11 (REGOLA 0.2: i 5 no_inference_fields NON sono provvisori P2). Provvisori sono hook.notes + season_passage/key_phrase se popolati.",
         "dettaglio": [
           {
-            "field": "entry_point_type",
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "key_phrase_indicative",
             "category": "A",
             "confidence": "high"
           },
           {
-            "field": "closure_type",
-            "category": "A",
-            "confidence": "high"
+            "field": "visual_anchors.scene_hooks.vh_s10_sera_cantilena_ultima_noah_si_addormenta.notes",
+            "category": "B",
+            "confidence": "medium"
           },
           {
-            "field": "register",
-            "category": "A",
-            "confidence": "high"
+            "field": "visual_anchors.scene_hooks.vh_s10_notte_fondo_noah_dice_ho_paura_mano_di_gabriel.notes",
+            "category": "B",
+            "confidence": "medium"
           },
           {
-            "field": "estimated_length",
-            "category": "A",
-            "confidence": "low"
+            "field": "visual_anchors.scene_hooks.vh_s10_cammino_notturno_lanterna_velata_cerchio_luce_sui_piedi.notes",
+            "category": "B",
+            "confidence": "medium"
           },
           {
-            "field": "descriptive_pauses_count",
-            "category": "A",
+            "field": "visual_anchors.scene_hooks.vh_s10_alba_pontile_bartolo_vede_amo_tuffo_fiamma_cammeo.notes",
+            "category": "B",
             "confidence": "medium"
           }
         ]
@@ -1080,14 +1090,46 @@
         "totale": 8,
         "_note": "Provvisori P2 sui hook.notes (8 hook). REGOLA 0.2: i 5 no_inference_fields top-level NON sono provvisori P2 (restano null per decisione autoriale Ray fase C/D). key_phrase_indicative ('Va bene.') gia' popolato old_node + key_phrase_attributed_to=elias promosso al canonical via mapping. CULMINE ARCHITRAVE STRATO 3 in h05 (Vecchie riconoscimento muto a Elias) + h06 BRU_BLOOM_RICONOSCIUTO_DA_ELIAS. RIGENERATO da zero post-corruzione zip s11.",
         "dettaglio": [
-          {"field": "visual_anchors.scene_hooks.hook_01_alba_orti_raccolto_rituale.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.hook_02_mattino_piazza_allestimento.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.hook_03_stria_distribuisce_coni.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.hook_04_mezzogiorno_tre_cose_che_spostano_elias.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.hook_05_vecchie_indicare_culmine_architrave.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.hook_07_bartolo_arriva_frutti_da_fuori.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.hook_08_ritorno_casa_mulinello_sera_due_battute.notes", "category": "B", "confidence": "medium"}
+          {
+            "field": "visual_anchors.scene_hooks.hook_01_alba_orti_raccolto_rituale.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_02_mattino_piazza_allestimento.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_03_stria_distribuisce_coni.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_04_mezzogiorno_tre_cose_che_spostano_elias.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_05_vecchie_indicare_culmine_architrave.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_07_bartolo_arriva_frutti_da_fuori.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_08_ritorno_casa_mulinello_sera_due_battute.notes",
+            "category": "B",
+            "confidence": "medium"
+          }
         ]
       },
       "no_inference_fields_left_null": [
@@ -1117,37 +1159,57 @@
       "canonical_file": "output/s12/s12_canonical.json",
       "quote_consumed": {
         "by_category": {
-          "A": 5,
-          "B": 0,
+          "A": 3,
+          "B": 6,
           "C": 0
         },
-        "totale": 5,
-        "_note": "Solo Famiglia A (5 no_inference per C/D). Niente B/C: grafo s12 denso (palette in tutti gli 8 hooks già nel grafo, key_phrase top-level eccezionalmente null per design \"sigillo narratore non frase-soglia\"). Quote saga consumate qui (verifica): narrator_address True (4/6 saga), narrator_meta_voice True (1/2 saga, prima e ultima volta), grunto_memory_fragment True (1/1 saga, unicum), when_water_trembles True (2/2 saga quota chiusa).",
+        "totale": 9,
+        "_note": "Allineato post-realign al pattern s01-s08+s11 (REGOLA 0.2: i 5 no_inference_fields NON sono provvisori P2). Provvisori sono hook.notes + season_passage/key_phrase se popolati.",
         "dettaglio": [
           {
-            "field": "entry_point_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "closure_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "register",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "estimated_length",
-            "category": "A",
-            "confidence": "low"
-          },
-          {
-            "field": "descriptive_pauses_count",
-            "category": "A",
+            "field": "season_passage",
+            "category": "B",
             "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_01_alba_forno_partenza_cornice_apertura.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_02_pontile_bartolo_e_risalita_riva_fiume_sud.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_03_guado_pietre_piatte_nord_when_water_trembles_2di2.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_04_radura_pini_pascoli_alti_attraversamenti_silenziosi_autunnali.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_05_burrone_grunto_frammento_unico_saga_architrave.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_06_roccia_alta_concerto_momento_soglia_gabriel_architrave.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_07_discesa_piazza_crepuscolo_echi_silenziose_ghianda_e_casetta_memolo.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.hook_08_forno_sera_cornice_chiusura_sigillo_narratore_architrave.notes",
+            "category": "A",
+            "confidence": "high"
           }
         ]
       },

@@ -4,77 +4,151 @@
   "date": "2026-04-28",
   "based_on": "s09_canonical.json",
   "provvisori": {
-    "entry_point_type": {
-      "value": "cornice_costanza_giorno_chiuso",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Storia con cornice forno mattino-pomeriggio-sera (premise + structural_notes esplicitano \"il giorno chiuso del compleanno\"). Entry point fisso al forno apertura, non in medias res."
-    },
-    "closure_type": {
-      "value": "sigillo_silenzioso_oggetto_ferma",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Hook finale: braccialetto in mano di Gabriel, Noah ride, Elias cenno → chiusura non-verbale, oggetto-firma fermo, sguardi che si allineano. Non è risoluzione esplicita."
-    },
-    "register": {
-      "value": "tenero_basso_quotidiano",
-      "category": "A",
+    "season_passage": {
+      "value": "passaggio_estate_autunno",
+      "category": "B",
       "confidence": "medium",
-      "rationale": "Voce_notes esplicita \"tenerezza non sottolineata, nessuna enfasi morale\". Premise = compleanno-non-festa. Register basso ma caldo."
+      "rationale": "Popolato dall'agente alt da context narrativo nodo. Promosso a provvisorio P2 categoria B (inferenza forte). REGOLA 0.10: passaggio stagionale tracciato."
     },
-    "estimated_length": {
-      "value": "1800-2400_parole",
-      "category": "A",
-      "confidence": "low",
-      "rationale": "Storia centrale ciclo C, complessità bloom-paura-Gabriel. Stima sulla base della densità debts/callbacks (6+2) e 4 hooks. Da confermare con conteggio reale in C/D."
-    },
-    "descriptive_pauses_count": {
-      "value": 1,
+    "key_phrase_indicative": {
+      "value": "Non sono piu' piccolo come prima.",
       "category": "A",
       "confidence": "high",
-      "rationale": "Vincolo esplicito in active_constraints_touched: \"pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole\". Una sola pausa, al forno con Memolo."
+      "rationale": "Popolato dal old_node (frase precisa di noah). Quote letterale, categoria A high. key_phrase_attributed_to gia' nel canonical."
+    },
+    "hooks": {
+      "vh_s09_mattino_scuola_stria_frase_rilancio_cuccioli_individuati": {
+        "notes": {
+          "value": "[VISUAL] Stria sulla porta della scuola, mattino di ottobre chiaro. Gabriel entra. Cuccioli sullo sfondo, seduti o in piedi — Pun, Toba, Bru, Cardo. Liu' in volo sopra. Luce di Taglio leggero sul pavimento dell'aula. Foglia secca appena soffiata dentro dalla porta. Prime foglie autunnali gialle-arancioni visibili fuori attraverso la porta aperta.\n\n[CRITIQUE] Il Taglio e' percepito freddo da Gabriel (soggettivo) — l'illustrazione non rende il quartiere Fuoco come gia' invernale. L'aria e' chiara di ottobre che comincia, non di novembre. Cuccioli disposti in modo che Cardo sia leggermente distinto dagli altri tre (preparazione prima voce). Liu' in volo in un angolo, pronta a uscire. Stria sulla porta — non e' maestra severa, e' zia che rilancia.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s09_pomeriggio_forno_castagna_memolo_a_gabriel": {
+        "notes": {
+          "value": "[VISUAL] Interno Forno di Fiamma nel primo pomeriggio. Dolce di castagne in cottura (profumo visibile attraverso il vapore sopra il camino). Cesto di Zolla con castagne crude su un banco laterale. Gabriel in piedi accanto al banco. Memolo (riccio) vicino, una zampa sul bordo del cesto. Una castagna cruda nella mano di Gabriel — appena consegnata da Memolo. Fiamma sullo sfondo, che toglie con cura un ciocco dal fuoco. Nessuno parla. Luce di pomeriggio dorata dalla porta aperta.\n\n[CRITIQUE] La castagna nella mano di Gabriel e' il centro ottico della tavola. Memolo NON la guarda piu' (gia' consegnata), sta gia' guardando altrove — non e' un cammeo di tenerezza dichiarata, e' un gesto compiuto. Gabriel la guarda. Fiamma impegnata col fuoco, non partecipa alla scena-castagna — la registra col senso laterale della volpe. Eco silenziosa inversione ruoli S8. NESSUNA enfasi — e' un momento in mezzo al pomeriggio, poi passa.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s09_sera_tavolo_dolce_fette_diseguali_poi_uguali": {
+        "notes": {
+          "value": "[VISUAL] Tavolo di legno, tre fratelli seduti. Dolce di castagne al centro — forma semplice, color castagna scura, superficie lucida di miele. Gabriel col coltello in mano, momento sospeso tra la prima e la seconda porzione di taglio. Sul tavolo: tre piatti vuoti che aspettano, bicchieri d'acqua, il braccialetto appoggiato accanto al piatto di Gabriel. Finestra aperta a destra — tende mosse dal Mulinello sera. Luce arancione di tramonto tarda estate che entra di taglio. Foglia autunnale (gialla) caduta dall'albero fuori, appoggiata sul davanzale. Noah sul lato opposto, Elias al centro.\n\n[CRITIQUE] L'illustrazione cattura il MOMENTO-SOGLIA — Gabriel ha appena sentito 'Non sono piu' piccolo come prima', sta per cambiare il taglio. NON si vede la reazione sul volto (il lettore la costruisce). Il braccialetto e' SUL TAVOLO, non al polso (cura Ray ARCHI). Le fette NON sono ancora tagliate nel dolce — il gesto e' sospeso. Foglia sul davanzale: ottobre che comincia, non inverno. NOTA: l'interno casa non e' entity del grafo (decisione Ray Blocco 0) — e' scene hook.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s09_fine_sera_braccialetto_in_mano_gabriel_noah_ride": {
+        "notes": {
+          "value": "[VISUAL] Stesso tavolo. Tre piatti vuoti ora, briciole di dolce. Il braccialetto ancora sul tavolo accanto a Gabriel. Gabriel lo ha appena preso in mano — lo tiene tra le dita. Lo guarda. Noah ride (bocca aperta, guarda Elias). Elias (con il micro-cenno del capo a Gabriel gia' fatto, poi torna a Noah) sta dicendo qualcosa a Noah. Luce e' cambiata — tramonto finito, prime ombre di sera. Lanterna appena accesa su un mobile laterale. Mulinello continua attraverso la finestra.\n\n[CRITIQUE] ULTIMA IMMAGINE prima del sigillo narratore. Gabriel col braccialetto IN MANO (non al polso ancora). Lo guarda. Noah e Elias nella loro cosa separata. Gabriel e' solo nel suo momento, ma non e' escluso dalla scena — i tre sono INSIEME ma in tempi interni diversi. Il braccialetto puo' essere piccolo nell'inquadratura (non oggetto centrale ottico, ma occhio del lettore lo trova). Castagna-perlina visibile ma non enfatizzata — il bambino di 4 la nota, il rilettore registra, l'adulto si commuove pensando che si secchera'.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      }
     }
   },
   "quote_consumed": {
     "by_category": {
-      "A": 5,
-      "B": 0,
+      "A": 1,
+      "B": 5,
       "C": 0
     },
-    "totale": 5,
-    "_note": "Provvisori solo Famiglia A (5 no_inference_fields). Niente Famiglia B/C: i campi B (season_passage, key_phrase) sono già popolati in P1 da grafo o da decisione Ray. I campi C (hook notes, wind_visible) sono già pieni nel grafo originale.",
+    "totale": 6,
+    "_note": "Allineato post-realign al pattern s01-s08+s11. Provvisori P2 sono hook.notes (popolate dall'agente alt) + season_passage/key_phrase se popolati. I 5 no_inference_fields restano NULL (decisione autoriale Ray fase C/D).",
     "dettaglio": [
       {
-        "field": "entry_point_type",
-        "category": "A",
-        "confidence": "high"
-      },
-      {
-        "field": "closure_type",
-        "category": "A",
-        "confidence": "high"
-      },
-      {
-        "field": "register",
-        "category": "A",
+        "field": "season_passage",
+        "category": "B",
         "confidence": "medium"
       },
       {
-        "field": "estimated_length",
-        "category": "A",
-        "confidence": "low"
-      },
-      {
-        "field": "descriptive_pauses_count",
+        "field": "key_phrase_indicative",
         "category": "A",
         "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.vh_s09_mattino_scuola_stria_frase_rilancio_cuccioli_individuati.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.vh_s09_pomeriggio_forno_castagna_memolo_a_gabriel.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.vh_s09_sera_tavolo_dolce_fette_diseguali_poi_uguali.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.vh_s09_fine_sera_braccialetto_in_mano_gabriel_noah_ride.notes",
+        "category": "B",
+        "confidence": "medium"
       }
     ]
   },
   "notes_globali": "Storia ricca strutturalmente, grafo originale già denso (premise/problem/threshold/resolution e voice_notes già canonici). P2 si limita ai 5 no_inference + alcuni provvisori a bassa confidence. Niente provvisori Famiglia B perché season_passage è stato popolato in P1 (decisione Ray \"estate + passaggio_estate_autunno\") e key_phrase è già nel grafo. Niente provvisori Famiglia C perché ogni hook ha description_visual e visual_critique_notes già popolati nel grafo.",
-  "rejected_no_inference": [],
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2 in canonical (NULL). hint_neutro originale dall'agente alt preservati come riferimento per fase C/D.",
+    "entry_point_type": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "cornice_costanza_giorno_chiuso",
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Storia con cornice forno mattino-pomeriggio-sera (premise + structural_notes esplicitano \"il giorno chiuso del compleanno\"). Entry point fisso al forno apertura, non in medias res."
+      }
+    },
+    "closure_type": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "sigillo_silenzioso_oggetto_ferma",
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Hook finale: braccialetto in mano di Gabriel, Noah ride, Elias cenno → chiusura non-verbale, oggetto-firma fermo, sguardi che si allineano. Non è risoluzione esplicita."
+      }
+    },
+    "register": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "tenero_basso_quotidiano",
+        "category": "A",
+        "confidence": "medium",
+        "rationale": "Voce_notes esplicita \"tenerezza non sottolineata, nessuna enfasi morale\". Premise = compleanno-non-festa. Register basso ma caldo."
+      }
+    },
+    "estimated_length": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "1800-2400_parole",
+        "category": "A",
+        "confidence": "low",
+        "rationale": "Storia centrale ciclo C, complessità bloom-paura-Gabriel. Stima sulla base della densità debts/callbacks (6+2) e 4 hooks. Da confermare con conteggio reale in C/D."
+      }
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": 1,
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Vincolo esplicito in active_constraints_touched: \"pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole\". Una sola pausa, al forno con Memolo."
+      }
+    }
+  },
   "narrative_ideas": [
     "Cardo \"prima voce\" (seed_cardo_prima_voce_individuata) → bloom potenziale s11 quando il cuccioli prendono voce collettiva al pozzo. Da verificare arc s11.",
     "Braccialetto-firma s09 → debt_s09_to_s12: oggetto silenzioso al polso di Gabriel in chiusura saga. Preserva strato 3 senza nominazione."
-  ]
+  ],
+  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2)."
 }

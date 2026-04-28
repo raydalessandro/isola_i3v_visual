@@ -4,78 +4,152 @@
   "date": "2026-04-28",
   "based_on": "s10_canonical.json",
   "provvisori": {
-    "entry_point_type": {
-      "value": "cornice_sera_quotidiano_che_si_rovescia",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Hook 0: cantilena ultima, Noah si addormenta — apertura quotidiana che poi si rovescia in notte di paura. Voice_notes esplicita \"iniziare basso, sera normale, poi notte si apre come buco\". Entry point è \"cornice serale stanza fratelli\" + svolta interna."
-    },
-    "closure_type": {
-      "value": "sigillo_silenzioso_cammeo_diurno",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Hook finale: alba sul Pontile, Bartolo vede Amo tuffarsi, Fiamma cammeo. Nessun verbo di stato sulla paura risolta. Voice_notes: \"narratore non commenta che noah non ha più paura, scena sigilla senza verbo di stato\". Sigillo silenzioso confermato."
-    },
-    "register": {
-      "value": "denso_basso_attraversamento_paura",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Notte fonda, \"Ho paura. Qui è buio.\" (5 parole 2 frasi), cammino sotto lanterna velata, alba sul Pontile. Register denso ma basso: narratore non amplifica, lascia camminare. Active_constraints: \"drammaturgia_silenziosa\" + \"silenzio_attivo_obbligatorio_dopo_frase_noah\"."
-    },
-    "estimated_length": {
-      "value": "2200-2800_parole",
-      "category": "A",
-      "confidence": "low",
-      "rationale": "Apertura blocco D, attraversamento paura completo (notte→cammino→alba), 7 chars in scena con cammeo Grunto onomatopea distante. Stima sulla base di densità (4 hooks pieni, 7 debts totali, fear_touched bloomed). Da confermare in C/D."
-    },
-    "descriptive_pauses_count": {
-      "value": 2,
-      "category": "A",
+    "season_passage": {
+      "value": "autunno_pieno",
+      "category": "B",
       "confidence": "medium",
-      "rationale": "Plausibili 2 pause descrittive: una al cammino lanterna velata (cerchio luce sui piedi, foglie secche, paesaggio non descritto coerente con narratore), una all'alba sul Pontile (Amo tuffo, Bartolo silenzioso). Storia di blocco apertura tipicamente 1-2 pause. Da confermare."
+      "rationale": "Popolato dall'agente alt da context narrativo nodo. Promosso a provvisorio P2 categoria B (inferenza forte). REGOLA 0.10: passaggio stagionale tracciato."
+    },
+    "key_phrase_indicative": {
+      "value": "Ho paura.\nQui è buio.",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Popolato dal old_node (frase precisa di noah). Quote letterale, categoria A high. key_phrase_attributed_to gia' nel canonical."
+    },
+    "hooks": {
+      "vh_s10_sera_cantilena_ultima_noah_si_addormenta": {
+        "notes": {
+          "value": "[VISUAL] Interno stanza dei fratelli al tramonto tardo. Tre letti accostati, coperte di lana ruvida, imposte socchiuse. Dalla finestra entra grigio-blu del crepuscolo autunnale — ultima luce diurna. Sul comodino accanto al letto di Noah: il nido vuoto curato in S8 (rametti intrecciati, muschio secco, scavo centrale vuoto). Noah con gli occhi aperti che guarda il soffitto. Gabriel sotto la coperta. Elias a fianco già respira regolarmente. Fuori — lontanissima — la cantilena serale dei Coltivatori: 'luna nera, terra ferma, mani al fuoco'. Cinque parole nell'aria.\n\n[CRITIQUE] Il nido sul comodino è centro ottico marginale — piccolo, non al centro tavola, ma visibile. Illustratore NON aggiungere orologio, lume di notte, oggetti superflui — spoglio canonico. Luce crepuscolare grigio-blu, non azzurra-fredda né arancione-calda.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s10_notte_fondo_noah_dice_ho_paura_mano_di_gabriel": {
+        "notes": {
+          "value": "[VISUAL] Stanza nel buio pieno. Nessuna illuminazione — luna nuova, imposte chiuse. Illustrazione quasi completamente nera con micro-accenni: contorno lievissimo del letto, riflesso tenue su un occhio aperto di Noah, sagoma indistinta della mano di Gabriel che si tende nel buio verso il letto di Noah e incontra la mano di Noah. Il nido sul comodino non visibile ma presente (sappiamo dalla scena precedente). Elias nel letto accanto si sta alzando — movimento percepibile solo dal lenzuolo che si sposta.\n\n[CRITIQUE] PAGINA PIU' NERA DELLA SAGA. Illustratore deve resistere alla tentazione di aggiungere luce. Solo due punti-luce-riflesso: occhio aperto Noah, contorno mano Gabriel. Il resto è nero pieno. Il testo 'Ho paura.' / 'Qui è buio.' sulla pagina in bianco puro, due righe tipografiche separate (silenzio visivo tra le due). Tipografia media, non grande (non melodramma).\n\n[VOICE] cinque_parole_due_frasi_su_righe_tipografiche_separate_silenzio_visivo_nessuna_descrizione_del_buio_come_entita_solo_oggetto_fisico_stanza_mano_che_si_tende_fiato_visibile\n\n[KEY_PHRASE_VISIBLE] Ho paura.\nQui è buio. (consolidata top-level)",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s10_cammino_notturno_lanterna_velata_cerchio_luce_sui_piedi": {
+        "notes": {
+          "value": "[VISUAL] Via del pontile al buio. Intorno: nero pieno, nessuna stella (cielo coperto da nubi basse — realismo autunnale). Elias davanti con la lanterna di vetro già velata da un panno di casa (lana vecchia avvolta attorno al vetro, gesto dedotto non illustrato come scena a sé) a livello delle ginocchia — cerchio di luce gialla bassa che illumina solo i sassi del sentiero e le scarpe dei tre. Gabriel e Noah dietro Elias, mano nella mano. Il mondo attorno resta invisibile — case, alberi, orti, nulla è illustrato. Solo la striscia di sentiero e i piedi. Foglie secche mosse dal Mulinello passano nel cerchio di luce e spariscono nel buio. In lontananza, sulla destra, appena percepibile: suono zampate su roccia — zoccoli di Grunto nelle Montagne Gemelle, portato dall'aria ferma. Mai visto, mai nominato.\n\n[CRITIQUE] PAGINA-CHIAVE DI S10. Illustratore: resistere alla tentazione di illustrare il paesaggio — nessun contorno di case, nessuna sagoma di albero. SOLO il cerchio di luce. Il nero riempie 80-90% della tavola. Il cerchio di luce è piccolo — non un cono ampio di torcia moderna, un cerchio di 50-60 cm davanti ai piedi. Elias leggermente più avanti dei fratelli. La lanterna velata (vetro + lana avvolta) visibile nel palmo di Elias, dettaglio piccolo. Il gesto di velatura NON illustrato come scena a sé — il lettore lo deduce dal risultato (luce bassa, panno visibile).\n\n[VOICE] narratore_non_descrive_paesaggio_circostante_coerente_con_quello_che_i_personaggi_vedono_il_lettore_vede_solo_il_cerchio",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      },
+      "vh_s10_alba_pontile_bartolo_vede_amo_tuffo_fiamma_cammeo": {
+        "notes": {
+          "value": "[VISUAL] Pontile della Bocca. Cielo che si apre — grigio-rosa-dorato, luce bassa da oriente. Sotto il Pontile: acqua del Fiume che Gira che esce verso il mare — movimento antiorario visibile. Bruma sottile sull'acqua. Sulle rocce piatte accanto alla struttura del Pontile: Bartolo — tartaruga di mare anziana, guscio scuro lucido di umidità, un occhio aperto uno quasi chiuso. I tre fratelli arrivano da nord (via del pontile) — Elias davanti con la lanterna ora non più velata e quasi spenta (alba la supera), Gabriel e Noah mano nella mano. Bartolo fa un movimento lentissimo del collo — fa spazio sulla panca di legno scuro accanto. In alto, sul mare: Amo in volo, tuffo per un pesce — spruzzo piccolo, lontano, cornice aerea. Fiamma sta passando sul Pontile dal lato villaggio — ha in mano qualcosa avvolto in un panno (pane caldo della prima infornata della notte, visibile solo dal vapore che esce dal panno nel freddo) — lo posa sulla panca del Pontile senza commentare e prosegue. Il Taglio è oggettivo — fiato dei fratelli visibile, lana dei vestiti leggermente umida, freddo che bagna. Dicembre si avvicina.\n\n[CRITIQUE] SCENA DI CHIUSURA. Illustratore: Bartolo tartaruga di mare, NON tasso NON nutria — guscio, pinne vestigiali, testa rugosa. Posizione su rocce piatte accanto al Pontile, NON in acqua. Amo in distanza — non dettagliato. Fiamma cammeo su lato sinistro della tavola, rosso vivo come unico squillo di colore — chiude la cornice S1 (primo squillo al Forno) e prepara S12 (cornice chiusura saga al Forno). Luce calda dell'alba compensa il freddo oggettivo — contrasto cromatico voluto.\n\n[VOICE] narratore_non_commenta_che_noah_non_ha_piu_paura_non_lo_dice_noah_non_lo_dichiara_nessuno_la_scena_sigilla_senza_verbo_di_stato",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "Notes popolata da agente alt nel canonical. Promossa a provvisorio P2 categoria B medium per allineamento metodologico con s01-s08+s11."
+        }
+      }
     }
   },
   "quote_consumed": {
     "by_category": {
-      "A": 5,
-      "B": 0,
+      "A": 1,
+      "B": 5,
       "C": 0
     },
-    "totale": 5,
-    "_note": "Solo provvisori Famiglia A (5 no_inference per C/D). Niente Famiglia B/C: il grafo s10 è denso (palette in tutti i 4 hooks già nel grafo, key_phrase top-level già popolata, voice_notes complete). season_passage decisione Ray applicata in P1.",
+    "totale": 6,
+    "_note": "Allineato post-realign al pattern s01-s08+s11. Provvisori P2 sono hook.notes (popolate dall'agente alt) + season_passage/key_phrase se popolati. I 5 no_inference_fields restano NULL (decisione autoriale Ray fase C/D).",
     "dettaglio": [
       {
-        "field": "entry_point_type",
+        "field": "season_passage",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "key_phrase_indicative",
         "category": "A",
         "confidence": "high"
       },
       {
-        "field": "closure_type",
-        "category": "A",
-        "confidence": "high"
+        "field": "visual_anchors.scene_hooks.vh_s10_sera_cantilena_ultima_noah_si_addormenta.notes",
+        "category": "B",
+        "confidence": "medium"
       },
       {
-        "field": "register",
-        "category": "A",
-        "confidence": "high"
+        "field": "visual_anchors.scene_hooks.vh_s10_notte_fondo_noah_dice_ho_paura_mano_di_gabriel.notes",
+        "category": "B",
+        "confidence": "medium"
       },
       {
-        "field": "estimated_length",
-        "category": "A",
-        "confidence": "low"
+        "field": "visual_anchors.scene_hooks.vh_s10_cammino_notturno_lanterna_velata_cerchio_luce_sui_piedi.notes",
+        "category": "B",
+        "confidence": "medium"
       },
       {
-        "field": "descriptive_pauses_count",
-        "category": "A",
+        "field": "visual_anchors.scene_hooks.vh_s10_alba_pontile_bartolo_vede_amo_tuffo_fiamma_cammeo.notes",
+        "category": "B",
         "confidence": "medium"
       }
     ]
   },
   "notes_globali": "Storia chiave del blocco D — bloom paura Noah architrave terna strato 3 (dire-accettare-tenere, Noah dice). Grafo originale denso, palette per hook tutte presenti. Decisioni applicate: season \"autunno\"+passage=\"autunno_pieno\", interno_casa_fratelli→piazza_villaggio (mis_008 ricorrenza, 2 hooks), villaggio_centrale→piazza_villaggio (mapping deciso brief). narrator_address=True consuma 1/6 saga (cumulativo dopo s10: 3/6). Pattern A \"attivo\" continua da s07/s08. Onomatopee s10 wrap meccanico in array (2 hooks erano stringhe nel grafo).",
-  "rejected_no_inference": [],
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2 in canonical (NULL). hint_neutro originale dall'agente alt preservati come riferimento per fase C/D.",
+    "entry_point_type": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "cornice_sera_quotidiano_che_si_rovescia",
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Hook 0: cantilena ultima, Noah si addormenta — apertura quotidiana che poi si rovescia in notte di paura. Voice_notes esplicita \"iniziare basso, sera normale, poi notte si apre come buco\". Entry point è \"cornice serale stanza fratelli\" + svolta interna."
+      }
+    },
+    "closure_type": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "sigillo_silenzioso_cammeo_diurno",
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Hook finale: alba sul Pontile, Bartolo vede Amo tuffarsi, Fiamma cammeo. Nessun verbo di stato sulla paura risolta. Voice_notes: \"narratore non commenta che noah non ha più paura, scena sigilla senza verbo di stato\". Sigillo silenzioso confermato."
+      }
+    },
+    "register": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "denso_basso_attraversamento_paura",
+        "category": "A",
+        "confidence": "high",
+        "rationale": "Notte fonda, \"Ho paura. Qui è buio.\" (5 parole 2 frasi), cammino sotto lanterna velata, alba sul Pontile. Register denso ma basso: narratore non amplifica, lascia camminare. Active_constraints: \"drammaturgia_silenziosa\" + \"silenzio_attivo_obbligatorio_dopo_frase_noah\"."
+      }
+    },
+    "estimated_length": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": "2200-2800_parole",
+        "category": "A",
+        "confidence": "low",
+        "rationale": "Apertura blocco D, attraversamento paura completo (notte→cammino→alba), 7 chars in scena con cammeo Grunto onomatopea distante. Stima sulla base di densità (4 hooks pieni, 7 debts totali, fear_touched bloomed). Da confermare in C/D."
+      }
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+      "hint_originale_agente_alt": {
+        "value": 2,
+        "category": "A",
+        "confidence": "medium",
+        "rationale": "Plausibili 2 pause descrittive: una al cammino lanterna velata (cerchio luce sui piedi, foglie secche, paesaggio non descritto coerente con narratore), una all'alba sul Pontile (Amo tuffo, Bartolo silenzioso). Storia di blocco apertura tipicamente 1-2 pause. Da confermare."
+      }
+    }
+  },
   "narrative_ideas": [
     "lanterna_velata_s10 e nido_vuoto_s08 sono in scena (description_visual + active_constraints), ma il grafo non li dichiara in recurring_visual_objects → oggetti_simbolo_presenti=[] per coerenza pattern P1. Decisione finale (popolare o lasciare []) in C/D o sweep post-S12.",
     "Architrave terna strato 3 chiusa qui (Noah DICE) — debt_s09_to_s12_paura_gabriel_accolta_non_risolta resta aperto (Gabriel ACCETTA in s12).",
     "Cammeo terna blocco D iniziata: Bartolo s10 → Amo s11 → Grunto s12 frammento (debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d esplicita la struttura)."
-  ]
+  ],
+  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2)."
 }
