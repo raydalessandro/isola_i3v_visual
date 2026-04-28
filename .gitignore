@@ -38,3 +38,4 @@ tmp/
 # File aggregati/snapshot temporanei
 snapshot_*.json
 diff_*.json
+_porting_grafo/
