@@ -1073,38 +1073,21 @@
       "canonical_file": "output/s11/s11_canonical.json",
       "quote_consumed": {
         "by_category": {
-          "A": 5,
-          "B": 0,
-          "C": 0
+          "A": 2,
+          "B": 4,
+          "C": 2
         },
-        "totale": 5,
-        "_note": "Solo Famiglia A (5 no_inference per C/D). Niente B/C: grafo s11 denso (palette in tutti gli 8 hooks già nel grafo, key_phrase top-level già popolata). 19 debts e 5 callbacks tutti ben strutturati. paronomastico_used=true (confermato da quote_tracker, primo della saga).",
+        "totale": 8,
+        "_note": "Provvisori P2 sui hook.notes (8 hook). REGOLA 0.2: i 5 no_inference_fields top-level NON sono provvisori P2 (restano null per decisione autoriale Ray fase C/D). key_phrase_indicative ('Va bene.') gia' popolato old_node + key_phrase_attributed_to=elias promosso al canonical via mapping. CULMINE ARCHITRAVE STRATO 3 in h05 (Vecchie riconoscimento muto a Elias) + h06 BRU_BLOOM_RICONOSCIUTO_DA_ELIAS. RIGENERATO da zero post-corruzione zip s11.",
         "dettaglio": [
-          {
-            "field": "entry_point_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "closure_type",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "register",
-            "category": "A",
-            "confidence": "high"
-          },
-          {
-            "field": "estimated_length",
-            "category": "A",
-            "confidence": "low"
-          },
-          {
-            "field": "descriptive_pauses_count",
-            "category": "A",
-            "confidence": "medium"
-          }
+          {"field": "visual_anchors.scene_hooks.hook_01_alba_orti_raccolto_rituale.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.hook_02_mattino_piazza_allestimento.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.hook_03_stria_distribuisce_coni.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.hook_04_mezzogiorno_tre_cose_che_spostano_elias.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.hook_05_vecchie_indicare_culmine_architrave.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.hook_07_bartolo_arriva_frutti_da_fuori.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.hook_08_ritorno_casa_mulinello_sera_due_battute.notes", "category": "B", "confidence": "medium"}
         ]
       },
       "no_inference_fields_left_null": [
