@@ -27,14 +27,14 @@
         },
         "totale": 8,
         "dettaglio": [
-          {"field": "season_passage", "category": "B"},
-          {"field": "key_phrase_indicative", "category": "B"},
-          {"field": "visual_anchors.scene_hooks.s01_h1.notes", "category": "C"},
-          {"field": "visual_anchors.scene_hooks.s01_h1.wind_visible", "category": "C"},
-          {"field": "visual_anchors.scene_hooks.s01_h2.wind_visible", "category": "C"},
-          {"field": "visual_anchors.scene_hooks.s01_h3.notes", "category": "B"},
-          {"field": "visual_anchors.scene_hooks.s01_h4_signature.notes", "category": "A"},
-          {"field": "visual_anchors.scene_hooks.s01_h5.notes", "category": "C"}
+          {"field": "season_passage", "category": "B", "confidence": "medium"},
+          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s01_h1.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s01_h1.wind_visible", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s01_h2.wind_visible", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s01_h3.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s01_h4_signature.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s01_h5.notes", "category": "C", "confidence": "low"}
         ]
       },
       "no_inference_fields_left_null": {
@@ -67,7 +67,7 @@
       "debts_opened": [],
       "debts_closed": [],
       "misalignments_logged": ["mis_001"],
-      "notes": "Prima storia migrata (apertura saga, ciclo A inverno). 8 provvisori validi popolati in P2a (1A + 3B + 4C). I 5 no_inference_fields restano null nel canonical: decisione Ray in fase C/D. Le quote di saga (entry_point_type, closure_type, register, estimated_length, descriptive_pauses_count) NON vengono incrementate qui: saranno conteggiate solo dopo che Ray avra' deciso i valori autoriali."
+      "notes": "Prima storia migrata (apertura saga, ciclo A inverno). 8 provvisori validi popolati in P2a (1A + 3B + 4C). I 5 no_inference_fields restano null nel canonical: decisione Ray in fase C/D. Le quote di saga (entry_point_type, closure_type, register, estimated_length, descriptive_pauses_count) NON vengono incrementate qui: saranno conteggiate solo dopo che Ray avra' deciso i valori autoriali. CORREZIONE post-pubblicazione (Ray review): attribute_dominant nel canonical era 'delta' (simbolo legacy v1.1, copiato pari-pari dall'old_node senza rimappatura); corretto a 'distinguere' (enum canonico v1.2). verify_output_integrity.py ri-eseguito: PASS. Confidence aggiunta ai provvisori (mappatura: A=high, B=medium, C=low). Patch al MIGRATION_PROMPT applicata per evitare il bug su s02-s12."
     }
   ],
   "quotas_remaining_check": {

@@ -54,6 +54,6 @@ _porting_grafo/dossier_fase_e/dossier/quote_tracker_per_story.json
 _porting_grafo/dossier_fase_e/dossier/seeds_index.json
 _porting_grafo/dossier_fase_e/dossier/story_graph_schema_canonical_v1_2.json
 _porting_grafo/dossier_fase_e/dossier/validation_checklist.json
-_porting_grafo/dossier_fase_e/dossier/MIGRATION_PROMPT_FASE_E.md
-_porting_grafo/dossier_fase_e/dossier/README.md
-_porting_grafo/dossier_fase_e/dossier/TEMPLATE_catalog_proposals.md
+# NB: MIGRATION_PROMPT_FASE_E.md, README.md e TEMPLATE_catalog_proposals.md
+# sono tracciati: il prompt evolve con patch durante la migrazione (es. REGOLA 0.5
+# aggiunta dopo s01), Ray deve vederne lo stato corrente.

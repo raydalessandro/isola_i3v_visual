@@ -69,7 +69,7 @@ Nessuno nuovo rispetto a P0. Il misalignment basso `mis_001` (location_attribute
 - **Idempotenza**: il nodo canonico e' deterministico rispetto all'input + mapping. Rilanciando la migrazione il risultato e' lo stesso.
 - **Quartiere**: derivato da `quadrant_assignment.json` per il `location_primary` (montagne_gemelle → quartiere aria).
 - **Debt triage**: applicato secondo `debt_classification.json`. Lista classificata nei campi `debts_opened` / `debts_closed` del nodo.
-- **Auto-derivati popolati**: `cycle: A`, `attribute_dominant: delta` (Gabriel protagonista a inizio saga).
+- **Auto-derivati popolati**: `cycle: A`, `attribute_dominant: distinguere` (Gabriel protagonista a inizio saga; rimappato dal simbolo legacy v1.1 `delta`, vedi sezione "Aggiornamento post-review Ray").
 
 ## Stato: VIA LIBERA P2
 
@@ -105,3 +105,46 @@ Dopo P0+P1+P2 lo stato di s01 nella `_porting_grafo/output/s01/` sara':
 6. (rolling) `_canon_misalignments.json` aggiornato (P2) — ancora
 
 Tool calls usate da P1 (sub-agente prima del fail API): 28/30. Nota tecnica: il sub-agente e' fallito con `overloaded_error` dopo aver scritto correttamente `s01_canonical.json`. Non ha scritto il file delle migration_notes ne' eseguito `verify_output_integrity.py`. Ray (operatore) ha eseguito la verifica manualmente (PASS) e ha scritto le migration_notes basandosi sull'output prodotto + mapping pre-validato.
+
+## Aggiornamento post-review Ray (correzioni applicate)
+
+Review di Ray del 2026-04-28 ha rilevato 5 problemi/integrazioni:
+
+### 1. `attribute_dominant` rimappato `delta` → `distinguere`
+
+Lo schema v1.2 ha enum chiuso `["distinguere", "connettere", "cambiare", "sigillo"]`. Il sub-agente P1 aveva copiato pari-pari il valore legacy v1.1 `"delta"` dall'`old_node` (`INPUT_NODES/s01_input.json`), senza rimappare. `verify_output_integrity.py` non ha intercettato il bug (lo script non valida enum stringhe libere contro lo schema, valida la struttura). Correzione manuale applicata al canonical, `verify_output_integrity.py` ri-eseguito: **PASS**.
+
+I riferimenti narrativi nei campi liberi del canonical (`narrative_weight: "portante_del_ciclo_delta"` su Gabriel, structural_note `"DELTA_ESTERNO_E_INTERNO"`) sono lasciati intenzionalmente come label metaforiche — non sono enum, sono descrizioni libere usate da Ray. Decisione conservativa: cambio solo il valore enum.
+
+### 2. Confidence aggiunta ai 8 provvisori
+
+Mappatura: `A` → `high` (1 occ.) | `B` → `medium` (3 occ.) | `C` → `low` (4 occ.). Documentata in `s01_provisional.json#confidence_legend`.
+
+### 3. `quote_consumed` popolato in `s01_provisional.json`
+
+Era `{}` (vuoto). Ora replica la struttura gia' presente nel rolling `_provisional_state.json#stories_log[s01].quote_consumed`, con dettaglio per campo + categoria + confidence. Famiglia A (1 entry: `s01_h4_signature.notes`) esplicitata come `confidence: high`.
+
+### 4. Rolling files aggiornati post-correzione
+
+- `_provisional_state.json#stories_log[s01].quote_consumed.dettaglio[*]`: aggiunto campo `confidence`.
+- `_provisional_state.json#stories_log[s01].notes`: aggiunta nota correzione attribute_dominant.
+- `_canon_misalignments.json`: nessun nuovo misalignment (la correzione attribute_dominant e' un errore di porting, non un disallineamento tra le 3 sorgenti). `mis_001` resta `resolved`.
+
+### 5. Patch al `MIGRATION_PROMPT_FASE_E.md`
+
+Aggiunta REGOLA 0.5 (`enum_symbols_must_be_canonical: true`) con tabella mapping legacy → canonical e procedura obbligatoria pre-write canonical. Mapping documentati:
+- `attribute_dominant: delta` → `distinguere` (s01, s02, s03 — ciclo A)
+- `attribute_dominant: connettere_sottile` → `connettere` (s06, con nota in structural_notes della storia: la sfumatura "sottile" e' qualifica narrativa, non estensione enum).
+
+### Decisione su s06 (`connettere_sottile`)
+
+L'`old_node` di s06 ha `attribute_dominant: "connettere_sottile"` che NON e' nell'enum v1.2 chiuso. Decisione (autorizzata da Ray): **mappare a `"connettere"` con nota in `structural_notes`** del canonical s06 (es. `"CONNETTERE_SOTTILE_VARIANTE — qualifica narrativa: connessione discreta/sottile"`) e documentare in `s06_migration_notes.md`. Motivazione: lo schema v1.2 e' canonico, l'enum e' chiuso, "sottile" e' una sfumatura narrativa che non giustifica proliferazione di enum values. Decisione presa prima di s06 per non bloccarsi durante la migrazione.
+
+## Stato finale s01: VALIDATO CON RISERVE DOCUMENTATE
+
+S01 e' validato come pilota del flusso Fase E. Riserve documentate:
+- 5 `no_inference_fields` restano `null` per decisione autoriale Ray in fase C/D (non blocca il flusso).
+- 8 provvisori validi (1 high + 3 medium + 4 low) da rivedere in fase D dedicata.
+- `mis_001` risolto (sentiero_montagne_gemelle aggiunto in cartografia v0.6.1).
+
+Pronti per s02 con flusso standardizzato (briefing sub-agenti includera' sempre `MIGRATION_PROMPT_FASE_E.md` aggiornato + Carta Voce + REGOLA 0.5 enum check).
