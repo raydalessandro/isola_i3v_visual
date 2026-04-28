@@ -26,64 +26,68 @@ cartografia:
 
 # Case Basse dei Pescatori
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Cluster di case basse sulla riva interna della Bocca, dietro il Pontile di Bartolo (Quartiere d'Acqua a sud).
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Acqua (Sud): blu mare, verde alga, sabbia.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Abitanti permanenti della fascia costiera sud: alcuni Pescatori del Pontile vivono nelle Case Basse (il resto della fascia costiera è territorio di passaggio, salvo la casa di Amo sulla scogliera).
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Posizione: riva interna della Bocca, dietro il Pontile.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Nessuna apparizione documentata in `entities.locations` del grafo come location secondaria di una scena specifica.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.3: "Case Basse dei Pescatori sulla riva interna della Bocca dietro il Pontile".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.6: "Abitanti permanenti: alcuni Pescatori del Pontile sulle Case Basse + Amo sulla scogliera. Resto: territorio di passaggio."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6: "Quartiere d'Acqua (Sud): blu mare, verde alga, sabbia".

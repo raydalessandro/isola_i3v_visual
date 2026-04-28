@@ -26,64 +26,68 @@ cartografia:
 
 # Capo del Fiume
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Tratto del Fiume che Gira (sotto-feature cartografica, child di `fiume_che_gira`). Cartograficamente è il tratto a nord, dove i ruscelli dalle Montagne Gemelle si raccolgono nell'anello.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+_da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+_da popolare dal grafo_
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Posizione: parte alta dell'anello del Fiume, nord. Parent narrativo: Fiume che Gira.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Non in `entities.locations` del grafo; appare cartograficamente in `cartografia/geo/island.geojson`. Apparizioni narrative: derivare dalla feature parent `fiume_che_gira` (s07 PRIMARIA, s12 secondaria).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `cartografia/geo/island.geojson#features.id=fiume_capo`: parent_geo `fiume_che_gira`, posizione bbox (4000, 5450) → (4010, 5800).
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8 incipit: "[L'acqua del Fiume] nasce dalle pendici delle Montagne Gemelle, scende per ruscelli che si raccolgono nell'anello a nord".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 Quartieri: nessuna riga dedicata al perimetro/fiume.

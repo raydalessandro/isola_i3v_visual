@@ -32,64 +32,59 @@ cartografia:
 
 # Sentiero Pontile-Forno
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_.
 
 ## Aspetto / forma
 
-[stub]
+Tangenziale sud-est.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_.
 
 ## Palette e atmosfera
 
-[stub]
+_da popolare dal grafo_.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Strada del perimetro. Categoria: `sentiero_inter_quartiere`. Status cartografico: `provvisorio`. Collega Pontile a Forno (inferito dal `name`).
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Tangenziale sud-est. Inferito.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_.
 
 ## Cliche' da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
-
-[stub]
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`. Lista specifica _da popolare dal grafo_.
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Strada NON in `entities.locations` del grafo (solo cartografica). Apparizioni narrative: _da popolare dal grafo_.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
-
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `cartografia/geo/island.geojson#features.id=sentiero_pontile_forno` — `name: Sentiero Pontile-Forno`, `category: sentiero_inter_quartiere`, `status: provvisorio`, `quarter: perimetro`, `note: Tangenziale sud-est. Inferito.`
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": nessuna riga dedicata per perimetro.

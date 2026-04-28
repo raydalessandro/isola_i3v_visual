@@ -32,64 +32,59 @@ cartografia:
 
 # Sentiero di traversata Foresta
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_.
 
 ## Aspetto / forma
 
-[stub]
+Traccia (non sentiero vero) che attraversa la Foresta Intrecciata da est a ovest. Non battuta — Foresta Intrecciata 'senza sentieri precisi' (apparato P.06).
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere Terra: verde scuro, marrone radici, ocra (Bible §6).
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Strada del quartiere Terra. Categoria: `sentiero_foresta`. Status cartografico: `canonico`. Traversata est-ovest della Foresta Intrecciata (inferito dal `name`).
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Traccia (non sentiero vero) che attraversa la Foresta Intrecciata da est a ovest. Non battuta — Foresta Intrecciata 'senza sentieri precisi' (apparato P.06). Canonico implicito S3: il pallone vola oltre la Foresta, i fratelli attraversano per recuperarlo.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_.
 
 ## Cliche' da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
-
-[stub]
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`. Lista specifica _da popolare dal grafo_.
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Strada NON in `entities.locations` del grafo (solo cartografica). Apparizioni narrative: _da popolare dal grafo_. Status cartografico canonico — apparizione narrativa originaria probabile (S3, da raffinare in revisione).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
-
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `cartografia/geo/island.geojson#features.id=sentiero_foresta_traversata_ovest` — `name: Sentiero di traversata Foresta`, `category: sentiero_foresta`, `status: canonico`, `quarter: terra`, `note: Traccia (non sentiero vero) che attraversa la Foresta Intrecciata da est a ovest. Non battuta — Foresta Intrecciata 'senza sentieri precisi' (apparato P.06). Canonico implicito S3: il pallone vola oltre la Foresta, i fratelli attraversano per recuperarlo.`
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Terra: verde scuro, marrone radici, ocra".

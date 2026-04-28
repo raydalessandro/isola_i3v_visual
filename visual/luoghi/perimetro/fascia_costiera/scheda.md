@@ -26,64 +26,72 @@ cartografia:
 
 # Fascia Costiera
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Tra il Fiume e il mare, larga 500-800 metri secondo i punti — più ampia a sud, più stretta a nord. Qui ci sono le spiagge, le scogliere, i sentieri di sale, alcune case basse di chi vive col mare.
+
+A est: poco abitata, terreno selvaggio, scogliere medie, qualche grotta non esplorata.
+A ovest: piccolo bosco costiero, spiagge piccole separate da promontori.
+A nord: ventosa e quasi disabitata, attraversata raramente.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+_da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Cintura geografica che circoscrive l'isola tra il mare e il Fiume che Gira. Abitanti permanenti: alcuni Pescatori del Pontile sulle Case Basse + Amo sulla scogliera est della Bocca. Resto: territorio di passaggio.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Cintura geografica costante tra il mare (esterno) e il Fiume che Gira (interno). Larghezza variabile: 500-800 m. Più ampia a sud, più stretta a nord.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Nessuna apparizione documentata in `entities.locations` del grafo come location secondaria di una scena specifica. La fascia costiera è una cintura ambientale di sfondo per le scene del Quartiere d'Acqua e del fiume.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8 incipit: "Subito dentro [il mare], una fascia costiera — terra che va dal mare verso l'interno per cinquecento, ottocento metri al massimo. Qui ci sono le spiagge, le scogliere, i sentieri di sale, alcune case basse di chi vive col mare."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.6: "Tra il Fiume e il mare, larga 500-800 metri secondo i punti — più ampia a sud, più stretta a nord. A est: poco abitata, terreno selvaggio, scogliere medie, qualche grotta non esplorata. A ovest: piccolo bosco costiero, spiagge piccole separate da promontori. A nord: ventosa e quasi disabitata, attraversata raramente. Abitanti permanenti: alcuni Pescatori del Pontile sulle Case Basse + Amo sulla scogliera. Resto: territorio di passaggio."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 Quartieri: nessuna riga dedicata al perimetro/fascia costiera.

@@ -26,64 +26,69 @@ cartografia:
 
 # Via del Pontile
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Una delle quattro vie che escono dal Villaggio centrale verso i quartieri: la Via del Pontile porta a sud, scendendo verso il mare, fino al Pontile di Bartolo dentro La Bocca.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Acqua (Sud): blu mare, verde alga, sabbia.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Asse di percorrenza nord→sud dal Villaggio al Pontile e alla Bocca. Distanza dal Villaggio al Pontile di Bartolo: 40 minuti.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Direzione sud dal Villaggio centrale. Una delle quattro vie cardinali nominate (insieme a Via dell'Alba a est, Via degli Orti a ovest, Via che Sale a nord).
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s10: secondario.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1: "Quattro vie escono verso i quartieri: Via dell'Alba (est), Via del Pontile (sud), Via degli Orti (ovest), Via che Sale (nord)... Pontile di Bartolo: 40 minuti."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.3: "Lungo la Via del Pontile, scendendo verso il mare. Contiene: Pontile di Bartolo dentro La Bocca..."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6: "Quartiere d'Acqua (Sud): blu mare, verde alga, sabbia".
+- `pipeline_narrativa/story_graph.json#stories.s10.locations_secondary[via_del_pontile]`: secondaria.

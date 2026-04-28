@@ -32,64 +32,59 @@ cartografia:
 
 # Sentiero Salvia-Margine Foresta
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_.
 
 ## Aspetto / forma
 
-[stub]
+Dalla Casa di Salvia al margine est della Foresta Intrecciata (zona di lavoro di Salvia).
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere Terra: verde scuro, marrone radici, ocra (Bible §6).
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Strada del quartiere Terra. Categoria: `sentiero_interno_quartiere`. Status cartografico: `canonico`. Collega Casa di Salvia al margine della Foresta (inferito dal `name`).
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Dalla Casa di Salvia al margine est della Foresta Intrecciata (zona di lavoro di Salvia). Canonico S4: Salvia porta i fratelli, loro restano al margine mentre lei entra.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_.
 
 ## Cliche' da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
-
-[stub]
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`. Lista specifica _da popolare dal grafo_.
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_.
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Strada NON in `entities.locations` del grafo (solo cartografica). Apparizioni narrative: _da popolare dal grafo_. Status cartografico canonico — apparizione narrativa originaria probabile (S4, da raffinare in revisione).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
-
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `cartografia/geo/island.geojson#features.id=sentiero_casa_salvia_margine_foresta` — `name: Sentiero Salvia-Margine Foresta`, `category: sentiero_interno_quartiere`, `status: canonico`, `quarter: terra`, `note: Dalla Casa di Salvia al margine est della Foresta Intrecciata (zona di lavoro di Salvia). Canonico S4: Salvia porta i fratelli, loro restano al margine mentre lei entra.`
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Terra: verde scuro, marrone radici, ocra".
