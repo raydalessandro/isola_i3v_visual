@@ -260,6 +260,34 @@ Il campo `key_phrase_attributed_to` e' un dato strutturale: chi pronuncia la fra
 
 **Implementato in `migrate_p1.py#normalize_block_position`** (regex troncamento + mapping esplicito).
 
+**0.10 — `season_must_match_enum: true`** (aggiunta post-s06)
+
+> Lo schema v1.2 vincola `season` a enum `["primavera", "estate", "autunno", "inverno"]`. Storie con valori legacy estesi (es. `passaggio_primavera_estate`, `estate_piena`, `autunno_pieno`) DEVONO essere normalizzate.
+
+**Mapping noti legacy → canonical (`season`, `season_passage`):**
+
+| storia | season legacy | canonical season | season_passage default |
+|---|---|---|---|
+| s06 | `passaggio_primavera_estate` | `primavera` | `passaggio_primavera_estate` (override se old_node ha gia' valore) |
+| s07 | `estate_piena` | `estate` | (preserva old_node) |
+| s08 | `estate_piena_tarda` | `estate` | (preserva old_node) |
+| s09 | `passaggio_estate_autunno` | `estate` | `passaggio_estate_autunno` (override se old_node ha gia' valore) |
+| s10 | `autunno_pieno` | `autunno` | (preserva old_node) |
+
+**Procedura:**
+1. Se `season` e' nell'enum: invariato + preserva `season_passage` old_node.
+2. Se in `SEASON_NORMALIZE`: applica mapping. Se old_node ha `season_passage` valorizzato, preserva (override sul default).
+3. Se non in mapping e non in enum: ERRORE (aggiungere a `SEASON_NORMALIZE` in script).
+
+**Razionale:**
+- Storie blocco transizione (s06=passaggio P→E, s09=passaggio E→A) → `season` = stagione di **partenza** (storia inizia nella prima, transito verso la seconda).
+- Storie "piena" / "pieno" / "tarda" → `season` = stagione base senza qualificatore (qualifier resta in narrative del nodo, non nel campo enum).
+
+**Implementato in `migrate_p1.py#normalize_season`**.
+
+**Anti-pattern (osservato in s06 prima di REGOLA 0.10):**
+- Script copiava `season: "passaggio_primavera_estate"` pari-pari. Schema enum violato. `verify_output_integrity.py` PASSed (non valida enum). REGOLA 0.10 introdotta + script patchato. Storie s07-s10 erediteranno il fix automaticamente.
+
 ---
 
 ### REGOLA 0bis — Filosofia stretta del null

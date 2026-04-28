@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s05",
+  "last_updated_story": "s06",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -100,6 +100,22 @@
       "description": "Stessa entita' citata con preposizione diversa: 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo). Mappato a id catalogo in P1 di s05 (s05_h7_radura.location.id=radura_dei_pini, qualifier oltre_torrente_100_150_metri, legacy_string preserva graph string). Da verificare se altre storie successive (es. s12 ha 'radura_coi_pini' come location di passaggio_autunnale) usano 'coi' o 'dei': se conferma 'dei' come canonico, aggiornare grafo.",
       "severity": "bassa",
       "proposed_resolution": "Decisione post-saga: confermare 'radura_dei_pini' come nome canonico (allineato al catalogo) e aggiornare il grafo nelle storie successive che lo citano. Alternativa: aggiornare il catalogo a 'radura_coi_pini' se Ray preferisce la preposizione del grafo. P1 ha gia' applicato il mapping, nessuna azione bloccante.",
+      "status": "open",
+      "resolved_in_phase": null
+    },
+    {
+      "id": "mis_006",
+      "discovered_in_story": "s06",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P0",
+      "between": "catalog_vs_graph",
+      "type": "name_discrepancy",
+      "catalog_reference": "catalogo_web/data/entities.json#mercato_del_mezzogiorno (personaggio collettivo)",
+      "graph_reference": "story_graph.json#stories.s06.characters_in_scene[*].id = 'vecchie_del_mercato' + characters_offscreen[*].id = 'mercato_del_mezzogiorno'",
+      "bible_reference": null,
+      "description": "Il grafo s06 cita due id distinti per gruppi del mercato: 'vecchie_del_mercato' (in scena, panca di pietra muro sud, gesto del dito che indica Albero Vecchio) + 'mercato_del_mezzogiorno' (off-screen, ambiente sociale). Il catalogo ha solo 'mercato_del_mezzogiorno' (personaggio.collettivo). Le 'vecchie' sono SOTTOGRUPPO del mercato (sedute sulla panca, parte dell'istituzione mercato). P1 ha preservato 'vecchie_del_mercato' nel canonical characters_in_scene (decisione conservativa: id stringa non validato dallo schema, characters_must_exist regola del prompt non enforced).",
+      "severity": "bassa",
+      "proposed_resolution": "Decisione post-saga: o aggiungere 'vecchie_del_mercato' al catalogo come personaggio sottogruppo di 'mercato_del_mezzogiorno' (con relazione parent/child), o unificare il grafo a 'mercato_del_mezzogiorno' con qualifier nel narrative_weight.",
       "status": "open",
       "resolved_in_phase": null
     }

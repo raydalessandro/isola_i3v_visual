@@ -1,0 +1,188 @@
+{
+  "_description": "Mapping P0 -> P1 per s06. Caso speciale: hooks in formato string_legacy (REGOLA 3 MIGRATION_PROMPT) — parsati a mano in 'hook_dict' completi. Inoltre: attribute_dominant=connettere_sottile (REGOLA 0.5 -> connettere, nota in migration_notes per decisione Ray), block_position legacy (REGOLA 0.9 -> chiusura_blocco_b), season passaggio_primavera_estate (REGOLA 0.10 -> primavera + season_passage preservato). mis_006 logged: vecchie_del_mercato (grafo) vs mercato_del_mezzogiorno (catalogo).",
+  "story_id": "s06",
+  "hooks": {
+    "s06_h1": {
+      "hook_dict": {
+        "hook_id": "s06_h1",
+        "moment": "mattino_presto",
+        "location": {"id": "scuola_stria", "qualifier": "aula_apertura", "legacy_string": "scuola_stria_aula_apertura"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["gabriel", "elias", "noah", "pun", "stria"],
+        "elements": [
+          "Pun parla a mezza voce ai fratelli seduti",
+          "Stria dalla cattedra alza un attimo gli occhi, poi torna alla lezione"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Pun chiede ai fratelli aiuto per Memolo che ha perso una cosa; Stria osserva senza intervenire (rilancia non risponde, archetipo)",
+        "focal_object": "scena_apertura_aula",
+        "atmosphere": "scuola_quieta_di_mattina_richiesta_sottovoce_tra_pari",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h2": {
+      "hook_dict": {
+        "hook_id": "s06_h2",
+        "moment": "mattino",
+        "location": {"id": "forno", "qualifier": "tappa_uno_giro", "legacy_string": "forno_di_fiamma_tappa_uno_giro"},
+        "quadrant": "fuoco_est",
+        "characters_present": ["gabriel", "elias", "noah", "fiamma"],
+        "elements": [
+          "Luce calda del mattino, cornetti sul banco",
+          "Fiamma parla e impasta allo stesso tempo, mani bianche di farina",
+          "Noah intasca due cornetti, uno nel taschino giacca"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Fiamma in modalita' chiacchiera con detto popolare en passant; cornetti sul banco; Noah ne intasca due",
+        "focal_object": "cornetti_sul_banco",
+        "atmosphere": "forno_caldo_chiacchiera_di_fiamma_seed_briciole_pattern_a_rinforzo",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h3": {
+      "hook_dict": {
+        "hook_id": "s06_h3",
+        "moment": "mattino_inoltrato",
+        "location": {"id": "casa_salvia", "qualifier": "tappa_due_giro_soglia", "legacy_string": "casa_di_salvia_tappa_due_giro_soglia"},
+        "quadrant": "terra_ovest",
+        "characters_present": ["gabriel", "elias", "noah", "salvia"],
+        "elements": [
+          "Erbe ordinate per file, sacchettino di tiglio appeso ad asciugare",
+          "Salvia ferma sulla soglia, mano breve, sguardo attento"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa due del giro: Salvia sulla soglia con mano breve (cornice pianta nominata diversa da s04, callback cb_s06_002)",
+        "focal_object": "sacchettino_tiglio_appeso",
+        "atmosphere": "casa_salvia_ordinata_calma_pratica_pianta_diversa_da_s4",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h4": {
+      "hook_dict": {
+        "hook_id": "s06_h4",
+        "moment": "tarda_mattina",
+        "location": {"id": "casa_zolla", "qualifier": "tappa_tre_giro_dispensa", "legacy_string": "casa_di_zolla_tappa_tre_giro_dispensa"},
+        "quadrant": "terra_ovest",
+        "characters_present": ["gabriel", "elias", "noah", "zolla"],
+        "elements": [
+          "Dispensa aperta, ghiande in ciotola",
+          "Zolla piegata a controllare qualcosa, risponde senza alzarsi"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa tre: Zolla risponde senza alzarsi (vincolo mai_scene_veloci_o_concitate). Dispensa con ghiande, qualcosa in tasca forse.",
+        "focal_object": "ghiande_in_ciotola",
+        "atmosphere": "tana_zolla_quieta_lenta_pragmatica",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h5": {
+      "hook_dict": {
+        "hook_id": "s06_h5",
+        "moment": "mezzogiorno",
+        "location": {"id": "panca_di_pietra", "qualifier": "tappa_quattro_giro_vecchie_indicano", "legacy_string": "mercato_del_mezzogiorno_panca_di_pietra_contro_il_muro_sud"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["gabriel", "elias", "noah", "vecchie_del_mercato"],
+        "elements": [
+          "Panca di pietra contro il muro sud",
+          "Vecchie sedute in fila, scialli grigi-marroni",
+          "Una alza un dito (gesto minimo) e indica verso l'Albero Vecchio",
+          "Le altre annuiscono"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa quattro: Vecchie indicano in silenzio (firma gestuale istituita, seed_vecchie_indicare_in_silenzio piantato)",
+        "focal_object": "dito_che_indica_albero_vecchio",
+        "atmosphere": "mercato_quieto_indicazione_silenziosa_via_dito_minimo_seed_pattern_a_rinforzo",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h6_signature": {
+      "hook_dict": {
+        "hook_id": "s06_h6_signature",
+        "moment": "primo_pomeriggio",
+        "location": {"id": "cespuglio_dietro_albero_vecchio", "qualifier": "trovamento_scatoletta", "legacy_string": "cespuglio_dietro_albero_vecchio_trovamento_scatoletta"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["elias", "pun"],
+        "elements": [
+          "Elias e Pun chinati",
+          "Scatoletta di legno scuro semplice",
+          "Dente da latte piccolo bianco — unico riflesso freddo nella tavolozza calda della giornata"
+        ],
+        "palette": "tavolozza_calda_giornata_unico_riflesso_freddo_dente",
+        "notes": null,
+        "focal_action": "Elias e Pun trovano la scatoletta col dente da latte di Memolo; Pun riconosce il dente, Elias capisce e si tira indietro (modulazione paura: capire-senza-avere)",
+        "focal_object": "scatoletta_dente_da_latte",
+        "atmosphere": "trovamento_silenzioso_capire_senza_avere_dente_unico_freddo_nel_caldo",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h7": {
+      "hook_dict": {
+        "hook_id": "s06_h7",
+        "moment": "pomeriggio_inoltrato",
+        "location": {"id": "casa_memolo_cortile", "qualifier": "chiusura_restituzione", "legacy_string": "cortile_di_memolo_chiusura_restituzione"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["gabriel", "elias", "noah", "pun", "memolo"],
+        "elements": [
+          "Sole di pomeriggio inoltrato, ombra lunga della casetta tonda",
+          "Memolo in piedi, sciarpa di sbieco",
+          "Pun gli porge la scatoletta",
+          "Memolo la apre, riso di sollievo",
+          "Gli altri in secondo piano"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Pun restituisce la scatoletta a Memolo; riso di sollievo di Memolo; gabriel/elias/noah in secondo piano (chiusura blocco B per accumulo)",
+        "focal_object": "scatoletta_restituita",
+        "atmosphere": "chiusura_quieta_riso_sollievo_pomeriggio_lungo_ombre_basse",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    },
+    "s06_h8": {
+      "hook_dict": {
+        "hook_id": "s06_h8",
+        "moment": "pomeriggio_inoltrato_chiusura",
+        "location": {"id": "casa_memolo_cortile", "qualifier": "noah_ultimo_gesto", "legacy_string": "noah_ultimo_gesto_briciole_cornetto_di_bru"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["noah"],
+        "elements": [
+          "Noah ultimo gesto, mano che si apre",
+          "Briciole sul palmo: resti del cornetto di Bru (intascato in h2, condiviso off-screen con Bru)",
+          "Forse lascia cadere, forse no — da decidere in fase D"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Sigillo silenzioso di Noah: gesto del palmo che si apre con briciole del cornetto destinate a Bru (off-screen). Pattern A rinforzo (seed_cornetto_briciole_pattern_a_rinforzo).",
+        "focal_object": "briciole_cornetto_sul_palmo",
+        "atmosphere": "sigillo_silenzioso_seed_pattern_a_rinforzo_gesto_caratteriale_noah",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    }
+  },
+  "key_phrase_attributed_to": "memolo",
+  "_key_phrase_note": "S06 caso simile a s03 (key_phrase a personaggio). voice_notes_essential dichiara FRASE_PRECISA_MEMOLO_UNA: 'Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.' Detta nel cortile mentre infila la scatoletta in tasca. Meccanica istituita (struct.notes 'MECCANICA_ISTITUITA_MEMOLO_FRASE_PRECISA'). Promosso al canonical via REGOLA 0.8.",
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "5 debts_opened raw + ? debts_closed raw, tutti seed_refs (archived_seed_refs=3). Canonical: [].",
+  "personaggi_vincoli_attivi": [
+    {"personaggio": "memolo", "vincoli": ["mai_sapiente_confuso_didattico", "mai_due_frasi_precise_stessa_storia", "mai_risolve_trama_chiudendo"]},
+    {"personaggio": "pun", "vincoli": ["mai_corregge_padre_con_tono_adulto", "mai_sapientello"]},
+    {"personaggio": "stria", "vincoli": ["mai_lezione_morale_esplicita", "mai_due_risposte_stessa_scena", "mai_sopra_o_sotto_albero_vecchio", "mai_commuovere_visibilmente"]},
+    {"personaggio": "fiamma", "vincoli": ["unica_detentrice_detti_popolari", "detti_solo_in_modalita_chiacchiera", "max_2_detti_per_storia", "non_madre_default", "mai_morale_in_corsivo", "mai_sotto_albero_vecchio_solenne"]},
+    {"personaggio": "salvia", "vincoli": ["max_1_pianta_nominata_per_apparizione", "mai_spiega_perche_pianta_funziona", "mai_risolve_emotivamente"]},
+    {"personaggio": "zolla", "vincoli": ["mai_lezioni_ecologia", "mai_nostalgia_ambientalista", "mai_scene_veloci_o_concitate"]}
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: 6 personaggi con vincoli individuali in scena (memolo+pun prime apparizioni; stria/fiamma/salvia/zolla gia' attive). vecchie_del_mercato e liu non hanno vincoli specifici. gabriel/elias/noah/coltivatori_del_cerchio nessun vincolo."
+}

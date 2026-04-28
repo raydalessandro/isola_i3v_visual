@@ -24,6 +24,31 @@ ENUM_RENAMES = {
     }
 }
 
+# REGOLA 0.10 — season deve essere in enum ['primavera','estate','autunno','inverno']
+SEASON_ENUM = {"primavera", "estate", "autunno", "inverno"}
+SEASON_NORMALIZE = {
+    # Storia: storia inizia/cade in PRIMA stagione, passaggio narrativo verso seconda
+    "passaggio_primavera_estate": ("primavera", "passaggio_primavera_estate"),
+    "estate_piena": ("estate", None),
+    "estate_piena_tarda": ("estate", None),
+    "passaggio_estate_autunno": ("estate", "passaggio_estate_autunno"),
+    "autunno_pieno": ("autunno", None),
+}
+
+
+def normalize_season(value: str, current_season_passage):
+    """REGOLA 0.10 (post-s06): season legacy fuori enum -> canonical + season_passage.
+    Ritorna (season_canonical, season_passage). Se old_node ha gia' season_passage
+    valorizzato, viene preservato (override sul default derivato)."""
+    if value in SEASON_ENUM:
+        return value, current_season_passage
+    if value in SEASON_NORMALIZE:
+        canonical, default_passage = SEASON_NORMALIZE[value]
+        # se old_node ha gia' season_passage valorizzato, preserva
+        return canonical, current_season_passage if current_season_passage else default_passage
+    raise ValueError(f"season '{value}' non normalizzabile: aggiungi a SEASON_NORMALIZE")
+
+
 # REGOLA 0.9 — block_position deve matchare ^(apertura|centro|chiusura)_blocco_[abcd]$
 BLOCK_POSITION_PATTERN = re.compile(r"^(apertura|centro|chiusura)_blocco_[abcd]$")
 BLOCK_POSITION_MAP = {
@@ -112,6 +137,7 @@ def migrate(story_id: str):
     mapping = json.loads(map_path.read_text())
 
     # ----- TOP-LEVEL -----
+    season_canonical, season_passage = normalize_season(on["season"], on.get("season_passage"))
     canonical = {
         "id": on["id"],
         "title_provvisorio": on["title_provvisorio"],
@@ -120,8 +146,8 @@ def migrate(story_id: str):
             on["attribute_dominant"], on["attribute_dominant"]
         ),
         "block_position": normalize_block_position(on["block_position"]),
-        "season": on["season"],
-        "season_passage": on.get("season_passage"),
+        "season": season_canonical,
+        "season_passage": season_passage,
         "wind_active": on.get("wind_active"),
         "wind_notes": on.get("wind_notes"),
         "pattern_a_active": on.get("pattern_a_active", "none"),
@@ -185,8 +211,23 @@ def migrate(story_id: str):
         canonical["fear_touched"] = on["fear_touched"]
 
     # ----- visual_anchors -----
+    # REGOLA 3: caso s06 string_legacy. Se hook e' una stringa, mapping deve
+    # fornire 'hook_dict' completo (parsing manuale fatto in P0).
     hooks_new = []
-    for h_old in on.get("visual_anchors", {}).get("scene_hooks", []):
+    for i, h_old in enumerate(on.get("visual_anchors", {}).get("scene_hooks", [])):
+        if isinstance(h_old, str):
+            hid_default = f"{story_id}_h{i+1}"
+            hmap = mapping["hooks"].get(hid_default) or mapping["hooks"].get(f"{story_id}_h{i+1}_signature")
+            if hmap is None or "hook_dict" not in hmap:
+                raise ValueError(f"string_legacy hook {hid_default}: mapping deve fornire 'hook_dict' completo (REGOLA 3 MIGRATION_PROMPT)")
+            h_new = dict(hmap["hook_dict"])
+            # preserva la stringa legacy come prima entry di elements per tracciabilita'.
+            # notes resta null -> P2 puo' popolarla narrativamente.
+            legacy_marker = f"FONTE_LEGACY: {h_old}"
+            h_new["elements"] = [legacy_marker] + list(h_new.get("elements", []))
+            h_new.setdefault("notes", None)
+            hooks_new.append(h_new)
+            continue
         hid = h_old["hook_id"]
         hmap = mapping["hooks"][hid]
         h_new = {
@@ -237,7 +278,7 @@ def migrate(story_id: str):
 
     # oggetti_simbolo_presenti: filtra recurring_visual_objects contro catalogo (solo famiglia=oggetto)
     canonical_oggetti = load_canonical_oggetti(repo)
-    recurring = on.get("visual_anchors", {}).get("recurring_visual_objects", [])
+    recurring = on.get("visual_anchors", {}).get("recurring_visual_objects") or []
     kept, dropped = filter_oggetti_simbolo(recurring, canonical_oggetti)
     canonical["oggetti_simbolo_presenti"] = kept
     # `dropped` viene riportato a stdout: l'operatore aggiorna manualmente

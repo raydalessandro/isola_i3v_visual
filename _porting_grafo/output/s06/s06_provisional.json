@@ -1,0 +1,130 @@
+{
+  "story_id": "s06",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s06_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima di testo gia' canonico.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato.",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere con Ray in fase D."
+  },
+  "provvisori": {
+    "key_phrase_indicative": {
+      "value": "Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Quote letterale da voice_notes_essential 'FRASE_PRECISA_MEMOLO_UNA'. Detta nel cortile mentre Memolo infila la scatoletta in tasca senza guardarla. Meccanica istituita (structural_notes 'MECCANICA_ISTITUITA_MEMOLO_FRASE_PRECISA — una a storia quando Memolo compare. Qui istituita. Ricorre in S8.'). key_phrase_attributed_to='memolo' gia' nel canonical (REGOLA 0.8). Eccezione attribuita a personaggio simile a s03 (Rovo)."
+    },
+    "hooks": {
+      "s06_h1": {
+        "notes": {
+          "value": "Apertura: aula scuola Stria. Pun parla a mezza voce ai fratelli seduti — 'Papa' ha perso una cosa. Non si ricorda dove.' Stria dalla cattedra alza un attimo gli occhi, chiede una sola frase ('E quale cosa?'), torna alla lezione (vincolo stria_mai_due_risposte_stessa_scena). Archetipo STRIA_VEDE_PRIMA confermato (callback s02).",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "premise + callback cb_s06_004 (stria archetipo rilancia non risponde). Cornice di apertura con vincoli Stria attivi (max 1 frase, mai morale)."
+        }
+      },
+      "s06_h2": {
+        "notes": {
+          "value": "Tappa 1 — Forno: luce calda mattino, cornetti sul banco. Fiamma in modalita' chiacchiera, parla e impasta allo stesso tempo, mani bianche di farina. Detto popolare en passant generico su Memolo (DETTO_POPOLARE_FIAMMA_UNO, secondo della saga dopo s01). Noah intasca due cornetti — uno nel taschino giacca, semina cb_s06_001 (briciole condivise off-screen con Bru, seed_cornetto_briciole_pattern_a_rinforzo).",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "voice_notes 'DETTO_POPOLARE_FIAMMA_UNO' + seed_cornetto_briciole_pattern_a_rinforzo + callback cb_s06_003 (fiamma modalita' chiacchiera, eredita da s01). Fonte_legacy preservata in elements[0]."
+        }
+      },
+      "s06_h3": {
+        "notes": {
+          "value": "Tappa 2 — Casa Salvia: erbe ordinate per file, sacchettino di tiglio appeso ad asciugare. Salvia ferma sulla soglia, mano breve, sguardo attento. Pianta nominata diversa da s04 (ortica): vincolo max_1_pianta_nominata_per_apparizione + callback cb_s06_002. Salvia non risolve emotivamente — registro coerente.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "callback cb_s06_002 (ambiente_calendario_stagionale: salvia cornice pianta diversa). Vincoli salvia: max_1_pianta + mai_risolve_emotivamente. Tappa di passaggio."
+        }
+      },
+      "s06_h4": {
+        "notes": {
+          "value": "Tappa 3 — Casa Zolla: dispensa aperta, ghiande in ciotola. Zolla piegata a controllare qualcosa, risponde senza alzarsi (vincolo mai_scene_veloci_o_concitate). Qualcosa in tasca forse — dettaglio sospeso, da chiarire in fase D. Tana terra_ovest, ritmo lento.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "Vincoli zolla: mai_scene_veloci_o_concitate, mai_lezioni_ecologia, mai_nostalgia_ambientalista. Prima apparizione narrativa. Tappa di passaggio."
+        }
+      },
+      "s06_h5": {
+        "notes": {
+          "value": "Tappa 4 — Mercato del Mezzogiorno, panca di pietra contro il muro sud. Vecchie sedute in fila, scialli grigi-marroni. Una alza un dito (gesto minimo) e indica verso l'Albero Vecchio. Le altre annuiscono. VECCHIE_FIRMA_GESTUALE_ISTITUITA: prima volta in saga con gesto definito (indicare in silenzio). Vincolo Bible §4.19 rispettato (mai individuate, mai parole, mai agency propria). Bloom in s11 (riconoscimento muto collettivo per Elias). seed_vecchie_indicare_in_silenzio piantato.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'VECCHIE_FIRMA_GESTUALE_ISTITUITA' + seed_vecchie_indicare_in_silenzio. Tappa cardine del giro: indicano direzione del trovamento."
+        }
+      },
+      "s06_h6_signature": {
+        "notes": {
+          "value": "SIGNATURE — Cespuglio dietro Albero Vecchio: Elias e Pun arrivano insieme, Pun di corsa perche' Liu' lo ha avvisato. Aprono la scatoletta di legno scuro. Elias vede il dente da latte — piccolo, bianco, un dente qualsiasi. Non riconosce di chi e'. Pun: 'E' mio. L'avevo perso anni fa.' Lo dice piano, mezzo stupito mezzo tenero. Elias capisce tutto in un attimo: Memolo non aveva perso, custodiva. Modulazione PAURA_ELIAS: capire-senza-avere (s4 fare-senza-avere -> s5 fare-senza-avere -> s6 capire-senza-avere -> s11 bloom). Mai nominato.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal threshold_moment + structural_notes 'PAURA_ELIAS_MODULAZIONE_BLOCCO_B' (s5 -> s6 capire-senza-avere) + 'PATTERN_A_DUE_IMMAGINI_UNA_GERARCHIA' (dente eco secondaria, cuore emotivo). Snodo emotivo della storia."
+        }
+      },
+      "s06_h7": {
+        "notes": {
+          "value": "Cortile Memolo: sole pomeriggio inoltrato, ombra lunga della casetta tonda. Memolo in piedi, sciarpa di sbieco (paronomastico_fisico_memolo_candidato). Pun gli porge la scatoletta. Memolo la apre, vede il dente, ride — riso di sollievo che e' anche un po' commosso. Non spiega perche'. Borbotta confuso, poi la frase precisa rara (1 a storia): 'Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.' Sciarpa annodata male durante il borbottio (paronomastico leggero, 1 di max 2 in saga).",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal resolution_mode + voice_notes 'FRASE_PRECISA_MEMOLO_UNA' + 'PARONOMASTICO_FISICO_MEMOLO_CANDIDATO' + 'MECCANICA_ISTITUITA_MEMOLO_FRASE_PRECISA'. Snodo della restituzione e key_phrase saga."
+        }
+      },
+      "s06_h8": {
+        "notes": {
+          "value": "Sigillo silenzioso: Noah ultimo gesto, mano che si apre. Briciole sul palmo — resti del cornetto di Bru (intascato in h2, condiviso off-screen). Forse lascia cadere, forse no — da decidere in fase D. Pattern A rinforzo (seed_cornetto_briciole_pattern_a_rinforzo): le cose cadute diventano materia, qui la materia e' la traccia silenziosa di un legame. SIGILLO_NARRATORE_CHIUSURA: immagine, non regola.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "voice_notes 'SIGILLO_NARRATORE_CHIUSURA — immagine non regola, evitare aggettivi morali, aggettivi fisici' + seed_cornetto_briciole_pattern_a_rinforzo + structural_notes 'PATTERN_A_DUE_IMMAGINI_UNA_GERARCHIA — cornetto briciole portante'. Sigillo del narratore in immagine."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {"A": 3, "B": 4, "C": 2},
+    "totale": 9,
+    "_note": "season_passage gia' popolato nell'old_node (P1 l'ha portato pari-pari, NON provvisorio P2). key_phrase_attributed_to gia' nel canonical via mapping (REGOLA 0.8, simile a s03/rovo).",
+    "dettaglio": [
+      {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s06_h1.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s06_h2.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s06_h3.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s06_h4.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s06_h5.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s06_h6_signature.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s06_h7.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s06_h8.notes", "category": "B", "confidence": "medium"}
+    ]
+  },
+  "notes_globali": "Sesta storia: chiusura blocco B (CONNETTERE_COMPIUTO: ascoltare s4, costruire s5, sentire-quando-farsi-da-parte s6). Caso speciale TUTTI: hooks string_legacy (REGOLA 3, parsati a mano), attribute_dominant=connettere_sottile (REGOLA 0.5 -> connettere, nota qui), block_position legacy esteso (REGOLA 0.9 -> chiusura_blocco_b), season legacy (REGOLA 0.10 -> primavera + season_passage preservato). 9 provvisori (3A + 4B + 2C). Highlight: PRIMO_GIRO_COMPLETO_QUATTRO_QUARTIERI saga (escluso aria_nord). VECCHIE_FIRMA_GESTUALE_ISTITUITA. PARONOMASTICO_FISICO_MEMOLO leggero. PATTERN_A_DUE_IMMAGINI: cornetto-briciole portante (seminato), dente-da-latte eco emotiva. Modulazione PAURA_ELIAS: capire-senza-avere. key_phrase_attributed_to='memolo' promosso al canonical (REGOLA 0.8, secondo caso saga dopo s03/rovo). mis_006 logged: vecchie_del_mercato vs mercato_del_mezzogiorno, severity bassa, status open.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura con dialogo a mezza voce in aula scuola. Possibili candidati: C (voce esterna che irrompe via Pun) o A. Scelta autoriale."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Sigillo del narratore in immagine (briciole sul palmo di Noah). Codice 1-7 da decidere."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null]",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera di cura sociale + giro multi-quartiere + capire-senza-avere. Plausibile medio. Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200)",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "8 hook su 4 quartieri attraversati (16 km). Probabilmente fascia lunga 1100-1200. Scelta autoriale."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2)",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "voice_notes 'MEMORIA_LUNGA_NARRATORE_UNO_DUE_INCISI sul quattro-quartieri attraversati': 1-2 pause descrittive. Scelta finale autoriale."
+    }
+  }
+}

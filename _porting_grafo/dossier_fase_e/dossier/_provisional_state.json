@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_story_processed": "s05",
-  "stories_processed": ["s01", "s02", "s03", "s04", "s05"],
+  "last_story_processed": "s06",
+  "stories_processed": ["s01", "s02", "s03", "s04", "s05", "s06"],
   "quotas_consumed": {
     "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
     "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
@@ -298,6 +298,50 @@
       "debts_closed": [],
       "misalignments_logged": ["mis_005"],
       "notes": "Quinta storia (centro_blocco_b, primavera piena, ciclo connettere costruttivo, signature: 'Il Ponte di Rami'). 10 provvisori (4A + 5B + 1C — distribuzione confidence ALTISSIMA: best ratio della saga finora). 8 hook (vs 5 standard) per scena tecnica complessa. Highlight: PATTERN_A_PRIMA_SEMINA_FORMALE in h5 ('le cose cadute diventano materia', mai nominato — Pattern A da qui in poi cammina). EREDITA_TECNICA_E_MATERIALE in h4 (Nodo trasmette a Elias: capacita' nodo marinaro + materiale corda dal braccio). NODO_PRIMA_APPARIZIONE in h3 (modalita' commissione Coltivatori vs S8 modalita' Mantenitore). BRU_BLOOM_AGENCY (presenza concreta s04 -> compagno scoperta s05 con agency: indica radura, sceglie pertiche, si siede al centro). PAURA_ELIAS_MODULAZIONE: fare-senza-avere (S5) verso capire-senza-avere (S6). 3 callbacks tutti da s04 (bru gesto, foresta principio, bru agency). mis_005 logged: name discrepancy 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo), severity bassa, status open."
+    },
+    {
+      "story_id": "s06",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s06/s06_provisional.json",
+      "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s06/s06_canonical.json",
+      "quote_consumed": {
+        "by_category": {"A": 3, "B": 4, "C": 2},
+        "totale": 9,
+        "dettaglio": [
+          {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s06_h1.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s06_h2.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s06_h3.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s06_h4.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s06_h5.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s06_h6_signature.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s06_h7.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s06_h8.notes", "category": "B", "confidence": "medium"}
+        ]
+      },
+      "no_inference_fields_left_null": {
+        "count": 5,
+        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
+      },
+      "seeds": {
+        "planted": ["seed_vecchie_indicare_in_silenzio", "seed_cornetto_briciole_pattern_a_rinforzo"],
+        "picked_up": ["seed_noah_raccoglie_oggetti", "seed_stria_vede_prima"],
+        "maturing_here": ["seed_paura_elias_piccolo"],
+        "bloomed_here": []
+      },
+      "callbacks_made": [
+        {"callback_id": "cb_s06_001", "from_story": "s05", "to_story": "s06", "type": "economia_personaggi_menzione"},
+        {"callback_id": "cb_s06_002", "from_story": "s04", "to_story": "s06", "type": "ambiente_calendario_stagionale"},
+        {"callback_id": "cb_s06_003", "from_story": "s01", "to_story": "s06", "type": "voce_ricorrente"},
+        {"callback_id": "cb_s06_004", "from_story": "s02", "to_story": "s06", "type": "gesto_ricorrente_personaggio"},
+        {"callback_id": "cb_s06_005", "from_story": "s02", "to_story": "s06", "type": "nota_strutturale_chiusa_offscreen"}
+      ],
+      "debts_opened": [],
+      "debts_closed": [],
+      "misalignments_logged": ["mis_006"],
+      "notes": "Sesta storia (chiusura_blocco_b, passaggio primavera->estate, signature: 'Il Dono per Memolo'). CONNETTERE_COMPIUTO: tre forme del connettere chiuse (s4 ascolto, s5 azione fisica, s6 cura muta della rete). 9 provvisori (3A + 4B + 2C). PRIMO_GIRO_COMPLETO_QUATTRO_QUARTIERI saga (escluso aria_nord). VECCHIE_FIRMA_GESTUALE_ISTITUITA. PATTERN_A_DUE_IMMAGINI: cornetto-briciole portante (seminato), dente-da-latte eco emotiva. PAURA_ELIAS modulazione: capire-senza-avere. Caso speciale TUTTO: 4 normalizzazioni applicate dallo script (REGOLA 0.5 connettere_sottile->connettere, 0.9 block_position troncato, 0.10 season passaggio_primavera_estate->primavera, 3 hooks string_legacy parsati a mano in mapping). key_phrase_attributed_to='memolo' promosso al canonical (REGOLA 0.8, secondo caso saga dopo s03/rovo). 5 callbacks (1 a s05, 1 a s04, 1 a s01, 2 a s02). mis_006 logged: vecchie_del_mercato vs mercato_del_mezzogiorno, severity bassa, status open. Prime apparizioni narrative: memolo + pun + zolla."
     }
   ],
   "quotas_remaining_check": {

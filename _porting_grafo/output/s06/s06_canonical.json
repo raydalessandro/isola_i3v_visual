@@ -1,0 +1,624 @@
+{
+  "id": "s06",
+  "title_provvisorio": "Il Dono per Mèmolo",
+  "cycle": "B",
+  "attribute_dominant": "connettere",
+  "block_position": "chiusura_blocco_b",
+  "season": "primavera",
+  "season_passage": "prime_giornate_calde_sole_piu_alto_finestre_che_si_aprono_primi_tigli_in_fiore",
+  "wind_active": "vento_intreccio",
+  "wind_notes": "Intreccio dominante durante il giro: porta odori mischiati dei quattro quartieri (pane dal Forno, tiglio da Salvia, semi secchi da Zolla, mare dalla Bocca). Taglio all'alba quando i fratelli escono da scuola — aria ancora fresca. Mulinello leggero alla sera quando tornano a casa di Mèmolo — muove la sciarpa che Mèmolo non tiene ferma. Tre venti nello stesso giorno, ognuno al suo tempo — architettura silente del mandala temporale (mai detto).",
+  "pattern_a_active": "seminato",
+  "pattern_a_notes": "SEMINA RINFORZATA RISPETTO A S05. Due immagini di Pattern A in S6, ma una sola portante (il cornetto briciole). L'altra (il dente custodito da Mèmolo come cosa-perduta-che-non-era-persa) è eco secondaria, cuore emotivo della storia ma non veicolo Pattern A. IMMAGINE PORTANTE: il cornetto che Noah intasca al Forno per Bru al mattino — a sera è briciole schiacciate nel taschino — Noah lo tira fuori nel cortile di Mèmolo, nessuno nota, lui forse lo lascia cadere per terra. La cosa destinata a qualcuno arriva lo stesso, solo diversa, a destinatario diverso (uccellini, terra, niente). Pattern A in immagine pulita. MAI NOMINATO nel testo. Il narratore può toccare l'immagine in chiusura senza commento. Prima attivazione formale del Pattern A resta S7 (STRAPP). S6 è pre-attivo con immagine chiara, S5 era seminato con immagine strutturale (ponte di materia caduta). Tre livelli di intensità Pattern A in tre storie consecutive.",
+  "night_scene": false,
+  "night_scene_notes": null,
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "tutta_isola_quattro_quartieri_attraversati",
+    "note": "specific_points: ['scuola_stria_apertura', 'rotta_scuola_al_forno_primo_bastoncino_noah', 'forno_di_fiamma_tappa_est', 'casa_salvia_tappa_ovest', 'casa_zolla_tappa_ovest', 'rotta_orti_al_mercato_secondo_bastoncino_noah', 'mercato_del_mezzogiorno_panca_di_pietra_vecchie', 'cespuglio_dietro_albero_vecchio_scoperta', 'casa_memolo_cortile_chiusura']"
+  },
+  "locations_secondary": [
+    {
+      "id": "scuola_stria",
+      "role": "cornice_apertura_aula_pun_dice_dai_fratelli_memolo_ha_perso_una_cosa"
+    },
+    {
+      "id": "forno",
+      "role": "tappa_uno_giro_fiamma_modalita_chiacchiera_cornetti_detto_popolare"
+    },
+    {
+      "id": "casa_salvia",
+      "role": "tappa_due_giro_salvia_mano_breve_tiglio_sciarpa_storta"
+    },
+    {
+      "id": "casa_zolla",
+      "role": "tappa_tre_giro_zolla_dispensa_ghiande_qualcosa_in_tasca_forse"
+    },
+    {
+      "id": "mercato_del_mezzogiorno_panca_di_pietra",
+      "role": "tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita"
+    },
+    {
+      "id": "cespuglio_dietro_albero_vecchio",
+      "role": "momento_soglia_elias_e_pun_trovano_scatoletta_dente_da_latte"
+    },
+    {
+      "id": "casa_memolo_cortile",
+      "role": "chiusura_memolo_frase_precisa_pun_restituisce_scatoletta_al_padre_noah_briciole_cornetto_bru"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "stratega_del_giro",
+      "narrative_weight": "delta_che_decide_ordine_e_ritmo_del_giro_ma_non_e_il_piu_visibile_peso_medio",
+      "key_actions": [
+        "ascolta_pun_a_scuola_si_guarda_con_fratelli_senza_parlare",
+        "dopo_idea_di_elias_decide_ordine_del_giro_prima_forno_poi_orti_poi_centro",
+        "traccia_il_giro_mentalmente_decide_di_escludere_pascoli_alti_troppo_lontano_per_memolo",
+        "tiene_il_tempo_del_giro_vede_il_sole_che_sale_e_sa_quando_fare_ogni_tappa",
+        "al_cespuglio_dietro_albero_vecchio_lascia_andare_avanti_elias_e_pun_rimane_un_passo_indietro_gesto_del_sa_la_strada_senza_bisogno_di_arrivare_per_primo"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "elias",
+      "role": "ideatore_e_ponte_relazionale_silenzioso",
+      "narrative_weight": "connettere_nella_sua_forma_matura_idea_iniziale_poi_gesto_di_tirarsi_indietro_che_non_si_vede_peso_maggiore_centrale",
+      "key_actions": [
+        "a_scuola_ha_l_idea_possiamo_chiedere_a_chi_l_ha_visto",
+        "disegna_mentalmente_il_giro_per_quartieri_est_ovest_centro",
+        "alle_quattro_tappe_e_lui_a_fare_le_domande_agli_abitanti_modalita_pratica_raccoglie_informazioni_senza_insistere",
+        "al_cespuglio_dietro_albero_vecchio_trova_la_scatoletta_insieme_a_pun_la_apre_vede_il_dente_da_latte_non_riconosce_di_chi_e",
+        "quando_pun_dice_e_mio_l_avevo_perso_anni_fa_elias_capisce_in_un_attimo_cosa_sta_succedendo",
+        "restituisce_la_scatoletta_a_pun_senza_dire_niente_senza_spiegare_ai_fratelli",
+        "non_racconta_mai_ne_ai_fratelli_ne_a_memolo_che_lui_ha_trovato_la_scatoletta_lascia_che_sia_pun_a_portarla_al_padre"
+      ],
+      "quote_count_estimate": 4
+    },
+    {
+      "id": "noah",
+      "role": "motore_del_giro_energia_fisica",
+      "narrative_weight": "energia_che_rende_possibile_il_giro_con_tempi_giusti_peso_medio_diffuso",
+      "key_actions": [
+        "corre_da_un_quartiere_all_altro_tiene_il_ritmo_fisico_della_giornata",
+        "al_forno_intasca_due_cornetti_uno_per_se_uno_per_bru_se_lo_vede_quello_di_bru_nel_taschino_della_giacca",
+        "raccoglie_un_primo_bastoncino_sulla_strada_dalla_scuola_al_forno_apertura_del_giro_mattina_energia_piena",
+        "raccoglie_un_secondo_bastoncino_tornando_dagli_orti_verso_il_mercato_pomeriggio_stanchezza_gia_iniziata_gesto_ancora_piu_automatico",
+        "tiene_i_bastoncini_in_mano_distratto_durante_il_mercato_ne_butta_uno_al_cespuglio_prima_di_entrare_ne_ha_ancora_uno_a_casa_di_memolo_alla_sera",
+        "nel_pomeriggio_tornando_dagli_orti_verso_il_centro_la_fatica_inizia_a_farsi_sentire_elias_gli_tiene_la_mano_un_tratto_senza_dire_niente_gabriel_rallenta_il_passo_sul_tratto_finale_verso_il_mercato_senza_annunciarlo_connettere_in_azione_fisica_muta",
+        "a_sera_nel_cortile_di_memolo_noah_si_accorge_che_il_cornetto_di_bru_nel_taschino_e_diventato_briciole_dopo_tutto_il_giro_lo_tira_fuori_una_manciata_di_briciole_schiacciate_non_dice_niente_lo_tiene_in_mano_poi_forse_lo_lascia_cadere_per_terra_per_gli_uccellini_da_decidere_in_d",
+        "al_cortile_di_memolo_sta_un_passo_indietro_rispetto_a_pun_e_a_gabriel_non_e_il_momento_suo_lo_capisce_senza_dirlo"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "memolo",
+      "role": "oggetto_del_dono_e_cornice_apertura_chiusura",
+      "narrative_weight": "centrale_non_come_agente_ma_come_causa_e_destinatario_il_suo_modo_confuso_tiene_insieme_la_storia",
+      "key_actions": [
+        "trotterella_piu_piano_del_solito_sistema_la_sciarpa_mille_volte_apertura_fuori_scena_descritto_da_pun",
+        "al_forno_stamattina_parlava_di_una_scatoletta_riferito_da_fiamma",
+        "a_casa_di_salvia_lascia_detto_vago_sulla_scatoletta_che_forse_aveva_in_mano_forse_no",
+        "a_casa_di_zolla_passa_per_due_ghiande_dell_anno_scorso_per_qualcosa_non_sa_dire_per_cosa",
+        "riceve_la_scatoletta_dal_figlio_pun_nel_cortile_la_apre_vede_il_dente_ride_un_riso_di_sollievo_un_po_commosso",
+        "frase_precisa_rara_una_a_storia_le_cose_che_si_perdono_non_si_perdono_si_nascondono_dove_non_sai_cercare_detta_infilando_la_scatoletta_in_tasca_senza_guardarla",
+        "poi_torna_confuso_aspetta_dove_l_avevo_messa_l_avevo_messa_da_no_si_no"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "pun",
+      "role": "ponte_verso_il_padre_cucciolo_della_memoria_pratica",
+      "narrative_weight": "motore_del_problema_a_scuola_e_risolutore_silenzioso_al_cespuglio_peso_maggiore_di_quanto_dica",
+      "key_actions": [
+        "a_scuola_dice_ai_fratelli_papa_ha_perso_una_cosa_non_si_ricorda_dove",
+        "arriva_al_cespuglio_dietro_albero_vecchio_di_corsa_ha_sentito_da_liu",
+        "apre_la_scatoletta_insieme_a_elias",
+        "riconosce_il_dente_da_latte_e_il_suo_e_lavevo_perso_anni_fa_detto_piano",
+        "porta_la_scatoletta_al_padre_nel_cortile_di_sera_gliela_mette_in_mano"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "stria",
+      "role": "cammeo_scuola_maestra_zia_che_vede_e_non_interviene",
+      "narrative_weight": "cornice_iniziale_una_frase_sola",
+      "key_actions": [
+        "dalla_cattedra_sente_pun_che_dice_papa_ha_perso_una_cosa_non_interviene_subito",
+        "una_sola_frase_rilancio_e_quale_cosa_modalita_stria_istituita_in_s02_rilancia_non_risponde",
+        "torna_alla_lezione_non_commenta_la_risposta_di_pun"
+      ],
+      "quote_count_estimate": 1
+    },
+    {
+      "id": "fiamma",
+      "role": "cammeo_forno_modalita_chiacchiera",
+      "narrative_weight": "tappa_uno_del_giro_informazione_e_calore_ma_non_centrale_qui",
+      "key_actions": [
+        "racconta_di_memolo_venuto_stamattina_cornetto_e_sciarpa_annodata_male_parlava_di_una_scatoletta_diceva_che_la_portava_dalla_parte_di_salvia",
+        "offre_cornetti_caldi_ai_fratelli",
+        "un_detto_popolare_generico_sul_carattere_di_memolo_non_anticipazione_trama_da_raffinare_in_d_direzione_riccio_che_pensa_con_la_sciarpa_storta_pensiero_gli_scappa_di_tasca"
+      ],
+      "quote_count_estimate": 3,
+      "detti_count": 1,
+      "mode": "chiacchiera"
+    },
+    {
+      "id": "salvia",
+      "role": "cammeo_casa_modalita_lavoro_mano_breve",
+      "narrative_weight": "tappa_due_del_giro_informazione_parziale_e_calendario_proprio",
+      "key_actions": [
+        "ricorda_di_memolo_passato_stamattina_gli_ha_dato_un_sacchettino_di_tiglio_testa_pesante",
+        "non_ricorda_con_certezza_se_memolo_avesse_la_scatoletta_in_mano_quando_e_arrivato_o_quando_e_andato_via_dettaglio_realistico_memoria_pratica_non_testimonianza_formale",
+        "nota_la_sciarpa_storta_dettaglio_ricorrente_nella_storia"
+      ],
+      "quote_count_estimate": 2,
+      "plant_named": "tiglio"
+    },
+    {
+      "id": "zolla",
+      "role": "cammeo_casa_modalita_conta_stagioni",
+      "narrative_weight": "tappa_tre_del_giro_informazione_minima_ma_specifica_del_suo_mondo",
+      "key_actions": [
+        "fuori_a_controllare_una_dispensa_quando_i_fratelli_arrivano",
+        "racconta_che_memolo_e_passato_per_due_ghiande_dell_anno_scorso_per_qualcosa_non_sa_per_cosa",
+        "non_ha_visto_la_scatoletta_dice_che_memolo_aveva_qualcosa_in_tasca_forse"
+      ],
+      "quote_count_estimate": 1
+    },
+    {
+      "id": "vecchie_del_mercato",
+      "role": "cammeo_panca_di_pietra_istituzione_corale_silente",
+      "narrative_weight": "tappa_quattro_del_giro_indicazione_muta_che_svolta_la_ricerca_peso_strutturale_alto_nonostante_silenzio",
+      "key_actions": [
+        "sedute_sulla_panca_di_pietra_come_sempre_al_mercato_del_mezzogiorno",
+        "una_alza_un_dito_senza_dire_una_parola_indica_il_cespuglio_dietro_l_albero_vecchio",
+        "le_altre_annuiscono_non_dicono_altro",
+        "istituzione_della_firma_gestuale_indicare_in_silenzio_prima_volta_in_saga_bloomera_in_s08_e_s11"
+      ],
+      "quote_count_estimate": 0
+    },
+    {
+      "id": "liu",
+      "role": "cammeo_volante_messaggera_prima_apparizione_vera",
+      "narrative_weight": "ponte_informativo_tra_vecchie_e_pun_passa_la_notizia_ai_cuccioli_peso_leggero_ma_funzionale",
+      "key_actions": [
+        "appare_con_frrr_mentre_i_fratelli_vanno_verso_il_cespuglio",
+        "una_frase_sola_indovina_chi_vi_cerca_direzione_non_frase_esatta_da_raffinare_in_d",
+        "riparte_verso_pun_porta_la_notizia_che_portera_pun_di_corsa_al_cespuglio_meccanica_del_come_pun_arriva_li_in_tempo"
+      ],
+      "quote_count_estimate": 1
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "bru",
+      "reason": "economia_di_personaggi_menzionato_non_in_scena_diretta_noah_intasca_un_cornetto_per_lui",
+      "note": "callback_s5_leggero_bru_resta_nel_suo_quartiere_cornetto_diventa_briciole_pattern_a"
+    },
+    {
+      "id": "coltivatori_del_cerchio",
+      "reason": "sfondo_costante_negli_orti_durante_la_tappa_ovest_cantilena_in_lontananza_passaggio_a_primavera_matura",
+      "note": "gruppo_istituzione_sfondo_funzionale_decisione_26"
+    },
+    {
+      "id": "mercato_del_mezzogiorno",
+      "reason": "sfondo_della_piazza_al_mezzogiorno_vita_del_mercato_rumore_contorno_alle_vecchie_sulla_panca",
+      "note": "gruppo_istituzione_sfondo_funzionale_decisione_26"
+    },
+    {
+      "id": "pastori",
+      "reason": "menzionati_da_gabriel_come_esclusi_dal_giro_troppo_lontani_per_memolo_risolve_in_nota_la_consegna_messaggio_pastori_rimandata_off_screen_da_s02",
+      "note": "gruppo_istituzione_sfondo_funzionale_decisione_26"
+    }
+  ],
+  "seeds_planted": [
+    "seed_vecchie_indicare_in_silenzio",
+    "seed_cornetto_briciole_pattern_a_rinforzo"
+  ],
+  "seeds_picked_up": [
+    "seed_noah_raccoglie_oggetti",
+    "seed_stria_vede_prima"
+  ],
+  "seeds_maturing_here": [
+    "seed_paura_elias_piccolo"
+  ],
+  "seeds_bloomed_here": [],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s06_001",
+      "from_story": "s05",
+      "element": "bru_menzione_offscreen_noah_intasca_cornetto",
+      "type": "economia_personaggi_menzione",
+      "note": "Bru (pienamente in scena in S3, S4, S5) qui resta offscreen. Noah al Forno intasca un cornetto per Bru 'se lo vede'. Bru non si vede durante il giro. Il cornetto diventa briciole (vedi seed_cornetto_briciole_pattern_a_rinforzo). Callback leggero che mantiene Bru presente come presenza del mondo senza sovraccaricarlo di apparizioni.",
+      "to_story": "s06"
+    },
+    {
+      "callback_id": "cb_s06_002",
+      "from_story": "s04",
+      "element": "salvia_cornice_pianta_nominata_diversa",
+      "type": "ambiente_calendario_stagionale",
+      "note": "Salvia è cornice in S4, qui cammeo in casa sua con pianta diversa — tiglio invece di ortica. Calendario proprio di Salvia attivo (tiglio = fine primavera/inizio estate). Coerenza stagionale Bible §9.2.",
+      "to_story": "s06"
+    },
+    {
+      "callback_id": "cb_s06_003",
+      "from_story": "s01",
+      "element": "fiamma_modalita_chiacchiera_detto_popolare",
+      "type": "voce_ricorrente",
+      "note": "Fiamma in modalità chiacchiera con detto popolare — stessa modalità dell'apertura saga S1. Secondo detto popolare, generico sul carattere di Mèmolo, non anticipazione trama. Eco di apertura ma applicazione diversa.",
+      "to_story": "s06"
+    },
+    {
+      "callback_id": "cb_s06_004",
+      "from_story": "s02",
+      "element": "stria_archetipo_rilancia_non_risponde",
+      "type": "gesto_ricorrente_personaggio",
+      "note": "Stria dalla cattedra sente Pun e rilancia con una sola frase ('E quale cosa?') senza risolvere. Archetipo istituito in S2. Qui conferma in modalità scuola. Prepara il terreno per la modalità S9 e S11.",
+      "to_story": "s06"
+    },
+    {
+      "callback_id": "cb_s06_005",
+      "from_story": "s02",
+      "element": "messaggio_pastori_consegna_offscreen_risolta",
+      "type": "nota_strutturale_chiusa_offscreen",
+      "note": "Il messaggio per i Pastori dato da Stria in S2 era rimasto aperto come decisione. Qui si chiude implicitamente: Gabriel nel tracciare il giro per Mèmolo esclude subito i Pascoli ('troppo lontano per Mèmolo'). Il fatto che i fratelli conoscano i Pascoli e le distanze è coerente con una consegna avvenuta nel frattempo (off-screen, tra S2 e S6). Non serve menzionarla. Il seme S2 si chiude come nota strutturale.",
+      "to_story": "s06"
+    }
+  ],
+  "callback_summary": "S6 chiude blocco B con sei callback distribuiti. Bru offscreen (S5). Salvia con pianta diversa (S4, calendario stagionale). Fiamma modalita chiacchiera detto popolare (eco S1). Stria rilancia non risponde (S2). Messaggio Pastori S2 chiuso implicitamente. Seed Noah raccoglie primo uso canonico (pickup). Pattern A rinforzato da S5 verso S7. Seed Elias piccolo in maturing leggero verso bloom S11. Due semi nuovi piantati. Due debts opened, due debts closed.",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": null,
+  "key_phrase_notes": null,
+  "key_phrase_attributed_to": "memolo",
+  "premise": "Mèmolo è triste — non lo dice. Si vede da come trotterella più piano del solito, dalla sciarpa che sistema mille volte ma non con la solita allegria. Pun, suo figlio, lo nota. A scuola lo dice ai fratelli: 'Papà ha perso una cosa. Non si ricorda dove.' Stria dalla cattedra sente e chiede una sola frase — 'E quale cosa?'. Pun: 'Non lo sa. Ma è una cosa importante.' Stria torna alla lezione. I fratelli si guardano.",
+  "problem": "Aiutare Mèmolo a ritrovare l'oggetto perduto. Ma Mèmolo stesso non sa cosa ha perso né dove. Chiedergli direttamente è inutile — lo conoscono. Bisogna ricostruire la sua giornata chiedendo agli abitanti dove l'hanno visto passare. Il giro da fare attraversa tutta l'isola — est (Forno), ovest (Orti), centro (Mercato). Nord (Pascoli) è troppo lontano per Mèmolo, lo escludono subito.",
+  "threshold_moment": "Il cespuglio dietro l'Albero Vecchio. Elias e Pun arrivano insieme, Pun di corsa perché Liù lo ha avvisato. Aprono la scatoletta. Elias vede il dente da latte — piccolo, bianco, un dente qualsiasi di un cucciolo. Non riconosce di chi è. Pun invece sì: 'È mio. L'avevo perso anni fa.' Lo dice piano, mezzo stupito mezzo tenero. In quel momento Elias capisce tutto in un attimo — Mèmolo non aveva perso una cosa, aveva perso una cosa di suo figlio, una cosa che custodiva di Pun senza dirlo. Elias non parla. Non spiega ai fratelli. Restituisce la scatoletta a Pun. Pun la porterà al padre. Il momento-soglia è quel silenzio di Elias che capisce e si tira indietro — il connettere vero del blocco B non è costruire un ponte, è capire quando non sei tu che devi portare la cosa. [MECHANICS] capire_e_tirarsi_indietro_connettere_come_sensibilita_relazionale_muta [EAR] connettere_nella_sua_forma_piu_sottile_riconoscere_che_la_connessione_vera_e_tra_pun_e_memolo_non_tra_noi_e_memolo [STRATO] il_bambino_di_4_anni_vede_pun_che_porta_la_scatoletta_al_padre_e_memolo_contento_il_bambino_di_7_10_sente_che_elias_ha_capito_qualcosa_e_non_l_ha_detto_l_adulto_vede_la_tenerezza_paterna_nascosta_di_memolo_che_custodiva_il_dente_del_figlio",
+  "resolution_mode": "Tornano a casa di Mèmolo coi quattro insieme — Gabriel, Elias, Noah, Pun. Mèmolo è in cortile, sciarpa di sbieco, sta mormorando. Pun gli mette in mano la scatoletta. Mèmolo la apre, vede il dente, ride — un riso di sollievo che è anche un po' commosso. Non spiega perché. 'Aspetta dove l'avevo messa, l'avevo messa da... no. Sì. No.' Poi, frase precisa rara (1 a storia): 'Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.' Lo dice mentre infila la scatoletta in tasca senza guardarla. Poi torna confuso. I fratelli si guardano. Pun resta col padre. I fratelli se ne vanno — Mulinello leggero sera, aria ancora calda di primo estate. [CLOSURE] ritorno_al_centro_con_oggetto_restituito_non_dai_fratelli_ma_da_pun_al_padre_i_fratelli_sono_cornice_non_risolutori_finali [CONTRIBUTO] il_giro_che_hanno_fatto_ha_reso_possibile_la_restituzione_ma_non_sono_loro_a_chiudere_il_cerchio_questo_e_connettere_maturo_rete_che_si_attiva_non_eroi_che_consegnano [NO MORALINA] nessun_personaggio_spiega_il_significato_memolo_non_spiega_il_dente_elias_non_spiega_a_nessuno_gabriel_e_noah_non_chiedono_a_elias_cosa_e_successo_al_cespuglio_i_fratelli_hanno_imparato_qualcosa_senza_doverselo_dire [SIGILLO] il_narratore_in_chiusura_non_aggiunge_regola_sigilla_con_immagine_il_sole_alto_del_mezzogiorno_ormai_virato_verso_pomeriggio_l_isola_vista_dall_alto_come_una_rete_di_passi_che_oggi_si_e_attivata_da_affinare_in_d",
+  "palette_emotiva": "Dominanti: sole_piu_alto_terracotta_del_forno_sabbia_di_salvia_ocra_di_zolla_terracotta_del_centro_villaggio_verdi_primaverili_maturi_che_virano_all_estate | Accent freddo: dente_da_latte_piccolo_bianco_unico_riflesso_freddo_nella_tavolozza_calda_della_giornata | Accent neutro: scatoletta_di_legno_scuro_semplice_sciarpa_di_memolo_lana_sbiadita_colore_indefinito_da_decidere_in_d | Luce: alba_fresca_taglio_ancora_freddo_mattino_caldo_al_forno_mezzogiorno_verticale_al_mercato_pomeriggio_inoltrato_al_cortile_mulinello_leggero_sera_che_arriva | Chiusura visiva: ultimo_elemento_cromatico_briciole_dorate_sul_palmo_di_noah_o_per_terra_chiusura_visiva_leggera_pattern_a_immagine_non_dichiarata",
+  "active_constraints_touched": [
+    "memolo_mai_spiega_di_se_stesso_in_modo_compiuto",
+    "memolo_frase_precisa_1_a_storia_vincolo_bible_4_7",
+    "stria_mai_risolve_sempre_rilancia",
+    "fiamma_detti_popolari_esclusivi_max_2_per_storia_chiacchiera_generici_non_anticipazione_trama",
+    "vecchie_del_mercato_mai_individuate_mai_nome_mai_parole_istituzione_corale_silente",
+    "vecchie_firma_gestuale_indicare_in_silenzio_istituzione_in_questa_storia",
+    "gruppi_istituzioni_sfondo_funzionale_mai_protagonisti_decisione_26",
+    "liu_frrr_messaggera_non_veggente_una_frase_breve",
+    "noah_gesto_firma_bastoncini_en_passant_mai_annunciato",
+    "pattern_a_never_named_in_text_semina_rinforzata_non_prima_scena_attiva",
+    "ear_framework_invisible_connettere_come_rete_di_cura_attivata_non_concetto",
+    "mandala_silenzioso_mai_detto_ma_primo_giro_completo_quattro_quartieri_in_saga",
+    "no_narrator_reveal_preannouncement",
+    "no_moralina_finale_nessun_personaggio_spiega_significato"
+  ],
+  "voice_notes_essential": [
+    "DETTO_POPOLARE_FIAMMA_UNO — modalita chiacchiera al Forno. Generico sul carattere di Memolo, NON anticipazione della trama presente. Direzione ARCHI: qualcosa tipo 'riccio che pensa con la sciarpa storta, pensiero gli scappa di tasca'. Da raffinare in D. Quota saga detti popolari Fiamma: S1 gia uno, qui secondo.",
+    "FRASE_PRECISA_MEMOLO_UNA — 'Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.' Detta nel cortile mentre infila la scatoletta in tasca senza guardarla. Ritmo gia settenario-ottonario nella seconda meta. Da affinare in D controllando che la scansione regga ad alta voce. Non deve sembrare saggia-cosciente di esserlo.",
+    "PARONOMASTICO_FISICO_MEMOLO_CANDIDATO — sciarpa annodata male / sciarpa storta / riannoda-aggroviglia. 1 di max 2 in saga. In alternativa o congiunzione con S8. Suggerimento: qui leggero (sciarpa sistemata molte volte), S8 pieno (Memolo rotola/aggroviglia confuso).",
+    "MEMORIA_LUNGA_NARRATORE_UNO_DUE_INCISI — sul quattro-quartieri attraversati in un giorno, sulla rete di passi dell'isola che oggi si e attivata. Zona 2 memoria-lunga del narratore. Nessun inciso su Zona 1 mitica.",
+    "NO_ADDRESS_AL_LETTORE — quota saga: S4 gia uno, il prossimo e S7. Qui zero.",
+    "NO_FRASE_FIRMA_NARRATORE — quota saga: 1 max 2 in tutta saga, posizionata in S1 e/o S12. Qui zero.",
+    "NO_FRAMMENTO_GRUNTO — Grunto non in scena, non menzionato. Vincolo rispettato.",
+    "SIGILLO_NARRATORE_CHIUSURA — non aggiunge regola, non spiega Pattern A. Immagine: sole pomeriggio inoltrato, cortile di Memolo, rete di passi. Evitare aggettivi morali. Aggettivi fisici.",
+    "LINGUA_DEI_FRATELLI — italiano standard, parlano poco in questa storia (piu gesti). Elias parla piu degli altri. Gabriel frasi brevi decisionali. Noah quasi zero parole.",
+    "LINGUA_CUCCIOLI — Pun italiano standard come i fratelli (Carta §1.2). Frasi brevi."
+  ],
+  "structural_notes": [
+    "CHIUSURA_BLOCCO_B_CONNETTERE_COMPIUTO. S4 connettere in ascolto (radici), S5 connettere in azione fisica (ponte), S6 connettere come cura muta della rete (giro + capire-e-tirarsi-indietro). Tre forme del connettere completate. Il blocco B chiude installando nei fratelli una capacita relazionale a tre livelli: ascoltare il mondo (S4), costruire insieme (S5), sentire quando farsi da parte (S6). Apre blocco C che invece apre crepe — ⟳ cambiare come sentire cose che si muovono sotto.",
+    "PRIMO_GIRO_COMPLETO_QUATTRO_QUARTIERI. S6 e la prima storia in cui i fratelli attraversano tutti e quattro i quartieri in una giornata (anche se escludono Pascoli). Est, Ovest, Centro toccati in sequenza ordinata. Eco strutturale del mandala silenzioso (mai detto). Si attivera di nuovo in S11 (festa raccolto) e S12 (Concerto). Il mandala si attiva tre volte nella saga: S6 (cura), S11 (festa), S12 (chiusura).",
+    "NOAH_RESISTENZA_FISICA_16KM. Il giro quattro-quartieri copre circa 16 km in un giorno — distanza reale dentro l'Atlante isola (circa 8x7 km). Per la fascia d'eta di Noah e distanza al limite. In Fase D sottolineare la fatica pomeridiana con gesti silenziosi dei fratelli (Elias tiene mano un tratto, Gabriel rallenta passo, pausa al Mercato). I cornetti di Fiamma = carburante reale della giornata. Rinforza ⇄ in azione fisica ancora prima del cespuglio. Solo realismo fisico, non pattern narrativo da grafo.",
+    "MECCANICA_ISTITUITA_MEMOLO_FRASE_PRECISA. Una a storia quando Memolo compare. Qui istituita. Ricorre in S8. Opzionale in S11. Vincolo Bible §4.7. Sempre detta con gesto distratto, mai con enfasi, sempre seguita o preceduta da confusione. Non e seme autonomo ma meccanica del personaggio tracciata qui — se in S11 si ripete ancora potrebbe promuoversi a seed.",
+    "MECCANICA_ISTITUITA_PUN_PONTE_VERSO_PADRE. Pun come cucciolo della memoria pratica e ponte verso Memolo. Qui mostrato senza essere raccontato: Pun conosce suo padre meglio di chiunque. Sull'isola i fratelli umani sono i tre centrali ma il mondo ha le sue famiglie di sangue che i fratelli rispettano e non invadono. Mai dichiarata la differenza tra fratellanza-isola e sangue — si mostra solo nei gesti. In S11 Pun cammeo vicino al padre conferma la meccanica. Non seed autonomo ma relazione istituita.",
+    "PATTERN_A_DUE_IMMAGINI_UNA_GERARCHIA. Il cornetto briciole e immagine portante Pattern A di S6 (seed tracciato). Il dente da latte custodito da Memolo e eco secondaria — cuore emotivo della storia ma non veicolo Pattern A. Entrambe le immagini convivono senza conflitto: una silente e chiude, l'altra aperta e tiene insieme. Il rilettore potrebbe leggere entrambe come Pattern A ma la portante tracciata nel grafo e solo il cornetto.",
+    "VECCHIE_FIRMA_GESTUALE_ISTITUITA. Prima volta in saga che le Vecchie del Mercato compaiono con gesto definito (indicare in silenzio). Vincolo Bible §4.19 rispettato: mai individuate, mai nome, mai parole, mai agency propria. Il gesto tornera con peso crescente: S8 una alza mano quando noce cade (cammeo), S11 bloom forte riconoscimento muto collettivo per Elias (paura accettata). La chiave dello strato 3 per Elias si istituisce qui in modo quasi invisibile.",
+    "CHIUSURA_DEBITO_S2_MESSAGGIO_PASTORI. Risoluzione implicita via Gabriel conosce le distanze. Il debito si chiude senza menzione esplicita. Lettore non nota nulla. Grafo ha chiuso il loop. Tipo di chiusura silenziosa coerente con voce Ray — le cose nel mondo continuano anche quando non sono raccontate.",
+    "SEED_PICKUP seed_noah_raccoglie_oggetti (primo_uso_gesto_firma_en_passant) — Primo uso in saga del gesto-firma di Noah nel modo canonico 'cammina e raccoglie'. In S1 il bastoncino era stato raccolto ma era oggetto singolo e centrale. Qui il gesto diventa abitudine silenziosa: due bastoncini raccolti e buttati nel corso della giornata, tenuti distrattamente in mano, mai commentati. Istituzione del tic.",
+    "SEED_PICKUP seed_stria_vede_prima (archetipo_riconfermato_nella_cornice_scolastica) — Stria vede che Pun ha detto qualcosa di importante e non interviene subito — rilancia con una sola frase, poi torna alla lezione. Archetipo istituito in S2 qui si ripete in modalità scuola. Non è bloom — il bloom vero è in S11.",
+    "SEED_MATURING seed_paura_elias_piccolo (capire_senza_avere_micro_eco) — Seme piantato in S2 (Elias si vede piccolo nel riflesso della pozza). Qui matura in variante leggera: Elias trova la scatoletta insieme a Pun, vede il dente, capisce in un attimo ma è Pun a chiudere col padre. Elias si tira indietro senza che nessuno lo veda. Sotto-traccia: 'capire le cose degli altri silenziosamente non si vede' — eco della paura di non essere abbastanza che in S11 si risolverà nel riconoscimento muto delle Vecchie. Qui è solo una maturazione leggera, sotto-traccia del vero bloom S11."
+  ],
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s06_h1",
+        "moment": "mattino_presto",
+        "location": {
+          "id": "scuola_stria",
+          "qualifier": "aula_apertura",
+          "legacy_string": "scuola_stria_aula_apertura"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "pun",
+          "stria"
+        ],
+        "elements": [
+          "FONTE_LEGACY: cornice_apertura_aula_scuola_stria_pun_che_parla_a_mezza_voce_fratelli_seduti_stria_dalla_cattedra_che_alza_un_attimo_gli_occhi_poi_torna_alla_lezione",
+          "Pun parla a mezza voce ai fratelli seduti",
+          "Stria dalla cattedra alza un attimo gli occhi, poi torna alla lezione"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Pun chiede ai fratelli aiuto per Memolo che ha perso una cosa; Stria osserva senza intervenire (rilancia non risponde, archetipo)",
+        "focal_object": "scena_apertura_aula",
+        "atmosphere": "scuola_quieta_di_mattina_richiesta_sottovoce_tra_pari",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h2",
+        "moment": "mattino",
+        "location": {
+          "id": "forno",
+          "qualifier": "tappa_uno_giro",
+          "legacy_string": "forno_di_fiamma_tappa_uno_giro"
+        },
+        "quadrant": "fuoco_est",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "fiamma"
+        ],
+        "elements": [
+          "FONTE_LEGACY: forno_di_fiamma_luce_calda_del_mattino_cornetti_sul_banco_fiamma_parla_e_impasta_allo_stesso_tempo_mani_bianche_di_farina_noah_intasca_due_cornetti_uno_nel_taschino_giacca",
+          "Luce calda del mattino, cornetti sul banco",
+          "Fiamma parla e impasta allo stesso tempo, mani bianche di farina",
+          "Noah intasca due cornetti, uno nel taschino giacca"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Fiamma in modalita' chiacchiera con detto popolare en passant; cornetti sul banco; Noah ne intasca due",
+        "focal_object": "cornetti_sul_banco",
+        "atmosphere": "forno_caldo_chiacchiera_di_fiamma_seed_briciole_pattern_a_rinforzo",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h3",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "casa_salvia",
+          "qualifier": "tappa_due_giro_soglia",
+          "legacy_string": "casa_di_salvia_tappa_due_giro_soglia"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "salvia"
+        ],
+        "elements": [
+          "FONTE_LEGACY: casa_di_salvia_erbe_ordinate_per_file_sacchettino_di_tiglio_appeso_ad_asciugare_salvia_ferma_sulla_soglia_mano_breve_sguardo_attento",
+          "Erbe ordinate per file, sacchettino di tiglio appeso ad asciugare",
+          "Salvia ferma sulla soglia, mano breve, sguardo attento"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa due del giro: Salvia sulla soglia con mano breve (cornice pianta nominata diversa da s04, callback cb_s06_002)",
+        "focal_object": "sacchettino_tiglio_appeso",
+        "atmosphere": "casa_salvia_ordinata_calma_pratica_pianta_diversa_da_s4",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h4",
+        "moment": "tarda_mattina",
+        "location": {
+          "id": "casa_zolla",
+          "qualifier": "tappa_tre_giro_dispensa",
+          "legacy_string": "casa_di_zolla_tappa_tre_giro_dispensa"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "zolla"
+        ],
+        "elements": [
+          "FONTE_LEGACY: casa_di_zolla_dispensa_aperta_ghiande_in_ciotola_zolla_piegata_a_controllare_qualcosa_risponde_senza_alzarsi",
+          "Dispensa aperta, ghiande in ciotola",
+          "Zolla piegata a controllare qualcosa, risponde senza alzarsi"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa tre: Zolla risponde senza alzarsi (vincolo mai_scene_veloci_o_concitate). Dispensa con ghiande, qualcosa in tasca forse.",
+        "focal_object": "ghiande_in_ciotola",
+        "atmosphere": "tana_zolla_quieta_lenta_pragmatica",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h5",
+        "moment": "mezzogiorno",
+        "location": {
+          "id": "panca_di_pietra",
+          "qualifier": "tappa_quattro_giro_vecchie_indicano",
+          "legacy_string": "mercato_del_mezzogiorno_panca_di_pietra_contro_il_muro_sud"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "vecchie_del_mercato"
+        ],
+        "elements": [
+          "FONTE_LEGACY: mercato_del_mezzogiorno_panca_di_pietra_contro_il_muro_sud_vecchie_sedute_in_fila_scialli_grigi_marroni_una_alza_un_dito_gesto_minimo_indica_verso_l_albero_vecchio_le_altre_annuiscono",
+          "Panca di pietra contro il muro sud",
+          "Vecchie sedute in fila, scialli grigi-marroni",
+          "Una alza un dito (gesto minimo) e indica verso l'Albero Vecchio",
+          "Le altre annuiscono"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Tappa quattro: Vecchie indicano in silenzio (firma gestuale istituita, seed_vecchie_indicare_in_silenzio piantato)",
+        "focal_object": "dito_che_indica_albero_vecchio",
+        "atmosphere": "mercato_quieto_indicazione_silenziosa_via_dito_minimo_seed_pattern_a_rinforzo",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h6_signature",
+        "moment": "primo_pomeriggio",
+        "location": {
+          "id": "cespuglio_dietro_albero_vecchio",
+          "qualifier": "trovamento_scatoletta",
+          "legacy_string": "cespuglio_dietro_albero_vecchio_trovamento_scatoletta"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "elias",
+          "pun"
+        ],
+        "elements": [
+          "FONTE_LEGACY: cespuglio_dietro_albero_vecchio_elias_e_pun_chinati_scatoletta_di_legno_scuro_semplice_dente_da_latte_piccolo_bianco_unico_riflesso_freddo_nella_tavolozza_calda_della_giornata",
+          "Elias e Pun chinati",
+          "Scatoletta di legno scuro semplice",
+          "Dente da latte piccolo bianco — unico riflesso freddo nella tavolozza calda della giornata"
+        ],
+        "palette": "tavolozza_calda_giornata_unico_riflesso_freddo_dente",
+        "notes": null,
+        "focal_action": "Elias e Pun trovano la scatoletta col dente da latte di Memolo; Pun riconosce il dente, Elias capisce e si tira indietro (modulazione paura: capire-senza-avere)",
+        "focal_object": "scatoletta_dente_da_latte",
+        "atmosphere": "trovamento_silenzioso_capire_senza_avere_dente_unico_freddo_nel_caldo",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h7",
+        "moment": "pomeriggio_inoltrato",
+        "location": {
+          "id": "casa_memolo_cortile",
+          "qualifier": "chiusura_restituzione",
+          "legacy_string": "cortile_di_memolo_chiusura_restituzione"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "pun",
+          "memolo"
+        ],
+        "elements": [
+          "FONTE_LEGACY: cortile_di_memolo_sole_di_pomeriggio_inoltrato_ombra_lunga_della_casetta_tonda_memolo_in_piedi_sciarpa_di_sbieco_pun_che_gli_porge_la_scatoletta_memolo_che_la_apre_il_riso_di_sollievo_gli_altri_in_secondo_piano",
+          "Sole di pomeriggio inoltrato, ombra lunga della casetta tonda",
+          "Memolo in piedi, sciarpa di sbieco",
+          "Pun gli porge la scatoletta",
+          "Memolo la apre, riso di sollievo",
+          "Gli altri in secondo piano"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Pun restituisce la scatoletta a Memolo; riso di sollievo di Memolo; gabriel/elias/noah in secondo piano (chiusura blocco B per accumulo)",
+        "focal_object": "scatoletta_restituita",
+        "atmosphere": "chiusura_quieta_riso_sollievo_pomeriggio_lungo_ombre_basse",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s06_h8",
+        "moment": "pomeriggio_inoltrato_chiusura",
+        "location": {
+          "id": "casa_memolo_cortile",
+          "qualifier": "noah_ultimo_gesto",
+          "legacy_string": "noah_ultimo_gesto_briciole_cornetto_di_bru"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "noah"
+        ],
+        "elements": [
+          "FONTE_LEGACY: noah_ultimo_gesto_mano_che_si_apre_briciole_sul_palmo_resti_del_cornetto_di_bru_forse_lascia_cadere_forse_no_da_decidere_in_d",
+          "Noah ultimo gesto, mano che si apre",
+          "Briciole sul palmo: resti del cornetto di Bru (intascato in h2, condiviso off-screen con Bru)",
+          "Forse lascia cadere, forse no — da decidere in fase D"
+        ],
+        "palette": "",
+        "notes": null,
+        "focal_action": "Sigillo silenzioso di Noah: gesto del palmo che si apre con briciole del cornetto destinate a Bru (off-screen). Pattern A rinforzo (seed_cornetto_briciole_pattern_a_rinforzo).",
+        "focal_object": "briciole_cornetto_sul_palmo",
+        "atmosphere": "sigillo_silenzioso_seed_pattern_a_rinforzo_gesto_caratteriale_noah",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": true,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [],
+  "quartieri_attraversati": [
+    "centro_villaggio",
+    "fuoco_est",
+    "terra_ovest"
+  ],
+  "oggetti_simbolo_presenti": [],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "memolo",
+      "vincoli": [
+        "mai_sapiente_confuso_didattico",
+        "mai_due_frasi_precise_stessa_storia",
+        "mai_risolve_trama_chiudendo"
+      ]
+    },
+    {
+      "personaggio": "pun",
+      "vincoli": [
+        "mai_corregge_padre_con_tono_adulto",
+        "mai_sapientello"
+      ]
+    },
+    {
+      "personaggio": "stria",
+      "vincoli": [
+        "mai_lezione_morale_esplicita",
+        "mai_due_risposte_stessa_scena",
+        "mai_sopra_o_sotto_albero_vecchio",
+        "mai_commuovere_visibilmente"
+      ]
+    },
+    {
+      "personaggio": "fiamma",
+      "vincoli": [
+        "unica_detentrice_detti_popolari",
+        "detti_solo_in_modalita_chiacchiera",
+        "max_2_detti_per_storia",
+        "non_madre_default",
+        "mai_morale_in_corsivo",
+        "mai_sotto_albero_vecchio_solenne"
+      ]
+    },
+    {
+      "personaggio": "salvia",
+      "vincoli": [
+        "max_1_pianta_nominata_per_apparizione",
+        "mai_spiega_perche_pianta_funziona",
+        "mai_risolve_emotivamente"
+      ]
+    },
+    {
+      "personaggio": "zolla",
+      "vincoli": [
+        "mai_lezioni_ecologia",
+        "mai_nostalgia_ambientalista",
+        "mai_scene_veloci_o_concitate"
+      ]
+    }
+  ]
+}
