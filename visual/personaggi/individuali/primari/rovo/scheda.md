@@ -7,7 +7,7 @@ specie: tasso
 tipo_grafo: abitante_maggiore
 ruolo_saga: resistenza_che_protegge
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.rovo"]
 appare_in_storie: []
 relazioni:

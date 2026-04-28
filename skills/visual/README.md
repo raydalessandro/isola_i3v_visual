@@ -115,7 +115,7 @@ Frontmatter YAML strutturato (derivato da `pipeline_narrativa/story_graph.json` 
 - Luogo: `quartiere`, `cartografia.{feature_id, type_geo, status_geo, quarter, category, centroid_m_local, bbox_m_local, size_m_local, altitudine_m, geometry_type, parent_geo, children_geo, aliases_geo}`. Quando l'altitudine viene aggiunta al GeoJSON, basta rilanciare lo script di scaffolding e i frontmatter si aggiornano.
 - Oggetto: `relazioni.{associato_a_personaggio, associato_a_luogo}`.
 
-**Sezioni body** (tutte e 14 vanno compilate — vedi sotto-skill `compilatore.md` per il principio "completa, non rimuovere"):
+**Sezioni body** (14 sezioni; popolamento meccanico Bible→catalogo — vedi sotto-skill `compilatore.md`. Sezioni non coperte dalla Bible restano con placeholder uniforme `_da popolare dal grafo_`, da completare a posteriori da Ray):
 1. Identità visuale (sintesi)
 2. Aspetto / forma
 3. Abbigliamento / stato d'uso
@@ -176,17 +176,18 @@ Lo script è **idempotente**:
 - Su schede esistenti, **rigenera solo il frontmatter** (derivato da fonti) e **preserva il body** (lavoro umano/agenti).
 - Rigenera `visual/catalogo.md`.
 
-### Task B — Compilare body schede (estrazione)
+### Task B — Compilare body schede (travaso meccanico)
 
-Approccio: una famiglia per volta (personaggi → luoghi → oggetti → venti → visual_signatures), con sub-agenti dedicati per non saturare il contesto.
+Approccio: una famiglia per volta. Una entità per volta.
 
-Per ogni entità l'agente:
+Per ogni entità l'agente (vedi `compilatore.md` per dettaglio):
 1. Legge `scheda.md` esistente (frontmatter già popolato, body stub).
-2. Estrae da `pipeline_narrativa/story_graph.json` (entità + scene di apparizione + visual_anchors), Bible (sezioni rilevanti), `EAR_PERSONAGGI_*` (per personaggi), `cartografia/geo/island.geojson` (per luoghi), `MITI_FONDATORI_BREVI_v1.md` (se applicabile).
-3. Compila tutte le 14 sezioni body **citando ogni dato in "Riferimenti puntuali"**. Sezioni con dati canonici: scrivi il dato e cita la fonte. Sezioni con dati assenti dal canone: completa con inferenza marcata (`[inf]` o `[prop]`) — vedi sotto-skill `compilatore.md`.
-4. Stato: passa da `stub` a `provvisorio`.
-5. **Niente rimozione di sezioni.** In casi davvero non applicabili (es. "abbigliamento" per un vento), reinterpreta il campo in coerenza con la natura dell'entità.
-6. Disallineamenti rilevati: registrali nella sezione apposita, non risolverli in autonomia.
+2. **Travasa dalla Bible** i campi che corrispondono alle sezioni del template (mappa Bible→catalogo in `compilatore.md` §3-3bis).
+3. **Sezioni non coperte dalla Bible:** scrive `_da popolare dal grafo_` come unico contenuto. Niente inferenze, niente proposte.
+4. **"Storie / scene di apparizione":** lista automatica dal grafo (deterministico, non inferenza).
+5. **Riferimenti puntuali:** cita ogni dato canonico riportato (path + ancora).
+6. **Disallineamenti:** segnala conflitti senza risolverli.
+7. Stato: passa da `stub` a `provvisorio` (auto-inferito dallo script al rilancio).
 
 ### Task C — Generare immagine di riferimento
 

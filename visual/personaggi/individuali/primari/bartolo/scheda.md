@@ -7,7 +7,7 @@ specie: tartaruga_di_mare_anziana
 tipo_grafo: abitante_maggiore
 ruolo_saga: dilatazione_del_tempo
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.bartolo"]
 appare_in_storie: []
 relazioni:

@@ -7,7 +7,7 @@ specie: lepre
 tipo_grafo: abitante_minore_mestiere
 ruolo_saga: cura_concreta_che_educa
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.salvia"]
 appare_in_storie: []
 relazioni:

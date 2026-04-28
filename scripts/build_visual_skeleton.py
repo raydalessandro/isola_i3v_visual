@@ -23,6 +23,11 @@ import math
 from pathlib import Path
 from datetime import date
 
+try:
+    import yaml  # PyYAML — usato per parsing del frontmatter esistente in update-mode
+except ImportError:
+    yaml = None
+
 ROOT = Path(__file__).resolve().parent.parent
 GRAPH_PATH = ROOT / "pipeline_narrativa" / "story_graph.json"
 GEO_PATH = ROOT / "cartografia" / "geo" / "island.geojson"
@@ -333,32 +338,62 @@ Registri d'uso testuale, tono, parole-chiave da usare/evitare.
     return fm + "\n" + body
 
 
+def infer_status_from_body(body: str, current_status: str | None) -> str:
+    """Auto-inferenza dello status in base al body.
+
+    - Se gia' impostato a 'canonico' (Ray ha promosso manualmente): rispetta.
+    - Body con righe '[stub' (template iniziale) -> 'stub'.
+    - Body popolato (anche con placeholder uniforme '_da popolare dal grafo_') -> 'provvisorio'.
+    - Default: 'stub' (caso edge: body vuoto).
+    """
+    if current_status == "canonico":
+        return "canonico"
+    if not body or not body.strip():
+        return "stub"
+    # Considero stub se contiene placeholder originali del template
+    if "[stub —" in body or "[stub " in body or "[stub]" in body:
+        # ma se NON ha SOLO stub e ha anche contenuto reale, e' provvisorio
+        non_stub_lines = [
+            ln for ln in body.split("\n")
+            if ln.strip() and not ln.strip().startswith("[stub") and not ln.strip().startswith("#") and ln.strip() != "---"
+        ]
+        if len(non_stub_lines) > 5:
+            return "provvisorio"
+        return "stub"
+    return "provvisorio"
+
+
 def write_scheda(folder: Path, meta: dict):
     """Crea folder + scheda.md (creato o frontmatter aggiornato) + immagini/.gitkeep.
 
     Comportamento idempotente:
     - Se scheda.md NON esiste: la crea per intero (frontmatter + body stub).
-    - Se scheda.md esiste: rigenera SOLO il frontmatter (derivato da grafo+GeoJSON),
-      preserva il body (lavoro umano/agenti).
+    - Se scheda.md esiste: rigenera SOLO il frontmatter (derivato da grafo+GeoJSON
+      + status auto-inferito dal body), preserva il body.
     """
     folder.mkdir(parents=True, exist_ok=True)
     scheda = folder / "scheda.md"
     if not scheda.exists():
         scheda.write_text(render_scheda(meta), encoding="utf-8")
     else:
-        # Update-mode: sostituisci frontmatter, preserva body
+        # Update-mode: sostituisci frontmatter, preserva body, auto-infer status
         existing = scheda.read_text(encoding="utf-8")
         # Trova il body dopo il secondo ---
+        body = existing
+        current_fm = {}
         if existing.startswith("---\n"):
             end_idx = existing.find("\n---\n", 4)
             if end_idx != -1:
+                fm_text = existing[4:end_idx]
                 body = existing[end_idx + len("\n---\n"):]
-            else:
-                # Frontmatter non chiuso, tratta tutto come body
-                body = existing
-        else:
-            # Nessun frontmatter, tutto e' body
-            body = existing
+                if yaml is not None:
+                    try:
+                        current_fm = yaml.safe_load(fm_text) or {}
+                    except Exception:
+                        current_fm = {}
+        # Auto-infer status
+        meta = dict(meta)  # copia per non mutare l'originale
+        meta["status"] = infer_status_from_body(body, current_fm.get("status"))
         # Costruisci nuovo frontmatter
         new = render_scheda(meta)
         new_end = new.find("\n---\n", 4)

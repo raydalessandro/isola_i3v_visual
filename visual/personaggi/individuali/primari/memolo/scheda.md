@@ -7,7 +7,7 @@ specie: riccio
 tipo_grafo: abitante_maggiore
 ruolo_saga: cambio_di_registro_colpo_di_coda
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.memolo"]
 appare_in_storie: []
 relazioni:

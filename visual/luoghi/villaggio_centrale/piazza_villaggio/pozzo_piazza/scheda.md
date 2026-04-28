@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: landmark
 quartiere: centro
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.pozzo_piazza", "cartografia/geo/island.geojson#features.id=pozzo_piazza"]
 appare_in_storie: []
 cartografia:

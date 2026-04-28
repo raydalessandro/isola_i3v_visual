@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: work_area
 quartiere: terra
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=zona_di_lavoro_salvia"]
 appare_in_storie: []
 cartografia:

@@ -3,7 +3,7 @@ id: quando_acqua_trema
 name: Quando Acqua Trema
 famiglia: visual_signature
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.visual_signatures.quando_acqua_trema"]
 appare_in_storie: []
 ---

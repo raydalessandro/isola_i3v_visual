@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: river_system
 quartiere: perimetro
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.fiume_che_gira", "cartografia/geo/island.geojson#features.id=fiume_che_gira"]
 appare_in_storie: []
 cartografia:

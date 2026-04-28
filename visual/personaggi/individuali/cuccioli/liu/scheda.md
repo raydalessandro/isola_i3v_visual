@@ -6,8 +6,8 @@ sottotipo: cuccioli
 specie: libellulina
 tipo_grafo: cucciolo_scuola
 ruolo_saga: presenza_aerea_discreta
-status: stub
-ultima_modifica: 2026-04-25
+status: provvisorio
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.liu"]
 appare_in_storie: []
 relazioni:
@@ -20,120 +20,91 @@ relazioni:
 
 # Liu
 
-> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il 2026-04-25 con metodo "compilatore" (completa-non-rimuovere). Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-26. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-Libellulina minuscola, lunga come il dito di un bambino. Ali trasparenti con riflessi azzurro-verdi, corpo sottile come un fuscello, occhi grandissimi rispetto alla taglia. Appare e sparisce in fretta — entra in scena con un *frrr* d'ali rapide, dice una frase, riparte. Messaggera informale dell'isola e occhio del lettore-bambino.
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-- **Taglia:** ~5-7 cm di lunghezza, scala "dito di un fratello" (Bible §4.17). Corpo allungato e sottile, paragonato a un fuscello.
-- **Ali:** quattro, trasparenti, con riflessi azzurro-verdi che cambiano col taglio della luce.
-- **Occhi:** sproporzionatamente grandi rispetto alla testa — caratteristica delle libellule reali, accentuata.
-- **Volo:** velocissimo a tratti rettilinei, capace di **stop assoluto a mezz'aria** (hover immobile), ripartenza di scatto.
+Minuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto.
 
 ## Abbigliamento / stato d'uso
 
-Liu non porta abiti propriamente detti — è una libellula dell'isola, non antropomorfa nel vestiario. La sezione viene reinterpretata come **stato del corpo** ed eventuali **accessori effimeri**.
-
-- **Stato delle ali:** in saga sempre intatte e perfettamente operative; nessun graffio o membrana lacerata. `[inf]` da apparizioni S6/S8/S9/S12 dove vola sempre normalmente con *frrr* regolare, hover immobile, ripartenza di scatto — niente segnali di danno.
-- **Marcature dell'addome:** sottili bande cromatiche più scure del corpo lungo i segmenti, coerenti con anatomia di libellula reale. `[prop]` pattern visivo che rende Liu riconoscibile anche di profilo o controluce; da fissare prima di generare i modelli IA per garantire continuità cross-scena.
-- **Accessori effimeri:** occasionalmente granelli di polline, particelle di farina (quando passa al Forno), o frammenti vegetali raccolti in volo. `[prop]` non identificativi: variano per scena, utili per IA generative a differenziare apparizioni senza rompere coerenza.
-- **Stato di pulizia:** sempre asciutta. `[inf]` da Bible §4.17 (si appende a cornicioni, foglie, davanzali — superfici asciutte) e da S8 (arriva *prima* del picco Mulinello, non durante; evita pioggia/vento forte).
-
-**Notazione per IA / 3D:** l'iridescenza azzurro-verde delle ali è il dettaglio più caratterizzante; lo stato delle ali sempre intatto la distingue da libellule selvatiche più vissute.
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-- Modalità di base: **moto perpetuo** salvo brevi soste in hover per parlare.
-- Suono caratteristico: piccolissimo *frrr* del battito d'ali (non rumore di insetto fastidioso, frequenza sottile).
-- Si appende a **cornicioni**, foglie sopra le teste, davanzali — abitanti la dimenticano lì e parlano: lei sente.
-- Postura comunicativa: hover frontale, una frase, ripartenza. **Mai resta in scena a lungo.**
-- Sceglie cosa ridire e cosa no. Non è pettegola.
-- Funzione narrativa: **collegamento tra scene** (porta notizie da un quartiere all'altro), **occhio del bambino-lettore** (proiezione del lettore dentro l'isola).
+Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì. Porta notizie — non come Stria che è messaggera ufficiale, ma in modo informale. Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.
+
+Sceglie cosa ridire e cosa no. Non è pettegola.
 
 ## Palette e atmosfera
 
-Cromatismi dominanti: **trasparenze ali + iridescenze azzurro-verdi**, in contrasto con i colori opachi dell'ambiente abitato (legno, terra, pietra). Quando attraversa una scena, la sua presenza è un baluginio rapido più che una figura ferma. In S8 entra in **fase cielo piombo** (prima del picco): la sua iridescenza diventa segno visivo del cambio di luce.
+_da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-- **Scuola di Stria** — frequenta "a modo suo": vola sopra il tetto, ascolta da fuori, entra qualche volta (non sta seduta come gli altri cuccioli).
-- **Forno di Fiamma** — destinazione ricorrente delle sue rotte (porta notizie a Fiamma).
-- **Finestre, cornicioni, davanzali, foglie alte** — punti di sosta tipici.
-- **Tutta l'isola** — copre lunghe distanze in tempi brevi (capacità di volo).
+Frequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta). Sta sulle foglie sopra le teste degli abitanti.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-- Taglia minuscola (dito di un fratello).
-- Ali trasparenti azzurro-verdi.
-- Suono *frrr* del battito.
-- Quota frase: **una frase per scena, breve** (non monologa mai).
-- Permanenza scenica brevissima (entra → dice → esce).
-- Non è pettegola: filtra cosa dire.
+Taglia minuscola (lunga come un dito di un fratello). Ali trasparenti con riflessi azzurro-verdi. Corpo sottile come un fuscello. Occhi grandissimi per la sua taglia. Volo velocissimo con stop in aria immobile e ripartenza di scatto. Battito d'ali con suono *frrr*.
 
 ## Variabilità ammessa
 
-- Destinazione del volo (forno, scuola, finestra fratelli, ecc.).
-- Ora del giorno (mattino, sera, alba — varia per storia).
-- Tono della frase (curiosità, ipotesi, invito) — purché breve.
+_da popolare dal grafo_
 
 ## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md` + vincoli Bible §4.17.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-- **Mai "fatina luminosa"** — non è creatura magica, è una libellula reale dell'Isola.
-- **Mai pettegola per cattiveria** — il filtraggio di cosa ridire è morale, non comico-meschino.
-- **Mai voce comica in scene serie** (es. S8 "Forse l'acqua trema" è ipotesi inquieta, non battuta).
-- **Mai sa cose che il narratore ha esplicitamente nascosto al lettore** — il suo sapere è limitato a ciò che ha visto/sentito sull'isola.
-- **Mai resta in scena a lungo** — niente dialoghi prolungati, niente Liu seduta a chiacchierare.
-- **Mai "occhietti che brillano di saggezza"**, "messaggera misteriosa", "antichi presagi". Lei è informale, terrena, libellula.
+Da Bible §4.17 "Note e vincoli":
+- Mai Liù che resta in scena a lungo — entra, dice, va.
+- Mai Liù che fa la pettegola per cattiveria.
+- Mai Liù in scene serie come voce comica.
+- Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.
 
 ## Per stampa 3D
 
-- **Scala:** mini, ~5-7 cm. In quadri di gruppo va modellata come accento, non come figura paritetica con i fratelli.
-- **Volume:** corpo cilindrico molto sottile (~2 mm di diametro), ali piatte 4 unità, testa quasi sferica con occhi composti grandi.
-- **Pose canoniche per le 4 vedute:** posizione raccomandata in **hover frontale ad ali aperte** (frontale e profili) + posizione **di scatto in volo** (per la veduta posteriore — visibile la coda allungata).
-- **Materiali consigliati:** ali in resina trasparente con tinta iridescente; corpo in pittura azzurro-verde-grigia.
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-- **Registro testuale:** sempre brevissimo. Una frase, mai più. Tipica forma a domanda aperta o ipotesi.
-- **Onomatopea:** *frrr* — usabile come marker testuale e visuale (post, didascalie).
-- **Pattern di apparizione:** "Liu vola via", "Liu si ferma sul cornicione", "Liu fa frrr e riparte" — formule corte e ricorrenti.
-- **Nelle didascalie social:** funziona come "voce del lettore-bambino" — può ospitare la domanda implicita di chi guarda.
-- **Tono da evitare:** mistero pomposo, saggezza ammiccante. Tono giusto: curiosità, leggerezza, ipotesi.
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-- **s06** — primo cammeo saga. "Frrr messaggera non veggente, una frase breve" (`s06.scene_hook`).
-- **s08** — entra in fase cielo piombo (prima del picco Mulinello forte). Si aggrappa al cornicione del Forno: *"Il vento sale forte stasera. Forse l'acqua trema."* — **prima menzione saga del fenomeno `quando l'acqua trema`** come ipotesi (lore-hook, non certezza). Modalità coerente con S6.
-- **s09** — vola dalla scuola al Forno **prima dei fratelli** (canonico). I cuccioli a scuola la sentono passare; lei porta notizia a Fiamma.
-- **s10** — assente.
-- **s11** — assente esplicita (discrepanza archi tabella vs dettaglio risolta a favore "assente", `s11.note`).
-- **s12** — apertura saga simmetrica (S1 ↔ S12). Vola alla finestra dei fratelli col suo *frrr*: *"Oggi suonano. Andate?"*. **Prima a chiamare il fenomeno "suonano"** — installa il nome canonico del Concerto dei Tre Venti (deferred #22 chiuso).
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: cammeo volante, messaggera — prima apparizione vera.
+- s07: assente.
+- s08: messaggera aerea — annuncio del fenomeno raro come ipotesi ("Forse l'acqua trema").
+- s09: cucciolo scuola, presenza aerea, fonte informale di notizia (vola da scuola al Forno).
+- s10: assente.
+- s11: assente esplicita (discrepanza archi tabella vs dettaglio risolta a favore "assente").
+- s12: cammeo di apertura, portatrice di notizie — prima a chiamare il fenomeno "suonano" (nome installato del Concerto).
 
 ## Disallineamenti / domande aperte
 
-- **Nome canonico:** Bible §4.17 usa **"Liù"** (con accento grave). Grafo usa id `liu` senza accento e non ha campo `name` esplicito, quindi lo script genera `name: Liu`. Decisione: il display name dovrebbe essere **Liù**? Se sì, il fix va nel grafo (`entities.characters.liu.name = "Liù"`), poi rilanciare lo script visual per propagare.
-- **Apparizioni non documentate:** S1-S5, S7, S10 non hanno menzione di Liu. È intenzionale (cuccioli compaiono dal blocco B in poi)? Confermare con Ray.
-- **Genitori:** Bible dice "non in scena". Restano fuori canone visivo? Confermare.
+- Bible §4.17 usa **"Liù"** (con accento grave). Grafo usa id `liu` senza accento e non ha campo `name` esplicito; lo script genera `name: Liu`. Il display name dovrebbe essere **Liù**? Se sì, il fix va nel grafo (`entities.characters.liu.name = "Liù"`) e poi rilancio dello script visual per propagare.
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-- `pipeline_narrativa/story_graph.json#entities.characters.liu`: `species: libellulina`, `type: cucciolo_scuola`, `role_saga: presenza_aerea_discreta`, `constraints: []`.
-- `ISOLA_TRE_VENTI_BIBLE_v2.md` §4.17 LIÙ:
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.17 LIÙ:
   - "Libellulina. Genitori non in scena. Frequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta)."
   - "Minuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto."
   - "Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì."
   - "Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*."
   - "Sceglie cosa ridire e cosa no. Non è pettegola."
-  - Voci tipiche: *"Ho sentito che."* / *"Indovina chi è dal forno adesso."* / *"Aspetta, vado a vedere."* / *"Torno!"*
-  - "Cucciola della **informazione veloce**. Collegamento tra le scene. Funzione anche di **occhio del bambino-lettore** — è una proiezione del lettore-bambino dentro l'isola."
-  - Vincoli: "Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore."
-- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[liu]`: "frrr_messaggera_non_veggente_una_frase_breve".
-- `pipeline_narrativa/story_graph.json#stories.s08`: "Liu passa con frrr modalita coerente con prima apparizione S6. Porta annuncio fenomeno raro 'forse l'acqua trema' come ipotesi (non certezza). Prima menzione saga — 1 di 2 in saga."
-- `pipeline_narrativa/story_graph.json#stories.s09.scene_hook`: "cuccioli sentono Liu vola al forno"; "liu_precede_fratelli_al_forno_canonico_chiude_ipotesi_d_archi_8".
+  - Note e vincoli: "Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore."
+- `pipeline_narrativa/story_graph.json#entities.characters.liu`: `species: libellulina`, `type: cucciolo_scuola`, `role_saga: presenza_aerea_discreta`, `constraints: []`.
+- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[liu].scene_role`: "cammeo_volante_messaggera_prima_apparizione_vera".
+- `pipeline_narrativa/story_graph.json#stories.s08.characters_in_scene[liu].scene_role`: "messaggera_aerea_annuncio_fenomeno_raro_come_ipotesi".
+- `pipeline_narrativa/story_graph.json#stories.s09.characters_in_scene[liu].scene_role`: "cucciolo_scuola_presenza_aerea_fonte_informale_notizia".
 - `pipeline_narrativa/story_graph.json#stories.s11`: "LIU_ASSENTE_S11_DISCREPANZA_ARCHI_TABELLA_VS_DETTAGLIO_RISOLTA_DETTAGLIO_WINS".
-- `pipeline_narrativa/story_graph.json#stories.s12`: "Liu prima a chiamarlo 'suonano' - implica fenomeno gia noto agli abitanti"; callback `cb_s12_008_liu_mestiere_informale_apertura_concerto_oggi_suonano_nome_installato`; visual_anchor: "liu_appena_volata_via_frrr_oggi_suonano_andate_interrogativo".
+- `pipeline_narrativa/story_graph.json#stories.s12.characters_in_scene[liu].scene_role`: "cammeo_apertura_portatrice_notizie_prima_a_chiamarlo_suonano_nome_installato".

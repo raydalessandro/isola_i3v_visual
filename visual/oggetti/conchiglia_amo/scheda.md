@@ -4,7 +4,7 @@ name: Conchiglia Amo
 famiglia: oggetto
 sottotipo: null
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.conchiglia_amo"]
 appare_in_storie: []
 relazioni:

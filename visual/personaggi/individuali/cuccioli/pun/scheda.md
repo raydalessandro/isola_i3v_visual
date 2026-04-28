@@ -7,7 +7,7 @@ specie: riccino
 tipo_grafo: cucciolo_scuola
 ruolo_saga: memoria_pratica_intuizione_laterale
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.pun"]
 appare_in_storie: []
 relazioni:

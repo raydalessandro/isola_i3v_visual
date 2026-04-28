@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: forest
 quartiere: terra
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.foresta_intrecciata", "cartografia/geo/island.geojson#features.id=foresta_intrecciata"]
 appare_in_storie: []
 cartografia:

@@ -6,7 +6,7 @@ sottotipo: strada
 categoria_strada: sentiero_inter_quartiere
 quartiere: centro
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_forno_orti_diretto"]
 appare_in_storie: []
 cartografia:

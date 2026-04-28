@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T09:21:44",
+  "generated_at": "2026-04-28T07:10:32",
   "totals": {
     "totale": 112,
     "luogo": 72,
@@ -9,7 +9,8 @@
     "visual_signature": 1
   },
   "by_status": {
-    "stub": 112
+    "stub": 111,
+    "provvisorio": 1
   },
   "tree": {
     "luoghi": {
@@ -1234,7 +1235,7 @@
                     "name": "Liu",
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
-                    "status": "stub",
+                    "status": "provvisorio",
                     "n_images": 0,
                     "folder_path": "visual/personaggi/individuali/cuccioli/liu"
                   }
@@ -1470,7 +1471,7 @@
         "sottotipo": "coastal_belt",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.fascia_costiera",
           "cartografia/geo/island.geojson#features.id=fascia_costiera"
@@ -1530,7 +1531,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_braccio_est"
         ],
@@ -1590,7 +1591,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_braccio_ovest_alto"
         ],
@@ -1650,7 +1651,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_braccio_ovest_basso"
         ],
@@ -1710,7 +1711,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_braccio_ovest_medio"
         ],
@@ -1770,7 +1771,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_capo"
         ],
@@ -1830,7 +1831,7 @@
         "sottotipo": "river",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=fiume_stretta_due_massi"
         ],
@@ -1890,7 +1891,7 @@
         "sottotipo": "ford",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.guado_di_pietre_piatte",
           "cartografia/geo/island.geojson#features.id=guado_di_pietre_piatte"
@@ -1953,7 +1954,7 @@
         "sottotipo": "river_system",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.fiume_che_gira",
           "cartografia/geo/island.geojson#features.id=fiume_che_gira"
@@ -2021,7 +2022,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_costiero_est"
         ],
@@ -2096,7 +2097,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_costiero_ovest"
         ],
@@ -2171,7 +2172,7 @@
         "categoria_strada": "sentiero_inter_quartiere",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_pontile_forno"
         ],
@@ -2246,7 +2247,7 @@
         "categoria_strada": "sentiero_costeggiante",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_riva_est_parziale"
         ],
@@ -2322,7 +2323,7 @@
         "categoria_strada": "sentiero_costeggiante",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_riva_ovest"
         ],
@@ -2397,7 +2398,7 @@
         "categoria_strada": "sentiero_inter_quartiere",
         "quartiere": "perimetro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_roccia_orti_tangenziale"
         ],
@@ -2472,7 +2473,7 @@
         "sottotipo": "river_mouth",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.bocca",
           "cartografia/geo/island.geojson#features.id=bocca"
@@ -2532,7 +2533,7 @@
         "sottotipo": "building",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.casa_amo",
           "cartografia/geo/island.geojson#features.id=casa_amo"
@@ -2592,7 +2593,7 @@
         "sottotipo": "building",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.case_basse_pescatori",
           "cartografia/geo/island.geojson#features.id=case_basse_pescatori"
@@ -2652,7 +2653,7 @@
         "sottotipo": "pier",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.pontile_bocca",
           "cartografia/geo/island.geojson#features.id=pontile_bocca"
@@ -2712,7 +2713,7 @@
         "sottotipo": "beach",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.spiaggia_conchiglie",
           "cartografia/geo/island.geojson#features.id=spiaggia_conchiglie"
@@ -2773,7 +2774,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_case_basse_bocca"
         ],
@@ -2849,7 +2850,7 @@
         "categoria_strada": "sentiero_secondario",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_pontile_case_basse"
         ],
@@ -2925,7 +2926,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_pontile_spiaggia"
         ],
@@ -3000,7 +3001,7 @@
         "categoria_strada": "sentiero_interno",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_ritorno_bocca_orti"
         ],
@@ -3076,7 +3077,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_scogliera_casa_amo"
         ],
@@ -3152,7 +3153,7 @@
         "categoria_strada": "sentiero_costiero",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_spiaggia_casa_amo"
         ],
@@ -3227,7 +3228,7 @@
         "sottotipo": "path",
         "quartiere": "acqua",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.via_del_pontile",
           "cartografia/geo/island.geojson#features.id=via_del_pontile"
@@ -3287,7 +3288,7 @@
         "sottotipo": "cave",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.grotta_grunto",
           "cartografia/geo/island.geojson#features.id=grotta_grunto"
@@ -3348,7 +3349,7 @@
         "sottotipo": "valley",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.burrone",
           "cartografia/geo/island.geojson#features.id=burrone"
@@ -3408,7 +3409,7 @@
         "sottotipo": "mountain_system",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.montagne_gemelle",
           "cartografia/geo/island.geojson#features.id=montagne_gemelle"
@@ -3471,7 +3472,7 @@
         "sottotipo": "fields",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.pascoli_alti",
           "cartografia/geo/island.geojson#features.id=pascoli_alti"
@@ -3531,7 +3532,7 @@
         "sottotipo": "landmark",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.roccia_alta",
           "cartografia/geo/island.geojson#features.id=roccia_alta"
@@ -3592,7 +3593,7 @@
         "categoria_strada": "sentiero_secondario",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_al_guado"
         ],
@@ -3667,7 +3668,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_capanne_pastori_pascoli"
         ],
@@ -3743,7 +3744,7 @@
         "categoria_strada": "sentiero_montano",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_pascoli_burrone_diretto"
         ],
@@ -3819,7 +3820,7 @@
         "categoria_strada": "sentiero_montano",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_roccia_burrone"
         ],
@@ -3893,7 +3894,7 @@
         "sottotipo": "path",
         "quartiere": "aria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.via_che_sale",
           "cartografia/geo/island.geojson#features.id=via_che_sale"
@@ -3953,7 +3954,7 @@
         "sottotipo": "building",
         "quartiere": "fuoco",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.case_del_mattino",
           "cartografia/geo/island.geojson#features.id=case_del_mattino"
@@ -4013,7 +4014,7 @@
         "sottotipo": "building",
         "quartiere": "fuoco",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.forno",
           "cartografia/geo/island.geojson#features.id=forno"
@@ -4074,7 +4075,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "fuoco",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_forno_case_mattino"
         ],
@@ -4150,7 +4151,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "fuoco",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_fuoco_ring"
         ],
@@ -4224,7 +4225,7 @@
         "sottotipo": "path",
         "quartiere": "fuoco",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.via_dell_alba",
           "cartografia/geo/island.geojson#features.id=via_dell_alba"
@@ -4284,7 +4285,7 @@
         "sottotipo": "burrow",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.casa_salvia",
           "cartografia/geo/island.geojson#features.id=casa_salvia"
@@ -4344,7 +4345,7 @@
         "sottotipo": "burrow",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.casa_zolla",
           "cartografia/geo/island.geojson#features.id=casa_zolla"
@@ -4404,7 +4405,7 @@
         "sottotipo": "clearing",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=radura_dei_pini"
         ],
@@ -4464,7 +4465,7 @@
         "sottotipo": "forest",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.foresta_intrecciata",
           "cartografia/geo/island.geojson#features.id=foresta_intrecciata"
@@ -4524,7 +4525,7 @@
         "sottotipo": "burrow",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.tana_rovo",
           "cartografia/geo/island.geojson#features.id=tana_rovo"
@@ -4585,7 +4586,7 @@
         "sottotipo": "stream",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.torrente_affluente_foresta",
           "cartografia/geo/island.geojson#features.id=torrente_affluente_foresta"
@@ -4646,7 +4647,7 @@
         "sottotipo": "work_area",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=zona_di_lavoro_salvia"
         ],
@@ -4706,7 +4707,7 @@
         "sottotipo": "fields",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.orti_del_cerchio",
           "cartografia/geo/island.geojson#features.id=orti_del_cerchio"
@@ -4767,7 +4768,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_casa_salvia_casa_zolla"
         ],
@@ -4844,7 +4845,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_casa_salvia_margine_foresta"
         ],
@@ -4921,7 +4922,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_casa_zolla_tana_rovo"
         ],
@@ -4998,7 +4999,7 @@
         "categoria_strada": "sentiero_foresta",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_foresta_traversata_ovest"
         ],
@@ -5074,7 +5075,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_orti_casa_salvia"
         ],
@@ -5150,7 +5151,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_orti_casa_zolla"
         ],
@@ -5226,7 +5227,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_orti_tana_rovo"
         ],
@@ -5302,7 +5303,7 @@
         "categoria_strada": "sentiero_foresta",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_orti_torrente_foresta"
         ],
@@ -5378,7 +5379,7 @@
         "categoria_strada": "sentiero_interno_quartiere",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_tana_rovo_casa_salvia"
         ],
@@ -5454,7 +5455,7 @@
         "sottotipo": "path",
         "quartiere": "terra",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.via_degli_orti",
           "cartografia/geo/island.geojson#features.id=via_degli_orti"
@@ -5514,7 +5515,7 @@
         "sottotipo": "landmark",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.casa_memolo_cortile",
           "cartografia/geo/island.geojson#features.id=casa_memolo_cortile"
@@ -5574,7 +5575,7 @@
         "sottotipo": "landmark",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.cespuglio_dietro_albero_vecchio",
           "cartografia/geo/island.geojson#features.id=cespuglio_dietro_albero_vecchio"
@@ -5636,7 +5637,7 @@
         "sottotipo": "landmark",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=panca_di_pietra"
         ],
@@ -5699,7 +5700,7 @@
         "sottotipo": "landmark",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.albero_vecchio",
           "cartografia/geo/island.geojson#features.id=albero_vecchio"
@@ -5760,7 +5761,7 @@
         "sottotipo": "landmark",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.pozzo_piazza",
           "cartografia/geo/island.geojson#features.id=pozzo_piazza"
@@ -5821,7 +5822,7 @@
         "sottotipo": "square",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.piazza_villaggio",
           "cartografia/geo/island.geojson#features.id=piazza_villaggio"
@@ -5883,7 +5884,7 @@
         "sottotipo": "building",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.scuola_stria",
           "cartografia/geo/island.geojson#features.id=scuola_stria"
@@ -5944,7 +5945,7 @@
         "categoria_strada": "sentiero_inter_quartiere",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=sentiero_forno_orti_diretto"
         ],
@@ -6020,7 +6021,7 @@
         "categoria_strada": "viottolo",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=viottolo_perimetrale_piazza"
         ],
@@ -6095,7 +6096,7 @@
         "categoria_strada": "viottolo",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=viottolo_piazza_bottega_nodo"
         ],
@@ -6171,7 +6172,7 @@
         "categoria_strada": "viottolo",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "cartografia/geo/island.geojson#features.id=viottolo_piazza_casa_memolo"
         ],
@@ -6246,7 +6247,7 @@
         "sottotipo": "path",
         "quartiere": "centro",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.locations.via_scuola",
           "cartografia/geo/island.geojson#features.id=via_scuola"
@@ -6305,7 +6306,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.bandana_rovo"
         ],
@@ -6340,7 +6341,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.bisaccia_zolla"
         ],
@@ -6375,7 +6376,7 @@
         "famiglia": "oggetto",
         "sottotipo": "oggetto_rituale_fatto_a_mano",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.braccialetto_s9"
         ],
@@ -6410,7 +6411,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.cesto_salvia"
         ],
@@ -6445,7 +6446,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.cicatrice_grunto"
         ],
@@ -6480,7 +6481,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.conchiglia_amo"
         ],
@@ -6515,7 +6516,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.corda_nodo"
         ],
@@ -6550,7 +6551,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.grembiule_fiamma"
         ],
@@ -6585,7 +6586,7 @@
         "famiglia": "oggetto",
         "sottotipo": "oggetto_pratico_di_casa",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.lanterna_velata_s10"
         ],
@@ -6620,7 +6621,7 @@
         "famiglia": "oggetto",
         "sottotipo": "oggetto_naturale_trovato",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.nido_vuoto_s08"
         ],
@@ -6655,7 +6656,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.pagnotta_forno"
         ],
@@ -6690,7 +6691,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.scialle_stria"
         ],
@@ -6725,7 +6726,7 @@
         "famiglia": "oggetto",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.objects.sciarpa_memolo"
         ],
@@ -6763,7 +6764,7 @@
         "tipo_grafo": "gruppo_istituzione",
         "ruolo_saga": "movimento_tra_quartieri",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.camminanti"
         ],
@@ -6806,7 +6807,7 @@
         "tipo_grafo": "gruppo_istituzione",
         "ruolo_saga": "coralita_del_lavoro_agricolo",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.coltivatori_del_cerchio"
         ],
@@ -6849,7 +6850,7 @@
         "tipo_grafo": "gruppo_istituzione",
         "ruolo_saga": "cura_delle_cose_del_villaggio",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.mantenitori"
         ],
@@ -6892,7 +6893,7 @@
         "tipo_grafo": "gruppo_istituzione",
         "ruolo_saga": "luogo_di_scambio_voci_e_cose",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.mercato_del_mezzogiorno"
         ],
@@ -6935,7 +6936,7 @@
         "tipo_grafo": "gruppo_istituzione",
         "ruolo_saga": "sfondo_stagionale_coltivatori_del_vento_nord",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.pastori"
         ],
@@ -6978,7 +6979,7 @@
         "tipo_grafo": "protagonista",
         "ruolo_saga": "protagonista",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.elias"
         ],
@@ -7022,7 +7023,7 @@
         "tipo_grafo": "protagonista",
         "ruolo_saga": "protagonista",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.gabriel"
         ],
@@ -7066,7 +7067,7 @@
         "tipo_grafo": "protagonista",
         "ruolo_saga": "protagonista",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.noah"
         ],
@@ -7110,7 +7111,7 @@
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "presenza_silenziosa_che_custodisce",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.bru"
         ],
@@ -7156,7 +7157,7 @@
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "frizione_necessaria",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.cardo"
         ],
@@ -7188,7 +7189,7 @@
       "name": "Liu",
       "famiglia": "personaggio",
       "sottotipo": "cuccioli",
-      "status": "stub",
+      "status": "provvisorio",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7199,8 +7200,8 @@
         "specie": "libellulina",
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "presenza_aerea_discreta",
-        "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "status": "provvisorio",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.liu"
         ],
@@ -7214,8 +7215,8 @@
           }
         }
       },
-      "body_md": "# Liu\n\n> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il 2026-04-25 con metodo \"compilatore\" (completa-non-rimuovere). Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.\n\n## Identità visuale (sintesi)\n\nLibellulina minuscola, lunga come il dito di un bambino. Ali trasparenti con riflessi azzurro-verdi, corpo sottile come un fuscello, occhi grandissimi rispetto alla taglia. Appare e sparisce in fretta — entra in scena con un *frrr* d'ali rapide, dice una frase, riparte. Messaggera informale dell'isola e occhio del lettore-bambino.\n\n## Aspetto / forma\n\n- **Taglia:** ~5-7 cm di lunghezza, scala \"dito di un fratello\" (Bible §4.17). Corpo allungato e sottile, paragonato a un fuscello.\n- **Ali:** quattro, trasparenti, con riflessi azzurro-verdi che cambiano col taglio della luce.\n- **Occhi:** sproporzionatamente grandi rispetto alla testa — caratteristica delle libellule reali, accentuata.\n- **Volo:** velocissimo a tratti rettilinei, capace di **stop assoluto a mezz'aria** (hover immobile), ripartenza di scatto.\n\n## Abbigliamento / stato d'uso\n\nLiu non porta abiti propriamente detti — è una libellula dell'isola, non antropomorfa nel vestiario. La sezione viene reinterpretata come **stato del corpo** ed eventuali **accessori effimeri**.\n\n- **Stato delle ali:** in saga sempre intatte e perfettamente operative; nessun graffio o membrana lacerata. `[inf]` da apparizioni S6/S8/S9/S12 dove vola sempre normalmente con *frrr* regolare, hover immobile, ripartenza di scatto — niente segnali di danno.\n- **Marcature dell'addome:** sottili bande cromatiche più scure del corpo lungo i segmenti, coerenti con anatomia di libellula reale. `[prop]` pattern visivo che rende Liu riconoscibile anche di profilo o controluce; da fissare prima di generare i modelli IA per garantire continuità cross-scena.\n- **Accessori effimeri:** occasionalmente granelli di polline, particelle di farina (quando passa al Forno), o frammenti vegetali raccolti in volo. `[prop]` non identificativi: variano per scena, utili per IA generative a differenziare apparizioni senza rompere coerenza.\n- **Stato di pulizia:** sempre asciutta. `[inf]` da Bible §4.17 (si appende a cornicioni, foglie, davanzali — superfici asciutte) e da S8 (arriva *prima* del picco Mulinello, non durante; evita pioggia/vento forte).\n\n**Notazione per IA / 3D:** l'iridescenza azzurro-verde delle ali è il dettaglio più caratterizzante; lo stato delle ali sempre intatto la distingue da libellule selvatiche più vissute.\n\n## Espressione / comportamento\n\n- Modalità di base: **moto perpetuo** salvo brevi soste in hover per parlare.\n- Suono caratteristico: piccolissimo *frrr* del battito d'ali (non rumore di insetto fastidioso, frequenza sottile).\n- Si appende a **cornicioni**, foglie sopra le teste, davanzali — abitanti la dimenticano lì e parlano: lei sente.\n- Postura comunicativa: hover frontale, una frase, ripartenza. **Mai resta in scena a lungo.**\n- Sceglie cosa ridire e cosa no. Non è pettegola.\n- Funzione narrativa: **collegamento tra scene** (porta notizie da un quartiere all'altro), **occhio del bambino-lettore** (proiezione del lettore dentro l'isola).\n\n## Palette e atmosfera\n\nCromatismi dominanti: **trasparenze ali + iridescenze azzurro-verdi**, in contrasto con i colori opachi dell'ambiente abitato (legno, terra, pietra). Quando attraversa una scena, la sua presenza è un baluginio rapido più che una figura ferma. In S8 entra in **fase cielo piombo** (prima del picco): la sua iridescenza diventa segno visivo del cambio di luce.\n\n## Contesto e ambientazioni ricorrenti\n\n- **Scuola di Stria** — frequenta \"a modo suo\": vola sopra il tetto, ascolta da fuori, entra qualche volta (non sta seduta come gli altri cuccioli).\n- **Forno di Fiamma** — destinazione ricorrente delle sue rotte (porta notizie a Fiamma).\n- **Finestre, cornicioni, davanzali, foglie alte** — punti di sosta tipici.\n- **Tutta l'isola** — copre lunghe distanze in tempi brevi (capacità di volo).\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n- Taglia minuscola (dito di un fratello).\n- Ali trasparenti azzurro-verdi.\n- Suono *frrr* del battito.\n- Quota frase: **una frase per scena, breve** (non monologa mai).\n- Permanenza scenica brevissima (entra → dice → esce).\n- Non è pettegola: filtra cosa dire.\n\n## Variabilità ammessa\n\n- Destinazione del volo (forno, scuola, finestra fratelli, ecc.).\n- Ora del giorno (mattino, sera, alba — varia per storia).\n- Tono della frase (curiosità, ipotesi, invito) — purché breve.\n\n## Cliché da evitare\n\nRiferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md` + vincoli Bible §4.17.\n\n- **Mai \"fatina luminosa\"** — non è creatura magica, è una libellula reale dell'Isola.\n- **Mai pettegola per cattiveria** — il filtraggio di cosa ridire è morale, non comico-meschino.\n- **Mai voce comica in scene serie** (es. S8 \"Forse l'acqua trema\" è ipotesi inquieta, non battuta).\n- **Mai sa cose che il narratore ha esplicitamente nascosto al lettore** — il suo sapere è limitato a ciò che ha visto/sentito sull'isola.\n- **Mai resta in scena a lungo** — niente dialoghi prolungati, niente Liu seduta a chiacchierare.\n- **Mai \"occhietti che brillano di saggezza\"**, \"messaggera misteriosa\", \"antichi presagi\". Lei è informale, terrena, libellula.\n\n## Per stampa 3D\n\n- **Scala:** mini, ~5-7 cm. In quadri di gruppo va modellata come accento, non come figura paritetica con i fratelli.\n- **Volume:** corpo cilindrico molto sottile (~2 mm di diametro), ali piatte 4 unità, testa quasi sferica con occhi composti grandi.\n- **Pose canoniche per le 4 vedute:** posizione raccomandata in **hover frontale ad ali aperte** (frontale e profili) + posizione **di scatto in volo** (per la veduta posteriore — visibile la coda allungata).\n- **Materiali consigliati:** ali in resina trasparente con tinta iridescente; corpo in pittura azzurro-verde-grigia.\n\n## Per narrativa e social\n\n- **Registro testuale:** sempre brevissimo. Una frase, mai più. Tipica forma a domanda aperta o ipotesi.\n- **Onomatopea:** *frrr* — usabile come marker testuale e visuale (post, didascalie).\n- **Pattern di apparizione:** \"Liu vola via\", \"Liu si ferma sul cornicione\", \"Liu fa frrr e riparte\" — formule corte e ricorrenti.\n- **Nelle didascalie social:** funziona come \"voce del lettore-bambino\" — può ospitare la domanda implicita di chi guarda.\n- **Tono da evitare:** mistero pomposo, saggezza ammiccante. Tono giusto: curiosità, leggerezza, ipotesi.\n\n## Storie / scene di apparizione\n\n- **s06** — primo cammeo saga. \"Frrr messaggera non veggente, una frase breve\" (`s06.scene_hook`).\n- **s08** — entra in fase cielo piombo (prima del picco Mulinello forte). Si aggrappa al cornicione del Forno: *\"Il vento sale forte stasera. Forse l'acqua trema.\"* — **prima menzione saga del fenomeno `quando l'acqua trema`** come ipotesi (lore-hook, non certezza). Modalità coerente con S6.\n- **s09** — vola dalla scuola al Forno **prima dei fratelli** (canonico). I cuccioli a scuola la sentono passare; lei porta notizia a Fiamma.\n- **s10** — assente.\n- **s11** — assente esplicita (discrepanza archi tabella vs dettaglio risolta a favore \"assente\", `s11.note`).\n- **s12** — apertura saga simmetrica (S1 ↔ S12). Vola alla finestra dei fratelli col suo *frrr*: *\"Oggi suonano. Andate?\"*. **Prima a chiamare il fenomeno \"suonano\"** — installa il nome canonico del Concerto dei Tre Venti (deferred #22 chiuso).\n\n## Disallineamenti / domande aperte\n\n- **Nome canonico:** Bible §4.17 usa **\"Liù\"** (con accento grave). Grafo usa id `liu` senza accento e non ha campo `name` esplicito, quindi lo script genera `name: Liu`. Decisione: il display name dovrebbe essere **Liù**? Se sì, il fix va nel grafo (`entities.characters.liu.name = \"Liù\"`), poi rilanciare lo script visual per propagare.\n- **Apparizioni non documentate:** S1-S5, S7, S10 non hanno menzione di Liu. È intenzionale (cuccioli compaiono dal blocco B in poi)? Confermare con Ray.\n- **Genitori:** Bible dice \"non in scena\". Restano fuori canone visivo? Confermare.\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/story_graph.json#entities.characters.liu`: `species: libellulina`, `type: cucciolo_scuola`, `role_saga: presenza_aerea_discreta`, `constraints: []`.\n- `ISOLA_TRE_VENTI_BIBLE_v2.md` §4.17 LIÙ:\n  - \"Libellulina. Genitori non in scena. Frequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta).\"\n  - \"Minuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto.\"\n  - \"Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì.\"\n  - \"Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.\"\n  - \"Sceglie cosa ridire e cosa no. Non è pettegola.\"\n  - Voci tipiche: *\"Ho sentito che.\"* / *\"Indovina chi è dal forno adesso.\"* / *\"Aspetta, vado a vedere.\"* / *\"Torno!\"*\n  - \"Cucciola della **informazione veloce**. Collegamento tra le scene. Funzione anche di **occhio del bambino-lettore** — è una proiezione del lettore-bambino dentro l'isola.\"\n  - Vincoli: \"Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.\"\n- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[liu]`: \"frrr_messaggera_non_veggente_una_frase_breve\".\n- `pipeline_narrativa/story_graph.json#stories.s08`: \"Liu passa con frrr modalita coerente con prima apparizione S6. Porta annuncio fenomeno raro 'forse l'acqua trema' come ipotesi (non certezza). Prima menzione saga — 1 di 2 in saga.\"\n- `pipeline_narrativa/story_graph.json#stories.s09.scene_hook`: \"cuccioli sentono Liu vola al forno\"; \"liu_precede_fratelli_al_forno_canonico_chiude_ipotesi_d_archi_8\".\n- `pipeline_narrativa/story_graph.json#stories.s11`: \"LIU_ASSENTE_S11_DISCREPANZA_ARCHI_TABELLA_VS_DETTAGLIO_RISOLTA_DETTAGLIO_WINS\".\n- `pipeline_narrativa/story_graph.json#stories.s12`: \"Liu prima a chiamarlo 'suonano' - implica fenomeno gia noto agli abitanti\"; callback `cb_s12_008_liu_mestiere_informale_apertura_concerto_oggi_suonano_nome_installato`; visual_anchor: \"liu_appena_volata_via_frrr_oggi_suonano_andate_interrogativo\".",
-      "body_size_chars": 10576,
+      "body_md": "# Liu\n\n> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-26. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nMinuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto.\n\n## Abbigliamento / stato d'uso\n\n_da popolare dal grafo_\n\n## Espressione / comportamento\n\nLiù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì. Porta notizie — non come Stria che è messaggera ufficiale, ma in modo informale. Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.\n\nSceglie cosa ridire e cosa no. Non è pettegola.\n\n## Palette e atmosfera\n\n_da popolare dal grafo_\n\n## Contesto e ambientazioni ricorrenti\n\nFrequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta). Sta sulle foglie sopra le teste degli abitanti.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nTaglia minuscola (lunga come un dito di un fratello). Ali trasparenti con riflessi azzurro-verdi. Corpo sottile come un fuscello. Occhi grandissimi per la sua taglia. Volo velocissimo con stop in aria immobile e ripartenza di scatto. Battito d'ali con suono *frrr*.\n\n## Variabilità ammessa\n\n_da popolare dal grafo_\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.\n\nDa Bible §4.17 \"Note e vincoli\":\n- Mai Liù che resta in scena a lungo — entra, dice, va.\n- Mai Liù che fa la pettegola per cattiveria.\n- Mai Liù in scene serie come voce comica.\n- Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: assente.\n- s03: assente.\n- s04: assente.\n- s05: assente.\n- s06: cammeo volante, messaggera — prima apparizione vera.\n- s07: assente.\n- s08: messaggera aerea — annuncio del fenomeno raro come ipotesi (\"Forse l'acqua trema\").\n- s09: cucciolo scuola, presenza aerea, fonte informale di notizia (vola da scuola al Forno).\n- s10: assente.\n- s11: assente esplicita (discrepanza archi tabella vs dettaglio risolta a favore \"assente\").\n- s12: cammeo di apertura, portatrice di notizie — prima a chiamare il fenomeno \"suonano\" (nome installato del Concerto).\n\n## Disallineamenti / domande aperte\n\n- Bible §4.17 usa **\"Liù\"** (con accento grave). Grafo usa id `liu` senza accento e non ha campo `name` esplicito; lo script genera `name: Liu`. Il display name dovrebbe essere **Liù**? Se sì, il fix va nel grafo (`entities.characters.liu.name = \"Liù\"`) e poi rilancio dello script visual per propagare.\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.17 LIÙ:\n  - \"Libellulina. Genitori non in scena. Frequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta).\"\n  - \"Minuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto.\"\n  - \"Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì.\"\n  - \"Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.\"\n  - \"Sceglie cosa ridire e cosa no. Non è pettegola.\"\n  - Note e vincoli: \"Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.\"\n- `pipeline_narrativa/story_graph.json#entities.characters.liu`: `species: libellulina`, `type: cucciolo_scuola`, `role_saga: presenza_aerea_discreta`, `constraints: []`.\n- `pipeline_narrativa/story_graph.json#stories.s06.characters_in_scene[liu].scene_role`: \"cammeo_volante_messaggera_prima_apparizione_vera\".\n- `pipeline_narrativa/story_graph.json#stories.s08.characters_in_scene[liu].scene_role`: \"messaggera_aerea_annuncio_fenomeno_raro_come_ipotesi\".\n- `pipeline_narrativa/story_graph.json#stories.s09.characters_in_scene[liu].scene_role`: \"cucciolo_scuola_presenza_aerea_fonte_informale_notizia\".\n- `pipeline_narrativa/story_graph.json#stories.s11`: \"LIU_ASSENTE_S11_DISCREPANZA_ARCHI_TABELLA_VS_DETTAGLIO_RISOLTA_DETTAGLIO_WINS\".\n- `pipeline_narrativa/story_graph.json#stories.s12.characters_in_scene[liu].scene_role`: \"cammeo_apertura_portatrice_notizie_prima_a_chiamarlo_suonano_nome_installato\".",
+      "body_size_chars": 4982,
       "folder_path": "visual/personaggi/individuali/cuccioli/liu",
       "scheda_path": "visual/personaggi/individuali/cuccioli/liu/scheda.md",
       "breadcrumb": [
@@ -7244,7 +7245,7 @@
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "memoria_pratica_intuizione_laterale",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.pun"
         ],
@@ -7290,7 +7291,7 @@
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "domanda_che_apre",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.toba"
         ],
@@ -7336,7 +7337,7 @@
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "dilatazione_del_tempo",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.bartolo"
         ],
@@ -7380,7 +7381,7 @@
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cammeo_ricorrente_cornice_s1_s12",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.fiamma"
         ],
@@ -7424,7 +7425,7 @@
         "tipo_grafo": "testimone_unico_pre_vento",
         "ruolo_saga": "architrave_strato_3",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.grunto"
         ],
@@ -7468,7 +7469,7 @@
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cambio_di_registro_colpo_di_coda",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.memolo"
         ],
@@ -7514,7 +7515,7 @@
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "resistenza_che_protegge",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.rovo"
         ],
@@ -7560,7 +7561,7 @@
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "autorita_calma_scambio_asimmetrico",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.stria"
         ],
@@ -7604,7 +7605,7 @@
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "pazienza_acqua_silenzio_che_insegna",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.amo"
         ],
@@ -7648,7 +7649,7 @@
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "mano_che_fa",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.nodo"
         ],
@@ -7692,7 +7693,7 @@
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "cura_concreta_che_educa",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.salvia"
         ],
@@ -7736,7 +7737,7 @@
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "stagione_e_parsimonia",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.zolla"
         ],
@@ -7777,7 +7778,7 @@
         "famiglia": "vento",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.winds.vento_intreccio"
         ],
@@ -7808,7 +7809,7 @@
         "famiglia": "vento",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.winds.vento_mulinello"
         ],
@@ -7839,7 +7840,7 @@
         "famiglia": "vento",
         "sottotipo": null,
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.winds.vento_taglio"
         ],
@@ -7869,7 +7870,7 @@
         "name": "Quando Acqua Trema",
         "famiglia": "visual_signature",
         "status": "stub",
-        "ultima_modifica": "2026-04-25",
+        "ultima_modifica": "2026-04-28",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.visual_signatures.quando_acqua_trema"
         ],

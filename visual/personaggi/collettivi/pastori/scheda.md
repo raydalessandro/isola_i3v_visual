@@ -7,7 +7,7 @@ specie: animali_misti_pastori_stagionali
 tipo_grafo: gruppo_istituzione
 ruolo_saga: sfondo_stagionale_coltivatori_del_vento_nord
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.pastori"]
 appare_in_storie: []
 relazioni:

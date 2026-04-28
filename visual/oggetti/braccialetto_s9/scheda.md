@@ -4,7 +4,7 @@ name: Braccialetto S9
 famiglia: oggetto
 sottotipo: oggetto_rituale_fatto_a_mano
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.braccialetto_s9"]
 appare_in_storie: []
 relazioni:

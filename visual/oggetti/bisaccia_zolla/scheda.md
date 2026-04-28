@@ -4,7 +4,7 @@ name: Bisaccia Zolla
 famiglia: oggetto
 sottotipo: null
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.bisaccia_zolla"]
 appare_in_storie: []
 relazioni:

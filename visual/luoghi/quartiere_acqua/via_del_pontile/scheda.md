@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: path
 quartiere: acqua
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.via_del_pontile", "cartografia/geo/island.geojson#features.id=via_del_pontile"]
 appare_in_storie: []
 cartografia:

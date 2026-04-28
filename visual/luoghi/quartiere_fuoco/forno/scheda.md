@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: building
 quartiere: fuoco
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.forno", "cartografia/geo/island.geojson#features.id=forno"]
 appare_in_storie: []
 cartografia:

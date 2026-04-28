@@ -49,76 +49,73 @@ relazioni:
 
 # <Nome Visualizzato>
 
-> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il YYYY-MM-DD con metodo "compilatore" (completa-non-rimuovere). Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il YYYY-MM-DD. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionera' sul grafo.
 
 ## Principio di compilazione (rimuovere prima di salvare)
 
-**Tutte le 14 sezioni vanno compilate.** Anche quando il canone non dichiara nulla su un aspetto, si propone un'inferenza coerente, marcata con `[inf]` (deduzione logica dal canone) o `[prop]` (scelta creativa coerente, da validare con Ray). Non rimuovere sezioni: una sezione vuota e' un'occasione persa per la narrativa futura.
+**Travaso meccanico** dalla Bible (`pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md`) e da `story_graph.json` al catalogo.
 
-In casi davvero non applicabili (es. "abbigliamento" per un fenomeno acustico come un vento, o "espressione del volto" per un oggetto inanimato), **reinterpretare il campo** in modo coerente con la natura dell'entita' (es. per un vento "abbigliamento" → manifestazione sensibile / vestitura percettiva).
+- Sezioni del template che combaciano con campi Bible (Aspetto, Comportamento, Cliche'/vincoli): **copia/parafrasi 1:1**.
+- Sezione "Storie / scene di apparizione": **automatizzata dal grafo** (lista delle storie in cui appare l'entita').
+- Sezioni che la Bible non copre (Palette, Variabilita', Per stampa 3D, Per narrativa e social, Identita' visuale sintesi, ecc.): **placeholder uniforme `_da popolare dal grafo_`**. Niente inferenze, niente proposte. Saranno completate da Ray quando ragionera' sul grafo.
+- Cio' che la Bible ha "in piu'" (Funzione narrativa, Voce tipica, archi narrativi, vincoli narrativi non visivi): **non si porta nel catalogo**, resta nella Bible.
 
 ## Identita' visuale (sintesi)
 
-Una-due frasi che fissano l'entita' in modo specifico, niente cliché.
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-Per personaggi: volto, corporatura, tratti distintivi.
-Per luoghi: morfologia, materiali, scala, dettagli costruttivi.
-Per oggetti: forma, dimensioni, materiali, finitura.
+[travaso da Bible "Aspetto."]
 
 ## Abbigliamento / stato d'uso
 
-Per personaggi: capi tipici, materiali, colori, accessori, variazioni stagionali.
-Per oggetti: nuovo/usurato, segni d'uso.
+[travaso da Bible se presente; altrimenti `_da popolare dal grafo_`]
 
 ## Espressione / comportamento
 
-Per personaggi: espressioni tipiche, gestualità, postura, andatura.
-Per venti: comportamento canonico, pattern di movimento.
+[travaso da Bible "Comportamento operativo."]
 
 ## Palette e atmosfera
 
-Colori dominanti, qualità della luce, atmosfera cromatica ricorrente.
+_da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-Luoghi e momenti del giorno in cui l'entita' compare tipicamente.
+[travaso da Bible se presente; altrimenti `_da popolare dal grafo_`]
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-Vincoli inderogabili: dettagli che restano fissi attraverso tutte le storie.
+[derivato da Bible "Aspetto." (dettagli fisici fissi); altrimenti `_da popolare dal grafo_`]
 
 ## Variabilita' ammessa
 
-Cose che possono variare per scena/stagione/contesto senza rompere la coerenza.
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
-
-Lista specifica dei cliché da non applicare a questa entita'.
+[travaso da Bible "Note e vincoli." parte cliche'/"mai..."]. Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico, simmetrie/asimmetrie. Indicazioni utili per modellazione e per le 4 vedute (fronte / retro / profilo_dx / profilo_sx).
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, parole-chiave da usare/evitare, tono delle descrizioni in didascalie e post.
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-Lista per storia (s01..s12) con ruolo/scena breve.
+[lista automatizzata dal grafo: per ogni s01..s12 dove l'entita' appare, una riga col ruolo/scena breve]
 
 ## Disallineamenti / domande aperte
 
-Conflitti rilevati fra fonti, dubbi non risolti, richieste a Ray.
+[fatti rilevati durante il travaso: conflitti Bible vs grafo, ambiguita' di nome, ecc. Vuoto se nulla.]
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-Ogni dato visivo riportato sopra DEVE avere qui una citazione ancorata:
+Ogni dato canonico riportato sopra DEVE avere qui una citazione ancorata:
 
-- `pipeline_narrativa/story_graph.json#entities.<famiglia>.<id>` — campo `<x>`: "..."
 - `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §X.Y: "..."
-- `cartografia/geo/island.geojson#features.id=<id>` — proprieta' `<x>`: "..."
+- `pipeline_narrativa/story_graph.json#entities.<famiglia>.<id>` — campo `<x>`: "..."
+- `pipeline_narrativa/story_graph.json#stories.s0X.<campo>`: "..."

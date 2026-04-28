@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: river
 quartiere: perimetro
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=fiume_stretta_due_massi"]
 appare_in_storie: []
 cartografia:

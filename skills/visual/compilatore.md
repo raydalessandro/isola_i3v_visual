@@ -1,6 +1,6 @@
 # sotto-skill: compilatore (visual)
 
-Specializzazione operativa della **skill visual**. Compila il *body* delle schede entità (`visual/<famiglia>/.../<id>/scheda.md`) partendo dalle fonti canoniche e completando le sezioni non documentate con inferenza canone-coerente, marcata.
+Specializzazione operativa della **skill visual**. Compila il *body* delle schede entità (`visual/<famiglia>/.../<id>/scheda.md`) tramite **travaso meccanico** dalla Bible (e dal grafo per la sezione "Storie di apparizione"). Non inferisce, non propone: lascia placeholder uniforme dove la fonte non copre.
 
 **Premessa:** prima di operare leggi:
 1. `skills/README.md` (regole comuni: isolamento `pipeline_narrativa/` read-only, comunicazione, gerarchia fonti).
@@ -11,33 +11,69 @@ Specializzazione operativa della **skill visual**. Compila il *body* delle sched
 
 ## 1. Scope di scrittura
 
-Solo: `visual/<famiglia>/.../<id>/scheda.md`, modificando esclusivamente il **body** sotto il secondo `---`. Il frontmatter è derivato da fonti automatiche e gestito dallo script `scripts/build_visual_skeleton.py`: **non toccarlo**. Lo script preserva il body quando rigenera il frontmatter.
-
-Permesso aggiuntivo: aggiungere `<entita>/<id>/note_lavoro.md` (o simili) se serve scratchpad di lavoro per quella entità — ma il deliverable resta `scheda.md`.
+Solo: `visual/<famiglia>/.../<id>/scheda.md`, modificando esclusivamente il **body** sotto il secondo `---`. Il frontmatter è gestito dallo script `scripts/build_visual_skeleton.py`: **non toccarlo**. Lo script preserva il body quando rigenera il frontmatter.
 
 ---
 
-## 2. Principio fondamentale: "completa, non rimuovere"
+## 2. Principio fondamentale: travaso meccanico
 
-Il template ha 14 sezioni. **Tutte vanno compilate.** Anche quando il canone non dichiara nulla su un aspetto, si propone un'inferenza coerente, marcata.
+**Tre regole:**
 
-**Razionale:** le schede sono serbatoio attivo per narrativa, social, IA generative, stampa 3D. Una sezione vuota o rimossa è un'occasione persa: la narrativa futura potrà raccogliere da qui un dettaglio coerente già fissato (e validato da Ray).
+1. **Bible → catalogo, 1:1 dove i campi combaciano.** Copia o parafrasi diretta. Niente arricchimenti, niente inferenze, niente proposte stilistiche.
+2. **Bible "in più" resta nella Bible.** I campi narrativi (Funzione narrativa, Voce tipica, archi narrativi, vincoli narrativi non visivi) **non si portano nel catalogo**. Bibbia + Grafo + Catalogo lavorano insieme; ognuno ha il suo ruolo.
+3. **Sezioni del catalogo che la Bible non copre → placeholder uniforme `_da popolare dal grafo_`.** Saranno completate da Ray quando ragionerà sul grafo. La uniformità del placeholder serve a misurare a colpo d'occhio quanto è completa una scheda (e quanto manca) tramite `grep -c "_da popolare dal grafo_"`.
 
-In casi davvero non applicabili (es. "abbigliamento" per un vento, "espressione del volto" per un oggetto inanimato): **reinterpreta il campo** in coerenza con la natura dell'entità. Esempi: per un vento "abbigliamento" → manifestazione sensibile / vestitura percettiva (suoni, vibrazioni, riflessi); per un oggetto "espressione" → patina d'uso, segni del tempo.
+**Niente marcatori `[inf]`/`[prop]`** in queste schede meccaniche. Quei marcatori sono per l'autore in fase di ragionamento, non per la pipeline di travaso.
+
+**Eccezione automatizzabile**: la sezione **"Storie / scene di apparizione"** è derivabile in modo deterministico dal grafo (lista degli `s01..s12` dove l'entità compare). La popolo dal grafo, non è inferenza.
 
 ---
 
-## 3. Marcatori di provenienza
+## 3. Mappa Bible (§4 personaggi) → template catalogo
 
-Convenzione di marcatura **in linea**, dopo l'affermazione che la richiede:
+| Sezione catalogo | Fonte Bible (§4 personaggio) | Trattamento |
+|---|---|---|
+| Identità visuale (sintesi) | — | `_da popolare dal grafo_` |
+| Aspetto / forma | "Aspetto." | Travaso 1:1 |
+| Abbigliamento / stato d'uso | "Aspetto." (parte abbigliamento, se presente) | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Espressione / comportamento | "Comportamento operativo." | Travaso 1:1 |
+| Palette e atmosfera | — | `_da popolare dal grafo_` |
+| Contesto e ambientazioni ricorrenti | "Specie, ruolo." (se nomina luoghi) + "Comportamento operativo." (se nomina luoghi) | Travaso parziale se presente, altrimenti `_da popolare dal grafo_` |
+| Coerenza cross-scena (cose che NON cambiano) | "Aspetto." (dettagli fisici fissi) | Travaso/derivazione 1:1 |
+| Variabilità ammessa | — | `_da popolare dal grafo_` |
+| Cliché da evitare | "Note e vincoli." (parte "Mai...") | Travaso 1:1 |
+| Per stampa 3D | — | `_da popolare dal grafo_` |
+| Per narrativa e social | — | `_da popolare dal grafo_` |
+| Storie / scene di apparizione | `pipeline_narrativa/story_graph.json#stories.s0X.characters_in_scene` | Lista automatizzata dal grafo |
+| Disallineamenti / domande aperte | — | Vuoto, salvo conflitti rilevati |
+| Riferimenti puntuali | meta | Citazioni precise (path + ancora) di tutti i dati canonici riportati |
 
-- **(default, nessun tag):** dato canonico, supportato da citazione precisa in "Riferimenti puntuali".
-- **`[inf]`** o **`[inferito]`:** derivato logicamente dai dati canonici. Spiegare brevemente la deduzione subito dopo.
-- **`[prop]`** o **`[proposta]`:** scelta visiva creativa coerente col canone, da validare con Ray. Dichiarare brevemente perché serve / da dove nasce.
+**NON portati nel catalogo (restano in Bible):**
+- "Funzione narrativa." → strutturale, vive nel grafo + Bible.
+- "Voce tipica." → narrativa.
+- "Note e vincoli." parte non-cliché (es. "in 2-3 storie su 12 fa il punzecchio") → vincoli narrativi.
+- "Funzione narrativa" estesa (es. "frizione necessaria") → impianto saga.
 
-Esempio di linea con marcatore:
+## 3-bis. Mappa Bible (§2 geografia) → template catalogo luoghi
 
-> Stato delle ali: in saga sempre intatte. `[inf]` da apparizioni S6/S8/S9/S12 dove vola sempre normalmente con *frrr* regolare — niente segnali di danno.
+| Sezione catalogo | Fonte Bible (§2) | Trattamento |
+|---|---|---|
+| Identità visuale (sintesi) | — | `_da popolare dal grafo_` |
+| Aspetto / forma | descrizione fisica del luogo | Travaso 1:1 |
+| Abbigliamento / stato d'uso | non applicabile (luogo) | `_da popolare dal grafo_` |
+| Espressione / comportamento | dinamica (es. "vento che soffia da nord", "marea") | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Palette e atmosfera | — | `_da popolare dal grafo_` |
+| Contesto | uso, abitanti, attività | Travaso 1:1 se presente |
+| Coerenza cross-scena | dettagli fisici fissi | Travaso 1:1 |
+| Variabilità ammessa | variazioni stagionali/temporali | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Cliché da evitare | — (raro per luoghi) | `_da popolare dal grafo_` salvo trovato |
+| Per stampa 3D | — | `_da popolare dal grafo_` |
+| Per narrativa e social | — | `_da popolare dal grafo_` |
+| Storie | dal grafo | Lista automatizzata |
+| Disallineamenti | — | Vuoto, salvo conflitti |
+| Riferimenti puntuali | meta | Citazioni |
+
+I luoghi hanno anche metadati cartografici nel frontmatter (centroide, bbox, dimensioni) gestiti dallo script.
 
 ---
 
@@ -45,108 +81,99 @@ Esempio di linea con marcatore:
 
 ### Step 1 — Identifica entità
 
-Prendi `id`, `famiglia`, `sottotipo` dal frontmatter della scheda da compilare.
+Prendi `id`, `famiglia`, `sottotipo` dal frontmatter della scheda.
 
-### Step 2 — Estrazione mirata dal grafo
+### Step 2 — Estrazione mirata
 
-**Non leggere `story_graph.json` per intero** (è grande, satura il contesto e fa fallire i sub-agenti). Usa script Python ad-hoc:
-
+Per personaggi:
 ```bash
+# Anagrafica grafo
 python3 -c "
 import json
 g = json.load(open('pipeline_narrativa/story_graph.json'))
-# Anagrafica
-print('=== entity ===')
-print(json.dumps(g['entities']['<famiglia>']['<id>'], ensure_ascii=False, indent=2))
+print(json.dumps(g['entities']['characters']['<id>'], ensure_ascii=False, indent=2))
+"
+
 # Apparizioni nelle storie
-print('=== storie ===')
+python3 -c "
+import json
+g = json.load(open('pipeline_narrativa/story_graph.json'))
 for sid, s in g['stories'].items():
-    blob = json.dumps(s, ensure_ascii=False)
-    if '<id>' in blob.lower() or '<nome>' in blob.lower():
-        # filtra menzioni precise, non casuali
-        ..."
+    for c in s.get('characters_in_scene', []):
+        if isinstance(c, dict) and c.get('id') == '<id>':
+            print(sid, '->', c.get('scene_role') or c.get('role') or '?')
+"
+
+# Sezione Bible
+grep -n -A 40 '<NOME>$' pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md
 ```
 
-### Step 3 — Lettura mirata dei doc canonici
-
-In ordine:
-1. `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` — `grep -n -B1 -A20 '<Nome>'` per trovare la sezione del personaggio/luogo (di solito §4 per personaggi, §2 per geografia).
-2. `EAR_PERSONAGGI_Manuale_Completo.txt` — solo per personaggi, sezione del personaggio.
-3. `EAR_PERSONAGGI_Lezioni_Apprese.txt` — note operative.
-4. `PATTERN_AI_DA_BANDIRE_v1.md` — cliché generali; estrai quelli applicabili a questa entità.
-5. `GLOSSARIO_ISOLA.md` — controllo nome canonico.
-6. `cartografia/geo/island.geojson` (read-only) — per luoghi: note canoniche e materiali.
+Per luoghi: leggi `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2 e cerca il toponimo.
 
 **Regola di lettura:** leggi solo quello che serve a questa entità. Niente esplorazioni dispersive.
 
-### Step 4 — Compila le 14 sezioni del body
+### Step 3 — Travaso
 
-Ordine (vedi `visual/_template_scheda.md`):
+Per ogni sezione del template:
+- Cerca il campo Bible corrispondente (vedi mappa §3 / §3-bis sopra).
+- Se trovi: **copia o parafrasa fedelmente**.
+- Se non trovi: scrivi esattamente `_da popolare dal grafo_` come unico contenuto della sezione.
+- Per "Storie / scene di apparizione": elenca le storie dal grafo, una riga ciascuna con il ruolo della scena. Esempio:
+  - `s06: cammeo, frrr di apertura ("liu_frrr_messaggera_non_veggente_una_frase_breve")`.
 
-1. **Identità visuale (sintesi)** — 1-2 frasi specifiche e situate. Niente cliché.
-2. **Aspetto / forma** — fisico/geometrico/materico.
-3. **Abbigliamento / stato d'uso** — capi, accessori, segni del tempo. Per non antropomorfi → reinterpretare (ali, marcature, patina).
-4. **Espressione / comportamento** — tipico, ricorrente.
-5. **Palette e atmosfera** — colori dominanti, qualità della luce.
-6. **Contesto e ambientazioni ricorrenti** — dove e quando appare tipicamente.
-7. **Coerenza cross-scena (cose che NON cambiano)** — vincoli inderogabili.
-8. **Variabilità ammessa** — cosa può variare senza rompere coerenza.
-9. **Cliché da evitare** — specifici per questa entità (constraints grafo + voci pertinenti da PATTERN_AI_DA_BANDIRE).
-10. **Per stampa 3D** — volumi, proporzioni, scala, orientamento, pose canoniche per le 4 vedute.
-11. **Per narrativa e social** — registri d'uso testuale, formule, tono.
-12. **Storie / scene di apparizione** — una riga per ciascuna delle 12 storie. Cita il campo grafo che la supporta. "Assente" se non compare (esplicito).
-13. **Disallineamenti / domande aperte** — conflitti rilevati (Bible vs grafo vs nome) **senza risolverli**: Ray valida.
-14. **Riferimenti puntuali** — ogni dato canonico riportato deve avere qui citazione con path + ancora (`#entities.X`, `§Y.Z`).
+### Step 4 — Riferimenti puntuali
 
-### Step 5 — Stato compilazione
-
-In cima al body, subito dopo `# <Nome>`, aggiungi:
+Sezione finale obbligatoria. Per ogni dato canonico riportato sopra, una citazione con path + ancora YAML/sezione. Esempio:
 
 ```
-> **Stato compilazione:** body provvisorio, in attesa revisione Ray. Compilato il YYYY-MM-DD con metodo "compilatore". Marcatori di provenienza: nessun tag = canone (citato in fondo); `[inf]` = inferito dai dati canonici; `[prop]` = proposta visiva da validare.
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §4.17: "Libellulina. Genitori non in scena..."
+- `pipeline_narrativa/story_graph.json#entities.characters.liu`: `species: libellulina`, `role_saga: presenza_aerea_discreta`.
+- `pipeline_narrativa/story_graph.json#stories.s12.visual_anchors.scene_hooks[0]`: "liu_appena_volata_via_frrr_oggi_suonano..."
 ```
 
-### Step 6 — Frontmatter intatto
+### Step 5 — Disallineamenti
 
-Non toccare il frontmatter. Se serve aggiornarlo (es. nome canonico cambiato), il fix va nel grafo o nel GeoJSON, e poi si rilancia `python3 scripts/build_visual_skeleton.py` che propaga.
+Se durante il travaso rilevi conflitti Bible vs grafo, ambiguità di nome (es. "Liù" Bible vs `liu` grafo), apparizioni dichiarate ma non documentate: **registra senza risolvere**. Ray valida in fase di ragionamento sul grafo.
+
+### Step 6 — Stato compilazione
+
+In cima al body, subito dopo `# <Nome>`:
+
+```
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il YYYY-MM-DD. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+```
+
+### Step 7 — Frontmatter
+
+Non toccare. Lo script `build_visual_skeleton.py` lo rigenera da grafo + GeoJSON, e auto-inferisce `status`:
+- Body con sole righe `[stub …]` → `stub`.
+- Body popolato (anche con `_da popolare dal grafo_`) → `provvisorio`.
+- `canonico` rispettato se già impostato (Ray promuove manualmente).
 
 ---
 
 ## 5. Vincoli operativi
 
-- **Italiano**, prosa tecnica/descrittiva, niente lubrificazioni narrative.
-- **Niente prompt-string pronti** per modelli specifici. Le sezioni descrittive sono fonte multi-uso (IA, 3D, narrativa, social).
-- **Tendenzialmente la verità è nel grafo** — se grafo e Bible/altro contraddicono, scegli grafo e segnala in "Disallineamenti / domande aperte".
-- **Niente rimozioni di sezioni** — completa con inferenza marcata.
-- **Niente improvvisazione narrativa** — se manca un dato e l'inferenza è troppo creativa per essere ragionevole, marcala `[prop]` e lascia decidere a Ray.
-- **Niente cliché AI** — applica `PATTERN_AI_DA_BANDIRE_v1.md`.
-- **Una entità per volta** — non saturare il contesto con più entità in parallelo, soprattutto se il sub-agente è general-purpose (rischio timeout API).
+- **Italiano**, prosa fedele alla Bible.
+- **Niente prompt-string pronti** per modelli specifici. Le sezioni descrittive sono fonte multi-uso.
+- **Tendenzialmente la verità è nel grafo** — ma in fase di travaso, la Bible è la fonte primaria del visual perché è l'unico documento che ne parla in modo descrittivo. Se grafo e Bible contraddicono, segnala in "Disallineamenti".
+- **Niente improvvisazione**: se la Bible non dice una cosa, NON la inventi. Placeholder.
+- **Una entità per volta**.
 
 ---
 
 ## 6. Esempio canonico
 
-`visual/personaggi/individuali/cuccioli/liu/scheda.md`
-
-Esempio del metodo applicato a una entità minimale (libellulina con info minime nel grafo, `constraints: []` vuoto). Mostra:
-- 14 sezioni complete (anche "Abbigliamento", reinterpretato come stato delle ali + accessori effimeri).
-- Marcatori `[inf]` e `[prop]` in linea.
-- Citazioni puntuali con path + ancora YAML/sezione.
-- "Disallineamenti" registrati senza risolverli (es. nome canonico Liù vs id grafo `liu`).
+`visual/personaggi/individuali/cuccioli/liu/scheda.md` — caso pilot del metodo meccanico (libellulina, Bible §4.17 ricca, sezioni non coperte → placeholder uniforme).
 
 ---
 
 ## 7. Disclaimer su tempi e contesto
 
-Il workflow di estrazione richiede lettura mirata e attenzione al budget di contesto. Se viene affidato a un sub-agente general-purpose (Claude Agent SDK, Anthropic API, Claude Code), considerare che:
-
-- Letture intere di file grandi (`story_graph.json` ~580kb) possono saturare il contesto e causare timeout.
-- Preferire script Python che estraggano solo i campi necessari (vedi step 2).
-- Budget di tool calls suggerito: 10-15 per entità singola.
-- Se il sub-agente fallisce, l'estrazione manuale (operatore umano o esecuzione diretta) e' sempre il fallback.
-
-Per task massivi (>10 entità) preferire la chat con la zip del repo allegata, dove l'operatore lavora a contesto unificato senza vincoli stringenti di durata.
+- Il workflow richiede lettura mirata e attenzione al budget di contesto.
+- Per task massivi (>10 entità) preferire la chat con la zip del repo allegata, dove l'operatore lavora a contesto unificato senza vincoli di durata.
+- In Claude Code, batch suggerito: 4-6 schede per sessione, con commit dopo ogni batch.
 
 ---
 
-**Ultimo aggiornamento:** 2026-04-25 — prima versione formalizzata.
+**Ultimo aggiornamento:** 2026-04-26 — versione "metodo meccanico" (sostituisce la versione "completa con inferenza marcata").

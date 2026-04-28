@@ -6,7 +6,7 @@ sottotipo: strada
 categoria_strada: viottolo
 quartiere: centro
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=viottolo_perimetrale_piazza"]
 appare_in_storie: []
 cartografia:

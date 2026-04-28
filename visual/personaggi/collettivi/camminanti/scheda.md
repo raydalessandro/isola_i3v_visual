@@ -7,7 +7,7 @@ specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: movimento_tra_quartieri
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.camminanti"]
 appare_in_storie: []
 relazioni:

@@ -7,7 +7,7 @@ specie: volpe_rossa
 tipo_grafo: abitante_maggiore
 ruolo_saga: cammeo_ricorrente_cornice_s1_s12
 status: stub
-ultima_modifica: 2026-04-25
+ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.fiamma"]
 appare_in_storie: []
 relazioni:
