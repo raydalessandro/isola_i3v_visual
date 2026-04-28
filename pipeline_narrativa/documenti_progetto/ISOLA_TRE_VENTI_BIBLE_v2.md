@@ -91,7 +91,9 @@ P6 (inseparabilità): ogni storia richiede tutti e tre i fratelli. Nessuno da so
 
 ### §2.2 Gabriel — Il Maggiore (canonico Bible v1.1)
 
-Nato 28 ottobre 2021. Scorpione (acqua fissa). Capelli corti lisci, il più alto.
+Nato 28 ottobre 2021. Scorpione (acqua fissa).
+
+> *Profilo visivo (aspetto, palette, vincoli visivi) → `visual/personaggi/individuali/bambini/gabriel/scheda.md`.*
 
 **Funzione narrativa:** quello che vede i pericoli, fa le domande giuste. Quando dice "no" gli altri ascoltano. Δ incarnato (osserva, distingue, decide).
 
@@ -101,7 +103,9 @@ Nato 28 ottobre 2021. Scorpione (acqua fissa). Capelli corti lisci, il più alto
 
 ### §2.3 Elias — Il Medio (canonico Bible v1.1)
 
-Nato 8 febbraio 2024. Acquario (aria fissa). Capelli ricci.
+Nato 8 febbraio 2024. Acquario (aria fissa).
+
+> *Profilo visivo (aspetto, palette, vincoli visivi) → `visual/personaggi/individuali/bambini/elias/scheda.md`.*
 
 **Funzione narrativa:** il ponte tra gli altri due. Quando litigano trova cosa fare insieme. Risolve con azioni più che con parole. ⇄ incarnato (collega, propone, costruisce).
 
@@ -111,7 +115,9 @@ Nato 8 febbraio 2024. Acquario (aria fissa). Capelli ricci.
 
 ### §2.4 Noah — Il Piccolo (canonico Bible v1.1)
 
-Nato (probabile) 6 giugno 2026. Gemelli (aria mutabile). Capelli via di mezzo.
+Nato (probabile) 6 giugno 2026. Gemelli (aria mutabile).
+
+> *Profilo visivo (aspetto, palette, vincoli visivi) → `visual/personaggi/individuali/bambini/noah/scheda.md`.*
 
 **Funzione narrativa:** rompe gli equilibri. Quando le cose sono bloccate fa l'imprevisto. Vede l'insetto, la nuvola, il sentiero nascosto. ⟳ incarnato (sente, reagisce, cambia).
 
@@ -179,11 +185,9 @@ Ogni nome deve fare almeno una di queste tre cose: contenere già la qualità, p
 
 ### §4.3 BARTOLO
 
-**Specie, ruolo, residenza.** Tartaruga di mare anziana. Traghettatore — porta gente avanti e indietro lungo il perimetro dell'isola e oltre, per chi deve andare dove non si va a piedi. Vive sul Pontile, Quartiere d'Acqua a sud, in una capanna bassa col tetto di canne accanto al punto in cui il Fiume sfocia nel mare attraverso La Bocca. Dorme nella barca quando fa caldo.
+**Specie, ruolo, residenza.** Tartaruga di mare anziana. Traghettatore — porta gente avanti e indietro lungo il perimetro dell'isola e oltre, per chi deve andare dove non si va a piedi. Vive sul Pontile, Quartiere d'Acqua a sud, accanto al punto in cui il Fiume sfocia nel mare attraverso La Bocca.
 
-**Aspetto.** Il guscio scuro come un sasso bagnato, segnato di righe pallide che sono cicatrici di mare vecchie (firma visiva). Le zampe pesanti, i passi che lasciano un'impronta tonda. Gli occhi piccoli, lenti a chiudersi e lenti a riaprirsi — tra un battito e l'altro ci sta un pensiero intero.
-
-**Comportamento operativo (Tratto 7).** Bartolo fa cose-da-tartaruga di mare. Si muove piano. Resta fermo a lungo. Quando finalmente parte non si ferma più finché non arriva. Galleggia anche a terra — cioè cammina come se l'isola fosse acqua sotto di lui, senza fretta di toccarla davvero. Aspetta. Aspetta gente, vento, che l'altro abbia finito di parlare. Conosce il mare per averci nuotato dentro tanto, e per non averlo mai voluto vincere. Se uno gli sale sulla barca e si lamenta della lentezza, Bartolo non risponde — rema lo stesso.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/bartolo/scheda.md`.*
 
 **Voce tipica.**
 - *"Il mare non ha fretta. E neanche io."*
@@ -192,7 +196,7 @@ Ogni nome deve fare almeno una di queste tre cose: contenere già la qualità, p
 
 **Funzione narrativa.** Personaggio della **dilatazione del tempo**. Quando in una storia il ritmo accelera troppo o un fratello vuole risolvere subito, Bartolo entra e il tempo si distende. Anche solo nominato abbassa il battito di una storia. È anche traghettatore letterale — porta i fratelli da una parte all'altra dell'isola via mare, e verso fuori (oltre-il-mare come promessa rara). **Ruolo familiare episodico:** nonno.
 
-**Note e vincoli.** Mai dare a Bartolo una frase-morale (anche se la sua misura tranquilla la inviterebbe). Mai farlo correre, mai farlo arrabbiare in modo visibile. Quando Bartolo c'è in una storia, i tre fratelli non scappano dall'isola con lui salvo che sia il punto dell'arco. Mai mostrare Bartolo che traghetta dei singoli abitanti già nominati nello stesso viaggio dei fratelli (rimane nostro, non condiviso).
+**Note e vincoli (narrativi).** Mai dare a Bartolo una frase-morale (anche se la sua misura tranquilla la inviterebbe). Quando Bartolo c'è in una storia, i tre fratelli non scappano dall'isola con lui salvo che sia il punto dell'arco. Mai mostrare Bartolo che traghetta dei singoli abitanti già nominati nello stesso viaggio dei fratelli (rimane nostro, non condiviso).
 
 ---
 
@@ -224,13 +228,9 @@ Modalità brace (rara):
 
 ### §4.5 ROVO
 
-**Specie, ruolo, residenza.** Tasso. Vive ai margini della Foresta Intrecciata, Quartiere di Terra a ovest, in una tana scavata sotto un grosso ceppo coperto di muschio. La tana ha tre uscite. Bru sta con lui (nipote affidato, storia mai raccontata).
+**Specie, ruolo, residenza.** Tasso. Vive ai margini della Foresta Intrecciata, Quartiere di Terra a ovest. Bru sta con lui (nipote affidato, storia mai raccontata).
 
-**Aspetto.** Robusto, basso, pelo grigio-scuro con la riga bianca dalla testa alla nuca — la maschera del tasso. Zampe corte e forti, unghie lunghe da scavatore. Una spalla un po' più alta dell'altra. Quando sta fermo si confonde col terreno. **Firma visiva:** bandana scura legata stretta sulla fronte sotto le orecchie, sempre marrone-grigio.
-
-**Comportamento operativo (Tratto 7).** Rovo fa cose-da-rovo (cespuglio) attraverso il corpo del tasso. Punge — verbalmente, secco. Si attacca — quando prende qualcuno sotto la sua protezione non lascia più, anche se non lo dichiara. Ha frutti sotto le spine — la dolcezza c'è ma sta sepolta. Scava — in cerca di radici e tane d'altri animali, ma anche dentro le situazioni: arriva sotto al problema invece che intorno. Conosce la Foresta come si conosce la propria tana.
-
-Bru gli sta dietro a rispettosa distanza. Rovo non lo accarezza mai. Ma quando torna a casa la sera, controlla che Bru ci sia.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/rovo/scheda.md`.*
 
 **Voce tipica.**
 - *"Non da questa parte."*
@@ -240,19 +240,15 @@ Bru gli sta dietro a rispettosa distanza. Rovo non lo accarezza mai. Ma quando t
 
 **Funzione narrativa.** Personaggio della **resistenza che protegge**. Quando i fratelli devono andare oltre un limite, Rovo è il guardiano scontroso che blocca, poi cede, poi accompagna senza ammetterlo. Funzione anche di **fonte di informazione affidabile data male**. **Ruolo familiare episodico:** zio severo.
 
-**Note e vincoli.** Mai una scena di confidenza calorosa — sarebbe rottura. Tenerezza sempre mediata (un gesto pratico, una porta lasciata aperta). Mai spiegare perché Bru sta con Rovo (porta socchiusa). Mai Rovo compagno di viaggio prolungato dei fratelli (perderebbe la firma di abitante-ai-margini). Quando i fratelli vanno da lui, lui li riceve. Lui non va dai fratelli quasi mai.
+**Note e vincoli (narrativi).** Tenerezza sempre mediata (un gesto pratico, una porta lasciata aperta). Mai spiegare perché Bru sta con Rovo (porta socchiusa). Mai Rovo compagno di viaggio prolungato dei fratelli (perderebbe la firma di abitante-ai-margini). Quando i fratelli vanno da lui, lui li riceve. Lui non va dai fratelli quasi mai.
 
 ---
 
 ### §4.6 STRIA
 
-**Specie, ruolo, residenza.** Airone cenerino. Maestra della scuola del villaggio. Vive in una casa stretta e alta vicino alla scuola — l'unica del villaggio col tetto molto spiovente, perché Stria ci atterra sopra prima di entrare. La scuola è a sud-ovest del villaggio centrale, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio.
+**Specie, ruolo, residenza.** Airone cenerino. Maestra della scuola del villaggio. La scuola è a sud-ovest del villaggio centrale, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio.
 
-**Aspetto.** Alta, magra, piume grigio-cenere con le punte delle ali più scure. Il collo lungo che si piega elegante quando ascolta. Il becco lungo, dritto, color osso. Le zampe sottilissime. Lo sguardo fermo, gli occhi gialli che non si stancano. **Firma visiva:** scialle leggero color cenere chiaro sulle spalle, che le pende lungo le ali. Lo toglie quando vola, lo rimette quando atterra.
-
-**Comportamento operativo (Tratto 7).** Stria fa cose-da-stria (la traccia in cielo) attraverso il corpo dell'airone. Vede dall'alto. Lascia segno — quando spiega qualcosa ai cuccioli, quel qualcosa resta. Aspetta — sta su una zampa sola, immobile, finché il cucciolo arriva alla risposta da sé. Becca preciso — quando finalmente parla, una sola frase, mai due. Vola con calma.
-
-Non dà mai una risposta diretta. Rilancia. *"Tu cosa pensi?"* è la sua frase più frequente. Conosce ogni cucciolo per nome dal primo giorno e ricorda quello che ognuno ha detto a scuola tre anni fa.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/stria/scheda.md`.*
 
 **Voce tipica.**
 - *"Tu cosa pensi?"*
@@ -264,19 +260,15 @@ Voce un filo più formale degli altri abitanti. Niente *"eh"*, niente *"dai"*. F
 
 **Funzione narrativa.** Personaggio dell'**autorità calma e dello scambio asimmetrico**. Funzione anche di **memoria del villaggio** (sa cosa è successo agli abitanti negli anni). **Ruolo familiare episodico:** maestra-zia. Distinta dalla madre — più formale e meno calda.
 
-**Note e vincoli.** Mai Stria che dà una lezione esplicita di morale. La sua autorità è nel *come* (rilancio, attesa, riconoscimento), mai nel *cosa*. Mai Stria che si commuove visibilmente. Mai due risposte di Stria nella stessa scena. Mai Stria sopra o sotto l'Albero Vecchio (l'Albero è centro silenzioso del mandala, va lasciato libero).
+**Note e vincoli (narrativi).** Mai Stria che dà una lezione esplicita di morale. La sua autorità è nel *come* (rilancio, attesa, riconoscimento), mai nel *cosa*. Mai due risposte di Stria nella stessa scena. Mai Stria sopra o sotto l'Albero Vecchio (l'Albero è centro silenzioso del mandala, va lasciato libero).
 
 ---
 
 ### §4.7 MÈMOLO
 
-**Specie, ruolo, residenza.** Riccio. Abitante del villaggio centrale — sta in una casetta tonda nascosta dietro un cespuglio sulla piazza, vicino all'Albero Vecchio. Non ha mestiere fisso. Padre di Pun.
+**Specie, ruolo, residenza.** Riccio. Abitante del villaggio centrale, sulla piazza, vicino all'Albero Vecchio. Non ha mestiere fisso. Padre di Pun.
 
-**Aspetto.** Piccolo, tondo, con le spine corte e morbide del riccio adulto che non ha più paura di niente. Il muso lungo, gli occhi neri e attenti — più attenti di quanto si direbbe da come cammina. Si confonde nei propri passi quando va di fretta. **Firma visiva:** una piccola sciarpa annodata sul collo, sempre annodata male, che sistema mille volte al giorno e non resta mai dritta.
-
-**Comportamento operativo (Tratto 7).** Mèmolo fa cose-da-riccio. Esce piano, esita sulla soglia. Si arrotola quando una cosa lo spaventa o lo confonde — gesto fisico vero, brevissimo. Trotterella veloce per piccoli tratti, poi si ferma e dimentica perché è uscito. Inciampa nelle proprie spine — *"ahi"* — e poi ride. Conosce le buche e le radici della piazza meglio di chiunque, perché ci passa da sotto. Sta vicino alla terra.
-
-Confonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a storia, nel mezzo della confusione, dice una cosa **incredibilmente precisa** — come se per un attimo avesse visto tutto chiaramente. Poi torna confuso. Lui per primo non si accorge di averlo detto.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/memolo/scheda.md`.*
 
 **Voce tipica.**
 - *"Aspetta dove andavo. Andavo da... no. Sì. No."*
@@ -287,19 +279,15 @@ Voce-precisa (rara, una a storia se compare):
 
 **Funzione narrativa.** Personaggio del **cambio di registro** (Tratto 4 — colpo di coda). Quando una storia diventa troppo seria, Mèmolo entra e la abbassa. Quando serve un'intuizione vera del narratore-iniziato (Tratto 14) ma non si vuole farla pronunciare a un saggio, Mèmolo la dice nel mezzo della confusione. **Ruolo familiare episodico:** zio buffo, quello che fa ridere ma a cui un bambino si avvicina anche quando è triste perché non chiede spiegazioni.
 
-**Note e vincoli.** Mai un Mèmolo "sapientemente confuso" che fa il finto tonto per insegnare. La sua precisione deve sembrare casuale. Mai due frasi-precise nella stessa storia. Mai usare Mèmolo per *risolvere* un problema della trama — può aprire una via, mai chiuderla. Pun (suo cucciolo) non lo addomestica.
+**Note e vincoli (narrativi).** La sua precisione deve sembrare casuale. Mai due frasi-precise nella stessa storia. Mai usare Mèmolo per *risolvere* un problema della trama — può aprire una via, mai chiuderla. Pun (suo cucciolo) non lo addomestica.
 
 ---
 
 ### §4.8 GRUNTO
 
-**Specie, ruolo, residenza.** Stambecco vecchio. **Verde** (eco silenziosa al Grinch, mai detta nel testo — rinforza l'ambivalenza paura/coraggio del personaggio, e il pelo si confonde col lichene delle rocce). Vive nel Burrone tra le Montagne Gemelle, Quartiere d'Aria a nord, in una grotta poco profonda riparata da uno sperone di roccia. Nessun altro abita lassù — i Pascoli Alti finiscono prima.
+**Specie, ruolo, residenza.** Stambecco vecchio. Vive nel Burrone tra le Montagne Gemelle, Quartiere d'Aria a nord. Nessun altro abita lassù — i Pascoli Alti finiscono prima.
 
-**Aspetto.** Robusto, alto al garrese più di un fratello in piedi. Pelo verde — verde scuro come muschio bagnato, più chiaro sul ventre, che lo confonde col lichene. Le corna grandi, ricurve all'indietro, segnate di anelli (uno per ogni inverno). Gli zoccoli neri, duri. La barba lunga sotto il mento, la stessa verde del pelo. Gli occhi gialli con la pupilla orizzontale. **Firma visiva:** una cicatrice lunga sul fianco sinistro, una striscia senza pelo dove il verde lascia spazio a una pelle più chiara. Mai spiegata, mai nominata nel testo (porta socchiusa per memoria-lunga).
-
-**Comportamento operativo (Tratto 7).** Grunto fa cose-da-stambecco-vecchio attraverso il corpo del solitario. Sale dove altri non vanno. Sta in piedi a lungo — può restare ore senza muoversi, naso al vento. Brontola — il suo verso non è urlo, è un *grunt* basso che parte dal petto, e usa quel suono come parola. Dorme poco e male. Mangia poco. Cammina proprio — fa la sua strada, e quella strada è solo sua.
-
-Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima cosa che fa è mandarlo via — *grunt*, una zampa che pesta. Se quello resta, Grunto smette di guardarlo (un tipo di permesso). Se quello parla, Grunto risponde brontolando una parola sola, due al massimo. Se quello si siede a fianco senza chiedere niente, dopo un po' lungo Grunto può dire una cosa intera. Il prezzo per arrivarci è il silenzio.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/grunto/scheda.md`.*
 
 **Memoria pre-Vento (vedi §1.4).** Era già qui prima del villaggio. Era già qui prima che gli Spiriti diventassero Venti. Ha conosciuto gli Spiriti dal vivo. Si è ritirato in alto perché abituato a una densità di presenza che il vento-respiro non gli basta. Lo dice raramente, e mai per intero. Mai pronuncia i nomi propri Ariete/Ondina/Tempesta. Mai una scena pre-Vento raccontata per intero — solo frammenti incompiuti.
 
@@ -318,17 +306,15 @@ Mai una frase che spiega. Mai una frase che si scusa. Mai un *"perché"*.
 
 **Funzione narrativa.** Personaggio del **confronto vero senza cattiveria**. Funzione anche di **soglia delle Montagne** (guardiano del nord) e di **testimone vivente della trasformazione mitica** (vedi §1.4 — architrave dello strato 3). **Ruolo familiare:** nessuno. Insegna ai fratelli che non tutto il mondo è famiglia.
 
-**Note e vincoli.** Mai Grunto che si addolcisce in modo visibile (rottura). Cambiamenti minimi se ci sono (una parola in più, uno *grunt* invece di un *via*). Mai Grunto che scende al villaggio (firma è la quota). Mai in scena di gruppo. Mai spiegare il verde. Mai pronunciare nomi propri Ariete/Ondina/Tempesta. Mai racconti pieni di scene pre-Vento. Mai Grunto nostalgico. Mai Grunto cattivo — burbero non è cattivo. Mai usare la parola Grinch nel testo. Quota memoria pre-Vento: massimo 2 frammenti in tutta la saga.
+**Note e vincoli (narrativi).** Cambiamenti minimi se ci sono (una parola in più, uno *grunt* invece di un *via*). Mai Grunto che scende al villaggio (firma è la quota). Mai in scena di gruppo. Mai pronunciare nomi propri Ariete/Ondina/Tempesta. Mai racconti pieni di scene pre-Vento. Mai Grunto nostalgico. Mai Grunto cattivo — burbero non è cattivo. Mai usare la parola Grinch nel testo. Quota memoria pre-Vento: massimo 2 frammenti in tutta la saga.
 
 ---
 
 ### §4.9 SALVIA
 
-**Specie, ruolo, residenza.** Lepre. Cura — conosce le piante medicinali, le raccoglie nei campi e ai bordi della Foresta, le porta a chi serve. Vive in una casa-tana semicoperta di terra all'inizio degli Orti del Cerchio, Quartiere di Terra a ovest. Davanti casa ha un piccolo giardino di erbe ordinate per file.
+**Specie, ruolo, residenza.** Lepre. Cura — conosce le piante medicinali, le raccoglie nei campi e ai bordi della Foresta, le porta a chi serve. Vive all'inizio degli Orti del Cerchio, Quartiere di Terra a ovest.
 
-**Aspetto.** Magra, lunga di gambe, pelo color sabbia con la pancia bianca. Le orecchie alte, sempre un po' inclinate verso il rumore. Gli occhi grandi, scuri, che non si fermano mai del tutto. Le mani veloci. **Firma visiva:** un cesto a tracolla di vimini sottile, piccolo, che le pende sul fianco. Sempre con erbe dentro.
-
-**Comportamento operativo (Tratto 7).** Salvia fa cose-da-lepre attraverso il mestiere di chi cura. Si muove veloce — entra ed esce dai luoghi a passi corti e fitti. Ascolta tantissimo. Conosce ogni pianta dell'isola per nome, e quando la usa la chiama (*camomilla* per dormire, *malva* sul ginocchio sbucciato, *salvia* per il mal di gola, *menta* per il mal di pancia). Lavora in silenzio mentre cura. Non resta mai a lungo. Lascia un sacchettino con istruzioni semplici e già è uscita.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/secondari/salvia/scheda.md`.*
 
 **Voce tipica.**
 - *"Qui fa male?"*
@@ -611,45 +597,9 @@ Sezioni: APERTURA (situazione iniziale, equilibrio) → TENSIONE (problema emerg
 
 ---
 
-## §6. PALETTE VISIVA (canonico Bible v1.1, integrato in v2.0)
+## §6. PALETTE VISIVA — migrata al catalogo
 
-**Fratelli:**
-- Gabriel: toni profondi (blu scuro, viola)
-- Elias: toni caldi (arancione, giallo)
-- Noah: toni vivaci (verde chiaro, turchese)
-
-**Spiriti Fondatori (solo nei miti, libro 0):**
-- Ariete: bianco/grigio con corna dorate
-- Ondina: blu acqua/turchese lucente
-- Tempesta: grigio tempesta/viola scuro
-
-**Venti:**
-- Taglio: argento, bianco, azzurro freddo
-- Intreccio: oro, ambra, arancione caldo
-- Mulinello: viola, rosa, colori che cambiano
-
-**Quartieri:**
-- Quartiere di Fuoco (Est): terracotta, rosso brace, oro
-- Quartiere d'Acqua (Sud): blu mare, verde alga, sabbia
-- Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra
-- Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco
-- Villaggio centrale: terracotta, legno caldo, verde Albero Vecchio
-
-**Abitanti maggiori:**
-- Bartolo: verde mare antico (guscio scuro, cicatrici pallide)
-- Fiamma: rosso arancio fuoco (pelo brace, grembiule terracotta)
-- Rovo: grigio-marrone terra (pelo, bandana scura)
-- Stria: grigio cenere elegante (piume, scialle)
-- Mèmolo: marrone caldo morbido (spine corte, sciarpa colorata)
-- Grunto: **verde scuro** (pelo, eco silenziosa Grinch), cicatrice chiara
-
-**Abitanti minori:**
-- Salvia: sabbia + verdi delle erbe del cesto
-- Nodo: nero/bianco/rosso cresta + corda chiara
-- Amo: nero blu lucido + conchiglia scura
-- Zolla: grigio + cuoio bisaccia
-
-**Cuccioli:** versioni più chiare/morbide dei rispettivi adulti, salvo Cardo (grigio-marrone) e Liù (riflessi azzurro-verdi).
+> *Tutte le palette (fratelli, Spiriti Fondatori, venti, quartieri, abitanti maggiori, abitanti minori, cuccioli) sono state migrate alle schede del catalogo `visual/`, sezione "Palette e atmosfera" di ogni entità. Per la consultazione organica della palette di un'entità → `visual/<famiglia>/<sottotipo>/<id>/scheda.md`.*
 
 ---
 
