@@ -4,7 +4,7 @@ name: Via degli Orti
 famiglia: luogo
 sottotipo: path
 quartiere: terra
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.via_degli_orti", "cartografia/geo/island.geojson#features.id=via_degli_orti"]
 appare_in_storie: []

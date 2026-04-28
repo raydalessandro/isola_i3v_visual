@@ -4,7 +4,7 @@ name: Via dell'Alba
 famiglia: luogo
 sottotipo: path
 quartiere: fuoco
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.via_dell_alba", "cartografia/geo/island.geojson#features.id=via_dell_alba"]
 appare_in_storie: []

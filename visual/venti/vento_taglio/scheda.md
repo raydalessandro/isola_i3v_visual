@@ -3,7 +3,7 @@ id: vento_taglio
 name: Vento Taglio
 famiglia: vento
 sottotipo: null
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.winds.vento_taglio"]
 appare_in_storie: []

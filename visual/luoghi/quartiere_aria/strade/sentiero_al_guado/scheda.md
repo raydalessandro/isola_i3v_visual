@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: strada
 categoria_strada: sentiero_secondario
 quartiere: aria
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_al_guado"]
 appare_in_storie: []

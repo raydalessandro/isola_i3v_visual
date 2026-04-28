@@ -6,7 +6,7 @@ sottotipo: bambini
 specie: umano
 tipo_grafo: protagonista
 ruolo_saga: protagonista
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.gabriel"]
 appare_in_storie: []

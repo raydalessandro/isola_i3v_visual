@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: strada
 categoria_strada: sentiero_costiero
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_spiaggia_casa_amo"]
 appare_in_storie: []

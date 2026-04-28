@@ -4,7 +4,7 @@ name: Casa di Amo
 famiglia: luogo
 sottotipo: building
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.casa_amo", "cartografia/geo/island.geojson#features.id=casa_amo"]
 appare_in_storie: []

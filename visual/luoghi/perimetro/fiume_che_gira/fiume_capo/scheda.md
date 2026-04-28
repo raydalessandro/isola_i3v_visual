@@ -4,7 +4,7 @@ name: Capo del Fiume
 famiglia: luogo
 sottotipo: river
 quartiere: perimetro
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=fiume_capo"]
 appare_in_storie: []

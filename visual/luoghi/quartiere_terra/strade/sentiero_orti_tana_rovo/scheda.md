@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: strada
 categoria_strada: sentiero_interno_quartiere
 quartiere: terra
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_orti_tana_rovo"]
 appare_in_storie: []

@@ -4,7 +4,7 @@ name: Grotta di Grunto
 famiglia: luogo
 sottotipo: cave
 quartiere: aria
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.grotta_grunto", "cartografia/geo/island.geojson#features.id=grotta_grunto"]
 appare_in_storie: []

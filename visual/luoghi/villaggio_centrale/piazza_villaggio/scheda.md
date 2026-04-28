@@ -4,7 +4,7 @@ name: Piazza del Villaggio
 famiglia: luogo
 sottotipo: square
 quartiere: centro
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.piazza_villaggio", "cartografia/geo/island.geojson#features.id=piazza_villaggio"]
 appare_in_storie: []

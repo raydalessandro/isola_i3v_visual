@@ -6,7 +6,7 @@ sottotipo: collettivo
 specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: cura_delle_cose_del_villaggio
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.mantenitori"]
 appare_in_storie: []

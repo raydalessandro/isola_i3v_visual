@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: strada
 categoria_strada: sentiero_costiero
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_pontile_spiaggia"]
 appare_in_storie: []

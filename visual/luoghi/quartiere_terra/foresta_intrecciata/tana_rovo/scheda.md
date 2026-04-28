@@ -4,7 +4,7 @@ name: Tana di Rovo
 famiglia: luogo
 sottotipo: burrow
 quartiere: terra
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.tana_rovo", "cartografia/geo/island.geojson#features.id=tana_rovo"]
 appare_in_storie: []

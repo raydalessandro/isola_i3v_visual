@@ -4,7 +4,7 @@ name: Panca di Pietra
 famiglia: luogo
 sottotipo: landmark
 quartiere: centro
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=panca_di_pietra"]
 appare_in_storie: []

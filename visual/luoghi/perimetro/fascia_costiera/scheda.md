@@ -4,7 +4,7 @@ name: Fascia Costiera
 famiglia: luogo
 sottotipo: coastal_belt
 quartiere: perimetro
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.fascia_costiera", "cartografia/geo/island.geojson#features.id=fascia_costiera"]
 appare_in_storie: []

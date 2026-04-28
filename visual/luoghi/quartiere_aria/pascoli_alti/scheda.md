@@ -4,7 +4,7 @@ name: Pascoli Alti
 famiglia: luogo
 sottotipo: fields
 quartiere: aria
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.pascoli_alti", "cartografia/geo/island.geojson#features.id=pascoli_alti"]
 appare_in_storie: []

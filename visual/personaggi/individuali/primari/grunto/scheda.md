@@ -6,7 +6,7 @@ sottotipo: primari
 specie: stambecco_verde_vecchio
 tipo_grafo: testimone_unico_pre_vento
 ruolo_saga: architrave_strato_3
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.grunto"]
 appare_in_storie: []

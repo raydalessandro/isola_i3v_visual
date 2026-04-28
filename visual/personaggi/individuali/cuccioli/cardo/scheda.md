@@ -6,7 +6,7 @@ sottotipo: cuccioli
 specie: lupacchiotto
 tipo_grafo: cucciolo_scuola
 ruolo_saga: frizione_necessaria
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.cardo"]
 appare_in_storie: []

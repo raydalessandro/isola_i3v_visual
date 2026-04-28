@@ -3,7 +3,7 @@ id: vento_intreccio
 name: Vento Intreccio
 famiglia: vento
 sottotipo: null
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.winds.vento_intreccio"]
 appare_in_storie: []

@@ -6,7 +6,7 @@ sottotipo: collettivo
 specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: luogo_di_scambio_voci_e_cose
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.mercato_del_mezzogiorno"]
 appare_in_storie: []

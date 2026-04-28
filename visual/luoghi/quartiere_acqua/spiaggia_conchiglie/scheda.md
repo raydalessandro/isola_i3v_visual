@@ -4,7 +4,7 @@ name: Spiaggia delle Conchiglie
 famiglia: luogo
 sottotipo: beach
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.spiaggia_conchiglie", "cartografia/geo/island.geojson#features.id=spiaggia_conchiglie"]
 appare_in_storie: []

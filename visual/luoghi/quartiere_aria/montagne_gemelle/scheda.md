@@ -4,7 +4,7 @@ name: Montagne Gemelle
 famiglia: luogo
 sottotipo: mountain_system
 quartiere: aria
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.montagne_gemelle", "cartografia/geo/island.geojson#features.id=montagne_gemelle"]
 appare_in_storie: []

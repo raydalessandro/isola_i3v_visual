@@ -3,7 +3,7 @@ id: nido_vuoto_s08
 name: Nido Vuoto S08
 famiglia: oggetto
 sottotipo: oggetto_naturale_trovato
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.nido_vuoto_s08"]
 appare_in_storie: []

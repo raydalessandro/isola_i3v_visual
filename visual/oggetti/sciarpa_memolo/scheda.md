@@ -3,7 +3,7 @@ id: sciarpa_memolo
 name: Sciarpa Memolo
 famiglia: oggetto
 sottotipo: null
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.sciarpa_memolo"]
 appare_in_storie: []

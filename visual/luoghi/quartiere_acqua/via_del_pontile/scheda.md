@@ -4,7 +4,7 @@ name: Via del Pontile
 famiglia: luogo
 sottotipo: path
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.via_del_pontile", "cartografia/geo/island.geojson#features.id=via_del_pontile"]
 appare_in_storie: []

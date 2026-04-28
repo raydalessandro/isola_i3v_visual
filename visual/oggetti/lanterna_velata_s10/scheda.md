@@ -3,7 +3,7 @@ id: lanterna_velata_s10
 name: Lanterna Velata S10
 famiglia: oggetto
 sottotipo: oggetto_pratico_di_casa
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.objects.lanterna_velata_s10"]
 appare_in_storie: []

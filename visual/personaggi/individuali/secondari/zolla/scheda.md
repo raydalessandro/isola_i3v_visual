@@ -6,7 +6,7 @@ sottotipo: secondari
 specie: scoiattolo_grigio_anziano
 tipo_grafo: abitante_minore_mestiere
 ruolo_saga: stagione_e_parsimonia
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.zolla"]
 appare_in_storie: []

@@ -4,7 +4,7 @@ name: Case del Mattino
 famiglia: luogo
 sottotipo: building
 quartiere: fuoco
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.case_del_mattino", "cartografia/geo/island.geojson#features.id=case_del_mattino"]
 appare_in_storie: []

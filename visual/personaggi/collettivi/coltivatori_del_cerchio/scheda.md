@@ -6,7 +6,7 @@ sottotipo: collettivo
 specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: coralita_del_lavoro_agricolo
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.coltivatori_del_cerchio"]
 appare_in_storie: []

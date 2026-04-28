@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: strada
 categoria_strada: sentiero_interno
 quartiere: acqua
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_ritorno_bocca_orti"]
 appare_in_storie: []

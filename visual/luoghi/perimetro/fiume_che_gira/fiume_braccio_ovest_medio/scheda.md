@@ -4,7 +4,7 @@ name: Braccio Ovest — tratto medio
 famiglia: luogo
 sottotipo: river
 quartiere: perimetro
-status: stub
+status: provvisorio
 ultima_modifica: 2026-04-28
 fonti: ["cartografia/geo/island.geojson#features.id=fiume_braccio_ovest_medio"]
 appare_in_storie: []
@@ -26,64 +26,68 @@ cartografia:
 
 # Braccio Ovest — tratto medio
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Tratto del Fiume che Gira (sotto-feature cartografica, child di `fiume_che_gira`). Cartograficamente è la porzione media del braccio ovest dell'anello fluviale.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+_da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+_da popolare dal grafo_
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Posizione: braccio ovest dell'anello, tratto medio. Parent narrativo: Fiume che Gira. Direzione corrente: antioraria.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Non in `entities.locations` del grafo; appare cartograficamente in `cartografia/geo/island.geojson`. Apparizioni narrative: derivare dalla feature parent `fiume_che_gira` (s07 PRIMARIA, s12 secondaria).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `cartografia/geo/island.geojson#features.id=fiume_braccio_ovest_medio`: parent_geo `fiume_che_gira`.
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8 incipit: descrizione anello del Fiume che Gira (corrente antioraria).
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 Quartieri: nessuna riga dedicata al perimetro/fiume.
