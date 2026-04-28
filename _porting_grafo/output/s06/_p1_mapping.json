@@ -173,6 +173,20 @@
   },
   "key_phrase_attributed_to": "memolo",
   "_key_phrase_note": "S06 caso simile a s03 (key_phrase a personaggio). voice_notes_essential dichiara FRASE_PRECISA_MEMOLO_UNA: 'Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.' Detta nel cortile mentre infila la scatoletta in tasca. Meccanica istituita (struct.notes 'MECCANICA_ISTITUITA_MEMOLO_FRASE_PRECISA'). Promosso al canonical via REGOLA 0.8.",
+  "location_primary_override": {
+    "id": "centro_villaggio",
+    "note_extra": "FIX_RAY_REVIEW: id grafo originale 'tutta_isola_quattro_quartieri_attraversati' (semantico, non in catalogo) sostituito con 'centro_villaggio' (apertura aula scuola_stria + chiusura cortile_memolo, entrambi quartiere centro). Info giro completo 4 quartieri preservata sotto."
+  },
+  "locations_secondary_id_renames": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "panca_di_pietra"
+  },
+  "locations_secondary_role_extras": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita_al_mercato_del_mezzogiorno"
+  },
+  "characters_id_renames": {
+    "vecchie_del_mercato": "mercato_del_mezzogiorno"
+  },
+  "_overrides_note": "FIX_RAY_REVIEW post-P1 (commit s06 review): 3 override applicati per uniformare con catalogo (mis_006 risolto). Sfumatura 'vecchie sedute sulla panca' preservata in narrative_weight + focal_action h5. Decisione Ray: 'fai quello che non rompe il grafo e da' meno problemi, uniforma'.",
   "debts_opened_keep": [],
   "debts_closed_keep": [],
   "_debts_note": "5 debts_opened raw + ? debts_closed raw, tutti seed_refs (archived_seed_refs=3). Canonical: [].",

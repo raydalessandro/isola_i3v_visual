@@ -113,11 +113,11 @@
       "catalog_reference": "catalogo_web/data/entities.json#mercato_del_mezzogiorno (personaggio collettivo)",
       "graph_reference": "story_graph.json#stories.s06.characters_in_scene[*].id = 'vecchie_del_mercato' + characters_offscreen[*].id = 'mercato_del_mezzogiorno'",
       "bible_reference": null,
-      "description": "Il grafo s06 cita due id distinti per gruppi del mercato: 'vecchie_del_mercato' (in scena, panca di pietra muro sud, gesto del dito che indica Albero Vecchio) + 'mercato_del_mezzogiorno' (off-screen, ambiente sociale). Il catalogo ha solo 'mercato_del_mezzogiorno' (personaggio.collettivo). Le 'vecchie' sono SOTTOGRUPPO del mercato (sedute sulla panca, parte dell'istituzione mercato). P1 ha preservato 'vecchie_del_mercato' nel canonical characters_in_scene (decisione conservativa: id stringa non validato dallo schema, characters_must_exist regola del prompt non enforced).",
+      "description": "Il grafo s06 cita due id distinti per gruppi del mercato: 'vecchie_del_mercato' (in scena, panca di pietra muro sud, gesto del dito che indica Albero Vecchio) + 'mercato_del_mezzogiorno' (off-screen, ambiente sociale). Il catalogo ha solo 'mercato_del_mezzogiorno' (personaggio.collettivo). Le 'vecchie' sono SOTTOGRUPPO del mercato (sedute sulla panca, parte dell'istituzione mercato). Inoltre locations_secondary aveva id composito 'mercato_del_mezzogiorno_panca_di_pietra' (non in catalogo) invece di 'panca_di_pietra' (id catalogo).",
       "severity": "bassa",
-      "proposed_resolution": "Decisione post-saga: o aggiungere 'vecchie_del_mercato' al catalogo come personaggio sottogruppo di 'mercato_del_mezzogiorno' (con relazione parent/child), o unificare il grafo a 'mercato_del_mezzogiorno' con qualifier nel narrative_weight.",
-      "status": "open",
-      "resolved_in_phase": null
+      "proposed_resolution": "RISOLTO post-review Ray (s06_p1_mapping override): (1) characters_id_renames vecchie_del_mercato -> mercato_del_mezzogiorno; sfumatura 'vecchie sedute sulla panca' preservata in narrative_weight + focal_action h5; (2) locations_secondary_id_renames mercato_del_mezzogiorno_panca_di_pietra -> panca_di_pietra; role esteso con 'tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita_al_mercato_del_mezzogiorno'. Decisione Ray: 'fai quello che non rompe il grafo, uniforma'. Anche FLAG 3 risolto contestualmente: location_primary.id 'tutta_isola_quattro_quartieri_attraversati' -> 'centro_villaggio' (apertura/chiusura) con info giro 4 quartieri preservata in note.",
+      "status": "resolved",
+      "resolved_in_phase": "P1_review_Ray"
     }
   ]
 }

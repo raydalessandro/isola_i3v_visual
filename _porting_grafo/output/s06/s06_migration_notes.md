@@ -91,6 +91,30 @@ Mapping aggiunto: `key_phrase_attributed_to: "memolo"` promosso al canonical via
 
 - **mis_006**: `vecchie_del_mercato` (grafo characters_in_scene) vs `mercato_del_mezzogiorno` (catalogo personaggio collettivo). Le vecchie sono SOTTOGRUPPO del mercato. Severity bassa, status open. P1 ha preservato l'id del grafo nel canonical (decisione conservativa).
 
+## Aggiornamento post-review Ray (3 FLAG fix)
+
+Review Ray ha rilevato 3 fix di uniformazione (decisione: 'fai quello che non rompe il grafo, uniforma'):
+
+### FLAG 1 — `vecchie_del_mercato` → `mercato_del_mezzogiorno`
+characters_in_scene[*].id rinominato. Sfumatura "vecchie sedute sulla panca" preservata in narrative_weight + focal_action di h5. Query interrogabile, niente proliferazione id.
+
+### FLAG 2 — `mercato_del_mezzogiorno_panca_di_pietra` → `panca_di_pietra`
+locations_secondary[4].id rinominato. role esteso a `tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita_al_mercato_del_mezzogiorno | <role_originale>` per preservare contesto narrativo.
+
+### FLAG 3 — `tutta_isola_quattro_quartieri_attraversati` → `centro_villaggio`
+location_primary.id sostituito (id grafo originale era semantico, non in catalogo). Apertura aula scuola_stria + chiusura cortile_memolo entrambi quartiere centro. Info giro completo 4 quartieri preservata in `location_primary.note` come prefisso "FIX_RAY_REVIEW: ...".
+
+### Implementazione
+
+3 nuove funzionalita' in `migrate_p1.py`:
+- `location_primary_override` (mapping): sostituisce id, preserva note storica.
+- `locations_secondary_id_renames` + `_role_extras` (mapping): rinomina id + estende role.
+- `characters_id_renames` (mapping): rinomina id legacy a id catalogo.
+
+Pattern riusabile per casi simili in s07-s12. mis_006 → resolved.
+
+`verify_output_integrity.py` post-fix: PASS. Regression test s01-s05: PASS.
+
 ## Stato: VIA LIBERA P2 (gia' eseguito)
 
 9 provvisori (3A + 4B + 2C). I 5 `no_inference_fields` restano `null`.

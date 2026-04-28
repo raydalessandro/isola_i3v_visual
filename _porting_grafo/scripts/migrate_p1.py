@@ -167,15 +167,35 @@ def migrate(story_id: str):
     canonical["location_primary"] = {"id": lp_old["id"]}
     if lp_note_parts:
         canonical["location_primary"]["note"] = " | ".join(lp_note_parts)
+    # Override mapping (REGOLA aggiunta post-s06): se P0 dichiara location_primary_override,
+    # sostituisce id con id catalogo + preserva la note storica come continuazione.
+    if "location_primary_override" in mapping:
+        lpo = mapping["location_primary_override"]
+        canonical["location_primary"]["id"] = lpo["id"]
+        if lpo.get("note_extra"):
+            existing = canonical["location_primary"].get("note", "")
+            canonical["location_primary"]["note"] = (lpo["note_extra"] + " | " + existing).strip(" |") if existing else lpo["note_extra"]
 
     # locations_secondary: rinomina scene_role -> role; tiene id
-    canonical["locations_secondary"] = [
-        {"id": s["id"], "role": s.get("scene_role") or s.get("role", "")}
-        for s in on.get("locations_secondary", [])
-    ]
+    # Override mapping: se P0 dichiara locations_secondary_id_renames, applica.
+    ls_renames = mapping.get("locations_secondary_id_renames", {})
+    ls_role_extras = mapping.get("locations_secondary_role_extras", {})
+    canonical["locations_secondary"] = []
+    for s in on.get("locations_secondary", []):
+        old_id = s["id"]
+        new_id = ls_renames.get(old_id, old_id)
+        role = s.get("scene_role") or s.get("role", "")
+        if old_id in ls_role_extras:
+            role = (ls_role_extras[old_id] + " | " + role).strip(" |") if role else ls_role_extras[old_id]
+        canonical["locations_secondary"].append({"id": new_id, "role": role})
 
     # characters_in_scene: copia campi rilevanti (no rinomine)
-    canonical["characters_in_scene"] = normalize_characters_in_scene(on.get("characters_in_scene", []))
+    # Override mapping: characters_id_renames per rinomina id legacy -> catalogo.
+    char_renames = mapping.get("characters_id_renames", {})
+    raw_chars = on.get("characters_in_scene", [])
+    if char_renames:
+        raw_chars = [{**ch, "id": char_renames.get(ch["id"], ch["id"])} for ch in raw_chars]
+    canonical["characters_in_scene"] = normalize_characters_in_scene(raw_chars)
     canonical["characters_offscreen_or_background"] = on.get("characters_offscreen_or_background", [])
 
     # seeds: copia diretta

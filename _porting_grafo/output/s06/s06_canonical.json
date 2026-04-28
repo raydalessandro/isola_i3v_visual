@@ -14,8 +14,8 @@
   "night_scene_notes": null,
   "when_water_trembles": false,
   "location_primary": {
-    "id": "tutta_isola_quattro_quartieri_attraversati",
-    "note": "specific_points: ['scuola_stria_apertura', 'rotta_scuola_al_forno_primo_bastoncino_noah', 'forno_di_fiamma_tappa_est', 'casa_salvia_tappa_ovest', 'casa_zolla_tappa_ovest', 'rotta_orti_al_mercato_secondo_bastoncino_noah', 'mercato_del_mezzogiorno_panca_di_pietra_vecchie', 'cespuglio_dietro_albero_vecchio_scoperta', 'casa_memolo_cortile_chiusura']"
+    "id": "centro_villaggio",
+    "note": "FIX_RAY_REVIEW: id grafo originale 'tutta_isola_quattro_quartieri_attraversati' (semantico, non in catalogo) sostituito con 'centro_villaggio' (apertura aula scuola_stria + chiusura cortile_memolo, entrambi quartiere centro). Info giro completo 4 quartieri preservata sotto. | specific_points: ['scuola_stria_apertura', 'rotta_scuola_al_forno_primo_bastoncino_noah', 'forno_di_fiamma_tappa_est', 'casa_salvia_tappa_ovest', 'casa_zolla_tappa_ovest', 'rotta_orti_al_mercato_secondo_bastoncino_noah', 'mercato_del_mezzogiorno_panca_di_pietra_vecchie', 'cespuglio_dietro_albero_vecchio_scoperta', 'casa_memolo_cortile_chiusura']"
   },
   "locations_secondary": [
     {
@@ -35,8 +35,8 @@
       "role": "tappa_tre_giro_zolla_dispensa_ghiande_qualcosa_in_tasca_forse"
     },
     {
-      "id": "mercato_del_mezzogiorno_panca_di_pietra",
-      "role": "tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita"
+      "id": "panca_di_pietra",
+      "role": "tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita_al_mercato_del_mezzogiorno | tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita"
     },
     {
       "id": "cespuglio_dietro_albero_vecchio",
@@ -168,7 +168,7 @@
       "quote_count_estimate": 1
     },
     {
-      "id": "vecchie_del_mercato",
+      "id": "mercato_del_mezzogiorno",
       "role": "cammeo_panca_di_pietra_istituzione_corale_silente",
       "narrative_weight": "tappa_quattro_del_giro_indicazione_muta_che_svolta_la_ricerca_peso_strutturale_alto_nonostante_silenzio",
       "key_actions": [
