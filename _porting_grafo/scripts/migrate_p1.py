@@ -78,28 +78,76 @@ def load_canonical_oggetti(repo: Path) -> set:
     return {x["id"] for x in cat["entities"] if x.get("famiglia") == "oggetto"}
 
 
+# REGOLA 7 — character_in_scene: campi permessi dallo schema (additionalProperties: false)
+CHARACTER_IN_SCENE_ALLOWED = {
+    "id", "role", "mode", "key_actions", "narrative_weight", "constraints_active",
+    "fear_touched", "fragment_used", "detti_count", "detti_notes", "tok_tok_tok",
+    "familial_role_episodic", "quote_count_estimate", "client_current", "plant_named",
+    "distinct_from_other_story", "note",
+}
+
+# REGOLA 7 — scene_hook: campi permessi dallo schema (additionalProperties: false)
+SCENE_HOOK_ALLOWED = {
+    "hook_id", "moment", "location", "quadrant", "characters_present", "elements",
+    "palette", "notes", "focal_action", "focal_object", "atmosphere", "wind_visible",
+    "onomatopee", "stratification",
+}
+
 DISTINCT_FROM_PATTERN = re.compile(r"^distinct_from_s\d+$")
 
 
 def normalize_characters_in_scene(characters: list) -> list:
     """REGOLA 1bis (post-s05): characters_in_scene[*].distinct_from_s<NN> ->
     distinct_from_other_story (campo canonico schema v1.2). Il valore stringa
-    contiene gia' l'info su quale storia distinguere; va preservato."""
+    contiene gia' l'info su quale storia distinguere; va preservato.
+
+    REGOLA 7 (post-s08): assorbe key_action (singolare) -> key_actions (lista),
+    e raccoglie campi non-schema dispersi (key_phrase_spoken, key_phrase_notes,
+    frase_precisa_used, timing) in `note` con prefissi descrittivi. Schema
+    character_in_scene ha additionalProperties: false."""
     out = []
     for ch in characters:
         ch_new = {}
+        absorb_into_note = []
         for k, v in ch.items():
             if DISTINCT_FROM_PATTERN.match(k):
-                # rinomina a campo canonico; se gia' presente per qualche
-                # motivo, concatena (caso edge non osservato finora).
                 if "distinct_from_other_story" in ch_new:
                     ch_new["distinct_from_other_story"] += " | " + v
                 else:
                     ch_new["distinct_from_other_story"] = v
-            else:
+            elif k == "key_action":
+                # singolare -> lista (REGOLA 7)
+                existing = ch_new.get("key_actions")
+                ch_new["key_actions"] = (existing if isinstance(existing, list) else []) + [v]
+            elif k in CHARACTER_IN_SCENE_ALLOWED:
                 ch_new[k] = v
+            else:
+                # campo non-schema: assorbi in note con prefisso (REGOLA 0.11)
+                absorb_into_note.append(f"{k}={v}")
+        if absorb_into_note:
+            existing_note = ch_new.get("note", "")
+            absorbed = " | ".join(absorb_into_note)
+            ch_new["note"] = f"{existing_note} | {absorbed}".strip(" |") if existing_note else absorbed
         out.append(ch_new)
     return out
+
+
+def filter_scene_hook_fields(h: dict) -> dict:
+    """REGOLA 0.11 (post-s08): scene_hook ha additionalProperties: false.
+    Campi non-schema (frase_precisa_visibile, voice_constraint, visual, etc)
+    vanno assorbiti in `notes` con prefisso, oppure droppati."""
+    h_new = {}
+    absorb = []
+    for k, v in h.items():
+        if k in SCENE_HOOK_ALLOWED:
+            h_new[k] = v
+        else:
+            absorb.append(f"{k}={v}")
+    if absorb:
+        existing = h_new.get("notes")
+        absorbed = " | ".join(absorb)
+        h_new["notes"] = f"{existing} | {absorbed}".strip(" |") if existing else absorbed
+    return h_new
 
 
 def normalize_callbacks(callbacks: list, story_id: str) -> list:
@@ -213,10 +261,13 @@ def migrate(story_id: str):
 
     canonical["key_phrase_indicative"] = on.get("key_phrase_indicative")
     canonical["key_phrase_notes"] = on.get("key_phrase_notes")
-    # key_phrase_attributed_to (campo opzionale schema v1.2): popolato solo se P0 lo
-    # dichiara nel _p1_mapping.json (es. s03 con frase di Rovo). Per le storie con
-    # key_phrase del narratore o null, il campo va aggiunto da Ray in fase D quando
-    # popola key_phrase_indicative. Cf. REGOLA 0.8 MIGRATION_PROMPT.
+    # REGOLA 0.8 / 0.11 (post-s03/s08): override mapping per consolidamento voice
+    # fields dispersi (es. s08: la frase precisa di Memolo era duplicata in
+    # chars[3].key_phrase_spoken + hook.frase_precisa_visibile, consolidata al top-level).
+    if "key_phrase_indicative_override" in mapping:
+        canonical["key_phrase_indicative"] = mapping["key_phrase_indicative_override"]
+    if "key_phrase_notes_override" in mapping:
+        canonical["key_phrase_notes"] = mapping["key_phrase_notes_override"]
     if "key_phrase_attributed_to" in mapping:
         canonical["key_phrase_attributed_to"] = mapping["key_phrase_attributed_to"]
     # premise/problem/threshold/resolution: copia identica REGOLA 2
@@ -235,6 +286,8 @@ def migrate(story_id: str):
     # (hook=dict ma con campi non standard come 'visual', 'stratification' invece di
     # 'time_of_day', 'characters_present', etc): in entrambi casi mapping fornisce
     # 'hook_dict' completo (parsing/normalizzazione fatta in P0).
+    # REGOLA 0.11 (post-s08): tutti i hooks finali passano per filter_scene_hook_fields
+    # che assorbe campi non-schema in `notes` (additionalProperties: false).
     hooks_new = []
     for i, h_old in enumerate(on.get("visual_anchors", {}).get("scene_hooks", [])):
         if isinstance(h_old, str):
@@ -246,7 +299,7 @@ def migrate(story_id: str):
             legacy_marker = f"FONTE_LEGACY: {h_old}"
             h_new["elements"] = [legacy_marker] + list(h_new.get("elements", []))
             h_new.setdefault("notes", None)
-            hooks_new.append(h_new)
+            hooks_new.append(filter_scene_hook_fields(h_new))
             continue
         hid = h_old["hook_id"]
         hmap = mapping["hooks"].get(hid)
@@ -254,7 +307,7 @@ def migrate(story_id: str):
         if hmap and "hook_dict" in hmap:
             h_new = dict(hmap["hook_dict"])
             h_new.setdefault("notes", None)
-            hooks_new.append(h_new)
+            hooks_new.append(filter_scene_hook_fields(h_new))
             continue
         h_new = {
             "hook_id": hid,
@@ -275,7 +328,7 @@ def migrate(story_id: str):
             "wind_visible": h_old.get("wind_visible"),
             "onomatopee": h_old.get("onomatopee", []),
         }
-        hooks_new.append(h_new)
+        hooks_new.append(filter_scene_hook_fields(h_new))
     canonical["visual_anchors"] = {"scene_hooks": hooks_new}
 
     # ----- 13 nuovi campi v1.2 -----

@@ -51,7 +51,9 @@
       "id": "gabriel",
       "role": "fratello_in_emergenza_accudisce_memolo",
       "mode": "istintivo_non_deliberato",
-      "key_action": "prima_parola_dopo_crack_li_sotto_cera_qualcuno_poi_sposta_foglie_rotte_dal_bordo_pozzo_siede_memolo_tiene_mano_stai_qui_sei_qui_poi_seconda_micro_occhiata_verso_noah_dietro_pozzo_vista_attraverso_varco_foglie_movimento_maglia_mani_posano_nido",
+      "key_actions": [
+        "prima_parola_dopo_crack_li_sotto_cera_qualcuno_poi_sposta_foglie_rotte_dal_bordo_pozzo_siede_memolo_tiene_mano_stai_qui_sei_qui_poi_seconda_micro_occhiata_verso_noah_dietro_pozzo_vista_attraverso_varco_foglie_movimento_maglia_mani_posano_nido"
+      ],
       "fear_touched": "micro_eco_verso_s09_precursore_silente_paura_autonoma_via_seconda_micro_occhiata",
       "note": "Avvicinamento a Memolo istintivo, non calcolato. 'Stai qui. Sei qui.' — due brevissime frasi precise che ancorano Memolo al presente. Micro-gesto materico di cura: sposta foglie rotte dal bordo Pozzo post-impatto prima di far sedere Memolo. Seconda micro-occhiata verso Noah nello stesso istante in cui Memolo pronuncia la frase precisa — Gabriel alza gli occhi, non vede Noah direttamente ma tracce (varco foglie, maglia, mani). Non interrompe. Rispetto spazio fratello minore. Strato 3 puro, zero nominazione nel testo."
     },
@@ -59,7 +61,9 @@
       "id": "elias",
       "role": "fratello_che_sa_fare_accanto_a_nodo",
       "mode": "silenzio_operativo_nessuna_domanda",
-      "key_action": "lega_quattro_nodi_marinaro_sulla_corda_mentre_nodo_tiene_ramo_grosso_in_tensione_cenno_di_testa_dopo_quarto_nodo",
+      "key_actions": [
+        "lega_quattro_nodi_marinaro_sulla_corda_mentre_nodo_tiene_ramo_grosso_in_tensione_cenno_di_testa_dopo_quarto_nodo"
+      ],
       "fragment_used": false,
       "note": "Bloom pieno nodo_marinaro (terza applicazione funzionale reale, crisi non costruzione programmata) + bloom pieno seed_elias_collauda_per_primo generalizzato in principio caratteriale 'responsabilita di chi sa fare quando serve'. Sinergia fisica realistica con Nodo: Nodo regge peso e tiene tensione, Elias esegue il nodo sulla corda. Dopo quarto nodo, Nodo lo guarda e fa cenno di testa una volta sola zero parole — riconoscimento tecnico muto, non premio ne consolazione. Elias non commenta."
     },
@@ -67,7 +71,9 @@
       "id": "noah",
       "role": "fratello_che_cura_cosa_vuota_sul_margine",
       "mode": "irriflesso_gesto_piccolo",
-      "key_action": "trova_nido_vuoto_incastrato_biforcazione_secondaria_rimasta_sospesa_post_leva_ramo_principale_sul_pozzo_lo_raccoglie_due_mani_a_coppa_si_sente_che_e_secco_lo_posa_al_riparo_dietro_pozzo_lo_copre_con_foglia",
+      "key_actions": [
+        "trova_nido_vuoto_incastrato_biforcazione_secondaria_rimasta_sospesa_post_leva_ramo_principale_sul_pozzo_lo_raccoglie_due_mani_a_coppa_si_sente_che_e_secco_lo_posa_al_riparo_dietro_pozzo_lo_copre_con_foglia"
+      ],
       "note": "Proto-gesto cura-nel-buio verso S10. Salvare quello che resta anche se e' vuoto. Noah non sente la frase precisa di Memolo (e' dietro il Pozzo col nido). Mattina dopo torna a controllare il nido prima di andare a scuola, e' ancora li' — piccolo rituale istituito. Evolve pickup seed_noah_raccoglie_oggetti (bastoncino S6-S7 → oggetto vivo-ma-vuoto S8, passaggio semantico verso S10). Cura di una fragilita fisica reale, nido friabile di maggio abbandonato."
     },
     {
@@ -75,25 +81,25 @@
       "role": "zio_buffo_in_confusione_seria",
       "mode": "confuso_con_lampo_preciso",
       "detti_count": 0,
-      "frase_precisa_used": true,
-      "key_phrase_spoken": "l_albero_ha_aspettato_che_nessuno_fosse_sotto",
-      "key_phrase_notes": "Frase precisa seconda saga dopo S6 — vincolo Bible §4.7 'una a storia se compare' rispettato. Detta piano, quasi tra se, seduto sul bordo del Pozzo accanto a Gabriel, mentre infila mano nella sciarpa storta a cercare qualcosa che non c'e'. Poi torna confuso. Gabriel ed Elias sentono, Noah no (dietro Pozzo). Lettura soggettiva di Memolo dell'evento — Pattern A nasce nello scarto tra fisica (ramo-leva) e intenzione letta. La frase non e' catalogata come lore-hook — e' frase precisa strato 3.",
-      "note": "Era uscito poco prima, tornava verso casetta tonda dal lato opposto piazza quando noce cade — fuori traiettoria. Inversione tenera ruoli Gabriel-Memolo mai dichiarata. Mattina dopo torna a passare davanti al Pozzo, si ferma, guarda legno catastato, non dice niente, si tocca la sciarpa, va via — sigillo silenzioso zero parole."
+      "note": "Era uscito poco prima, tornava verso casetta tonda dal lato opposto piazza quando noce cade — fuori traiettoria. Inversione tenera ruoli Gabriel-Memolo mai dichiarata. Mattina dopo torna a passare davanti al Pozzo, si ferma, guarda legno catastato, non dice niente, si tocca la sciarpa, va via — sigillo silenzioso zero parole. | frase_precisa_used=True | key_phrase_spoken=l_albero_ha_aspettato_che_nessuno_fosse_sotto | key_phrase_notes=Frase precisa seconda saga dopo S6 — vincolo Bible §4.7 'una a storia se compare' rispettato. Detta piano, quasi tra se, seduto sul bordo del Pozzo accanto a Gabriel, mentre infila mano nella sciarpa storta a cercare qualcosa che non c'e'. Poi torna confuso. Gabriel ed Elias sentono, Noah no (dietro Pozzo). Lettura soggettiva di Memolo dell'evento — Pattern A nasce nello scarto tra fisica (ramo-leva) e intenzione letta. La frase non e' catalogata come lore-hook — e' frase precisa strato 3."
     },
     {
       "id": "nodo",
       "role": "mantenitore_part_time_tra_altri",
       "mode": "lavoro_collettivo_distinto_da_s05_artigiano",
       "tok_tok_tok": true,
-      "distinct_from_sNN": "s05_era_artigiano_commissionato_coltivatori_scala_a_pioli_individuale_qui_e_mantenitore_part_time_uno_tra_altri_scala_e_corda_condivise_altro_mantenitore_gli_passa_capo_corda",
-      "key_action": "passa_capo_corda_a_elias_lega_quel_ramo_grosso_per_quando_lo_tiriamo_via_tiene_peso_e_tensione_mentre_elias_esegue_nodo_cenno_di_testa_dopo_quarto_nodo",
-      "note": "Distinzione visiva da S5 rispettata (S5 Nodo-artigiano cliente Coltivatori, S8 Nodo-Mantenitore collettivo). TOK-TOK-TOK presente nel lavoro Mantenitori — seconda apparizione attiva saga dopo S5. Cenno di testa a Elias: riconoscimento tecnico muto, coerente con voice_constraint 'Nodo non spiega mai'."
+      "key_actions": [
+        "passa_capo_corda_a_elias_lega_quel_ramo_grosso_per_quando_lo_tiriamo_via_tiene_peso_e_tensione_mentre_elias_esegue_nodo_cenno_di_testa_dopo_quarto_nodo"
+      ],
+      "note": "Distinzione visiva da S5 rispettata (S5 Nodo-artigiano cliente Coltivatori, S8 Nodo-Mantenitore collettivo). TOK-TOK-TOK presente nel lavoro Mantenitori — seconda apparizione attiva saga dopo S5. Cenno di testa a Elias: riconoscimento tecnico muto, coerente con voice_constraint 'Nodo non spiega mai'. | distinct_from_sNN=s05_era_artigiano_commissionato_coltivatori_scala_a_pioli_individuale_qui_e_mantenitore_part_time_uno_tra_altri_scala_e_corda_condivise_altro_mantenitore_gli_passa_capo_corda"
     },
     {
       "id": "mantenitori",
       "role": "istituzione_cura_delle_cose_prima_apparizione_attiva_piena",
       "mode": "collettivo_operativo_lavoro_notturno_mestiere_esperto",
-      "key_action": "arrivano_con_scale_pioli_e_lanterne_lavorano_fino_notte_mattina_dopo_legno_catastato_sotto_tettoia_forno_a_riposare_per_cornetti_dei_prossimi_anni",
+      "key_actions": [
+        "arrivano_con_scale_pioli_e_lanterne_lavorano_fino_notte_mattina_dopo_legno_catastato_sotto_tettoia_forno_a_riposare_per_cornetti_dei_prossimi_anni"
+      ],
       "note": "Prima apparizione attiva piena dopo menzioni. Nodo e' uno tra loro senza gerarchia. Lanterne al crepuscolo + notte ferma = scena notturna leggera seconda saga dopo S1. Caratterizzazione 'mestiere esperto': sanno che il noce e' legno denso e oleoso va stagionato, lo mettono a riposare sotto tettoia Forno senza doverlo dire nel testo. Eco strutturale verso S12 simbolico non letterale."
     },
     {
@@ -101,17 +107,16 @@
       "role": "cornice_forno_apertura_e_ritorno",
       "mode": "chiacchiera_ridotta_contesto_emergenza",
       "detti_count": 0,
-      "key_action": "a_casa_veloci_chiude_imposte_apertura_poi_rimanda_fratelli_con_altro_cornetto_ritorno",
+      "key_actions": [
+        "a_casa_veloci_chiude_imposte_apertura_poi_rimanda_fratelli_con_altro_cornetto_ritorno"
+      ],
       "note": "Nessun detto popolare in S8 (contesto emergenza, conferma ARCHI). Quota fiamma_detti_per_storia resta 0 per S8. Fiamma non e' madre-default dei fratelli — cornice calda episodica."
     },
     {
       "id": "liu",
       "role": "messaggera_aerea_annuncio_fenomeno_raro_come_ipotesi",
       "mode": "frrr_si_aggrappa_al_cornicione_parla_riparte_sfruttando_corrente",
-      "timing": "arrivo_fase_cielo_piombo_prima_del_picco_mulinello_sicurezza_aerea_rispettata",
-      "key_phrase_spoken": "il_vento_sale_forte_stasera_forse_l_acqua_trema",
-      "key_phrase_notes": "Lore-hook (non frase precisa strato 3). Ipotesi non certezza — Liu e' messaggera, non veggente (correzione Ray ARCHI). Prima menzione saga del fenomeno 'quando l'acqua trema' — 1 di 2 menzioni pianificate saga. Tracciata solo via quote_tracker.when_water_trembles_stories (no nuovo campo schema).",
-      "note": "Cammeo coerente con S6 (frrr + frase brevissima, poi riparte). Sicurezza aerea: non vola dentro Mulinello al picco, arriva mentre vento monta, si aggrappa al cornicione per parlare (posizione precisa da decidere in D: cornicione Forno o ramo basso protetto), riparte con corrente favorevole prima che vento diventi muro."
+      "note": "Cammeo coerente con S6 (frrr + frase brevissima, poi riparte). Sicurezza aerea: non vola dentro Mulinello al picco, arriva mentre vento monta, si aggrappa al cornicione per parlare (posizione precisa da decidere in D: cornicione Forno o ramo basso protetto), riparte con corrente favorevole prima che vento diventi muro. | timing=arrivo_fase_cielo_piombo_prima_del_picco_mulinello_sicurezza_aerea_rispettata | key_phrase_spoken=il_vento_sale_forte_stasera_forse_l_acqua_trema | key_phrase_notes=Lore-hook (non frase precisa strato 3). Ipotesi non certezza — Liu e' messaggera, non veggente (correzione Ray ARCHI). Prima menzione saga del fenomeno 'quando l'acqua trema' — 1 di 2 menzioni pianificate saga. Tracciata solo via quote_tracker.when_water_trembles_stories (no nuovo campo schema)."
     },
     {
       "id": "stria",
@@ -279,8 +284,9 @@
       "note": "Retrofittato: id originale 'debt_s08_pattern_a_continuazione_parte_s08' non matchava pattern. Origine s05 (prima semina formale Pattern A rami caduti)."
     }
   ],
-  "key_phrase_indicative": null,
-  "key_phrase_notes": "La frase precisa di Memolo 'L'albero ha aspettato che nessuno fosse sotto' e' candidata a frase-chiave puntuale ma non dichiarata come tale nel testo. E' gia' piena dentro la scena. Il narratore in chiusura non aggiunge frase dichiarativa: sigilla con immagine (isola che riprende mattina dopo, Stria atterra, Memolo si tocca sciarpa va via, Noah controlla nido, cataste legna sotto tettoia Forno). Nessun address al lettore in S8 (quota resta a 2: S4, S7). La frase di Liu 'Forse l'acqua trema' non e' frase precisa — e' lore-hook tracciato solo via quote_tracker.when_water_trembles_stories.",
+  "key_phrase_indicative": "L'albero ha aspettato che nessuno fosse sotto.",
+  "key_phrase_notes": "Frase precisa di Memolo (vincolo Bible §4.7 'una a storia se compare', seconda saga dopo s06 'Le cose che si perdono...'). Detta piano, quasi tra se', seduto sul bordo del Pozzo accanto a Gabriel, mentre infila mano nella sciarpa storta. Promossa a key_phrase_indicative del nodo via REGOLA 0.11 (consolidamento voice fields dispersi): old_node aveva la frase duplicata in chars[3].key_phrase_spoken + chars[3].key_phrase_notes + visual_anchors.scene_hooks[1].frase_precisa_visibile. Tutto consolidato qui top-level. Sigillo del narratore in chiusura non aggiunge frase: sigilla con immagine (isola che riprende mattina dopo).",
+  "key_phrase_attributed_to": "memolo",
   "premise": "Estate piena tarda, pomeriggio di afa. I tre fratelli sono al Forno da Fiamma a finire un cornetto quando sentono il vento alzarsi — un Mulinello che monta forte, non il Mulinello sereale di ogni sera. Il cielo vira al color piombo. Liu passa rapida aggrappandosi al cornicione: 'Il vento sale forte stasera. Forse l'acqua trema.' Riparte con la corrente. Fiamma chiude le imposte. 'A casa veloci.' I fratelli escono per attraversare la Piazza Villaggio — Albero Vecchio al centro, Pozzo sul lato est, casetta tonda di Memolo, bottega di Nodo — mentre il Mulinello diventa muro. Il grande noce che fa ombra sulla via della scuola di Stria si piega. Si piega ancora. CRACK.",
   "problem": "Il noce si spacca alla biforcazione della chioma. Il ramo principale colpisce per primo il bordo in pietra alzata del Pozzo, fa da leva, devia la massa della chioma che si abbatte di fianco sulla via della scuola con un TONFO sordo. Nessuno e' sotto. Memolo era uscito poco prima e tornava verso la sua casetta tonda dall'altro lato della piazza — fuori dalla traiettoria. Il Pozzo resta intatto nel vuoto della biforcazione. Ma la via per la scuola e' bloccata, il legno dappertutto, e Memolo e' confuso, sciarpa di sbieco, mormora 'Aspetta, ero qui. Ero qui poco fa. Ero qui.' Bisogna liberare la via per la mattina dopo, tenere Memolo al presente, lavorare insieme ai Mantenitori che arrivano con scale a pioli e lanterne mentre il crepuscolo cala.",
   "threshold_moment": "[MECHANICS] Gabriel, seduto accanto a Memolo sul bordo del Pozzo dopo avergli spostato un mucchietto di foglie rotte dall'impatto, gli tiene la mano. Due brevissime frasi precise: 'Stai qui. Sei qui.' Memolo, per un istante, smette di confondersi — infila una mano nella sciarpa storta a cercare qualcosa che non c'e' e dice piano, quasi tra se': 'L'albero ha aspettato che nessuno fosse sotto.' Poi torna confuso. Gabriel ed Elias sentono. Noah no — e' dietro il Pozzo col nido che ha trovato tra i rami caduti, incastrato in una biforcazione secondaria rimasta sospesa. Nello stesso istante in cui Memolo pronuncia la frase, Gabriel alza gli occhi — solo un varco tra le foglie dei rami caduti, un movimento della maglia di Noah, due mani che posano il nido. Non vede Noah direttamente. Vede tracce di Noah. Non interrompe. [EAR] Delta-connettere-cambiare dei fratelli si separano per la prima volta in modo visibile dentro un'unica soglia spaziale (il Pozzo): Gabriel-Delta distingue chi ha bisogno (Memolo) e lo ancora al presente; Elias-connettere si mette in lavoro accanto a Nodo senza domande e lega col marinaro i rami in tensione; Noah-cambiare cura quello che resta anche se e' vuoto, sul margine invisibile. Il centro blocco C si installa come drammaturgia silenziosa degli sguardi. [STRATO] Strato 1 — bambino vede fratello grande che aiuta signore confuso, frase strana dell'albero che ha aspettato. Strato 2 — giovane lettore registra la frase precisa di Memolo e la ricorda ad alta voce, capisce che Gabriel e' stato bravo. Strato 3 — rilettore coglie tre cose insieme: inversione tenera dei ruoli Gabriel-Memolo mai dichiarata, scarto tra fisica della leva e lettura intenzionale di Memolo (Pattern A nasce qui), seconda micro-occhiata di Gabriel verso Noah attraverso mediazioni (varco, maglia, mani) — precursore silente della paura che nascera' in S9, i fratelli che crescono diversi.",
@@ -424,14 +430,12 @@
           "Inversione ruoli: Gabriel accudisce Memolo e nello stesso istante inizia a vedere Noah attraverso mediazioni"
         ],
         "palette": "bianco_pietra_pozzo_ocra_sciarpa_memolo_verdi_scuri_sfondo_cataste_rami_luce_crepuscolo_che_si_avvicina_squillo_colore_maglia_noah_unica_figura_in_movimento_tra_fogliame_dietro",
-        "notes": null,
+        "notes": "frase_precisa_visibile=l'albero ha aspettato che nessuno fosse sotto | voice_constraint=micro_occhiata_zero_nominazione_solo_immagine_gabriel_non_pensa_niente_nel_testo",
         "focal_action": "Gabriel siede vicino a Memolo confuso (mano sulla mano, frase precisa sussurrata 'l'albero ha aspettato che nessuno fosse sotto') e nello stesso istante alza gli occhi dietro il pozzo: micro-occhiata su Noah che cura il nido attraverso il varco delle foglie. Vedere-attraverso-mediazioni installato (precursore paura Gabriel s09).",
         "focal_object": "frase_precisa_memolo_sul_bordo_pozzo_e_varco_di_foglie_su_noah",
         "atmosphere": "doppio_centro_silenzioso_accudimento_visibile_e_micro_occhiata_invisibile_inversione_ruoli_precursore_paura_gabriel",
         "wind_visible": "vento_che_si_e_calmato_dopo_la_caduta_aria_che_torna_ferma",
         "onomatopee": [],
-        "frase_precisa_visibile": "l'albero ha aspettato che nessuno fosse sotto",
-        "voice_constraint": "micro_occhiata_zero_nominazione_solo_immagine_gabriel_non_pensa_niente_nel_testo",
         "stratification": {
           "strato_1": "bambino_vede_fratello_grande_che_aiuta_signore_confuso_poi_guarda_altrove",
           "strato_2": "lettore_registra_frase_precisa_memolo_albero_che_ha_aspettato",

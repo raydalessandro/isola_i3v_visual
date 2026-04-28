@@ -31,7 +31,7 @@
   "quote_consumed": {
     "by_category": {"A": 2, "B": 0, "C": 0},
     "totale": 2,
-    "_note": "S08 ha solo 2 hook (caso unico: di solito 5-8) entrambi signature/threshold canonical, gia' popolati ricamente in P0 mapping (focal_action+atmosphere+elements). P2 aggiunge solo notes narrative riassuntive (entrambe categoria A high). key_phrase_indicative resta null (key_phrase_notes esplicita: 'Il narratore in chiusura non aggiunge frase dichiarativa: sigilla con immagine'). FRASE_PRECISA_MEMOLO ('L'albero ha aspettato che nessuno fosse sotto') e' nella scena, NON e' key_phrase_saga. season_passage null (estate piena tarda, non passaggio). Numero provvisori basso ma alta densita' qualitativa.",
+    "_note": "S08 ha solo 2 hook (caso unico: di solito 5-8) entrambi signature/threshold canonical, gia' popolati ricamente in P0 mapping (focal_action+atmosphere+elements). P2 aggiunge solo notes narrative riassuntive (entrambe categoria A high). CORREZIONE post-review Ray (REGOLA 0.11): key_phrase_indicative + key_phrase_attributed_to + key_phrase_notes ora popolati al top-level via consolidamento voice fields dispersi. La frase precisa di Memolo 'L'albero ha aspettato che nessuno fosse sotto' E' la key_phrase saga di s08 (terzo caso saga dopo s03/rovo + s06/memolo). Non sono provvisori P2 perche' provengono da consolidamento meccanico P1 da fonti esistenti nel grafo (chars[3].key_phrase_spoken + hook[1].frase_precisa_visibile). season_passage null (estate piena tarda, non passaggio).",
     "dettaglio": [
       {"field": "visual_anchors.scene_hooks.scene_hook_crack_caduta_noce.notes", "category": "A", "confidence": "high"},
       {"field": "visual_anchors.scene_hooks.scene_hook_gabriel_pozzo_duplice_centro.notes", "category": "A", "confidence": "high"}

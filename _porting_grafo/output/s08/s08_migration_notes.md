@@ -71,4 +71,44 @@ S08 e' la prima storia con `debts_opened_keep` e `debts_closed_keep` non vuoti n
 
 ## Stato: VIA LIBERA P2 (gia' eseguito)
 
-2 provvisori (entrambi A high). Numero basso ma alta densita' qualitativa: i 2 hook sono signature/threshold canonical entrambi snodo della storia (CRACK Pattern A bloom + DUPLICE_CENTRO inversione ruoli).
+2 provvisori P2 (entrambi A high). Numero basso ma alta densita' qualitativa: i 2 hook sono signature/threshold canonical entrambi snodo della storia (CRACK Pattern A bloom + DUPLICE_CENTRO inversione ruoli).
+
+## Aggiornamento post-review Ray (FLAG voice fields dispersi → REGOLA 0.11)
+
+Review Ray ha rilevato che il grafo originale s08 aveva voice tracking duplicato sparso:
+- `chars[3] memolo`: `key_phrase_spoken` + `key_phrase_notes` + `frase_precisa_used: true`
+- `chars[7] liu`: `key_phrase_spoken` (lore-hook, non frase-chiave) + `key_phrase_notes` + `timing`
+- `chars[4] nodo`: `distinct_from_sNN` (campo non-schema, REGOLA 7 esistente)
+- 5 chars: `key_action` (singolare, REGOLA 7 esistente)
+- `hook[1]`: `frase_precisa_visibile` + `voice_constraint` (campi non-schema, schema additionalProperties: false)
+
+Diagnosi: schema v1.2 e' completo e corretto. Non e' bug schema, e' bug grafo originale.
+
+### Fix applicati (REGOLA 0.11 nuova + REGOLA 7 estesa)
+
+**Top-level (consolidamento)**:
+- `key_phrase_indicative` ora popolato: "L'albero ha aspettato che nessuno fosse sotto." (era null)
+- `key_phrase_attributed_to`: "memolo" (terzo caso saga dopo s03/rovo + s06/memolo)
+- `key_phrase_notes` aggiornato: spiega consolidamento + vincolo Bible §4.7 + chiarisce sigillo del narratore in chiusura per immagine
+
+**characters_in_scene** (script automatico):
+- `key_action` → `key_actions` (lista, 5 chars)
+- `distinct_from_sNN` → `distinct_from_other_story` (nodo)
+- chars[3] memolo: `key_phrase_spoken` + `key_phrase_notes` + `frase_precisa_used` consolidati al top-level e droppati dal char
+- chars[7] liu: `key_phrase_spoken` + `key_phrase_notes` + `timing` assorbiti in `note` del char con prefissi descrittivi (lore-hook, non key_phrase saga)
+
+**scene_hooks** (script automatico via `filter_scene_hook_fields`):
+- hook[1] `frase_precisa_visibile` + `voice_constraint` → assorbiti in `notes` con prefissi
+
+### Patch script `migrate_p1.py`
+- `CHARACTER_IN_SCENE_ALLOWED` set + `SCENE_HOOK_ALLOWED` set con campi schema canonici
+- `normalize_characters_in_scene()` esteso: key_action singolare → lista, filter campi non-schema in `note`
+- `filter_scene_hook_fields()` nuovo: filter campi non-schema in `notes`
+- Mapping options nuovi: `key_phrase_indicative_override`, `key_phrase_notes_override` (oltre a `key_phrase_attributed_to` gia' esistente)
+
+### Patch MIGRATION_PROMPT
+REGOLA 0.11 (`voice_fields_consolidation`) aggiunta con procedura completa per characters + hooks. Nota per s10: stessa regola si applica.
+
+### Risultato
+
+`s08_canonical.json` rigenerato: 52 campi (era 51, +key_phrase_attributed_to). PASS verify. Regression test s01-s07: PASS (nessuna regressione).

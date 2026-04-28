@@ -64,6 +64,10 @@
       }
     }
   },
+  "key_phrase_indicative_override": "L'albero ha aspettato che nessuno fosse sotto.",
+  "key_phrase_attributed_to": "memolo",
+  "key_phrase_notes_override": "Frase precisa di Memolo (vincolo Bible §4.7 'una a storia se compare', seconda saga dopo s06 'Le cose che si perdono...'). Detta piano, quasi tra se', seduto sul bordo del Pozzo accanto a Gabriel, mentre infila mano nella sciarpa storta. Promossa a key_phrase_indicative del nodo via REGOLA 0.11 (consolidamento voice fields dispersi): old_node aveva la frase duplicata in chars[3].key_phrase_spoken + chars[3].key_phrase_notes + visual_anchors.scene_hooks[1].frase_precisa_visibile. Tutto consolidato qui top-level. Sigillo del narratore in chiusura non aggiunge frase: sigilla con immagine (isola che riprende mattina dopo).",
+  "_key_phrase_note": "REGOLA 0.11 consolidamento voice fields. key_phrase_attributed_to=memolo terzo caso saga (s03 rovo, s06 memolo, s08 memolo).",
   "debts_opened_keep": [
     {"debt_id": "debt_s08_to_s10_nido_vuoto_bloom_notte", "origin_story": "s08", "target_story": "s10", "rilievo": "alto", "note": "Il nido vuoto curato da Noah in S8 deve riapparire o funzionare come principio in S10 (notte senza luna). 'Il buio era pieno' — Noah porta con se' il principio 'i posti che sembrano vuoti non lo sono'."},
     {"debt_id": "debt_s08_to_s09_seed_paura_gabriel_semina", "origin_story": "s08", "target_story": "s09", "rilievo": "alto", "note": "ALTISSIMO retrofittato a 'alto' (enum schema). Dopo seconda micro-occhiata S8, prossimo passo e' semina paura autonoma in S9 come seed type=paura brother=gabriel resolution_mode=tenere (seed_paura_gabriel_fratelli_crescono_diversi, forward-reference). S8 rinforza debt verso S9. Architrave strato 3 terna dire/accettare/tenere."},

@@ -288,6 +288,37 @@ Il campo `key_phrase_attributed_to` e' un dato strutturale: chi pronuncia la fra
 **Anti-pattern (osservato in s06 prima di REGOLA 0.10):**
 - Script copiava `season: "passaggio_primavera_estate"` pari-pari. Schema enum violato. `verify_output_integrity.py` PASSed (non valida enum). REGOLA 0.10 introdotta + script patchato. Storie s07-s10 erediteranno il fix automaticamente.
 
+**0.11 — `voice_fields_consolidation: true`** (aggiunta post-s08)
+
+> Schema v1.2 e' completo: `key_phrase_indicative`, `key_phrase_attributed_to`, `key_phrase_notes` sono campi top-level del nodo. `character_in_scene` e `scene_hook` hanno `additionalProperties: false`. Quando il grafo originale ha **voice tracking duplicato sparso** (key_phrase_spoken/notes dentro chars, frase_precisa_visibile/voice_constraint dentro hooks, timing fuori posto), va consolidato.
+
+**Procedura di consolidamento:**
+
+**A. characters_in_scene[*]** — campi schema permessi (CHARACTER_IN_SCENE_ALLOWED): `id, role, mode, key_actions, narrative_weight, constraints_active, fear_touched, fragment_used, detti_count, detti_notes, tok_tok_tok, familial_role_episodic, quote_count_estimate, client_current, plant_named, distinct_from_other_story, note`. Tutto il resto va consolidato:
+
+- `key_action` (singolare) → `key_actions` (lista, REGOLA 7 estesa)
+- `distinct_from_s\d+` → `distinct_from_other_story` (REGOLA 7)
+- Se `key_phrase_spoken` su un character coincide semanticamente con la **key_phrase principale del nodo** (es. memolo s08 "L'albero ha aspettato che nessuno fosse sotto"): **consolida al top-level** via mapping (`key_phrase_indicative_override` + `key_phrase_attributed_to` + `key_phrase_notes_override`). Il character drop dei campi voice.
+- Se `key_phrase_spoken` e' lore-hook o non e' la key_phrase principale (es. liu s08 "il_vento_sale_forte_stasera_forse_l_acqua_trema"): **assorbi in `note` del character** con prefisso descrittivo (`key_phrase_spoken=<valore> | key_phrase_notes=<valore>`).
+- `frase_precisa_used` (boolean): drop (info ridondante, gia' espresso dalla presenza di key_phrase top-level).
+- `timing`, `key_phrase_notes` su character: assorbi in `note` con prefisso.
+
+**B. scene_hooks[*]** — campi schema permessi (SCENE_HOOK_ALLOWED): `hook_id, moment, location, quadrant, characters_present, elements, palette, notes, focal_action, focal_object, atmosphere, wind_visible, onomatopee, stratification`. Tutto il resto:
+
+- `frase_precisa_visibile` (eco visivo della key_phrase top-level): assorbi in `notes` con prefisso (oppure droppa se gia' ridondante con top-level).
+- `voice_constraint` (vincolo di scrittura per il bambino di 4 / rilettore): assorbi in `notes` con prefisso.
+- `visual` (descrizione narrativa pre-canonical): assorbi in `notes` (il contenuto canonical va in `focal_action` / `atmosphere` / `elements` durante il parsing P0).
+
+**Implementato in `migrate_p1.py`:**
+- `normalize_characters_in_scene()`: filter + key_action→key_actions + assorbimento voice extras in `note`.
+- `filter_scene_hook_fields()`: filter + assorbimento extras in `notes`.
+- Mapping option `key_phrase_indicative_override`, `key_phrase_attributed_to`, `key_phrase_notes_override`: per consolidamento al top-level.
+
+**Anti-pattern (osservato in s08 prima di REGOLA 0.11):**
+- Frase precisa di Memolo "L'albero ha aspettato che nessuno fosse sotto" duplicata in 3 punti dell'old_node: `chars[3].key_phrase_spoken`, `chars[3].key_phrase_notes`, `visual_anchors.scene_hooks[1].frase_precisa_visibile`. P1 prima di REGOLA 0.11 lasciava `key_phrase_indicative` null e copiava la frase nel hook (campo non-schema). Schema additionalProperties: false violato (verify_output_integrity.py PASSed perche' non valida questo). Fix retroattivo: consolidato al top-level + drop dai chars/hooks.
+
+**Per s10:** la stessa regola si applica. Verificare characters_in_scene + scene_hooks per voice fields dispersi e consolidare.
+
 ---
 
 ### REGOLA 0bis — Filosofia stretta del null
