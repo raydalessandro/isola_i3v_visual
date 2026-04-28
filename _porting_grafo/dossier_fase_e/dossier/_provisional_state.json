@@ -135,14 +135,13 @@
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s03/s03_canonical.json",
       "quote_consumed": {
         "by_category": {
-          "A": 3,
-          "B": 3,
+          "A": 1,
+          "B": 4,
           "C": 1
         },
-        "totale": 7,
+        "totale": 6,
         "dettaglio": [
           {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
           {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
           {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
           {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},

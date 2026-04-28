@@ -43,6 +43,8 @@
       "quadrant": "terra_ovest"
     }
   },
+  "key_phrase_attributed_to": "rovo",
+  "_key_phrase_note": "S03 e' caso speciale: key_phrase_indicative attribuita a personaggio (Rovo) anziche' al narratore. Eccezione esplicita giustificata in key_phrase_notes + structural_notes 'FRASE_CHIAVE_A_PERSONAGGIO'. Il valore della key_phrase ('Le cose della Foresta hanno il loro orario') resta null nel canonical (popolato da Ray in fase D), ma `key_phrase_attributed_to` viene gia' fissato qui per non perdere il dato strutturale.",
   "debts_opened_keep": [],
   "debts_closed_keep": [],
   "_debts_note": "Tutti i 7 debts_opened raw dell'old_node sono classificati come 'seed_ref' nel precomputed_context (archived_seed_refs=6, debts_opened_keep=[]). Vanno archiviati per REGOLA 0ter, non entrano nel canonical. Tracciamento narrativo via seeds_planted/picked_up + callbacks_made.",

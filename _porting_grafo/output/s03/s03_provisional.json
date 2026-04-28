@@ -15,19 +15,7 @@
       "confidence": "medium",
       "rationale": "structural_notes esplicita: 'PASSAGGIO_STAGIONALE_1 — primo cambio (inverno → primavera), aria un filo piu' tiepida'. block_position 'chiusura_blocco_a_passaggio_stagionale' conferma. palette_emotiva descrive transizione luce sera. Non e' inverno pieno (s01-s02) ne' primavera (storie successive): e' la soglia."
     },
-    "key_phrase_indicative": {
-      "value": "Le cose della Foresta hanno il loro orario.",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Quote letterale dal resolution_mode + key_phrase_notes esplicita: 'ECCEZIONE esplicita: frase-chiave attribuita a un personaggio (non al narratore). Rovo dice un fatto della Foresta, non una massima morale. Embedded en passant, mentre Rovo gia' si volta per rientrare.' structural_notes 'FRASE_CHIAVE_A_PERSONAGGIO' conferma. Caso unico in saga: provvisorio A high confidence."
-    },
-    "key_phrase_attributed_to": {
-      "value": "rovo",
-      "category": "A",
-      "confidence": "high",
-      "rationale": "Esplicito in key_phrase_notes + structural_notes. Campo opzionale schema v1.2 (non popolato dallo script migrate_p1.py). Provvisorio A high: se Ray approva, va promosso al canonical (Edit manuale), altrimenti resta solo nel provisional come nota.",
-      "_note_meta": "Questo provvisorio e' per un campo NON popolato nel canonical. P1 lo lascia assente per sicurezza (script generico). Ray decide se promuovere al canonical."
-    },
+    "_note_key_phrase": "key_phrase_indicative ('Le cose della Foresta hanno il loro orario.') era gia' popolato nell'old_node v1.1 e P1 l'ha copiato pari-pari nel canonical. NON e' stato popolato in P2: non viene conteggiato in quote_consumed. key_phrase_attributed_to ('rovo') e' stato promosso al canonical via _p1_mapping.json (decisione Ray: uniformare senza perdere profondita'). REGOLA 0.8 aggiunta al MIGRATION_PROMPT per storie successive.",
     "hooks": {
       "s03_h1": {
         "notes": {
@@ -73,15 +61,14 @@
   },
   "quote_consumed": {
     "by_category": {
-      "A": 3,
-      "B": 3,
+      "A": 1,
+      "B": 4,
       "C": 1
     },
-    "totale": 7,
-    "_note_extra_provvisorio": "Oltre ai 7 provvisori conteggiati (2 top + 5 hook notes), c'e' un provvisorio top-level aggiuntivo per il campo opzionale `key_phrase_attributed_to` (categoria A high). Non conteggiato perche' non e' uno dei campi P2 standard ma una proposta di promozione campo opzionale schema v1.2.",
+    "totale": 6,
+    "_note": "key_phrase_indicative + key_phrase_attributed_to NON conteggiati: il primo era gia' popolato nell'old_node (P1 ha copiato), il secondo e' stato promosso al canonical via _p1_mapping.json. Entrambi sono nel canonical, non sono provvisori P2.",
     "dettaglio": [
       {"field": "season_passage", "category": "B", "confidence": "medium"},
-      {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
       {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
       {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
       {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},

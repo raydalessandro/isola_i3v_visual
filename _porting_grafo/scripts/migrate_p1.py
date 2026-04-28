@@ -119,6 +119,12 @@ def migrate(story_id: str):
 
     canonical["key_phrase_indicative"] = on.get("key_phrase_indicative")
     canonical["key_phrase_notes"] = on.get("key_phrase_notes")
+    # key_phrase_attributed_to (campo opzionale schema v1.2): popolato solo se P0 lo
+    # dichiara nel _p1_mapping.json (es. s03 con frase di Rovo). Per le storie con
+    # key_phrase del narratore o null, il campo va aggiunto da Ray in fase D quando
+    # popola key_phrase_indicative. Cf. REGOLA 0.8 MIGRATION_PROMPT.
+    if "key_phrase_attributed_to" in mapping:
+        canonical["key_phrase_attributed_to"] = mapping["key_phrase_attributed_to"]
     # premise/problem/threshold/resolution: copia identica REGOLA 2
     for k in ("premise", "problem", "threshold_moment", "resolution_mode", "palette_emotiva"):
         canonical[k] = on.get(k, "")

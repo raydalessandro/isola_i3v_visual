@@ -119,9 +119,27 @@ Totale **5 campi top-level**: `entry_point_type`, `closure_type`, `register`, `e
 - **Quartiere**: derivato da `quadrant_assignment.json` per `foresta_intrecciata` → `terra_ovest`.
 - **Auto-derivati popolati**: `cycle: A`, `attribute_dominant: distinguere` (rimappato), `pattern_a_active: none`, `night_scene: false`, `when_water_trembles: false`, `wind_active: null`. Tutti i 4 flag quote_tracker = false.
 
-## Stato: VIA LIBERA P2 (gia' eseguito)
+## Aggiornamento post-decisione Ray su key_phrase_attributed_to
 
-Output P1 + P2 pronto. P2 ha popolato 7 provvisori legittimi + proposto `key_phrase_attributed_to: "rovo"` come campo opzionale aggiuntivo. I 5 `no_inference_fields` restano `null` (decisione Ray fase C/D).
+Ray ha confermato di promuovere `key_phrase_attributed_to: "rovo"` al canonical s03 (decisione: "fai quello che non rompe il grafo e da' meno problemi, uniforma senza perdere profondita'").
+
+**Cambi applicati:**
+
+1. `migrate_p1.py` patchato: legge `key_phrase_attributed_to` da `_p1_mapping.json` e lo promuove al canonical se presente. Storie senza il dato esplicito: campo assente nel canonical (opzionale schema v1.2).
+
+2. `_p1_mapping.json` di s03: aggiunto `"key_phrase_attributed_to": "rovo"` con motivazione (riferimento structural_notes FRASE_CHIAVE_A_PERSONAGGIO).
+
+3. `s03_canonical.json` rigenerato: 52 campi top-level (era 51), include `key_phrase_attributed_to: "rovo"`. verify_output_integrity.py: PASS.
+
+4. `s03_provisional.json`: rimossa entry `key_phrase_indicative` da `provvisori` (era gia' popolata nell'old_node v1.1, P1 l'aveva copiata pari-pari nel canonical, NON era un provvisorio P2). Rimossa entry `key_phrase_attributed_to` da `provvisori` (ora promossa al canonical via mapping). Quote_consumed totale corretto: **6** (era 7), distribuzione **1A + 4B + 1C**.
+
+5. `MIGRATION_PROMPT_FASE_E.md`: aggiunta **REGOLA 0.8** (`key_phrase_attributed_to` quando dichiarato esplicito) come guida per s04-s12.
+
+6. `_provisional_state.json`: aggiornato quote_consumed di s03 (totale 6, by_category corretto).
+
+## Stato: VIA LIBERA s04
+
+Output P1 + P2 di s03 pronto e validato. 6 provvisori legittimi (1A + 4B + 1C). I 5 `no_inference_fields` restano `null` (decisione Ray fase C/D). `key_phrase_indicative` + `key_phrase_attributed_to` gia' nel canonical (non provvisori P2).
 
 ## Output di s03: stato file
 

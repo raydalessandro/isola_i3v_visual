@@ -207,6 +207,35 @@ Se un nodo cita un character non esistente nel grafo (es. typo, sbaglio chat ori
 **Anti-pattern (osservato in s02 prima della correzione):**
 - Sub-agente/script ha copiato i 2 callbacks_made di s02 senza derivare `to_story`. Schema-required violato. `verify_output_integrity.py` ha PASSato comunque (lo script non valida lo schema callback per intero). Fix retroattivo: aggiunto `to_story: "s02"` a entrambi i callbacks.
 
+**0.8 — `key_phrase_attributed_to` quando dichiarato esplicito** (aggiunta post-s03)
+
+> Lo schema v1.2 ha il campo opzionale `key_phrase_attributed_to: string`. Default: assente nel canonical (campo opzionale, non required).
+
+**Quando popolarlo nel canonical (via `_p1_mapping.json`):**
+
+Solo se l'old_node + structural_notes + key_phrase_notes dichiarano esplicitamente che la `key_phrase_indicative` e' attribuita a un personaggio (non al narratore). Esempio s03:
+- `structural_notes`: contiene `"FRASE_CHIAVE_A_PERSONAGGIO"` o equivalente.
+- `key_phrase_notes`: dichiara "ECCEZIONE esplicita: frase-chiave attribuita a un personaggio".
+- L'old_node ha `key_phrase_indicative` valorizzato (non null).
+
+In questo caso, P0 inserisce nel `_p1_mapping.json`:
+```json
+"key_phrase_attributed_to": "<character_id>",
+"_key_phrase_note": "Motivazione + riferimento structural_notes/key_phrase_notes."
+```
+Lo script `migrate_p1.py` lo promuove al canonical automaticamente (vedi `migrate.py#migrate` linea con `if "key_phrase_attributed_to" in mapping`).
+
+**Quando lasciarlo assente:**
+
+- Se `key_phrase_indicative` e' `null` (non ancora deciso da Ray): lascia il campo assente. Sara' popolato in fase D quando Ray decide la frase + chi la dice (default "narratore" per la maggioranza delle storie).
+- Se `key_phrase_notes` dichiara "Sigillo del narratore" / "Da affidare al narratore": il campo va popolato con `"narratore"` solo dopo che Ray decide la frase (fase D), non in P1.
+
+**Razionale (decisione Ray post-s03):**
+
+> "Fai quello che non rompe il grafo e che ci da' meno problemi. In questa fase dobbiamo uniformare senza perdere profondita' narrativa ma avere un grafo facilmente interrogabile alla fine."
+
+Il campo `key_phrase_attributed_to` e' un dato strutturale: chi pronuncia la frase-chiave (narratore vs character_id). Promuoverlo al canonical quando esplicito (s03) preserva la profondita'. Lasciarlo assente quando key_phrase e' null evita di iniettare default arbitrari.
+
 ---
 
 ### REGOLA 0bis — Filosofia stretta del null
