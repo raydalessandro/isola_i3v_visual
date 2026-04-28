@@ -53,6 +53,30 @@ def load_canonical_oggetti(repo: Path) -> set:
     return {x["id"] for x in cat["entities"] if x.get("famiglia") == "oggetto"}
 
 
+DISTINCT_FROM_PATTERN = re.compile(r"^distinct_from_s\d+$")
+
+
+def normalize_characters_in_scene(characters: list) -> list:
+    """REGOLA 1bis (post-s05): characters_in_scene[*].distinct_from_s<NN> ->
+    distinct_from_other_story (campo canonico schema v1.2). Il valore stringa
+    contiene gia' l'info su quale storia distinguere; va preservato."""
+    out = []
+    for ch in characters:
+        ch_new = {}
+        for k, v in ch.items():
+            if DISTINCT_FROM_PATTERN.match(k):
+                # rinomina a campo canonico; se gia' presente per qualche
+                # motivo, concatena (caso edge non osservato finora).
+                if "distinct_from_other_story" in ch_new:
+                    ch_new["distinct_from_other_story"] += " | " + v
+                else:
+                    ch_new["distinct_from_other_story"] = v
+            else:
+                ch_new[k] = v
+        out.append(ch_new)
+    return out
+
+
 def normalize_callbacks(callbacks: list, story_id: str) -> list:
     """REGOLA 1bis (post-s02): callbacks_made richiede to_story (schema v1.2).
     Se manca: deriva to_story = story_id corrente (il callback e' fatto IN questa storia
@@ -125,7 +149,7 @@ def migrate(story_id: str):
     ]
 
     # characters_in_scene: copia campi rilevanti (no rinomine)
-    canonical["characters_in_scene"] = on.get("characters_in_scene", [])
+    canonical["characters_in_scene"] = normalize_characters_in_scene(on.get("characters_in_scene", []))
     canonical["characters_offscreen_or_background"] = on.get("characters_offscreen_or_background", [])
 
     # seeds: copia diretta

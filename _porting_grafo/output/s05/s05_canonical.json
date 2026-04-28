@@ -97,7 +97,7 @@
       "narrative_weight": "mano_che_fa_padre_pratico_artigiano_per_coltivatori",
       "mode": "lavoro",
       "client_current": "coltivatori_del_cerchio",
-      "distinct_from_s08": "in_s5_nodo_e_artigiano_commissionato_dai_coltivatori_per_riparare_scaletta_in_s8_nodo_sara_mantenitore_nel_collettivo_di_emergenza_dopo_caduta_noce_due_modalita_distinte_stesso_personaggio",
+      "distinct_from_other_story": "in_s5_nodo_e_artigiano_commissionato_dai_coltivatori_per_riparare_scaletta_in_s8_nodo_sara_mantenitore_nel_collettivo_di_emergenza_dopo_caduta_noce_due_modalita_distinte_stesso_personaggio",
       "key_actions": [
         "TOK_TOK_TOK_sullo_sfondo_dall_inizio_della_scena_al_torrente_richiamo_acustico_50_metri",
         "non_risponde_subito_a_gabriel_finisce_il_giro_di_nodo_in_corso_sulla_scaletta",

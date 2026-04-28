@@ -86,6 +86,18 @@ I 5 standard. `key_phrase_attributed_to`: assente nel canonical (REGOLA 0.8) —
 - **Quartiere primario**: `torrente_affluente_foresta` → `terra_ovest` (cluster terra_ovest che continua da s03/s04).
 - **PATTERN A**: prima semina formale, da qui in poi cammina (mai nominato, vive nelle azioni e in 1 inciso narratore max).
 
+## Aggiornamento post-review Ray (FLAG distinct_from_s08)
+
+Review di Ray ha rilevato bug in `s05.characters_in_scene[4]` (Nodo): campo `distinct_from_s08` legacy invece del canonico `distinct_from_other_story`. La REGOLA 7 del MIGRATION_PROMPT lo prescriveva, ma lo script non lo applicava (stessa categoria di delta/block_position: regola scritta ma non enforced automaticamente).
+
+**Fix script** (`migrate_p1.py#normalize_characters_in_scene`): per ogni character in scene, scansiona i campi: se trova `distinct_from_s\d+`, rinomina a `distinct_from_other_story` preservando il valore stringa (che gia' contiene info su quale storia distinguere).
+
+**Fix retroattivo s05**: Nodo character ora ha `distinct_from_other_story` (era `distinct_from_s08`). Valore preservato. Verify post-fix: PASS.
+
+**Verifica preventiva**: solo s05 ha questo pattern in tutti i 12 old_node (grep su `distinct_from_s\d+`). s06-s12 non hanno il bug, ma lo script lo applichera' comunque preventivamente.
+
+**Patch MIGRATION_PROMPT REGOLA 7**: aggiunto Anti-pattern + chiarimento che il valore stringa va preservato + nota su `additionalProperties: false` schema (campi legacy non ammessi nel canonical).
+
 ## Stato: VIA LIBERA P2 (gia' eseguito)
 
 10 provvisori (4A + 5B + 1C — distribuzione confidence altissima grazie a 4 hook signature/canonical: NODO_PRIMA_APPARIZIONE h3, EREDITA_TECNICA_E_MATERIALE h4, PATTERN_A_PRIMA_SEMINA h5, PONTE_TIENE h8). I 5 `no_inference_fields` restano `null`.

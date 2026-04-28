@@ -424,9 +424,14 @@ Lascia invariati gli altri quadranti (acqua_nord, fuoco_est, terra_ovest, aria_n
 
 Se trovi:
 - `key_action` (singolare) → rinomina a `key_actions` (canonical)
-- `distinct_from_s08`, `distinct_from_sNN` → rinomina a `distinct_from_other_story`
+- `distinct_from_s08`, `distinct_from_sNN` (qualunque NN) → rinomina a `distinct_from_other_story`. Il valore stringa contiene gia' l'info su quale storia distinguere: NON va modificato, solo la chiave si rinomina.
 
 Tutti gli altri sub-campi di characters_in_scene restano invariati.
+
+**Implementato in `migrate_p1.py#normalize_characters_in_scene`** (post-s05). Lo schema v1.2 ha `additionalProperties: false` su `character_in_scene`: campi `distinct_from_s\d+` legacy NON sono ammessi nel canonical, solo `distinct_from_other_story`.
+
+**Anti-pattern (osservato in s05 prima della correzione):**
+- Script ha copiato meccanicamente `distinct_from_s08` da `s05.characters_in_scene[4]` (Nodo) senza rinomina. Il valore stringa era gia' descrittivo (in_s5_nodo_e_artigiano... in_s8_nodo_sara_mantenitore...). `verify_output_integrity.py` ha PASSato (lo script non valida additionalProperties). Fix retroattivo: rinominato a `distinct_from_other_story`.
 
 ### REGOLA 8 — Campi top-level mancanti
 
