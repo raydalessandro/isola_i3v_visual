@@ -1,0 +1,64 @@
+{
+  "_description": "Mapping manuale P0 -> P1 per s02. Decisioni: hook resolution, quadrant whitelist, debt triage, personaggi_vincoli_attivi.",
+  "story_id": "s02",
+  "hooks": {
+    "s02_h1": {
+      "location": {
+        "id": "scuola_stria",
+        "qualifier": "cortile_o_margine_pascoli",
+        "legacy_string": "scuola_stria_cortile_o_margine_pascoli"
+      },
+      "quadrant": "centro_villaggio",
+      "_quadrant_note": "Old quadrant 'centro_villaggio_o_via_che_sale' non in whitelist; mappato a centro_villaggio (whitelist) coerente con catalogo scuola_stria.quartiere=centro."
+    },
+    "s02_h2": {
+      "location": {
+        "id": "pascoli_alti",
+        "qualifier": "sentiero_in_salita",
+        "legacy_string": "sentiero_in_salita_verso_pascoli_alti"
+      },
+      "quadrant": "aria_nord"
+    },
+    "s02_h3_signature": {
+      "location": {
+        "id": "pozza_abbeveratoio_pastori",
+        "qualifier": "ghiacciata_con_velo_d_acqua_sgelato",
+        "legacy_string": "pozza_ghiacciata_con_velo_d_acqua_sgelato_in_superficie"
+      },
+      "quadrant": "aria_nord",
+      "_quadrant_note": "Old quadrant 'aria_nord_pascoli' non in whitelist; mappato a aria_nord (whitelist)."
+    },
+    "s02_h4": {
+      "location": {
+        "id": "pozza_abbeveratoio_pastori",
+        "qualifier": "dopo_il_gesto_di_noah",
+        "legacy_string": "pozza_dopo_il_gesto_di_noah"
+      },
+      "quadrant": "aria_nord",
+      "_quadrant_note": "Old quadrant 'aria_nord_pascoli' non in whitelist; mappato a aria_nord (whitelist)."
+    },
+    "s02_h5": {
+      "location": {
+        "id": "pascoli_alti",
+        "qualifier": "sentiero_del_ritorno",
+        "legacy_string": "sentiero_del_ritorno_dai_pastori"
+      },
+      "quadrant": "aria_nord"
+    }
+  },
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "Tutti i debts_opened/closed dell'old_node sono classificati come 'seed_ref' nel precomputed_context.debt_classification (archived_seed_refs): vanno archiviati, non entrano nel canonical (REGOLA 0ter MIGRATION_PROMPT). Lista completa in s02_migration_notes.md.",
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "stria",
+      "vincoli": [
+        "mai_lezione_morale_esplicita",
+        "mai_due_risposte_stessa_scena",
+        "mai_sopra_o_sotto_albero_vecchio",
+        "mai_commuovere_visibilmente"
+      ]
+    }
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: solo stria ha vincoli individuali tra i character_in_scene di s02 (gabriel/elias/noah non hanno vincoli specifici nel catalogo). Fiamma non e' in scena, quindi non incluso. active_constraints_touched cita 'detti_fiamma_esclusivi_qui_non_presente' come constraint da rispettare (Fiamma assente by design)."
+}

@@ -1,0 +1,299 @@
+{
+  "id": "s02",
+  "title_provvisorio": "Il Riflesso nella Pozza",
+  "cycle": "A",
+  "attribute_dominant": "distinguere",
+  "block_position": "centro_blocco_a",
+  "season": "inverno",
+  "season_passage": null,
+  "wind_active": "vento_taglio",
+  "wind_notes": "Taglio (alba) atteso; nella storia soffia una folata tardiva che increspa il velo d'acqua al momento-soglia — primo soffio visibile del Taglio in saga.",
+  "pattern_a_active": "pre_eco",
+  "pattern_a_notes": "Non è semina (semina: S6). È PRE-ECO VISIVA del Pattern A: l'acqua + Vento Taglio + cerchi argentei dell'increspatura che non rompe il flusso. Primissima immagine fisica della famiglia Pattern A, ma non conta nel tracciato formale (semina vera in S6, prima scena attiva S7). Da onorare visivamente.",
+  "night_scene": false,
+  "night_scene_notes": null,
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "pascoli_alti",
+    "note": "La pozza è piccola, d'estate abbeveratoio delle capre dei Pastori, ora ghiacciata con il velo di superficie appena sgelato da una giornata di sole. Da aggiungere come sub_location di pascoli_alti in ATLANTE quando si raffina (Fase E). | specific_points: ['pozza_abbeveratoio_pastori']"
+  },
+  "locations_secondary": [
+    {
+      "id": "pascoli_alti",
+      "role": "cornice_consegna_pastori_off_screen"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_azione",
+      "narrative_weight": "delta_che_distingue_riflesso_da_verita",
+      "key_actions": [
+        "chiede_a_stria_dove_sta_andando_lei_vola_via",
+        "capisce_per_primo_che_riflesso_non_e_loro",
+        "dice_piano_quello_che_vedi_nello_specchio_e_solo_come_ti_guardi_adesso"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_soglia_emotiva",
+      "narrative_weight": "primo_tocco_della_sua_paura",
+      "key_actions": [
+        "si_vede_piccolo_nel_riflesso",
+        "tocca_l_acqua_col_dito_ritrae_la_mano",
+        "mormora_voi_siete_grandi_davvero",
+        "non_risponde_a_gabriel_poi_dice_andiamo"
+      ],
+      "quote_count_estimate": 3
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_azione_irriflessa",
+      "narrative_weight": "agente_del_momento_soglia_via_gesto",
+      "key_actions": [
+        "tira_fuori_il_bastoncino_raccolto_in_s1",
+        "lo_getta_nell_acqua_per_rabbia_gesto_irriflesso",
+        "lo_vede_galleggiare_inclinarsi_sparire"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "stria",
+      "role": "cammeo_apertura",
+      "narrative_weight": "archetipo_vede_prima_istituito",
+      "key_actions": [
+        "affida_messaggio_per_pastori",
+        "rilancia_invece_di_rispondere_tu_cosa_pensi",
+        "vola_via_senza_spiegare"
+      ],
+      "familial_role_episodic": "maestra_zia",
+      "quote_count_estimate": 2
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "pastori",
+      "entity_type": "gruppo_istituzione_implicita",
+      "role": "destinatari_messaggio_off_screen",
+      "_note": "I Pastori ricevono il messaggio dopo la pozza (consegna off-screen breve). Decisione B3: consegna avviene, non c'è debito di non-consegna. Pastori come entità: sfondo costante delle storie, mai individuati."
+    }
+  ],
+  "seeds_planted": [
+    "seed_paura_elias_piccolo",
+    "seed_stria_vede_prima",
+    "seed_oggetto_fantasma_congelato"
+  ],
+  "seeds_picked_up": [
+    "seed_s01_bastoncino_noah",
+    "seed_noah_raccoglie_oggetti"
+  ],
+  "seeds_maturing_here": [],
+  "seeds_bloomed_here": [
+    "seed_s01_bastoncino_noah"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s02_001",
+      "from_story": "s01",
+      "element": "bastoncino_noah",
+      "type": "oggetto",
+      "note": "Il bastoncino raccolto da Noah in cammino sui Pascoli (S1) cade nella pozza qui."
+    },
+    {
+      "callback_id": "cb_s02_002",
+      "from_story": "s01",
+      "element": "gesto_firma_noah_raccoglie",
+      "type": "gesto",
+      "note": "Il gesto-firma di Noah (raccoglie in cammino) si conferma: stavolta l'oggetto raccolto ha un ruolo narrativo."
+    }
+  ],
+  "callback_summary": "Bastoncino di Noah da S1 (oggetto → oggetto-fantasma). Gesto-firma di Noah che raccoglie (S1 → conferma qui).",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": null,
+  "key_phrase_notes": "Direzione: rifiuto della falsa fissità senza dichiararla. Da affidare al narratore in chiusura, non a un personaggio. Nessuna frase-regola. Da scrivere in D.",
+  "premise": "Stria affida ai fratelli un messaggio per i Pastori sui Pascoli Alti — quel mattino lei vola altrove. 'Tu cosa pensi?' — chiede a Gabriel quando lui le domanda dove stia andando. Vola via senza spiegare. Loro salgono.",
+  "problem": "A metà cammino trovano la pozza scoperta. Si chinano a bere. Vedono i loro riflessi — diversi da come si vedono loro. Gabriel si vede con la bocca tirata. Elias si vede piccolo — molto piccolo, tra i fratelli che nello specchio risultano più grandi di quanto siano. Noah si vede fermo (e lui non è mai fermo). Litigano. Elias resta zitto. Tocca l'acqua col dito, ritrae la mano.",
+  "threshold_moment": "Il bastoncino di Noah (callback S1) nell'acqua. Gesto irriflesso che diventa rottura della falsa fissità. Il riflesso non era la verità — era una versione, fissata da un'acqua troppo ferma. Vento Taglio arriva, folata che increspa il velo.",
+  "resolution_mode": "Il bastoncino galleggia un attimo, si inclina, sparisce sotto. Resta congelato dentro il velo che si richiude al calare del sole — oggetto-fantasma per il rilettore, MAI dichiarato nel testo. I fratelli si rialzano, riprendono il cammino verso i Pastori. Consegna del messaggio off-screen breve.",
+  "palette_emotiva": "Blu profondo dell'acqua sotto il ghiaccio + bianco del velo + grigio pietra dei Pascoli. Quando il vento increspa: cerchi argentei. I riflessi un filo più scuri, più rigidi dei volti veri (eredita schema v1.1 App. C).",
+  "active_constraints_touched": [
+    "detti_fiamma_esclusivi_qui_non_presente",
+    "stria_mai_due_risposte_stessa_scena",
+    "stria_mai_lezione_morale",
+    "no_narrator_reveal_preannouncement"
+  ],
+  "voice_notes_essential": [
+    "una_scena_di_silenzio_lungo_dei_tre_fratelli_carta_usata_con_misura",
+    "memoria_lunga_narratore_1_inciso_sulla_pozza_dei_pastori",
+    "nessun_address_al_lettore_arriva_in_s4",
+    "nessun_detto_popolare_fiamma_non_presente",
+    "stria_una_frase_rilancio_mai_due_risposte",
+    "riflessi_descritti_come_leggermente_piu_scuri_piu_rigidi_dei_volti_veri_eredita_schema_v1_1_app_c",
+    "pattern_a_mai_nominato_vive_nell_immagine_dei_cerchi_argentei_che_non_rompono_il_flusso"
+  ],
+  "structural_notes": [
+    "SEMINA_PAURA_ELIAS — seme maggiore, bloom S11",
+    "STRIA_VEDE_PRIMA — archetipo istituito, bloom S11",
+    "CALLBACK_S1 — bastoncino chiude il suo arco diventando oggetto-fantasma congelato",
+    "PRE_ECO_PATTERN_A — immagine dei cerchi argentei, non semina ma anticipazione visiva",
+    "STRUCTURA_FRATELLI — ognuno vede un riflesso falsato in modo coerente col proprio attributo EAR: Gabriel (Δ) vede 'bocca tirata' come deformazione del distinguere; Elias (⇄) vede 'piccolo' come deformazione del sentirsi in mezzo; Noah (⟳) vede 'fermo' come deformazione di non cambiare. Mai dichiarato, mai spiegato."
+  ],
+  "fear_touched": {
+    "brother": "elias",
+    "fear_id": "non_essere_abbastanza",
+    "status": "seminata",
+    "mode_of_touch": "riflesso_mostra_elias_piccolo_tra_fratelli_piu_grandi_mormora_voi_siete_grandi_davvero",
+    "_note": "Semina FORTE della paura di Elias. Maturing successivo in S4-S5-S6-S9, bloom S11."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s02_h1",
+        "moment": "mattino_presto",
+        "location": {
+          "id": "scuola_stria",
+          "qualifier": "cortile_o_margine_pascoli",
+          "legacy_string": "scuola_stria_cortile_o_margine_pascoli"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "stria"
+        ],
+        "elements": [],
+        "palette": "grigio_cenere_di_stria_contro_azzurro_pallido_mattino_invernale_fiati_bianchi",
+        "notes": null,
+        "focal_action": "Stria, alta e ferma su una zampa, affida un messaggio per i Pastori. Quando Gabriel chiede dove va lei, solleva il becco — 'Tu cosa pensi?' — apre le ali e vola via.",
+        "focal_object": "stria_che_si_alza_in_volo",
+        "atmosphere": "autorita_calma_alba_invernale_rilancio_mai_risposta",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s02_h2",
+        "moment": "mattino",
+        "location": {
+          "id": "pascoli_alti",
+          "qualifier": "sentiero_in_salita",
+          "legacy_string": "sentiero_in_salita_verso_pascoli_alti"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "grigio_pietra_dei_pascoli_azzurro_invernale_bruno_chiaro_erba_secca",
+        "notes": null,
+        "focal_action": "i tre salgono sui Pascoli Alti. Noah distratto ha ancora il bastoncino di S1 in mano. Aria tersa, fiati visibili.",
+        "focal_object": "bastoncino_in_mano_a_noah",
+        "atmosphere": "cammino_in_salita_freddo_secco_chiaro",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s02_h3_signature",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "pozza_abbeveratoio_pastori",
+          "qualifier": "ghiacciata_con_velo_d_acqua_sgelato",
+          "legacy_string": "pozza_ghiacciata_con_velo_d_acqua_sgelato_in_superficie"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "blu_profondo_dell_acqua_sotto_il_ghiaccio_bianco_del_velo_grigio_pietra_dei_pascoli_riflessi_leggermente_piu_scuri_e_piu_rigidi_dei_volti_veri",
+        "notes": null,
+        "focal_action": "i tre chinati sulla pozza, vedono i riflessi — i riflessi sono un filo più scuri, più rigidi. Elias si vede piccolo tra i fratelli grandi. Tocca l'acqua col dito, ritrae la mano.",
+        "focal_object": "riflessi_falsati_sull_acqua",
+        "atmosphere": "momento_di_falsa_fissita_turbamento_silenzioso_litigio_freddo",
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s02_h4",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "pozza_abbeveratoio_pastori",
+          "qualifier": "dopo_il_gesto_di_noah",
+          "legacy_string": "pozza_dopo_il_gesto_di_noah"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "argento_dei_cerchi_sull_acqua_azzurro_che_torna_dopo_increspatura_punto_scuro_del_bastoncino_che_affonda",
+        "notes": null,
+        "focal_action": "Noah getta il bastoncino nell'acqua per rabbia. L'acqua si increspa. Il Vento Taglio manda una folata — cerchi argentei sull'acqua. Il bastoncino galleggia, si inclina, sparisce sotto.",
+        "focal_object": "bastoncino_che_sparisce_sotto_il_velo",
+        "atmosphere": "rottura_della_falsa_fissita_via_gesto_irriflesso_vento_che_increspa",
+        "wind_visible": "vento_taglio_folata_cerchi_argentei",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s02_h5",
+        "moment": "primo_pomeriggio",
+        "location": {
+          "id": "pascoli_alti",
+          "qualifier": "sentiero_del_ritorno",
+          "legacy_string": "sentiero_del_ritorno_dai_pastori"
+        },
+        "quadrant": "aria_nord",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah"
+        ],
+        "elements": [],
+        "palette": "pomeriggio_invernale_luce_bassa_ombre_lunghe",
+        "notes": null,
+        "focal_action": "i tre scendono dai Pascoli. Hanno consegnato il messaggio. Camminano in silenzio un po' più lungo del solito.",
+        "focal_object": "i_tre_in_fila",
+        "atmosphere": "ritorno_piu_silenzioso_del_previsto",
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [],
+  "quartieri_attraversati": [
+    "centro_villaggio",
+    "aria_nord"
+  ],
+  "oggetti_simbolo_presenti": [
+    "scialle_stria",
+    "bastoncino_noah_s1"
+  ],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "stria",
+      "vincoli": [
+        "mai_lezione_morale_esplicita",
+        "mai_due_risposte_stessa_scena",
+        "mai_sopra_o_sotto_albero_vecchio",
+        "mai_commuovere_visibilmente"
+      ]
+    }
+  ]
+}
