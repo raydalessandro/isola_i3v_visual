@@ -323,19 +323,15 @@ Mai una frase che spiega. Mai una frase che si scusa. Mai un *"perché"*.
 
 **Funzione narrativa.** Personaggio della **cura concreta che educa senza spiegare**. Quota auto-imposta: 1 pianta nominata per apparizione di Salvia, mai più. Funzione anche di **micro-azione replicabile a casa** (il genitore che legge ricorda la camomilla, e quella sera la prepara davvero). **Ruolo familiare episodico:** madre-pratica che non ti coccola ma ti rimette in piedi. Distinta dal calore di Fiamma — Salvia è efficiente, Fiamma è caldo.
 
-**Note e vincoli.** Mai Salvia che spiega perché una pianta funziona — dice il nome, l'uso, basta. Mai Salvia che si ferma a chiacchierare a lungo. Mai usare Salvia per *risolvere emotivamente* una storia. Le piante nominate vanno tracciate in `QUOTE_TRACKER.md` — non ripetere troppo, devono essere piante vere e riconoscibili dal genitore italiano.
+**Note e vincoli (narrativi).** Mai Salvia che spiega perché una pianta funziona — dice il nome, l'uso, basta. Mai Salvia che si ferma a chiacchierare a lungo. Mai usare Salvia per *risolvere emotivamente* una storia. Le piante nominate vanno tracciate in `QUOTE_TRACKER.md` — non ripetere troppo, devono essere piante vere e riconoscibili dal genitore italiano.
 
 ---
 
 ### §4.10 NODO
 
-**Specie, ruolo, residenza.** Picchio. Ripara e costruisce — aggiusta tetti, scaffali, porte, fa nodi di corda, intaglia. Vive nel villaggio centrale, in una casetta di legno con la facciata segnata di buchi piccolissimi. Bottega aperta accanto a casa, attrezzi appesi in fila.
+**Specie, ruolo, residenza.** Picchio. Ripara e costruisce — aggiusta tetti, scaffali, porte, fa nodi di corda, intaglia. Vive nel villaggio centrale, con bottega aperta accanto a casa.
 
-**Aspetto.** Medio, snello, piume nere e bianche con la cresta rossa sulla testa. Il becco lungo, dritto, forte. Le zampe corte ma sicure. Lo sguardo dritto, gli occhi piccoli e svegli. Quando lavora batte il becco contro il legno — TOK-TOK-TOK — che è il suono di Nodo che pensa. **Firma visiva:** una corda arrotolata sul braccio, sempre. Cambia spessore (a volte spago sottile, a volte cima grossa) ma c'è sempre.
-
-**Comportamento operativo (Tratto 7).** Nodo fa cose-da-picchio attraverso il mestiere del riparare. Batte ritmico — il TOK-TOK-TOK accompagna ogni gesto. Trova il punto giusto — i picchi sentono i nodi del legno con l'orecchio, Nodo li trova così anche nei problemi. Lavora a memoria. Spiega facendo — se un cucciolo o un fratello vuole imparare, Nodo gli fa fare, non gli dice. *"Tieni qui. Tira. Non così, così."* Mostra il nodo una volta sola, poi tocca all'altro.
-
-Conosce i nodi — quello a otto, quello scorsoio, quello che tiene la barca al pontile, quello che lega due pezzi di legno mentre la colla asciuga. Ha un nome semplice per ognuno (*Otto. Scorsoio. Marinaro. Lega-asciuga.*).
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/secondari/nodo/scheda.md`.*
 
 **Voce tipica.**
 - *"Tieni qui."*
@@ -345,19 +341,15 @@ Conosce i nodi — quello a otto, quello scorsoio, quello che tiene la barca al 
 
 **Funzione narrativa.** Personaggio della **mano che fa**. Quota saga TOK-TOK-TOK: presente in 4-5 storie su 12 (sotto come sfondo, sopra come azione di Nodo), per non saturare. Onomatopea-firma del villaggio. **Ruolo familiare episodico:** padre-pratico, lo zio che ti insegna a fare le cose.
 
-**Note e vincoli.** Mai Nodo che spiega *perché* un nodo funziona — Nodo mostra. Mai Nodo che fa il nodo al posto di chi sta imparando, anche se quello sbaglia tre volte. Mai Nodo che parla di sentimenti.
+**Note e vincoli (narrativi).** Mai Nodo che spiega *perché* un nodo funziona — Nodo mostra. Mai Nodo che fa il nodo al posto di chi sta imparando, anche se quello sbaglia tre volte. Mai Nodo che parla di sentimenti.
 
 ---
 
 ### §4.11 AMO
 
-**Specie, ruolo, residenza.** Cormorano. Pesca — porta pesce al Mercato del Mezzogiorno (2-3 volte a settimana, non ogni giorno), conosce le correnti, insegna ai cuccioli a stare al pontile in silenzio. Vive nel Quartiere d'Acqua a sud, in una casa bassa di legno scavato sulla scogliera che sovrasta la Spiaggia delle Conchiglie a est della Bocca, vicino al pontile di Bartolo ma più in basso e più isolato. Una scaletta di pietra scende fino all'acqua direttamente da casa sua. **Vive lontano apposta** — la sua scelta di solitudine è geografica oltre che caratteriale.
+**Specie, ruolo, residenza.** Cormorano. Pesca — porta pesce al Mercato del Mezzogiorno (2-3 volte a settimana, non ogni giorno), conosce le correnti, insegna ai cuccioli a stare al pontile in silenzio. Vive nel Quartiere d'Acqua a sud, sulla scogliera che sovrasta la Spiaggia delle Conchiglie a est della Bocca, vicino al pontile di Bartolo ma più isolato. **Vive lontano apposta** — la sua scelta di solitudine è geografica oltre che caratteriale.
 
-**Aspetto.** Snello, lungo, piume nere lucide quasi blu al sole, il petto un po' più chiaro. Il becco lungo, dritto, con un piccolo uncino in punta. Le zampe palmate. Quando esce dall'acqua apre le ali al sole per asciugarsi — le tiene aperte a lungo, ferma, come una croce nera sulla scogliera. Gli occhi verde scuro. **Firma visiva:** una collana di una sola conchiglia conica scura appesa al collo con uno spago.
-
-**Comportamento operativo (Tratto 7).** Amo fa cose-da-cormorano attraverso il mestiere della pesca. Si tuffa. Aspetta lungo. Conosce le correnti. Stende le ali — gesto-firma del cormorano, e per Amo è anche pausa-pensiero: se un cucciolo gli chiede una cosa difficile, Amo apre le ali al sole e prima di rispondere aspetta di essere asciutto. Parla pochissimo — meno di Bartolo. Insegna con il silenzio: i cuccioli che vanno al pontile con Amo imparano a stare zitti, perché il pesce sente.
-
-Quando porta il pesce al Mercato, lo posa sul banco e basta. Non contratta.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/secondari/amo/scheda.md`.*
 
 **Voce tipica.**
 - *"Zitto. Sente."*
@@ -367,19 +359,15 @@ Quando porta il pesce al Mercato, lo posa sul banco e basta. Non contratta.
 
 **Funzione narrativa.** Personaggio della **pazienza dell'acqua e del silenzio che insegna**. Complementare a Bartolo — Bartolo è il tempo lento del trasporto, Amo è il tempo concentrato del cacciatore. Bartolo sta nel confine d'acqua del Villaggio, Amo al margine d'acqua dell'isola. **Ruolo familiare episodico:** zio silenzioso, quello con cui stai fermo e basta.
 
-**Note e vincoli.** Mai Amo che spiega la pesca a parole — la insegna stando in silenzio. Mai Amo in scene di villaggio, salvo Mercato del Mezzogiorno (dove parla pochissimo). Mai Amo nostalgico o malinconico — il silenzio è metodo. Mai Amo in conflitto aperto.
+**Note e vincoli (narrativi).** Mai Amo che spiega la pesca a parole — la insegna stando in silenzio. Mai Amo in scene di villaggio, salvo Mercato del Mezzogiorno (dove parla pochissimo). Mai Amo nostalgico o malinconico — il silenzio è metodo. Mai Amo in conflitto aperto.
 
 ---
 
 ### §4.12 ZOLLA
 
-**Specie, ruolo, residenza.** Scoiattolo grigio, anziano. Raccoglie cibo che cresce — castagne, ghiande, noci, bacche, semi, radici, funghi. Conosce le stagioni meglio di chiunque, sa cosa è pronto quando. Vive in una piccola casa-tana ai margini degli Orti del Cerchio, sul confine col bosco vicino, Quartiere di Terra a ovest. Tre dispense — una in casa, due nascoste fuori (e solo lui sa dove).
+**Specie, ruolo, residenza.** Scoiattolo grigio, anziano. Raccoglie cibo che cresce — castagne, ghiande, noci, bacche, semi, radici, funghi. Conosce le stagioni meglio di chiunque, sa cosa è pronto quando. Vive ai margini degli Orti del Cerchio, sul confine col bosco vicino, Quartiere di Terra a ovest. Tre dispense — una in casa, due nascoste fuori (e solo lui sa dove).
 
-**Aspetto.** Piccolo, compatto, pelo grigio con la pancia chiara. La coda folta, sempre un po' alzata. Le zampe rapide, le mani precise. Le orecchie corte e attente. Le guance — quando ha raccolto tanto e non ha ancora svuotato — gonfie in modo buffo. Il muso pacato. **Firma visiva:** una bisaccia di pelle morbida appesa di traverso, non grande, sempre piena di qualcosa, con due cordoncini chiusi.
-
-**Comportamento operativo (Tratto 7).** Zolla fa cose-da-scoiattolo-vecchio attraverso il mestiere della raccolta. Si arrampica — anche da anziano. Raccoglie. Nasconde — ha dispense ovunque. Conta in stagioni — *"questo è ancora tre lune presto"*, *"queste castagne si fanno con la prossima pioggia grossa"*. Insegna ai cuccioli a riconoscere — toglie un fungo dalle mani di un cucciolo se non è sicuro: *"questo no. Questo qui sì."* Mai una spiegazione lunga.
-
-Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre, noci di novembre. Le bacche rosse del cespuglio dietro Casa Salvia maturano con la prima brina. Lo dice a chi chiede, non lo dice a chi non chiede.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/secondari/zolla/scheda.md`.*
 
 **Voce tipica.**
 - *"Questo no. Questo qui sì."*
@@ -389,7 +377,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Funzione narrativa.** Personaggio della **stagione e della parsimonia**. Funzione anche di **educazione concreta al cibo che cresce** (complementare al *fare* di Nodo e al *curare* di Salvia). **Ruolo familiare episodico:** nonno-pratico, quello che ti porta nel bosco a raccogliere e ti insegna i nomi delle cose.
 
-**Note e vincoli.** Mai Zolla che fa lezioni di ecologia. Mai Zolla che dice *"un tempo c'erano più castagne"* (no nostalgia ambientalista). Mai Zolla in scene veloci o concitate. Le piante/frutti vanno tracciati in `QUOTE_TRACKER.md` per coerenza stagionale.
+**Note e vincoli (narrativi).** Mai Zolla che fa lezioni di ecologia. Mai Zolla che dice *"un tempo c'erano più castagne"* (no nostalgia ambientalista). Mai Zolla in scene veloci o concitate. Le piante/frutti vanno tracciati in `QUOTE_TRACKER.md` per coerenza stagionale.
 
 ---
 
@@ -397,9 +385,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Specie, ruolo.** Riccino. Figlio di Mèmolo. Va alla scuola di Stria.
 
-**Aspetto.** Più piccolo del padre, spine ancora morbide-morbide. Il muso piccolo e attento, gli occhi neri e svegli — più svegli di quelli del padre. Trotterella già con sicurezza, salvo quando si distrae.
-
-**Comportamento operativo (Tratto 7).** Pun fa cose-da-riccino-di-Mèmolo. Trotta dietro al padre per il villaggio e gli ricorda dove andava. È più ordinato del padre per necessità: qualcuno deve esserlo. Ma quando è da solo o coi compagni, Pun ha la stessa scintilla di lucidità improvvisa di Mèmolo. La differenza con Mèmolo è che Pun non si confonde dopo: la dice e basta, e va avanti col gioco.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/cuccioli/pun/scheda.md`.*
 
 **Voce tipica.**
 - *"Al pozzo, papà."*
@@ -408,7 +394,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Funzione narrativa.** Cucciolo della **memoria pratica e dell'intuizione laterale**. Ponte tra Mèmolo e i compagni di scuola.
 
-**Note e vincoli.** Mai Pun che corregge il padre con tono adulto — lo aiuta sempre con tono di cucciolo che riempie un buco. Mai Pun "sapientello".
+**Note e vincoli (narrativi).** Mai Pun che corregge il padre con tono adulto — lo aiuta sempre con tono di cucciolo che riempie un buco. Mai Pun "sapientello".
 
 ---
 
@@ -416,9 +402,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Specie, ruolo.** Tartarughina. Figlia di Bartolo. Va alla scuola di Stria.
 
-**Aspetto.** Piccola — il guscio appena più grande di una mano umana, più chiaro di quello del padre, segnato di righe gialle sottili. Le zampe corte e tonde. Gli occhi grandi per il muso, sempre un po' aperti. Più veloce del padre, ma comunque tartaruga.
-
-**Comportamento operativo (Tratto 7).** Toba fa cose-da-tartarughina-di-Bartolo. Si muove piano, ma non lentissima — ha ancora la fretta dei cuccioli. Chiede tantissimo — domande su tutto, con vera curiosità. A scuola da Stria è la più assidua a domandare. Adora andare in barca col padre.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/cuccioli/toba/scheda.md`.*
 
 **Voce tipica.**
 - *"Perché?"*
@@ -427,7 +411,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Funzione narrativa.** Cucciola della **domanda che apre**. Complemento dolce a Bartolo.
 
-**Note e vincoli.** Mai Toba che fa una domanda *filosofica* (sarebbe Pattern AI §4.1). Le sue domande sono concrete. Mai Toba al pontile che resta sola. Mai Toba che corre — è tartaruga.
+**Note e vincoli (narrativi).** Mai Toba che fa una domanda *filosofica* (sarebbe Pattern AI §4.1). Le sue domande sono concrete. Mai Toba al pontile che resta sola. Mai Toba che corre — è tartaruga.
 
 ---
 
@@ -435,11 +419,7 @@ Conosce i tempi delle cose — ghiande grosse di settembre, castagne di ottobre,
 
 **Specie, ruolo.** Tassino. Nipote di Rovo, affidato (storia mai raccontata). Va alla scuola di Stria.
 
-**Aspetto.** Piccolo, robusto come tutti i tassi, pelo grigio-scuro ancora morbido, la riga bianca sulla testa già visibile ma più sottile di quella di Rovo. Gli occhi neri, attenti, un po' tristi anche quando è contento. Cammina silenzioso. Sta vicino a Rovo a distanza giusta — mai troppo, mai troppo poco.
-
-**Comportamento operativo (Tratto 7).** Bru fa cose-da-tassino-cresciuto-da-zio-burbero. Parla poco. Ascolta moltissimo. Imita Rovo nelle posture. A scuola siede in fondo. Risponde se Stria lo chiama, sempre risposte brevi e quasi sempre corrette. Coi compagni gioca con misura — quando Cardo prova a tirargli la coda, Bru si gira e basta.
-
-Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo da lontano arrivare, fa due passi piccoli verso di lui — gesto di sollievo che Bru stesso non si vede fare.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/cuccioli/bru/scheda.md`.*
 
 **Voce tipica.**
 - *"Sì."*
@@ -449,7 +429,7 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 
 **Funzione narrativa.** Cucciolo della **presenza silenziosa che custodisce**. Specchio caldo di Rovo. Legame tra mondo dei cuccioli e mondo dei margini.
 
-**Note e vincoli.** Mai Bru che racconta la sua storia (chi sono i suoi genitori, perché sta con Rovo) — porta socchiusa. Mai Bru in scene di gruppo dove diventa centro dell'attenzione. Mai Bru che piange in modo visibile. Mai Bru che fa l'eroe.
+**Note e vincoli (narrativi).** Mai Bru che racconta la sua storia (chi sono i suoi genitori, perché sta con Rovo) — porta socchiusa. Mai Bru in scene di gruppo dove diventa centro dell'attenzione. Mai Bru che fa l'eroe.
 
 ---
 
@@ -457,11 +437,7 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 
 **Specie, ruolo.** Lupacchiotto. Genitori non in scena (storia mai raccontata). Va alla scuola di Stria.
 
-**Aspetto.** Più alto degli altri cuccioli per via della specie. Pelo grigio-marrone, la coda già folta. Le zampe lunghe, sempre in tensione. Gli occhi gialli, vivaci, un po' provocatori. Le orecchie dritte. Sorride spesso mostrando i dentini — niente di minaccioso, ma è un sorriso che mette i compagni un filo all'erta.
-
-**Comportamento operativo (Tratto 7).** Cardo fa cose-da-lupacchiotto-tra-gli-altri. Provoca — tira la coda di Bru, fa il verso a Pun, contraddice Toba per il gusto di vedere come reagisce. Corre più veloce di tutti. Si annoia quando le cose sono lente. Mette alla prova le regole di Stria — un passo oltre, sempre, e quando Stria lo guarda Cardo si ferma di un soffio prima del troppo. Sa esattamente dov'è il troppo.
-
-Sotto la provocazione, Cardo ha una sua lealtà strana. Se uno dei compagni è in difficoltà davvero — non per gioco — Cardo cambia in un istante: si mette accanto, in silenzio. Non lo dice mai. Quando il problema è passato, riprende a provocare come se niente.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/cuccioli/cardo/scheda.md`.*
 
 **Voce tipica.**
 - *"Eh, ma chi te l'ha detto?"*
@@ -471,7 +447,7 @@ Sotto la provocazione, Cardo ha una sua lealtà strana. Se uno dei compagni è i
 
 **Funzione narrativa.** Cucciolo della **frizione necessaria**. Senza di lui i cuccioli sarebbero un coro armonioso e finto. Occasione di crescita per i tre fratelli.
 
-**Note e vincoli.** Mai Cardo in modalità predatore — niente caccia, niente paura del lupo come specie, niente denti scoperti per intimidire. La specie è invisibile come tensione di sfondo, mai operativa. Mai Cardo che si redime in modo visibile. Mai Cardo "punito" alla fine. Mai Cardo che tradisce davvero. La regola operativa: in 2-3 storie su 12 Cardo fa il punzecchio, ma mai cose lupesche.
+**Note e vincoli (narrativi).** La specie è invisibile come tensione di sfondo, mai operativa. Mai Cardo che si redime in modo visibile. Mai Cardo "punito" alla fine. Mai Cardo che tradisce davvero. La regola operativa: in 2-3 storie su 12 Cardo fa il punzecchio, ma mai cose lupesche.
 
 ---
 
@@ -479,11 +455,7 @@ Sotto la provocazione, Cardo ha una sua lealtà strana. Se uno dei compagni è i
 
 **Specie, ruolo.** Libellulina. Genitori non in scena. Frequenta la scuola di Stria a modo suo (vola sopra, ascolta da fuori, entra qualche volta).
 
-**Aspetto.** Minuscola — lunga come un dito di un fratello. Le ali trasparenti con riflessi azzurro-verdi, il corpo sottile come un fuscello, gli occhi grandissimi (per la sua taglia). Vola velocissima, si ferma in aria immobile, riparte di scatto.
-
-**Comportamento operativo (Tratto 7).** Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì. Porta notizie — non come Stria che è messaggera ufficiale, ma in modo informale. Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.
-
-Sceglie cosa ridire e cosa no. Non è pettegola.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/cuccioli/liu/scheda.md`.*
 
 **Voce tipica.**
 - *"Ho sentito che."*
@@ -493,41 +465,31 @@ Sceglie cosa ridire e cosa no. Non è pettegola.
 
 **Funzione narrativa.** Cucciola della **informazione veloce**. Collegamento tra le scene. Funzione anche di **occhio del bambino-lettore** — è una proiezione del lettore-bambino dentro l'isola.
 
-**Note e vincoli.** Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.
+**Note e vincoli (narrativi).** Mai Liù che resta in scena a lungo — entra, dice, va. Mai Liù che fa la pettegola per cattiveria. Mai Liù in scene serie come voce comica. Mai Liù che sa cose che il narratore ha esplicitamente nascosto al lettore.
 
 ---
 
 ### §4.18 I COLTIVATORI DEL CERCHIO
 
-**Composizione, residenza.** Gruppo eterogeneo di abitanti (varie specie) che lavora gli Orti del Cerchio — campi e orti disposti in fasce concentriche intorno al villaggio, Quartiere di Terra a ovest. Vivono in casette sparse tra gli Orti e ai margini della Foresta. Zolla è uno di loro per affinità di mestiere, ma i Coltivatori sono molti e nessuno è nominato individualmente.
+**Composizione, residenza.** Gruppo eterogeneo di abitanti (varie specie) che lavora gli Orti del Cerchio — campi e orti disposti in fasce concentriche intorno al villaggio, Quartiere di Terra a ovest. Zolla è uno di loro per affinità di mestiere, ma i Coltivatori sono molti e nessuno è nominato individualmente.
 
-**Cosa fanno operativamente.** Coltivano. Zappano, seminano, innaffiano, raccolgono. Lavorano per stagioni — primavera-semina, estate-cura, autunno-raccolto, inverno-riposo. Cantano spesso mentre lavorano — non canzoni precise, mezze frasi ritmiche che danno il tempo del gesto.
+> *Profilo visivo → `visual/personaggi/collettivi/coltivatori_del_cerchio/scheda.md`.*
 
 **Funzione narrativa.** Sfondo abitato del Quartiere di Terra. Funzione anche di **scansione del tempo dell'isola** (semina = primavera). Funzione educativa: il bambino vede che le verdure non vengono dal niente.
 
-**Oggetto-simbolo:** la **zappa con manico curvo**. La portano sulla spalla quando attraversano il villaggio per andare e tornare dagli Orti. Il manico curvo richiama il Cerchio.
-
-**Note e vincoli.** Mai un Coltivatore individuato come personaggio nominato. Mai Coltivatori che spiegano il proprio lavoro ai fratelli (didattico). Mai Coltivatori in scene di villaggio (stanno negli Orti, salvo Mercato). Le cantilene di lavoro vanno tracciate in `QUOTE_TRACKER.md`: massimo 4-5 in tutta la saga.
-
-**Suono e atmosfera.** Voci basse che cantano a metà, zappe che battono terra (TUM-tum), foglie smosse, ceste piene che strisciano sull'erba.
+**Note e vincoli (narrativi).** Mai un Coltivatore individuato come personaggio nominato. Mai Coltivatori che spiegano il proprio lavoro ai fratelli (didattico). Mai Coltivatori in scene di villaggio (stanno negli Orti, salvo Mercato). Le cantilene di lavoro vanno tracciate in `QUOTE_TRACKER.md`: massimo 4-5 in tutta la saga.
 
 ---
 
 ### §4.19 IL MERCATO DEL MEZZOGIORNO
 
-**Composizione, residenza.** Non un gruppo di persone — un'**istituzione ricorrente**. Si svolge ogni giorno a mezzogiorno nella piazza centrale del villaggio, sotto e intorno all'Albero Vecchio. Vi partecipano abitanti di tutti i quartieri.
+**Composizione, residenza.** Non un gruppo di persone — un'**istituzione ricorrente**. Si svolge ogni giorno a mezzogiorno nella piazza centrale del villaggio, sotto e intorno all'Albero Vecchio. Vi partecipano abitanti di tutti i quartieri. Si scambia (non c'è denaro nell'isola — scambio cose contro cose, debiti di favore o oggetto saldati nei giorni seguenti). Le **Vecchie del Mercato** — sottogruppo informale di anziane di varie specie — siedono sulla **Panca di Pietra** vicino al pozzo, vedono tutto, commentano poco ma giusto. Il Mercato dura un'ora circa, poi la piazza si svuota e l'Albero Vecchio resta solo fino al pomeriggio.
 
-**Cosa succede operativamente.** Si scambia (non c'è denaro nell'isola — scambio cose contro cose, debiti di favore o oggetto saldati nei giorni seguenti). Si chiacchiera. Si vedono i bambini correre tra le bancarelle. Si decidono piccole cose comuni. Le **Vecchie del Mercato** — sottogruppo informale di anziane di varie specie — siedono sulla **Panca di Pietra** vicino al pozzo, vedono tutto, commentano poco ma giusto.
-
-Il Mercato dura un'ora circa, poi la piazza si svuota e l'Albero Vecchio resta solo fino al pomeriggio.
+> *Profilo visivo → `visual/personaggi/collettivi/mercato_del_mezzogiorno/scheda.md`.*
 
 **Funzione narrativa.** Centro della **vita comune dell'isola**. Circolo silenzioso dello scambio — il pesce di Amo finisce nella pentola che Fiamma cuoce, le castagne di Zolla diventano farina. Fonte di micro-eventi.
 
-**Oggetto-simbolo:** nessuno. Il Mercato è riconoscibile dalla **Panca di Pietra** sotto l'Albero Vecchio (delle Vecchie del Mercato) e dalla compresenza degli oggetti-simbolo dei tre gruppi-di-persone (carriole di vimini dei Camminanti, zappe dei Coltivatori, scale dei Mantenitori appoggiate qua e là).
-
-**Note e vincoli.** Mai il Mercato come scena lunga (è sfondo o passaggio, non teatro). Mai una scena al Mercato in cui un fratello *risolve* qualcosa di centrale alla storia. Le Vecchie del Mercato non vanno mai individuate per nome. Mai un Mercato vuoto, mai un Mercato senza l'Albero Vecchio sullo sfondo.
-
-**Suono e atmosfera.** Voci che si accavallano, ceste che si posano, qualcuno che ride forte, monetine no (non ce ne sono), passi di tanti.
+**Note e vincoli (narrativi).** Mai il Mercato come scena lunga (è sfondo o passaggio, non teatro). Mai una scena al Mercato in cui un fratello *risolve* qualcosa di centrale alla storia. Le Vecchie del Mercato non vanno mai individuate per nome. Mai un Mercato vuoto, mai un Mercato senza l'Albero Vecchio sullo sfondo.
 
 ---
 
@@ -535,15 +497,11 @@ Il Mercato dura un'ora circa, poi la piazza si svuota e l'Albero Vecchio resta s
 
 **Composizione, residenza.** Gruppo di abitanti (varie specie) che si occupa della **manutenzione del bene comune**. Aggiustano tetti dopo la pioggia, riparano il pontile, puliscono il pozzo, tengono i sentieri liberi dopo il vento, sistemano i muretti, rifanno le canne ai tetti. Non hanno sede fissa — vivono sparsi nel villaggio centrale e nei quartieri. Nodo è uno di loro per affinità di mestiere, ma non è il capo (i Mantenitori non hanno capo, decidono al Mercato chi fa cosa quel giorno).
 
-**Cosa fanno operativamente.** Lavorano. Quando dopo una pioggia grossa qualche tetto perde acqua, due o tre Mantenitori vanno con scale e canne. Quando il pontile si scheggia, due Mantenitori riparano. Quando il sentiero alla Roccia Alta è coperto di rami, i Mantenitori passano. Lavorano spesso al mattino presto e nel pomeriggio.
+> *Profilo visivo → `visual/personaggi/collettivi/mantenitori/scheda.md`.*
 
 **Funzione narrativa.** Sfondo della **civiltà che si tiene da sola**. Funzione educativa: le cose non stanno su per magia, c'è chi le tiene. Passaggio incidentale che vivifica una scena.
 
-**Oggetto-simbolo:** la **scala a pioli, corta**. La portano in spalla quando attraversano il villaggio. Visibile da lontano, richiama il *salire-per-aggiustare*.
-
-**Note e vincoli.** Mai un Mantenitore individuato come personaggio nominato (Nodo è già nominato per altri motivi, e quando agisce come Mantenitore lo fa con altri non nominati). Mai Mantenitori che si lamentano del lavoro. Mai Mantenitori che insegnano ai fratelli (per insegnare un fratello va da Nodo). Mai auto-celebrazione.
-
-**Suono e atmosfera.** Martelli leggeri, canne che si spaccano per essere tagliate, voci che si chiamano da un tetto all'altro, un fischio di richiamo.
+**Note e vincoli (narrativi).** Mai un Mantenitore individuato come personaggio nominato (Nodo è già nominato per altri motivi, e quando agisce come Mantenitore lo fa con altri non nominati). Mai Mantenitori che si lamentano del lavoro. Mai Mantenitori che insegnano ai fratelli (per insegnare un fratello va da Nodo). Mai auto-celebrazione.
 
 ---
 
@@ -551,15 +509,11 @@ Il Mercato dura un'ora circa, poi la piazza si svuota e l'Albero Vecchio resta s
 
 **Composizione, residenza.** Gruppo di abitanti (varie specie) che si occupa del **trasporto interno** all'isola. Portano cose da un quartiere all'altro: cesto di pesce dal Pontile al Mercato, fascio di legna dalla Foresta al villaggio, sacco di farina dal forno a una casa lontana, messaggio scritto da consegnare. Stria vola e porta voci, Bartolo traghetta verso fuori — i Camminanti coprono il *dentro*, a piedi. Vivono sparsi.
 
-**Cosa fanno operativamente.** Camminano. Conoscono ogni sentiero — quale è più breve, quale più riparato dal vento, quale praticabile dopo la pioggia. Si fanno carico della consegna e si garantiscono per la cura del trasportato. Camminano a tutte le ore, non hanno orari fissi.
+> *Profilo visivo → `visual/personaggi/collettivi/camminanti/scheda.md`.*
 
 **Funzione narrativa.** **Movimento ordinario delle cose dell'isola**. Dispositivo elegante per far entrare un'informazione esterna o un piccolo evento. Cucitura silenziosa del mandala.
 
-**Oggetto-simbolo:** la **carriola di vimini intrecciato**. Più leggera di una di legno (così non si confonde con quelle dei Mantenitori). L'intreccio richiama silenziosamente la Foresta Intrecciata e il Vento Intreccio.
-
-**Note e vincoli.** Mai un Camminante individuato come personaggio nominato. Mai un Camminante che si ferma a chiacchierare a lungo. Mai un Camminante che racconta del suo viaggio (didattico-narrativo). Mai un Camminante come messaggero ufficiale (quello è Stria — i Camminanti portano cose con messaggi a margine).
-
-**Suono e atmosfera.** Passi sui sentieri, gerle che cigolano, bisacce che si appoggiano per riposare, un saluto breve quando si incontrano altri abitanti.
+**Note e vincoli (narrativi).** Mai un Camminante individuato come personaggio nominato. Mai un Camminante che si ferma a chiacchierare a lungo. Mai un Camminante che racconta del suo viaggio (didattico-narrativo). Mai un Camminante come messaggero ufficiale (quello è Stria — i Camminanti portano cose con messaggi a margine).
 
 ---
 
@@ -644,7 +598,7 @@ L'isola è strutturata in **tre cinture concentriche**.
 
 La più esterna è il **mare**. Tutto intorno, fino all'orizzonte.
 
-Subito dentro, una **fascia costiera** — terra che va dal mare verso l'interno per cinquecento, ottocento metri al massimo. Qui ci sono le spiagge, le scogliere, i sentieri di sale, alcune case basse di chi vive col mare.
+Subito dentro, una **fascia costiera** — terra che va dal mare verso l'interno per cinquecento, ottocento metri al massimo.
 
 Dentro la fascia costiera, un anello d'acqua quasi chiuso: il **Fiume che Gira**. La sua acqua nasce dalle pendici delle Montagne Gemelle, scende per ruscelli che si raccolgono nell'anello a nord, e scorre lenta antioraria intorno alla terra interna fino a sfociare nel mare a sud, attraverso La Bocca. Per questo il Fiume è quasi un cerchio: completo per tre quarti, aperto a sud dove l'acqua finisce nel mare. Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna lo vede sempre uguale a sé stesso — ma l'acqua, in realtà, è sempre nuova e sempre in viaggio verso il mare.
 
@@ -658,21 +612,19 @@ A nord, dove il Fiume scorre più calmo e meno profondo, **un guado di pietre pi
 
 Su zattere piccole o canoe, alcuni Camminanti percorrono il Fiume per portare cose da un quartiere all'altro evitando la salita verso il Villaggio centrale.
 
-Quando il Vento Mulinello soffia forte la sera, il Fiume si increspa controcorrente per un attimo. È un fenomeno raro che gli abitanti chiamano *quando l'acqua trema*.
+> *Profilo visivo dei luoghi (aspetto, materiali, palette, atmosfera) → `visual/luoghi/`. Le sezioni §8.1-§8.6 qui sotto contengono solo struttura, posizione, abitanti e funzione.*
 
 ### §8.1 Il Villaggio
 
-Il Villaggio sta al centro della terra interna, nel cuore esatto dell'isola. È piccolo: poche decine di case basse di pietra e di legno, tetti di canne o di tegole scure, finestre piccole.
+Il Villaggio sta al centro della terra interna, nel cuore esatto dell'isola.
 
-Al centro del Villaggio c'è la **Piazza**. Al centro della Piazza c'è l'**Albero Vecchio**. Ha il tronco grosso che servirebbero quattro fratelli per abbracciarlo, e i rami che si aprono in alto come una grande mano. D'estate fa ombra su mezza Piazza. D'inverno le foglie cadono e si vede il cielo attraverso i rami. Si chiama Vecchio per affetto, ma è più che vecchio. Da quanto sia lì, nessuno l'ha mai contato.
-
-Accanto all'Albero Vecchio c'è il **Pozzo**. Vicino al Pozzo c'è la **Panca di Pietra**, dove siedono le Vecchie del Mercato.
+Al centro del Villaggio c'è la **Piazza**. Al centro della Piazza c'è l'**Albero Vecchio**. Accanto, il **Pozzo**. Vicino al Pozzo, la **Panca di Pietra**, dove siedono le Vecchie del Mercato.
 
 A mezzogiorno la Piazza diventa il **Mercato del Mezzogiorno** (vedi §4.19).
 
-Intorno alla Piazza: la **bottega di Nodo** col portico aperto, la **casetta tonda di Mèmolo** nascosta dietro un cespuglio, qualche casa di Coltivatori e di Mantenitori.
+Intorno alla Piazza: la **bottega di Nodo**, la **casetta tonda di Mèmolo**, qualche casa di Coltivatori e di Mantenitori.
 
-A sud-ovest del centro, la **Scuola di Stria** — casa stretta e alta col tetto molto spiovente. Accanto, la sua casa.
+A sud-ovest del centro, la **Scuola di Stria** e accanto la sua casa.
 
 Quattro vie escono verso i quartieri: **Via dell'Alba** (est), **Via del Pontile** (sud), **Via degli Orti** (ovest), **Via che Sale** (nord).
 
@@ -687,11 +639,9 @@ Distanze dal Villaggio centrale:
 
 Lungo la Via dell'Alba. Primo quartiere che il sole tocca, primo che si sveglia.
 
-Contiene: **Forno di Fiamma** (la casa-forno col camino che fuma prima dell'alba), il **cortile di legna catastata** sul retro, le **Case del Mattino** (3-4 case di abitanti che lavorano col fuoco — un fabbro, una conceria, un piccolo essiccatoio per la frutta in autunno).
+Contiene: **Forno di Fiamma**, **Case del Mattino** (3-4 case di abitanti che lavorano col fuoco — un fabbro, una conceria, un piccolo essiccatoio per la frutta in autunno).
 
-Vento Taglio entra da est all'alba, taglia la nebbia, rende le cose nitide. Luce più chiara dell'isola al mattino.
-
-Odore: pane caldo. Suono: TOK-TOK ovattato dell'impasto sull'asse di Fiamma + battito metallico del fabbro.
+Vento Taglio entra da est all'alba, taglia la nebbia, rende le cose nitide.
 
 Oltre verso est: terra interna degrada al Fiume, oltre il quale fascia costiera est selvaggia (vedi §8.9).
 
@@ -699,37 +649,29 @@ Oltre verso est: terra interna degrada al Fiume, oltre il quale fascia costiera 
 
 Lungo la Via del Pontile, scendendo verso il mare.
 
-Contiene: **Pontile di Bartolo** dentro La Bocca (assi scure, pali nell'acqua, capanna in cima), **capanna di Bartolo**, **Spiaggia delle Conchiglie** sulla costa-mare oltre La Bocca (raggiungibile dal piccolo ponte di legno), **casa di Amo** sulla scogliera est della Spiaggia (legno scavato nella roccia, scaletta di pietra fino all'acqua), **Case Basse dei Pescatori** sulla riva interna della Bocca dietro il Pontile.
+Contiene: **Pontile di Bartolo** dentro La Bocca, **capanna di Bartolo**, **Spiaggia delle Conchiglie** sulla costa-mare oltre La Bocca (raggiungibile dal piccolo ponte di legno), **casa di Amo** sulla scogliera est della Spiaggia, **Case Basse dei Pescatori** sulla riva interna della Bocca dietro il Pontile.
 
 Vento Mulinello la sera sposta le conchiglie sulla Spiaggia, fa cigolare i pali del Pontile.
-
-Odore: sale e alga. Suono: acqua contro i pali, gabbiani al mattino.
 
 ### §8.4 Il Quartiere di Terra — a ovest
 
 Lungo la Via degli Orti.
 
-Contiene: **Orti del Cerchio** in tre fasce concentriche (orti piccoli vicini, legumi/cereali in mezzo, alberi da frutto esterni), **Foresta Intrecciata** oltre gli Orti (entrata graduale, tracce non sentieri, radici connesse sotto terra), **tana di Rovo** ai margini della Foresta (sotto ceppo coperto di muschio, tre uscite), **casa-tana di Salvia** ai margini esterni degli Orti col giardino di erbe ordinato per file, **casa-tana di Zolla** poco distante con tre dispense.
+Contiene: **Orti del Cerchio** in tre fasce concentriche (orti piccoli vicini, legumi/cereali in mezzo, alberi da frutto esterni), **Foresta Intrecciata** oltre gli Orti, **tana di Rovo** ai margini della Foresta, **casa-tana di Salvia** ai margini esterni degli Orti, **casa-tana di Zolla** poco distante.
 
 Vento Intreccio di giorno passa tra le radici, porta voci da una parte all'altra della Foresta.
-
-Odore: terra smossa al mattino, foglie umide la sera. Suono: zappe (TUM-tum) e voci dei Coltivatori che cantano a metà.
 
 ### §8.5 Il Quartiere d'Aria — a nord
 
 Lungo la Via che Sale.
 
-Contiene: **Pascoli Alti** (prati estesi in pendenza dolce, capre/pecore di alcune famiglie, capanne stagionali di Pastori d'estate), **Roccia Alta** (sperone panoramico a 2 ore di cammino, da qui si vede tutta l'isola, Stria ci passa al mattino), **Montagne Gemelle** (due cime separate dal **Burrone** profondo, nel cuore della terra interna, raggiungibili solo dall'interno), **grotta di Grunto** nel Burrone su una cengia riparata.
+Contiene: **Pascoli Alti** (capre/pecore di alcune famiglie, capanne stagionali di Pastori d'estate), **Roccia Alta** (sperone panoramico a 2 ore di cammino, da qui si vede tutta l'isola, Stria ci passa al mattino), **Montagne Gemelle** (due cime separate dal **Burrone** profondo, nel cuore della terra interna, raggiungibili solo dall'interno), **grotta di Grunto** nel Burrone.
 
 Le pendici nord delle Montagne sono ripide e quasi impraticabili. Grunto le conosce ma non le usa.
-
-Odore: erba e animali nei Pascoli, pietra fredda e vento secco alle Montagne. Suono: il vento sempre + ogni tanto un *grunt* basso dal Burrone.
 
 ### §8.6 La fascia costiera
 
 Tra il Fiume e il mare, larga 500-800 metri secondo i punti — più ampia a sud, più stretta a nord.
-
-A est: poco abitata, terreno selvaggio, scogliere medie, qualche grotta non esplorata. A ovest: piccolo bosco costiero, spiagge piccole separate da promontori. A nord: ventosa e quasi disabitata, attraversata raramente.
 
 Abitanti permanenti: alcuni Pescatori del Pontile sulle Case Basse + Amo sulla scogliera. Resto: territorio di passaggio.
 

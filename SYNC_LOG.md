@@ -55,6 +55,36 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-04-28-008 — Pulizia Bible: rimozione strato visivo (migrato al catalogo)
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** governance + pipeline_narrativa (modifica eccezionale richiesta da Ray)
+- **Repo target:** archivio storico `isola_tre_venti_github` (Bible duplicata altrove va riallineata).
+- **Cambiamento di policy:**
+  - Aggiornato `skills/README.md` §2 con eccezione esplicita: `pipeline_narrativa/` è read-only **per l'agente IA**, modificabile da Ray con SYNC_LOG entry dedicata.
+  - Nuova §3 "Architettura informativa: Bibbia + Grafo + Catalogo (no ridondanze)": tabella delle 3 fonti + regola di non-duplicazione (un dato vive in una sola fonte; visivo → catalogo, narrativo → Bible, dinamico → grafo).
+  - `skills/visual/compilatore.md` aggiornato con nota di chiusura del bulk e dichiarazione che dopo questa pulizia il catalogo è autoritativo per il visivo.
+- **Cambiamento sostanziale (Bible v2):**
+  - File da **873 → 761 righe** (~13% riduzione complessiva, ~25-35% sulle sezioni toccate).
+  - **§4.4 FIAMMA** pulita come campione (rimossi blocchi Aspetto, Comportamento operativo, parte cliché di Note e vincoli, dettagli visivi della casa). Mantenuti: Specie/ruolo/residenza compatto, Voce tipica, Detti popolari, Funzione narrativa, Note e vincoli (narrativi). Aggiunto redirect compatto al catalogo.
+  - **§4.3-§4.21 (18 sezioni)** stesso pattern (sub-agente).
+  - **§2.2 Gabriel, §2.3 Elias, §2.4 Noah** rimossa la breve descrizione fisica ("Capelli...").
+  - **§6 PALETTE VISIVA** intera sezione collassata in redirect generale (palette migrate alle schede del catalogo).
+  - **§8 ATLANTE** descrizioni fisiche dei luoghi rimosse: introduzione (cintura), §8.1 Villaggio (Albero Vecchio, case, scuola), §8.2-§8.5 quartieri (rimossi odori/suoni/atmosfera/dettagli edifici), §8.6 fascia costiera (rimossi dettagli est/ovest/nord). Mantenuti: posizione, lista entità, vento di pertinenza, distanze, abitanti permanenti, regole funzionali.
+  - **§1.3 venti** invariato (non conteneva descrizioni visive).
+  - **§8.7-§8.9** invariate (regole temporali, mondo aperto).
+- **Pattern di pulizia (validato):** redirect compatto `> *Profilo visivo → visual/...*` invece di redirect granulari per sezione. Variante A massimalista.
+- **Razionale:** ottimizzazione token nella scrittura agentica. Quando l'IA pesca una scheda personaggio per scrivere una storia, non c'è ridondanza Bible/catalogo da risolvere. Routing senza ambiguità: visivo → catalogo, narrativo → Bible, dinamico → grafo.
+- **Conseguenza per workflow:**
+  - Da ora dettagli visivi nuovi (es. "il grembiule di Fiamma ha un cuore rosso cucito") vanno SOLO nel catalogo, mai in Bible.
+  - Lo script di travaso meccanico Bible→catalogo non si rilancia (non c'è più cosa travasare). `compilatore` resta come metodo storico.
+  - Se Ray modificherà la Bible in futuro (es. nuova frase di Voce tipica), la modifica resta in Bible e il catalogo non si tocca (sono già disgiunti).
+- **Commit:** _da inserire dopo commit_.
+- **File toccati:** `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md`, `skills/README.md`, `skills/visual/compilatore.md`.
+- **Da riflettere altrove:** se altre repo del sistema hanno copia della Bible, vanno aggiornate. Se altri agenti/sistemi pescano dalla Bible per dati visivi, devono essere reindirizzati al catalogo.
+
+---
+
 ## SYNC-2026-04-25-007 — Catalogo web V1 (sito interno statico)
 - **Stato:** DA_RIFLETTERE
 - **Tipo:** governance + tool web
