@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_story_processed": "s07",
-  "stories_processed": ["s01", "s02", "s03", "s04", "s05", "s06", "s07"],
+  "last_story_processed": "s08",
+  "stories_processed": ["s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08"],
   "quotas_consumed": {
     "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
     "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
@@ -383,7 +383,57 @@
       "debts_opened": [],
       "debts_closed": [],
       "misalignments_logged": [],
-      "notes": "Settima storia (apertura_blocco_c, ciclo cambiare, signature implicita 'La Zattera dei Tre Rametti'). PATTERN_A ATTIVO per la prima volta in saga (h4 STRAPP: cosa rotta che arriva lo stesso, immagine pulita non fraintendibile). Arc Pattern A complete: none(s01-s03) -> pre_eco(s02 effimero) -> seminato(s05+s06) -> ATTIVO(s07). 7 provvisori (2A + 2B + 3C). Highlights: PRIMA_SCENA_ATTIVA_PATTERN_A h4 STRAPP. INVERSIONE_PATTERN_FERMARSI (s1 fermarsi -> s7 continuare). PRIMO_BLOOM_FUNZIONALE_NODO_MARINARO (seed s05 in scenario reale). PRIMA_APPARIZIONE_BARTOLO_TOBA_AMO (3 archetipi blocco D installati con vincoli). TAGLIO_ASSENTE_PRIMA_VOLTA_SAGA. ADDRESS_AL_LETTORE 2/6 saga, primo blocco C, primo post-s4. season=estate (rimappato da estate_piena via REGOLA 0.10). 5 callbacks (2 s05, 2 s06, 1 s04). 14/14 entita' nel catalogo, 0 misalignments. Quartieri attraversati: 4 (acqua_nord, terra_ovest, perimetro_fiume_che_gira, acqua_sud). P1 PASS al primo colpo."
+      "notes": "Settima storia (apertura_blocco_c, ciclo cambiare, signature implicita 'La Zattera dei Tre Rametti'). PATTERN_A ATTIVO per la prima volta in saga (h4 STRAPP). 7 provvisori (2A + 2B + 3C). PRIMA_SCENA_ATTIVA_PATTERN_A. INVERSIONE_PATTERN_FERMARSI. PRIMO_BLOOM_FUNZIONALE_NODO_MARINARO. PRIMA_APPARIZIONE_BARTOLO_TOBA_AMO. TAGLIO_ASSENTE_PRIMA_VOLTA_SAGA. ADDRESS_AL_LETTORE 2/6 saga. season=estate. 0 misalignments. P1 PASS al primo colpo."
+    },
+    {
+      "story_id": "s08",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s08/s08_provisional.json",
+      "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s08/s08_canonical.json",
+      "quote_consumed": {
+        "by_category": {"A": 2, "B": 0, "C": 0},
+        "totale": 2,
+        "dettaglio": [
+          {"field": "visual_anchors.scene_hooks.scene_hook_crack_caduta_noce.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.scene_hook_gabriel_pozzo_duplice_centro.notes", "category": "A", "confidence": "high"}
+        ]
+      },
+      "no_inference_fields_left_null": {
+        "count": 5,
+        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
+      },
+      "seeds": {
+        "planted": ["seed_nido_vuoto_curato_da_noah", "seed_memolo_sul_pozzo_con_gabriel"],
+        "picked_up": ["seed_nodo_marinaro_capacita_elias", "seed_noah_raccoglie_oggetti"],
+        "maturing_here": ["seed_gabriel_micro_occhiata_noah_cresciuto", "seed_cornetto_briciole_pattern_a_rinforzo"],
+        "bloomed_here": ["seed_pattern_a_rami_caduti_diventano_materia", "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto", "seed_vecchie_indicare_in_silenzio"]
+      },
+      "callbacks_made": [
+        {"callback_id": "cb_s08_001", "from_story": "s05", "to_story": "s08", "type": "capacita_tecnica_applicata_in_crisi_reale"},
+        {"callback_id": "cb_s08_002", "from_story": "s06", "to_story": "s08", "type": "pattern_a_famiglia_immagini_trasversale"},
+        {"callback_id": "cb_s08_003", "from_story": "s06", "to_story": "s08", "type": "personaggio_modalita_vocale_ricorrente"},
+        {"callback_id": "cb_s08_004", "from_story": "s06", "to_story": "s08", "type": "gesto_ricorrente_gruppo_cornice_silenziosa"},
+        {"callback_id": "cb_s08_005", "from_story": "s06", "to_story": "s08", "type": "personaggio_cammeo_ricorrente_e_lore_hook_prima_menzione"},
+        {"callback_id": "cb_s08_006", "from_story": "s05", "to_story": "s08", "type": "onomatopea_firma_personaggio_ricorrente"}
+      ],
+      "debts_opened": [
+        "debt_s08_to_s10_nido_vuoto_bloom_notte",
+        "debt_s08_to_s09_seed_paura_gabriel_semina",
+        "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco",
+        "debt_s08_to_s11_vecchie_indicare_bloom_pieno",
+        "debt_s08_to_s10_pattern_a_variante_notturna",
+        "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura"
+      ],
+      "debts_closed": [
+        "debt_s07_to_s08_gabriel_micro_occhiata_noah_maturing_cresciuto",
+        "debt_s05_to_s08_nodo_marinaro_secondo_bloom",
+        "debt_s06_to_s08_vecchie_indicare_in_silenzio_primo_bloom_cammeo",
+        "debt_s05_to_s08_pattern_a_continuazione_parte"
+      ],
+      "misalignments_logged": ["mis_007"],
+      "notes": "Ottava storia (centro_blocco_c, signature 'L'Albero che Cadde di Sera'). 2 provvisori (entrambi A high — alta densita' qualitativa anche se basso numero). PATTERN_A_BLOOM_PIENO seconda scena attiva post-S7 (CRACK noce caduto, ramo leva su pozzo deflette traiettoria, nessuno ferito). WHEN_WATER_TREMBLES PRIMA MENZIONE saga via Liu' (1 di 2). PRIMA night_scene vera saga. CONTRIBUTI_FRATELLI_SEPARATI per la prima volta visibile (Gabriel-Memolo, Elias-Nodo, Noah-nido). Precursore PAURA_GABRIEL via varco foglie (seed-gesto secondo germoglio post-s7). FRASE_PRECISA_MEMOLO seconda saga ('L'albero ha aspettato che nessuno fosse sotto'). 6 debt_vero_dict opened + 4 closed (PRIMA STORIA SAGA con debts non-archived, schema canonical normalizzato). 6 callbacks tutti s05/s06. mis_007 (ricorrenza pattern mis_006) RESOLVED in P1. Caso speciale: 6 fix applicati (REGOLA 0.10 estate_piena_tarda, hooks dict-non-standard format visual+stratification, locations_secondary id rename, quartieri override per fuoco_est, debt schema normalize, 3 debt_id retrofit pattern). P1 PASS dopo override mapping."
     }
   ],
   "quotas_remaining_check": {

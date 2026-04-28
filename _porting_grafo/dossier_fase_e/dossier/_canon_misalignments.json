@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s06",
+  "last_updated_story": "s08",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -118,6 +118,22 @@
       "proposed_resolution": "RISOLTO post-review Ray (s06_p1_mapping override): (1) characters_id_renames vecchie_del_mercato -> mercato_del_mezzogiorno; sfumatura 'vecchie sedute sulla panca' preservata in narrative_weight + focal_action h5; (2) locations_secondary_id_renames mercato_del_mezzogiorno_panca_di_pietra -> panca_di_pietra; role esteso con 'tappa_quattro_giro_vecchie_indicano_silenzio_firma_gestuale_istituita_al_mercato_del_mezzogiorno'. Decisione Ray: 'fai quello che non rompe il grafo, uniforma'. Anche FLAG 3 risolto contestualmente: location_primary.id 'tutta_isola_quattro_quartieri_attraversati' -> 'centro_villaggio' (apertura/chiusura) con info giro 4 quartieri preservata in note.",
       "status": "resolved",
       "resolved_in_phase": "P1_review_Ray"
+    },
+    {
+      "id": "mis_007",
+      "discovered_in_story": "s08",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P1",
+      "between": "catalog_vs_graph",
+      "type": "name_discrepancy",
+      "catalog_reference": "catalogo_web/data/entities.json#panca_di_pietra (sottotipo: landmark, q: centro)",
+      "graph_reference": "story_graph.json#stories.s08.locations_secondary[6].id = 'mercato_del_mezzogiorno_panca_di_pietra'",
+      "bible_reference": null,
+      "description": "Ricorrenza del pattern di mis_006 (s06): id composito grafo (gruppo_persone + luogo) invece di id luogo separato. Apparizione cammeo silenzioso vecchie quando noce cade (una alza mano, altre annuiscono).",
+      "severity": "bassa",
+      "proposed_resolution": "RISOLTO in P1 s08 via locations_secondary_id_renames (pattern mis_006 fix riusato): 'mercato_del_mezzogiorno_panca_di_pietra' -> 'panca_di_pietra' + role esteso 'vecchie_del_mercato_cammeo_silenzioso_quando_noce_cade_una_alza_mano_altre_annuiscono_zero_parole'. Decisione post-saga: aggiornare grafo nelle storie successive che usano lo stesso id composito.",
+      "status": "resolved",
+      "resolved_in_phase": "P1"
     }
   ]
 }

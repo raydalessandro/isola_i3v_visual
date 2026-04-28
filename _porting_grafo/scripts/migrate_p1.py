@@ -231,8 +231,10 @@ def migrate(story_id: str):
         canonical["fear_touched"] = on["fear_touched"]
 
     # ----- visual_anchors -----
-    # REGOLA 3: caso s06 string_legacy. Se hook e' una stringa, mapping deve
-    # fornire 'hook_dict' completo (parsing manuale fatto in P0).
+    # REGOLA 3: caso s06 string_legacy (hook=stringa) e caso s08 dict-non-standard
+    # (hook=dict ma con campi non standard come 'visual', 'stratification' invece di
+    # 'time_of_day', 'characters_present', etc): in entrambi casi mapping fornisce
+    # 'hook_dict' completo (parsing/normalizzazione fatta in P0).
     hooks_new = []
     for i, h_old in enumerate(on.get("visual_anchors", {}).get("scene_hooks", [])):
         if isinstance(h_old, str):
@@ -241,15 +243,19 @@ def migrate(story_id: str):
             if hmap is None or "hook_dict" not in hmap:
                 raise ValueError(f"string_legacy hook {hid_default}: mapping deve fornire 'hook_dict' completo (REGOLA 3 MIGRATION_PROMPT)")
             h_new = dict(hmap["hook_dict"])
-            # preserva la stringa legacy come prima entry di elements per tracciabilita'.
-            # notes resta null -> P2 puo' popolarla narrativamente.
             legacy_marker = f"FONTE_LEGACY: {h_old}"
             h_new["elements"] = [legacy_marker] + list(h_new.get("elements", []))
             h_new.setdefault("notes", None)
             hooks_new.append(h_new)
             continue
         hid = h_old["hook_id"]
-        hmap = mapping["hooks"][hid]
+        hmap = mapping["hooks"].get(hid)
+        # caso dict con override completo (s08): lo script usa hook_dict tale quale.
+        if hmap and "hook_dict" in hmap:
+            h_new = dict(hmap["hook_dict"])
+            h_new.setdefault("notes", None)
+            hooks_new.append(h_new)
+            continue
         h_new = {
             "hook_id": hid,
             "moment": h_old.get("time_of_day") or hmap.get("moment", ""),
@@ -294,7 +300,10 @@ def migrate(story_id: str):
         q = h["quadrant"]
         if q and q not in quartieri:
             quartieri.append(q)
-    canonical["quartieri_attraversati"] = quartieri
+    if "quartieri_attraversati_override" in mapping:
+        canonical["quartieri_attraversati"] = mapping["quartieri_attraversati_override"]
+    else:
+        canonical["quartieri_attraversati"] = quartieri
 
     # oggetti_simbolo_presenti: filtra recurring_visual_objects contro catalogo (solo famiglia=oggetto)
     canonical_oggetti = load_canonical_oggetti(repo)

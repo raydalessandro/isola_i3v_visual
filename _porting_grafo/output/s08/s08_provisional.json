@@ -1,0 +1,49 @@
+{
+  "story_id": "s08",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s08_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato.",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere in fase D."
+  },
+  "provvisori": {
+    "hooks": {
+      "scene_hook_crack_caduta_noce": {
+        "notes": {
+          "value": "SIGNATURE — PATTERN_A_BLOOM_PIENO: cielo color piombo, Vento Mulinello forte (non il sereale di ogni sera). Liu' passa rapida aggrappandosi al cornicione: 'Il vento sale forte stasera. Forse l'acqua trema.' (PRIMA MENZIONE saga di when_water_trembles, ipotesi non certezza, 1 di 2 saga). Il noce alla biforcazione si spacca — CRACK isolato graficamente. Il ramo principale colpisce il bordo del pozzo (leva), la chioma scarta sulla via_scuola. TONFO sordo non isolato. Memolo al riparo dall'altro lato della piazza. Nessuno ferito: il pozzo ha salvato la traiettoria. Pattern A in bloom pieno (seconda scena attiva dopo STRAPP s7): cosa che si rompe e arriva lo stesso. Mai nominato.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal canonical hook + structural_notes 'PATTERN_A_BLOOM_PIENO_SECONDA_SCENA_ATTIVA' + voice_notes 'CRACK_E_TONFO_SORDO_CRACK_ONOMATOPEA_OGGETTO_ISOLATA_GRAFICAMENTE_SECONDA_SAGA' + 'WHEN_WATER_TREMBLES_PRIMA_MENZIONE_SAGA_1_DI_2'. Signature h1 della storia."
+        }
+      },
+      "scene_hook_gabriel_pozzo_duplice_centro": {
+        "notes": {
+          "value": "DUPLICE_CENTRO: Gabriel in ginocchio accanto al pozzo, mano sposta mucchietto di foglie rotte. Memolo confuso seduto sul bordo, sciarpa di sbieco. Mano di Gabriel sulla mano di Memolo: due brevissime frasi precise — 'Stai qui. Sei qui.' (ancorano Memolo al presente). Memolo per un istante smette di confondersi, infila la mano nella sciarpa cercando qualcosa che non c'e', dice piano: 'L'albero ha aspettato che nessuno fosse sotto' (FRASE_PRECISA_MEMOLO seconda saga, vincolo Bible §4.7, una a storia quando Memolo compare). Nello stesso istante Gabriel alza gli occhi DIETRO il pozzo, attraverso un varco tra le foglie dei rami caduti: vede il movimento della maglia di Noah, due mani che posano un nido. Vedere-attraverso-mediazioni installato. INVERSIONE_RUOLI (Gabriel accudisce + micro-occhiata). Precursore paura Gabriel 'fratelli_crescono_diversi' verso S9 (terna strato 3 dire/accettare/tenere).",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal threshold_moment + structural_notes 'CONTRIBUTI_FRATELLI_SEPARATI_PER_LA_PRIMA_VOLTA_IN_MODO_VISIBILE_GABRIEL_CON_MEMOLO_ELIAS_CON_NODO_NOAH_CON_NIDO' + 'TERNA_DIRE_ACCETTARE_TENERE_STRATO_3_GABRIEL_PRECURSORE_MICRO_OCCHIATA_VERSO_S9' + voice_notes 'FRASE_PRECISA_MEMOLO_SECONDA_SAGA' + 'GABRIEL_STAI_QUI_SEI_QUI_DUE_BREVISSIME_FRASI_PRECISE_CHE_ANCORANO_MEMOLO_AL_PRESENTE'. Threshold + signature h2 della storia."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {"A": 2, "B": 0, "C": 0},
+    "totale": 2,
+    "_note": "S08 ha solo 2 hook (caso unico: di solito 5-8) entrambi signature/threshold canonical, gia' popolati ricamente in P0 mapping (focal_action+atmosphere+elements). P2 aggiunge solo notes narrative riassuntive (entrambe categoria A high). key_phrase_indicative resta null (key_phrase_notes esplicita: 'Il narratore in chiusura non aggiunge frase dichiarativa: sigilla con immagine'). FRASE_PRECISA_MEMOLO ('L'albero ha aspettato che nessuno fosse sotto') e' nella scena, NON e' key_phrase_saga. season_passage null (estate piena tarda, non passaggio). Numero provvisori basso ma alta densita' qualitativa.",
+    "dettaglio": [
+      {"field": "visual_anchors.scene_hooks.scene_hook_crack_caduta_noce.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.scene_hook_gabriel_pozzo_duplice_centro.notes", "category": "A", "confidence": "high"}
+    ]
+  },
+  "notes_globali": "Ottava storia (centro_blocco_c, signature 'L'Albero che Cadde di Sera'). 2 provvisori (entrambi A high). Highlights: PATTERN_A_BLOOM_PIENO (seconda scena attiva post-S7), WHEN_WATER_TREMBLES prima menzione saga (Liu' come messaggera, ipotesi), night_scene + crack notturno mantenitori sotto lanterne, FRASE_PRECISA_MEMOLO seconda saga, CONTRIBUTI_FRATELLI_SEPARATI per la prima volta visibile (Gabriel-Memolo, Elias-Nodo, Noah-nido), precursore PAURA_GABRIEL via varco foglie, INVERSIONE_RUOLI Gabriel accudisce. 6 debt_vero_dict opened + 4 closed (prima storia con debts non-archived, schema canonical normalizzato). 6 callbacks tutti a s05/s06.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {"schema_constraint": "enum ['A','B','C','D','E','F',null]", "p2_status": "NULL", "hint_neutro": "Apertura cornice forno con vento che monta + Liu' messaggera. Possibili candidati: C, D."},
+    "closure_type": {"schema_constraint": "enum integer [1-7,null]", "p2_status": "NULL", "hint_neutro": "Chiusura mattina dopo (sigillo immagine isola riprende, no frase dichiarativa)."},
+    "register": {"schema_constraint": "enum ['basso','medio','alto',null]", "p2_status": "NULL", "hint_neutro": "Atmosfera drammatica con bloom Pattern A + night_scene + when_water_trembles. Plausibile alto."},
+    "estimated_length": {"schema_constraint": "integer (800-1200)", "p2_status": "NULL", "hint_neutro": "2 hook ricamente strutturati + apertura/chiusura cornice. Probabilmente fascia lunga 1100-1200."},
+    "descriptive_pauses_count": {"schema_constraint": "integer (0-2)", "p2_status": "NULL", "hint_neutro": "Pattern A bloom + night + crepuscolo. Probabile 1-2."}
+  }
+}

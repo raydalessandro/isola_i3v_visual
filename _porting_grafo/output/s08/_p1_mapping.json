@@ -1,0 +1,97 @@
+{
+  "_description": "Mapping P0 -> P1 per s08 (centro_blocco_c, ciclo cambiare, signature L'Albero che Cadde di Sera). Caso speciale: night_scene+wwt+pattern_a bloomed pieno + 6 debt_vero_dict + 4 debts_closed (3 con retrofit pattern), hooks dict-non-standard (visual+stratification format).",
+  "story_id": "s08",
+  "hooks": {
+    "scene_hook_crack_caduta_noce": {
+      "hook_dict": {
+        "hook_id": "s08_h1_signature_crack",
+        "moment": "tarda_sera_mulinello_forte",
+        "location": {"id": "piazza_villaggio", "qualifier": "noce_che_cade", "legacy_string": "piazza_villaggio_noce_caduta_pozzo"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["gabriel", "elias", "noah", "memolo"],
+        "elements": [
+          "Cielo color piombo, Vento Mulinello forte alza polvere",
+          "Noce piegato dal vento alla biforcazione della chioma",
+          "CRACK isolato graficamente — il ramo principale si stacca",
+          "Ramo cade sul pozzo, bordo pietra alzata fa da leva, la chioma scarta sulla via_scuola",
+          "TONFO sordo (non isolato graficamente)",
+          "Memolo al riparo dall'altro lato della piazza, fratelli vedono spaccarsi la biforcazione",
+          "Pattern A in bloom pieno: cosa che si rompe e arriva lo stesso (l'albero ha aspettato che nessuno fosse sotto)"
+        ],
+        "palette": "cielo_piombo_verde_grigio_noce_piegato_bianco_pietra_pozzo_nero_lucido_legno_spaccato_fresco",
+        "notes": null,
+        "focal_action": "Il noce si piega al Mulinello forte, CRACK alla biforcazione, ramo principale colpisce il bordo del pozzo (leva) e devia la chioma sulla via_scuola, TONFO. Nessuno ferito.",
+        "focal_object": "noce_caduto_ramo_leva_sul_pozzo",
+        "atmosphere": "crack_che_spacca_il_silenzio_serale_pozzo_che_salva_traiettoria_via_libera_dietro_pattern_a_bloom_pieno",
+        "wind_visible": "vento_mulinello_che_piega_chiome_forte_sera_color_piombo",
+        "onomatopee": ["CRACK", "TONFO"],
+        "stratification": {
+          "strato_1": "bambino_4_anni_vede_albero_che_cade_paura_sorpresa",
+          "strato_2": "lettore_giovane_registra_che_nessuno_si_fa_male_albero_vecchio_li_vicino_non_cade",
+          "strato_3": "rilettore_coglie_scarto_tra_fisica_ramo_leva_e_lettura_soggettiva_memolo_pattern_a_nasce_qui"
+        }
+      }
+    },
+    "scene_hook_gabriel_pozzo_duplice_centro": {
+      "hook_dict": {
+        "hook_id": "s08_h2_pozzo_duplice_centro",
+        "moment": "subito_dopo_caduta_crepuscolo_che_si_avvicina",
+        "location": {"id": "pozzo_piazza", "qualifier": "duplice_centro_gabriel_memolo_noah_dietro", "legacy_string": "gabriel_accanto_pozzo_memolo_seduto_bordo_noah_dietro_varco_foglie"},
+        "quadrant": "centro_villaggio",
+        "characters_present": ["gabriel", "elias", "noah", "memolo"],
+        "elements": [
+          "Gabriel in ginocchio accanto al pozzo, mano sposta mucchietto di foglie rotte dall'impatto",
+          "Memolo confuso seduto al bordo del pozzo, sciarpa di sbieco",
+          "Mano di Gabriel sulla mano di Memolo — frase precisa di Memolo sussurrata: 'L'albero ha aspettato che nessuno fosse sotto'",
+          "Gabriel alza gli occhi DIETRO il pozzo, attraverso un varco tra le foglie dei rami caduti",
+          "Movimento della maglia di Noah — due mani che posano un nido (precursore paura Gabriel s09)",
+          "Inversione ruoli: Gabriel accudisce Memolo e nello stesso istante inizia a vedere Noah attraverso mediazioni"
+        ],
+        "palette": "bianco_pietra_pozzo_ocra_sciarpa_memolo_verdi_scuri_sfondo_cataste_rami_luce_crepuscolo_che_si_avvicina_squillo_colore_maglia_noah_unica_figura_in_movimento_tra_fogliame_dietro",
+        "notes": null,
+        "focal_action": "Gabriel siede vicino a Memolo confuso (mano sulla mano, frase precisa sussurrata 'l'albero ha aspettato che nessuno fosse sotto') e nello stesso istante alza gli occhi dietro il pozzo: micro-occhiata su Noah che cura il nido attraverso il varco delle foglie. Vedere-attraverso-mediazioni installato (precursore paura Gabriel s09).",
+        "focal_object": "frase_precisa_memolo_sul_bordo_pozzo_e_varco_di_foglie_su_noah",
+        "atmosphere": "doppio_centro_silenzioso_accudimento_visibile_e_micro_occhiata_invisibile_inversione_ruoli_precursore_paura_gabriel",
+        "wind_visible": "vento_che_si_e_calmato_dopo_la_caduta_aria_che_torna_ferma",
+        "onomatopee": [],
+        "frase_precisa_visibile": "l'albero ha aspettato che nessuno fosse sotto",
+        "voice_constraint": "micro_occhiata_zero_nominazione_solo_immagine_gabriel_non_pensa_niente_nel_testo",
+        "stratification": {
+          "strato_1": "bambino_vede_fratello_grande_che_aiuta_signore_confuso_poi_guarda_altrove",
+          "strato_2": "lettore_registra_frase_precisa_memolo_albero_che_ha_aspettato",
+          "strato_3": "rilettore_vede_inversione_ruoli_gabriel_accudisce_memolo_e_nello_stesso_istante_inizia_a_vedere_noah_attraverso_mediazioni_varco_foglie_mani_tracce_precursore_paura_s9_i_fratelli_che_crescono_diversi"
+        }
+      }
+    }
+  },
+  "debts_opened_keep": [
+    {"debt_id": "debt_s08_to_s10_nido_vuoto_bloom_notte", "origin_story": "s08", "target_story": "s10", "rilievo": "alto", "note": "Il nido vuoto curato da Noah in S8 deve riapparire o funzionare come principio in S10 (notte senza luna). 'Il buio era pieno' — Noah porta con se' il principio 'i posti che sembrano vuoti non lo sono'."},
+    {"debt_id": "debt_s08_to_s09_seed_paura_gabriel_semina", "origin_story": "s08", "target_story": "s09", "rilievo": "alto", "note": "ALTISSIMO retrofittato a 'alto' (enum schema). Dopo seconda micro-occhiata S8, prossimo passo e' semina paura autonoma in S9 come seed type=paura brother=gabriel resolution_mode=tenere (seed_paura_gabriel_fratelli_crescono_diversi, forward-reference). S8 rinforza debt verso S9. Architrave strato 3 terna dire/accettare/tenere."},
+    {"debt_id": "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco", "origin_story": "s08", "target_story": "s09", "rilievo": "medio", "note": "Seed relazionale Gabriel-Memolo piantato S8 ha bloom target S9 (compleanno Gabriel — Memolo potrebbe riapparire con gesto tenero corrispondente) e S12 (cornice chiusura saga). target multi-storia: s09 primario, s12 secondario."},
+    {"debt_id": "debt_s08_to_s11_vecchie_indicare_bloom_pieno", "origin_story": "s08", "target_story": "s11", "rilievo": "alto", "note": "MEDIO_ALTO retrofittato a 'alto'. Dopo primo bloom cammeo S8, secondo bloom pieno pianificato S11 come riconoscimento muto a Elias alla festa."},
+    {"debt_id": "debt_s08_to_s10_pattern_a_variante_notturna", "origin_story": "s08", "target_story": "s10", "rilievo": "alto", "note": "Dopo bloom pieno Pattern A in S8, variante notturna (ARCHI 'S10 il buio era pieno') come manifestazione ulteriore del seme gia' bloomed."},
+    {"debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura", "origin_story": "s08", "target_story": "s11", "rilievo": "alto", "note": "Pattern A in variante collettiva (S11 festa che non si vince) e chiusura saga (S12 anno chiude fratelli diversi ancora insieme). Cerchio annuale legna noce simbolico non letterale. target multi-storia: s11 primario, s12 secondario."}
+  ],
+  "debts_closed_keep": [
+    {"debt_id": "debt_s07_to_s08_gabriel_micro_occhiata_noah_maturing_cresciuto", "origin_story": "s07", "target_story": "s08", "rilievo": "alto", "close_mode": "seconda_micro_occhiata_via_varco_tra_foglie_dietro_pozzo_status_seed_active_to_maturing_maturing_in_stories_entry_popolata"},
+    {"debt_id": "debt_s05_to_s08_nodo_marinaro_secondo_bloom", "origin_story": "s05", "target_story": "s08", "rilievo": "alto", "close_mode": "terza_applicazione_funzionale_reale_crisi_bloom_notes_esteso_seed_resta_bloomed", "note": "Retrofittato: id originale 'debt_s08_secondo_bloom_nodo_marinaro' non matchava pattern schema (mancava _to_sNN). Origine s05 (semina nodo marinaro)."},
+    {"debt_id": "debt_s06_to_s08_vecchie_indicare_in_silenzio_primo_bloom_cammeo", "origin_story": "s06", "target_story": "s08", "rilievo": "medio", "close_mode": "status_seminato_to_bloomed_pattern_nodo_marinaro_bloom_target_stories_resta_s08_s11", "note": "Retrofittato: id originale 'debt_s08_seed_vecchie_indicare_in_silenzio_primo_bloom_cammeo' non matchava pattern. Origine s06 (semina firma gestuale vecchie)."},
+    {"debt_id": "debt_s05_to_s08_pattern_a_continuazione_parte", "origin_story": "s05", "target_story": "s08", "rilievo": "alto", "close_mode": "chiusura_parziale_bloom_pieno_s08_parti_s10_s11_s12_restano_aperte_come_originariamente_formulato_multi_target", "note": "Retrofittato: id originale 'debt_s08_pattern_a_continuazione_parte_s08' non matchava pattern. Origine s05 (prima semina formale Pattern A rami caduti)."}
+  ],
+  "_debts_note": "10 debt_vero_dict (6 opened + 4 closed). Schema debt_entry strict con pattern e enum rilievo. Trasformazioni applicate: target -> target_story, description -> note, close_mechanism -> close_mode. Rilievo normalizzato: altissimo->alto, medio_alto->alto. 3 debts_closed con id non matching pattern retrofittati con origin_story inferita.",
+  "personaggi_vincoli_attivi": [
+    {"personaggio": "memolo", "vincoli": ["mai_sapiente_confuso_didattico", "mai_due_frasi_precise_stessa_storia", "mai_risolve_trama_chiudendo"]},
+    {"personaggio": "nodo", "vincoli": ["mai_spiega_perche_nodo_funziona", "mai_fa_nodo_al_posto_di_chi_impara", "mai_parla_di_sentimenti", "tok_tok_tok_quota_4_5_storie_saga"]},
+    {"personaggio": "fiamma", "vincoli": ["unica_detentrice_detti_popolari", "detti_solo_in_modalita_chiacchiera", "max_2_detti_per_storia", "non_madre_default", "mai_morale_in_corsivo", "mai_sotto_albero_vecchio_solenne"]},
+    {"personaggio": "stria", "vincoli": ["mai_lezione_morale_esplicita", "mai_due_risposte_stessa_scena", "mai_sopra_o_sotto_albero_vecchio", "mai_commuovere_visibilmente"]}
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: memolo + nodo + fiamma + stria. mantenitori e liu non hanno vincoli specifici. gabriel/elias/noah niente.",
+  "locations_secondary_id_renames": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "panca_di_pietra"
+  },
+  "locations_secondary_role_extras": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "vecchie_del_mercato_cammeo_silenzioso_quando_noce_cade_una_alza_mano_altre_annuiscono_zero_parole"
+  },
+  "quartieri_attraversati_override": ["centro_villaggio", "fuoco_est"],
+  "_overrides_note": "FIX_RAY_REVIEW post-P1 (lezioni apprese da s06): locations_secondary id rename mercato_del_mezzogiorno_panca_di_pietra -> panca_di_pietra (mis_007 NEW). quartieri_attraversati_override perche' i 2 hooks coprono solo centro_villaggio ma il forno (cornice apertura/chiusura) e' in fuoco_est: lo script deriva quartieri solo da hooks, qui aggiungo fuoco_est manualmente."
+}
