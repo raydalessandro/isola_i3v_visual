@@ -31,49 +31,73 @@ Solo: `visual/<famiglia>/.../<id>/scheda.md`, modificando esclusivamente il **bo
 
 ## 3. Mappa Bible (§4 personaggi) → template catalogo
 
-| Sezione catalogo | Fonte Bible (§4 personaggio) | Trattamento |
+| Sezione catalogo | Fonte Bible | Trattamento |
 |---|---|---|
 | Identità visuale (sintesi) | — | `_da popolare dal grafo_` |
-| Aspetto / forma | "Aspetto." | Travaso 1:1 |
-| Abbigliamento / stato d'uso | "Aspetto." (parte abbigliamento, se presente) | Travaso se presente, altrimenti `_da popolare dal grafo_` |
-| Espressione / comportamento | "Comportamento operativo." | Travaso 1:1 |
-| Palette e atmosfera | — | `_da popolare dal grafo_` |
-| Contesto e ambientazioni ricorrenti | "Specie, ruolo." (se nomina luoghi) + "Comportamento operativo." (se nomina luoghi) | Travaso parziale se presente, altrimenti `_da popolare dal grafo_` |
-| Coerenza cross-scena (cose che NON cambiano) | "Aspetto." (dettagli fisici fissi) | Travaso/derivazione 1:1 |
+| Aspetto / forma | §4.X "Aspetto." | Travaso 1:1 |
+| Abbigliamento / stato d'uso | §4.X "Aspetto." (parte abbigliamento, se presente — tipo "Firma visiva") | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Espressione / comportamento | §4.X "Comportamento operativo." | Travaso 1:1 |
+| Palette e atmosfera | **§6 PALETTE VISIVA** (riga dedicata al personaggio) | Travaso 1:1 |
+| Contesto e ambientazioni ricorrenti | §4.X "Specie, ruolo." (se nomina luoghi/abitudini) + §4.X "Comportamento operativo." (se nomina luoghi) | Travaso parziale se presente, altrimenti `_da popolare dal grafo_` |
+| Coerenza cross-scena (cose che NON cambiano) | §4.X "Aspetto." (dettagli fisici fissi) | Travaso/derivazione 1:1 |
 | Variabilità ammessa | — | `_da popolare dal grafo_` |
-| Cliché da evitare | "Note e vincoli." (parte "Mai...") | Travaso 1:1 |
+| Cliché da evitare | §4.X "Note e vincoli." (parte "Mai...") | Travaso 1:1 |
 | Per stampa 3D | — | `_da popolare dal grafo_` |
 | Per narrativa e social | — | `_da popolare dal grafo_` |
 | Storie / scene di apparizione | `pipeline_narrativa/story_graph.json#stories.s0X.characters_in_scene` | Lista automatizzata dal grafo |
 | Disallineamenti / domande aperte | — | Vuoto, salvo conflitti rilevati |
 | Riferimenti puntuali | meta | Citazioni precise (path + ancora) di tutti i dati canonici riportati |
 
+**Per i 3 bambini (gabriel, elias, noah):** la fonte Bible è **§2.2 / §2.3 / §2.4** (sezione "PROTAGONISTI"), non §4. Stessa mappa di sezioni.
+
+**Per i 3 venti (taglio, intreccio, mulinello):** la fonte Bible è **§1.2 Spiriti Fondatori** (origine mitica) + **§1.3 Trasformazione in Venti** (passaggio canonico) + **§6 PALETTE VISIVA** (riga dedicata).
+
 **NON portati nel catalogo (restano in Bible):**
-- "Funzione narrativa." → strutturale, vive nel grafo + Bible.
-- "Voce tipica." → narrativa.
-- "Note e vincoli." parte non-cliché (es. "in 2-3 storie su 12 fa il punzecchio") → vincoli narrativi.
-- "Funzione narrativa" estesa (es. "frizione necessaria") → impianto saga.
+- §4.X "Funzione narrativa." → strutturale, vive nel grafo + Bible.
+- §4.X "Voce tipica." / "Detti popolari." → narrativa.
+- §4.X "Note e vincoli." parte non-cliché (es. "in 2-3 storie su 12 fa il punzecchio") → vincoli narrativi.
 
-## 3-bis. Mappa Bible (§2 geografia) → template catalogo luoghi
+## 3-bis. Mappa Bible (§8 ATLANTE) → template catalogo luoghi
 
-| Sezione catalogo | Fonte Bible (§2) | Trattamento |
+| Sezione catalogo | Fonte Bible | Trattamento |
 |---|---|---|
 | Identità visuale (sintesi) | — | `_da popolare dal grafo_` |
-| Aspetto / forma | descrizione fisica del luogo | Travaso 1:1 |
+| Aspetto / forma | §8.X (descrizione fisica del luogo / quartiere) | Travaso 1:1 |
 | Abbigliamento / stato d'uso | non applicabile (luogo) | `_da popolare dal grafo_` |
-| Espressione / comportamento | dinamica (es. "vento che soffia da nord", "marea") | Travaso se presente, altrimenti `_da popolare dal grafo_` |
-| Palette e atmosfera | — | `_da popolare dal grafo_` |
-| Contesto | uso, abitanti, attività | Travaso 1:1 se presente |
-| Coerenza cross-scena | dettagli fisici fissi | Travaso 1:1 |
-| Variabilità ammessa | variazioni stagionali/temporali | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Espressione / comportamento | dinamica: vento, marea, tempo, attività umana | Travaso se presente, altrimenti `_da popolare dal grafo_` |
+| Palette e atmosfera | **§6 PALETTE VISIVA** "Quartieri" (riga del quartiere) | Travaso 1:1 |
+| Contesto e ambientazioni ricorrenti | §8.X (uso, abitanti, attività) | Travaso 1:1 se presente |
+| Coerenza cross-scena | §8.X (dettagli fisici fissi) | Travaso 1:1 |
+| Variabilità ammessa | §8.7 (variazioni stagionali/temporali) | Travaso se presente, altrimenti `_da popolare dal grafo_` |
 | Cliché da evitare | — (raro per luoghi) | `_da popolare dal grafo_` salvo trovato |
 | Per stampa 3D | — | `_da popolare dal grafo_` |
 | Per narrativa e social | — | `_da popolare dal grafo_` |
-| Storie | dal grafo | Lista automatizzata |
+| Storie | dal grafo `stories.s0X.locations_secondary` o nel testo | Lista automatizzata |
 | Disallineamenti | — | Vuoto, salvo conflitti |
 | Riferimenti puntuali | meta | Citazioni |
 
+**Mappa quartiere → §8:**
+- Villaggio centrale → §8.1
+- Quartiere di Fuoco (est) → §8.2
+- Quartiere d'Acqua (sud) → §8.3
+- Quartiere di Terra (ovest) → §8.4
+- Quartiere d'Aria (nord) → §8.5
+- Fascia costiera → §8.6
+- Variazioni stagionali → §8.7
+- "Oltre" → §8.8
+
 I luoghi hanno anche metadati cartografici nel frontmatter (centroide, bbox, dimensioni) gestiti dallo script.
+
+## 3-ter. Oggetti
+
+Gli oggetti del grafo (`entities.objects`) corrispondono spesso a **firme visive** dei personaggi, descritte nel §4 della Bible. Esempio: `grembiule_fiamma` → §4.4 "Firma visiva: grembiule legato in vita, sempre infarinato, di tela ruvida color terracotta".
+
+Mappa:
+- Aspetto / forma → §4.X "Aspetto." (parte firma visiva).
+- Stato d'uso → idem se presente (es. "sempre infarinato").
+- Palette → §6 (palette del proprietario).
+- Contesto → §4.X (contesto del proprietario).
+- Per oggetti narrativi specifici (`braccialetto_s9`, `lanterna_velata_s10`, `nido_vuoto_s08`) la Bible probabilmente non ha sezione dedicata — usare il grafo (`stories.s0X.visual_anchors.scene_hooks`) come fonte secondaria.
 
 ---
 

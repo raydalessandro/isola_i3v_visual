@@ -14,64 +14,67 @@ relazioni:
 
 # Corda Nodo
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Una corda arrotolata sul braccio di Nodo (picchio), sempre. Firma visiva del personaggio.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+Cambia spessore (a volte spago sottile, a volte cima grossa) ma c'è sempre. Strumento di lavoro vivo: Nodo conosce e mostra i nodi (Otto, Scorsoio, Marinaro, Lega-asciuga) e li fa fare a chi vuole imparare.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Corda chiara, dentro la palette di Nodo (nero/bianco/rosso cresta più corda chiara) e del villaggio centrale (terracotta, legno caldo, verde Albero Vecchio).
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Compare con Nodo nel villaggio centrale, alla casetta di legno con la facciata segnata di buchi piccolissimi e nella bottega aperta accanto a casa, attrezzi appesi in fila. La corda è sul braccio di Nodo mentre lavora a memoria, accompagnato dal TOK-TOK-TOK del becco contro il legno.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Arrotolata sul braccio. Sempre presente. Spessore variabile (spago sottile / cima grossa).
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+_da popolare dal grafo_
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+L'oggetto è firma visiva di Nodo; appare con lui nelle scene in cui compare:
+- s05: maggiore, prima apparizione piena.
+- s08: mantenitore part-time tra altri.
+- s11: padre-pratico, lavoro festa.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.10 NODO: "Firma visiva: una corda arrotolata sul braccio, sempre. Cambia spessore (a volte spago sottile, a volte cima grossa) ma c'è sempre."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA — Abitanti minori: "Nodo: nero/bianco/rosso cresta + corda chiara".
+- `pipeline_narrativa/story_graph.json#entities.objects.corda_nodo`: `category: firma_visiva_personaggio`, `owner: nodo`, `description: arrotolata sul braccio, sempre, spessore variabile`.

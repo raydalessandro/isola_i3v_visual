@@ -26,64 +26,73 @@ cartografia:
 
 # Orti del Cerchio
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Orti del Cerchio in tre fasce concentriche: orti piccoli vicini al centro, legumi e cereali nella fascia di mezzo, alberi da frutto sulla fascia esterna. Stanno lungo la Via degli Orti, nel Quartiere di Terra a ovest, prima dell'ingresso graduale alla Foresta Intrecciata.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Vento Intreccio di giorno passa tra le radici, porta voci da una parte all'altra della Foresta. Odore: terra smossa al mattino, foglie umide la sera. Suono: zappe (TUM-tum) e voci dei Coltivatori che cantano a metà.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Lavoro dei Coltivatori. Confine graduale con la Foresta Intrecciata. Casa-tana di Salvia ai margini esterni degli Orti col giardino di erbe ordinato per file; casa-tana di Zolla poco distante con tre dispense.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Tre fasce concentriche fisse: orti piccoli al centro, legumi/cereali in mezzo, alberi da frutto all'esterno. Posizione lungo la Via degli Orti, ovest della terra interna.
 
 ## Variabilita' ammessa
 
-[stub]
+Sfasamento stagionale dei cicli narrativi sulle 12 storie: inverno (s1-s2), passaggio inverno→primavera (s3), primavera (s4-s5), passaggio primavera→estate (s6), estate (s7-s8), passaggio estate→autunno (s9), autunno (s10-s11), passaggio autunno→inverno (s12).
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s03: secondario — sfondo Coltivatori, cantilena sommessa.
+- s04: secondario — sfondo lavoro Coltivatori, cantilena piena di semina.
+- s05: secondario — confine con Foresta, motivo della presenza di Nodo (mai in inquadratura diretta).
+- s07: secondario — sponda interna del Fiume, secondo tratto di cammino dove i fratelli avevano raccolto i tre rametti la sera prima (off-screen).
+- s11: secondario.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.4: "Orti del Cerchio in tre fasce concentriche (orti piccoli vicini, legumi/cereali in mezzo, alberi da frutto esterni)... Vento Intreccio di giorno passa tra le radici, porta voci da una parte all'altra della Foresta. Odore: terra smossa al mattino, foglie umide la sera. Suono: zappe (TUM-tum) e voci dei Coltivatori che cantano a metà."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 Quartieri: "Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.7: tabella ciclo annuale 12 storie / stagioni.
+- `pipeline_narrativa/story_graph.json#stories.s03..s11.locations_secondary[orti_del_cerchio]`: ruoli scena (sfondo coltivatori, confine foresta, sponda fiume).

@@ -20,64 +20,89 @@ relazioni:
 
 # Coltivatori Del Cerchio
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Gruppo eterogeneo di abitanti (varie specie) che lavora gli Orti del Cerchio — campi e orti disposti in fasce concentriche intorno al villaggio, Quartiere di Terra a ovest. Vivono in casette sparse tra gli Orti e ai margini della Foresta. Zolla è uno di loro per affinità di mestiere, ma i Coltivatori sono molti e nessuno è nominato individualmente.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+**Oggetto-simbolo:** la **zappa con manico curvo**. La portano sulla spalla quando attraversano il villaggio per andare e tornare dagli Orti. Il manico curvo richiama il Cerchio.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Coltivano. Zappano, seminano, innaffiano, raccolgono. Lavorano per stagioni — primavera-semina, estate-cura, autunno-raccolto, inverno-riposo. Cantano spesso mentre lavorano — non canzoni precise, mezze frasi ritmiche che danno il tempo del gesto.
 
 ## Palette e atmosfera
 
-[stub]
+**Suono e atmosfera:** voci basse che cantano a metà, zappe che battono terra (TUM-tum), foglie smosse, ceste piene che strisciano sull'erba.
+
+Palette cromatica: _da popolare dal grafo_
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Orti del Cerchio (fasce concentriche intorno al villaggio, Quartiere di Terra a ovest). Casette sparse tra gli Orti e ai margini della Foresta. Attraversano il villaggio andata e ritorno dagli Orti, con la zappa in spalla.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Gruppo eterogeneo di varie specie, mai individuato per nome. Zappa col manico curvo sempre in spalla durante gli spostamenti. Mezze frasi ritmiche cantate mentre lavorano. Lavoro scandito dalle stagioni.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Stagionalità del lavoro: primavera-semina, estate-cura, autunno-raccolto, inverno-riposo.
 
-## Cliche' da evitare
+Altre variabilità: _da popolare dal grafo_
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+## Cliché da evitare
 
-[stub]
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+
+Da Bible §4.18 "Note e vincoli":
+- Mai un Coltivatore individuato come personaggio nominato.
+- Mai Coltivatori che spiegano il proprio lavoro ai fratelli (didattico).
+- Mai Coltivatori in scene di villaggio (stanno negli Orti, salvo Mercato).
+- Le cantilene di lavoro vanno tracciate in `QUOTE_TRACKER.md`: massimo 4-5 in tutta la saga.
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: sfondo festa, alba raccolto, rituale orti.
+- s12: sfondo campi autunnali, brevissimi.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.18 I COLTIVATORI DEL CERCHIO:
+  - "Gruppo eterogeneo di abitanti (varie specie) che lavora gli Orti del Cerchio — campi e orti disposti in fasce concentriche intorno al villaggio, Quartiere di Terra a ovest. Vivono in casette sparse tra gli Orti e ai margini della Foresta. Zolla è uno di loro per affinità di mestiere, ma i Coltivatori sono molti e nessuno è nominato individualmente."
+  - "Coltivano. Zappano, seminano, innaffiano, raccolgono. Lavorano per stagioni — primavera-semina, estate-cura, autunno-raccolto, inverno-riposo. Cantano spesso mentre lavorano — non canzoni precise, mezze frasi ritmiche che danno il tempo del gesto."
+  - "Oggetto-simbolo: la zappa con manico curvo. La portano sulla spalla quando attraversano il villaggio per andare e tornare dagli Orti. Il manico curvo richiama il Cerchio."
+  - Note e vincoli: "Mai un Coltivatore individuato come personaggio nominato. Mai Coltivatori che spiegano il proprio lavoro ai fratelli (didattico). Mai Coltivatori in scene di villaggio (stanno negli Orti, salvo Mercato). Le cantilene di lavoro vanno tracciate in QUOTE_TRACKER.md: massimo 4-5 in tutta la saga."
+  - "Suono e atmosfera. Voci basse che cantano a metà, zappe che battono terra (TUM-tum), foglie smosse, ceste piene che strisciano sull'erba."
+- `pipeline_narrativa/story_graph.json#entities.characters.coltivatori_del_cerchio`: `type: gruppo_istituzione`, `home_location: orti_del_cerchio`, `quadrant: terra_ovest`, `signature_object: zappa_col_manico_curvo`, `signature_sound: TUM-tum`, `role_saga: coralita_del_lavoro_agricolo`.
+- `pipeline_narrativa/story_graph.json#stories.s11.characters_in_scene[coltivatori_del_cerchio].scene_role`: "sfondo_festa_alba_raccolto_rituale_orti".
+- `pipeline_narrativa/story_graph.json#stories.s12.characters_in_scene[coltivatori_del_cerchio].scene_role`: "sfondo_campi_autunnali_brevissimi".

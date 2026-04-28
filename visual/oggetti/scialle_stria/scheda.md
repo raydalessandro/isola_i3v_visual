@@ -14,64 +14,69 @@ relazioni:
 
 # Scialle Stria
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Scialle leggero color cenere chiaro sulle spalle, che pende lungo le ali di Stria (airone cenerino). Firma visiva del personaggio.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+Stria toglie lo scialle quando vola, lo rimette quando atterra: gesto associato e ricorrente.
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Grigio cenere elegante, dentro la palette di Stria (piume grigio-cenere con punte delle ali più scure, scialle).
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Compare con Stria nella scuola del villaggio (a sud-ovest del villaggio centrale, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio) e nella casa stretta e alta vicino alla scuola, l'unica del villaggio col tetto molto spiovente. Lo scialle è sulle spalle quando Stria atterra ed entra; viene tolto in volo.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Scialle leggero. Color cenere chiaro. Tenuto sulle spalle, pendente lungo le ali. Tolto in volo, rimesso all'atterraggio.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+_da popolare dal grafo_
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+L'oggetto è firma visiva di Stria; appare con lei nelle scene in cui compare:
+- s02: cammeo di apertura.
+- s06: cammeo scuola, maestra-zia che vede e non interviene.
+- s08: cammeo, mattina dopo, routine che riprende.
+- s09: cornice scuola, mattino, maestra-zia.
+- s11: maestra-zia, cornice scuola, bloom architrave (vede prima).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.6 STRIA: "Firma visiva: scialle leggero color cenere chiaro sulle spalle, che le pende lungo le ali. Lo toglie quando vola, lo rimette quando atterra."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA — Abitanti maggiori: "Stria: grigio cenere elegante (piume, scialle)".
+- `pipeline_narrativa/story_graph.json#entities.objects.scialle_stria`: `category: firma_visiva_personaggio`, `owner: stria`, `description: color cenere chiaro sulle spalle, lungo le ali`.
