@@ -1,0 +1,81 @@
+{
+  "story_id": "s10",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s10_canonical.json",
+  "provvisori": {
+    "entry_point_type": {
+      "value": "cornice_sera_quotidiano_che_si_rovescia",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Hook 0: cantilena ultima, Noah si addormenta — apertura quotidiana che poi si rovescia in notte di paura. Voice_notes esplicita \"iniziare basso, sera normale, poi notte si apre come buco\". Entry point è \"cornice serale stanza fratelli\" + svolta interna."
+    },
+    "closure_type": {
+      "value": "sigillo_silenzioso_cammeo_diurno",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Hook finale: alba sul Pontile, Bartolo vede Amo tuffarsi, Fiamma cammeo. Nessun verbo di stato sulla paura risolta. Voice_notes: \"narratore non commenta che noah non ha più paura, scena sigilla senza verbo di stato\". Sigillo silenzioso confermato."
+    },
+    "register": {
+      "value": "denso_basso_attraversamento_paura",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Notte fonda, \"Ho paura. Qui è buio.\" (5 parole 2 frasi), cammino sotto lanterna velata, alba sul Pontile. Register denso ma basso: narratore non amplifica, lascia camminare. Active_constraints: \"drammaturgia_silenziosa\" + \"silenzio_attivo_obbligatorio_dopo_frase_noah\"."
+    },
+    "estimated_length": {
+      "value": "2200-2800_parole",
+      "category": "A",
+      "confidence": "low",
+      "rationale": "Apertura blocco D, attraversamento paura completo (notte→cammino→alba), 7 chars in scena con cammeo Grunto onomatopea distante. Stima sulla base di densità (4 hooks pieni, 7 debts totali, fear_touched bloomed). Da confermare in C/D."
+    },
+    "descriptive_pauses_count": {
+      "value": 2,
+      "category": "A",
+      "confidence": "medium",
+      "rationale": "Plausibili 2 pause descrittive: una al cammino lanterna velata (cerchio luce sui piedi, foglie secche, paesaggio non descritto coerente con narratore), una all'alba sul Pontile (Amo tuffo, Bartolo silenzioso). Storia di blocco apertura tipicamente 1-2 pause. Da confermare."
+    }
+  },
+  "quote_consumed": {
+    "by_category": {
+      "A": 5,
+      "B": 0,
+      "C": 0
+    },
+    "totale": 5,
+    "_note": "Solo provvisori Famiglia A (5 no_inference per C/D). Niente Famiglia B/C: il grafo s10 è denso (palette in tutti i 4 hooks già nel grafo, key_phrase top-level già popolata, voice_notes complete). season_passage decisione Ray applicata in P1.",
+    "dettaglio": [
+      {
+        "field": "entry_point_type",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "closure_type",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "register",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "estimated_length",
+        "category": "A",
+        "confidence": "low"
+      },
+      {
+        "field": "descriptive_pauses_count",
+        "category": "A",
+        "confidence": "medium"
+      }
+    ]
+  },
+  "notes_globali": "Storia chiave del blocco D — bloom paura Noah architrave terna strato 3 (dire-accettare-tenere, Noah dice). Grafo originale denso, palette per hook tutte presenti. Decisioni applicate: season \"autunno\"+passage=\"autunno_pieno\", interno_casa_fratelli→piazza_villaggio (mis_008 ricorrenza, 2 hooks), villaggio_centrale→piazza_villaggio (mapping deciso brief). narrator_address=True consuma 1/6 saga (cumulativo dopo s10: 3/6). Pattern A \"attivo\" continua da s07/s08. Onomatopee s10 wrap meccanico in array (2 hooks erano stringhe nel grafo).",
+  "rejected_no_inference": [],
+  "narrative_ideas": [
+    "lanterna_velata_s10 e nido_vuoto_s08 sono in scena (description_visual + active_constraints), ma il grafo non li dichiara in recurring_visual_objects → oggetti_simbolo_presenti=[] per coerenza pattern P1. Decisione finale (popolare o lasciare []) in C/D o sweep post-S12.",
+    "Architrave terna strato 3 chiusa qui (Noah DICE) — debt_s09_to_s12_paura_gabriel_accolta_non_risolta resta aperto (Gabriel ACCETTA in s12).",
+    "Cammeo terna blocco D iniziata: Bartolo s10 → Amo s11 → Grunto s12 frammento (debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d esplicita la struttura)."
+  ]
+}

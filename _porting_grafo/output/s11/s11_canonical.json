@@ -1,0 +1,785 @@
+{
+  "id": "s11",
+  "title_provvisorio": "La Festa del Raccolto",
+  "cycle": "D",
+  "attribute_dominant": "sigillo",
+  "block_position": "centro_blocco_d",
+  "season": "autunno",
+  "season_passage": null,
+  "wind_active": null,
+  "wind_notes": "Primo caso saga in cui i tre venti si esprimono tutti in una stessa storia, distribuiti sul ciclo del giorno — non insieme come Concerto (quello è S12), ma in successione cronologica. L'isola respira tutti i suoi tre venti in un solo giorno: Taglio all'alba per chi parte presto (Pastori scendono, Bartolo già sul Pontile), Intreccio pieno al mezzogiorno della festa, Mulinello al ritorno serale. Prefigurazione strutturale del Concerto S12.",
+  "pattern_a_active": "attivo",
+  "pattern_a_notes": "Pattern A variante collettiva — terza scena attiva blocco D, quarta della saga (dopo S7 prima scena attiva zattera, S8 bloom pieno albero/nido, S10 variante notturna-interna). Quattro manifestazioni intrecciate che vivono esclusivamente in immagini, mai dichiarate nel testo: (1) la festa che non si vince, niente capo, niente premi, si fa insieme; (2) il quarto cono dato a Bru, dare ciò che hai in più a chi non aveva, funzione di Elias come 'quello in mezzo'; (3) i frutti da fuori di Bartolo, cose che arrivano in più senza chiedere permesso da dove; (4) lo sgabello rotto dai cuccioli col pomo che rotola, rotto → ride → festa continua lo stesso. Nessuna esplicitazione. Architettura silente. Debt multi-target parziale S5→S12 e S6→S12 continuano aperti, chiusa la parte S11. Ultima manifestazione saga in S12 (chiusura).",
+  "night_scene": false,
+  "night_scene_notes": null,
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "piazza_villaggio"
+  },
+  "locations_secondary": [
+    {
+      "id": "albero_vecchio",
+      "role": ""
+    },
+    {
+      "id": "panca_di_pietra",
+      "role": "vecchie_del_mercato_riconoscimento_muto_a_elias_culmine_architrave_strato_3_bloom_pieno_seed_vecchie_indicare_silenzio"
+    },
+    {
+      "id": "pozzo_piazza",
+      "role": ""
+    },
+    {
+      "id": "forno",
+      "role": ""
+    },
+    {
+      "id": "orti_del_cerchio",
+      "role": ""
+    },
+    {
+      "id": "pontile_bocca",
+      "role": ""
+    },
+    {
+      "id": "pascoli_alti",
+      "role": ""
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "fratello_maggiore_presente_che_fa",
+      "mode": "presenza_attiva_vince_scherzosa_prova_coi_pastori_solleva_sacco_castagne_ride_si_occupa_di_noah_piu_che_di_elias_errore_involontario_seconda_micro_pressione_paura_post_semina",
+      "fear_touched": "pickup_seed_paura_gabriel_seconda_micro_pressione_post_semina_vede_elias_visto_dalle_vecchie_non_capisce_esattamente_prepara_bloom_s12_tenere"
+    },
+    {
+      "id": "elias",
+      "role": "fratello_di_mezzo_bloom_architrave_accettare",
+      "mode": "fa_lega_costruisce_con_nodo_marinaro_corda_intrecciata_aiuta_salvia_si_sposta_lateralmente_tre_volte_riceve_indicazione_vecchia_va_bene_due_parole_distribuisce_quattro_coni_uno_a_bru",
+      "fear_touched": "bloom_architrave_accettare_seed_paura_elias_piccolo_da_maturing_a_bloomed_seconda_parola_terna_strato_3_curva_numerica_discendente_5_2_0"
+    },
+    {
+      "id": "noah",
+      "role": "fratello_piccolo_libero_post_bloom_s10",
+      "mode": "pieno_di_energia_gioca_coi_cuccioli_cardo_pun_toba_rompono_sgabello_rotola_pomo_paronomastico_fisico_ride_forte_annoda_qualcosa_en_passant_manifestazione_muta_competenza"
+    },
+    {
+      "id": "stria",
+      "role": "maestra_zia_cornice_scuola_bloom_architrave_vede_prima",
+      "mode": "distribuisce_coni_di_carta_con_ghiande_dipinte_a_cuccioli_e_fratelli_da_quattro_a_elias_invece_di_tre_non_e_errore_sa_che_elias_dara_via_uno_sguardo_mezzo_secondo_piu_lungo_zero_commento"
+    },
+    {
+      "id": "fiamma",
+      "role": "madre_calore_banco_dolci_festa",
+      "mode": "chiacchiera",
+      "detti_count": 1,
+      "note": "mode_notes=chiacchiera breve al banco dolci mentre serve dolce festivo. Un detto popolare generico sul raccolto: 'Anno che raccoglie, mani che sanno.' (formulazione indicativa, Fase D). Non madre-default, semplicemente al suo banco durante la festa corale."
+    },
+    {
+      "id": "nodo",
+      "role": "padre_pratico_lavoro_festa",
+      "mode": "ripara_banco_improvvisato_con_tok_tok_tok_quarta_occorrenza_saga_elias_lo_aiuta_con_corda_intrecciata_callback_marinaro",
+      "tok_tok_tok": true
+    },
+    {
+      "id": "memolo",
+      "role": "zio_buffo_presenza_confusa_festa",
+      "mode": "presenza_festiva_sciarpa_storta_pun_lo_accompagna_riceve_ghiande_via_pun_frase_precisa_saltata_per_non_saturare_archi_decisione"
+    },
+    {
+      "id": "salvia",
+      "role": "cammeo_cornice_cesto_erbe_per_fiamma",
+      "mode": "cammeo_breve_porta_cesto_rosmarino_al_banco_di_fiamma_prima_volta_saga_pianta_nominata_salvia_rosmarino"
+    },
+    {
+      "id": "zolla",
+      "role": "cammeo_coi_sacchi_raccolto_conta_stagioni",
+      "mode": "modalita_conta_stagioni_una_frase_di_lavoro_quest_anno_noci_in_piu_fortuna_non_detto_popolare_registro_tecnico"
+    },
+    {
+      "id": "amo",
+      "role": "cammeo_cornice_silenziosa_seconda_terna_blocco_d",
+      "mode": "modalita_silenziosa_scarica_cesto_pesce_festivo_zero_parole_presenza_coerente_ruolo_canonico_cornice_non_risolutore_chiude_debt_s10_to_s11"
+    },
+    {
+      "id": "bartolo",
+      "role": "cammeo_nonno_arrivo_pontile_pomeriggio",
+      "mode": "arriva_dal_mare_posa_cesto_frutti_da_fuori_al_banco_fiamma_non_dice_da_dove_mano_alzata_che_ricade_modo_canonico_fa_zero_parole"
+    },
+    {
+      "id": "pun",
+      "role": "cammeo_cucciolo_con_memolo",
+      "mode": "accompagna_memolo_riceve_cono_da_stria_da_portare_a_memolo_le_porti_a_memolo_da_parte_mia"
+    },
+    {
+      "id": "toba",
+      "role": "cammeo_cucciolo_con_bartolo_poi",
+      "mode": "riceve_cono_da_stria_per_bartolo_gioca_coi_cuccioli_festa"
+    },
+    {
+      "id": "bru",
+      "role": "cucciolo_solo_riconosciuto_da_elias_porta_a_rovo",
+      "mode": "solo_al_pozzo_riceve_cono_da_stria_per_rovo_riceve_il_quarto_cono_da_elias_annuisce_piccolissimo_non_dice_grazie_al_ritorno_porta_a_rovo_sacchetto_erbe_salvia_e_porzione_dolce_fiamma_mai_descritto_solo_visto"
+    },
+    {
+      "id": "cardo",
+      "role": "cucciolo_provoca_gioca_con_noah_seconda_voce_individuata",
+      "mode": "gioca_con_noah_e_cuccioli_rompe_sgabello_rotola_pomo_ride_forte_voce_individuata_seconda_apparizione_chiude_debt_s09_to_s11"
+    },
+    {
+      "id": "mercato_del_mezzogiorno",
+      "role": "scena_soglia_architrave_strato_3_bloom_culmine_firma_gruppo",
+      "mode": "una_di_loro_alza_una_mano_e_indica_elias_lo_guarda_negli_occhi_una_volta_annuisce_piano_torna_a_guardare_avanti_zero_parole_nessuna_spiegazione_mai_individuate_vincolo_4_19"
+    },
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "sfondo_festa_alba_raccolto_rituale_orti",
+      "mode": "sfondo_allo_alba_sacchi_del_raccolto_sugli_orti_del_cerchio_sfondo_festa_collettivo_nessuna_cantilena_archi_s11_festa_non_lavoro_contatore_coltivatori_resta_4_dopo_s10_serale_ultima"
+    },
+    {
+      "id": "mantenitori",
+      "role": "sfondo_festa_allestimento_mattutino",
+      "mode": "sfondo_mattino_aiutano_nodo_in_allestimento_sfondo_festa_collettivo_nessuna_cantilena_archi_s11_festa_non_lavoro_contatore_coltivatori_resta_4_dopo_s10_serale_ultima"
+    },
+    {
+      "id": "pastori",
+      "role": "sfondo_festa_scendono_dai_pascoli_alti_alba",
+      "mode": "sfondo_scendono_con_greggi_dai_pascoli_alti_alba_coinvolti_in_scherzosa_prova_forza_con_gabriel_mezzogiorno_sfondo_festa_collettivo_nessuna_cantilena_archi_s11_festa_non_lavoro_contatore_coltivatori_resta_4_dopo_s10_serale_ultima"
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "rovo",
+      "reason": "assente_segnato_via_bru",
+      "note": "Rovo non sta nel villaggio (Bible §4.5). Presenza segnata via Bru: Bru gli porta qualcosa al ritorno (sacchetto erbe Salvia + porzione dolce Fiamma). Strato 3: chi cura Rovo a distanza è Bru, e il villaggio lo sa."
+    },
+    {
+      "id": "liu",
+      "reason": "assente_risolve_discrepanza_archi",
+      "note": "Discrepanza ARCHI §0.2 (tabella dice cammeo S11) vs §3.S11 (non la include). Risolta a favore del dettaglio: Liù prima apparizione saga blocco D sarà S12 apertura Concerto."
+    },
+    {
+      "id": "grunto",
+      "reason": "assente_preserva_budget_frammenti",
+      "note": "Budget 0/2 frammenti pre-Vento preservato per S12 (unico frammento saga)."
+    }
+  ],
+  "seeds_planted": [
+    "seed_coni_stria_ghiande_dipinte_gesto_annuale"
+  ],
+  "seeds_picked_up": [
+    "seed_noah_annoda_da_solo",
+    "seed_cardo_prima_voce_individuata",
+    "seed_paura_gabriel_fratelli_crescono_diversi",
+    "seed_pallone_stoffa_cucita",
+    "seed_bru_presenza_che_custodisce",
+    "seed_nodo_marinaro_capacita_elias",
+    "seed_pattern_a_rami_caduti_diventano_materia",
+    "seed_vecchie_indicare_in_silenzio"
+  ],
+  "seeds_maturing_here": [
+    "seed_cornetto_briciole_pattern_a_rinforzo"
+  ],
+  "seeds_bloomed_here": [
+    "seed_paura_elias_piccolo",
+    "seed_stria_vede_prima",
+    "seed_compleanno_come_rito_non_rito"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s11_001_vecchie_stria_bloom_architrave_elias_accettare",
+      "from_story": "s02",
+      "to_story": "s11",
+      "type": "bloom_architrave_riconoscimento_muto_pre_linguistico_stria_vede_prima_vecchie_vedono_dopo_come_comunita",
+      "description": "Doppio bloom architrave accorpato: (1) seed_stria_vede_prima — dopo S2 ('Tu cosa pensi?'), S6 (sente Pun), S9 ('Tu cosa farai oggi che hai un anno in più?') → S11 Stria dà quattro coni a Elias invece di tre, sguardo mezzo secondo più lungo, zero commento, sa che Elias darà via uno; (2) seed_vecchie_indicare_in_silenzio — firma-gruppo istituita S6, manifestata S8, culmine S11: una vecchia alza la mano, indica Elias, lo guarda una volta, annuisce, torna a guardare avanti. Stria vede prima, le Vecchie vedono dopo come comunità — stesso riconoscimento muto a due distanze temporali. Riconoscimento pre-linguistico che permette a Elias di accettare.",
+      "registered_in_story": "s11"
+    },
+    {
+      "callback_id": "cb_s11_002_nodo_marinaro_manifestazione_festa",
+      "from_story": "s05",
+      "to_story": "s11",
+      "type": "capacita_installata_nodo_marinaro_manifestazione_festa_corda_intrecciata",
+      "description": "Il nodo Marinaro insegnato da Nodo a Elias in S5 (dopo il ponte di rami), usato per la zattera in S7 e per legare l'albero caduto in S8, in S11 si manifesta come gesto festivo: Elias lavora corda intrecciata al banco che Nodo ripara (TOK-TOK-TOK, quarta occorrenza saga). Capacità installata ormai parte del modo di essere utile di Elias — 'quello che sa fare un nodo'.",
+      "registered_in_story": "s11"
+    },
+    {
+      "callback_id": "cb_s11_003_rito_non_rito_bloom_collettivo",
+      "from_story": "s09",
+      "to_story": "s11",
+      "type": "bloom_collettivo_rito_non_rito_festa_raccolto_scala_isola",
+      "description": "Il compleanno di Gabriel in S9 (modo di fare feste dell'isola: nessuno capo, fette uguali, non si premia nessuno) trova il bloom collettivo in S11: la Festa del Raccolto è lo stesso tipo di rito a scala di tutta l'isola. 'Non si premia nessuno. Non c'è capo. Si fa.' Piccoli giochi collettivi non gare. Ognuno porta qualcosa. Il modello compleanno-familiare si espande in modello festa-isola. Continuità strutturale.",
+      "registered_in_story": "s11"
+    },
+    {
+      "callback_id": "cb_s11_004_pattern_a_variante_collettiva",
+      "from_story": "s05",
+      "to_story": "s11",
+      "type": "pattern_a_variante_collettiva_festa_raccolto_terza_scena_attiva_blocco_d",
+      "description": "Pattern A — cose rotte/mancanti che arrivano lo stesso — si manifesta in S11 in variante collettiva: festa che non si vince, cono dato a Bru (dare ciò che hai in più a chi non aveva), frutti da fuori di Bartolo (cose che arrivano in più), sgabello rotto dei cuccioli che rotola col pomo (rotto → ride → festa continua). Mai dichiarato. Terza scena attiva blocco D (dopo S10 notturna-interna). Origine semina S5 (rami caduti → ponte), prima scena attiva S7 (zattera rotta), bloom pieno S8 (albero caduto). S11 variante collettiva. S12 ultima manifestazione saga (chiusura).",
+      "registered_in_story": "s11"
+    },
+    {
+      "callback_id": "cb_s11_005_bartolo_modo_canonico_frutti_da_fuori",
+      "from_story": "s07",
+      "to_story": "s11",
+      "type": "bartolo_modo_canonico_fa_zero_parole_cammeo_porta_frutti_da_fuori_porta_oltre_il_mare_fase_f",
+      "description": "Bartolo modo canonico 'vede e fa, zero parole' confermato (S7 zattera dei tre rametti, S10 notte Pontile alba, S11 festa): arriva dal Pontile nel pomeriggio col cesto di frutti da fuori (non crescono sull'isola), posa al banco di Fiamma. Non dice da dove. Mano alzata che ricade (gesto canonico). Porta aperta Fase F — 'cosa c'è oltre il mare?'. Debt aperto s11→s12 per chiusura parziale S12 (presenza implicita nella barca) e resto Fase F.",
+      "registered_in_story": "s11"
+    }
+  ],
+  "callback_summary": "La Festa del Raccolto è la prima volta che l'isola intera si attiva collettivamente in saga — callback strutturale al giro completo di S6 (prima attraversata mandala), eco preparatoria verso S12 (ultima attraversata contemplativa dall'alto). I cuccioli ricompaiono tutti insieme dopo la distribuzione frammentata blocco C (S6 collettivo, S9 Cardo prima voce) — Cardo ha seconda voce individuata, chiude debt S9 su seconda apparizione. La firma-gesto delle Vecchie del Mercato raggiunge il culmine saga dopo la semina S6 (indica un cespuglio dietro l'Albero Vecchio) e la manifestazione S8 (cammeo). In S11 indica Elias — bloom pieno della firma come riconoscimento pre-linguistico che salva il fratello di mezzo senza spiegarlo. Stria porta a compimento il suo filone 'vedere prima': dopo S2 (seme 'Tu cosa pensi?'), S9 (accumulo), in S11 dà quattro coni a Elias intenzionalmente (bloom). Stria vede prima, le Vecchie vedono dopo come comunità — stesso riconoscimento muto a due distanze temporali. Il nodo Marinaro di Elias (S5 insegnato, S7 zattera, S8 legare albero) si manifesta festivo sulla corda intrecciata al banco. Il Pattern A si manifesta in variante collettiva (terza scena attiva blocco D, quarta saga): festa che non si vince, cono a Bru, frutti da fuori di Bartolo, pomo che rotola. Chiude parzialmente i debt multi-target S5/S6/S7/S8 sul Pattern A — resta aperta la parte S12 per chiusura saga. Bartolo conferma modo canonico 'vede e fa, zero parole' (S7 zattera, S10 notte, S11 frutti) — chiave della porta socchiusa verso oltre il mare (Fase F). Bru è riconosciuto da Elias come 'quello-solo', chiude l'arco di presenza minimale che custodisce (S3 intravisto, S4 Foresta, S5 ponte) — e segna la cura a distanza di Rovo, mai nominata nel villaggio ma sempre implicita. Compleanno di Gabriel (S9) come rito-non-rito familiare si espande in festa-isola come rito-non-rito collettivo — stesso principio ('non si premia nessuno, non c'è capo, si fa') a scala diversa. Bloom collettivo. Amo seconda cornice silenziosa della terna blocco D (Bartolo S10, Amo S11, Grunto S12 frammento). Il mondo dell'isola è cornice, mai risolutore delle paure dei fratelli. Paura di Gabriel (seminata S9, prima micro-pressione S10) riceve seconda micro-pressione S11: Gabriel vede Elias visto dalle Vecchie, sente senza capire che il fratello di mezzo è in un territorio suo. Prepara bloom S12, modo tenere, zero parole.",
+  "debts_opened": [
+    {
+      "debt_id": "debt_s11_to_s12_frutti_da_fuori_bartolo_porta_oltre_il_mare_fase_f",
+      "origin_story": "s11",
+      "target_story": "s12",
+      "rilievo": "alto",
+      "note": "Bartolo arriva al Pontile pomeriggio s11 con cesto di frutti da fuori (non crescono sull'isola). Strato 3 aperto 'oltre il mare'. Bloom in S12."
+    },
+    {
+      "debt_id": "debt_s11_to_s12_coni_stria_gesto_annuale_eco_anno_chiuso",
+      "origin_story": "s11",
+      "target_story": "s12",
+      "rilievo": "medio",
+      "note": "Coni di Stria con ghiande dipinte come gesto annuale: eco silenziosa per chiusura saga in s12."
+    }
+  ],
+  "debts_closed": [
+    {
+      "debt_id": "debt_s02_to_s11_paura_elias_bloom_accettazione_via_vecchie",
+      "origin_story": "s02",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "bloom_pieno_architrave_strato_3_elias_accetta",
+      "note": "Seed_paura_elias_piccolo da maturing (S2-S9) a bloomed in S11. Riconoscimento muto Vecchie + quattro coni Stria. 'Va bene.' (2 parole)."
+    },
+    {
+      "debt_id": "debt_s02_to_s11_stria_vede_prima_bloom_quattro_coni_a_elias",
+      "origin_story": "s02",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "bloom_pieno_quattro_coni_a_elias_riconoscimento_chi_cresce_dentro"
+    },
+    {
+      "debt_id": "debt_s03_to_s11_bru_bloom_riconosciuto_da_elias",
+      "origin_story": "s03",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "bloom_pieno_bru_riconosciuto_da_elias_quarto_cono_distribuito"
+    },
+    {
+      "debt_id": "debt_s03_to_s11_pallone_ricomparsa_giochi_cuccioli_tentativo",
+      "origin_story": "s03",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "ricomparsa_pallone_di_stoffa_giochi_cuccioli_eco_silenziosa"
+    },
+    {
+      "debt_id": "debt_s04_to_s11_paura_elias_bloom_accettazione_vecchie_micro_sguardi_continuano_s5_s6_s9",
+      "origin_story": "s04",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "bloom_architrave_chiusura_micro_sguardi_storti_s5_s6_s9_culminano_qui"
+    },
+    {
+      "debt_id": "debt_s05_to_s11_nodo_marinaro_bloom_festa_corda_intrecciata",
+      "origin_story": "s05",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "bloom_collettivo_corda_intrecciata_alla_festa_capacita_installata_in_uso_sociale"
+    },
+    {
+      "debt_id": "debt_s05_to_s11_paura_elias_bloom_accettazione_vecchie_continua_maturing_s6",
+      "origin_story": "s05",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "continuita_traiettoria_paura_elias_da_fare_senza_avere_a_va_bene"
+    },
+    {
+      "debt_id": "debt_s06_to_s08_s11_vecchie_indicare_in_silenzio_bloom_gesto_riconoscimento_cresce_fino_a_s11_elias",
+      "origin_story": "s06",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "culmine_architrave_gesto_vecchie_da_indicazione_a_riconoscimento_muto_a_elias"
+    },
+    {
+      "debt_id": "debt_s08_to_s11_vecchie_indicare_bloom_pieno",
+      "origin_story": "s08",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "bloom_pieno_vecchie_indicare_riconoscimento_a_elias_strato_3_chiuso"
+    },
+    {
+      "debt_id": "debt_s09_to_s11_noah_annoda_manifestazione_rituale",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "noah_annoda_legaccio_pacco_o_nastro_banco_fiamma_en_passant"
+    },
+    {
+      "debt_id": "debt_s09_to_s11_compleanno_come_rito_non_rito_bloom_collettivo",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "festa_raccolto_come_rito_non_rito_bloom_collettivo_modo_di_fare_feste_dell_isola"
+    },
+    {
+      "debt_id": "debt_s09_to_s11_cardo_seconda_voce_individuata",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "cardo_seconda_apparizione_individuata_alla_festa_quota_2_2_chiusa"
+    },
+    {
+      "debt_id": "debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d",
+      "origin_story": "s10",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "amo_cornice_silenziosa_terna_blocco_d_dalla_riva_o_pontile"
+    },
+    {
+      "debt_id": "debt_s05_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga",
+      "origin_story": "s05",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_succede"
+    },
+    {
+      "debt_id": "debt_s06_to_s07_s08_s10_s11_s12_cornetto_briciole_pattern_a_rinforzo_immagini_trasversali",
+      "origin_story": "s06",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "close_mode": "cornetto_briciole_eco_silenziosa_alla_festa_immagine_pattern_a_rinforzo"
+    },
+    {
+      "debt_id": "debt_s07_to_s08_s10_s11_s12_pattern_a_continuazione_attivazioni_trasversali",
+      "origin_story": "s07",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "pattern_a_continuazione_attivazione_collettiva_festa_pieno_funzionamento"
+    },
+    {
+      "debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura",
+      "origin_story": "s08",
+      "target_story": "s11",
+      "rilievo": "alto",
+      "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_s12_resta_aperto_per_chiusura_saga"
+    }
+  ],
+  "key_phrase_indicative": "Va bene.",
+  "key_phrase_notes": "2 parole, pronunciate piano nel momento del riconoscimento muto delle Vecchie sotto l'Albero Vecchio. Curva architrave discendente terna strato 3: S10 Noah 5 parole (DIRE 'Ho paura. Qui è buio.') → S11 Elias 2 parole (ACCETTARE 'Va bene.') → S12 Gabriel 0 parole (TENERE solo gesto). Detta come risposta al riconoscimento che non chiedeva risposta. Non dichiara nulla — Elias riconosce di essere stato visto e lo accetta. Mai sottolineata dal narratore (Carta). Cornice a sera: due battute asciutte con Gabriel ('Oggi mi ha indicato una vecchia.' / 'Quale?' / 'Una.') sono di cornice, non la frase-soglia. Frase Fiamma detto popolare S11 (1 di 2 quota, generico raccolto): 'Anno che raccoglie, mani che sanno.' (formulazione indicativa, può essere modificata Fase D, ritmica asciutta).",
+  "key_phrase_attributed_to": "elias",
+  "premise": "Autunno pieno. Festa del Raccolto — giorno annuale in cui tutti gli abitanti del villaggio e dei quartieri si ritrovano in Piazza, sotto l'Albero Vecchio. Ognuno porta qualcosa. Si mangia insieme. Ci sono piccoli giochi collettivi, non gare. Non si premia nessuno. Non c'è capo. Si fa. I tre fratelli partecipano. È la prima festa dell'isola che vediamo per intero in saga. All'alba i Pastori scendono dalle Montagne, gli Orti si svuotano nei sacchi del raccolto rituale, Bartolo è già al Pontile. A mezzogiorno la Piazza è fulcro: Fiamma al banco dolci, Nodo TOK-TOK-TOK al banco che ripara, Elias corda intrecciata, Salvia col cesto di rosmarino, Stria dalla scuola coi coni di ghiande dipinte. Gabriel, Elias, Noah arrivano in Piazza insieme. La storia di Elias comincia con lui al posto suo — fa, lega, aiuta, si sente utile. Poi a mezzogiorno succede una serie di cose piccole che lo spostano.",
+  "problem": "Il problema è di Elias, interno, mai dichiarato. Tre micro-spostamenti laterali lo portano fuori dal posto suo. (1) Gabriel vince scherzosa prova di forza coi Pastori (solleva sacco di castagne più alto degli altri), risate, 'il maggiore dei tre, eh!' — Gabriel ride, non sa cosa succede a Elias. (2) Noah gioca coi cuccioli (Cardo, Pun, Toba), rompono sgabello, pomo che rotola, Noah ride forte — Noah è vivo e visto, libero (ha attraversato il buio in S10). Elias si volta a sistemare un banco. (3) Stria distribuisce coni di ghiande dipinte — a Pun per Mèmolo, a Bru per Rovo, a Cardo per sé, a Toba per Bartolo. Ai tre fratelli dà quattro coni a Elias invece di tre. Elias lo vive come errore — gli sembra che Stria si stia confondendo. Sente una piccola cosa storta dentro che non ha parole — il seme della sua paura (non essere abbastanza, piccolo, in mezzo) seminato in S2, maturato silenziosamente attraverso S4/S5/S6/S9/S10, affiora. Il problema non è fare qualcosa: è essere visto nel modo giusto, e non per aver vinto.",
+  "threshold_moment": "Pomeriggio inoltrato. La festa rallenta. Sotto l'Albero Vecchio, sulla Panca di Pietra, le Vecchie del Mercato. Una di loro — l'indicare in silenzio (firma-gruppo istituita S6, manifestata S8) — alza una mano e indica Elias. Solo lui. Lo guarda negli occhi una volta. Annuisce piano. Poi torna a guardare avanti. Nessuna spiegazione. Nessuna parola. Elias si ferma. Capisce di essere stato visto. Non ha vinto niente. Non gli hanno detto bravo. Una vecchia che non ha mai parlato in saga e che non parlerà mai gli ha indicato. Una volta sola. 'Va bene.' — due parole, piano, senza enfasi. [MECHANICS] Riconoscimento muto pre-linguistico. Il gesto delle Vecchie è firma-gruppo bloomed S8, culmine saga S11. Stria aveva visto prima (quattro coni intenzionali, non errore): le Vecchie vedono dopo, come comunità, ciò che Stria vede da sempre. [EAR] Bloom seed_paura_elias_piccolo — status maturing → bloomed. Resolution_mode accettare. Seconda parola terna strato 3 architrave dire/accettare/tenere. [STRATO] Strato 1: una vecchia indica Elias, lui si ferma e dice 'Va bene.'. Strato 2: bambino di 7-10 anni coglie che Elias ha ricevuto un riconoscimento speciale senza sapere perché. Strato 3: rilettore adulto coglie che dare a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato. [NUMERICA] Curva discendente terna strato 3 confermata: S10 Noah 5 parole ('Ho paura. Qui è buio.') → S11 Elias 2 parole ('Va bene.') → S12 Gabriel 0 parole (solo gesto). Architrave numerica nascosta della saga.",
+  "resolution_mode": "Elias resta lì un momento. Poi va da Gabriel e Noah al banco di Fiamma. Si siede accanto a loro. Mangia il dolce. I quattro coni di Stria — Elias li distribuisce. Uno per Gabriel. Uno per Noah. Uno per sé. Il quarto, dopo un secondo di esitazione, lo dà a Bru, solo accanto al Pozzo (Rovo non è venuto — Rovo non sta nel villaggio, Bible §4.5). Bru lo prende, non dice grazie. Si guardano. Bru annuisce piccolissimo. Al ritorno Bru porterà a Rovo un sacchetto di erbe di Salvia e una porzione del dolce di Fiamma — mai descritto in dettaglio, solo visto. Chi cura Rovo a distanza è Bru, e il villaggio lo sa. Elias torna a Gabriel e Noah. Mangia il dolce. La festa continua. Sera. Bartolo arriva dal Pontile nel pomeriggio con cesto di frutti da fuori — non crescono sull'isola, mai descritti in dettaglio. Posa al banco di Fiamma. Non dice da dove. Mano alzata che ricade. Tornano a casa col Mulinello della sera. A casa, due battute brevi: Elias: 'Oggi mi ha indicato una vecchia.' / Gabriel: 'Quale?' / Elias: 'Una.' Gabriel non capisce, non saprà mai bene cosa è successo a suo fratello quel pomeriggio. E questo è giusto. [CLOSURE] Bloom paura Elias chiuso. Seconda parola terna strato 3 accettare installata. Le paure dei fratelli si risolvono dai fratelli stessi, mai da personaggi esterni — le Vecchie e Stria sono cornice riconoscitiva, non risolutori. [CONTRIBUTO] Gabriel presente all'altro ma non sa (errore involontario coerente con la sua paura che bloomerà in S12). Noah libero, vivo, accessorio alla festa non al dramma interno di Elias. Elias protagonista silenzioso, accetta via riconoscimento muto. [NO_MORALINA] Il narratore non dichiara 'dare a chi non aveva'. Vive solo nell'immagine dei quattro coni in mano a Elias, uno dato a Bru. Il bambino di 4 anni vede il gesto. Il rilettore di 9 anni sente che c'è un modo. L'adulto coglie la funzione. [SIGILLO] Immagine di chiusura: Elias coi tre coni rimasti, Gabriel e Noah accanto, il quarto cono nelle mani di Bru al Pozzo. Non commentato. Dare ciò che hai in più a chi non aveva è il suo modo di stare in mezzo. Mai dichiarato. Il narratore in chiusura può lavorare sull'immagine — la frase di cornice non è di personaggio, è del narratore, una o due righe sobrie. [CORNICE_NOTTE] Casa dei fratelli, sera, Mulinello. Due battute asciutte di Elias/Gabriel. Conversazione si chiude su una sillaba. Noah non partecipa alla conversazione — dorme già, forse, o mangia ancora.",
+  "palette_emotiva": "Dominanti: caldo autunnale — rossi e arancioni del raccolto, bruno scuro delle castagne, giallo-oro delle ghiande dipinte, verde scuro del rosmarino, terracotta dei banchi, fuoco vivo al centro Piazza per il dolce, grigio-cenere di Stria. Accent freddo: verde mare antico di Bartolo che arriva dal Pontile col cesto (colori diversi da quelli dell'isola — frutti da fuori senza descrizione dettagliata). Accent neutro: pietra chiara della Panca sotto l'Albero Vecchio (Vecchie sedute), corteccia antica dell'Albero stesso. Luce: alba radente sui sacchi negli Orti → mezzogiorno pieno sulla Piazza → pomeriggio inclinato sotto l'Albero Vecchio (ombre lunghe dove le Vecchie indicano) → viola-arancione Mulinello al ritorno serale. Chiusura visiva: fuochi di lanterne dei banchi che chiudono, ombre dei fratelli che camminano verso casa, sagome viola contro cielo arancione. A casa: luce di lampada ferma sul tavolo, due sagome sedute (Elias e Gabriel), Noah altrove nella stanza.",
+  "active_constraints_touched": [
+    "pattern_a_never_named_in_text",
+    "ear_framework_invisibile_nel_testo",
+    "nessuna_morale_esplicita",
+    "doppio_strato_4_7_10_anni_strato_3_opzionale",
+    "continuita_pokemon_accumulo_conseguenze_evoluzione",
+    "voce_autoriale_ray_16_tratti",
+    "narratore_iniziato_architrave_mai_spiega_sempre_sigilla",
+    "nessun_preannuncio_rivelazione_post_saga_fase_f",
+    "nominazione_operativa_astrazione_incarnata",
+    "geografia_mandala_silenziosa_3_venti_4_elementi",
+    "notte_non_personificata",
+    "grunto_testimone_unico_vincolato_max_2_frammenti_saga_assente_s11_budget_0_2_preservato_s12",
+    "grunto_vincolo_no_nomi_propri_ariete_ondina_tempesta",
+    "fiamma_detti_popolari_max_2_per_storia_s11_1_dentro_quota",
+    "numeri_3_e_4_architettura_nascosta_quattro_coni_tre_fratelli_quattro_manifestazioni_pattern_a",
+    "terna_strato_3_dire_accettare_tenere_s11_seconda_parola_accettare",
+    "paure_risolte_dai_fratelli_stessi_mai_da_personaggi_esterni",
+    "cornice_s1_s12_forno_fiamma_s11_banco_dolci_preparatorio",
+    "ruoli_familiari_episodici_mai_stesso_adulto_due_storie_di_fila_stesso_ruolo",
+    "vecchie_mercato_mai_individuate_vincolo_4_19",
+    "rovo_non_sta_nel_villaggio_bible_4_5_segnato_via_bru",
+    "frase_precisa_memolo_saltata_per_non_saturare_frasi_precise",
+    "nessuna_cantilena_coltivatori_s11_festa_non_lavoro",
+    "nessun_address_al_lettore_s11_prossimo_s12",
+    "nessuna_frase_firma_narratore_s11_unica_rimanente_s12",
+    "nessuna_onomatopea_oggetto_cacofonica_s11_festa_corale_non_rotture_forti",
+    "tok_tok_tok_nodo_terza_di_4_5_quota_saga",
+    "paronomastico_fisico_pomo_che_rotola_2_di_2_saga_dentro_quota",
+    "piante_nominate_salvia_rosmarino_prima_volta_saga",
+    "pattern_oggetto_una_tantum_deferred_17_non_applicato_s11_zero_object_nuovi",
+    "vecchie_mercato_non_entity_deferred_4",
+    "casa_fratelli_non_entity_deferred_10",
+    "curva_debt_discendente_saldo_cumulativo_scende_32_a_17_pattern_saga_normale"
+  ],
+  "voice_notes_essential": [
+    "TONO_CORALE_NON_FOLKLORICO_FESTA_PIENA_DI_COSE_PICCOLE",
+    "REGISTRO_INTEGRATO_BLOCCO_D_ASCIUTTO_PUNTEGGIATO_DI_GESTI",
+    "VOCI_MULTIPLE_SENZA_SATURARE_UNA_PER_PERSONAGGIO",
+    "NESSUNA_CANTILENA_COLTIVATORI_S11_FESTA_NON_LAVORO",
+    "MEMORIA_LUNGA_NARRATORE_2_O_3_INCISI_SULL_ISOLA_CHE_SI_RACCOGLIE_UNA_VOLTA_ALL_ANNO_MAI_DICHIARATA_COME_RITO_SOLO_FATTO",
+    "NESSUN_ADDRESS_AL_LETTORE_S11_PROSSIMO_S12",
+    "FRASE_FIRMA_NARRATORE_NON_PRESENTE_S11_PROSSIMA_E_UNICA_S12",
+    "FIAMMA_DETTI_POPOLARI_1_ANNO_CHE_RACCOGLIE_MANI_CHE_SANNO_GENERICO_RACCOLTO_DENTRO_QUOTA",
+    "STRIA_CONSEGNA_ELIAS_MEZZO_SECONDO_PIU_LUNGA_NON_COMMENTATA",
+    "VECCHIE_GESTO_INDICARE_ZERO_PAROLE_NESSUNA_SPIEGAZIONE_NESSUNA_PAROLA_RIPETUTO_NEL_NARRATORE_COME_SIGILLO_SCENICO",
+    "KEY_PHRASE_VA_BENE_CURARE_CONTESTO_SCENICO_PER_NON_FARLA_SCIVOLARE_SU_RASSEGNAZIONE_PAUSA_PRIMA_RESPIRO_ELIAS_SI_FERMA",
+    "DUE_BATTUTE_FINALI_ASCIUTTE_GABRIEL_NON_CAPISCE_E_NON_SAPRA_MAI_E_QUESTO_E_GIUSTO",
+    "PATTERN_A_VARIANTE_COLLETTIVA_MAI_DICHIARATO_VIVE_IN_QUATTRO_IMMAGINI_INTRECCIATE_FESTA_CONO_BRU_FRUTTI_BARTOLO_POMO_CHE_ROTOLA",
+    "PARONOMASTICO_FISICO_POMO_CHE_ROTOLA_2_DI_2_SAGA_DA_RAFFINARE_D",
+    "TOK_TOK_TOK_NODO_QUARTA_OCCORRENZA_DENTRO_QUOTA",
+    "ONOMATOPEA_OGGETTO_CACOFONICA_NON_PREVISTA_S11_FESTA_SCENE_CORALI_NON_ROTTURE_FORTI",
+    "VOCE_CARDO_SECONDA_INDIVIDUAZIONE_MEZZA_BATTUTA_NEI_GIOCHI",
+    "VOCE_BRU_NESSUNA_PAROLA_SOLO_ANNUISCE_PICCOLISSIMO"
+  ],
+  "structural_notes": [
+    "CENTRO_BLOCCO_D_SECONDA_STORIA_BLOCCO_D_TRA_S10_APERTURA_E_S12_CHIUSURA_SAGA",
+    "BLOOM_PAURA_ELIAS_ARCHITRAVE_SECONDA_PAROLA_TERNA_STRATO_3_ACCETTARE",
+    "TERNA_STRATO_3_CURVA_NUMERICA_DISCENDENTE_5_2_0_NOAH_ELIAS_GABRIEL_CONFERMATA_S11",
+    "PAURE_RISOLTE_DA_FRATELLI_STESSI_VECCHIE_STRIA_SONO_CORNICE_RICONOSCITIVA_NON_RISOLUTORI",
+    "MAPPA_ISOLA_COLLETTIVAMENTE_ATTIVATA_PRIMA_VOLTA_SAGA_CALLBACK_S6_PRIMO_GIRO_ECO_STRUTTURALE_S12_CONTEMPLATIVA_DALL_ALTO",
+    "TRE_VENTI_SUI_TEMPI_DEL_GIORNO_PRIMA_VOLTA_SAGA_PREFIGURAZIONE_CONCERTO_S12",
+    "AMO_SECONDA_CORNICE_SILENZIOSA_TERNA_BLOCCO_D_BARTOLO_S10_AMO_S11_GRUNTO_S12_FRAMMENTO",
+    "PATTERN_A_TERZA_SCENA_ATTIVA_BLOCCO_D_VARIANTE_COLLETTIVA_QUATTRO_MANIFESTAZIONI_INTRECCIATE",
+    "CORNICE_ROVO_ASSENTE_SEGNATO_VIA_BRU_STRATO_3_CHI_CURA_ROVO_A_DISTANZA_E_BRU_VILLAGGIO_LO_SA",
+    "SIGILLO_NARRATORE_SULLE_IMMAGINI_QUATTRO_CONI_IN_MANO_A_ELIAS_QUELLO_DATO_A_BRU_E_PARTE_DEL_GESTO",
+    "DARE_A_CHI_NON_AVEVA_MODO_DI_STARE_IN_MEZZO_COME_FUNZIONE_NON_COME_LIMITE_MAI_DICHIARATO",
+    "DUE_BATTUTE_FINALI_SILLABICHE_GABRIEL_NON_SAPRA_MAI_BENE_QUELLO_CHE_HA_VISSUTO_ELIAS",
+    "MANIFESTAZIONE_CULMINE_VECCHIE_INDICARE_IN_SILENZIO_SAGA_FIRMA_GRUPPO_S6_S8_S11",
+    "PALLONE_STOFFA_CUCITA_RICOMPARSA_BREVE_GIOCHI_CUCCIOLI_CHIUDE_DEBT_S3",
+    "NESSUNA_CANTILENA_COLTIVATORI_S11_CONTATORE_RESTA_4_S10_SERALE_ULTIMA_COERENTE_ARCHI",
+    "LIU_ASSENTE_S11_DISCREPANZA_ARCHI_TABELLA_VS_DETTAGLIO_RISOLTA_DETTAGLIO_WINS",
+    "ENTITY_NUOVE_S11_ZERO_OBJECTS_ZERO_LOCATIONS_CURVA_DEBT_DISCENDENTE_SALDO_32_A_17"
+  ],
+  "fear_touched": {
+    "brother": "elias",
+    "fear_id": "non_essere_abbastanza_piccolo_in_mezzo",
+    "status": "bloomed",
+    "mode_of_touch": "bloom_architrave_accettare_via_riconoscimento_muto_vecchie_quattro_coni_stria_frase_soglia_va_bene_due_parole_curva_discendente_5_2_0",
+    "_note": "Bloom architrave seconda parola terna strato 3 dire/accettare/tenere. Seed_paura_elias_piccolo passa da maturing (S2 origin, S4/S5/S9/S10 maturing_in) a bloomed in S11. Resolution_mode 'accettare' confermato. La paura di Elias si risolve dal fratello stesso che accetta il riconoscimento muto — le Vecchie e Stria sono cornice riconoscitiva, non risolutori. Cornice narrativa: tre micro-spostamenti laterali (Gabriel vince, Noah vivo e visto, Stria dà quattro coni) → riconoscimento Vecchie sotto l'Albero Vecchio → Va bene. → distribuzione quattro coni con il quarto a Bru → due battute asciutte a sera con Gabriel. Strato 3 puro: dare a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "hook_01_alba_orti_raccolto_rituale",
+        "moment": "alba_taglio",
+        "location": {
+          "id": "orti_del_cerchio",
+          "qualifier": "alba_raccolto_rituale_inizio_giornata",
+          "legacy_string": "orti_del_cerchio"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [],
+        "elements": [
+          "coltivatori_alzano_primi_sacchi_raccolto",
+          "luce_radente_fiato_bianco_autunno",
+          "gabriel_gia_in_piedi_elias_con_mantenitori_noah_assonnato"
+        ],
+        "palette": "arancione_sole_basso_bruno_castagne_verde_scuro_foglie_tarde",
+        "notes": "Cornice solo, pochi istanti, non scena piena.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_02_mattino_piazza_allestimento",
+        "moment": "mattino_intreccio",
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "mattino_allestimento_banchi_festa",
+          "legacy_string": "piazza_villaggio"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "banchi_montati_sotto_albero_vecchio",
+          "nodo_tok_tok_tok_quarta_occorrenza_ripara_banco_improvvisato",
+          "elias_passa_corda_intrecciata_nodo_marinaro_callback_s5",
+          "salvia_entra_col_cesto_di_rosmarino_diretta_al_forno",
+          "stria_arriva_dalla_scuola"
+        ],
+        "palette": "terracotta_banchi_verde_scuro_rosmarino_giallo_oro_cuscini_foglie_cadute",
+        "notes": "Allestimento corale, molte voci basse, nessuna saturazione.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_03_stria_distribuisce_coni",
+        "moment": "mezzogiorno_intreccio",
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "mezzogiorno_stria_distribuisce_coni_ghiande_dipinte",
+          "legacy_string": "piazza_villaggio"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "stria_consegna_coni_di_carta_con_ghiande_dipinte",
+          "a_pun_le_porti_a_memolo_da_parte_mia",
+          "a_bru_per_rovo",
+          "a_cardo_per_te_cardo_non_ha_nessuno_a_cui_portarle_micro_strato_3_mai_sottolineato",
+          "a_toba_per_bartolo",
+          "ai_tre_fratelli_quattro_coni_a_elias_invece_di_tre_sguardo_mezzo_secondo_piu_lungo_zero_commento"
+        ],
+        "palette": "giallo_oro_ghiande_dipinte_grigio_cenere_stria_carta_chiara_coni",
+        "notes": "Distribuzione a ritmo veloce, fermata mezzo secondo su Elias. Mai sottolineato. Stria non sbaglia mai.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_04_mezzogiorno_tre_cose_che_spostano_elias",
+        "moment": "mezzogiorno_intreccio",
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "mezzogiorno_tre_cose_spostano_elias_pomo_rotola_etc",
+          "legacy_string": "piazza_villaggio"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "gabriel_vince_scherzosa_prova_di_forza_coi_pastori_solleva_sacco_castagne_risate_il_maggiore_dei_tre_eh",
+          "noah_gioca_coi_cuccioli_cardo_pun_toba_rompono_sgabello_pomo_che_rotola_paronomastico_2_di_2_saga_noah_ride_forte_vivo_e_visto",
+          "elias_guarda_i_suoi_quattro_coni_in_mano_non_c_e_scritto_chi_sono_sente_piccola_cosa_storta_dentro_senza_parole"
+        ],
+        "palette": "rossi_arancioni_festa_pomo_rosso_rotolante_terra_polvere_cuccioli",
+        "notes": "Tre micro-spostamenti laterali Elias, ognuno piccolo, accumulano.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_05_vecchie_indicare_culmine_architrave",
+        "moment": "pomeriggio_intreccio",
+        "location": {
+          "id": "panca_di_pietra",
+          "qualifier": "pomeriggio_vecchie_indicano_culmine_architrave_riconoscimento_muto_a_elias",
+          "legacy_string": "mercato_del_mezzogiorno_panca_di_pietra"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "sotto_albero_vecchio_panca_di_pietra_vecchie_sedute",
+          "una_vecchia_alza_la_mano_e_indica_elias_solo_lui",
+          "lo_guarda_negli_occhi_una_volta_annuisce_piano",
+          "torna_a_guardare_avanti_zero_parole_nessuna_spiegazione",
+          "elias_si_ferma_capisce_di_essere_stato_visto",
+          "va_bene_due_parole_piano_senza_enfasi_frase_soglia_terna_strato_3"
+        ],
+        "palette": "ombra_lunga_pomeriggio_sotto_albero_vecchio_pietra_chiara_panca_sagome_scure_vecchie",
+        "notes": "ARCHITRAVE SAGA. Scena-soglia architrave strato 3 Elias ACCETTA. Riconoscimento muto pre-linguistico. Curare contesto scenico per non far scivolare 'Va bene.' su rassegnazione (pausa, respiro, Elias si ferma).",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo",
+        "moment": "pomeriggio_intreccio",
+        "location": {
+          "id": "pozzo_piazza",
+          "qualifier": "pomeriggio_elias_distribuisce_quattro_coni_bru_al_pozzo",
+          "legacy_string": "pozzo_piazza"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "elias_distribuisce_quattro_coni_uno_gabriel_uno_noah_uno_se",
+          "il_quarto_dopo_un_secondo_di_esitazione_lo_da_a_bru_solo_accanto_al_pozzo",
+          "bru_lo_prende_non_dice_grazie_si_guardano_bru_annuisce_piccolissimo",
+          "rovo_non_e_venuto_alla_festa_bible_4_5_bru_porta_qualcosa_al_ritorno_sacchetto_erbe_salvia_porzione_dolce_fiamma_mai_descritto_solo_visto"
+        ],
+        "palette": "pietra_chiara_pozzo_giallo_oro_coni_marrone_scuro_pelliccia_bru",
+        "notes": "Strato 3 puro. Dare a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato. Sigillo del narratore sull'immagine.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_07_bartolo_arriva_frutti_da_fuori",
+        "moment": "pomeriggio_tardi_intreccio",
+        "location": {
+          "id": "pontile_bocca",
+          "qualifier": "pomeriggio_tardi_bartolo_arriva_frutti_da_fuori",
+          "legacy_string": "pontile_bocca"
+        },
+        "quadrant": "acqua_sud",
+        "characters_present": [],
+        "elements": [
+          "bartolo_arriva_dal_mare_nel_pomeriggio_con_la_barca",
+          "cesto_di_frutti_che_non_crescono_sull_isola_mai_descritti_in_dettaglio",
+          "posa_al_banco_di_fiamma_non_dice_da_dove",
+          "mano_alzata_che_ricade_modo_canonico_fa_zero_parole"
+        ],
+        "palette": "verde_mare_antico_bartolo_colori_sconosciuti_dei_frutti_da_fuori_terracotta_banco_fiamma",
+        "notes": "Pattern A manifestazione: cose in più che arrivano. Porta Fase F 'oltre il mare' aperta. Debt s11→s12 aperto per chiusura parziale finale saga.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      },
+      {
+        "hook_id": "hook_08_ritorno_casa_mulinello_sera_due_battute",
+        "moment": "sera_mulinello",
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "sera_mulinello_ritorno_casa_villaggio_centrale_due_battute",
+          "legacy_string": "villaggio_centrale"
+        },
+        "quadrant": "centro_villaggio",
+        "characters_present": [],
+        "elements": [
+          "tornano_a_casa_col_mulinello_della_sera_fuochi_lanterne_banchi_che_chiudono",
+          "a_casa_due_battute_asciutte",
+          "elias_oggi_mi_ha_indicato_una_vecchia",
+          "gabriel_quale",
+          "elias_una",
+          "conversazione_si_chiude_su_una_sillaba_gabriel_non_capisce_non_sapra_mai_e_questo_e_giusto"
+        ],
+        "palette": "viola_arancione_mulinello_crepuscolo_fuochi_lanterne_caldo_luce_lampada_interno_casa",
+        "notes": "Chiusura storia. Noah non partecipa alla conversazione (dorme già o mangia ancora). Due battute asciutte non cornice frase-soglia — la frase-soglia è Va bene. del pomeriggio. Noah fuori dalla conversazione mantiene Elias e Gabriel sul fuoco di Elias.",
+        "focal_action": null,
+        "focal_object": null,
+        "atmosphere": null,
+        "wind_visible": null,
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": true,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [
+    "TOK-TOK-TOK"
+  ],
+  "quartieri_attraversati": [
+    "terra_ovest",
+    "centro_villaggio",
+    "acqua_sud"
+  ],
+  "oggetti_simbolo_presenti": [],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "stria",
+      "vincoli": [
+        "mai_lezione_morale_esplicita",
+        "mai_due_risposte_stessa_scena",
+        "mai_sopra_o_sotto_albero_vecchio",
+        "mai_commuovere_visibilmente"
+      ]
+    },
+    {
+      "personaggio": "fiamma",
+      "vincoli": [
+        "unica_detentrice_detti_popolari",
+        "detti_solo_in_modalita_chiacchiera",
+        "max_2_detti_per_storia",
+        "non_madre_default",
+        "mai_morale_in_corsivo",
+        "mai_sotto_albero_vecchio_solenne"
+      ]
+    },
+    {
+      "personaggio": "nodo",
+      "vincoli": [
+        "mai_spiega_perche_nodo_funziona",
+        "mai_fa_nodo_al_posto_di_chi_impara",
+        "mai_parla_di_sentimenti",
+        "tok_tok_tok_quota_4_5_storie_saga"
+      ]
+    },
+    {
+      "personaggio": "memolo",
+      "vincoli": [
+        "mai_sapiente_confuso_didattico",
+        "mai_due_frasi_precise_stessa_storia",
+        "mai_risolve_trama_chiudendo"
+      ]
+    },
+    {
+      "personaggio": "salvia",
+      "vincoli": [
+        "max_1_pianta_nominata_per_apparizione",
+        "mai_spiega_perche_pianta_funziona",
+        "mai_risolve_emotivamente"
+      ]
+    },
+    {
+      "personaggio": "zolla",
+      "vincoli": [
+        "mai_lezioni_ecologia",
+        "mai_nostalgia_ambientalista",
+        "mai_scene_veloci_o_concitate"
+      ]
+    },
+    {
+      "personaggio": "amo",
+      "vincoli": [
+        "mai_spiega_pesca_a_parole",
+        "mai_in_scene_villaggio_salvo_mercato",
+        "mai_nostalgico_o_malinconico",
+        "mai_conflitto_aperto"
+      ]
+    },
+    {
+      "personaggio": "bartolo",
+      "vincoli": [
+        "mai_morale",
+        "mai_correre",
+        "mai_arrabbiato_visibile",
+        "mai_traghetta_abitanti_nominati_con_fratelli"
+      ]
+    },
+    {
+      "personaggio": "pun",
+      "vincoli": [
+        "mai_corregge_padre_con_tono_adulto",
+        "mai_sapientello"
+      ]
+    },
+    {
+      "personaggio": "toba",
+      "vincoli": [
+        "mai_domanda_filosofica",
+        "mai_sola_al_pontile",
+        "mai_corre"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    },
+    {
+      "personaggio": "cardo",
+      "vincoli": [
+        "mai_modalita_predatore",
+        "mai_si_redime_visibile",
+        "mai_punito",
+        "mai_tradisce_davvero",
+        "punzecchia_max_2_3_storie_su_12"
+      ]
+    }
+  ]
+}

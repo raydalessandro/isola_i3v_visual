@@ -1,0 +1,80 @@
+{
+  "story_id": "s09",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s09_canonical.json",
+  "provvisori": {
+    "entry_point_type": {
+      "value": "cornice_costanza_giorno_chiuso",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Storia con cornice forno mattino-pomeriggio-sera (premise + structural_notes esplicitano \"il giorno chiuso del compleanno\"). Entry point fisso al forno apertura, non in medias res."
+    },
+    "closure_type": {
+      "value": "sigillo_silenzioso_oggetto_ferma",
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Hook finale: braccialetto in mano di Gabriel, Noah ride, Elias cenno → chiusura non-verbale, oggetto-firma fermo, sguardi che si allineano. Non è risoluzione esplicita."
+    },
+    "register": {
+      "value": "tenero_basso_quotidiano",
+      "category": "A",
+      "confidence": "medium",
+      "rationale": "Voce_notes esplicita \"tenerezza non sottolineata, nessuna enfasi morale\". Premise = compleanno-non-festa. Register basso ma caldo."
+    },
+    "estimated_length": {
+      "value": "1800-2400_parole",
+      "category": "A",
+      "confidence": "low",
+      "rationale": "Storia centrale ciclo C, complessità bloom-paura-Gabriel. Stima sulla base della densità debts/callbacks (6+2) e 4 hooks. Da confermare con conteggio reale in C/D."
+    },
+    "descriptive_pauses_count": {
+      "value": 1,
+      "category": "A",
+      "confidence": "high",
+      "rationale": "Vincolo esplicito in active_constraints_touched: \"pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole\". Una sola pausa, al forno con Memolo."
+    }
+  },
+  "quote_consumed": {
+    "by_category": {
+      "A": 5,
+      "B": 0,
+      "C": 0
+    },
+    "totale": 5,
+    "_note": "Provvisori solo Famiglia A (5 no_inference_fields). Niente Famiglia B/C: i campi B (season_passage, key_phrase) sono già popolati in P1 da grafo o da decisione Ray. I campi C (hook notes, wind_visible) sono già pieni nel grafo originale.",
+    "dettaglio": [
+      {
+        "field": "entry_point_type",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "closure_type",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "register",
+        "category": "A",
+        "confidence": "medium"
+      },
+      {
+        "field": "estimated_length",
+        "category": "A",
+        "confidence": "low"
+      },
+      {
+        "field": "descriptive_pauses_count",
+        "category": "A",
+        "confidence": "high"
+      }
+    ]
+  },
+  "notes_globali": "Storia ricca strutturalmente, grafo originale già denso (premise/problem/threshold/resolution e voice_notes già canonici). P2 si limita ai 5 no_inference + alcuni provvisori a bassa confidence. Niente provvisori Famiglia B perché season_passage è stato popolato in P1 (decisione Ray \"estate + passaggio_estate_autunno\") e key_phrase è già nel grafo. Niente provvisori Famiglia C perché ogni hook ha description_visual e visual_critique_notes già popolati nel grafo.",
+  "rejected_no_inference": [],
+  "narrative_ideas": [
+    "Cardo \"prima voce\" (seed_cardo_prima_voce_individuata) → bloom potenziale s11 quando il cuccioli prendono voce collettiva al pozzo. Da verificare arc s11.",
+    "Braccialetto-firma s09 → debt_s09_to_s12: oggetto silenzioso al polso di Gabriel in chiusura saga. Preserva strato 3 senza nominazione."
+  ]
+}

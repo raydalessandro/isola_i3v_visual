@@ -1,16 +1,52 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_story_processed": "s08",
-  "stories_processed": ["s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08"],
+  "last_story_processed": "s12",
+  "stories_processed": [
+    "s01",
+    "s02",
+    "s03",
+    "s04",
+    "s05",
+    "s06",
+    "s07",
+    "s08",
+    "s09",
+    "s10",
+    "s11",
+    "s12"
+  ],
   "quotas_consumed": {
-    "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
-    "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
-    "register": {"basso": 0, "medio": 0, "alto": 0},
+    "entry_point_type": {
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 0
+    },
+    "closure_type": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    "register": {
+      "basso": 0,
+      "medio": 0,
+      "alto": 0
+    },
     "estimated_length_total": 0,
     "estimated_length_count": 0,
     "descriptive_pauses_total": 0,
-    "descriptive_pauses_count_by_value": {"0": 0, "1": 0, "2": 0}
+    "descriptive_pauses_count_by_value": {
+      "0": 0,
+      "1": 0,
+      "2": 0
+    }
   },
   "stories_log": [
     {
@@ -27,14 +63,46 @@
         },
         "totale": 8,
         "dettaglio": [
-          {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s01_h1.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s01_h1.wind_visible", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s01_h2.wind_visible", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s01_h3.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s01_h4_signature.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s01_h5.notes", "category": "C", "confidence": "low"}
+          {
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "key_phrase_indicative",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h1.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h1.wind_visible",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h2.wind_visible",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h3.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h4_signature.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s01_h5.notes",
+            "category": "C",
+            "confidence": "low"
+          }
         ]
       },
       "no_inference_fields_left_null": {
@@ -66,7 +134,9 @@
       "callbacks_made": [],
       "debts_opened": [],
       "debts_closed": [],
-      "misalignments_logged": ["mis_001"],
+      "misalignments_logged": [
+        "mis_001"
+      ],
       "notes": "Prima storia migrata (apertura saga, ciclo A inverno). 8 provvisori validi popolati in P2a (1A + 3B + 4C). I 5 no_inference_fields restano null nel canonical: decisione Ray in fase C/D. Le quote di saga (entry_point_type, closure_type, register, estimated_length, descriptive_pauses_count) NON vengono incrementate qui: saranno conteggiate solo dopo che Ray avra' deciso i valori autoriali. CORREZIONE post-pubblicazione (Ray review): attribute_dominant nel canonical era 'delta' (simbolo legacy v1.1, copiato pari-pari dall'old_node senza rimappatura); corretto a 'distinguere' (enum canonico v1.2). verify_output_integrity.py ri-eseguito: PASS. Confidence aggiunta ai provvisori (mappatura: A=high, B=medium, C=low). Patch al MIGRATION_PROMPT applicata per evitare il bug su s02-s12."
     },
     {
@@ -83,13 +153,41 @@
         },
         "totale": 7,
         "dettaglio": [
-          {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s02_h1.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s02_h2.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s02_h3_signature.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s02_h4.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s02_h5.notes", "category": "C", "confidence": "low"}
+          {
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "key_phrase_indicative",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s02_h1.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s02_h2.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s02_h3_signature.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s02_h4.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s02_h5.notes",
+            "category": "C",
+            "confidence": "low"
+          }
         ]
       },
       "no_inference_fields_left_null": {
@@ -119,12 +217,24 @@
         ]
       },
       "callbacks_made": [
-        {"callback_id": "cb_s02_001", "from_story": "s01", "element": "bastoncino_noah", "type": "oggetto"},
-        {"callback_id": "cb_s02_002", "from_story": "s01", "element": "gesto_firma_noah_raccoglie", "type": "gesto"}
+        {
+          "callback_id": "cb_s02_001",
+          "from_story": "s01",
+          "element": "bastoncino_noah",
+          "type": "oggetto"
+        },
+        {
+          "callback_id": "cb_s02_002",
+          "from_story": "s01",
+          "element": "gesto_firma_noah_raccoglie",
+          "type": "gesto"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
-      "misalignments_logged": ["mis_002"],
+      "misalignments_logged": [
+        "mis_002"
+      ],
       "notes": "Seconda storia migrata (centro_blocco_a, ciclo A inverno, signature: 'Il Riflesso nella Pozza'). 7 provvisori validi (0A + 4B + 3C). I 5 no_inference_fields restano null nel canonical (hint_neutro forniti, non proposte). Cambio metodo P1: sub-agente fallito 3/3 con stream timeout, sostituito con script `_porting_grafo/scripts/migrate_p1.py` parametrico (idempotente, applica REGOLA 0.5 automaticamente, riusabile s03-s12). P0 risolto in OPZIONE A (pozza_abbeveratoio_pastori aggiunta al catalogo prima di P1, mis_002 -> resolved). Tutti i debts_opened/closed dell'old_node erano seed_refs: archiviati per REGOLA 0ter, non entrati nel canonical (tracciati nelle migration_notes). Pre-eco Pattern A in s02_h4 (cerchi argentei sull'acqua, mai nominato), prima manifestazione visiva della famiglia Pattern A in saga (semina vera in S6, prima scena attiva S7). Post-review Ray: FLAG 1 (callbacks.to_story mancante) e FLAG 2 (oggetti_simbolo non filtrato) corretti, REGOLE 0.6 + 0.7 aggiunte al MIGRATION_PROMPT, mis_003 logged."
     },
     {
@@ -141,17 +251,47 @@
         },
         "totale": 6,
         "dettaglio": [
-          {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s03_h4.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s03_h5.notes", "category": "A", "confidence": "high"}
+          {
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s03_h1.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s03_h2_signature.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s03_h3.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s03_h4.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s03_h5.notes",
+            "category": "A",
+            "confidence": "high"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md REGOLA 0.2: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. P2 ha aggiunto un hint_neutro per ciascuno in s03_provisional.json#rejected_no_inference."
       },
       "seeds": {
@@ -169,11 +309,19 @@
         "bloomed_here": []
       },
       "callbacks_made": [
-        {"callback_id": "cb_s03_001", "from_story": "s01", "to_story": "s03", "element": "fermarsi_come_gesto_attivo", "type": "strutturale_tematico"}
+        {
+          "callback_id": "cb_s03_001",
+          "from_story": "s01",
+          "to_story": "s03",
+          "element": "fermarsi_come_gesto_attivo",
+          "type": "strutturale_tematico"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
-      "misalignments_logged": ["mis_004"],
+      "misalignments_logged": [
+        "mis_004"
+      ],
       "notes": "Terza storia migrata (chiusura_blocco_a_passaggio_stagionale, ciclo A si chiude per accumulo silenzioso, signature: 'Il Pallone oltre la Foresta'). Distribuzione provvisori migliore di s01-s02: 1A + 4B + 1C (totale 6 — key_phrase_indicative + key_phrase_attributed_to gia' nel canonical, non provvisori P2). CASO SPECIALE: key_phrase_indicative attribuita a personaggio (Rovo: 'Le cose della Foresta hanno il loro orario'). key_phrase_attributed_to='rovo' promosso al canonical via mapping (REGOLA 0.8). block_position normalizzato 'chiusura_blocco_a_passaggio_stagionale' -> 'chiusura_blocco_a' (REGOLA 0.9 aggiunta post-review). Wind_active=null. mis_004 (pallone_di_stoffa_cucita) logged status open (OPZIONE B). Prime apparizioni: rovo + bru."
     },
     {
@@ -183,23 +331,69 @@
       "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s04/s04_provisional.json",
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s04/s04_canonical.json",
       "quote_consumed": {
-        "by_category": {"A": 2, "B": 5, "C": 2},
+        "by_category": {
+          "A": 2,
+          "B": 5,
+          "C": 2
+        },
         "totale": 9,
         "dettaglio": [
-          {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s04_h1.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s04_h2.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s04_h3_signature.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s04_h4.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s04_h5.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s04_h6.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s04_h7.notes", "category": "C", "confidence": "low"}
+          {
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "key_phrase_indicative",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h1.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h2.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h3_signature.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h4.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h5.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h6.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s04_h7.notes",
+            "category": "C",
+            "confidence": "low"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D. hint_neutro forniti in s04_provisional.json#rejected_no_inference."
       },
       "seeds": {
@@ -230,11 +424,36 @@
         ]
       },
       "callbacks_made": [
-        {"callback_id": "cb_s04_001", "from_story": "s01", "to_story": "s04", "type": "gesto_trasferito_tra_fratelli"},
-        {"callback_id": "cb_s04_002", "from_story": "s01", "to_story": "s04", "type": "frase_eco_diretta"},
-        {"callback_id": "cb_s04_003", "from_story": "s03", "to_story": "s04", "type": "bloom_sonoro"},
-        {"callback_id": "cb_s04_004", "from_story": "s03", "to_story": "s04", "type": "personaggio_secondo_registro"},
-        {"callback_id": "cb_s04_005", "from_story": "s03", "to_story": "s04", "type": "personaggio_sviluppo_presenza"}
+        {
+          "callback_id": "cb_s04_001",
+          "from_story": "s01",
+          "to_story": "s04",
+          "type": "gesto_trasferito_tra_fratelli"
+        },
+        {
+          "callback_id": "cb_s04_002",
+          "from_story": "s01",
+          "to_story": "s04",
+          "type": "frase_eco_diretta"
+        },
+        {
+          "callback_id": "cb_s04_003",
+          "from_story": "s03",
+          "to_story": "s04",
+          "type": "bloom_sonoro"
+        },
+        {
+          "callback_id": "cb_s04_004",
+          "from_story": "s03",
+          "to_story": "s04",
+          "type": "personaggio_secondo_registro"
+        },
+        {
+          "callback_id": "cb_s04_005",
+          "from_story": "s03",
+          "to_story": "s04",
+          "type": "personaggio_sviluppo_presenza"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
@@ -248,24 +467,74 @@
       "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s05/s05_provisional.json",
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s05/s05_canonical.json",
       "quote_consumed": {
-        "by_category": {"A": 4, "B": 5, "C": 1},
+        "by_category": {
+          "A": 4,
+          "B": 5,
+          "C": 1
+        },
         "totale": 10,
         "dettaglio": [
-          {"field": "season_passage", "category": "B", "confidence": "medium"},
-          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s05_h1.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s05_h2.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s05_h3.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s05_h4.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s05_h5_signature.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s05_h6.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s05_h7_radura.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s05_h8.notes", "category": "A", "confidence": "high"}
+          {
+            "field": "season_passage",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "key_phrase_indicative",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h1.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h2.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h3.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h4.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h5_signature.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h6.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h7_radura.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s05_h8.notes",
+            "category": "A",
+            "confidence": "high"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D. hint_neutro forniti in s05_provisional.json#rejected_no_inference."
       },
       "seeds": {
@@ -290,13 +559,30 @@
         ]
       },
       "callbacks_made": [
-        {"callback_id": "cb_s05_001", "from_story": "s04", "to_story": "s05", "type": "gesto_richiamo"},
-        {"callback_id": "cb_s05_002", "from_story": "s04", "to_story": "s05", "type": "principio_fisico_esteso"},
-        {"callback_id": "cb_s05_003", "from_story": "s04", "to_story": "s05", "type": "personaggio_sviluppo_agency"}
+        {
+          "callback_id": "cb_s05_001",
+          "from_story": "s04",
+          "to_story": "s05",
+          "type": "gesto_richiamo"
+        },
+        {
+          "callback_id": "cb_s05_002",
+          "from_story": "s04",
+          "to_story": "s05",
+          "type": "principio_fisico_esteso"
+        },
+        {
+          "callback_id": "cb_s05_003",
+          "from_story": "s04",
+          "to_story": "s05",
+          "type": "personaggio_sviluppo_agency"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
-      "misalignments_logged": ["mis_005"],
+      "misalignments_logged": [
+        "mis_005"
+      ],
       "notes": "Quinta storia (centro_blocco_b, primavera piena, ciclo connettere costruttivo, signature: 'Il Ponte di Rami'). 10 provvisori (4A + 5B + 1C — distribuzione confidence ALTISSIMA: best ratio della saga finora). 8 hook (vs 5 standard) per scena tecnica complessa. Highlight: PATTERN_A_PRIMA_SEMINA_FORMALE in h5 ('le cose cadute diventano materia', mai nominato — Pattern A da qui in poi cammina). EREDITA_TECNICA_E_MATERIALE in h4 (Nodo trasmette a Elias: capacita' nodo marinaro + materiale corda dal braccio). NODO_PRIMA_APPARIZIONE in h3 (modalita' commissione Coltivatori vs S8 modalita' Mantenitore). BRU_BLOOM_AGENCY (presenza concreta s04 -> compagno scoperta s05 con agency: indica radura, sceglie pertiche, si siede al centro). PAURA_ELIAS_MODULAZIONE: fare-senza-avere (S5) verso capire-senza-avere (S6). 3 callbacks tutti da s04 (bru gesto, foresta principio, bru agency). mis_005 logged: name discrepancy 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo), severity bassa, status open."
     },
     {
@@ -306,41 +592,122 @@
       "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s06/s06_provisional.json",
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s06/s06_canonical.json",
       "quote_consumed": {
-        "by_category": {"A": 3, "B": 4, "C": 2},
+        "by_category": {
+          "A": 3,
+          "B": 4,
+          "C": 2
+        },
         "totale": 9,
         "dettaglio": [
-          {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s06_h1.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s06_h2.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s06_h3.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s06_h4.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s06_h5.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s06_h6_signature.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s06_h7.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s06_h8.notes", "category": "B", "confidence": "medium"}
+          {
+            "field": "key_phrase_indicative",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h1.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h2.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h3.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h4.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h5.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h6_signature.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h7.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s06_h8.notes",
+            "category": "B",
+            "confidence": "medium"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
       },
       "seeds": {
-        "planted": ["seed_vecchie_indicare_in_silenzio", "seed_cornetto_briciole_pattern_a_rinforzo"],
-        "picked_up": ["seed_noah_raccoglie_oggetti", "seed_stria_vede_prima"],
-        "maturing_here": ["seed_paura_elias_piccolo"],
+        "planted": [
+          "seed_vecchie_indicare_in_silenzio",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "picked_up": [
+          "seed_noah_raccoglie_oggetti",
+          "seed_stria_vede_prima"
+        ],
+        "maturing_here": [
+          "seed_paura_elias_piccolo"
+        ],
         "bloomed_here": []
       },
       "callbacks_made": [
-        {"callback_id": "cb_s06_001", "from_story": "s05", "to_story": "s06", "type": "economia_personaggi_menzione"},
-        {"callback_id": "cb_s06_002", "from_story": "s04", "to_story": "s06", "type": "ambiente_calendario_stagionale"},
-        {"callback_id": "cb_s06_003", "from_story": "s01", "to_story": "s06", "type": "voce_ricorrente"},
-        {"callback_id": "cb_s06_004", "from_story": "s02", "to_story": "s06", "type": "gesto_ricorrente_personaggio"},
-        {"callback_id": "cb_s06_005", "from_story": "s02", "to_story": "s06", "type": "nota_strutturale_chiusa_offscreen"}
+        {
+          "callback_id": "cb_s06_001",
+          "from_story": "s05",
+          "to_story": "s06",
+          "type": "economia_personaggi_menzione"
+        },
+        {
+          "callback_id": "cb_s06_002",
+          "from_story": "s04",
+          "to_story": "s06",
+          "type": "ambiente_calendario_stagionale"
+        },
+        {
+          "callback_id": "cb_s06_003",
+          "from_story": "s01",
+          "to_story": "s06",
+          "type": "voce_ricorrente"
+        },
+        {
+          "callback_id": "cb_s06_004",
+          "from_story": "s02",
+          "to_story": "s06",
+          "type": "gesto_ricorrente_personaggio"
+        },
+        {
+          "callback_id": "cb_s06_005",
+          "from_story": "s02",
+          "to_story": "s06",
+          "type": "nota_strutturale_chiusa_offscreen"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
-      "misalignments_logged": ["mis_006"],
+      "misalignments_logged": [
+        "mis_006"
+      ],
       "notes": "Sesta storia (chiusura_blocco_b, passaggio primavera->estate, signature: 'Il Dono per Memolo'). CONNETTERE_COMPIUTO. 9 provvisori (3A + 4B + 2C). PRIMO_GIRO_COMPLETO_QUATTRO_QUARTIERI saga. VECCHIE_FIRMA_GESTUALE_ISTITUITA. PATTERN_A_DUE_IMMAGINI. PAURA_ELIAS modulazione capire-senza-avere. Caso speciale TUTTO: 4 normalizzazioni script (REGOLA 0.5/0.9/0.10/3). key_phrase_attributed_to='memolo' promosso al canonical (REGOLA 0.8). mis_006 RESOLVED post-review Ray (3 FLAG fix: characters_id_renames vecchie_del_mercato->mercato_del_mezzogiorno, locations_secondary_id_renames mercato_del_mezzogiorno_panca_di_pietra->panca_di_pietra + role esteso, location_primary_override tutta_isola_quattro_quartieri_attraversati->centro_villaggio + note). Pattern script generico per override riusabile s07-s12. Prime apparizioni narrative: memolo + pun + zolla."
     },
     {
@@ -350,35 +717,111 @@
       "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s07/s07_provisional.json",
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s07/s07_canonical.json",
       "quote_consumed": {
-        "by_category": {"A": 2, "B": 2, "C": 3},
+        "by_category": {
+          "A": 2,
+          "B": 2,
+          "C": 3
+        },
         "totale": 7,
         "dettaglio": [
-          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s07_h1.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s07_h2.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s07_h3.notes", "category": "C", "confidence": "low"},
-          {"field": "visual_anchors.scene_hooks.s07_h4.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.s07_h5.notes", "category": "B", "confidence": "medium"},
-          {"field": "visual_anchors.scene_hooks.s07_h6.notes", "category": "A", "confidence": "high"}
+          {
+            "field": "key_phrase_indicative",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h1.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h2.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h3.notes",
+            "category": "C",
+            "confidence": "low"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h4.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h5.notes",
+            "category": "B",
+            "confidence": "medium"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.s07_h6.notes",
+            "category": "A",
+            "confidence": "high"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
       },
       "seeds": {
-        "planted": ["seed_bartolo_vede_e_basta", "seed_gabriel_micro_occhiata_noah_cresciuto"],
-        "picked_up": ["seed_nodo_marinaro_capacita_elias", "seed_pattern_a_rami_caduti_diventano_materia", "seed_cornetto_briciole_pattern_a_rinforzo", "seed_noah_raccoglie_oggetti"],
-        "maturing_here": ["seed_pattern_a_rami_caduti_diventano_materia", "seed_cornetto_briciole_pattern_a_rinforzo"],
-        "bloomed_here": ["seed_nodo_marinaro_capacita_elias"]
+        "planted": [
+          "seed_bartolo_vede_e_basta",
+          "seed_gabriel_micro_occhiata_noah_cresciuto"
+        ],
+        "picked_up": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_cornetto_briciole_pattern_a_rinforzo",
+          "seed_noah_raccoglie_oggetti"
+        ],
+        "maturing_here": [
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "bloomed_here": [
+          "seed_nodo_marinaro_capacita_elias"
+        ]
       },
       "callbacks_made": [
-        {"callback_id": "cb_s07_001", "from_story": "s05", "to_story": "s07", "type": "capacita_tecnica_applicata"},
-        {"callback_id": "cb_s07_002", "from_story": "s05", "to_story": "s07", "type": "pattern_a_famiglia_immagini_trasversale"},
-        {"callback_id": "cb_s07_003", "from_story": "s06", "to_story": "s07", "type": "pattern_a_famiglia_immagini_trasversale"},
-        {"callback_id": "cb_s07_004", "from_story": "s04", "to_story": "s07", "type": "gesto_ricorrente_invertito"},
-        {"callback_id": "cb_s07_005", "from_story": "s06", "to_story": "s07", "type": "personaggio_sviluppo_caratteriale"}
+        {
+          "callback_id": "cb_s07_001",
+          "from_story": "s05",
+          "to_story": "s07",
+          "type": "capacita_tecnica_applicata"
+        },
+        {
+          "callback_id": "cb_s07_002",
+          "from_story": "s05",
+          "to_story": "s07",
+          "type": "pattern_a_famiglia_immagini_trasversale"
+        },
+        {
+          "callback_id": "cb_s07_003",
+          "from_story": "s06",
+          "to_story": "s07",
+          "type": "pattern_a_famiglia_immagini_trasversale"
+        },
+        {
+          "callback_id": "cb_s07_004",
+          "from_story": "s04",
+          "to_story": "s07",
+          "type": "gesto_ricorrente_invertito"
+        },
+        {
+          "callback_id": "cb_s07_005",
+          "from_story": "s06",
+          "to_story": "s07",
+          "type": "personaggio_sviluppo_caratteriale"
+        }
       ],
       "debts_opened": [],
       "debts_closed": [],
@@ -392,31 +835,92 @@
       "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s08/s08_provisional.json",
       "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s08/s08_canonical.json",
       "quote_consumed": {
-        "by_category": {"A": 2, "B": 0, "C": 0},
+        "by_category": {
+          "A": 2,
+          "B": 0,
+          "C": 0
+        },
         "totale": 2,
         "dettaglio": [
-          {"field": "visual_anchors.scene_hooks.scene_hook_crack_caduta_noce.notes", "category": "A", "confidence": "high"},
-          {"field": "visual_anchors.scene_hooks.scene_hook_gabriel_pozzo_duplice_centro.notes", "category": "A", "confidence": "high"}
+          {
+            "field": "visual_anchors.scene_hooks.scene_hook_crack_caduta_noce.notes",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "visual_anchors.scene_hooks.scene_hook_gabriel_pozzo_duplice_centro.notes",
+            "category": "A",
+            "confidence": "high"
+          }
         ]
       },
       "no_inference_fields_left_null": {
         "count": 5,
-        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "fields": [
+          "entry_point_type",
+          "closure_type",
+          "register",
+          "estimated_length",
+          "descriptive_pauses_count"
+        ],
         "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
       },
       "seeds": {
-        "planted": ["seed_nido_vuoto_curato_da_noah", "seed_memolo_sul_pozzo_con_gabriel"],
-        "picked_up": ["seed_nodo_marinaro_capacita_elias", "seed_noah_raccoglie_oggetti"],
-        "maturing_here": ["seed_gabriel_micro_occhiata_noah_cresciuto", "seed_cornetto_briciole_pattern_a_rinforzo"],
-        "bloomed_here": ["seed_pattern_a_rami_caduti_diventano_materia", "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto", "seed_vecchie_indicare_in_silenzio"]
+        "planted": [
+          "seed_nido_vuoto_curato_da_noah",
+          "seed_memolo_sul_pozzo_con_gabriel"
+        ],
+        "picked_up": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_noah_raccoglie_oggetti"
+        ],
+        "maturing_here": [
+          "seed_gabriel_micro_occhiata_noah_cresciuto",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "bloomed_here": [
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto",
+          "seed_vecchie_indicare_in_silenzio"
+        ]
       },
       "callbacks_made": [
-        {"callback_id": "cb_s08_001", "from_story": "s05", "to_story": "s08", "type": "capacita_tecnica_applicata_in_crisi_reale"},
-        {"callback_id": "cb_s08_002", "from_story": "s06", "to_story": "s08", "type": "pattern_a_famiglia_immagini_trasversale"},
-        {"callback_id": "cb_s08_003", "from_story": "s06", "to_story": "s08", "type": "personaggio_modalita_vocale_ricorrente"},
-        {"callback_id": "cb_s08_004", "from_story": "s06", "to_story": "s08", "type": "gesto_ricorrente_gruppo_cornice_silenziosa"},
-        {"callback_id": "cb_s08_005", "from_story": "s06", "to_story": "s08", "type": "personaggio_cammeo_ricorrente_e_lore_hook_prima_menzione"},
-        {"callback_id": "cb_s08_006", "from_story": "s05", "to_story": "s08", "type": "onomatopea_firma_personaggio_ricorrente"}
+        {
+          "callback_id": "cb_s08_001",
+          "from_story": "s05",
+          "to_story": "s08",
+          "type": "capacita_tecnica_applicata_in_crisi_reale"
+        },
+        {
+          "callback_id": "cb_s08_002",
+          "from_story": "s06",
+          "to_story": "s08",
+          "type": "pattern_a_famiglia_immagini_trasversale"
+        },
+        {
+          "callback_id": "cb_s08_003",
+          "from_story": "s06",
+          "to_story": "s08",
+          "type": "personaggio_modalita_vocale_ricorrente"
+        },
+        {
+          "callback_id": "cb_s08_004",
+          "from_story": "s06",
+          "to_story": "s08",
+          "type": "gesto_ricorrente_gruppo_cornice_silenziosa"
+        },
+        {
+          "callback_id": "cb_s08_005",
+          "from_story": "s06",
+          "to_story": "s08",
+          "type": "personaggio_cammeo_ricorrente_e_lore_hook_prima_menzione"
+        },
+        {
+          "callback_id": "cb_s08_006",
+          "from_story": "s05",
+          "to_story": "s08",
+          "type": "onomatopea_firma_personaggio_ricorrente"
+        }
       ],
       "debts_opened": [
         "debt_s08_to_s10_nido_vuoto_bloom_notte",
@@ -432,8 +936,256 @@
         "debt_s06_to_s08_vecchie_indicare_in_silenzio_primo_bloom_cammeo",
         "debt_s05_to_s08_pattern_a_continuazione_parte"
       ],
-      "misalignments_logged": ["mis_007"],
+      "misalignments_logged": [
+        "mis_007"
+      ],
       "notes": "Ottava storia (centro_blocco_c, signature 'L'Albero che Cadde di Sera'). 2 provvisori P2 (entrambi A high). PATTERN_A_BLOOM_PIENO seconda scena attiva post-S7 (CRACK noce caduto, ramo leva su pozzo deflette traiettoria, nessuno ferito). WHEN_WATER_TREMBLES PRIMA MENZIONE saga via Liu' (1 di 2). PRIMA night_scene vera saga. CONTRIBUTI_FRATELLI_SEPARATI per la prima volta visibile. Precursore PAURA_GABRIEL via varco foglie. FRASE_PRECISA_MEMOLO seconda saga ('L'albero ha aspettato che nessuno fosse sotto') promossa al canonical key_phrase_indicative top-level via REGOLA 0.11 (consolidamento voice fields dispersi). 6 debt_vero_dict opened + 4 closed (PRIMA STORIA SAGA con debts non-archived). mis_007 RESOLVED in P1. Post-review Ray: REGOLA 0.11 NUOVA introdotta (consolidamento voice fields: key_phrase_spoken/notes su chars, frase_precisa_visibile/voice_constraint su hooks, key_action singolare->lista, distinct_from_sNN->distinct_from_other_story). Schema additionalProperties: false su character_in_scene + scene_hook ora rispettato. Tutto il restante caso speciale (REGOLA 0.10 estate_piena_tarda, hooks dict-non-standard, locations_secondary id rename, quartieri override, debt schema normalize, 3 debt_id retrofit) gia' applicato. P1 finale PASS, regression test s01-s07 PASS."
+    },
+    {
+      "story_id": "s09",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "output/s09/s09_provisional.json",
+      "canonical_file": "output/s09/s09_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 5,
+          "B": 0,
+          "C": 0
+        },
+        "totale": 5,
+        "_note": "Provvisori solo Famiglia A (5 no_inference_fields). Niente Famiglia B/C: i campi B (season_passage, key_phrase) sono già popolati in P1 da grafo o da decisione Ray. I campi C (hook notes, wind_visible) sono già pieni nel grafo originale.",
+        "dettaglio": [
+          {
+            "field": "entry_point_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "closure_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "register",
+            "category": "A",
+            "confidence": "medium"
+          },
+          {
+            "field": "estimated_length",
+            "category": "A",
+            "confidence": "low"
+          },
+          {
+            "field": "descriptive_pauses_count",
+            "category": "A",
+            "confidence": "high"
+          }
+        ]
+      },
+      "no_inference_fields_left_null": [
+        "entry_point_type",
+        "closure_type",
+        "register",
+        "estimated_length",
+        "descriptive_pauses_count"
+      ],
+      "seeds": {
+        "planted": 6,
+        "picked_up": 1,
+        "maturing_here": 1,
+        "bloomed_here": 2
+      },
+      "callbacks_made": 7,
+      "debts_opened": 6,
+      "debts_closed": 2,
+      "misalignments_logged": [
+        "mis_008"
+      ],
+      "notes": "Migrazione s09 completata in unica passata (Claude validation agent, non Code). Storia complessa: 11 chars in scene + 2 offscreen, 4 hooks, 8 debts (6 opened + 2 closed), 7 callbacks, fear_touched gabriel (status seminata). Quote consumed solo Famiglia A (5 no_inference_fields proposti per C/D, confidence: high*3, medium*1, low*1). Niente provvisori B/C: grafo originale già denso. Decisione casa_fratelli applicata: mapping a piazza_villaggio + qualifier 'interno_casa_fratelli_non_cartografato' (mis_008 resolved_by_design). Palette per ogni hook derivata meccanicamente dalla description_visual del grafo (campo schema obbligatorio, assente nel grafo originale)."
+    },
+    {
+      "story_id": "s10",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "output/s10/s10_provisional.json",
+      "canonical_file": "output/s10/s10_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 5,
+          "B": 0,
+          "C": 0
+        },
+        "totale": 5,
+        "_note": "Solo provvisori Famiglia A (5 no_inference per C/D). Niente Famiglia B/C: il grafo s10 è denso (palette in tutti i 4 hooks già nel grafo, key_phrase top-level già popolata, voice_notes complete). season_passage decisione Ray applicata in P1.",
+        "dettaglio": [
+          {
+            "field": "entry_point_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "closure_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "register",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "estimated_length",
+            "category": "A",
+            "confidence": "low"
+          },
+          {
+            "field": "descriptive_pauses_count",
+            "category": "A",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "no_inference_fields_left_null": [
+        "entry_point_type",
+        "closure_type",
+        "register",
+        "estimated_length",
+        "descriptive_pauses_count"
+      ],
+      "seeds": {
+        "planted": 0,
+        "picked_up": 3,
+        "maturing_here": 2,
+        "bloomed_here": 3
+      },
+      "callbacks_made": 5,
+      "debts_opened": 1,
+      "debts_closed": 6,
+      "misalignments_logged": [],
+      "notes": "Migrazione s10 completata in unica passata (Claude validation agent). Apertura blocco D, bloom paura Noah architrave terna strato 3 (Noah DICE). 7 chars in scene, 4 hooks, 7 debts (1 opened + 6 closed). narrator_address=True consuma 1/6 saga (cumulativo dopo s10: 3/6). night_scene=True. Pattern A continua attivo da s07/s08. Decisioni applicate: season 'autunno_pieno'→'autunno'+passage; villaggio_centrale→piazza_villaggio (id legacy synonym); interno_casa_fratelli→piazza_villaggio+qualifier (mis_008 ricorrenza, 2 hooks). 2 onomatopee wrap stringa→array. key_phrase_spoken di Noah ridondante con top-level: assorbito in note del char. Tutte le palette per hook già nel grafo (s10 più curato visivamente di s09)."
+    },
+    {
+      "story_id": "s11",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "output/s11/s11_provisional.json",
+      "canonical_file": "output/s11/s11_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 5,
+          "B": 0,
+          "C": 0
+        },
+        "totale": 5,
+        "_note": "Solo Famiglia A (5 no_inference per C/D). Niente B/C: grafo s11 denso (palette in tutti gli 8 hooks già nel grafo, key_phrase top-level già popolata). 19 debts e 5 callbacks tutti ben strutturati. paronomastico_used=true (confermato da quote_tracker, primo della saga).",
+        "dettaglio": [
+          {
+            "field": "entry_point_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "closure_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "register",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "estimated_length",
+            "category": "A",
+            "confidence": "low"
+          },
+          {
+            "field": "descriptive_pauses_count",
+            "category": "A",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "no_inference_fields_left_null": [
+        "entry_point_type",
+        "closure_type",
+        "register",
+        "estimated_length",
+        "descriptive_pauses_count"
+      ],
+      "seeds": {
+        "planted": 1,
+        "picked_up": 8,
+        "maturing_here": 1,
+        "bloomed_here": 3
+      },
+      "callbacks_made": 5,
+      "debts_opened": 2,
+      "debts_closed": 17,
+      "misalignments_logged": [],
+      "notes": "Migrazione s11 completata in unica passata (Claude validation agent). Storia centro blocco D — Festa Raccolto, bloom architrave terna strato 3 Elias (accettare via riconoscimento Vecchie + 4 coni Stria). 19 chars in scene + 3 offscreen (più popolosa saga). 8 hooks con palette tutte già nel grafo. 19 debts (2 opened + 17 closed) — chiusure architettoniche dei blocchi A/B/C confluiscono qui. paronomastico_used=True (primo della saga). narrator_address=False (cumulativo dopo s11: 3/6). Pattern A continua attivo (pre-bloom finale s12). Tre venti staffetta sui tempi del giorno. Decisioni applicate: vecchie_del_mercato → mercato_del_mezzogiorno (pattern mis_006); mercato_del_mezzogiorno_panca_di_pietra → panca_di_pietra (pattern mis_007); villaggio_centrale → piazza_villaggio (synonym brief). 0 nuovi misalignments. Migrazione hook particolarmente pulita: solo campi schema (no description_visual/visual_critique/voice_constraint)."
+    },
+    {
+      "story_id": "s12",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "output/s12/s12_provisional.json",
+      "canonical_file": "output/s12/s12_canonical.json",
+      "quote_consumed": {
+        "by_category": {
+          "A": 5,
+          "B": 0,
+          "C": 0
+        },
+        "totale": 5,
+        "_note": "Solo Famiglia A (5 no_inference per C/D). Niente B/C: grafo s12 denso (palette in tutti gli 8 hooks già nel grafo, key_phrase top-level eccezionalmente null per design \"sigillo narratore non frase-soglia\"). Quote saga consumate qui (verifica): narrator_address True (4/6 saga), narrator_meta_voice True (1/2 saga, prima e ultima volta), grunto_memory_fragment True (1/1 saga, unicum), when_water_trembles True (2/2 saga quota chiusa).",
+        "dettaglio": [
+          {
+            "field": "entry_point_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "closure_type",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "register",
+            "category": "A",
+            "confidence": "high"
+          },
+          {
+            "field": "estimated_length",
+            "category": "A",
+            "confidence": "low"
+          },
+          {
+            "field": "descriptive_pauses_count",
+            "category": "A",
+            "confidence": "medium"
+          }
+        ]
+      },
+      "no_inference_fields_left_null": [
+        "entry_point_type",
+        "closure_type",
+        "register",
+        "estimated_length",
+        "descriptive_pauses_count"
+      ],
+      "seeds": {
+        "planted": 3,
+        "picked_up": 13,
+        "maturing_here": 0,
+        "bloomed_here": 10
+      },
+      "callbacks_made": 9,
+      "debts_opened": 0,
+      "debts_closed": 16,
+      "misalignments_logged": [],
+      "notes": "Migrazione s12 completata in unica passata (Claude validation agent). CHIUSURA SAGA. 'Quando i Tre Venti Suonano Insieme' — concerto tre venti (unicum), frammento Grunto unicum saga ('Una volta era visto. Adesso si respira.'), sigillo narratore, cornice forno simmetrica con s1, bloom architrave terna strato 3 Gabriel TIENE. 9 chars in scene + 6 offscreen, 8 hooks, 16 debts_closed (0 opened, niente in sospeso), 9 callbacks. 6 quartieri attraversati (saga compiuta). Decisioni applicate: 9 debt_id legacy → pattern canonico (3 multi-target con flag in note); 3 hook con location stringa composita risolti; key_phrase_attributed_to omesso (era null nel grafo, schema lo permette opzionale). Quote saga finali raggiunte: narrator_address 4/6 (s04+s07+s10+s12), narrator_meta_voice 1/2 (solo s12), grunto_memory_fragment 1/1 (solo s12 unicum), when_water_trembles 2/2 (s08+s12 quota chiusa), paronomastico_used 1 storia (s11). when_water_trembles=True, pattern_a=bloomed (chiusura). fear_touched.gabriel.status=bloomed (terna strato 3 completa). 0 nuovi misalignments. Migrazione Fase E delle 12 storie completata."
     }
   ],
   "quotas_remaining_check": {
@@ -447,9 +1199,14 @@
       "4": 2,
       "5": 2,
       "6": 1,
-      "7": [4, 5]
+      "7": [
+        4,
+        5
+      ]
     },
-    "register_forbidden": ["molto_alto"],
+    "register_forbidden": [
+      "molto_alto"
+    ],
     "register_distribution_natural": true,
     "estimated_length_target": {
       "corte_800_900": 2,
@@ -457,9 +1214,19 @@
       "lunghe_1050_1200": 4
     },
     "descriptive_pauses_target": {
-      "0": [2, 3],
-      "1": [4, 5],
-      "2": [3, 4]
-    }
+      "0": [
+        2,
+        3
+      ],
+      "1": [
+        4,
+        5
+      ],
+      "2": [
+        3,
+        4
+      ]
+    },
+    "narrator_address_remaining": "4/6 (s01-s08: 2 consumati [s04,s07], s09: 0)"
   }
 }

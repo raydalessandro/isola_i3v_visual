@@ -1,0 +1,465 @@
+{
+  "id": "s09",
+  "title_provvisorio": "Quel Pomeriggio di Ottobre",
+  "cycle": "C",
+  "attribute_dominant": "cambiare",
+  "block_position": "chiusura_blocco_c",
+  "season": "estate",
+  "season_passage": "passaggio_estate_autunno",
+  "wind_active": "vento_mulinello",
+  "wind_transition": "mulinello_sera_calmo_non_piu_forte_come_s8_si_e_esaurito_col_virare_della_stagione_taglio_alba_leggero_primo_quasi_invernale",
+  "wind_notes": "Mulinello sera calmo, regime di passaggio stagionale. Non piu' il Mulinello eccezionalmente forte di S8 (che si e' esaurito col crack del noce e con l'afa estiva che virava). La sera di S9 il Mulinello passa attraverso le finestre aperte della casa dei fratelli mentre mangiano il dolce — presenza leggera, sposta tende, sfoglia fogli, mai violento. All'alba (scena mattino scuola) Taglio ha gia' il primo morso fresco di ottobre, non piu' il Taglio tiepido di agosto. Primo Taglio quasi-invernale della saga. NOTA: questa e' percezione soggettiva di Gabriel (vedi structural_note dedicata), non cronaca meteo oggettiva. Il bambino di 4 sente che l'aria e' cambiata, il bambino di 9 sente che qualcosa si sta virando, l'adulto sente che l'anno gira.",
+  "pattern_a_active": "none",
+  "pattern_a_notes": "S9 e' skippata nella traiettoria Pattern A (semina S5/S6 → attivo S7 → bloom S8 → notturna S10 → collettiva S11 → chiusura S12). La storia e' privata, intima, di paura nascente — non si presta al pattern. Eventuale eco tematica leggera nel dolce di castagne (prime dell'anno, stagionalita' che arriva — micro-rinforzo semantico del frame 'cornetto/briciole' gia' maturing) ma non scena attiva. Il Pattern A lavora attorno a S9, non in S9.",
+  "night_scene": false,
+  "night_scene_notes": "S9 si chiude a sera calma, non notte. Il Mulinello attraversa le finestre aperte mentre mangiano il dolce; quando si va a letto la storia e' gia' chiusa. Scene notturne saga: s01 parziale Pascoli, s08 sera Mulinello forte + lanterne crepuscolo, s10 notte intera scena piena, s12 passaggio crepuscolare — S9 non partecipa al contatore.",
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "forno",
+    "note": "Forno di Fiamma cuore della storia S9 — luogo-persona cornice. Tre momenti: (1) mattino presto, Fiamma impasta il dolce di castagne prima dell'alba, Memolo e' passato a dirglielo del compleanno, Liu' vola al Forno dalla scuola (nuova notizia: i cuccioli sanno); (2) pomeriggio, Fiamma cuoce il dolce, Gabriel al Forno con Memolo per un attimo (cammeo tenero — castagna cruda passata dalla mano di Memolo alla mano di Gabriel); (3) sera, i tre fratelli vanno al Forno a prendere il dolce, Fiamma chiacchiera, detto popolare generico. Il Forno e' il sistema nervoso informale del villaggio — la notizia del compleanno arriva prima del festeggiato. Cornice madre-calore di Fiamma per Gabriel (variante distribuita Bible §4.1 + ARCHI §0.3) — non default madre dei fratelli. Quartiere Fuoco-est, Via dell'Alba, casa-forno col camino che fuma prima dell'alba."
+  },
+  "locations_secondary": [
+    {
+      "id": "scuola_stria",
+      "role": "cornice_scuola_mattino_saluto_stria_frase_rilancio_cuccioli_sentono_liu_vola_al_forno"
+    },
+    {
+      "id": "via_dell_alba",
+      "role": "via_di_passaggio_quartiere_fuoco_primi_passi_nell_aria_di_ottobre_foglie_per_terra"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_festeggiato_fulcro_percettivo",
+      "mode": "osservatore_di_se_per_prima_volta_in_saga",
+      "fear_touched": "emerge_paura_cresceranno_diversi_gesto_fette_diseguali_poi_uguali_sorriso_commosso_braccialetto_tenuto_in_mano"
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_portatore_del_gesto_che_scuote_gabriel",
+      "mode": "noah_nuovo_competenza_annoda_da_solo_frase_non_sono_piu_piccolo_come_prima"
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_che_capisce_senza_dire",
+      "mode": "micro_sguardo_variante_leggera_vede_gabriel_voltarsi_capisce_non_dice_niente_stempera_con_pratica_fette_uguali_piatto_micro_cenno_capo_gabriel_fine_sera"
+    },
+    {
+      "id": "stria",
+      "role": "cornice_scuola_mattino_maestra_zia",
+      "mode": "sguardo_che_rilancia_una_frase_tu_cosa_farai_oggi_che_hai_un_anno_in_piu"
+    },
+    {
+      "id": "fiamma",
+      "role": "madre_calore_variante_distribuita_non_default",
+      "mode": "chiacchiera",
+      "detti_count": 1,
+      "detti_notes": "chiacchiera_detto_popolare_generico_tempo_che_passa_dolce_castagne_prime_dell_anno"
+    },
+    {
+      "id": "memolo",
+      "role": "cammeo_tenero_primo_bloom_parziale_seed_memolo_sul_pozzo_con_gabriel",
+      "mode": "micro_azione_fisica_passare_una_castagna_cruda_dal_cesto_di_zolla_nella_mano_di_gabriel_al_forno_pomeriggio_senza_parole_inversione_ruoli_rispetto_a_s8"
+    },
+    {
+      "id": "pun",
+      "role": "cucciolo_scuola_memoria_pratica_dice_memolo_glielo_ha_detto_a_fiamma_stamattina",
+      "mode": "cornice_collettivo_mattino_sente_la_frase_di_stria"
+    },
+    {
+      "id": "toba",
+      "role": "cucciolo_scuola_domanda_che_apre_E_poi",
+      "mode": "cornice_collettivo_mattino"
+    },
+    {
+      "id": "bru",
+      "role": "cucciolo_scuola_presenza_silenziosa",
+      "mode": "cornice_collettivo_mattino_dice_solo_si"
+    },
+    {
+      "id": "cardo",
+      "role": "cucciolo_scuola_frizione_prima_voce_saga",
+      "mode": "provocazione_eh_ma_chi_te_l_ha_detto_che_e_il_tuo_compleanno_non_ripresa_ognuno_la_sposta_a_modo_suo"
+    },
+    {
+      "id": "liu",
+      "role": "cucciolo_scuola_presenza_aerea_fonte_informale_notizia",
+      "mode": "vola_via_verso_il_forno_dopo_scena_scuola_precede_i_fratelli_conferma_a_fiamma_che_i_cuccioli_sanno"
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "zolla",
+      "role": "offscreen_fornitore_castagne_calendario_stagionale_cesto_al_forno"
+    },
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "background_raccolto_castagne_ghiande_che_parte_ponte_verso_s11"
+    }
+  ],
+  "seeds_planted": [
+    "seed_paura_gabriel_fratelli_crescono_diversi",
+    "seed_braccialetto_di_noah_a_gabriel",
+    "seed_fette_uguali",
+    "seed_noah_annoda_da_solo",
+    "seed_compleanno_come_rito_non_rito",
+    "seed_cardo_prima_voce_individuata"
+  ],
+  "seeds_picked_up": [
+    "seed_stria_vede_prima"
+  ],
+  "seeds_maturing_here": [
+    "seed_paura_elias_piccolo"
+  ],
+  "seeds_bloomed_here": [
+    "seed_gabriel_micro_occhiata_noah_cresciuto",
+    "seed_memolo_sul_pozzo_con_gabriel"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s09_001",
+      "from_story": "s02",
+      "to_story": "s09",
+      "type": "archetipo_relazionale_frase_rilancio",
+      "description": "Stria sulla porta della scuola, mattino S9, rilancia a Gabriel 'Tu cosa farai oggi che hai un anno in piu'?' — archetipo S2 ('Tu cosa pensi?') + cornice S6 ('E quale cosa?'). Sa che Gabriel attraversera' qualcosa oggi? Non dichiarato. Preparazione lontana bloom S11 (quattro coni a Elias intenzionali).",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_002",
+      "from_story": "s01",
+      "to_story": "s09",
+      "type": "fiamma_modalita_chiacchiera_detto_popolare_generico",
+      "description": "Fiamma al Forno, sera S9, mentre toglie il dolce di castagne dal forno, chiacchiera col fratello festeggiato. Detto popolare generico: 'Eh ma si sa, anno che gira non e' anno che torna. Ne fa un altro, diverso.' 1 detto, dentro quota. Callback a S1 (apertura saga) e S6 (Memolo generico). Ruolo madre-calore variante per Gabriel (non default madre fratelli).",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_003",
+      "from_story": "s05",
+      "to_story": "s09",
+      "type": "capacita_trasmessa_tra_fratelli_evoluzione_sapere_nodi",
+      "description": "Il sapere dei nodi viaggia da Elias (appreso in S5, applicato S7/S8) a Noah off-screen dopo S8 (variante semplice Marinaro, mani piccole). Prima manifestazione Noah: braccialetto fatto da solo. 'Te l'ho fatto io. Da solo.' tre parole. Eco silenziosa di TUM-tum-TUM S4 (codice dei tre — ora anche il sapere dei nodi e' codice dei tre).",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_004",
+      "from_story": "s06",
+      "to_story": "s09",
+      "type": "gruppo_cuccioli_da_collettivo_a_individuato",
+      "description": "I cuccioli in S6 erano gruppo collettivo (scuola di Stria, cornice). In S9 si individuano: Pun (memoria pratica), Toba (domanda che apre), Bru ('si'), Cardo (prima voce saga — provocazione), Liu' (vola via). Evoluzione cast cuccioli verso distribuzione S11. Cardo prima voce individuata.",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_005",
+      "from_story": "s07",
+      "to_story": "s09",
+      "type": "gesto_precursore_si_stacca_in_paura_autonoma",
+      "description": "Le micro-occhiate Gabriel→Noah S7 (post-STRAPP 'pero' due rametti vanno avanti') e S8 (via varco foglie dopo frase Memolo) qui fioriscono staccandosi: Gabriel non guarda piu' Noah da fuori, agisce in risposta a Noah che dice 'non sono piu' piccolo come prima' — ri-taglia le fette. Il gesto e' il bloom del seed-precursore + la semina della paura autonoma.",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_006",
+      "from_story": "s08",
+      "to_story": "s09",
+      "type": "inversione_ruoli_tenerezza_muta_strato_3",
+      "description": "S8: Gabriel fa sedere Memolo confuso sul Pozzo, gli tiene la mano. S9: Memolo passa una castagna cruda dal cesto di Zolla nella mano di Gabriel al Forno, pomeriggio, senza parole. Inversione speculare senza dichiarazione. Chi ha ricevuto cura presagisce la soglia di chi ha dato cura. Primo bloom parziale del seed_memolo_sul_pozzo_con_gabriel (bloom pieno S12).",
+      "registered_in_story": "s09"
+    },
+    {
+      "callback_id": "cb_s09_007",
+      "from_story": "s06",
+      "to_story": "s09",
+      "type": "calendario_stagionale_zolla_raccolto_castagne_partenza",
+      "description": "Castagne prime dell'anno — calendario Zolla Bible §9.2. In S6 Zolla attivo pieno primavera. S8 attivo estate piena. S9 prime castagne = raccolto autunno che parte. Ponte strutturale verso S11 festa raccolto (Zolla attivo pieno).",
+      "registered_in_story": "s09"
+    }
+  ],
+  "debts_opened": [
+    {
+      "debt_id": "debt_s09_to_s12_braccialetto_al_polso_gabriel",
+      "origin_story": "s09",
+      "target_story": "s12",
+      "type": "oggetto_piantato_bloom_target_s12_al_polso_mai_descritto_solo_visibile",
+      "note": "[seed_ref: seed_braccialetto_di_noah_a_gabriel] ALTISSIMO — braccialetto brutto-tenero al polso di Gabriel nella scena finale saga S12 e' callback architrave silenzioso. Bambino di 4 vede, rilettore collega, adulto si commuove. Mai descritto come oggetto importante. Materialita' invecchiata stagionalmente (castagna rugata). Deferred_decision Fase E illustrazioni."
+    },
+    {
+      "debt_id": "debt_s09_to_s12_fette_uguali_eco_silenziosa",
+      "origin_story": "s09",
+      "target_story": "s12",
+      "type": "gesto_piantato_bloom_target_s12_eco_silenziosa_quattro_fette_fiamma",
+      "note": "[seed_ref: seed_fette_uguali] ALTO — ARCHI §3.S12 callback tabella rig. 989. Eco silenziosa nel gesto di Fiamma che taglia quattro fette del dolce finale. Numero fette S12 ancora da decidere Fase D."
+    },
+    {
+      "debt_id": "debt_s09_to_s12_paura_gabriel_accolta_non_risolta",
+      "origin_story": "s09",
+      "target_story": "s12",
+      "type": "paura_architrave_resolution_mode_tenere_bloom_s12",
+      "note": "[seed_ref: seed_paura_gabriel_fratelli_crescono_diversi] ALTISSIMO — architrave strato 3 terna dire/accettare/tenere. Gabriel tiene in S12, paura accolta non risolta. Bloom da eseguire con gesti suoi (mani sulla terra Roccia Alta, briciole, braccialetto al polso), mai da personaggio esterno. ARCHI §4 nota architetturale (1)."
+    },
+    {
+      "debt_id": "debt_s09_to_s11_noah_annoda_manifestazione_rituale",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "type": "capacita_nuova_da_collaudare_in_contesto_collettivo",
+      "note": "[seed_ref: seed_noah_annoda_da_solo] MEDIO — Noah annoda qualcosa en passant in S11 festa raccolto (legaccio pacco, nastro banco Fiamma, o altro — decisione Fase D). Senza enfasi, registrazione muta della capacita' installata. Non obbligatorio scena, sufficiente apparizione."
+    },
+    {
+      "debt_id": "debt_s09_to_s11_compleanno_come_rito_non_rito_bloom_collettivo",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "type": "frame_bloom_scalato_a_collettivo",
+      "note": "[seed_ref: seed_compleanno_come_rito_non_rito] ALTO — istituito in S9 come modo-di-fare-feste dell'isola. S11 festa raccolto e' il bloom collettivo: la festa e' lo stesso tipo di rito-non-rito, non si organizza, succede. Pattern A parente (ARCHI §0.5 variante collettiva S11)."
+    },
+    {
+      "debt_id": "debt_s09_to_s11_cardo_seconda_voce_individuata",
+      "origin_story": "s09",
+      "target_story": "s11",
+      "type": "personaggio_installazione_progressiva_due_apparizioni",
+      "note": "[seed_ref: seed_cardo_prima_voce_individuata] MEDIO — Cardo deve avere seconda apparizione individuata in S11 festa raccolto per confermare passaggio da sfondo a individuato. Coerente con ARCHI §0.2 quota saga (cammeo S9 + S11 = 2 totali). Non arco caratteriale di Cardo, installazione progressiva del cast cuccioli."
+    }
+  ],
+  "debts_closed": [
+    {
+      "debt_id": "debt_s08_to_s09_seed_paura_gabriel_semina",
+      "close_mode": "semina_autonoma_paura_gabriel_come_architrave_strato_3",
+      "note": "Semina eseguita tramite nuovo seed seed_paura_gabriel_fratelli_crescono_diversi (status=seminato, bloom_target=[s12]). Il debt era architrave terna strato 3 dire/accettare/tenere. Gabriel tiene in S12 — la paura si semina qui con peso visibile (gesto fette diseguali → uguali dopo frase Noah, sorriso commosso non spiegato, braccialetto tenuto in mano)."
+    },
+    {
+      "debt_id": "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco",
+      "close_mode": "chiusura_parziale_primo_bloom_s09_secondo_bloom_pieno_s12_resta_aperto",
+      "note": "Primo bloom parziale eseguito in S9: cammeo tenero di Memolo al Forno, micro-azione fisica (passare castagna cruda nella mano di Gabriel), nessuna parola. Inversione ruoli S8 (la' Gabriel accudiva Memolo confuso, qui Memolo presagisce la soglia di Gabriel). Seed seed_memolo_sul_pozzo_con_gabriel passa da seminato a bloomed (bloomed_in_story=s09, bloom_type=primo_bloom_parziale_cammeo_tenero_inversione_ruoli). Bloom pieno in S12 resta pianificato come manifestazione ulteriore del seme gia' bloomed (bloom_target_stories conserva [s09, s12])."
+    }
+  ],
+  "key_phrase_indicative": "Non sono piu' piccolo come prima.",
+  "key_phrase_attributed_to": "noah",
+  "key_phrase_notes": "Frase detta da Noah quando Gabriel risponde 'Sei il piccolo' al suo 'Perche' il mio e' piccolo?'. E' il pivot della storia. Multi-strato: Strato 1 (4 anni): Noah e' diventato grande, adesso e' come i fratelli. Strato 2 (7-10 anni): Noah rivendica, Gabriel deve accettare qualcosa che sta cambiando. Strato 3 (adulto): la paura di Gabriel (cresceranno diversi) si tocca per la prima volta in un gesto piccolo — il taglio delle fette. La frase e' esattamente 6 parole (ritmo settenario adattato per voce-bambino di 4 anni — limite superiore ma giustificato dal peso ontologico). Non e' saggia, non e' filosofica, non e' retorica: e' rivendicazione concreta di un fatto. Il narratore non la commenta. La pausa dopo la frase e' il silenzio attivo centrale della storia.",
+  "quartieri_attraversati": [
+    "centro_villaggio",
+    "fuoco_est"
+  ],
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "location": {
+          "id": "scuola_stria",
+          "qualifier": null,
+          "legacy_string": "scuola_stria"
+        },
+        "quadrant": "fuoco_est",
+        "hook_id": "vh_s09_mattino_scuola_stria_frase_rilancio_cuccioli_individuati",
+        "moment": "mattino_presto_prima_lezione",
+        "characters_present": [],
+        "elements": [],
+        "palette": "mattino_ottobre_chiaro_taglio_leggero_sul_pavimento_aula_giallo_arancio_prime_foglie_visibili_attraverso_porta",
+        "notes": "[VISUAL] Stria sulla porta della scuola, mattino di ottobre chiaro. Gabriel entra. Cuccioli sullo sfondo, seduti o in piedi — Pun, Toba, Bru, Cardo. Liu' in volo sopra. Luce di Taglio leggero sul pavimento dell'aula. Foglia secca appena soffiata dentro dalla porta. Prime foglie autunnali gialle-arancioni visibili fuori attraverso la porta aperta.\n\n[CRITIQUE] Il Taglio e' percepito freddo da Gabriel (soggettivo) — l'illustrazione non rende il quartiere Fuoco come gia' invernale. L'aria e' chiara di ottobre che comincia, non di novembre. Cuccioli disposti in modo che Cardo sia leggermente distinto dagli altri tre (preparazione prima voce). Liu' in volo in un angolo, pronta a uscire. Stria sulla porta — non e' maestra severa, e' zia che rilancia."
+      },
+      {
+        "location": {
+          "id": "forno",
+          "qualifier": null,
+          "legacy_string": "forno"
+        },
+        "quadrant": "fuoco_est",
+        "hook_id": "vh_s09_pomeriggio_forno_castagna_memolo_a_gabriel",
+        "moment": "pomeriggio_forno_profumo_dolce_in_cottura",
+        "characters_present": [],
+        "elements": [],
+        "palette": "terracotta_forno_marrone_castagne_crude_vapore_dolce_in_cottura_oro_camino_caldo_pomeriggio",
+        "notes": "[VISUAL] Interno Forno di Fiamma nel primo pomeriggio. Dolce di castagne in cottura (profumo visibile attraverso il vapore sopra il camino). Cesto di Zolla con castagne crude su un banco laterale. Gabriel in piedi accanto al banco. Memolo (riccio) vicino, una zampa sul bordo del cesto. Una castagna cruda nella mano di Gabriel — appena consegnata da Memolo. Fiamma sullo sfondo, che toglie con cura un ciocco dal fuoco. Nessuno parla. Luce di pomeriggio dorata dalla porta aperta.\n\n[CRITIQUE] La castagna nella mano di Gabriel e' il centro ottico della tavola. Memolo NON la guarda piu' (gia' consegnata), sta gia' guardando altrove — non e' un cammeo di tenerezza dichiarata, e' un gesto compiuto. Gabriel la guarda. Fiamma impegnata col fuoco, non partecipa alla scena-castagna — la registra col senso laterale della volpe. Eco silenziosa inversione ruoli S8. NESSUNA enfasi — e' un momento in mezzo al pomeriggio, poi passa."
+      },
+      {
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "interno_casa_fratelli_non_cartografato",
+          "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+        },
+        "quadrant": "centro_villaggio",
+        "hook_id": "vh_s09_sera_tavolo_dolce_fette_diseguali_poi_uguali",
+        "moment": "sera_interno_finestre_aperte_mulinello_leggero",
+        "characters_present": [],
+        "elements": [],
+        "palette": "legno_tavolo_castagna_scura_lucido_miele_rosa_bordeaux_luce_calda_lanterna_finestra_aperta_grigio_arancio_tramonto",
+        "notes": "[VISUAL] Tavolo di legno, tre fratelli seduti. Dolce di castagne al centro — forma semplice, color castagna scura, superficie lucida di miele. Gabriel col coltello in mano, momento sospeso tra la prima e la seconda porzione di taglio. Sul tavolo: tre piatti vuoti che aspettano, bicchieri d'acqua, il braccialetto appoggiato accanto al piatto di Gabriel. Finestra aperta a destra — tende mosse dal Mulinello sera. Luce arancione di tramonto tarda estate che entra di taglio. Foglia autunnale (gialla) caduta dall'albero fuori, appoggiata sul davanzale. Noah sul lato opposto, Elias al centro.\n\n[CRITIQUE] L'illustrazione cattura il MOMENTO-SOGLIA — Gabriel ha appena sentito 'Non sono piu' piccolo come prima', sta per cambiare il taglio. NON si vede la reazione sul volto (il lettore la costruisce). Il braccialetto e' SUL TAVOLO, non al polso (cura Ray ARCHI). Le fette NON sono ancora tagliate nel dolce — il gesto e' sospeso. Foglia sul davanzale: ottobre che comincia, non inverno. NOTA: l'interno casa non e' entity del grafo (decisione Ray Blocco 0) — e' scene hook."
+      },
+      {
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "interno_casa_fratelli_non_cartografato",
+          "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+        },
+        "quadrant": "centro_villaggio",
+        "hook_id": "vh_s09_fine_sera_braccialetto_in_mano_gabriel_noah_ride",
+        "moment": "fine_sera_dolce_mangiato_piatti_vuoti",
+        "characters_present": [],
+        "elements": [],
+        "palette": "briciole_castagna_marrone_lanterna_accesa_calda_prime_ombre_sera_braccialetto_tra_dita_gabriel",
+        "notes": "[VISUAL] Stesso tavolo. Tre piatti vuoti ora, briciole di dolce. Il braccialetto ancora sul tavolo accanto a Gabriel. Gabriel lo ha appena preso in mano — lo tiene tra le dita. Lo guarda. Noah ride (bocca aperta, guarda Elias). Elias (con il micro-cenno del capo a Gabriel gia' fatto, poi torna a Noah) sta dicendo qualcosa a Noah. Luce e' cambiata — tramonto finito, prime ombre di sera. Lanterna appena accesa su un mobile laterale. Mulinello continua attraverso la finestra.\n\n[CRITIQUE] ULTIMA IMMAGINE prima del sigillo narratore. Gabriel col braccialetto IN MANO (non al polso ancora). Lo guarda. Noah e Elias nella loro cosa separata. Gabriel e' solo nel suo momento, ma non e' escluso dalla scena — i tre sono INSIEME ma in tempi interni diversi. Il braccialetto puo' essere piccolo nell'inquadratura (non oggetto centrale ottico, ma occhio del lettore lo trova). Castagna-perlina visibile ma non enfatizzata — il bambino di 4 la nota, il rilettore registra, l'adulto si commuove pensando che si secchera'."
+      }
+    ]
+  },
+  "voice_notes_essential": [
+    "AUTUNNO_COMINCIAVA_MAI_AUTUNNO_ARRIVATO",
+    "TAGLIO_ALBA_FREDDO_E_PERCEZIONE_SOGGETTIVA_GABRIEL_NON_CRONACA_MONDO",
+    "NARRATORE_RISPETTA_PERCEZIONE_SOGGETTIVA_GABRIEL_TAGLIO_FREDDO",
+    "NESSUN_ADDRESS_AL_LETTORE_IN_S9_QUOTA_GIA_PIENA",
+    "NESSUNA_DATA_ESPLICITA_28_OTTOBRE_SOLO_QUEL_POMERIGGIO_IL_GIORNO_DEL_DOLCE",
+    "FIAMMA_DETTO_GENERICO_TEMPO_1_DENTRO_QUOTA_DUE_PER_STORIA",
+    "FIAMMA_MODALITA_CHIACCHIERA_NON_DEFAULT_MADRE_VARIANTE_PER_GABRIEL",
+    "BRACCIALETTO_SUL_TAVOLO_NON_AL_POLSO_PER_TUTTO_IL_DOLCE",
+    "BRACCIALETTO_MATERIALITA_COERENZA_STAGIONALE_SALICE_O_NOCCIOLO_CASTAGNA_CRUDA_CHE_SI_RUGA_NEL_TEMPO",
+    "BRACCIALETTO_BRUTTO_NON_DISASTRATO_SFORZO_DI_NOAH_VISIBILE",
+    "MICRO_CENNO_ELIAS_NON_DICHIARARE_MAI_COME_COMPRENSIONE_EMPATICA",
+    "PROVOCAZIONE_CARDO_NON_RIPRESA_OGNUNO_SPOSTA_A_MODO_SUO",
+    "SILENZIO_ATTIVO_CENTRALE_DOPO_FRASE_NOAH_NON_SONO_PIU_PICCOLO_PRIMA_DI_GABRIEL_CHE_CAMBIA_TAGLIO",
+    "PAUSA_DESCRITTIVA_UNICA_STORIA_POSSIBILE_INTERNO_FORNO_O_TAVOLO_SERA_30_80_PAROLE",
+    "MEMORIA_LUNGA_NARRATORE_1_2_INCISI_SU_OTTOBRE_SULL_ISOLA_MAI_APERTURA_O_CHIUSURA",
+    "TRATTO_16_PAUSA_DESCRITTIVA_ATTRAVERSO_SGUARDO_GABRIEL_NON_NEUTRA",
+    "NESSUNA_TRIADE_ASCENDENTE_MECCANICA_NESSUN_PIANO_PIANO",
+    "NESSUNO_SGUARDO_ADULTO_TENERO_SUI_FRATELLI_NESSUNA_SPIEGAZIONE_PSICOLOGICA_GABRIEL",
+    "CASTAGNA_CRUDA_PASSATA_DA_MEMOLO_A_GABRIEL_MICRO_AZIONE_FISICA_SENZA_PAROLE",
+    "NOAH_NUOVO_FRASE_TE_L_HO_FATTO_IO_DA_SOLO_TRE_PAROLE_SECCA_ORGOGLIOSA_NON_TENERA",
+    "LIU_PRECEDE_I_FRATELLI_AL_FORNO_CANONICO_VOLA_DA_SCUOLA_PORTA_NOTIZIA_A_FIAMMA",
+    "CHIUSURA_SIGILLO_NARRATORE_MULINELLO_ATTRAVERSA_FINESTRE_APERTE_NON_CHIUSURA_CIRCOLARE",
+    "PAUSA_DESCRITTIVA_POMERIGGIO_FORNO_40_60_PAROLE_ATTRAVERSO_SGUARDO_GABRIEL_CASTAGNA_MEMOLO_TRATTO_16_VOCE_RAY"
+  ],
+  "structural_notes": [
+    "chiusura_blocco_c_passaggio_estate_autunno_coerenza_calendario_saga",
+    "attribute_dominant_cambiare_gabriel_centrica_prima_volta_osservatore_di_se",
+    "pattern_a_skippata_in_s9_s7_s8_bloom_s10_notturna_s11_collettiva_s12_chiusura",
+    "eco_semantica_pattern_a_dolce_castagne_stagionali_non_scena_attiva",
+    "fear_touched_gabriel_emerge_con_peso_visibile_prima_volta_saga",
+    "seed_paura_gabriel_seminato_qui_bloom_target_s12_resolution_mode_tenere_architrave_strato_3",
+    "bloom_seed_gabriel_micro_occhiata_si_stacca_in_paura_autonoma_gesto_fette",
+    "primo_bloom_parziale_seed_memolo_sul_pozzo_con_gabriel_secondo_bloom_pieno_s12",
+    "maturing_seed_paura_elias_piccolo_micro_cenno_capo_stemperamento_pratico_evoluzione_positiva",
+    "liu_vola_al_forno_prima_dei_fratelli_canonico_chiude_ipotesi_d_archi_8",
+    "memolo_cammeo_s9_non_in_archi_0_2_promozione_archi_v1_1_fase_e",
+    "elias_micro_cenno_capo_a_gabriel_vede_il_braccialetto_sul_tavolo_rispetta_il_tempo_di_elaborazione_del_fratello",
+    "cardo_prima_voce_individuata_in_saga_bloom_target_s11_seconda_voce",
+    "compleanno_come_rito_non_rito_istituito_ponte_a_festa_raccolto_s11",
+    "trasmissione_off_screen_nodo_elias_a_noah_dopo_s8_genera_seed_noah_annoda_da_solo",
+    "casa_fratelli_non_entity_decisione_ray_blocco_0_l_isola_e_protagonista",
+    "cornice_forno_mattino_pomeriggio_sera_sistema_nervoso_informale_villaggio",
+    "braccialetto_al_polso_gabriel_s12_castagna_rugata_memento_mori_stagionale"
+  ],
+  "premise": "Sull'isola non ci sono compleanni con feste — c'e' un piccolo rito. Fiamma fa un dolce di castagne con le prime castagne dell'anno, Stria a scuola lo annuncia con una frase, gli abitanti lo notano, il festeggiato passa il giorno coi fratelli. Oggi e' il giorno di Gabriel. Memolo e' passato al Forno prima dell'alba per dirlo a Fiamma. A scuola, Stria sulla porta vede entrare Gabriel: 'Tu cosa farai oggi che hai un anno in piu'?'. Gabriel: 'Boh.' I cuccioli sentono. Cardo, per la prima volta con voce, provoca. Gli altri spostano. Liu' vola verso il Forno. La giornata di Gabriel comincia cosi' — un'aria di ottobre che sa gia' di qualcosa di cambiato, anche se nessuno lo dice, e forse e' solo Gabriel a sentirlo freddo.",
+  "problem": "Gabriel passa il pomeriggio con Elias e Noah. Noah, che ha sei mesi piu' di quando lo abbiamo conosciuto, ha imparato un piccolo nodo da Elias (variante semplice del Marinaro adattata a mani piccole, tra S8 e S9 off-screen) e ha lavorato in silenzio nei giorni precedenti per fare a Gabriel un braccialetto — cordino di canapa sottile, due ramoscelli flessibili di salice o nocciolo giovane, una castagna cruda forata come perlina. Fatto da solo. Quando lo da' a Gabriel dice tre parole: 'Te l'ho fatto io. Da solo.' Gabriel ringrazia, sorride, si volta a prendere qualcosa dal tavolo. Per un attimo non guarda nessuno. Non si mette il braccialetto — lo tiene in mano, lo guarda, lo posa sul tavolo accanto a se'. Resta li' per tutto il pomeriggio. Il problema non e' narrativo-esterno: e' dentro Gabriel. Noah e' cresciuto, e Gabriel sta sentendo qualcosa che non sapeva di poter sentire.",
+  "threshold_moment": "[MECHANICS] Sera. I tre vanno al Forno a prendere il dolce. Fiamma chiacchiera, detto popolare generico sul tempo che passa ('anno che gira non e' anno che torna, ne fa un altro, diverso'). Tornano a casa. Gabriel taglia il dolce. Si accorge di tagliare le fette diseguali — il piccolo per Noah, il medio per Elias, il grande per se'. Lo fa quasi senza pensare, come ha sempre fatto da quando Noah era piccolissimo. Noah nota: 'Perche' il mio e' piccolo?'. Gabriel, senza pensare: 'Sei il piccolo.' Noah: 'Non sono piu' piccolo come prima.' Pausa. Gabriel guarda Noah. Guarda la fetta. Guarda Elias. Silenzio attivo — il silenzio e' il momento stesso. Gabriel sorride, e' un sorriso che e' anche un po' commosso, ma Gabriel non spiega. Cambia il taglio. Tre fette uguali. 'Hai ragione.' [EAR] ⟳ acuto in Gabriel, per la prima volta in saga in posizione di osservatore di se'. Il gesto precursore (micro-occhiate S7/S8) si stacca e diventa gesto autonomo — non piu' guardare Noah da fuori, rispondere a Noah con un atto. Seed gabriel_micro_occhiata_noah_cresciuto passa a bloomed. Seed paura_gabriel_fratelli_crescono_diversi si pianta qui (architrave strato 3 terna dire/accettare/tenere, resolution_mode=tenere, bloom target S12). [STRATO] Strato 1: il fratello maggiore ha ridiviso il dolce in fette uguali, e' bello. Strato 2: Gabriel ha sentito che Noah cresce e ha dovuto cambiare il modo di tagliare — qualcosa si e' mosso dentro. Strato 3: la paura di Gabriel di 'perderli perche' cresceranno diversi' si tocca per la prima volta con un gesto piccolo, un sorriso commosso non spiegato, un braccialetto tenuto in mano ma non indossato. Drammaturgia silenziosa degli sguardi installata in blocco C satura qui: Elias vede Gabriel voltarsi quando Noah da' il braccialetto, capisce, non dice niente — micro-cenno del capo dopo 'le fette uguali stanno meglio nel piatto', poi torna a parlare con Noah.",
+  "resolution_mode": "[CLOSURE] Non c'e' risoluzione vera della paura — c'e' apertura. Strato 1 chiuso: Gabriel taglia fette uguali, Noah ride, Elias stempera, mangiano. Strato 2 aperto: Gabriel ha dovuto cambiare il modo di tagliare, qualcosa si e' mosso. Strato 3 aperto e seminato: la paura di Gabriel si tocca per la prima volta, resta seminata in lui fino a S12 dove sara' accolta (non risolta, Gabriel tiene). [CONTRIBUTO] Noah: regala il braccialetto, dice 'Non sono piu' piccolo come prima.' Non sa di aver scosso Gabriel. Elias: ha insegnato il nodo a Noah off-screen, vede Gabriel voltarsi al regalo, dice 'Le fette uguali stanno meglio nel piatto' per stemperare, micro-cenno del capo a Gabriel alla fine. Gabriel: per la prima volta non agisce — sente. Ri-taglia le fette, sorride commosso, 'Hai ragione.' Tiene il braccialetto in mano a fine sera senza decidere se indossarlo. [NO MORALINA] Nessun personaggio dice quello che e' successo. Nessun adulto commenta. Il narratore non spiega perche' Gabriel si e' voltato, perche' Elias ha capito, perche' Noah non ha notato. Il bambino di 4 vede un pomeriggio di compleanno con un piccolo dolce di castagne. Il bambino di 9 sente che Gabriel ha cambiato qualcosa nel taglio. L'adulto sente la paura. [SIGILLO] Chiusura con narratore-iniziato che sigilla con immagine: il Mulinello di sera passa attraverso le finestre aperte della casa, tende che si muovono, una foglia gialla sul davanzale, il braccialetto sul tavolo accanto al piatto vuoto di Gabriel. Ultima immagine: Gabriel prende il braccialetto in mano mentre Noah ride di qualcosa che ha detto Elias. Lo prende, lo guarda. Non si dice se lo mette o no. Decisione del lettore — o del Gabriel di mesi dopo (cfr. S12: al polso, mai descritto come importante). Nessuna chiusura circolare all'immagine di apertura — chiusura sospesa (voce-Ray sostituzione firma).",
+  "palette_emotiva": "Dominanti: terracotta_del_Forno_cornice_fissa + marrone_caldo_delle_castagne + rosa_bordeaux_del_dolce_di_castagne_lucido_di_miele + giallo_arancio_prime_foglie_autunnali. Accent freddo: grigio_leggero_aria_di_ottobre_al_mattino + blu_chiaro_del_cielo_di_Taglio_leggero_percepito_freddo_da_Gabriel. Accent neutro: legno_scuro_del_tavolo_dei_fratelli + verde_ancora_vivo_di_foglie_di_salice_o_nocciolo_del_braccialetto. Luce: mattino_chiaro_di_Taglio_leggero_sulla_porta_scuola → pomeriggio_dorato_del_Forno_con_vapore_del_dolce → sera_arancione_di_tramonto_tarda_estate_attraverso_finestre_aperte → fine_sera_prime_ombre_lanterna_appena_accesa. Chiusura visiva: tende_mosse_dal_Mulinello_di_sera + braccialetto_sul_tavolo_accanto_al_piatto_vuoto_di_Gabriel_castagna_cruda_visibile_come_micro_perlina_non_enfatizzata + Gabriel_che_lo_prende_in_mano_mentre_Noah_ride.",
+  "active_constraints_touched": [
+    "framework_ear_invisibile_nel_testo",
+    "nessuna_morale_esplicita",
+    "doppio_strato_4_anni_piu_7_10_anni_piu_strato_3_opzionale",
+    "continuita_pokemon_accumulo_conseguenze_evoluzione",
+    "voce_autoriale_ray_16_tratti",
+    "narratore_iniziato_architrave_mai_spiega_sempre_sigilla",
+    "nessun_preannuncio_rivelazione_post_saga_fase_f",
+    "nominazione_operativa_astrazione_incarnata",
+    "geografia_mandala_silenziosa",
+    "notte_non_personificata",
+    "grunto_testimone_unico_vincolato_assente_in_s9",
+    "detti_popolari_solo_a_fiamma_in_chiacchiera_max_2_per_storia",
+    "numeri_3_e_4_architettura_nascosta",
+    "pattern_a_never_named_in_text_eco_semantica_dolce_castagne_non_scena_attiva",
+    "terna_strato_3_dire_accettare_tenere_gabriel_tiene_s12_architrave",
+    "cornice_s1_s12_al_forno_di_fiamma_s9_cornice_forno_centrale_mattino_pomeriggio_sera",
+    "fiamma_detti_max_2_per_storia_s9_usato_1",
+    "addresses_reader_max_6_saga_s9_zero_contatore_invariato_s04_s07",
+    "nessuna_data_esplicita_28_ottobre_solo_quel_pomeriggio_il_giorno_del_dolce",
+    "braccialetto_brutto_non_disastrato_sforzo_noah_visibile",
+    "gabriel_non_indossa_braccialetto_resta_sul_tavolo_per_tutto_il_dolce",
+    "provocazione_cardo_non_ripresa_ognuno_sposta_a_modo_suo",
+    "fiamma_madre_variante_distribuita_non_default_madre_dei_fratelli",
+    "autunno_comincia_mai_autunno_arrivato",
+    "taglio_alba_percepito_freddo_percezione_soggettiva_gabriel_non_cronaca_mondo",
+    "liu_precede_fratelli_al_forno_canonico_chiude_ipotesi_d_archi_8",
+    "casa_fratelli_non_entity_decisione_ray_isola_protagonista",
+    "drammaturgia_silenziosa_sguardi_blocco_c_elias_vede_gabriel_voltarsi",
+    "silenzio_attivo_obbligatorio_dopo_frase_noah_non_sono_piu_piccolo_come_prima",
+    "pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole"
+  ],
+  "callback_summary": "S9 chiude il blocco C con sette callback distribuiti sulla giornata-soglia di Gabriel. Stria al mattino scuola rilancia con una frase senza rispondere — archetipo installato in S2 ('Tu cosa pensi?') e confermato in S6 ('E quale cosa?'), qui 'Tu cosa farai oggi che hai un anno in piu'?'. I cuccioli di S6 collettivo si individuano in S9 con voci distinte: Pun con memoria pratica, Toba con la domanda che apre, Bru con 'si', Cardo con la provocazione che nessuno riprende (prima voce in saga — passaggio da sfondo a individuato, installazione progressiva del cast verso S11), Liu' che vola verso il Forno prima dei fratelli (canonico, chiude ipotesi D ARCHI §8 — fonte della notizia che i cuccioli sanno). Fiamma al Forno in modalita' chiacchiera tardomattina — eredita S1 e S6, qui ruolo madre-calore variante distribuita per Gabriel (non default madre dei fratelli, Bible §4.1), con un detto popolare generico sul tempo che passa dentro quota saga. Il sapere dei nodi (Elias S5/S7/S8) si trasmette off-screen a Noah dopo S8 (variante semplice Marinaro per mani piccole); prima manifestazione di Noah: il braccialetto fatto da solo, tre parole 'Te l'ho fatto io. Da solo.' — eco silenziosa di TUM-tum-TUM S4. Le micro-occhiate di Gabriel a Noah S7 e S8 fioriscono staccandosi: Gabriel non guarda piu' Noah da fuori, agisce in risposta — ri-taglia le fette uguali dopo 'Non sono piu' piccolo come prima'. Il gesto e' il bloom del seed-precursore e la semina della paura autonoma di Gabriel (architrave strato 3, bloom target S12). Inversione dei ruoli con Memolo da S8: la' Gabriel faceva sedere Memolo confuso sul bordo del Pozzo tenendogli la mano, qui Memolo posa una castagna cruda dal cesto di Zolla nella mano di Gabriel al Forno pomeriggio — primo bloom parziale del seed, secondo bloom pieno S12. Calendario Zolla (Bible §9.2) attivato: prime castagne dell'anno, raccolto autunno che parte — ponte strutturale verso S11 festa raccolto dove Zolla sara' attivo pieno. L'isola respira in continuita': nessun personaggio si e' rinnovato a S9, tutti stanno facendo quello che fanno sempre, e proprio per questo il cambiamento dentro Gabriel risuona piu' forte.",
+  "fear_touched": {
+    "brother": "gabriel",
+    "fear_id": "fratelli_crescono_diversi",
+    "status": "seminata",
+    "mode_of_touch": "emerge_con_peso_visibile_per_prima_volta_in_saga_gesto_fette_diseguali_poi_uguali_sorriso_commosso_non_spiegato_braccialetto_tenuto_in_mano_non_indossato_sigillo_narratore_su_mulinello_attraverso_finestre_aperte",
+    "_note": "Prima paura della saga che emerge con peso visibile — non piu' micro-eco (S7, S8) ma affioramento autonomo con gesto piccolo, soglia emotiva e sigillo visivo. Seed seed_paura_gabriel_fratelli_crescono_diversi piantato qui (type=paura, brother=gabriel, resolution_mode=tenere, status=seminato, bloom_target=[s12]). Architrave strato 3 terna dire/accettare/tenere: Noah dice S10, Elias accetta S11, Gabriel tiene S12 (accolta, non risolta). Precursori: seed_gabriel_micro_occhiata_noah_cresciuto (S7 post-STRAPP, S8 via varco foglie) qui fiorisce staccandosi. La paura si risolvera' in S12 con gesti di Gabriel (mani sulla terra Roccia Alta, briciole, braccialetto al polso), mai da personaggio esterno (vincolo ARCHI §4 nota architetturale 1)."
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [],
+  "oggetti_simbolo_presenti": [],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "stria",
+      "vincoli": [
+        "mai_lezione_morale_esplicita",
+        "mai_due_risposte_stessa_scena",
+        "mai_sopra_o_sotto_albero_vecchio",
+        "mai_commuovere_visibilmente"
+      ]
+    },
+    {
+      "personaggio": "fiamma",
+      "vincoli": [
+        "unica_detentrice_detti_popolari",
+        "detti_solo_in_modalita_chiacchiera",
+        "max_2_detti_per_storia",
+        "non_madre_default",
+        "mai_morale_in_corsivo",
+        "mai_sotto_albero_vecchio_solenne"
+      ]
+    },
+    {
+      "personaggio": "memolo",
+      "vincoli": [
+        "mai_sapiente_confuso_didattico",
+        "mai_due_frasi_precise_stessa_storia",
+        "mai_risolve_trama_chiudendo"
+      ]
+    },
+    {
+      "personaggio": "pun",
+      "vincoli": [
+        "mai_corregge_padre_con_tono_adulto",
+        "mai_sapientello"
+      ]
+    },
+    {
+      "personaggio": "toba",
+      "vincoli": [
+        "mai_domanda_filosofica",
+        "mai_sola_al_pontile",
+        "mai_corre"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    },
+    {
+      "personaggio": "cardo",
+      "vincoli": [
+        "mai_modalita_predatore",
+        "mai_si_redime_visibile",
+        "mai_punito",
+        "mai_tradisce_davvero",
+        "punzecchia_max_2_3_storie_su_12"
+      ]
+    }
+  ]
+}

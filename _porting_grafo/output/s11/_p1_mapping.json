@@ -1,0 +1,88 @@
+{
+  "_description": "Mapping P0->P1 per s11 (centro_blocco_d, ciclo sigillo, La Festa del Raccolto). Rigenerato post-corruzione zip s11. 19 personaggi in scena (record saga), 8 hook standard format, 2 debt_vero opened + 17 closed (chiusura blocco D).",
+  "story_id": "s11",
+  "hooks": {
+    "hook_01_alba_orti_raccolto_rituale": {
+      "location": {"id": "orti_del_cerchio", "qualifier": "alba_raccolto_rituale_inizio_giornata", "legacy_string": "orti_del_cerchio"},
+      "quadrant": "terra_ovest"
+    },
+    "hook_02_mattino_piazza_allestimento": {
+      "location": {"id": "piazza_villaggio", "qualifier": "mattino_allestimento_banchi_festa", "legacy_string": "piazza_villaggio"},
+      "quadrant": "centro_villaggio"
+    },
+    "hook_03_stria_distribuisce_coni": {
+      "location": {"id": "piazza_villaggio", "qualifier": "mezzogiorno_stria_distribuisce_coni_ghiande_dipinte", "legacy_string": "piazza_villaggio"},
+      "quadrant": "centro_villaggio"
+    },
+    "hook_04_mezzogiorno_tre_cose_che_spostano_elias": {
+      "location": {"id": "piazza_villaggio", "qualifier": "mezzogiorno_tre_cose_spostano_elias_pomo_rotola_etc", "legacy_string": "piazza_villaggio"},
+      "quadrant": "centro_villaggio"
+    },
+    "hook_05_vecchie_indicare_culmine_architrave": {
+      "location": {"id": "panca_di_pietra", "qualifier": "pomeriggio_vecchie_indicano_culmine_architrave_riconoscimento_muto_a_elias", "legacy_string": "mercato_del_mezzogiorno_panca_di_pietra"},
+      "quadrant": "centro_villaggio"
+    },
+    "hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo": {
+      "location": {"id": "pozzo_piazza", "qualifier": "pomeriggio_elias_distribuisce_quattro_coni_bru_al_pozzo", "legacy_string": "pozzo_piazza"},
+      "quadrant": "centro_villaggio"
+    },
+    "hook_07_bartolo_arriva_frutti_da_fuori": {
+      "location": {"id": "pontile_bocca", "qualifier": "pomeriggio_tardi_bartolo_arriva_frutti_da_fuori", "legacy_string": "pontile_bocca"},
+      "quadrant": "acqua_sud"
+    },
+    "hook_08_ritorno_casa_mulinello_sera_due_battute": {
+      "location": {"id": "piazza_villaggio", "qualifier": "sera_mulinello_ritorno_casa_villaggio_centrale_due_battute", "legacy_string": "villaggio_centrale"},
+      "quadrant": "centro_villaggio",
+      "_quadrant_note": "Old location 'villaggio_centrale' non in catalogo come id luogo: mappato a piazza_villaggio (cuore del centro) + qualifier preserva info originale."
+    }
+  },
+  "locations_secondary_id_renames": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "panca_di_pietra"
+  },
+  "locations_secondary_role_extras": {
+    "mercato_del_mezzogiorno_panca_di_pietra": "vecchie_del_mercato_riconoscimento_muto_a_elias_culmine_architrave_strato_3_bloom_pieno_seed_vecchie_indicare_silenzio"
+  },
+  "characters_id_renames": {
+    "vecchie_del_mercato": "mercato_del_mezzogiorno"
+  },
+  "key_phrase_attributed_to": "elias",
+  "_key_phrase_note": "key_phrase_indicative='Va bene.' gia' popolato nell'old_node. Pronunciata da Elias come ACCETTARE (curva architrave terna strato 3: s10 Noah 5 parole DIRE -> s11 Elias 2 parole ACCETTARE -> s12 Gabriel 0 parole TENERE). Quarto caso saga key_phrase_attributed_to a personaggio (s03 rovo, s06 memolo, s08 memolo, s11 elias).",
+  "debts_opened_keep": [
+    {"debt_id": "debt_s11_to_s12_frutti_da_fuori_bartolo_porta_oltre_il_mare_fase_f", "origin_story": "s11", "target_story": "s12", "rilievo": "alto", "note": "Bartolo arriva al Pontile pomeriggio s11 con cesto di frutti da fuori (non crescono sull'isola). Strato 3 aperto 'oltre il mare'. Bloom in S12."},
+    {"debt_id": "debt_s11_to_s12_coni_stria_gesto_annuale_eco_anno_chiuso", "origin_story": "s11", "target_story": "s12", "rilievo": "medio", "note": "Coni di Stria con ghiande dipinte come gesto annuale: eco silenziosa per chiusura saga in s12."}
+  ],
+  "debts_closed_keep": [
+    {"debt_id": "debt_s02_to_s11_paura_elias_bloom_accettazione_via_vecchie", "origin_story": "s02", "target_story": "s11", "rilievo": "alto", "close_mode": "bloom_pieno_architrave_strato_3_elias_accetta", "note": "Seed_paura_elias_piccolo da maturing (S2-S9) a bloomed in S11. Riconoscimento muto Vecchie + quattro coni Stria. 'Va bene.' (2 parole)."},
+    {"debt_id": "debt_s02_to_s11_stria_vede_prima_bloom_quattro_coni_a_elias", "origin_story": "s02", "target_story": "s11", "rilievo": "alto", "close_mode": "bloom_pieno_quattro_coni_a_elias_riconoscimento_chi_cresce_dentro"},
+    {"debt_id": "debt_s03_to_s11_bru_bloom_riconosciuto_da_elias", "origin_story": "s03", "target_story": "s11", "rilievo": "alto", "close_mode": "bloom_pieno_bru_riconosciuto_da_elias_quarto_cono_distribuito"},
+    {"debt_id": "debt_s03_to_s11_pallone_ricomparsa_giochi_cuccioli_tentativo", "origin_story": "s03", "target_story": "s11", "rilievo": "medio", "close_mode": "ricomparsa_pallone_di_stoffa_giochi_cuccioli_eco_silenziosa"},
+    {"debt_id": "debt_s04_to_s11_paura_elias_bloom_accettazione_vecchie_micro_sguardi_continuano_s5_s6_s9", "origin_story": "s04", "target_story": "s11", "rilievo": "alto", "close_mode": "bloom_architrave_chiusura_micro_sguardi_storti_s5_s6_s9_culminano_qui"},
+    {"debt_id": "debt_s05_to_s11_nodo_marinaro_bloom_festa_corda_intrecciata", "origin_story": "s05", "target_story": "s11", "rilievo": "medio", "close_mode": "bloom_collettivo_corda_intrecciata_alla_festa_capacita_installata_in_uso_sociale"},
+    {"debt_id": "debt_s05_to_s11_paura_elias_bloom_accettazione_vecchie_continua_maturing_s6", "origin_story": "s05", "target_story": "s11", "rilievo": "alto", "close_mode": "continuita_traiettoria_paura_elias_da_fare_senza_avere_a_va_bene"},
+    {"debt_id": "debt_s06_to_s08_s11_vecchie_indicare_in_silenzio_bloom_gesto_riconoscimento_cresce_fino_a_s11_elias", "origin_story": "s06", "target_story": "s11", "rilievo": "alto", "close_mode": "culmine_architrave_gesto_vecchie_da_indicazione_a_riconoscimento_muto_a_elias"},
+    {"debt_id": "debt_s08_to_s11_vecchie_indicare_bloom_pieno", "origin_story": "s08", "target_story": "s11", "rilievo": "alto", "close_mode": "bloom_pieno_vecchie_indicare_riconoscimento_a_elias_strato_3_chiuso"},
+    {"debt_id": "debt_s09_to_s11_noah_annoda_manifestazione_rituale", "origin_story": "s09", "target_story": "s11", "rilievo": "medio", "close_mode": "noah_annoda_legaccio_pacco_o_nastro_banco_fiamma_en_passant"},
+    {"debt_id": "debt_s09_to_s11_compleanno_come_rito_non_rito_bloom_collettivo", "origin_story": "s09", "target_story": "s11", "rilievo": "alto", "close_mode": "festa_raccolto_come_rito_non_rito_bloom_collettivo_modo_di_fare_feste_dell_isola"},
+    {"debt_id": "debt_s09_to_s11_cardo_seconda_voce_individuata", "origin_story": "s09", "target_story": "s11", "rilievo": "medio", "close_mode": "cardo_seconda_apparizione_individuata_alla_festa_quota_2_2_chiusa"},
+    {"debt_id": "debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d", "origin_story": "s10", "target_story": "s11", "rilievo": "medio", "close_mode": "amo_cornice_silenziosa_terna_blocco_d_dalla_riva_o_pontile"},
+    {"debt_id": "debt_s05_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga", "origin_story": "s05", "target_story": "s11", "rilievo": "alto", "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_succede"},
+    {"debt_id": "debt_s06_to_s07_s08_s10_s11_s12_cornetto_briciole_pattern_a_rinforzo_immagini_trasversali", "origin_story": "s06", "target_story": "s11", "rilievo": "medio", "close_mode": "cornetto_briciole_eco_silenziosa_alla_festa_immagine_pattern_a_rinforzo"},
+    {"debt_id": "debt_s07_to_s08_s10_s11_s12_pattern_a_continuazione_attivazioni_trasversali", "origin_story": "s07", "target_story": "s11", "rilievo": "alto", "close_mode": "pattern_a_continuazione_attivazione_collettiva_festa_pieno_funzionamento"},
+    {"debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura", "origin_story": "s08", "target_story": "s11", "rilievo": "alto", "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_s12_resta_aperto_per_chiusura_saga"}
+  ],
+  "personaggi_vincoli_attivi": [
+    {"personaggio": "stria", "vincoli": ["mai_lezione_morale_esplicita", "mai_due_risposte_stessa_scena", "mai_sopra_o_sotto_albero_vecchio", "mai_commuovere_visibilmente"]},
+    {"personaggio": "fiamma", "vincoli": ["unica_detentrice_detti_popolari", "detti_solo_in_modalita_chiacchiera", "max_2_detti_per_storia", "non_madre_default", "mai_morale_in_corsivo", "mai_sotto_albero_vecchio_solenne"]},
+    {"personaggio": "nodo", "vincoli": ["mai_spiega_perche_nodo_funziona", "mai_fa_nodo_al_posto_di_chi_impara", "mai_parla_di_sentimenti", "tok_tok_tok_quota_4_5_storie_saga"]},
+    {"personaggio": "memolo", "vincoli": ["mai_sapiente_confuso_didattico", "mai_due_frasi_precise_stessa_storia", "mai_risolve_trama_chiudendo"]},
+    {"personaggio": "salvia", "vincoli": ["max_1_pianta_nominata_per_apparizione", "mai_spiega_perche_pianta_funziona", "mai_risolve_emotivamente"]},
+    {"personaggio": "zolla", "vincoli": ["mai_lezioni_ecologia", "mai_nostalgia_ambientalista", "mai_scene_veloci_o_concitate"]},
+    {"personaggio": "amo", "vincoli": ["mai_spiega_pesca_a_parole", "mai_in_scene_villaggio_salvo_mercato", "mai_nostalgico_o_malinconico", "mai_conflitto_aperto"]},
+    {"personaggio": "bartolo", "vincoli": ["mai_morale", "mai_correre", "mai_arrabbiato_visibile", "mai_traghetta_abitanti_nominati_con_fratelli"]},
+    {"personaggio": "pun", "vincoli": ["mai_corregge_padre_con_tono_adulto", "mai_sapientello"]},
+    {"personaggio": "toba", "vincoli": ["mai_domanda_filosofica", "mai_sola_al_pontile", "mai_corre"]},
+    {"personaggio": "bru", "vincoli": ["mai_racconta_sua_storia", "mai_centro_attenzione_in_gruppo", "mai_piange_visibile", "mai_eroe"]},
+    {"personaggio": "cardo", "vincoli": ["mai_modalita_predatore", "mai_si_redime_visibile", "mai_punito", "mai_tradisce_davvero", "punzecchia_max_2_3_storie_su_12"]}
+  ],
+  "_personaggi_vincoli_note": "12 personaggi con vincoli individuali (max storia saga). gabriel/elias/noah/coltivatori_del_cerchio/mantenitori/pastori/mercato_del_mezzogiorno (post-rename) nessun vincolo specifico."
+}

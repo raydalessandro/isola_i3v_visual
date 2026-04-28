@@ -1,0 +1,48 @@
+{
+  "story_id": "s11",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s11_canonical.json (rigenerato post-corruzione zip)",
+  "confidence_legend": {
+    "high": "Categoria A - quote letterale o riformulazione minima.",
+    "medium": "Categoria B - inferenza forte da contesto.",
+    "low": "Categoria C - inferenza coerente plausibile."
+  },
+  "provvisori": {
+    "_note_top": "key_phrase_indicative='Va bene.' gia' popolato old_node + key_phrase_attributed_to='elias' promosso al canonical via mapping (curva architrave terna strato 3). Non sono provvisori P2.",
+    "hooks": {
+      "hook_01_alba_orti_raccolto_rituale": {"notes": {"value": "Cornice apertura: alba di Taglio sugli Orti del Cerchio, Coltivatori alzano i primi sacchi del raccolto. Luce radente, fiato bianco autunnale. Gabriel gia' in piedi, Elias coi Mantenitori, Noah assonnato. Pochi istanti, non scena piena.", "category": "C", "confidence": "low", "rationale": "elements + atmosphere del hook canonical. Cornice di apertura."}},
+      "hook_02_mattino_piazza_allestimento": {"notes": {"value": "Mattino di Intreccio sulla piazza: banchi distribuiti, Salvia coi sacchetti di erbe, Zolla ghiande in cesti, Memolo sciarpa di sbieco fra i banchi. Allestimento collettivo della festa.", "category": "C", "confidence": "low", "rationale": "premise + locations_secondary scene_role. Tappa di passaggio."}},
+      "hook_03_stria_distribuisce_coni": {"notes": {"value": "Mezzogiorno: Stria distribuisce coni di carta con ghiande dipinte come gesto annuale (seed_coni_stria_ghiande_dipinte_gesto_annuale piantato). Quattro coni a Elias - pattern STRIA_VEDE_PRIMA bloom pieno (debt s02 chiuso): riconoscimento di chi cresce dentro.", "category": "B", "confidence": "medium", "rationale": "structural_notes + debts_closed (debt_s02_to_s11_stria_vede_prima_bloom_quattro_coni). Snodo emotivo per Elias."}},
+      "hook_04_mezzogiorno_tre_cose_che_spostano_elias": {"notes": {"value": "Mezzogiorno: tre cose spostano Elias dentro - pomo rosso che rotola tra i banchi, Bru che lo vede dalla folla, gesto silenzioso. Preparazione del culmine architrave.", "category": "B", "confidence": "medium", "rationale": "Inferenza da titolo hook + paura_elias_maturing arc -> bloom imminente."}},
+      "hook_05_vecchie_indicare_culmine_architrave": {"notes": {"value": "SIGNATURE - CULMINE ARCHITRAVE STRATO 3: pomeriggio sotto l'Albero Vecchio, ombra lunga sulla Panca di Pietra. Le Vecchie sedute in fila guardano Elias, una alza il dito, le altre annuiscono. RICONOSCIMENTO MUTO che non chiede risposta. Bloom pieno seed_vecchie_indicare_in_silenzio (debt_s06_to_s08_s11 chiuso). Elias risponde con due parole: 'Va bene.' (key_phrase saga, ACCETTARE della terna dire/accettare/tenere).", "category": "A", "confidence": "high", "rationale": "Quote letterale + structural_notes 'CULMINE_ARCHITRAVE_STRATO_3' + debt_s02/s06/s08_to_s11 chiusi. SIGNATURE della storia + key_phrase saga."}},
+      "hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo": {"notes": {"value": "Pomeriggio al Pozzo della Piazza: Elias distribuisce i quattro coni che Stria gli aveva dato. Il quarto cono va a Bru (BRU_BLOOM_RICONOSCIUTO_DA_ELIAS, debt s03 chiuso). Bru lo prende, occhi neri, e lo guarda. Gesto compiuto, no parole.", "category": "A", "confidence": "high", "rationale": "Quote letterale + debt_s03_to_s11_bru_bloom_riconosciuto_da_elias. Bloom relazionale architrave."}},
+      "hook_07_bartolo_arriva_frutti_da_fuori": {"notes": {"value": "Pomeriggio tardi al Pontile della Bocca: Bartolo arriva con cesto di frutti da fuori (non crescono sull'isola, mai descritti in dettaglio). Non dice da dove. Strato 3 aperto verso oltre il mare. debt_s11_to_s12_frutti_da_fuori aperto qui per chiusura saga.", "category": "B", "confidence": "medium", "rationale": "premise + debts_opened debt_s11_to_s12_frutti_da_fuori. Apertura strato 3 oltre-mare verso s12."}},
+      "hook_08_ritorno_casa_mulinello_sera_due_battute": {"notes": {"value": "Sera di Mulinello: ritorno a casa nel villaggio centrale. Crepuscolo viola-arancio, fuochi/lanterne. Tre fratelli si scambiano due battute brevi, niente di importante. La festa si chiude come e' iniziata: succede, non si organizza. Pattern A in variante collettiva (festa che non si vince).", "category": "B", "confidence": "medium", "rationale": "atmosphere + structural_notes 'PATTERN_A_VARIANTE_COLLETTIVA_FESTA_CHE_NON_SI_VINCE_SUCCEDE'. Sigillo di chiusura."}}
+    }
+  },
+  "quote_consumed": {
+    "by_category": {"A": 2, "B": 4, "C": 2},
+    "totale": 8,
+    "_note": "season_passage gia' null (autunno pieno, no passaggio). key_phrase_indicative + key_phrase_attributed_to gia' nel canonical via mapping.",
+    "dettaglio": [
+      {"field": "visual_anchors.scene_hooks.hook_01_alba_orti_raccolto_rituale.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.hook_02_mattino_piazza_allestimento.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.hook_03_stria_distribuisce_coni.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.hook_04_mezzogiorno_tre_cose_che_spostano_elias.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.hook_05_vecchie_indicare_culmine_architrave.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.hook_07_bartolo_arriva_frutti_da_fuori.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.hook_08_ritorno_casa_mulinello_sera_due_battute.notes", "category": "B", "confidence": "medium"}
+    ]
+  },
+  "notes_globali": "S11 La Festa del Raccolto - centro_blocco_d, ciclo sigillo. CULMINE ARCHITRAVE STRATO 3 (Vecchie riconoscimento muto a Elias, 'Va bene.' come ACCETTARE). 19 personaggi in scena (record saga). Pattern A variante collettiva. 17 debts_closed (chiusura blocco D), 2 opened verso s12. key_phrase_attributed_to=elias (quarto caso saga). 8 provvisori (2A + 4B + 2C). RIGENERATO da zero post-corruzione zip uploadata.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {"schema_constraint": "enum [A-F,null]", "p2_status": "NULL"},
+    "closure_type": {"schema_constraint": "enum [1-7,null]", "p2_status": "NULL"},
+    "register": {"schema_constraint": "enum basso/medio/alto/null", "p2_status": "NULL"},
+    "estimated_length": {"schema_constraint": "integer 800-1200", "p2_status": "NULL"},
+    "descriptive_pauses_count": {"schema_constraint": "integer 0-2", "p2_status": "NULL"}
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s08",
+  "last_updated_story": "s12",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -134,6 +134,19 @@
       "proposed_resolution": "RISOLTO in P1 s08 via locations_secondary_id_renames (pattern mis_006 fix riusato): 'mercato_del_mezzogiorno_panca_di_pietra' -> 'panca_di_pietra' + role esteso 'vecchie_del_mercato_cammeo_silenzioso_quando_noce_cade_una_alza_mano_altre_annuiscono_zero_parole'. Decisione post-saga: aggiornare grafo nelle storie successive che usano lo stesso id composito.",
       "status": "resolved",
       "resolved_in_phase": "P1"
+    },
+    {
+      "id": "mis_008",
+      "discovered_in_story": "s09",
+      "between": "catalog_vs_graph",
+      "type": "name_discrepancy",
+      "catalog_reference": null,
+      "graph_reference": "story_graph.json#stories.s09.visual_anchors.scene_hooks[2,3].location; stories.s10 idem (2 hooks attesi)",
+      "bible_reference": null,
+      "description": "Il grafo s09 (e s10) ha hooks con location 'interno_casa_fratelli_non_codificato_scene_hook_non_location'. La casa dei tre fratelli umani non è entità canonica nel catalogo per decisione esplicita di Ray (active_constraints_touched: 'casa_fratelli_non_entity_decisione_ray_isola_protagonista'). I fratelli sono avatar narrativi, non abitanti dell'isola. Risolto in P1 mappando a piazza_villaggio + qualifier 'interno_casa_fratelli_non_cartografato' (la casa è geograficamente in piazza, vincolo spaziale rispettato; non sporca cartografia con sentinella).",
+      "severity": "bassa",
+      "proposed_resolution": "Mapping applicato in P1 di s09: 2 hooks risolti. Stesso mapping atteso per s10 (2 hooks). Decisione tracciata anche in active_constraints_touched dei nodi.",
+      "status": "resolved_by_design"
     }
   ]
 }

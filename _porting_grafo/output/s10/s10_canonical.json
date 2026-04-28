@@ -1,0 +1,420 @@
+{
+  "id": "s10",
+  "title_provvisorio": "La Notte senza Luna",
+  "cycle": "D",
+  "attribute_dominant": "cambiare",
+  "block_position": "apertura_blocco_d",
+  "season": "autunno",
+  "season_passage": "autunno_pieno",
+  "wind_active": "vento_mulinello",
+  "wind_transition": "vento_mulinello → vento_taglio all'alba sul Pontile",
+  "wind_notes": "Il Mulinello accompagna la notte: gira attorno alla casa, muove le imposte, solleva foglie secche contro il muro. Non entra nella stanza né nel lume velato di Elias — resta fuori, lavora il cortile e la via del pontile. All'alba sul Pontile il Mulinello cede al Taglio — non come passaggio drammatico, come fatto del giorno che comincia. Il Taglio qui è freddo-fatto oggettivo, non freddo-percezione soggettiva di Gabriel (come era in S9, chiusura deferred #11): autunno pieno, bruma sottile dal Fiume, fiato visibile, umidità che entra nella lana. Non minaccia, fatto del mondo autunnale.",
+  "pattern_a_active": "attivo",
+  "pattern_a_notes": "Variante notturna del Pattern A già bloomed in S8 (seed_pattern_a_rami_caduti_diventano_materia). Il buio della stanza non è vuoto: fiato dei fratelli, calore residuo delle coperte, il nido vuoto curato da Noah in S8 che riposa sul comodino — cura-di-giorno che diventa presenza-di-notte. Quando Noah dice 'Ho paura' la paura non sparisce: resta, e si cammina dentro. Pattern in modalità notturna-interna invece di diurna-esterna come S8. Mai dichiarato nel testo — vive nelle immagini. Status 'attivo' non 'bloomed': il bloom pieno del seme è già S8, qui è manifestazione ulteriore (convenzione grafo — un bloom pieno per seed, poi accumulo).",
+  "night_scene": true,
+  "night_scene_notes": "Notte piena, luna nuova — titolo letterale, non metaforica. Stanza dei fratelli senza lucerna quando Noah si sveglia. Cucina con piccolo lume solo quando Elias scende. Mondo esterno buio pieno fino all'alba. Narratore non personifica mai il buio — lo descrive come spazio, temperatura, suono (imposta che sbatte, respiri, passi, zampate lontane). MAI 'il buio guardava', MAI 'la notte sussurrava', MAI 'l'ombra si muoveva'. Il buio è stato del mondo, non soggetto. Quarta notte saga (s01, s08, s10).",
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "pontile_bocca",
+    "note": "meta narrativa e sigillo visivo della storia — alba al Pontile di Bartolo, soglia acqua/terra alla Bocca. Luogo del cuore narrativo malgrado gran parte del tempo di scena sia nel cammino. Pattern canonico S8 (Piazza primary con molti luoghi attraversati)."
+  },
+  "locations_secondary": [
+    {
+      "id": "via_del_pontile",
+      "note": "tessuto del cammino notturno coi fratelli sotto lanterna velata"
+    },
+    {
+      "id": "piazza_villaggio",
+      "note": "attraversato in partenza, invisibile sotto il buio pieno — nessun dettaglio architettonico descritto [legacy_id_villaggio_centrale_mappato_a_piazza_villaggio]"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "noah",
+      "role": "protagonista_storia_esecutore_sigillo_cambiare",
+      "mode": "scena_piena_notte_stanza_cammino_alba",
+      "key_actions": "si_sveglia_al_buio_dice_ho_paura_qui_e_buio_due_frasi_spezzate_cammina_mano_a_gabriel_arriva_al_pontile_allalba",
+      "fear_touched": {
+        "fear_id": "buio",
+        "status": "bloomed_here",
+        "mode_of_touch": "dire_ad_alta_voce_ho_paura_qui_e_buio_e_camminare_dentro_la_paura_fino_al_pontile"
+      },
+      "note": "Bloom pieno del seed_paura_noah_buio. Architrave strato 3 terna dire/accettare/tenere — Noah DICE, prima parola della terna. Voce canonica Noah (⟳ frasi spezzate, percezione fisica al primo posto). Due frasi separate da silenzio tipografico, nessun verbum dicendi ornato. Conteggio parole: 2+3=5 totali (deferred #19 simmetria discendente S10→S11→S12 verso silenzio finale)."
+    },
+    {
+      "id": "gabriel",
+      "role": "fratello_maggiore_ponte_silenzioso_tiene_mano",
+      "mode": "scena_piena_notte_stanza_cammino_alba",
+      "key_actions": "ascolta_noah_al_buio_risponde_con_mano_tesa_non_parole_cammina_mano_nella_mano_per_tutto_il_tragitto",
+      "fear_touched": {
+        "fear_id": "fratelli_crescono_diversi",
+        "status": "maturing_here",
+        "mode_of_touch": "vede_elias_gestire_la_lanterna_e_noah_crescere_nella_paura_detta_pickup_history_s10_prima_manifestazione_post_semina_s9"
+      },
+      "note": "Anticipazione visibile della sua risoluzione S12 (tenere con gesti). Tiene la mano di Noah tutto il cammino — il suo mode si prefigura qui. Non parla. Seed_paura_gabriel_fratelli_crescono_diversi in pickup_history: alimentazione silenziosa della paura seminata S9."
+    },
+    {
+      "id": "elias",
+      "role": "fratello_medio_gestore_lanterna_velata_cura_strumentale",
+      "mode": "scena_piena_notte_stanza_cucina_cammino_alba",
+      "key_actions": "si_alza_per_primo_va_in_cucina_accende_e_vela_lume_con_panno_di_casa_guida_il_cammino_con_luce_bassa_sui_piedi",
+      "note": "Porta la luce, non la direzione. Il gesto di velatura (panno di lana vecchia attorno al vetro) è cura strumentale matura — evoluzione positiva del seed_paura_elias_piccolo da 'tagliato fuori' S4-S6 a 'comprensione empatica' S9 a 'cura efficace' S10. La lanterna pesa dopo 3-4 km — passi lenti non dichiarati. Prepara accettazione S11."
+    },
+    {
+      "id": "bartolo",
+      "role": "cornice_silenziosa_alba_pontile_prima_della_terna_blocco_d",
+      "mode": "cammeo_presenza_zero_parole_zero_gesti_attivi",
+      "key_actions": "sta_sul_pontile_allalba_vede_fratelli_arrivare_un_occhio_si_chiude_lento_e_si_riapre_lento_fa_spazio_sulla_panca_zero_parole",
+      "constraints_active": [
+        "voice_constraint_mai_parola_mai_gesto_attivo_solo_occhio_che_registra"
+      ],
+      "note": "Bloom del seed_bartolo_vede_e_basta (seminato S7, bloom_target s10). Prima cornice silenziosa della terna blocco D (Bartolo-Amo-Grunto). Species canonica: tartaruga di mare anziana — NON tasso, NON animale notturno terrestre. Vive sul Pontile, non si sposta. Architrave strato 2: il rilettore coglie che era lì anche in S7 (zattera dei tre rametti)."
+    },
+    {
+      "id": "amo",
+      "role": "messaggero_diurno_pomeriggio_prima_e_cammeo_alba_pesca",
+      "mode": "cammeo_alba_pescatore_lontano_non_avvicina_fratelli",
+      "key_actions": "pomeriggio_prima_offscreen_accordo_con_elias_al_villaggio_sul_passaggio_allalba_volo_sopra_acqua_tuffo_per_pesce_non_guida_cammino_non_accompagna",
+      "note": "Intervento esclusivamente diurno (prima di notte). Preserva constraint fears_resolved_by_brothers_only: Amo NON accompagna, NON guida, NON salva. Cammeo all'alba in attività canonica di pescatore cormorano. L'accordo con Elias è un accenno diurno tra abitanti, non una rete procedurale notturna."
+    },
+    {
+      "id": "fiamma",
+      "role": "cammeo_alba_forno_al_ritorno_cuore_caldo",
+      "mode": "cammeo_silenzioso_senza_parole_lascia_qualcosa_caldo_prosegue",
+      "detti_count": 0,
+      "key_actions": "passa_sul_pontile_allalba_dopo_prima_infornata_notte_lascia_panno_col_pane_caldo_sulla_panca_senza_commentare_prosegue",
+      "note": "Fiamma NON consola Noah, NON si avvicina, NON dice 'coraggio' o 'bravo'. Presenza canonica di volpe rossa che sa senza dire. Detti_count=0 — S10 cammeo silenzioso. Squillo cromatico rosso vivo sullo sfondo dell'alba = chiude cornice S1 (primo squillo al Forno) e prepara S12 (cornice chiusura saga al Forno)."
+    },
+    {
+      "id": "grunto",
+      "role": "presenza_acustica_lontana_notturna_terza_cornice_silenziosa_implicita",
+      "mode": "acustico_only_zoccoli_roccia_distante_mai_visto_mai_nominato",
+      "key_actions": "zampate_su_roccia_sentite_dal_pontile_nell_aria_notturna_ferma_dalle_montagne_gemelle_a_nord",
+      "fragment_used": false,
+      "constraints_active": [
+        "grunto_max_2_fragments_saga_budget_0_2_preservato_per_s12"
+      ],
+      "note": "Species canonica: stambecco verde vecchio. NON cinghiale — mai grugnito né fruscio. Solo zampate di zoccoli su roccia, lontane. Registrato come 'qualcosa che cammina, lassù, dove stanno le cose vecchie'. NON frammento parlato — budget frammenti 0/2 preservato per S12. Conta come presenza acustica per la terna cornici silenziose blocco D (Bartolo vista, Amo volo diurno, Grunto acustico)."
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "cantilena_serale_lontana_luna_nera_terra_ferma_mani_al_fuoco_ultima_cantilena_saga",
+      "note": "Chiude la serie collettiva cantilene. Cinque parole serali lontane prima che i fratelli si addormentino."
+    }
+  ],
+  "seeds_planted": [],
+  "seeds_picked_up": [
+    "seed_pattern_a_rami_caduti_diventano_materia",
+    "seed_gabriel_micro_occhiata_noah_cresciuto",
+    "seed_paura_gabriel_fratelli_crescono_diversi"
+  ],
+  "seeds_maturing_here": [
+    "seed_cornetto_briciole_pattern_a_rinforzo",
+    "seed_paura_elias_piccolo"
+  ],
+  "seeds_bloomed_here": [
+    "seed_paura_noah_buio",
+    "seed_nido_vuoto_curato_da_noah",
+    "seed_bartolo_vede_e_basta"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s10_001",
+      "from_story": "s01",
+      "to_story": "s10",
+      "type": "bloom_paura_architrave_strato_3_ciclo_completo_saga",
+      "description": "Prima apparizione saga della paura del buio di Noah (S1, gesto del raccogliere bastoncino nel freddo bianco) si chiude qui in S10. Ciclo completo: seminato S1, maturato S3 (foresta di sera, due passi e si ferma), bloomed S10 (notte senza luna risolta con 'dire'). Architrave strato 3 chiude — Noah DICE, prima parola della terna dire/accettare/tenere.",
+      "registered_in_story": "s10"
+    },
+    {
+      "callback_id": "cb_s10_002",
+      "from_story": "s03",
+      "to_story": "s10",
+      "type": "evoluzione_dal_silenzio_al_dire_variante_geografica_buio_puro",
+      "description": "Noah fece due passi nella Foresta di sera in S3, si fermò, tornò indietro senza dire. S10 è la variante geografica del buio puro che esplode: stavolta Noah entra nel buio con parole ('Ho paura. Qui è buio.'). Evoluzione dal silenzio-trattenuto al dire-ad-alta-voce. Stesso bambino, stessa paura, altra modalità.",
+      "registered_in_story": "s10"
+    },
+    {
+      "callback_id": "cb_s10_003",
+      "from_story": "s07",
+      "to_story": "s10",
+      "type": "cornice_silenziosa_pontile_seconda_apparizione_bartolo_vede_e_basta",
+      "description": "Bartolo era sul Pontile in S7 quando la zattera dei tre rametti usciva verso la Bocca. È di nuovo sul Pontile in S10 quando i fratelli arrivano dentro la paura. Stesso gesto, stesso spazio, stessa modalità: vede e basta. Strato 2 rilettore coglie la simmetria. Prima cornice silenziosa della terna blocco D.",
+      "registered_in_story": "s10"
+    },
+    {
+      "callback_id": "cb_s10_004",
+      "from_story": "s08",
+      "to_story": "s10",
+      "type": "continuita_pokemon_oggetto_curato_riappare_cura_diventa_presenza",
+      "description": "Il nido vuoto curato da Noah dietro il Pozzo (S8) riappare sul comodino della stanza in S10. Cura diurna di maggio diventa presenza notturna di autunno. Pattern A variante notturna-interna. Continuità Pokémon: oggetti toccati non scompaiono, accumulano significato.",
+      "registered_in_story": "s10"
+    },
+    {
+      "callback_id": "cb_s10_005",
+      "from_story": "s04",
+      "to_story": "s10",
+      "type": "eco_silenziosa_codice_dei_tre_tum_tum_tum_mani_che_si_cercano_al_buio",
+      "description": "Nel TUM-tum-TUM di S4 (battito dei tre) è già implicito il codice dei fratelli che si cercano col gesto. In S10 il codice si ripete silenzioso: mano di Noah cerca mano di Gabriel al buio, Elias si alza e trova la lanterna senza chiedere. Nessun TUM-tum-TUM esplicito nel testo — eco silenziosa. Preparazione verso S12 (mani sulla terra, Roccia Alta).",
+      "registered_in_story": "s10"
+    }
+  ],
+  "debts_opened": [
+    {
+      "debt_id": "debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d",
+      "target_story": "s11",
+      "rilievo": "medio",
+      "note": "Amo è stato messaggero diurno in S10 e cammeo-pescatore all'alba. In S11 (festa raccolto) Amo deve essere cornice silenziosa — seconda della terna blocco D (Bartolo S10, Amo S11, Grunto S12 frammento). Architrave terna cornici silenziose: il mondo dell'isola è cornice, mai risolutore delle paure dei fratelli."
+    }
+  ],
+  "debts_closed": [
+    {
+      "debt_id": "debt_s01_to_s10_paura_noah_buio_emerge_pienamente",
+      "close_mode": "bloom_pieno_architrave_strato_3_noah_dice",
+      "note": "Seed_paura_noah_buio passa da maturing (S1 origin, S3 maturing) a bloomed in S10. Noah dice 'Ho paura. Qui è buio.' — due frasi 5 parole totali (2+3) separate da silenzio tipografico nel buio pieno della stanza. Poi cammino coi fratelli sotto lanterna velata di Elias, arrivo al Pontile all'alba. Bartolo fa spazio, zero parole. La paura non sparisce — viene detta e attraversata. Architrave terna strato 3: Noah DICE, prima parola della terna dire/accettare/tenere."
+    },
+    {
+      "debt_id": "debt_s04_to_s10_paura_noah_buio_bloom_pieno_risolta_dire",
+      "close_mode": "chiusura_coincidente_debt_s01_stesso_bloom",
+      "note": "Stesso bloom di debt_s01_to_s10 — il debt aperto in S4 era anticipazione della risoluzione modale 'dire'. Chiusura coincidente, nessuna doppia azione. Resolution_mode 'dire' confermato come canonico per Noah."
+    },
+    {
+      "debt_id": "debt_s07_to_s10_bartolo_vede_e_basta_bloom_notte_noah_cornice_silenziosa",
+      "close_mode": "bloom_pieno_prima_cornice_silenziosa_blocco_d",
+      "note": "Seed_bartolo_vede_e_basta passa da seminato (S7) a bloomed in S10. Bartolo sta sul Pontile all'alba, vede i fratelli arrivare, fa spazio sulla panca, un occhio anziano che si chiude lento e si riapre lento. Zero parole, zero gesti attivi. Prima cornice silenziosa della terna blocco D (Bartolo-Amo-Grunto). Architrave strato 2: rilettore coglie che Bartolo era lì anche in S7 quando la zattera usciva. Mondo dell'isola come cornice, mai come risolutore."
+    },
+    {
+      "debt_id": "debt_s08_to_s10_nido_vuoto_bloom_notte",
+      "close_mode": "bloom_pieno_proto_gesto_cura_nel_buio",
+      "note": "Seed_nido_vuoto_curato_da_noah passa da seminato (S8, dietro il Pozzo) a bloomed in S10 (sul comodino della stanza). Quando Noah si sveglia al buio e ha paura, il nido è lì — presenza silenziosa non commentata. Cura diurna di maggio diventa presenza notturna di autunno. Il buio era pieno."
+    },
+    {
+      "debt_id": "debt_s08_to_s10_pattern_a_variante_notturna",
+      "close_mode": "manifestazione_ulteriore_seme_gia_bloomed_variante_notturna_interna",
+      "note": "Seed_pattern_a_rami_caduti_diventano_materia resta bloomed (bloom pieno S8). Manifestazione ulteriore in S10: il buio della stanza è pieno (fiato dei fratelli, nido sul comodino, calore residuo coperte). Pattern A in variante notturna-interna invece di diurna-esterna come S8. Mai dichiarato nel testo. Accumulo post-bloom coerente col pattern saga."
+    },
+    {
+      "debt_id": "debt_s05_s07_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga",
+      "close_mode": "chiusura_parziale_multi_target_s10_manifesta_s11_s12_restano_aperte",
+      "note": "Debt multi-target aperto S5 (e ripetuto S7). La parte S10 è chiusa con manifestazione notturna. Le parti S11 (variante collettiva festa raccolto) e S12 (chiusura saga) restano aperte come originariamente formulate. Coerente pattern di chiusura parziale multi-target adottato in S8 e S9."
+    }
+  ],
+  "key_phrase_indicative": "Ho paura.\nQui è buio.",
+  "key_phrase_attributed_to": "noah",
+  "key_phrase_notes": "Due frasi su righe tipografiche separate — silenzio visivo tra la prima e la seconda. Prima frase due parole ('Ho paura.'), seconda frase tre parole ('Qui è buio.'). Voce canonica Noah (⟳ frasi spezzate, percezione fisica al primo posto — CARTA_VOCE §sub-voci fratelli). La prima sigilla l'emozione, la seconda la localizza. Nessun verbum dicendi prima ('disse', 'sussurrò') e nessuno tra le due frasi. Nessuna reazione verbale di Gabriel: risponde con la mano tesa nel buio. Architrave strato 3 terna dire/accettare/tenere — Noah DICE, prima parola della terna. Coerenza con S12 (Gabriel tiene con gesti, senza parole): la terna si asciuga progressivamente verso il silenzio finale — S10 cinque parole in due frasi, S12 zero parole solo gesto (deferred #19 simmetria numerica discendente).",
+  "quartieri_attraversati": [
+    "acqua_sud",
+    "centro_villaggio"
+  ],
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "interno_casa_fratelli_non_cartografato",
+          "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+        },
+        "quadrant": "centro_villaggio",
+        "hook_id": "vh_s10_sera_cantilena_ultima_noah_si_addormenta",
+        "moment": "sera_tarda_villaggio_addormentato_ultima_cantilena_coltivatori_lontana",
+        "characters_present": [],
+        "elements": [],
+        "palette": "grigio_blu_tramonto_ocra_lanugine_coperte_marrone_rametti_nido_nero_imposte_socchiuse_oro_tardo_luce_morente",
+        "notes": "[VISUAL] Interno stanza dei fratelli al tramonto tardo. Tre letti accostati, coperte di lana ruvida, imposte socchiuse. Dalla finestra entra grigio-blu del crepuscolo autunnale — ultima luce diurna. Sul comodino accanto al letto di Noah: il nido vuoto curato in S8 (rametti intrecciati, muschio secco, scavo centrale vuoto). Noah con gli occhi aperti che guarda il soffitto. Gabriel sotto la coperta. Elias a fianco già respira regolarmente. Fuori — lontanissima — la cantilena serale dei Coltivatori: 'luna nera, terra ferma, mani al fuoco'. Cinque parole nell'aria.\n\n[CRITIQUE] Il nido sul comodino è centro ottico marginale — piccolo, non al centro tavola, ma visibile. Illustratore NON aggiungere orologio, lume di notte, oggetti superflui — spoglio canonico. Luce crepuscolare grigio-blu, non azzurra-fredda né arancione-calda.",
+        "stratification": {
+          "strato_1": "bambino_vede_stanza_e_fratelli_a_letto_sente_cantilena_lontana",
+          "strato_2": "lettore_registra_nido_sul_comodino_come_oggetto_presente",
+          "strato_3": "rilettore_coglie_ultima_cantilena_saga_chiude_serie_collettiva_prepara_notte_senza_luna"
+        }
+      },
+      {
+        "location": {
+          "id": "piazza_villaggio",
+          "qualifier": "interno_casa_fratelli_non_cartografato",
+          "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+        },
+        "quadrant": "centro_villaggio",
+        "hook_id": "vh_s10_notte_fondo_noah_dice_ho_paura_mano_di_gabriel",
+        "moment": "notte_fonda_luna_nuova_buio_assoluto_stanza",
+        "characters_present": [],
+        "elements": [],
+        "palette": "nero_assoluto_dominante_riflessi_minimi_su_occhi_e_dita_bianchi_avorio_lenzuolo_quasi_invisibile",
+        "notes": "[VISUAL] Stanza nel buio pieno. Nessuna illuminazione — luna nuova, imposte chiuse. Illustrazione quasi completamente nera con micro-accenni: contorno lievissimo del letto, riflesso tenue su un occhio aperto di Noah, sagoma indistinta della mano di Gabriel che si tende nel buio verso il letto di Noah e incontra la mano di Noah. Il nido sul comodino non visibile ma presente (sappiamo dalla scena precedente). Elias nel letto accanto si sta alzando — movimento percepibile solo dal lenzuolo che si sposta.\n\n[CRITIQUE] PAGINA PIU' NERA DELLA SAGA. Illustratore deve resistere alla tentazione di aggiungere luce. Solo due punti-luce-riflesso: occhio aperto Noah, contorno mano Gabriel. Il resto è nero pieno. Il testo 'Ho paura.' / 'Qui è buio.' sulla pagina in bianco puro, due righe tipografiche separate (silenzio visivo tra le due). Tipografia media, non grande (non melodramma).\n\n[VOICE] cinque_parole_due_frasi_su_righe_tipografiche_separate_silenzio_visivo_nessuna_descrizione_del_buio_come_entita_solo_oggetto_fisico_stanza_mano_che_si_tende_fiato_visibile\n\n[KEY_PHRASE_VISIBLE] Ho paura.\nQui è buio. (consolidata top-level)",
+        "stratification": {
+          "strato_1": "bambino_vede_una_pagina_quasi_nera_con_due_mani_che_si_trovano",
+          "strato_2": "lettore_sente_il_silenzio_tra_fratelli_e_le_cinque_parole_ho_paura_qui_e_buio",
+          "strato_3": "rilettore_coglie_architrave_strato_3_noah_DICE_prima_parola_della_terna_dire_accettare_tenere"
+        }
+      },
+      {
+        "location": {
+          "id": "via_del_pontile",
+          "qualifier": null,
+          "legacy_string": "via_del_pontile"
+        },
+        "quadrant": "acqua_sud",
+        "hook_id": "vh_s10_cammino_notturno_lanterna_velata_cerchio_luce_sui_piedi",
+        "moment": "notte_profonda_via_del_pontile_quattro_figure_lanterna_velata",
+        "characters_present": [],
+        "elements": [],
+        "palette": "giallo_fiamma_velata_cerchio_piccolo_sui_piedi_nero_assoluto_tutto_attorno_ocra_foglie_secche_nel_cerchio_marrone_sentiero_marrone_lana_vestiti_bambini",
+        "notes": "[VISUAL] Via del pontile al buio. Intorno: nero pieno, nessuna stella (cielo coperto da nubi basse — realismo autunnale). Elias davanti con la lanterna di vetro già velata da un panno di casa (lana vecchia avvolta attorno al vetro, gesto dedotto non illustrato come scena a sé) a livello delle ginocchia — cerchio di luce gialla bassa che illumina solo i sassi del sentiero e le scarpe dei tre. Gabriel e Noah dietro Elias, mano nella mano. Il mondo attorno resta invisibile — case, alberi, orti, nulla è illustrato. Solo la striscia di sentiero e i piedi. Foglie secche mosse dal Mulinello passano nel cerchio di luce e spariscono nel buio. In lontananza, sulla destra, appena percepibile: suono zampate su roccia — zoccoli di Grunto nelle Montagne Gemelle, portato dall'aria ferma. Mai visto, mai nominato.\n\n[CRITIQUE] PAGINA-CHIAVE DI S10. Illustratore: resistere alla tentazione di illustrare il paesaggio — nessun contorno di case, nessuna sagoma di albero. SOLO il cerchio di luce. Il nero riempie 80-90% della tavola. Il cerchio di luce è piccolo — non un cono ampio di torcia moderna, un cerchio di 50-60 cm davanti ai piedi. Elias leggermente più avanti dei fratelli. La lanterna velata (vetro + lana avvolta) visibile nel palmo di Elias, dettaglio piccolo. Il gesto di velatura NON illustrato come scena a sé — il lettore lo deduce dal risultato (luce bassa, panno visibile).\n\n[VOICE] narratore_non_descrive_paesaggio_circostante_coerente_con_quello_che_i_personaggi_vedono_il_lettore_vede_solo_il_cerchio",
+        "onomatopee": [
+          "zampate_lontane_grunto_graficamente_piccolissime_tot_tot_tot_distante_non_drammatiche"
+        ],
+        "stratification": {
+          "strato_1": "bambino_vede_tre_paia_di_piedi_in_un_cerchio_di_luce_nel_nero",
+          "strato_2": "lettore_registra_che_Noah_non_vede_la_strada_vede_solo_il_prossimo_passo",
+          "strato_3": "rilettore_coglie_metafora_ontologica_del_crescere_fare_un_passo_alla_volta_nel_non_visibile"
+        }
+      },
+      {
+        "location": {
+          "id": "pontile_bocca",
+          "qualifier": null,
+          "legacy_string": "pontile_bocca"
+        },
+        "quadrant": "acqua_sud",
+        "hook_id": "vh_s10_alba_pontile_bartolo_vede_amo_tuffo_fiamma_cammeo",
+        "moment": "alba_pontile_bocca_luce_che_cresce_taglio_oggettivo_autunnale",
+        "characters_present": [],
+        "elements": [],
+        "palette": "grigio_rosa_dorato_cielo_alba_bianco_avorio_bruma_sottile_acqua_nero_lucido_guscio_bartolo_ocra_legno_pontile_marrone_scuro_tartaruga_rosso_acceso_piccolissimo_fiamma_sullo_sfondo_giallo_tenue_lanterna_quasi_spenta",
+        "notes": "[VISUAL] Pontile della Bocca. Cielo che si apre — grigio-rosa-dorato, luce bassa da oriente. Sotto il Pontile: acqua del Fiume che Gira che esce verso il mare — movimento antiorario visibile. Bruma sottile sull'acqua. Sulle rocce piatte accanto alla struttura del Pontile: Bartolo — tartaruga di mare anziana, guscio scuro lucido di umidità, un occhio aperto uno quasi chiuso. I tre fratelli arrivano da nord (via del pontile) — Elias davanti con la lanterna ora non più velata e quasi spenta (alba la supera), Gabriel e Noah mano nella mano. Bartolo fa un movimento lentissimo del collo — fa spazio sulla panca di legno scuro accanto. In alto, sul mare: Amo in volo, tuffo per un pesce — spruzzo piccolo, lontano, cornice aerea. Fiamma sta passando sul Pontile dal lato villaggio — ha in mano qualcosa avvolto in un panno (pane caldo della prima infornata della notte, visibile solo dal vapore che esce dal panno nel freddo) — lo posa sulla panca del Pontile senza commentare e prosegue. Il Taglio è oggettivo — fiato dei fratelli visibile, lana dei vestiti leggermente umida, freddo che bagna. Dicembre si avvicina.\n\n[CRITIQUE] SCENA DI CHIUSURA. Illustratore: Bartolo tartaruga di mare, NON tasso NON nutria — guscio, pinne vestigiali, testa rugosa. Posizione su rocce piatte accanto al Pontile, NON in acqua. Amo in distanza — non dettagliato. Fiamma cammeo su lato sinistro della tavola, rosso vivo come unico squillo di colore — chiude la cornice S1 (primo squillo al Forno) e prepara S12 (cornice chiusura saga al Forno). Luce calda dell'alba compensa il freddo oggettivo — contrasto cromatico voluto.\n\n[VOICE] narratore_non_commenta_che_noah_non_ha_piu_paura_non_lo_dice_noah_non_lo_dichiara_nessuno_la_scena_sigilla_senza_verbo_di_stato",
+        "onomatopee": [
+          "tuffo_amo_graficamente_piccolo_splash_lontano_fiato_fratelli_visibile_non_onomatopeico"
+        ],
+        "stratification": {
+          "strato_1": "bambino_vede_tartaruga_vecchia_sul_pontile_uccello_che_si_tuffa_volpe_che_lascia_qualcosa_di_caldo_alba_bella",
+          "strato_2": "lettore_registra_che_nessun_personaggio_dice_una_parola_la_paura_di_Noah_e_gia_passata_senza_essere_nominata",
+          "strato_3": "rilettore_coglie_terna_cornici_silenziose_blocco_d_bartolo_primo_cammeo_pieno_amo_cammeo_grunto_acustico_fiamma_ritorno_cornice_saga_via_forno"
+        }
+      }
+    ]
+  },
+  "voice_notes_essential": [
+    "NOTTE_SENZA_LUNA_LITERALE_NON_METAFORICA",
+    "NOAH_DICE_HO_PAURA_QUI_E_BUIO_VOCE_SPEZZATA_PERCEZIONE_FISICA_CINQUE_PAROLE_DUE_FRASI",
+    "GABRIEL_RISPONDE_CON_MANO_NON_PAROLE_ANTICIPAZIONE_TENERE",
+    "ELIAS_GESTO_VELATURA_LANTERNA_NON_SPIEGATO",
+    "NARRATORE_NON_PERSONIFICA_IL_BUIO_MAI_IL_BUIO_GUARDAVA",
+    "PATTERN_A_MAI_NOMINATO_IL_BUIO_ERA_PIENO_VIVE_IN_IMMAGINI",
+    "CERCHIO_LUCE_BASSA_SUI_PIEDI_METAFORA_PROSSIMO_PASSO",
+    "FREDDO_TAGLIO_OGGETTIVO_UMIDO_BAGNA_LANA_CHIUDE_DEFERRED_11_S9",
+    "CANTILENA_ULTIMA_SAGA_LUNA_NERA_TERRA_FERMA_MANI_AL_FUOCO",
+    "GRUNTO_ZAMPATE_LONTANE_MAI_GRUGNITO_BUDGET_PRESERVATO_S12",
+    "FIAMMA_CAMMEO_ALBA_SENZA_PAROLE_NESSUNA_CONSOLAZIONE",
+    "NESSUN_VERBO_DI_STATO_SULLA_PAURA_RISOLTA_SIGILLO_SENZA_DICHIARARE"
+  ],
+  "structural_notes": [
+    "apertura_blocco_d_noah_cambiare_esecutore_del_sigillo",
+    "architrave_strato_3_terna_dire_accettare_tenere_noah_DICE_prima_parola_cinque_parole_due_frasi",
+    "bloom_seed_paura_noah_buio_ciclo_completo_s1_s3_s10",
+    "bloom_seed_bartolo_vede_e_basta_prima_cornice_silenziosa_blocco_d",
+    "pattern_a_variante_notturna_post_bloom_s8_accumulo_interno",
+    "night_scene_quarta_saga_luna_nuova_letterale",
+    "amo_messaggero_diurno_non_viola_fears_resolved_by_brothers_only",
+    "bartolo_canonico_tartaruga_di_mare_anziana_cornice_silenziosa",
+    "seed_paura_gabriel_pickup_history_s10_prima_manifestazione_post_semina",
+    "debt_s10_to_s11_amo_cornice_silenziosa_nuovo_aperto_terna_blocco_d"
+  ],
+  "premise": "Noah si sveglia nel cuore della notte. La stanza è buia e la luna è nuova — nessuna luce entra dalle imposte. Il nido che ha curato per tutta l'estate è sul comodino, ma lui non lo vede, lo sa. Gabriel dorme nel letto accanto, Elias in quello di fianco. Fuori, lontanissima, l'eco della cantilena serale dei Coltivatori si è spenta da ore. Noah resta fermo con gli occhi aperti. Poi dice due cose.",
+  "problem": "La paura del buio di Noah, seminata in S1 e maturata in S3 (quando si fermò alle soglie della Foresta di sera), torna nella forma più pura: luna nuova, stanza chiusa, nessuna via d'uscita visibile. Il mondo si riduce a temperatura, suono, respiro. Nessun adulto può risolvere — i constraint del progetto lo vietano (fears_resolved_by_brothers_only) e comunque non c'è nessun adulto, solo tre bambini soli nella notte. Il problema non è 'far sparire il buio' (impossibile, oggettivo) ma 'attraversarlo'. La via di risoluzione sta nel dire, nel prendere mano, nel camminare fino a dove il buio finisce per conto suo — l'alba al Pontile. Tre fratelli, un lume velato, una tartaruga anziana come meta silenziosa. Nessuna parola del tipo 'non aver paura'. Nessuna consolazione. Solo cammino.",
+  "threshold_moment": "Il momento in cui Noah dice 'Ho paura.' — poi, dopo un silenzio breve — 'Qui è buio.'\n\nNella stanza buia, nessuna premessa, nessun balbettio. Due frasi — prima due parole, seconda tre — separate da un silenzio tipografico. Noah non si muove, non piange, non chiama 'mamma' o 'papà' (che nella saga non esistono come figure default). Dice e basta. Gabriel, nel letto accanto, tende la mano nel buio senza parole. Le due mani si trovano. Elias si alza senza che nessuno glielo chieda, va in cucina.\n\n[MECHANICS] — Bloom pieno di seed_paura_noah_buio (maturing da S1-S3, bloomed qui). La paura non viene 'risolta' nel senso di scomparsa: viene detta. Il dire è la risoluzione modale canonica della terna strato 3 (Noah DICE).\n\n[EAR] — ⟳ Cambiare in azione pura. Noah non era capace di dire prima (S1 raccoglie bastoncino muto, S3 si ferma alle soglie della Foresta senza dire). Qui passa dal silenzio-trattenuto al dire-ad-alta-voce. La capacità è installata nel gesto stesso — nessun allenamento, nessuna preparazione: si fa facendo.\n\n[STRATO] — Strato 1 (bambino 4 anni): due fratelli che si tengono la mano al buio. Strato 2 (7-10 anni): il più piccolo ha detto la cosa difficile e i grandi gli hanno risposto con i corpi, non con le parole. Strato 3 (rilettore adulto): architrave della terna saga — Noah DICE, Elias ACCETTA (S11), Gabriel TIENE (S12). La prima parola della terna è la più alta-voce. La terna si asciuga progressivamente fino al silenzio finale (cinque parole S10 → una frase corta S11 → zero parole solo gesto S12 — deferred #19).",
+  "resolution_mode": "Cammino coi fratelli fino al Pontile all'alba, sotto lanterna velata di Elias, mano di Gabriel che tiene Noah.\n\n[CLOSURE] — Noah non dichiara 'non ho più paura' quando arrivano al Pontile. Non lo dichiara nessuno per lui. Il narratore non commenta. La scena sigilla con l'immagine: luce che cresce, Bartolo che fa spazio, Amo che si tuffa, Fiamma che passa col pane caldo e prosegue. La paura è stata attraversata, non sconfitta. Resta dentro Noah come possibilità — ma adesso sa che si può dire.\n\n[CONTRIBUTO] — Tre contributi caratteriali canonici integrati (cycle D):\n- Noah (⟳): DICE la paura ad alta voce, cammina dentro la paura fino all'alba.\n- Gabriel (Δ): TIENE (prefigura il suo mode S12). Risponde con la mano tesa nel buio. Cammina mano nella mano per tutto il tragitto. Non parla. Anticipazione visibile della sua risoluzione di S12.\n- Elias (⇄): CONNETTE. Si alza senza che glielo chiedano, va in cucina, vela la lanterna, guida il cammino con la luce bassa. Gestisce la luce come cura strumentale matura — evoluzione positiva del seed_paura_elias_piccolo.\n\n[NO MORALINA] — Nessun personaggio (Bartolo, Amo, Fiamma, narratore) dice 'bravo Noah' o 'sei stato coraggioso'. Nessun 'vedi che non era così spaventoso'. Nessun commento sul buio. Il buio non viene 'spiegato' al bambino lettore. Resta buio oggettivo di una notte senza luna, attraversato da tre bambini soli. L'address al lettore in chiusura è sobrio — domanda o osservazione minima, non lezione.\n\n[SIGILLO] — Immagine di chiusura: i tre fratelli seduti sulla panca del Pontile accanto a Bartolo, pane caldo di Fiamma posato senza commento, Amo che si tuffa in distanza, luce che cresce. Grunto acustico lontano — zampate lievissime dalle Montagne Gemelle che nessuno nomina. Il Taglio è oggettivo-autunnale-umido, bagna la lana. Dicembre si avvicina.",
+  "palette_emotiva": "Dominanti: nero-assoluto (stanza, prima parte cammino) → giallo-fioco-velato (cerchio luce sui piedi) → grigio-rosa-dorato (alba Pontile).\n\nAccent freddo: bianco-avorio di lenzuoli visibili appena nella prima scena buia. Blu-grigio-brumoso dell'acqua del Fiume all'alba.\n\nAccent neutro: marrone-lana di coperte, vestiti dei bambini, panno attorno alla lanterna. Ocra del sentiero illuminato a tratti. Nero lucido del guscio di Bartolo all'alba.\n\nAccent caldo / squillo cromatico di chiusura: rosso-vivo di Fiamma come unica nota accesa della tavola finale — chiude cornice S1 (Fiamma al Forno, squillo d'apertura) e prepara S12 (cornice chiusura saga al Forno).\n\nLuce: fioca-velata-bassa per metà storia, poi luce crescente naturale dell'alba, non drammatica — graduale, umida. Nessuna illuminazione artificiale oltre la lanterna di Elias. Nessuna stella (cielo coperto, realismo autunnale).\n\nChiusura visiva: la tavola ultima inquadra i tre fratelli seduti sulla panca di legno scuro del Pontile, Bartolo accanto, Amo in volo lontano. Scala cromatica passa dal buio totale delle prime tavole alla luce-umida-dell'alba finale. Progressione non-drammatica — il buio cede da sé, non viene sconfitto.",
+  "active_constraints_touched": [
+    "ear_framework_invisible",
+    "no_explicit_morals",
+    "night_not_personified",
+    "pattern_a_never_named_in_text",
+    "fears_resolved_by_brothers_only",
+    "grunto_max_2_fragments_saga",
+    "grunto_mai_nomi_propri_ariete_ondina_tempesta",
+    "fiamma_detti_max_2_per_story",
+    "fiamma_non_madre_default_fratelli",
+    "narratore_iniziato_architrave_mai_spiega_sempre_sigilla",
+    "no_narrator_reveal_preannouncement_fase_f",
+    "doppio_strato_4_anni_7_10_anni_strato_3_opzionale",
+    "continuita_pokemon_accumulo_conseguenze_evoluzione",
+    "key_phrase_voce_canonica_noah_frasi_spezzate_percezione_fisica",
+    "casa_fratelli_non_entity_scene_hooks_non_locations",
+    "calendario_oggettivo_non_soggettivo_gabriel_s9_deferred_11_chiuso",
+    "address_al_lettore_chiusura_sobria_max_6_saga_3_dopo_s10",
+    "voce_autore_ray_16_tratti",
+    "terna_strato_3_dire_accettare_tenere_noah_dice_prima_parola",
+    "architrave_cornici_silenziose_blocco_d_bartolo_amo_grunto",
+    "quarta_night_scene_saga_luna_nuova_letterale",
+    "ultima_cantilena_coltivatori_saga_serale",
+    "pattern_a_variante_notturna_dopo_bloom_pieno_s08",
+    "seed_minimo_semina_zero_nuovi_curva_saldo_discendente",
+    "bartolo_species_canonica_tartaruga_di_mare_anziana",
+    "amo_messaggero_diurno_non_notturno_preserva_fears_by_brothers",
+    "freddo_taglio_oggettivo_umido_bagna_lana_non_soggettivo",
+    "key_phrase_due_frasi_silenzio_tipografico_due_righe",
+    "mandala_silenzioso_numeri_3_4_architettura_nascosta"
+  ],
+  "callback_summary": "La Notte senza Luna raccoglie con peso tutti i fili lasciati dalla saga sul buio e sulla paura di Noah. La paura del buio, seminata nel primo gesto di Noah in S1 (raccogliere il bastoncino nel freddo bianco) e maturata tra le soglie della Foresta di sera in S3, si scioglie qui nel modo più semplice possibile — dicendola. L'eco del TUM-tum-TUM di S4, codice dei fratelli, torna nel gesto silenzioso delle mani che si cercano al buio — nessun battito esplicito, solo due palmi che si trovano. Il nido vuoto che Noah curò dietro il Pozzo in S8, parte della prima scena attiva del Pattern A, è ora sul comodino della stanza: cura-di-giorno diventata presenza-di-notte. Il buio era pieno — manifestazione notturna del Pattern A già bloomed in S8, senza mai nominarlo. Bartolo sul Pontile all'alba è lo stesso Bartolo di S7 quando la zattera dei tre rametti usciva verso la Bocca — stesso spazio, stesso occhio, stessa modalità di 'vedere e basta'. Prima cornice silenziosa della terna blocco D. I fratelli camminano soli con una lanterna velata e arrivano dove il buio finisce. La paura non sparisce, viene detta, e dire è dove comincia il crescere. Noah DICE — prima parola della terna dire/accettare/tenere che si asciugherà fino al gesto silenzioso di S12.",
+  "fear_touched": {
+    "brother": "noah",
+    "fear_id": "buio",
+    "status": "bloomed",
+    "mode_of_touch": "dire_ad_alta_voce_ho_paura_qui_e_buio_cinque_parole_due_frasi_e_camminare_dentro_la_paura_fino_al_pontile_allalba_coi_fratelli",
+    "_note": "Prima risoluzione della terna strato 3 dire/accettare/tenere. Noah DICE. Seed seed_paura_noah_buio passa da maturing (S1 origin, S3 maturing) a bloomed. Chiusura di due debt architrave: debt_s01_to_s10 e debt_s04_to_s10. Mode of touch canonico: non 'affrontare' né 'vincere' né 'superare' — dire e attraversare. La paura resta dentro Noah come possibilità, ma adesso sa che si può dire. Coerenza traiettoria verso S11 (Elias ACCETTA) e S12 (Gabriel TIENE): la terna si asciuga progressivamente dal dire al gesto silenzioso. Simmetria numerica parole (deferred #19): S10 cinque parole, S11 da fissare, S12 zero."
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": true,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [],
+  "oggetti_simbolo_presenti": [],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "bartolo",
+      "vincoli": [
+        "mai_morale",
+        "mai_correre",
+        "mai_arrabbiato_visibile",
+        "mai_traghetta_abitanti_nominati_con_fratelli"
+      ]
+    },
+    {
+      "personaggio": "amo",
+      "vincoli": [
+        "mai_spiega_pesca_a_parole",
+        "mai_in_scene_villaggio_salvo_mercato",
+        "mai_nostalgico_o_malinconico",
+        "mai_conflitto_aperto"
+      ]
+    },
+    {
+      "personaggio": "fiamma",
+      "vincoli": [
+        "unica_detentrice_detti_popolari",
+        "detti_solo_in_modalita_chiacchiera",
+        "max_2_detti_per_storia",
+        "non_madre_default",
+        "mai_morale_in_corsivo",
+        "mai_sotto_albero_vecchio_solenne"
+      ]
+    },
+    {
+      "personaggio": "grunto",
+      "vincoli": [
+        "no_nomi_propri_ariete_ondina_tempesta",
+        "mai_racconto_pieno_pre_vento",
+        "mai_nostalgia",
+        "mai_apertura_storia",
+        "mai_chiusura_storia",
+        "mai_preannunciare_rivelazione"
+      ]
+    }
+  ]
+}

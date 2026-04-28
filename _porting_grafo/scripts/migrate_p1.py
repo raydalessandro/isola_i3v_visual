@@ -311,7 +311,7 @@ def migrate(story_id: str):
             continue
         h_new = {
             "hook_id": hid,
-            "moment": h_old.get("time_of_day") or hmap.get("moment", ""),
+            "moment": h_old.get("time_of_day") or h_old.get("moment") or hmap.get("moment", ""),
             "location": {
                 "id": hmap["location"]["id"],
                 "qualifier": hmap["location"]["qualifier"],
