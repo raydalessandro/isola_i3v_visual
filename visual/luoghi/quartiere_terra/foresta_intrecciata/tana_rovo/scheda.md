@@ -26,64 +26,69 @@ cartografia:
 
 # Tana di Rovo
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Tana scavata sotto un grosso ceppo coperto di muschio, ai margini della Foresta Intrecciata (Quartiere di Terra, ovest). La tana ha tre uscite.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra. Rovo stesso: grigio-marrone terra (pelo, bandana scura).
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Dimora di Rovo, tasso. Bru sta con lui (nipote affidato, storia mai raccontata). Distanza dal Villaggio: 35 minuti.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Tana scavata sotto un grosso ceppo coperto di muschio. Tre uscite. Posizione: margini della Foresta Intrecciata.
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+Nessuna apparizione documentata in `entities.locations` del grafo (la location non risulta come secondaria/primaria di una scena specifica). Vincolo Bible §4.5: "Quando i fratelli vanno da lui, lui li riceve. Lui non va dai fratelli quasi mai."
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.4: "tana di Rovo ai margini della Foresta (sotto ceppo coperto di muschio, tre uscite)".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §4.5 ROVO: "Vive ai margini della Foresta Intrecciata, Quartiere di Terra a ovest, in una tana scavata sotto un grosso ceppo coperto di muschio. La tana ha tre uscite. Bru sta con lui (nipote affidato, storia mai raccontata)."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1 distanze: "Casa di Rovo: 35 minuti".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6: "Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra"; "Rovo: grigio-marrone terra (pelo, bandana scura)".

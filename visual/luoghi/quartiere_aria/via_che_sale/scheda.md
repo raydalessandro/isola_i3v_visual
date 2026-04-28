@@ -26,64 +26,79 @@ cartografia:
 
 # Via che Sale
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Una delle quattro vie principali in uscita dal Villaggio centrale (§8.1): esce a nord verso il Quartiere d'Aria, attraversa i Pascoli Alti e prosegue fino alla Roccia Alta e oltre verso le Montagne Gemelle. Geometria cartografica: LineString di 1800 m in direzione nord (200 m est-ovest), dalla Piazza fino a Roccia Alta.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Esce dalla Piazza del Villaggio in direzione nord, sale attraverso i Pascoli Alti del Quartiere d'Aria fino alla Roccia Alta (2 ore) e prosegue verso le Montagne Gemelle e la grotta di Grunto (4-5 ore). Tragitto canonico Villaggio → Pascoli → Roccia Alta → Burrone.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Direzione: nord. Origine: Piazza del Villaggio. Tappa intermedia: Pascoli Alti. Tappa di vetta: Roccia Alta (a 2 ore, altitudine 550 m). Continuazione: Burrone e Montagne Gemelle (4-5 ore alla grotta di Grunto).
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Variazioni stagionali §8.7: salendo si entra nel regime "pietra fredda e vento secco" del Quartiere d'Aria, intensificato in inverno.
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: assente.
+- s12: assente.
+
+(Nel grafo non risultano apparizioni esplicite con id `via_che_sale`, pur essendo via principale di accesso al Quartiere d'Aria che compare in s01, s02, s12.)
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+La Via che Sale è dichiarata via principale del Quartiere d'Aria in §8.1 e in cartografia (`canonico`, `via_principale`), ma il grafo non la lega come `locations_secondary` ad alcuna storia: le storie del Quartiere d'Aria (s01 Montagne Gemelle, s02 Pascoli Alti, s12 Roccia Alta + Burrone) non la citano.
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1 "Il Villaggio": "Quattro vie escono verso i quartieri: Via dell'Alba (est), Via del Pontile (sud), Via degli Orti (ovest), Via che Sale (nord)."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.5 "Il Quartiere d'Aria — a nord": "Lungo la Via che Sale."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1 "Distanze dal Villaggio centrale": "Roccia Alta: 2 ore. Grotta di Grunto: 4-5 ore (mezza giornata)".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco."
+- `pipeline_narrativa/story_graph.json#entities.locations.via_che_sale`.

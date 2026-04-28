@@ -26,64 +26,79 @@ cartografia:
 
 # Pascoli Alti
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Prati estesi in pendenza dolce, capre/pecore di alcune famiglie, capanne stagionali di Pastori d'estate. (§8.5)
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Odore: erba e animali nei Pascoli. Suono: il vento sempre.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Stanno nel Quartiere d'Aria a nord, lungo la Via che Sale. I Pastori abitano le capanne stagionali d'estate. Oltre i Pascoli Alti finisce l'abitato e iniziano la Roccia Alta e le Montagne Gemelle.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Pendenza dolce. Animali: capre/pecore di alcune famiglie. Capanne stagionali di Pastori. Posizione: Quartiere d'Aria a nord, lungo la Via che Sale.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Da §8.5 + §8.7: capanne stagionali di Pastori d'estate. Quattro stagioni e quattro tempi della giornata coerenti col Quartiere d'Aria.
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: location_primary; secondary — cornice consegna Pastori off-screen.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: secondary.
+- s12: secondary — attraversamento, Pastori lontani, Stria assente.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.5 "Il Quartiere d'Aria — a nord": "Contiene: Pascoli Alti (prati estesi in pendenza dolce, capre/pecore di alcune famiglie, capanne stagionali di Pastori d'estate)... Odore: erba e animali nei Pascoli, pietra fredda e vento secco alle Montagne. Suono: il vento sempre + ogni tanto un grunt basso dal Burrone."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco."
+- `pipeline_narrativa/story_graph.json#entities.locations.pascoli_alti`.
+- `pipeline_narrativa/story_graph.json#stories.s02.location_primary`: `pascoli_alti`.
+- `pipeline_narrativa/story_graph.json#stories.s02.locations_secondary`: `pascoli_alti` — "cornice_consegna_pastori_off_screen".
+- `pipeline_narrativa/story_graph.json#stories.s11.locations_secondary`: `pascoli_alti`.
+- `pipeline_narrativa/story_graph.json#stories.s12.locations_secondary`: `pascoli_alti` — "attraversamento_pastori_lontani_stria_assente".

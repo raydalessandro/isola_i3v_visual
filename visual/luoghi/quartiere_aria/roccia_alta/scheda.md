@@ -26,64 +26,77 @@ cartografia:
 
 # Roccia Alta
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Sperone panoramico a 2 ore di cammino: da qui si vede tutta l'isola. Stria ci passa al mattino. (§8.5)
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Stria ci passa al mattino — punto di osservazione regolare della maestra-airone.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Sta nel Quartiere d'Aria a nord, lungo la Via che Sale, oltre i Pascoli Alti. Distanza canonica: 2 ore di cammino dal Villaggio centrale (§8.1). Altitudine cartografica: 550 m.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Sperone panoramico. Vista sull'intera isola. Posizione: Quartiere d'Aria a nord, oltre i Pascoli Alti. Distanza Villaggio-Roccia Alta: 2 ore. Altitudine: 550 m. Stria ci passa al mattino.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Variazioni stagionali §8.7: il Quartiere d'Aria è dominato da pietra fredda e vento secco, intensificati nei tempi freddi.
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: assente.
+- s12: location_primary.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.5 "Il Quartiere d'Aria — a nord": "Roccia Alta (sperone panoramico a 2 ore di cammino, da qui si vede tutta l'isola, Stria ci passa al mattino)."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1 "Distanze dal Villaggio centrale": "Roccia Alta: 2 ore".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco."
+- `pipeline_narrativa/story_graph.json#entities.locations.roccia_alta`.
+- `pipeline_narrativa/story_graph.json#stories.s12.location_primary`: `roccia_alta`.

@@ -26,64 +26,69 @@ cartografia:
 
 # Torrente della Foresta
 
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
+
 ## Identita' visuale (sintesi)
 
-[stub — da compilare]
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Corso d'acqua minore che attraversa la Foresta Intrecciata (Quartiere di Terra). Cartograficamente è un affluente interno alla Foresta. Bible §8 incipit cita i ruscelli che si raccolgono dalle pendici delle Montagne Gemelle nell'anello del Fiume.
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Punto di passaggio interno alla Foresta. La Radura dei Pini sta oltre il torrente.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Posizione interna alla Foresta Intrecciata. Corso d'acqua minore (LineString).
 
 ## Variabilita' ammessa
 
-[stub]
+_da popolare dal grafo_
 
 ## Cliche' da evitare
 
 Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
 Volumi, proporzioni, scala, orientamento canonico.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
 Registri d'uso testuale, tono, parole-chiave da usare/evitare.
 
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s05: PRIMARIA — primaria della storia (la storia coincide col torrente come ambiente focale).
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8 incipit: "[L'acqua del Fiume] nasce dalle pendici delle Montagne Gemelle, scende per ruscelli che si raccolgono nell'anello a nord".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6: "Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra".
+- `pipeline_narrativa/story_graph.json#stories.s05.location_primary`: `torrente_affluente_foresta`.
+- `cartografia/geo/island.geojson#features.id=torrente_affluente_foresta`: type_geo `stream`, posizione interna alla Foresta Intrecciata.

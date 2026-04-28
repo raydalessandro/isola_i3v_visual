@@ -26,64 +26,77 @@ cartografia:
 
 # Case del Mattino
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+3-4 case di abitanti che lavorano col fuoco — un fabbro, una conceria, un piccolo essiccatoio per la frutta in autunno. (§8.2)
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Battito metallico del fabbro nell'aria mattutina (§8.2). Quartiere primo che il sole tocca, primo che si sveglia: Vento Taglio entra da est all'alba, taglia la nebbia.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere di Fuoco (Est): terracotta, rosso brace, oro.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Stanno nel Quartiere di Fuoco, lungo la Via dell'Alba, accanto al Forno di Fiamma. Cluster di abitazioni-laboratorio per i mestieri del fuoco.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Numero: 3-4 case. Mestieri canonici: fabbro, conceria, piccolo essiccatoio per la frutta (in autunno). Posizione: Quartiere di Fuoco, lungo la Via dell'Alba.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Da §8.7 (variazioni stagionali) + §8.2 (essiccatoio attivo "in autunno"): l'essiccatoio funziona stagionalmente in autunno.
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: assente.
+- s12: assente.
+
+(Nel grafo non risultano apparizioni esplicite; la location appare solo nella cartografia e nella mappa Bible §8.2.)
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+Bible §8.2 cita "3-4 case". Status cartografia: `provvisorio`. Nessuna apparizione nel grafo `stories.*.location_primary` o `locations_secondary` per `case_del_mattino`.
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.2 "Il Quartiere di Fuoco — a est": "Contiene: Forno di Fiamma... il cortile di legna catastata sul retro, le Case del Mattino (3-4 case di abitanti che lavorano col fuoco — un fabbro, una conceria, un piccolo essiccatoio per la frutta in autunno). Vento Taglio entra da est all'alba, taglia la nebbia, rende le cose nitide. Luce più chiara dell'isola al mattino. Odore: pane caldo. Suono: TOK-TOK ovattato dell'impasto sull'asse di Fiamma + battito metallico del fabbro."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere di Fuoco (Est): terracotta, rosso brace, oro."
+- `pipeline_narrativa/story_graph.json#entities.locations.case_del_mattino`.

@@ -26,64 +26,77 @@ cartografia:
 
 # Montagne Gemelle
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Due cime separate dal Burrone profondo, nel cuore della terra interna, raggiungibili solo dall'interno. Le pendici nord delle Montagne sono ripide e quasi impraticabili. (§8.5)
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+Odore: pietra fredda e vento secco alle Montagne. Suono: il vento sempre + ogni tanto un *grunt* basso dal Burrone.
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Cuore della terra interna, Quartiere d'Aria a nord. L'acqua del Fiume che Gira nasce dalle pendici delle Montagne Gemelle (§8 introduzione). Tra le due cime sta il Burrone, e nel Burrone su una cengia riparata sta la grotta di Grunto. Le pendici nord sono ripide e quasi impraticabili: Grunto le conosce ma non le usa.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Sistema di due cime gemelle. Burrone profondo che le separa. Posizione: cuore della terra interna, Quartiere d'Aria a nord. Raggiungibili solo dall'interno (non dal guado nord). Pendici nord: ripide, quasi impraticabili. Bbox cartografica 600 m est-ovest.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Variazioni stagionali §8.7: pietra fredda e vento secco intensificati in inverno.
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: location_primary.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: assente.
+- s12: assente.
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+(vuoto)
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.5 "Il Quartiere d'Aria — a nord": "Montagne Gemelle (due cime separate dal Burrone profondo, nel cuore della terra interna, raggiungibili solo dall'interno), grotta di Grunto nel Burrone su una cengia riparata. Le pendici nord delle Montagne sono ripide e quasi impraticabili. Grunto le conosce ma non le usa. Odore: erba e animali nei Pascoli, pietra fredda e vento secco alle Montagne. Suono: il vento sempre + ogni tanto un grunt basso dal Burrone."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8 introduzione: "La sua acqua [del Fiume che Gira] nasce dalle pendici delle Montagne Gemelle..."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco."
+- `pipeline_narrativa/story_graph.json#entities.locations.montagne_gemelle`.
+- `pipeline_narrativa/story_graph.json#stories.s01.location_primary`: `montagne_gemelle`.

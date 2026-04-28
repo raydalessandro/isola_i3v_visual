@@ -26,64 +26,79 @@ cartografia:
 
 # Grotta di Grunto
 
-## Identita' visuale (sintesi)
+> **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
-[stub — da compilare]
+## Identità visuale (sintesi)
+
+_da popolare dal grafo_
 
 ## Aspetto / forma
 
-[stub]
+Grotta poco profonda, riparata da uno sperone di roccia. Sta su una cengia riparata nel Burrone tra le Montagne Gemelle. (§4.8 + §8.5)
 
 ## Abbigliamento / stato d'uso
 
-[stub — applicare se personaggio o oggetto]
+_da popolare dal grafo_
 
 ## Espressione / comportamento
 
-[stub — applicare se personaggio o vento]
+_da popolare dal grafo_
 
 ## Palette e atmosfera
 
-[stub]
+Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 
 ## Contesto e ambientazioni ricorrenti
 
-[stub]
+Sta nel Burrone tra le Montagne Gemelle, Quartiere d'Aria a nord. Nessun altro abita lassù — i Pascoli Alti finiscono prima. Distanza dal Villaggio centrale: 4-5 ore di cammino (mezza giornata, §8.1). Altitudine cartografica: 850 m. Abitante: Grunto, stambecco vecchio.
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-[stub]
+Grotta poco profonda. Sperone di roccia che la ripara. Cengia all'ingresso. Posizione fissa nel Burrone. Distanza canonica Villaggio-Grotta: 4-5 ore (mezza giornata). Altitudine: 850 m.
 
-## Variabilita' ammessa
+## Variabilità ammessa
 
-[stub]
+Variazioni stagionali §8.7: pietra fredda e vento secco; il pelo di Grunto si confonde col lichene delle rocce (§4.8).
 
-## Cliche' da evitare
+## Cliché da evitare
 
-Riferimento: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
 
-[stub]
+_da popolare dal grafo_
 
 ## Per stampa 3D
 
-Volumi, proporzioni, scala, orientamento canonico.
-
-[stub]
+_da popolare dal grafo_
 
 ## Per narrativa e social
 
-Registri d'uso testuale, tono, parole-chiave da usare/evitare.
-
-[stub]
+_da popolare dal grafo_
 
 ## Storie / scene di apparizione
 
-[stub — popolare con elenco s01..s12 e ruolo per scena]
+- s01: assente.
+- s02: assente.
+- s03: assente.
+- s04: assente.
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: assente.
+- s12: assente.
+
+(Nel grafo non risultano apparizioni esplicite con id `grotta_grunto`. L'incontro con Grunto in s12 è registrato sul `burrone`.)
 
 ## Disallineamenti / domande aperte
 
-[vuoto se nulla]
+L'incontro con Grunto in s12 è codificato come `locations_secondary` su `burrone`, non su `grotta_grunto`: la grotta esiste in cartografia e in §4.8 / §8.5 ma non è target diretto in nessuna storia del grafo.
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
-[stub — ogni dato visivo riportato sopra deve essere ancorato a una fonte citata qui]
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §8.5 "Il Quartiere d'Aria — a nord": "grotta di Grunto nel Burrone su una cengia riparata."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §4.8 GRUNTO: "Vive nel Burrone tra le Montagne Gemelle, Quartiere d'Aria a nord, in una grotta poco profonda riparata da uno sperone di roccia. Nessun altro abita lassù — i Pascoli Alti finiscono prima."
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §8.1 "Distanze dal Villaggio centrale": "Grotta di Grunto: 4-5 ore (mezza giornata)".
+- `ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA "Quartieri": "Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco."
+- `pipeline_narrativa/story_graph.json#entities.locations.grotta_grunto`.
