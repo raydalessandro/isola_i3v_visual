@@ -198,13 +198,9 @@ Ogni nome deve fare almeno una di queste tre cose: contenere già la qualità, p
 
 ### §4.4 FIAMMA
 
-**Specie, ruolo, residenza.** Volpe rossa, fornaia. Vive nel Quartiere di Fuoco a est, nella casa-forno col tetto basso e il camino che fuma prima dell'alba. La porta sul retro dà su un piccolo cortile di legna catastata. Madre episodica per chi entra al momento giusto.
+**Specie, ruolo, residenza.** Volpe rossa, fornaia. Vive nel Quartiere di Fuoco a est. Madre episodica per chi entra al momento giusto.
 
-**Aspetto.** Pelo color brace — più scuro sul dorso, più chiaro sul ventre, la coda lunga con la punta bianca come una scintilla in fondo. Gli occhi brillano di quel modo che hanno le volpi quando hanno già visto cosa stai per dire. Le zampe veloci, mai ferme del tutto. Le mani sempre infarinate, sempre in movimento. **Firma visiva:** grembiule legato in vita, sempre infarinato, di tela ruvida color terracotta.
-
-**Comportamento operativo (Tratto 7).** Fiamma fa cose-da-fuoco col corpo della volpe. Si accende presto, prima di tutti. Scalda — il forno scalda il pane, lei scalda chi entra. Illumina — la sua casa è il primo posto dell'isola dove c'è luce calda al mattino. Brucia anche, quando serve: se uno dei tre combina qualcosa di grosso, Fiamma alza la voce una volta sola e quella volta brucia. Poi si spegne. Lascia braci — anche quando se ne va da una scena ha lasciato qualcosa che continua a tenere caldo. Si riaccende — torna sempre, mai esaurita.
-
-Parla *molto* dentro casa sua, mentre impasta. Ma quando esce di casa o quando una cosa diventa seria, Fiamma diventa volpe: silenziosa, ferma, occhi che guardano. Le due cose convivono — chiacchiera e veggenza.
+> *Profilo visivo (aspetto, comportamento operativo, palette, vincoli visivi) → `visual/personaggi/individuali/primari/fiamma/scheda.md`.*
 
 **Voce tipica.**
 
@@ -222,7 +218,7 @@ Modalità brace (rara):
 
 **Funzione narrativa.** Personaggio del **calore del villaggio** — caldo letterale del forno (rifugio dopo freddo, pioggia, spavento) + calore relazionale (presenza che accoglie senza chiedere). Punto di partenza naturale di molte storie e di ritorno di alcune. **Ruolo familiare episodico:** madre per Noah soprattutto. Ma non madre di default — in altre storie il ruolo materno tocca a Salvia, alle Vecchie del Mercato, a Stria.
 
-**Note e vincoli.** Mai farla maternamente enfatica — niente "tesoro", niente "piccoli miei". Mai Fiamma che dà la lezione finale alla fine in corsivo (vecchio pattern v1.1 vietato, eccezione enigma rara). Mai scena "sotto l'Albero Vecchio in modo solenne". Fiamma parla impastando, camminando, mentre fa altro. Il silenzio di Fiamma deve restare raro e quindi pesante.
+**Note e vincoli (narrativi).** Fiamma parla impastando, camminando, mentre fa altro. Il silenzio di Fiamma deve restare raro e quindi pesante.
 
 ---
 

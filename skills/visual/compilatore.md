@@ -1,5 +1,13 @@
 # sotto-skill: compilatore (visual)
 
+> **STATO 2026-04-28 — bulk concluso.** Il travaso meccanico Bible→catalogo è stato completato per tutte le 112 entità. Successivamente, su richiesta di Ray, lo strato visivo è stato **rimosso dalla Bible** (vedi `SYNC_LOG.md` entry "pulizia Bible"). Da quel momento in poi:
+>
+> - **Il catalogo è autoritativo per il visivo.** La Bible non contiene più descrizioni di Aspetto, Comportamento operativo, Palette, vincoli visivi.
+> - **Dettagli visivi nuovi → SOLO catalogo.** Mai più aggiunti in Bible. Esempio: se emerge che il grembiule di Fiamma ha un cuore rosso cucito, la modifica va in `visual/.../fiamma/scheda.md` direttamente.
+> - **Il travaso meccanico Bible→catalogo non si rilancia.** Non c'è più cosa travasare. Lo script `scripts/build_visual_skeleton.py` resta utile per metadati cartografici, status auto, e per generare nuove cartelle entità se ne emergono.
+>
+> Questo file resta come **riferimento storico del metodo** e per casi futuri analoghi (es. altri progetti con Bible da scomporre in vista derivata).
+
 Specializzazione operativa della **skill visual**. Compila il *body* delle schede entità (`visual/<famiglia>/.../<id>/scheda.md`) tramite **travaso meccanico** dalla Bible (e dal grafo per la sezione "Storie di apparizione"). Non inferisce, non propone: lascia placeholder uniforme dove la fonte non copre.
 
 **Premessa:** prima di operare leggi:

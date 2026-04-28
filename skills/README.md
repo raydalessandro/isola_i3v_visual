@@ -2,7 +2,7 @@
 
 Questo è il **punto d'ingresso** per un agente IA che opera su questo repo. Contiene:
 
-1. Le **regole comuni** che valgono per qualsiasi lavoro su questo progetto (sotto, §1-§5).
+1. Le **regole comuni** che valgono per qualsiasi lavoro su questo progetto (sotto, §1-§8).
 2. Una **skill per ogni ambito di lavoro**, autosufficiente:
    - [`cartografo.md`](./cartografo.md) — manutenzione e estensione della cartografia tecnica.
    - [`visual/`](./visual/) — famiglia visual con sotto-skill specializzate:
@@ -34,9 +34,29 @@ Vale per **tutte** le skill, sempre.
 
 Se pensi servano modifiche lì, **proponile a Ray, non farle**.
 
+**Eccezione esplicita:** Ray (proprietario) modifica `pipeline_narrativa/` quando vuole — è un suo diritto. L'agente IA esegue solo se Ray ne ha fatto richiesta esplicita e per un'operazione documentata in `SYNC_LOG.md`. Esempio: la pulizia Bible 2026-04-28 (rimozione strato visivo migrato al catalogo) è stata eseguita su richiesta esplicita di Ray + entry SYNC dedicata.
+
 ---
 
-## 3. Permessi di scrittura per skill
+## 3. Architettura informativa: Bibbia + Grafo + Catalogo (no ridondanze)
+
+Il sistema progetto si articola in **tre fonti distinte e non sovrapposte**:
+
+| Fonte | Vive in | Contiene | Letta da |
+|---|---|---|---|
+| **Bible** | `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` | Canone narrativo: funzione personaggio, voce tipica, detti, vincoli narrativi, archi, struttura saga, ruoli familiari | IA in scrittura per **anima narrativa** |
+| **Grafo storie** | `pipeline_narrativa/story_graph.json` | Cosa succede nelle storie: scene, ruoli per scena, seeds, callbacks, debts, visual_anchors, wind_notes | IA in scrittura per **dinamica delle storie** |
+| **Catalogo visual** | `visual/<famiglia>/<...>/<id>/scheda.md` | Visivo: aspetto, comportamento esteriore, palette, materiali, dettagli, vincoli visivi, prompt, immagini | IA in generazione immagini, narrativa per **descrizioni visive**, social, stampa 3D |
+
+**Regola di non-duplicazione:** un dato vive in **una sola** delle tre fonti. Se è dato visivo, vive nel catalogo. Se è dato narrativo strutturale, vive in Bible. Se è dato dinamico per scena, vive nel grafo.
+
+**Quando un dato visivo nuovo emerge** (es. "il grembiule di Fiamma ha un cuore rosso cucito") → va **solo nel catalogo**, mai in Bible. La Bible non si arricchisce di dettagli visivi: si arricchisce solo di dettagli narrativi (es. una nuova frase tipica, un nuovo vincolo di registro).
+
+**Conseguenza per l'IA in scrittura:** routing senza ambiguità. Aspetto del personaggio → catalogo. Voce del personaggio → Bible. Ruolo nella scena di S5 → grafo. Niente "dove cerco?", niente token sprecati su informazione duplicata.
+
+---
+
+## 4. Permessi di scrittura per skill
 
 Ogni skill ha il proprio scope di scrittura. Fuori scope = chiedi a Ray.
 
@@ -52,7 +72,7 @@ Ogni skill ha il proprio scope di scrittura. Fuori scope = chiedi a Ray.
 
 ---
 
-## 4. Come comunicare con Ray
+## 5. Come comunicare con Ray
 
 Ray è esperto, preferisce onestà ad adulazione, lavora in italiano (tu rispondi in italiano).
 
@@ -70,7 +90,7 @@ Ray è esperto, preferisce onestà ad adulazione, lavora in italiano (tu rispond
 
 ---
 
-## 5. Pattern di rifiuto
+## 6. Pattern di rifiuto
 
 Se una richiesta implica:
 - Modificare il canone narrativo.
@@ -84,7 +104,7 @@ Se invece il task ricade nello scope della tua skill corrente (`cartografo.md` o
 
 ---
 
-## 6. Domande che DEVI fare a Ray (quando applicabili, qualsiasi skill)
+## 7. Domande che DEVI fare a Ray (quando applicabili, qualsiasi skill)
 
 - "Questo ID nuovo è canonico o provvisorio?" (se c'è ambiguità)
 - "Posso promuovere X da provvisorio a canonico?" (sempre, prima di farlo)
@@ -93,7 +113,7 @@ Se invece il task ricade nello scope della tua skill corrente (`cartografo.md` o
 
 ---
 
-## 7. Riferimenti operativi comuni
+## 8. Riferimenti operativi comuni
 
 - **Stato progetto:** `PROJECT_STATE.md` (radice).
 - **Storia cartografia:** `cartografia/CHANGELOG.md`.
