@@ -1,0 +1,113 @@
+{
+  "story_id": "s02",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s02_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima di testo gia' canonico.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato (canonical fields, Carta Voce, structural_notes).",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere con Ray in fase D."
+  },
+  "provvisori": {
+    "season_passage": {
+      "value": "Inverno pieno, mattina fredda; il Vento Taglio non ancora sceso all'alba ma manda una folata tardiva durante la scena della pozza — primo soffio visibile del Taglio in saga.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "Coerente con calendario saga (§2.9 CARTA: storie 1-3 = ciclo A inverno) e con i dettagli del nodo: wind_active=vento_taglio + wind_notes che dichiara esplicitamente 'primo soffio visibile del Taglio in saga' nella folata tardiva sulla pozza. Non e' passaggio stagionale ma inverno pieno installato (continua da s01)."
+    },
+    "key_phrase_indicative": {
+      "value": "Il riflesso non era la verita': era solo come l'acqua si era fermata in quel momento.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "Cattura il nucleo del threshold_moment (il riflesso non era la verita', era una versione fissata da un'acqua troppo ferma) e la STRUCTURA_FRATELLI (ognuno vede un riflesso falsato coerente col proprio attributo, ma NON dichiarato). Indicativa, non frase precisa: il sigillo effettivo sara' immagine del narratore in chiusura (vedi key_phrase_notes), non frase dichiarativa di personaggio. Rifiuto della falsa fissita' senza dichiararla."
+    },
+    "hooks": {
+      "s02_h1": {
+        "notes": {
+          "value": "Apertura: Stria al cortile della scuola, autorita' calma di prima mattina invernale. Affida un messaggio per i Pastori. Quando Gabriel le chiede dove va lei, rilancia: 'Tu cosa pensi?' — vola via senza spiegare. Archetipo STRIA_VEDE_PRIMA istituito (bloom S11). Vincolo: stria_mai_due_risposte_stessa_scena.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'STRIA_VEDE_PRIMA' + characters_in_scene[stria].narrative_weight 'archetipo_vede_prima_istituito' + voice_notes 'stria_una_frase_rilancio_mai_due_risposte'. Nota sintetica che fissa la funzione strutturale dell'apertura."
+        }
+      },
+      "s02_h2": {
+        "notes": {
+          "value": "Cammino di salita ai Pascoli Alti: aria tersa invernale, fiati visibili. Noah distratto stringe ancora il bastoncino raccolto in s1 (callback cb_s02_001 + cb_s02_002 attivi: oggetto-firma di Noah si conferma). Cornice di passaggio prima del threshold della pozza.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "atmosphere + focal_object dell'hook (bastoncino in mano a noah) + callback espliciti. Nota di passaggio, non climax: serve a tracciare la continuita' dell'oggetto-firma."
+        }
+      },
+      "s02_h3_signature": {
+        "notes": {
+          "value": "Signature hook: i tre chinati sulla pozza vedono i riflessi falsati. Ognuno coerente col proprio attributo EAR (mai dichiarato): Gabriel-distinguere si vede con la bocca tirata, Elias-connettere si vede piccolo tra fratelli grandi, Noah-cambiare si vede fermo. Elias tocca l'acqua col dito, ritrae la mano, mormora 'voi siete grandi davvero'. Semina FORTE della paura di Elias (non_essere_abbastanza, bloom S11). Falsa fissita' visualizzata, non spiegata.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'SEMINA_PAURA_ELIAS' + 'STRUCTURA_FRATELLI' + fear_touched.mode_of_touch (riflesso_mostra_elias_piccolo). Signature image della storia. Nodo dichiara esplicitamente che la coerenza riflesso/attributo non viene dichiarata (vincolo no_narrator_reveal_preannouncement)."
+        }
+      },
+      "s02_h4": {
+        "notes": {
+          "value": "Rottura della falsa fissita' via gesto irriflesso di Noah: butta il bastoncino-firma di s1 nell'acqua per rabbia. Il Vento Taglio scende (folata tardiva, primo soffio visibile del Taglio in saga), increspa il velo in cerchi argentei. Il bastoncino galleggia, si inclina, sparisce sotto. PRE_ECO visiva del Pattern A (cerchi argentei che non rompono il flusso) — mai nominato, vive nell'immagine. L'oggetto resta congelato dentro il velo: oggetto-fantasma per il rilettore.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'PRE_ECO_PATTERN_A' + 'CALLBACK_S1' + pattern_a_notes (cerchi argentei come prima immagine fisica della famiglia Pattern A). resolution_mode descrive 'oggetto-fantasma per il rilettore, MAI dichiarato nel testo'. wind_visible gia' popolato dal vecchio (vento_taglio_folata_cerchi_argentei): nota lo contestualizza."
+        }
+      },
+      "s02_h5": {
+        "notes": {
+          "value": "Chiusura: i tre scendono dai Pascoli dopo aver consegnato il messaggio (consegna off-screen, breve, senza debt). Cammino di ritorno piu' silenzioso del solito — la pozza ha lasciato un peso non detto, soprattutto su Elias. Pomeriggio invernale, luce bassa, ombre lunghe. Nessun trionfo, nessun chiarimento.",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "resolution_mode + voice_notes_essential 'una_scena_di_silenzio_lungo_dei_tre_fratelli_carta_usata_con_misura' + characters_offscreen.pastori (consegna off-screen, no debt). Atmosfera di ritorno quieto. Categoria C: la sintesi e' inferita ma plausibile."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {
+      "A": 0,
+      "B": 4,
+      "C": 3
+    },
+    "totale": 7,
+    "dettaglio": [
+      {"field": "season_passage", "category": "B", "confidence": "medium"},
+      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s02_h1.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s02_h2.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s02_h3_signature.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s02_h4.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s02_h5.notes", "category": "C", "confidence": "low"}
+    ]
+  },
+  "notes_globali": "P2 eseguita manualmente in chat (sub-agenti falliti 3/3 in s01-s02 con stream timeout). 7 provvisori legittimi popolati: 2 top (season_passage B, key_phrase_indicative B) + 5 hook notes (s02_h1 B, s02_h2 C, s02_h3 B signature, s02_h4 B pre_eco_pattern_a, s02_h5 C). Confidence applicata: A=high, B=medium, C=low. Distribuzione: 0A + 4B + 3C. I 5 no_inference_fields restano null nel canonical (decisione Ray fase C/D). Note hook wind_visible: s02_h4 ha gia' valore dal canonical (vento_taglio_folata_cerchi_argentei); s02_h1/h2/h3/h5 restano null e NON popolati in P2 (nessuna inferenza forte; meglio null che invenzione).",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2 MIGRATION_PROMPT): nessuna proposta P2 perche' richiedono decisione autoriale Ray in fase C/D.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura con cammeo Stria (autorita'/rilancio). Possibili candidati Carta: A (frase-firma narratore, gia' usata in s01), C (voce esterna che irrompe), B (immagine ferma). Scelta autoriale, non deducibile."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Chiusura con ritorno silenzioso, peso non detto su Elias. Scelta autoriale tra i codici 1-7. Cornice S1-S12 NON applicabile qui (s02 non e' apertura/chiusura saga)."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera con turbamento silenzioso + threshold visivo + pre_eco Pattern A. Plausibile medio o alto. Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "5 hook su pari struttura di s01 ma con threshold visivo piu' compresso (signature + reazione + chiusura). Range saga 800-1200, scelta autoriale."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_inciso_sulla_pozza_dei_pastori': suggerisce 1 pausa descrittiva. Ma scelta finale autoriale (max 2 per storia, distribuzione saga)."
+    }
+  }
+}
