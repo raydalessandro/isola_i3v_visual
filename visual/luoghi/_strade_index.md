@@ -4,7 +4,7 @@ Generato automaticamente da `scripts/build_visual_skeleton.py`. Non modificare a
 
 Le **5 Vie principali** (canoniche, in `entities.locations`) sono catalogate paritetiche con gli altri luoghi del rispettivo quartiere — non in questo indice. Qui solo le **strade secondarie** (solo cartografiche).
 
-Totale strade: **31**.
+Totale strade: **32**.
 
 ## Quartiere centro (4)
 
@@ -47,10 +47,11 @@ Totale strade: **31**.
 | `sentiero_scogliera_casa_amo` | Sentiero Scogliera-Casa Amo | sentiero_costiero | provvisorio | 14 | (4445,720) → (4435,730) | [`visual/luoghi/quartiere_acqua/strade/sentiero_scogliera_casa_amo/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_scogliera_casa_amo/scheda.md) |
 | `sentiero_spiaggia_casa_amo` | Sentiero Spiaggia-Casa Amo | sentiero_costiero | provvisorio | 135 | (4305,700) → (4435,730) | [`visual/luoghi/quartiere_acqua/strade/sentiero_spiaggia_casa_amo/scheda.md`](./luoghi/quartiere_acqua/strade/sentiero_spiaggia_casa_amo/scheda.md) |
 
-## Quartiere aria (4)
+## Quartiere aria (5)
 
 | id | nome | category | status | len m | endpoint A → B | scheda |
 |---|---|---|---|---|---|---|
+| `sentiero_montagne_gemelle` | Sentiero delle Montagne Gemelle | sentiero_montano | canonico | 81 | (4025,6180) → (3995,6250) | [`visual/luoghi/quartiere_aria/strade/sentiero_montagne_gemelle/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_montagne_gemelle/scheda.md) |
 | `sentiero_roccia_burrone` | Sentiero Roccia-Burrone | sentiero_montano | canonico | 902 | (4205,5300) → (4025,6180) | [`visual/luoghi/quartiere_aria/strade/sentiero_roccia_burrone/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_roccia_burrone/scheda.md) |
 | `sentiero_al_guado` | Sentiero al Guado | sentiero_secondario | provvisorio | 900 | (4005,4700) → (4005,5600) | [`visual/luoghi/quartiere_aria/strade/sentiero_al_guado/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_al_guado/scheda.md) |
 | `sentiero_capanne_pastori_pascoli` | Sentiero Capanne-Pascoli | sentiero_interno_quartiere | provvisorio | 336 | (3805,5100) → (4105,4950) | [`visual/luoghi/quartiere_aria/strade/sentiero_capanne_pastori_pascoli/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_capanne_pastori_pascoli/scheda.md) |

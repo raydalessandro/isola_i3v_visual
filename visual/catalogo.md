@@ -2,7 +2,7 @@
 
 Generato automaticamente da `scripts/build_visual_skeleton.py`. Non modificare a mano: rilanciare lo script.
 
-Totale schede: **112**.
+Totale schede: **113**.
 
 | id | nome | famiglia | sottotipo | status | path |
 |---|---|---|---|---|---|
@@ -56,6 +56,7 @@ Totale schede: **112**.
 | `sentiero_forno_case_mattino` | Sentiero Forno-Case del Mattino | luogo | strada | stub | [`visual/luoghi/quartiere_fuoco/strade/sentiero_forno_case_mattino/scheda.md`](./luoghi/quartiere_fuoco/strade/sentiero_forno_case_mattino/scheda.md) |
 | `sentiero_forno_orti_diretto` | Sentiero Forno-Orti diretto | luogo | strada | stub | [`visual/luoghi/villaggio_centrale/strade/sentiero_forno_orti_diretto/scheda.md`](./luoghi/villaggio_centrale/strade/sentiero_forno_orti_diretto/scheda.md) |
 | `sentiero_fuoco_ring` | Viottolo del Quartiere di Fuoco | luogo | strada | stub | [`visual/luoghi/quartiere_fuoco/strade/sentiero_fuoco_ring/scheda.md`](./luoghi/quartiere_fuoco/strade/sentiero_fuoco_ring/scheda.md) |
+| `sentiero_montagne_gemelle` | Sentiero delle Montagne Gemelle | luogo | strada | stub | [`visual/luoghi/quartiere_aria/strade/sentiero_montagne_gemelle/scheda.md`](./luoghi/quartiere_aria/strade/sentiero_montagne_gemelle/scheda.md) |
 | `sentiero_orti_casa_salvia` | Sentiero Orti-Casa Salvia | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_casa_salvia/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_casa_salvia/scheda.md) |
 | `sentiero_orti_casa_zolla` | Sentiero Orti-Casa Zolla | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_casa_zolla/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_casa_zolla/scheda.md) |
 | `sentiero_orti_tana_rovo` | Sentiero Orti-Tana | luogo | strada | stub | [`visual/luoghi/quartiere_terra/strade/sentiero_orti_tana_rovo/scheda.md`](./luoghi/quartiere_terra/strade/sentiero_orti_tana_rovo/scheda.md) |

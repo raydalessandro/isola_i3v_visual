@@ -1,8 +1,8 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "version": "0.6.0",
-    "date": "2026-04-25",
+    "version": "0.6.1",
+    "date": "2026-04-28",
     "project": "Isola dei Tre Venti - Cartografia Tecnica",
     "coordinate_system": "WGS84 (EPSG:4326)",
     "anchor_lat_origin": 34.4685,
@@ -44,6 +44,9 @@
       "Annotazione su roccia_alta.note: la cengia di S12 coincide con sentiero_roccia_burrone, non e' entita' autonoma.",
       "Alias guado_nord aggiunto a guado_di_pietre_piatte (citato in S12: 'guado nord dove l'acqua trema piano').",
       "Decisione richiamata: 'casa_fratelli non entity, l'isola e' protagonista' (blocco_0). Il 'cortile' citato in s10.wind_notes non e' mappato per coerenza con questa decisione."
+    ],
+    "changes_from_v0_6_0": [
+      "Aggiunto sentiero_montagne_gemelle (LineString, canonico, quartiere aria, sentiero_montano): cengia di mezzacosta dal Burrone (Grotta Grunto) al colle tra le due Montagne Gemelle. Citato in s01 come location_precise di scene_hook ('sentiero_montagne_gemelle_mezzacosta_cengia_sul_burrone'). Inserito durante porting grafo a schema v1.2 (Fase E)."
     ]
   },
   "features": [
@@ -5918,6 +5921,35 @@
         "status": "provvisorio",
         "quarter": "terra",
         "note": "Radura interna alla Foresta Intrecciata, margine NE verso i Pascoli Alti. Citato in S12 come tappa del cammino verso il Concerto: \"attraversano la radura dei pini caduti e i Pascoli Alti vuoti, su fino al Burrone\" (threshold_moment) e \"non rifanno la radura dei pini\" (resolution_mode). Visual_anchor S12.hook_04: pini neri verticali in piedi, foglie autunnali cadute sugli aghi di pino. \"Caduti\" si riferisce alle foglie autunnali, non ai tronchi. Estensione e perimetro provvisori, da raffinare."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            17.999978,
+            34.524176
+          ],
+          [
+            17.99965,
+            34.524491
+          ],
+          [
+            17.99965,
+            34.524806
+          ]
+        ]
+      },
+      "properties": {
+        "id": "sentiero_montagne_gemelle",
+        "name": "Sentiero delle Montagne Gemelle",
+        "type": "path",
+        "status": "canonico",
+        "quarter": "aria",
+        "category": "sentiero_montano",
+        "note": "Cengia di mezzacosta che dal Burrone (zona Grotta di Grunto) risale al colle tra le due Montagne Gemelle. Citato in S1 come 'sentiero_montagne_gemelle_mezzacosta_cengia_sul_burrone' (location_precise di hook narrativo): tappa del cammino dei fratelli verso le Montagne. Da grotta_grunto (cengia sul Burrone) sale ~70m a quota colle. Le creste delle due Montagne Gemelle si raggiungono fuori sentiero dal colle."
       }
     }
   ]

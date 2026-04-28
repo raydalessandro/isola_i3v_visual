@@ -7,6 +7,18 @@ Formato:
 
 ---
 
+## [2026-04-28] v0.6.1 — Aggiunta `sentiero_montagne_gemelle` (porting grafo Fase E)
+
+Modifica puntuale durante porting grafo a schema v1.2 (Fase E, sentinella catalogo P0 di s01).
+
+- **Aggiunto** `sentiero_montagne_gemelle` (LineString, `canonico`, quartiere `aria`, `sentiero_montano`). Cengia di mezzacosta che dal Burrone (zona Grotta di Grunto) risale al colle tra le due Montagne Gemelle. Tracciato 3 punti: A=(4023,6180) presso Grotta Grunto → mid=(3993,6215) mezzacosta → B=(3993,6250) colle.
+- Citato in s01 come `location_precise` di scene_hook ("sentiero_montagne_gemelle_mezzacosta_cengia_sul_burrone"): tappa del cammino dei fratelli per portare la pagnotta a Grunto e per salire alle Montagne. Status `canonico` giustificato dalla presenza diretta nella prima storia della saga.
+- Le creste vere delle due Montagne Gemelle (montagna_gemella_ovest, montagna_gemella_est) si raggiungono fuori sentiero dal colle (alta montagna).
+
+**Backward-compat:** 35/35 ID grafo coperti (invariato). Total features: 104 → 105.
+
+---
+
 ## [2026-04-25] v0.6.0 — Sync con grafo storie v0.10.0 (S1-S12)
 
 Allineamento alla nuova versione del grafo storie (v0.6.0 → v0.10.0, +S9-S12). S1-S8 invariate. Backward-compat 100% mantenuta.
