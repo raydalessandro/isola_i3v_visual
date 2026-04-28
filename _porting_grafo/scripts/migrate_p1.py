@@ -23,6 +23,36 @@ ENUM_RENAMES = {
     }
 }
 
+def load_canonical_oggetti(repo: Path) -> set:
+    """Lista degli ID oggetti canonici dal catalogo (famiglia=oggetto)."""
+    cat = json.loads((repo / "catalogo_web/data/entities.json").read_text())
+    return {x["id"] for x in cat["entities"] if x.get("famiglia") == "oggetto"}
+
+
+def normalize_callbacks(callbacks: list, story_id: str) -> list:
+    """REGOLA 1bis (post-s02): callbacks_made richiede to_story (schema v1.2).
+    Se manca: deriva to_story = story_id corrente (il callback e' fatto IN questa storia
+    da un'altra storia di provenienza). Mantiene registered_in_story se presente."""
+    out = []
+    for cb in callbacks:
+        cb_new = dict(cb)
+        if "to_story" not in cb_new:
+            cb_new["to_story"] = cb.get("registered_in_story") or story_id
+        out.append(cb_new)
+    return out
+
+
+def filter_oggetti_simbolo(recurring: list, canonical_oggetti: set) -> tuple[list, list]:
+    """Regola §8.2 esplicitata (post-s02): oggetti_simbolo_presenti accetta SOLO ID
+    in catalogo come famiglia=oggetto (13 oggetti canonici saga). Tutto il resto
+    (oggetti-firma personaggio, oggetti di scena non catalogati) viene scartato e
+    riportato nei misalignments dell'output di P1.
+    Ritorna (kept, dropped)."""
+    kept = [x for x in recurring if x in canonical_oggetti]
+    dropped = [x for x in recurring if x not in canonical_oggetti]
+    return kept, dropped
+
+
 def migrate(story_id: str):
     repo = Path(__file__).resolve().parents[2]
     in_path = repo / f"_porting_grafo/dossier_fase_e/dossier/INPUT_NODES/{story_id}_input.json"
@@ -80,7 +110,7 @@ def migrate(story_id: str):
     canonical["seeds_maturing_here"] = on.get("seeds_maturing_here", [])
     canonical["seeds_bloomed_here"] = on.get("seeds_bloomed_here", [])
 
-    canonical["callbacks_made"] = on.get("callbacks_made", [])
+    canonical["callbacks_made"] = normalize_callbacks(on.get("callbacks_made", []), story_id)
     canonical["callback_summary"] = on.get("callback_summary", "")
 
     # debts: REGOLA 0ter — i seed_refs del precomputed_context vengono archiviati (non vanno nel canonical)
@@ -151,8 +181,13 @@ def migrate(story_id: str):
             quartieri.append(q)
     canonical["quartieri_attraversati"] = quartieri
 
-    # oggetti_simbolo_presenti: da recurring_visual_objects
-    canonical["oggetti_simbolo_presenti"] = on.get("visual_anchors", {}).get("recurring_visual_objects", [])
+    # oggetti_simbolo_presenti: filtra recurring_visual_objects contro catalogo (solo famiglia=oggetto)
+    canonical_oggetti = load_canonical_oggetti(repo)
+    recurring = on.get("visual_anchors", {}).get("recurring_visual_objects", [])
+    kept, dropped = filter_oggetti_simbolo(recurring, canonical_oggetti)
+    canonical["oggetti_simbolo_presenti"] = kept
+    # `dropped` viene riportato a stdout: l'operatore aggiorna manualmente
+    # _canon_misalignments.json (object_missing_from_catalog o oggetto_firma_personaggio).
 
     # personaggi_vincoli_attivi: da mapping (manuale, riferito a character_constraints.json)
     canonical["personaggi_vincoli_attivi"] = mapping.get("personaggi_vincoli_attivi", [])
@@ -163,6 +198,11 @@ def migrate(story_id: str):
     print(f"Top-level fields: {len(canonical)}")
     print(f"Hooks: {len(hooks_new)}")
     print(f"attribute_dominant: {canonical['attribute_dominant']}")
+    print(f"callbacks_made: {len(canonical['callbacks_made'])} (to_story derivato dove mancante)")
+    print(f"oggetti_simbolo_presenti (canonici): {kept}")
+    if dropped:
+        print(f"  WARN: dropped da recurring_visual_objects (non in catalogo come famiglia=oggetto): {dropped}")
+        print(f"        -> aggiungere mis_<NNN> in _canon_misalignments.json (type: oggetto_firma_personaggio | object_missing_from_catalog)")
 
 
 if __name__ == "__main__":

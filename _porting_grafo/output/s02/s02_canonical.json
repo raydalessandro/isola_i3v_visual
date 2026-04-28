@@ -98,14 +98,16 @@
       "from_story": "s01",
       "element": "bastoncino_noah",
       "type": "oggetto",
-      "note": "Il bastoncino raccolto da Noah in cammino sui Pascoli (S1) cade nella pozza qui."
+      "note": "Il bastoncino raccolto da Noah in cammino sui Pascoli (S1) cade nella pozza qui.",
+      "to_story": "s02"
     },
     {
       "callback_id": "cb_s02_002",
       "from_story": "s01",
       "element": "gesto_firma_noah_raccoglie",
       "type": "gesto",
-      "note": "Il gesto-firma di Noah (raccoglie in cammino) si conferma: stavolta l'oggetto raccolto ha un ruolo narrativo."
+      "note": "Il gesto-firma di Noah (raccoglie in cammino) si conferma: stavolta l'oggetto raccolto ha un ruolo narrativo.",
+      "to_story": "s02"
     }
   ],
   "callback_summary": "Bastoncino di Noah da S1 (oggetto → oggetto-fantasma). Gesto-firma di Noah che raccoglie (S1 → conferma qui).",
@@ -282,8 +284,7 @@
     "aria_nord"
   ],
   "oggetti_simbolo_presenti": [
-    "scialle_stria",
-    "bastoncino_noah_s1"
+    "scialle_stria"
   ],
   "personaggi_vincoli_attivi": [
     {

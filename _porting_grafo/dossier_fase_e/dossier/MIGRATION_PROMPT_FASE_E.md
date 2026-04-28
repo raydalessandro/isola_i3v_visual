@@ -177,6 +177,36 @@ Se un nodo cita un character non esistente nel grafo (es. typo, sbaglio chat ori
 **Anti-pattern (osservato in s01 prima della correzione):**
 - Sub-agente P1 ha copiato `attribute_dominant: "delta"` pari-pari dall'`old_node` senza rimappare. Il file ha passato `verify_output_integrity.py` (lo script non valida enum stringhe libere) ma il valore era fuori enum schema. Correzione manuale post-pubblicazione richiesta.
 
+**0.6 — `oggetti_simbolo_presenti_must_be_canonical: true`** (aggiunta post-s02)
+
+> Il campo `oggetti_simbolo_presenti` accetta SOLO ID di entita' presenti nel catalogo come `famiglia=oggetto` (i 13 oggetti canonici saga, vedi `catalogo_web/data/entities.json`). NON e' un alias di `visual_anchors.recurring_visual_objects` del grafo legacy.
+
+**Distinzione concettuale:**
+- `recurring_visual_objects` (grafo legacy) puo' includere QUALSIASI oggetto narrativamente ricorrente: oggetti-firma personaggio (es. `bastoncino_noah_s1`), oggetti di scena non catalogati, etichette descrittive.
+- `oggetti_simbolo_presenti` (canonical v1.2) e' RISTRETTO ai 13 oggetti-simbolo saga: `bandana_rovo`, `bisaccia_zolla`, `braccialetto_s9`, `cesto_salvia`, `cicatrice_grunto`, `conchiglia_amo`, `corda_nodo`, `grembiule_fiamma`, `lanterna_velata_s10`, `nido_vuoto_s08`, `pagnotta_forno`, `scialle_stria`, `sciarpa_memolo`.
+
+**Procedura obbligatoria pre-write canonical:**
+1. Leggi `recurring_visual_objects` dall'old_node.
+2. Filtra mantenendo SOLO gli ID che esistono nel catalogo come `famiglia=oggetto`.
+3. Gli ID scartati vanno tracciati come misalignment di tipo `other` (severity bassa) nel rolling, con descrizione "oggetto-firma personaggio o di scena, non in catalogo come oggetto-simbolo saga".
+
+**Anti-pattern (osservato in s02 prima della correzione):**
+- Script ha copiato pari-pari `recurring_visual_objects` come `oggetti_simbolo_presenti` includendo `bastoncino_noah_s1` (non canonico). Fix retroattivo: rimosso, mis_003 aggiunto.
+
+**0.7 — `callbacks_to_story_must_be_present: true`** (aggiunta post-s02)
+
+> Lo schema v1.2 di `callbacks_made[*]` richiede 4 campi obbligatori: `callback_id`, `from_story`, `to_story`, `type`. L'old_node spesso ha `from_story` + `registered_in_story` (= dove il callback e' registrato/fatto) ma manca di `to_story`.
+
+**Procedura obbligatoria di derivazione:**
+- Per ogni `callback` in `callbacks_made`:
+  - Se ha `to_story`: lascialo invariato.
+  - Se ha `registered_in_story` ma non `to_story`: copia `registered_in_story` in `to_story` (sono semanticamente identici: "storia che fa il callback").
+  - Se manca entrambi: deriva `to_story` = story_id corrente del nodo che si sta migrando (il callback e' fatto IN questa storia).
+- Mantieni `registered_in_story` come campo opzionale se gia' presente (additionalProperties: true nello schema).
+
+**Anti-pattern (osservato in s02 prima della correzione):**
+- Sub-agente/script ha copiato i 2 callbacks_made di s02 senza derivare `to_story`. Schema-required violato. `verify_output_integrity.py` ha PASSato comunque (lo script non valida lo schema callback per intero). Fix retroattivo: aggiunto `to_story: "s02"` a entrambi i callbacks.
+
 ---
 
 ### REGOLA 0bis — Filosofia stretta del null
@@ -298,9 +328,13 @@ flags = get_quote_tracker_flags(story_id)
 ),
 
 "oggetti_simbolo_presenti": [
-    # estrai da: visual_anchors.scene_hooks[*].focal_object
-    # + scan visual_anchors.scene_hooks[*].elements per oggetti come 'pagnotta', 'carriola', 'zappa', 'scala', 'braccialetto'
-    # + scan characters_in_scene[*] per signature_object
+    # FILTRA recurring_visual_objects (visual_anchors) tenendo SOLO gli ID
+    # presenti nel catalogo con famiglia=oggetto (vedi REGOLA 0.6).
+    # Lista canonica saga: bandana_rovo, bisaccia_zolla, braccialetto_s9,
+    # cesto_salvia, cicatrice_grunto, conchiglia_amo, corda_nodo,
+    # grembiule_fiamma, lanterna_velata_s10, nido_vuoto_s08, pagnotta_forno,
+    # scialle_stria, sciarpa_memolo. Tutto il resto (oggetti-firma personaggio,
+    # oggetti di scena) NON entra qui: tracciato come misalignment.
 ],
 
 "personaggi_vincoli_attivi": build_personaggi_vincoli_attivi(

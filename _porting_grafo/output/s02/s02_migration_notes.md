@@ -120,6 +120,55 @@ Nessuno nuovo. Il misalignment `mis_002` (P0) e' gia' resolved (pozza aggiunta a
 - **Auto-derivati popolati**: `cycle: A`, `attribute_dominant: distinguere` (rimappato), `pattern_a_active: pre_eco`, `night_scene: false`, `when_water_trembles: false`. Tutti i 4 flag quote_tracker = false.
 - **Script P1**: `_porting_grafo/scripts/migrate_p1.py` (parametrico, applica REGOLA 0.5 + rinomine + hook resolution da `_p1_mapping.json`). Riusabile per s03-s12.
 
+## Aggiornamento post-review Ray (FLAG 1 + FLAG 2)
+
+Review di Ray del 2026-04-28 (post-P2) ha rilevato 2 bug nello script `migrate_p1.py`. Entrambi corretti, script aggiornato, s02_canonical.json rigenerato e ri-verificato (PASS). Patch al MIGRATION_PROMPT applicate per evitare ricaduta su s03-s12.
+
+### FLAG 1 — `to_story` mancante nei `callbacks_made[*]` (severity media)
+
+**Bug**: schema v1.2 di `callback_entry` richiede 4 campi (`callback_id`, `from_story`, `to_story`, `type`). Lo script copiava i callbacks dell'old_node senza derivare `to_story`. `verify_output_integrity.py` ha PASSato comunque (lo script di verify non valida lo schema callback per intero).
+
+**Fix script** (`migrate_p1.py#normalize_callbacks`): per ogni callback:
+- Se ha `to_story`: invariato.
+- Se ha `registered_in_story` ma non `to_story`: copia `registered_in_story` → `to_story`.
+- Se manca entrambi: deriva `to_story` = `story_id` corrente (il callback e' fatto IN questa storia).
+
+**Fix retroattivo s02**: i 2 callbacks_made hanno ora `to_story: "s02"`.
+
+**Patch MIGRATION_PROMPT**: nuova **REGOLA 0.7** (`callbacks_to_story_must_be_present: true`).
+
+### FLAG 2 — `bastoncino_noah_s1` in `oggetti_simbolo_presenti` (severity bassa)
+
+**Bug**: lo script copiava pari-pari `recurring_visual_objects` come `oggetti_simbolo_presenti`. Concettualmente sbagliato:
+- `recurring_visual_objects` (grafo legacy): qualsiasi oggetto narrativamente ricorrente (incluso oggetti-firma personaggio).
+- `oggetti_simbolo_presenti` (canonical v1.2): RISTRETTO ai 13 oggetti-simbolo saga (`famiglia=oggetto` nel catalogo).
+
+`bastoncino_noah_s1` e' oggetto-firma personaggio (gesto-firma di Noah che raccoglie), tracciato in `seed_noah_raccoglie_oggetti` + `callbacks_made` + `structural_notes`. Per design NON entra in `oggetti_simbolo_presenti`.
+
+**Fix script** (`migrate_p1.py#filter_oggetti_simbolo` + `load_canonical_oggetti`): legge i 13 oggetti canonici dal catalogo (`famiglia=oggetto`) e filtra `recurring_visual_objects` mantenendo solo quelli. Stampa a stdout gli ID droppati per gestione manuale del misalignment.
+
+**Fix retroattivo s02**: `oggetti_simbolo_presenti = ["scialle_stria"]` (era `["scialle_stria", "bastoncino_noah_s1"]`).
+
+**Misalignment registrato**: `mis_003` in `_canon_misalignments.json` (severity bassa, status resolved). Il tracking narrativo dell'oggetto-firma resta in `seeds_planted/picked_up` + `callbacks_made` + `structural_notes`.
+
+**Patch MIGRATION_PROMPT**: nuova **REGOLA 0.6** (`oggetti_simbolo_presenti_must_be_canonical: true`) + chiarimento §8.2 con la lista esplicita dei 13 oggetti canonici.
+
+### Verifica post-fix
+
+```
+$ python3 _porting_grafo/scripts/migrate_p1.py s02
+Wrote: s02_canonical.json
+Top-level fields: 51
+Hooks: 5
+attribute_dominant: distinguere
+callbacks_made: 2 (to_story derivato dove mancante)
+oggetti_simbolo_presenti (canonici): ['scialle_stria']
+  WARN: dropped: ['bastoncino_noah_s1'] -> mis_003
+
+$ python3 verify_output_integrity.py s02_canonical.json
+[PASS]
+```
+
 ## Stato: VIA LIBERA P2
 
 Output P1 pronto per Passata 2 (co-autore consultivo). P2 popolera' i 7 provvisori legittimi (2 top + 5 hook notes), aggiornera' `_provisional_state.json` e `_canon_misalignments.json` (rolling files), e produrra' `s02_provisional.json`. I 5 `no_inference_fields` restano `null` (decisione Ray fase C/D).
