@@ -236,6 +236,30 @@ Lo script `migrate_p1.py` lo promuove al canonical automaticamente (vedi `migrat
 
 Il campo `key_phrase_attributed_to` e' un dato strutturale: chi pronuncia la frase-chiave (narratore vs character_id). Promuoverlo al canonical quando esplicito (s03) preserva la profondita'. Lasciarlo assente quando key_phrase e' null evita di iniettare default arbitrari.
 
+**0.9 — `block_position_must_match_pattern: true`** (aggiunta post-s03)
+
+> Lo schema v1.2 vincola `block_position` al pattern regex `^(apertura|centro|chiusura)_blocco_[abcd]$`. Storie con suffissi semantici legacy DEVONO essere normalizzate prima di scrivere il canonical.
+
+**Mapping noti legacy → canonical:**
+
+| storia | valore old_node (v1.1) | valore canonical (v1.2) | tipo |
+|---|---|---|---|
+| s01 | `apertura_saga` | `apertura_blocco_a` | mapping nominale (saga = blocco a iniziale) |
+| s03 | `chiusura_blocco_a_passaggio_stagionale` | `chiusura_blocco_a` | troncamento suffisso |
+| s06 | `chiusura_blocco_b_connessione_come_cura_della_rete` | `chiusura_blocco_b` | troncamento suffisso |
+| s02, s04, s05, s07-s12 | gia' canonici | (invariato) | (nessuna azione) |
+
+**Procedura obbligatoria pre-write canonical:**
+1. Se il valore matcha gia' il pattern: invariato.
+2. Se in mapping nominale (es. `apertura_saga`): applica il mapping.
+3. Se ha suffisso semantico (es. `chiusura_blocco_a_passaggio_stagionale`): tronca a `<prefix>_blocco_<lettera>`.
+4. L'info estesa del suffisso va **conservata in `structural_notes`** del canonical (es. s03 ha gia' `"PASSAGGIO_STAGIONALE_1 — primo cambio (inverno → primavera)"` in structural_notes; s06 idem con `"CONNESSIONE_COME_CURA_DELLA_RETE"` o equivalente). Nessun `_block_position_note` separato necessario: structural_notes copre.
+
+**Anti-pattern (osservato in s03 prima della correzione):**
+- Script ha copiato `block_position: "chiusura_blocco_a_passaggio_stagionale"` pari-pari dall'old_node. `verify_output_integrity.py` ha PASSato (lo script verifica struttura ma non valida pattern regex). Fix retroattivo: `chiusura_blocco_a`.
+
+**Implementato in `migrate_p1.py#normalize_block_position`** (regex troncamento + mapping esplicito).
+
 ---
 
 ### REGOLA 0bis — Filosofia stretta del null

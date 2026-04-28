@@ -137,9 +137,24 @@ Ray ha confermato di promuovere `key_phrase_attributed_to: "rovo"` al canonical 
 
 6. `_provisional_state.json`: aggiornato quote_consumed di s03 (totale 6, by_category corretto).
 
+## Aggiornamento post-review Ray (FLAG block_position pattern)
+
+Review di Ray ha rilevato che `block_position: "chiusura_blocco_a_passaggio_stagionale"` viola il pattern schema `^(apertura|centro|chiusura)_blocco_[abcd]$`. Stesso pattern di bug di `attribute_dominant: delta` (rinomina/normalizzazione mancante nel prompt).
+
+**Fix script** (`migrate_p1.py#normalize_block_position`, REGOLA 0.9):
+- Mapping nominale: `apertura_saga` → `apertura_blocco_a` (s01).
+- Troncamento suffisso: `<prefix>_blocco_<lettera>_<extra>` → `<prefix>_blocco_<lettera>` (s03, s06).
+- Pattern canonico: invariato.
+
+**Fix retroattivo s03**: `block_position` ora `"chiusura_blocco_a"` (era `"chiusura_blocco_a_passaggio_stagionale"`). L'info estesa del suffisso e' gia' in `structural_notes` (`"PASSAGGIO_STAGIONALE_1 — primo cambio (inverno → primavera), aria un filo piu' tiepida"`).
+
+**Patch MIGRATION_PROMPT**: aggiunta REGOLA 0.9 (`block_position_must_match_pattern`) con mapping table per s01 + troncamento per s03 + s06. Lo script applica automaticamente, s06 erediterà il fix.
+
+`verify_output_integrity.py` post-fix: PASS.
+
 ## Stato: VIA LIBERA s04
 
-Output P1 + P2 di s03 pronto e validato. 6 provvisori legittimi (1A + 4B + 1C). I 5 `no_inference_fields` restano `null` (decisione Ray fase C/D). `key_phrase_indicative` + `key_phrase_attributed_to` gia' nel canonical (non provvisori P2).
+Output P1 + P2 di s03 pronto e validato. 6 provvisori legittimi (1A + 4B + 1C). I 5 `no_inference_fields` restano `null` (decisione Ray fase C/D). `key_phrase_indicative` + `key_phrase_attributed_to` gia' nel canonical (non provvisori P2). `block_position` normalizzato a pattern v1.2.
 
 ## Output di s03: stato file
 

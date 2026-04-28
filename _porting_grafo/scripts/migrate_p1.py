@@ -12,6 +12,7 @@ Scrive:
   _porting_grafo/output/<sNN>/<sNN>_canonical.json
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -22,6 +23,29 @@ ENUM_RENAMES = {
         "connettere_sottile": "connettere",  # s06: nota va in structural_notes
     }
 }
+
+# REGOLA 0.9 — block_position deve matchare ^(apertura|centro|chiusura)_blocco_[abcd]$
+BLOCK_POSITION_PATTERN = re.compile(r"^(apertura|centro|chiusura)_blocco_[abcd]$")
+BLOCK_POSITION_MAP = {
+    "apertura_saga": "apertura_blocco_a",  # s01
+}
+BLOCK_POSITION_TRUNCATE = re.compile(r"^((?:apertura|centro|chiusura)_blocco_[abcd])(_.+)?$")
+
+
+def normalize_block_position(value: str) -> str:
+    """REGOLA 0.9 (post-s03): block_position legacy -> canonical pattern v1.2.
+    1) Mappa esplicita per nomi semantici (apertura_saga -> apertura_blocco_a).
+    2) Tronca suffissi semantici (chiusura_blocco_a_passaggio_stagionale ->
+       chiusura_blocco_a). Info estesa va conservata in structural_notes.
+    3) Se gia' canonico: invariato."""
+    if value in BLOCK_POSITION_MAP:
+        return BLOCK_POSITION_MAP[value]
+    if BLOCK_POSITION_PATTERN.match(value):
+        return value
+    m = BLOCK_POSITION_TRUNCATE.match(value)
+    if m:
+        return m.group(1)
+    raise ValueError(f"block_position '{value}' non normalizzabile: aggiungi al mapping in migrate_p1.py")
 
 def load_canonical_oggetti(repo: Path) -> set:
     """Lista degli ID oggetti canonici dal catalogo (famiglia=oggetto)."""
@@ -71,7 +95,7 @@ def migrate(story_id: str):
         "attribute_dominant": ENUM_RENAMES["attribute_dominant"].get(
             on["attribute_dominant"], on["attribute_dominant"]
         ),
-        "block_position": on.get("block_position"),
+        "block_position": normalize_block_position(on["block_position"]),
         "season": on["season"],
         "season_passage": on.get("season_passage"),
         "wind_active": on.get("wind_active"),
