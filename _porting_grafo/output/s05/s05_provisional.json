@@ -1,0 +1,136 @@
+{
+  "story_id": "s05",
+  "phase": "P2_provisori_narrativi",
+  "date": "2026-04-28",
+  "based_on": "s05_canonical.json",
+  "confidence_legend": {
+    "high": "Categoria A — quote letterale Bible/grafo o riformulazione minima di testo gia' canonico.",
+    "medium": "Categoria B — inferenza forte da contesto pubblicato.",
+    "low": "Categoria C — inferenza coerente plausibile, da rivedere con Ray in fase D."
+  },
+  "provvisori": {
+    "season_passage": {
+      "value": "Primavera piena, qualche settimana dopo s04 — fiori aperti, Fiume piu' alto, sole che scalda. Mattino inoltrato → mezzogiorno → primo pomeriggio. Foglie nuove, pertiche cadute dell'inverno disponibili come materia (Pattern A).",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "premise dichiara esplicito 'Primavera piena, qualche settimana dopo S4 — fiori aperti, Fiume piu' alto, sole che scalda'. Continuita' stagionale con s04 (primavera_piena). palette_emotiva conferma. structural_notes 'PATTERN_A_PRIMA_SEMINA_FORMALE — le pertiche cadute dalla Foresta diventano la materia del ponte'."
+    },
+    "key_phrase_indicative": {
+      "value": "Non hanno trovato qualcosa: hanno fatto qualcosa che resta.",
+      "category": "B",
+      "confidence": "medium",
+      "rationale": "key_phrase_notes esplicita la direzione: 'non hanno trovato qualcosa, hanno fatto qualcosa che resta. Il narratore puo' chiudere con un'immagine sul ponte che e' ancora li' (cose fatte dai fratelli che continuano a tenere anche quando nessuno guarda)'. Sigillo del narratore in chiusura. Indicativa, frase precisa da scrivere in fase D. key_phrase_attributed_to lasciato assente nel canonical (REGOLA 0.8): sara' 'narratore' quando Ray decide."
+    },
+    "hooks": {
+      "s05_h1": {
+        "notes": {
+          "value": "Apertura: i quattro (i tre fratelli + Bru) camminano in fila dentro la Foresta seguendo la direzione che Bru ha indicato col mento (callback s04). Bru davanti, silenzioso, occhi neri attenti. Primavera piena, foglie nuove. Cammino di scoperta in fiducia reciproca silenziosa. Bru in agency attiva (bloom da 'presenza che custodisce' s03/s04 a compagno scoperta s05).",
+          "category": "C",
+          "confidence": "low",
+          "rationale": "premise + atmosphere + callback cb_s05_001 (bru indica col mento direzione radura). Cornice di apertura con sviluppo agency Bru."
+        }
+      },
+      "s05_h2": {
+        "notes": {
+          "value": "Problem: i quattro fermi sulla sponda del torrente. L'altra sponda e' a 4-5 metri. Il vecchio tronco-ponte non c'e' piu' — si vede il taglio fresco dove si era adagiato da anni, portato via dalla piena. Tornare = rinunciare. Cercare altro punto = ore nella Foresta. Arresto davanti al vuoto, scoperta del passaggio mancante.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "problem del canonical + atmosphere 'arresto_davanti_al_vuoto_scoperta_del_passaggio_mancante'. Triggering della soluzione (TOK-TOK-TOK in arrivo)."
+        }
+      },
+      "s05_h3": {
+        "notes": {
+          "value": "NODO_PRIMA_APPARIZIONE: i quattro camminano 50 metri verso il TOK-TOK-TOK. Nodo sulla scaletta a terra rovesciata, gradino rotto in mano, corda arrotolata sul braccio sinistro, cresta rossa visibile tra il verde. TOK-TOK-TOK del becco sul legno (1 di max 4-5 in saga, prima apparizione). Modalita' lavoro commissione Coltivatori — registro 'artigiano che non interrompe il giro in corso per rispondere'. S8 sara' modalita' Mantenitore (collettivo emergenza), due modalita' distinte.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal premise/problem + structural_notes 'NODO_PRIMA_APPARIZIONE — modalita' lavoro commissione Coltivatori (scaletta). Registro artigiano che non interrompe il giro in corso per rispondere'. Vincolo tok_tok_tok_quota_4_5_storie_saga. focal_action canonical."
+        }
+      },
+      "s05_h4": {
+        "notes": {
+          "value": "EREDITA_TECNICA_E_MATERIALE: Nodo si toglie un pezzo di corda dalla matassa al braccio, taglia con un colpo secco del becco, porge la corda a Elias insieme al gesto-nodo marinaro mostrato una volta sola. 'Adesso fai tu.' Torna alla scaletta. Prima volta saga in cui un maggiore passa contemporaneamente know-how (capacita' tecnica) e materia (pezzo di corda) a un fratello. Vincoli nodo attivi: mai_spiega, mai_fa_nodo_al_posto_di_chi_impara, mai_parla_di_sentimenti.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal threshold_moment + structural_notes 'EREDITA_TECNICA_E_MATERIALE — Nodo tramanda a Elias sia la capacita' (nodo marinaro) sia il materiale (pezzo di corda). Prima volta saga'. seed_nodo_marinaro_capacita_elias seminato. Vincoli nodo da character_constraints."
+        }
+      },
+      "s05_h5_signature": {
+        "notes": {
+          "value": "SIGNATURE — PATTERN A PRIMA SEMINA FORMALE: i quattro al lavoro coordinato sul ponte di rami. Gabriel tiene ferme le pertiche stese sull'acqua da sponda a sponda. Noah passa la corda a Elias. Elias inginocchiato lega un nodo marinaro sulle giunzioni. Bru porta pertiche piu' piccole dal sottobosco. Le pertiche sono RAMI CADUTI dell'inverno — la Foresta li ha lasciati, ora diventano materia del ponte. 'Le cose cadute diventano materia': prima volta saga in cui il principio appare in immagine chiara (mai nominato, vive nell'azione). Pattern A cammina. Vento Intreccio muove chiome sopra ma non crea onde sull'acqua (aria parallela).",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal canonical + structural_notes 'PATTERN_A_PRIMA_SEMINA_FORMALE' + voice_notes 'fase_d_specificare_pertiche_lunghe_non_ramoscelli_rami_grossi_che_la_foresta_ha_lasciato_cadere_pattern_a' + 'fase_d_intreccio_muove_chiome_sopra_non_crea_onde_nel_torrente'. Signature image della storia, snodo del cycle B."
+        }
+      },
+      "s05_h6": {
+        "notes": {
+          "value": "ELIAS_COLLAUDA_PER_PRIMO: Elias primo passo sul ponte appena finito. Braccia un po' aperte per equilibrio. Gli altri lo guardano dalla sponda. Sotto di lui l'acqua corre. Nodo in lontananza a testa bassa, non collauda — 'E' vostro. Provatelo voi.' Chi ha legato collauda: responsabilita' tecnica si chiude nel provare cio' che si e' fatto. Modo del personaggio istituito (bloom S8: tiene per primo la corda del ramo che ha legato). Peso intermedio. Il ponte regge.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "resolution_mode + structural_notes 'ELIAS_COLLAUDA_PER_PRIMO — modo del personaggio istituito: responsabilita' tecnica si chiude nel provare cio' che si e' fatto. Bloom S8'. seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto seminato."
+        }
+      },
+      "s05_h7_radura": {
+        "notes": {
+          "value": "RADURA_DEI_PINI scoperta: cerchio d'erba, pini intorno, luce verticale dall'alto, silenzio verticale. Bru seduto al centro per primo (BRU_OSPITE_SCOPRITORE: passa per quarto sul ponte per cortesia, ma si siede al centro della radura per primo riprendendo proprieta' del momento). I tre fratelli in cerchio intorno, seduti anche loro. Elias ha lo sguardo un filo storto — micro-sguardo della paura non_essere_abbastanza, modulazione blocco B 'fare-senza-avere' (Elias ha fatto la fatica tecnica, Bru si prende il silenzio del centro). Mai nominato.",
+          "category": "B",
+          "confidence": "medium",
+          "rationale": "structural_notes 'BRU_OSPITE_SCOPRITORE' + 'PAURA_ELIAS_MODULAZIONE_BLOCCO_B — fare-senza-avere (S5) in evoluzione verso capire-senza-avere (S6)' + fear_touched.mode_of_touch 'micro_sguardo_storto_quando_bru_si_siede_al_centro_della_radura_per_primo'. seed_radura_coi_pini_luogo_silenzioso seminato (location mappata a radura_dei_pini, mis_005)."
+        }
+      },
+      "s05_h8": {
+        "notes": {
+          "value": "Sigillo: i quattro tornano dall'altra parte, attraversano il ponte al contrario. Il ponte e' ancora li', tiene. Niente Nodo in lontananza — TOK-TOK-TOK gia' sparito nella Foresta. Cose fatte che continuano a tenere anche quando nessuno guarda. Quiete. Direzione del sigillo del narratore: non hanno trovato qualcosa, hanno fatto qualcosa che resta.",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Quote letterale dal canonical + atmosphere 'cose_fatte_che_continuano_a_tenere_anche_quando_nessuno_guarda_quiete' + voice_notes 'sigillo_narratore_in_chiusura_immagine_del_ponte_ancora_li_non_regola'. Chiusura con immagine, non regola."
+        }
+      }
+    }
+  },
+  "quote_consumed": {
+    "by_category": {"A": 4, "B": 5, "C": 1},
+    "totale": 10,
+    "dettaglio": [
+      {"field": "season_passage", "category": "B", "confidence": "medium"},
+      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s05_h1.notes", "category": "C", "confidence": "low"},
+      {"field": "visual_anchors.scene_hooks.s05_h2.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s05_h3.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s05_h4.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s05_h5_signature.notes", "category": "A", "confidence": "high"},
+      {"field": "visual_anchors.scene_hooks.s05_h6.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s05_h7_radura.notes", "category": "B", "confidence": "medium"},
+      {"field": "visual_anchors.scene_hooks.s05_h8.notes", "category": "A", "confidence": "high"}
+    ]
+  },
+  "notes_globali": "Quinta storia (centro_blocco_b, primavera piena, ciclo connettere in fase costruttiva piena, signature: 'Il Ponte di Rami'). 10 provvisori (4A + 5B + 1C — distribuzione confidence ALTISSIMA). 8 hook (vs 5 standard) per scena tecnica complessa. Highlight: PATTERN_A_PRIMA_SEMINA_FORMALE in h5 ('le cose cadute diventano materia', mai nominato). EREDITA_TECNICA_E_MATERIALE in h4 (Nodo a Elias). NODO_PRIMA_APPARIZIONE in h3 (modalita' commissione, vs S8 modalita' Mantenitore). BRU_BLOOM_AGENCY (presenza concreta -> compagno scoperta). PAURA_ELIAS_MODULAZIONE: fare-senza-avere (radura, h7). 3 callbacks tutti da s04. mis_005 logged: name discrepancy 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo), severity bassa, status open.",
+  "rejected_no_inference": {
+    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "entry_point_type": {
+      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Apertura con Bru in agency attiva che guida i fratelli verso la radura. Possibili candidati: D (azione che inizia) o F. Scelta autoriale."
+    },
+    "closure_type": {
+      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Chiusura con sigillo del narratore (immagine ponte ancora li'). Codice 1-7 da decidere autoriale."
+    },
+    "register": {
+      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "Atmosfera tecnica + lavoro coordinato silenzioso + collaudo. Plausibile medio. Scelta autoriale."
+    },
+    "estimated_length": {
+      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "8 hook (vs 5 standard), tre archi: cammino+problem, incontro Nodo+ponte, radura+ritorno. Probabilmente fascia lunga 1100-1200. Scelta autoriale."
+    },
+    "descriptive_pauses_count": {
+      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+      "p2_status": "NULL nel canonical, da decidere in fase C/D",
+      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_inciso_sui_rami_che_cadono_in_inverno_e_diventano_materia_in_primavera_pattern_a_silenzioso': suggerisce 1 pausa descrittiva. Scelta finale autoriale."
+    }
+  }
+}

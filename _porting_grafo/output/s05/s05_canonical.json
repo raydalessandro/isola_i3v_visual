@@ -1,0 +1,473 @@
+{
+  "id": "s05",
+  "title_provvisorio": "Il Ponte di Rami",
+  "cycle": "B",
+  "attribute_dominant": "connettere",
+  "block_position": "centro_blocco_b",
+  "season": "primavera",
+  "season_passage": null,
+  "wind_active": "vento_intreccio",
+  "wind_notes": "Intreccio (giorno) in regime pieno — seconda storia consecutiva con Intreccio attivo. Sopra le chiome soffia, muove i rami in alto, passa tra le fronde — ma sul torrente passa sopra l'acqua senza increspare forte (aria calda parallela alla corrente, non contro). Porta voci basse e continue da lontano, disperde voci corte ad alto volume — coerente col principio fisico istituito in S4. Il TOK-TOK-TOK di Nodo viaggia bene in questo vento perche' e' suono ritmico secco su legno: viaggia via-aria (colpi distinti, non parole sfumate) E vibra nel legno dei tronchi circostanti — doppio canale, nuovamente coerente con S4. Eco silenziosa nome=cosa: Vento Intreccio + rami intrecciati + fratelli che intrecciano azioni. Mai detto.",
+  "pattern_a_active": "seminato",
+  "pattern_a_notes": "PRIMA SEMINA FORMALE DEL PATTERN A in saga. Le pertiche cadute dalla Foresta diventano la materia del ponte dei fratelli. Il Pattern A qui si manifesta come 'le cose cadute diventano materia' — famiglia di immagini che in S6 si estendera' a 'le cose perse non si perdono, si nascondono', in S7-S8 sara' scena attiva piena (zattera rotta che arriva, noce caduto che diventa cataste di legna), in S10 variante notturna (nido vuoto che e' pieno), S11 variante collettiva (festa che non si vince), S12 chiusura silente (anno chiuso, fratelli diversi insieme). Mai nominato nel testo. Puo' essere toccato da massimo 1 inciso del narratore nella memoria lunga (es. direzione: sui rami che cadono in inverno e diventano materia in primavera). Vive nell'immagine del ponte.",
+  "night_scene": false,
+  "night_scene_notes": null,
+  "when_water_trembles": false,
+  "location_primary": {
+    "id": "torrente_affluente_foresta",
+    "note": "Il torrente e' affluente del Fiume che Gira — nasce da una sorgente nella Foresta, scende attraverso l'ovest, sfocia nel Fiume prima della Bocca. Larghezza al punto di guado: 4-5 metri. Profondita' primaverile con piena: circa mezzo metro — guadabile d'estate, non ora. Il vecchio passaggio era un tronco caduto anni fa adagiato da sponda a sponda — portato via dalla piena delle ultime settimane. Nodo sta lavorando a ~50 metri dal punto di guado, sulla stessa sponda dei fratelli, verso il margine degli Orti: ripara una scaletta dei Coltivatori caduta male. Distanza funzionale: Nodo e' fuori campo visivo dei fratelli (alberi di mezzo) ma presente acusticamente — il TOK-TOK-TOK emerge dal fruscio del vento come richiamo ritmico. I fratelli devono camminare un po' per raggiungerlo. La radura coi pini e' sull'altra sponda, 100-150 metri di cammino dentro la Foresta. Da aggiungere torrente come sub_location di foresta_intrecciata nell'ATLANTE in Fase D/E. | specific_points: ['torrente_che_attraversa_foresta_intrecciata', 'punto_del_vecchio_tronco_ponte_portato_via_dalla_piena', 'posizione_nodo_al_lavoro_50_metri_a_valle_verso_margine_orti', 'radura_coi_pini_oltre_il_torrente_a_100_150_metri']"
+  },
+  "locations_secondary": [
+    {
+      "id": "foresta_intrecciata",
+      "role": "ambiente_attraversato_dall_inizio_fino_al_torrente_e_oltre"
+    },
+    {
+      "id": "orti_del_cerchio",
+      "role": "confine_con_foresta_motivo_della_presenza_di_nodo_mai_in_inquadratura_diretta"
+    }
+  ],
+  "characters_in_scene": [
+    {
+      "id": "gabriel",
+      "role": "protagonista_azione",
+      "narrative_weight": "delta_che_chiede_decide_e_fa_il_collaudo_finale_peso_maggiore",
+      "key_actions": [
+        "chiede_a_nodo_se_puo_aiutarli_mentre_nodo_lavora_senza_interrompere",
+        "aspetta_che_nodo_finisca_il_giro_di_nodo_in_corso",
+        "tiene_fermi_i_rami_durante_la_costruzione_ruolo_di_ancora_fisica",
+        "passa_per_terzo_sul_ponte_test_massimo_peso_maggiore_conferma_finale"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "elias",
+      "role": "protagonista_azione_dominante",
+      "narrative_weight": "connettere_in_eredita_tecnica_apprende_il_marinaro_riceve_la_corda_collauda",
+      "key_actions": [
+        "ha_l_idea_di_usare_pertiche_di_rami_caduti_grossi_e_lunghi",
+        "propone_a_nodo_che_annuisce",
+        "riceve_un_pezzo_di_corda_da_nodo_tagliato_dalla_sua_matassa_al_braccio",
+        "riceve_il_nodo_marinaro_mostrato_una_sola_volta_da_nodo",
+        "sbaglia_due_volte_rifa_la_terza_volta_riesce",
+        "lega_i_rami_con_marinaro_durante_tutta_la_costruzione",
+        "passa_per_primo_sul_ponte_finito_peso_intermedio_chi_ha_fatto_collauda",
+        "micro_sguardo_storto_quando_bru_si_siede_al_centro_della_radura_per_primo_mai_nominato"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "noah",
+      "role": "protagonista_azione_irriflessa",
+      "narrative_weight": "piccolo_entusiasta_che_passa_la_corda_e_passa_per_secondo_piu_leggero",
+      "key_actions": [
+        "corre_a_cercare_pertiche_si_entusiasma",
+        "coinvolge_bru_nella_ricerca_bru_lo_accompagna",
+        "raccoglie_piu_rami_di_quanti_ne_serva_alcuni_troppo_piccoli_alcuni_troppo_grossi",
+        "passa_la_corda_a_elias_durante_i_nodi_gesto_di_supporto",
+        "passa_per_secondo_sul_ponte_sicurezza_post_collaudo_di_elias"
+      ],
+      "quote_count_estimate": 2
+    },
+    {
+      "id": "bru",
+      "role": "compagno_attivo_scoperta",
+      "narrative_weight": "presenza_silenziosa_con_agency_indica_radura_sceglie_pertiche_giuste_passa_per_quarto_chiusura",
+      "key_actions": [
+        "indica_col_mento_la_direzione_della_radura_richiamo_gesto_s4",
+        "accompagna_i_fratelli_al_torrente",
+        "sceglie_in_silenzio_le_pertiche_giuste_tra_quelle_che_noah_raccoglie_alla_rinfusa",
+        "segna_in_silenzio_dove_va_ogni_ramo_durante_la_costruzione",
+        "passa_per_quarto_sul_ponte_ospite_del_lavoro_dei_fratelli_chiusura",
+        "si_siede_al_centro_della_radura_coi_pini_per_primo_riprende_la_proprieta_del_momento"
+      ],
+      "constraints_active": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe",
+        "agency_narrativa_tramite_gesti_silenziosi_non_tramite_parole",
+        "passa_per_quarto_non_per_paura_ma_per_cortesia_selvatica_onora_il_lavoro_di_elias"
+      ],
+      "quote_count_estimate": 0
+    },
+    {
+      "id": "nodo",
+      "role": "maggiore_prima_apparizione_piena",
+      "narrative_weight": "mano_che_fa_padre_pratico_artigiano_per_coltivatori",
+      "mode": "lavoro",
+      "client_current": "coltivatori_del_cerchio",
+      "distinct_from_s08": "in_s5_nodo_e_artigiano_commissionato_dai_coltivatori_per_riparare_scaletta_in_s8_nodo_sara_mantenitore_nel_collettivo_di_emergenza_dopo_caduta_noce_due_modalita_distinte_stesso_personaggio",
+      "key_actions": [
+        "TOK_TOK_TOK_sullo_sfondo_dall_inizio_della_scena_al_torrente_richiamo_acustico_50_metri",
+        "non_risponde_subito_a_gabriel_finisce_il_giro_di_nodo_in_corso_sulla_scaletta",
+        "alza_la_testa_cosa_vi_serve_constatazione_non_domanda",
+        "ascolta_spiegazione_di_gabriel_annuisce_all_idea_di_elias_delle_pertiche",
+        "si_toglie_un_pezzo_di_corda_dalla_matassa_al_braccio_taglia_con_un_colpo_secco_la_porge_a_elias_con_adesso_fai_tu",
+        "mostra_il_nodo_marinaro_una_sola_volta",
+        "non_costruisce_per_loro_torna_al_TOK_TOK_TOK_della_scaletta_tra_un_passaggio_e_l_altro",
+        "non_collauda_il_ponte_finito_e_vostro_provatelo_voi",
+        "riprende_la_propria_strada_TOK_TOK_TOK_si_allontana_nella_foresta_prima_del_collaudo_finale"
+      ],
+      "constraints_active": [
+        "mai_spiega_perche_nodo_funziona",
+        "mai_fa_il_nodo_al_posto_di_chi_impara",
+        "mai_parla_di_sentimenti",
+        "tok_tok_tok_1_di_<=4_5_storie_saga",
+        "voce_tipica_tieni_qui_un_altro_giro_tira_piu_forte_adesso_fai_tu"
+      ],
+      "familial_role_episodic": "padre_pratico_intervallato_bene_dopo_salvia_madre_pratica_cornice_s4_e_rovo_zio_severo_s3_s4",
+      "quote_count_estimate": 4
+    }
+  ],
+  "characters_offscreen_or_background": [
+    {
+      "id": "coltivatori_del_cerchio",
+      "role": "committenti_scaletta_di_nodo_mai_in_scena",
+      "_note": "I Coltivatori non compaiono in scena. Sono il motivo per cui Nodo e' li' (commissione della scaletta). Distinzione importante per l'economia della storia: S5 non ha cantilena Coltivatori (quota <=4-5 saga preservata), solo TOK-TOK-TOK di Nodo. I Coltivatori respirano sullo sfondo del blocco B come istituzione che commissiona lavori — S4 cantilena piena della semina, S5 scaletta commissionata, S6 off-screen."
+    }
+  ],
+  "seeds_planted": [
+    "seed_nodo_marinaro_capacita_elias",
+    "seed_radura_coi_pini_luogo_silenzioso",
+    "seed_bru_sa_indicare_luoghi_che_altri_non_vedono",
+    "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto",
+    "seed_pattern_a_rami_caduti_diventano_materia"
+  ],
+  "seeds_picked_up": [
+    "seed_foresta_tempi_modi_propri",
+    "seed_bru_presenza_che_custodisce",
+    "seed_paura_elias_piccolo"
+  ],
+  "seeds_maturing_here": [
+    "seed_foresta_tempi_modi_propri",
+    "seed_paura_elias_piccolo"
+  ],
+  "seeds_bloomed_here": [
+    "seed_bru_presenza_che_custodisce"
+  ],
+  "callbacks_made": [
+    {
+      "callback_id": "cb_s05_001",
+      "from_story": "s04",
+      "element": "bru_indica_col_mento_direzione_radura",
+      "type": "gesto_richiamo",
+      "note": "Bru in S4 (fine, mentre tornavano con Salvia) aveva indicato col mento una direzione. In S5 quel gesto diventa motivo del viaggio: i fratelli chiamano Bru e lo seguono verso la radura che lui aveva indicato.",
+      "to_story": "s05"
+    },
+    {
+      "callback_id": "cb_s05_002",
+      "from_story": "s04",
+      "element": "foresta_che_ha_suoi_modi",
+      "type": "principio_fisico_esteso",
+      "note": "In S4 la Foresta come tessuto vivo che porta vibrazioni. In S5 la Foresta estende: ha suoi modi anche di nascondere radure che si raggiungono solo se costruisci. Stesso principio, declinato in chiave costruttiva/spaziale.",
+      "to_story": "s05"
+    },
+    {
+      "callback_id": "cb_s05_003",
+      "from_story": "s04",
+      "element": "bru_presenza_che_custodisce",
+      "type": "personaggio_sviluppo_agency",
+      "note": "Bru da presenza concreta silenziosa (S4) a compagno attivo con agency narrativa (S5). Bloom del seed.",
+      "to_story": "s05"
+    }
+  ],
+  "callback_summary": "Callback a S4: Bru che indica col mento la direzione della radura (richiamo gesto di fine S4). Foresta come tessuto che ha suoi modi (da canale vibrazione di S4 a accessibilita' costruttiva di S5 — principio fisico che si estende). Fermarsi come gesto attivo non rilevante qui ma ereditato. Callback a S3: Rovo/Bru contesto Foresta ma in modalita' diversa (S5 costruttiva non margine).",
+  "debts_opened": [],
+  "debts_closed": [],
+  "key_phrase_indicative": null,
+  "key_phrase_notes": "Nessuna frase-chiave dichiarativa di personaggio. Sigillo del narratore in chiusura — direzione: non hanno trovato qualcosa, hanno fatto qualcosa che resta. Mai dichiarato come regola. Il narratore puo' chiudere con un'immagine sul ponte che e' ancora li' (cose fatte dai fratelli che continuano a tenere anche quando nessuno guarda), o su Nodo che non ha visto il collaudo ma sapeva — qualcosa di pratico, non filosofico. Da scrivere in D.",
+  "premise": "Primavera piena, qualche settimana dopo S4 — fiori aperti, Fiume piu' alto, sole che scalda. I fratelli vogliono vedere una radura nuova che Bru ha indicato loro mentre tornavano con Salvia dalla raccolta di ortica (callback S4: Bru ha fatto col mento un gesto silenzioso verso una direzione dentro la Foresta). Chiamano Bru. Vanno insieme. Seguono la sua indicazione per 20-30 minuti di cammino dentro la Foresta, arrivano al torrente: il vecchio tronco che faceva da ponte non c'e' piu' — la piena lo ha portato via. L'acqua corre alta, non si guada.",
+  "problem": "L'altra sponda e' a quattro-cinque metri. Tornare = rinunciare. Cercare un altro punto = ore nella Foresta. Stanno pensando di tornare quando sentono TOK-TOK-TOK poco distante, verso il margine degli Orti — suono ritmico secco che viaggia bene nel vento, riconoscibile. E' Nodo, sta riparando una scaletta dei Coltivatori. Camminano 50 metri per raggiungerlo.",
+  "threshold_moment": "Elias ha l'idea: usare pertiche di rami grossi e lunghi — di quelli che la Foresta ha lasciato cadere dopo l'inverno, lunghi abbastanza da coprire la luce del torrente con margine sulle sponde. Propone a Nodo. Nodo annuisce, continua il giro di nodo in corso, poi alza la testa: 'Cosa vi serve.' Ascolta, si toglie un pezzo di corda dalla matassa al braccio, taglia con un colpo secco. Porge la corda a Elias insieme al nodo marinaro mostrato una volta sola. 'Adesso fai tu.' Torna alla scaletta. Elias prova: sbaglia. Riprova: sbaglia. Alla terza riesce. Il ponte prende forma in 20-30 minuti di lavoro coordinato — Gabriel tiene le pertiche, Noah passa la corda, Elias lega marinari, Bru sceglie in silenzio i pezzi giusti. L'Intreccio fa oscillare le chiome sopra, ma il torrente resta liscio — aria parallela alla corrente.",
+  "resolution_mode": "Quando il ponte e' finito, Nodo e' ancora sulla scaletta. Alza la testa, lo guarda un secondo, non lo collauda. 'E' vostro. Provatelo voi.' Si rimette al TOK-TOK-TOK. Elias passa per primo — chi ha legato collauda, responsabilita' tecnica che si chiude nel provare cio' che si e' fatto. Peso intermedio. Il ponte regge. Noah passa per secondo, sicurezza post-collaudo, piu' leggero. Regge. Gabriel passa per terzo — test massimo, peso maggiore, conferma finale. Regge. Bru passa per quarto, ospite sul ponte che i fratelli hanno fatto — cortesia selvatica, onora il lavoro di Elias. Attraversano. Camminano 100-150 metri dentro la Foresta dall'altra parte. Trovano la radura: un cerchio d'erba con alcuni pini intorno, luce verticale dall'alto (il numero dei pini non detto nel testo — l'illustrazione decide). Bru si siede al centro per primo — riprende la proprieta' del momento, dopo aver passato per quarto sul ponte. I fratelli fanno lo stesso, in cerchio intorno. Restano un po', senza parole. Tornano. Al ritorno il ponte e' ancora li'. Nodo se n'e' gia' andato col suo TOK-TOK-TOK lontano nella Foresta — non ha visto il collaudo finale. Non gli serviva vederlo.",
+  "palette_emotiva": "Verdi tenerissimi della primavera piena + marroni chiari delle pertiche cadute e delle radici scoperte + corda chiara di Nodo come filo caldo unico + cresta rossa di Nodo unico punto vivo della scena + grigio-marrone di Bru silenzioso. Radura: verde quasi giallo nella luce verticale, tronchi scuri di pino intorno. Acqua del torrente: verde liscio che corre sotto il ponte. Il ponte in costruzione e' la cosa piu' chiara della tavola, l'unico punto di legno chiaro tra verdi e marroni scuri.",
+  "active_constraints_touched": [
+    "nodo_mai_spiega_perche_nodo_funziona",
+    "nodo_mai_fa_il_nodo_al_posto_di_chi_impara",
+    "nodo_mai_parla_di_sentimenti",
+    "nodo_tok_tok_tok_1_di_<=4_5_storie_saga",
+    "bru_mai_racconta_sua_storia",
+    "bru_mai_centro_attenzione_in_gruppo",
+    "bru_mai_piange_visibile",
+    "bru_mai_eroe",
+    "bru_nessuna_parola_in_questa_storia_agency_gesti_silenziosi",
+    "detti_fiamma_esclusivi_qui_non_presente",
+    "no_narrator_reveal_preannouncement",
+    "ear_framework_invisible_connettere_in_azione_fisica_non_concetto",
+    "elias_non_e_quello_delle_idee_tiene_fisico_tecnica_apprendista",
+    "pattern_a_never_named_in_text_prima_semina_formale_in_immagine_del_ponte_materia_caduta"
+  ],
+  "voice_notes_essential": [
+    "TOK_TOK_TOK_di_nodo_onomatopea_isolata_graficamente_1_di_<=4_5_storie_saga_prima_apparizione",
+    "nessun_address_al_lettore_arriva_in_s7_come_da_arco_questo_era_in_s4",
+    "memoria_lunga_narratore_1_inciso_sui_rami_che_cadono_in_inverno_e_diventano_materia_in_primavera_pattern_a_silenzioso_mai_dichiarato",
+    "nodo_voce_tipica_tieni_qui_un_altro_giro_adesso_fai_tu_cosa_vi_serve_e_vostro_provatelo_voi",
+    "elias_zero_dichiarazioni_fa_con_le_mani_micro_sguardo_storto_mai_in_parola",
+    "bru_zero_parole_agency_tramite_gesti",
+    "gabriel_breve_delega_chi_ha_fatto_collauda_ma_io_tengo",
+    "noah_entusiasmo_fisico_non_in_parole",
+    "fase_d_specificare_pertiche_lunghe_non_ramoscelli_rami_grossi_che_la_foresta_ha_lasciato_cadere_pattern_a",
+    "fase_d_corda_arriva_da_nodo_tagliata_dal_braccio_gesto_di_trasmissione_eredita_tecnica_e_materiale",
+    "fase_d_intreccio_muove_chiome_sopra_non_crea_onde_nel_torrente_tensione_regge_non_regge_solo_visiva",
+    "nessuna_cantilena_coltivatori_saga_quota_preservata_s4_era_piena",
+    "sigillo_narratore_in_chiusura_immagine_del_ponte_ancora_li_non_regola"
+  ],
+  "structural_notes": [
+    "CENTRO_BLOCCO_B — ciclo Connettere in fase costruttiva piena. Connettere in azione fisica a quattro corpi.",
+    "PATTERN_A_PRIMA_SEMINA_FORMALE — le pertiche cadute dalla Foresta diventano la materia del ponte dei fratelli. Prima volta saga in cui il principio 'le cose cadute diventano materia' appare in immagine chiara. Da qui in poi Pattern A cammina. Mai nominato.",
+    "EREDITA_TECNICA_E_MATERIALE — Nodo tramanda a Elias sia la capacita' (nodo marinaro) sia il materiale (pezzo di corda dalla matassa al braccio). Prima volta saga in cui un maggiore passa contemporaneamente know-how e materia a un fratello. Il campo materiale_associato dentro seed_nodo_marinaro lo traccia implicitamente; se il pattern si conferma in S8/S11 lo promuoviamo a seed autonomo nella revisione post-S6.",
+    "CANALE_VIBRAZIONE_ESTESO — coerenza con S4: TOK-TOK-TOK e' suono ritmico su legno, viaggia via-aria (secco) E vibra nei tronchi circostanti. Sistema a due canali si conferma. Il vento Intreccio muove chiome sopra il torrente ma non crea onde sull'acqua (aria parallela, non contro). Ambiente fisicamente coerente.",
+    "NODO_PRIMA_APPARIZIONE — modalita' lavoro commissione Coltivatori (scaletta). Registro 'artigiano che non interrompe il giro in corso per rispondere'. S8 sara' modalita' Mantenitore (collettivo emergenza). Due modalita' distinte.",
+    "BRU_BLOOM_AGENCY — da presenza concreta (S4) a compagno attivo con agency narrativa (indica radura, sceglie pertiche, passa per quarto, si siede al centro). Vincoli Bible rispettati. Secondo bloom atteso in S11 (riconosciuto da Elias) sara' seed fratello, da piantare in S10 o S11.",
+    "BRU_OSPITE_SCOPRITORE — Bru passa per quarto sul ponte (cortesia selvatica: onora il lavoro di Elias) ma si siede al centro della radura per primo (riprende proprieta' del momento). Due gesti che sembrano opposti e si completano. Conflitto sottile che apre il micro-sguardo di Elias.",
+    "SEQUENZA_PASSAGGI_PONTE — Elias responsabilita' (chi ha fatto collauda, peso intermedio), Noah sicurezza (piu' leggero, post-collaudo), Gabriel test massimo (peso maggiore, conferma finale), Bru chiusura (ospite). Quattro funzioni distinte che chiudono il ciclo della verifica. Coerenza fisica e narrativa piena.",
+    "PAURA_ELIAS_MODULAZIONE_BLOCCO_B — fare-senza-avere (S5) in evoluzione verso capire-senza-avere (S6). Traiettoria S2_alta -> S4_bassa -> S5_bassa -> S6_variante -> S9_variante -> S11_bloom. Mai in parola, sempre in micro-sguardi.",
+    "ELIAS_COLLAUDA_PER_PRIMO — modo del personaggio istituito: responsabilita' tecnica si chiude nel provare cio' che si e' fatto. Bloom S8 (tiene per primo la corda del ramo che ha legato).",
+    "SEED_MATERIALE_ASSOCIATO — campo dentro seed_nodo_marinaro per tracciare famiglia implicita 'corda di Nodo entra nel fare dei fratelli'. Decisione pragmatica (no proliferazione seeds). Se conferma in S8/S11, promuoviamo.",
+    "NESSUNA_CANTILENA_COLTIVATORI — quota saga preservata. Cantilena piena in S4, TOK-TOK-TOK di Nodo in S5, niente duplicazioni sonore."
+  ],
+  "fear_touched": {
+    "brother": "elias",
+    "fear_id": "non_essere_abbastanza",
+    "status": "maturing",
+    "mode_of_touch": "fare_la_fatica_tecnica_senza_avere_il_centro_del_silenzio_micro_sguardo_storto_quando_bru_si_siede_al_centro_della_radura_per_primo_mai_nominato",
+    "_note": "Seconda variante maturing dopo S4 (sguardo storto all'abbraccio). In S5 la paura assume forma piu' precisa, archiviata dal critico esterno: Elias ha ricevuto la corda di Nodo, ha imparato il marinaro, ha legato tutti i nodi del ponte, ha passato per primo — ha fatto tutta la fatica tecnica. Eppure e' Bru a sedersi al centro della radura per primo. Elias si prende il ponte, Bru si prende il silenzio. Il conflitto sottile e': fare le cose non e' la stessa cosa di averle. Modulazione della paura nel blocco B: fare-senza-avere (S5) -> in S6 evolvera' in capire-senza-avere (Pun riconosce il dente, Elias capisce e si tira indietro). Traiettoria complessiva: S2 alta (quasi in parola) -> S4 bassa (sguardo abbraccio) -> S5 bassa (sguardo radura) -> S6 variante capire-e-tirarsi-indietro -> S9 variante -> S11 bloom accettare."
+  },
+  "visual_anchors": {
+    "scene_hooks": [
+      {
+        "hook_id": "s05_h1",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "foresta_intrecciata",
+          "qualifier": "cammino_interno_verso_torrente",
+          "legacy_string": "foresta_intrecciata_cammino_interno_verso_torrente"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "verdi_tenerissimi_primavera_marroni_tronchi_grigio_marrone_bru_luce_screziata_dall_alto",
+        "notes": null,
+        "focal_action": "I quattro camminano in fila dentro la Foresta seguendo la direzione che Bru ha indicato. Bru davanti, silenzioso, occhi neri attenti. I fratelli dietro. Primavera piena — foglie nuove, luce screziata dalle chiome.",
+        "focal_object": "bru_davanti_che_guida_col_passo_i_fratelli_in_fila",
+        "atmosphere": "cammino_di_scoperta_fiducia_reciproca_silenziosa_primavera_piena",
+        "wind_visible": "intreccio_tra_chiome_velature_azzurre_diffuse",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h2",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "punto_vecchio_tronco_portato_via",
+          "legacy_string": "torrente_punto_del_vecchio_tronco_portato_via"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "marrone_scuro_della_terra_dove_era_il_tronco_verde_acqua_chiara_che_corre_verde_foresta_su_entrambe_le_sponde",
+        "notes": null,
+        "focal_action": "I quattro fermi sulla sponda. Acqua che corre alta tra loro e l'altra sponda. Il vecchio tronco non c'e' — si vede un taglio fresco dove si era adagiato da anni, ora terra e erba schiacciata dove era appoggiato. L'altra sponda a 4-5 metri.",
+        "focal_object": "torrente_in_piena_tra_le_due_sponde_assenza_del_tronco",
+        "atmosphere": "arresto_davanti_al_vuoto_scoperta_del_passaggio_mancante",
+        "wind_visible": "intreccio_sopra_le_chiome_aria_parallela_al_torrente_acqua_liscia_non_increspata",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h3",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "posizione_nodo_50m_a_valle_scaletta",
+          "legacy_string": "posizione_nodo_a_50_metri_al_lavoro_sulla_scaletta"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru",
+          "nodo"
+        ],
+        "elements": [],
+        "palette": "nero_bianco_rosso_di_nodo_con_cresta_accesa_corda_chiara_sul_braccio_marroni_scaletta_verdi_foresta_alle_spalle",
+        "notes": null,
+        "focal_action": "Nodo sulla scaletta a terra rovesciata, gradino rotto in mano, corda arrotolata sul braccio sinistro, cresta rossa visibile tra il verde. TOK-TOK-TOK del becco sul legno. Alza la testa verso i fratelli che sono arrivati, aspetta di finire il giro di nodo corrente, poi: 'Cosa vi serve.'",
+        "focal_object": "nodo_al_lavoro_con_corda_sul_braccio_e_scaletta_sotto",
+        "atmosphere": "incontro_con_maestria_calma_pratica_che_non_si_interrompe",
+        "wind_visible": "intreccio_diffuso",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h4",
+        "moment": "mattino_inoltrato",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "posizione_nodo_corda_tagliata",
+          "legacy_string": "posizione_nodo_momento_della_corda_tagliata"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru",
+          "nodo"
+        ],
+        "elements": [],
+        "palette": "corda_chiara_come_filo_caldo_unico_gesto_tra_le_due_mani_nero_bianco_rosso_di_nodo_marrone_e_verde_di_elias",
+        "notes": null,
+        "focal_action": "Nodo si toglie un pezzo di corda dalla matassa al braccio. Taglia con un colpo secco del becco. La porge a Elias insieme a un gesto-nodo mostrato una volta sola. 'Adesso fai tu.' Elias prende la corda. Gli altri guardano.",
+        "focal_object": "corda_che_passa_dalla_matassa_di_nodo_alla_mano_di_elias",
+        "atmosphere": "trasmissione_silenziosa_eredita_tecnica_e_materiale_in_un_gesto",
+        "wind_visible": "intreccio_diffuso",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h5_signature",
+        "moment": "tarda_mattina_inizio_mezzogiorno",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "durante_costruzione_ponte",
+          "legacy_string": "torrente_durante_costruzione_ponte"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "pertiche_marroni_chiare_di_rami_caduti_corda_chiara_di_nodo_ponte_che_prende_forma_verdi_foresta_luce_che_trafila_dall_alto",
+        "notes": null,
+        "focal_action": "I quattro al lavoro sul ponte. Gabriel tiene ferme le pertiche stese sull'acqua da sponda a sponda. Noah passa la corda a Elias. Elias inginocchiato lega un nodo marinaro sulle giunture. Bru sceglie in silenzio la prossima pertica da quelle raccolte alla rinfusa da Noah. TOK-TOK-TOK di Nodo in lontananza sulla scaletta.",
+        "focal_object": "ponte_in_costruzione_con_quattro_ruoli_simultanei",
+        "atmosphere": "lavoro_coordinato_silenzioso_ognuno_al_proprio_ruolo_intreccio_di_azioni",
+        "wind_visible": "intreccio_chiome_mosse_sopra_acqua_liscia_sotto_sistema_a_due_piani",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h6",
+        "moment": "mezzogiorno",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "ponte_finito_passaggio_elias",
+          "legacy_string": "ponte_finito_momento_passaggio_elias"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "elias_sulle_pertiche_al_centro_della_scena_verdi_foresta_specchiati_nell_acqua_sotto_ponte_chiaro_tra_verdi_scuri",
+        "notes": null,
+        "focal_action": "Elias primo passo sul ponte appena finito. Le braccia un po' aperte per equilibrio. Gli altri lo guardano dalla sponda. Sotto di lui l'acqua corre. Nodo in lontananza a testa bassa sulla scaletta — non sta guardando.",
+        "focal_object": "elias_sul_ponte_primo_passaggio_gabriel_e_noah_che_guardano",
+        "atmosphere": "collaudo_responsabile_tensione_sottile_chi_ha_fatto_prova",
+        "wind_visible": "intreccio_che_fa_oscillare_leggermente_le_chiome_sopra",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h7_radura",
+        "moment": "mezzogiorno",
+        "location": {
+          "id": "radura_dei_pini",
+          "qualifier": "oltre_torrente_100_150_metri",
+          "legacy_string": "radura_coi_pini_oltre_torrente_100_150_metri"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "verde_quasi_giallo_dell_erba_sotto_luce_verticale_tronchi_scuri_di_pino_intorno_bru_grigio_marrone_al_centro_tre_fratelli_piu_chiari_in_cerchio",
+        "notes": null,
+        "focal_action": "La radura: cerchio d'erba, pini intorno, luce verticale dall'alto. Bru seduto al centro per primo. I tre fratelli in cerchio intorno, seduti anche loro. Nessuno parla. Elias con lo sguardo un filo storto che nessuno vede.",
+        "focal_object": "bru_al_centro_del_cerchio_d_erba_i_tre_fratelli_intorno",
+        "atmosphere": "silenzio_verticale_centro_che_si_prende_dopo_che_il_ponte_e_stato_fatto_conflitto_sottile_invisibile",
+        "wind_visible": "intreccio_attutito_nella_radura_luce_piu_che_aria",
+        "onomatopee": []
+      },
+      {
+        "hook_id": "s05_h8",
+        "moment": "primo_pomeriggio",
+        "location": {
+          "id": "torrente_affluente_foresta",
+          "qualifier": "ritorno_ponte_ancora_li",
+          "legacy_string": "torrente_ritorno_ponte_ancora_li"
+        },
+        "quadrant": "terra_ovest",
+        "characters_present": [
+          "gabriel",
+          "elias",
+          "noah",
+          "bru"
+        ],
+        "elements": [],
+        "palette": "ponte_chiaro_tra_verdi_scuri_ancora_li_luce_piu_gialla_pomeridiana",
+        "notes": null,
+        "focal_action": "I quattro tornano dall'altra parte, attraversano il ponte al contrario. Il ponte e' ancora li', tiene. Niente Nodo in lontananza — TOK-TOK-TOK gia' sparito nella Foresta. I quattro non si voltano a controllare di aver fatto bene.",
+        "focal_object": "ponte_al_ritorno_ancora_in_piedi_senza_nodo",
+        "atmosphere": "cose_fatte_che_continuano_a_tenere_anche_quando_nessuno_guarda_quiete",
+        "wind_visible": "intreccio_che_gira_verso_mulinello_pomeridiano_velature_piu_mosse",
+        "onomatopee": []
+      }
+    ]
+  },
+  "entry_point_type": null,
+  "closure_type": null,
+  "register": null,
+  "estimated_length": null,
+  "descriptive_pauses_count": null,
+  "grunto_memory_fragment": false,
+  "paronomastico_used": false,
+  "narrator_address": false,
+  "narrator_meta_voice": false,
+  "onomatopee_firma": [
+    "TOK-TOK-TOK"
+  ],
+  "quartieri_attraversati": [
+    "terra_ovest"
+  ],
+  "oggetti_simbolo_presenti": [
+    "corda_nodo"
+  ],
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "nodo",
+      "vincoli": [
+        "mai_spiega_perche_nodo_funziona",
+        "mai_fa_nodo_al_posto_di_chi_impara",
+        "mai_parla_di_sentimenti",
+        "tok_tok_tok_quota_4_5_storie_saga"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ]
+}

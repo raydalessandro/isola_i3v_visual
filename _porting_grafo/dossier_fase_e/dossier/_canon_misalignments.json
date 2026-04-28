@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s03",
+  "last_updated_story": "s05",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -84,6 +84,22 @@
       "description": "Il grafo s03 lista 'pallone_di_stoffa_cucita' tra recurring_visual_objects. Non e' nel catalogo come famiglia=oggetto (13 oggetti canonici saga). Diverso da mis_003/bastoncino_noah_s1 (oggetto-firma personaggio): il pallone e' oggetto di gruppo bambini, ricorrente trasversalmente s03 -> s11 (debt: s11_pallone_ricomparsa_giochi_cuccioli_tentativo). Potenziale 14° oggetto-simbolo saga oppure oggetto_di_scena_ricorrente (sottotipo distinto). Dropped da oggetti_simbolo_presenti del canonical s03 (REGOLA 0.6).",
       "severity": "bassa",
       "proposed_resolution": "OPZIONE B scelta da Ray (coerente con mis_003): non aggiunto al catalogo per ora. Tracking narrativo del pallone resta in seeds_planted (seed_pallone_stoffa_cucita) + callbacks futuri (s11). Decisione finale post-saga: se promuovere a 14° oggetto-simbolo o registrare come oggetto_di_scena_ricorrente.",
+      "status": "open",
+      "resolved_in_phase": null
+    },
+    {
+      "id": "mis_005",
+      "discovered_in_story": "s05",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P0",
+      "between": "catalog_vs_graph",
+      "type": "name_discrepancy",
+      "catalog_reference": "catalogo_web/data/entities.json#radura_dei_pini (sottotipo: clearing, quartiere: terra)",
+      "graph_reference": "story_graph.json#stories.s05.location_primary.specific_points (radura_coi_pini_oltre_il_torrente_a_100_150_metri) + visual_anchors.scene_hooks[s05_h7_radura].location_precise (radura_coi_pini_*)",
+      "bible_reference": null,
+      "description": "Stessa entita' citata con preposizione diversa: 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo). Mappato a id catalogo in P1 di s05 (s05_h7_radura.location.id=radura_dei_pini, qualifier oltre_torrente_100_150_metri, legacy_string preserva graph string). Da verificare se altre storie successive (es. s12 ha 'radura_coi_pini' come location di passaggio_autunnale) usano 'coi' o 'dei': se conferma 'dei' come canonico, aggiornare grafo.",
+      "severity": "bassa",
+      "proposed_resolution": "Decisione post-saga: confermare 'radura_dei_pini' come nome canonico (allineato al catalogo) e aggiornare il grafo nelle storie successive che lo citano. Alternativa: aggiornare il catalogo a 'radura_coi_pini' se Ray preferisce la preposizione del grafo. P1 ha gia' applicato il mapping, nessuna azione bloccante.",
       "status": "open",
       "resolved_in_phase": null
     }

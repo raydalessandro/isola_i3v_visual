@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_story_processed": "s04",
-  "stories_processed": ["s01", "s02", "s03", "s04"],
+  "last_story_processed": "s05",
+  "stories_processed": ["s01", "s02", "s03", "s04", "s05"],
   "quotas_consumed": {
     "entry_point_type": {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0},
     "closure_type": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0},
@@ -240,6 +240,64 @@
       "debts_closed": [],
       "misalignments_logged": [],
       "notes": "Quarta storia (apertura_blocco_b, primavera piena, ciclo connettere, signature: 'Le Radici che Parlano'). 9 provvisori (2A + 5B + 2C — piu' del solito perche' s04 ha 7 hook vs 5 standard). Highlight: SPECCHIO_VISIVO h3+h4 ad ancora-risposta (firma visiva blocco B), CANALE_VIBRAZIONE istituito come principio fisico del mondo (Foresta come tessuto percettivo non acustico, da-radice-a-radice). Prima apparizione narrativa di Salvia (cornice non risolutrice, vincoli max_1_pianta + mai_spiega + mai_risolve_emotivamente). Vento_intreccio prima manifestazione saga. narrator_address: TRUE (primo della saga, 1 di <=6). 5 callbacks (3 a s01 con seeds bloomed: fermarsi+gabriel+foresta_tempi_modi; 2 a s03 con sviluppo personaggi). 8 debts_opened raw + 3 debts_closed raw tutti seed_refs (REGOLA 0ter). Bloomed_here: 3 seeds, maturing_here: 3 seeds (paura_elias verso il basso, bru/rovo presenza piena). 0 misalignments nuovi. P1 via script: PASS al primo colpo, niente patch retroattive."
+    },
+    {
+      "story_id": "s05",
+      "phase_completed": "P2",
+      "date": "2026-04-28",
+      "provisional_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s05/s05_provisional.json",
+      "canonical_file": "/home/user/isola_i3v_visual/_porting_grafo/output/s05/s05_canonical.json",
+      "quote_consumed": {
+        "by_category": {"A": 4, "B": 5, "C": 1},
+        "totale": 10,
+        "dettaglio": [
+          {"field": "season_passage", "category": "B", "confidence": "medium"},
+          {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s05_h1.notes", "category": "C", "confidence": "low"},
+          {"field": "visual_anchors.scene_hooks.s05_h2.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s05_h3.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s05_h4.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s05_h5_signature.notes", "category": "A", "confidence": "high"},
+          {"field": "visual_anchors.scene_hooks.s05_h6.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s05_h7_radura.notes", "category": "B", "confidence": "medium"},
+          {"field": "visual_anchors.scene_hooks.s05_h8.notes", "category": "A", "confidence": "high"}
+        ]
+      },
+      "no_inference_fields_left_null": {
+        "count": 5,
+        "fields": ["entry_point_type", "closure_type", "register", "estimated_length", "descriptive_pauses_count"],
+        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D. hint_neutro forniti in s05_provisional.json#rejected_no_inference."
+      },
+      "seeds": {
+        "planted": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_radura_coi_pini_luogo_silenzioso",
+          "seed_bru_sa_indicare_luoghi_che_altri_non_vedono",
+          "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto",
+          "seed_pattern_a_rami_caduti_diventano_materia"
+        ],
+        "picked_up": [
+          "seed_foresta_tempi_modi_propri",
+          "seed_bru_presenza_che_custodisce",
+          "seed_paura_elias_piccolo"
+        ],
+        "maturing_here": [
+          "seed_foresta_tempi_modi_propri",
+          "seed_paura_elias_piccolo"
+        ],
+        "bloomed_here": [
+          "seed_bru_presenza_che_custodisce"
+        ]
+      },
+      "callbacks_made": [
+        {"callback_id": "cb_s05_001", "from_story": "s04", "to_story": "s05", "type": "gesto_richiamo"},
+        {"callback_id": "cb_s05_002", "from_story": "s04", "to_story": "s05", "type": "principio_fisico_esteso"},
+        {"callback_id": "cb_s05_003", "from_story": "s04", "to_story": "s05", "type": "personaggio_sviluppo_agency"}
+      ],
+      "debts_opened": [],
+      "debts_closed": [],
+      "misalignments_logged": ["mis_005"],
+      "notes": "Quinta storia (centro_blocco_b, primavera piena, ciclo connettere costruttivo, signature: 'Il Ponte di Rami'). 10 provvisori (4A + 5B + 1C — distribuzione confidence ALTISSIMA: best ratio della saga finora). 8 hook (vs 5 standard) per scena tecnica complessa. Highlight: PATTERN_A_PRIMA_SEMINA_FORMALE in h5 ('le cose cadute diventano materia', mai nominato — Pattern A da qui in poi cammina). EREDITA_TECNICA_E_MATERIALE in h4 (Nodo trasmette a Elias: capacita' nodo marinaro + materiale corda dal braccio). NODO_PRIMA_APPARIZIONE in h3 (modalita' commissione Coltivatori vs S8 modalita' Mantenitore). BRU_BLOOM_AGENCY (presenza concreta s04 -> compagno scoperta s05 con agency: indica radura, sceglie pertiche, si siede al centro). PAURA_ELIAS_MODULAZIONE: fare-senza-avere (S5) verso capire-senza-avere (S6). 3 callbacks tutti da s04 (bru gesto, foresta principio, bru agency). mis_005 logged: name discrepancy 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo), severity bassa, status open."
     }
   ],
   "quotas_remaining_check": {

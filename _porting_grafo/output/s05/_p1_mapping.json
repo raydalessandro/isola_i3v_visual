@@ -1,0 +1,63 @@
+{
+  "_description": "Mapping manuale P0 -> P1 per s05. mis_005: radura_coi_pini (grafo) -> radura_dei_pini (catalogo).",
+  "story_id": "s05",
+  "hooks": {
+    "s05_h1": {
+      "location": {"id": "foresta_intrecciata", "qualifier": "cammino_interno_verso_torrente", "legacy_string": "foresta_intrecciata_cammino_interno_verso_torrente"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h2": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "punto_vecchio_tronco_portato_via", "legacy_string": "torrente_punto_del_vecchio_tronco_portato_via"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h3": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "posizione_nodo_50m_a_valle_scaletta", "legacy_string": "posizione_nodo_a_50_metri_al_lavoro_sulla_scaletta"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h4": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "posizione_nodo_corda_tagliata", "legacy_string": "posizione_nodo_momento_della_corda_tagliata"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h5_signature": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "durante_costruzione_ponte", "legacy_string": "torrente_durante_costruzione_ponte"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h6": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "ponte_finito_passaggio_elias", "legacy_string": "ponte_finito_momento_passaggio_elias"},
+      "quadrant": "terra_ovest"
+    },
+    "s05_h7_radura": {
+      "location": {"id": "radura_dei_pini", "qualifier": "oltre_torrente_100_150_metri", "legacy_string": "radura_coi_pini_oltre_torrente_100_150_metri"},
+      "quadrant": "terra_ovest",
+      "_mis_005_note": "Mappato da legacy 'radura_coi_pini' (grafo) a 'radura_dei_pini' (id catalogo). Vedi mis_005 in _canon_misalignments.json."
+    },
+    "s05_h8": {
+      "location": {"id": "torrente_affluente_foresta", "qualifier": "ritorno_ponte_ancora_li", "legacy_string": "torrente_ritorno_ponte_ancora_li"},
+      "quadrant": "terra_ovest"
+    }
+  },
+  "debts_opened_keep": [],
+  "debts_closed_keep": [],
+  "_debts_note": "8 debts_opened raw + 1 debts_closed raw, tutti seed_refs (archived_seed_refs=8). Canonical: [].",
+  "personaggi_vincoli_attivi": [
+    {
+      "personaggio": "nodo",
+      "vincoli": [
+        "mai_spiega_perche_nodo_funziona",
+        "mai_fa_nodo_al_posto_di_chi_impara",
+        "mai_parla_di_sentimenti",
+        "tok_tok_tok_quota_4_5_storie_saga"
+      ]
+    },
+    {
+      "personaggio": "bru",
+      "vincoli": [
+        "mai_racconta_sua_storia",
+        "mai_centro_attenzione_in_gruppo",
+        "mai_piange_visibile",
+        "mai_eroe"
+      ]
+    }
+  ],
+  "_personaggi_vincoli_note": "Da character_constraints.json: nodo (prima apparizione s05) + bru. gabriel/elias/noah/coltivatori_del_cerchio nessun vincolo specifico."
+}
