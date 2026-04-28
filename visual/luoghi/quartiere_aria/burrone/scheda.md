@@ -24,13 +24,18 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Burrone
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** gola.
+**Quadrante:** aria_nord.
+**Posizione:** tra_montagne_gemelle.
+
 
 ## Aspetto / forma
 

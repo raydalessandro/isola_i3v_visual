@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Zolla
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** stagione_e_parsimonia.
+**Tipo:** abitante_minore_mestiere.
+**Specie:** scoiattolo_grigio_anziano.
+**Ruolo familiare episodico:** nonno_pratico.
+**Dimora:** casa_tana_margini_orti_bosco (quartiere: terra_ovest).
+
+*Funzione narrativa (dal grafo):* raccoglie, conta in stagioni, educa al cibo che cresce
+
 
 ## Aspetto / forma
 

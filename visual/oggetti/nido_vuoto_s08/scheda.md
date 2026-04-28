@@ -12,13 +12,16 @@ relazioni:
   associato_a_luogo: null
 ---
 
+
 # Nido Vuoto S08
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Proprietario:** noah_per_cura_non_possesso.
+
 
 ## Aspetto / forma
 

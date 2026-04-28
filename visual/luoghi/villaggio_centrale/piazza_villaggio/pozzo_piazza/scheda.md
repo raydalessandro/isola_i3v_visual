@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Pozzo della Piazza
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** pozzo.
+**Quadrante:** centro.
+**Posizione:** piazza_villaggio_lato_est.
+**Ruolo saga:** punto_di_quiete_in_crisi_s08_perno_pratico_ricorrente_futuro.
+
 
 ## Aspetto / forma
 

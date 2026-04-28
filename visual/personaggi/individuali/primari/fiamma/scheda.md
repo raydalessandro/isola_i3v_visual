@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Fiamma
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** cammeo_ricorrente_cornice_s1_s12.
+**Tipo:** abitante_maggiore.
+**Specie:** volpe_rossa.
+**Ruolo familiare episodico:** madre_episodica_sopratutto_per_noah.
+**Dimora:** forno (quartiere: fuoco_est).
+
+*Funzione narrativa (dal grafo):* calore del villaggio
+
 
 ## Aspetto / forma
 

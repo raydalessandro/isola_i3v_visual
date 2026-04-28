@@ -24,13 +24,18 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Albero Vecchio
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** landmark.
+**Quadrante:** centro.
+**Ruolo saga:** centro_mandala.
+
 
 ## Aspetto / forma
 

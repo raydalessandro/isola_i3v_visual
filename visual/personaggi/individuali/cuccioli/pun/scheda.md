@@ -18,13 +18,18 @@ relazioni:
     cartografia: null
 ---
 
+
 # Pun
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** memoria_pratica_intuizione_laterale.
+**Tipo:** cucciolo_scuola.
+**Specie:** riccino.
+
 
 ## Aspetto / forma
 

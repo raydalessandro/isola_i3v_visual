@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: [villaggio_centrale]
 ---
 
+
 # Piazza del Villaggio
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** piazza.
+**Quadrante:** centro.
+**Posizione:** cuore_del_villaggio.
+**Ruolo saga:** centro_geografico_e_simbolico_mandala_silenzioso_primo_attivo_s08.
+
 
 ## Aspetto / forma
 

@@ -18,13 +18,19 @@ relazioni:
     cartografia: null
 ---
 
+
 # Pastori
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** sfondo_stagionale_coltivatori_del_vento_nord.
+**Tipo:** gruppo_istituzione.
+**Specie:** animali_misti_pastori_stagionali.
+**Dimora:** pascoli_alti (quartiere: aria_nord).
+
 
 ## Aspetto / forma
 

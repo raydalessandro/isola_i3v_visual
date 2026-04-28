@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Memolo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** cambio_di_registro_colpo_di_coda.
+**Tipo:** abitante_maggiore.
+**Specie:** riccio.
+**Ruolo familiare episodico:** zio_buffo.
+**Dimora:** casetta_tonda_piazza_centrale (quartiere: centro_villaggio).
+
+*Funzione narrativa (dal grafo):* abbassa quando serio, dice intuizione precisa una volta a storia
+
 
 ## Aspetto / forma
 

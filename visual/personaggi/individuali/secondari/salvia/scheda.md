@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Salvia
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** cura_concreta_che_educa.
+**Tipo:** abitante_minore_mestiere.
+**Specie:** lepre.
+**Ruolo familiare episodico:** madre_pratica.
+**Dimora:** casa_tana_inizio_orti (quartiere: terra_ovest).
+
+*Funzione narrativa (dal grafo):* cura con piante, micro-azione replicabile a casa
+
 
 ## Aspetto / forma
 

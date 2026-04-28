@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Bartolo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** dilatazione_del_tempo.
+**Tipo:** abitante_maggiore.
+**Specie:** tartaruga_di_mare_anziana.
+**Ruolo familiare episodico:** nonno.
+**Dimora:** pontile_bocca (quartiere: acqua_sud).
+
+*Funzione narrativa (dal grafo):* abbassa il battito delle storie, traghettatore
+
 
 ## Aspetto / forma
 

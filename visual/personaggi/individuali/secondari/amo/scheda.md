@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Amo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** pazienza_acqua_silenzio_che_insegna.
+**Tipo:** abitante_minore_mestiere.
+**Specie:** cormorano.
+**Ruolo familiare episodico:** zio_silenzioso.
+**Dimora:** casa_scogliera_spiaggia_conchiglie (quartiere: acqua_sud).
+
+*Funzione narrativa (dal grafo):* pesca, insegna col silenzio
+
 
 ## Aspetto / forma
 

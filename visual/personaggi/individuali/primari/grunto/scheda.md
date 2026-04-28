@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Grunto
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** architrave_strato_3.
+**Tipo:** testimone_unico_pre_vento.
+**Specie:** stambecco_verde_vecchio.
+**Ruolo familiare episodico:** ombra_dello_zio_misterioso.
+**Dimora:** grotta_burrone_montagne_gemelle (quartiere: aria_nord).
+
+*Funzione narrativa (dal grafo):* ponte unico tra Epoca Mitica e Presente
+
 
 ## Aspetto / forma
 

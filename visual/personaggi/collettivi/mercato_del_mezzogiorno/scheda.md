@@ -18,13 +18,18 @@ relazioni:
     cartografia: null
 ---
 
+
 # Mercato Del Mezzogiorno
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** luogo_di_scambio_voci_e_cose.
+**Tipo:** gruppo_istituzione.
+**Dimora:** piazza_centrale_villaggio (quartiere: centro_villaggio).
+
 
 ## Aspetto / forma
 

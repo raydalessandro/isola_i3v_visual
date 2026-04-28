@@ -12,13 +12,18 @@ relazioni:
   associato_a_luogo: null
 ---
 
+
 # Pagnotta Forno
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Categoria:** oggetto_ricorrente.
+**Origine:** forno.
+**Ruolo saga:** cornice_s1_s12.
+
 
 ## Aspetto / forma
 

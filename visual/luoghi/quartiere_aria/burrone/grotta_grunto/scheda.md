@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Grotta di Grunto
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** grotta.
+**Quadrante:** aria_nord.
+**Posizione:** cengia_burrone.
+**Abitante:** grunto.
+
 
 ## Aspetto / forma
 

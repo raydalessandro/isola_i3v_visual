@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Rovo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** resistenza_che_protegge.
+**Tipo:** abitante_maggiore.
+**Specie:** tasso.
+**Ruolo familiare episodico:** zio_severo.
+**Dimora:** tana_margini_foresta (quartiere: terra_ovest).
+
+*Funzione narrativa (dal grafo):* guardiano scontroso, fonte informazione data male
+
 
 ## Aspetto / forma
 

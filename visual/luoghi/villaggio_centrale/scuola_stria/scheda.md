@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Scuola di Stria
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** edificio.
+**Quadrante:** centro.
+**Abitante:** stria.
+**Ruolo saga:** cornice_scolastica_prima_apparizione_s06_cornice_mattina_s09_cornice_apertura.
+
 
 ## Aspetto / forma
 

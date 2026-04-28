@@ -18,13 +18,17 @@ relazioni:
     cartografia: null
 ---
 
+
 # Camminanti
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** movimento_tra_quartieri.
+**Tipo:** gruppo_istituzione.
+
 
 ## Aspetto / forma
 

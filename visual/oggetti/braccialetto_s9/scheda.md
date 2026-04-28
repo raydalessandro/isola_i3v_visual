@@ -12,13 +12,17 @@ relazioni:
   associato_a_luogo: null
 ---
 
+
 # Braccialetto S9
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Categoria:** oggetto_significativo_nascosto.
+**Proprietario:** noah_per_gabriel.
+
 
 ## Aspetto / forma
 

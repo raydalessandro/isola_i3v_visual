@@ -18,13 +18,17 @@ relazioni:
     cartografia: null
 ---
 
+
 # Mantenitori
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** cura_delle_cose_del_villaggio.
+**Tipo:** gruppo_istituzione.
+
 
 ## Aspetto / forma
 

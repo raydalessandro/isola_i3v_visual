@@ -9,13 +9,19 @@ fonti: ["pipeline_narrativa/story_graph.json#entities.winds.vento_taglio"]
 appare_in_storie: []
 ---
 
+
 # Vento Taglio
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Effetto:** taglia_la_nebbia_rende_nitido.
+**Spirito di origine:** ariete.
+**Attribute EAR:** delta.
+**Specchio fratello:** gabriel.
+
 
 ## Aspetto / forma
 

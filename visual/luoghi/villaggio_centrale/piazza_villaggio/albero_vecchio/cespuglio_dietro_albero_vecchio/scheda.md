@@ -24,13 +24,18 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Cespuglio dietro l'Albero
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** feature_di_landmark.
+**Quadrante:** centro.
+**Ruolo saga:** nascondiglio_scatoletta_memolo_s06_dente_da_latte_pun_momento_soglia.
+
 
 ## Aspetto / forma
 

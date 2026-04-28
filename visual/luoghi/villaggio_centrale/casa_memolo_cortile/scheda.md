@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Cortile di Mèmolo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** casa_cortile.
+**Quadrante:** centro.
+**Abitante:** memolo.
+**Ruolo saga:** casa_memolo_prima_apparizione_s06_chiusura_pun_restituisce_scatoletta.
+
 
 ## Aspetto / forma
 

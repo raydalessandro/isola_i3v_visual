@@ -18,13 +18,18 @@ relazioni:
     cartografia: null
 ---
 
+
 # Liu
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-26. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** presenza_aerea_discreta.
+**Tipo:** cucciolo_scuola.
+**Specie:** libellulina.
+
 
 ## Aspetto / forma
 

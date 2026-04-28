@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Forno di Fiamma
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** edificio.
+**Quadrante:** fuoco_est.
+**Abitante:** fiamma.
+**Ruolo saga:** cornice_s1_s12.
+
 
 ## Aspetto / forma
 

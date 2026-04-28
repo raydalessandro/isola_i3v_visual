@@ -9,13 +9,19 @@ fonti: ["pipeline_narrativa/story_graph.json#entities.winds.vento_intreccio"]
 appare_in_storie: []
 ---
 
+
 # Vento Intreccio
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Effetto:** caldo_avvolgente_porta_odori_e_notizie.
+**Spirito di origine:** ondina.
+**Attribute EAR:** connettere.
+**Specchio fratello:** elias.
+
 
 ## Aspetto / forma
 

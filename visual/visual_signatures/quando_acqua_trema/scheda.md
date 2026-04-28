@@ -8,13 +8,19 @@ fonti: ["pipeline_narrativa/story_graph.json#entities.visual_signatures.quando_a
 appare_in_storie: []
 ---
 
+
 # Quando Acqua Trema
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Descrizione (grafo):** immagine ricorrente legata al Pattern A.
+**Tipo:** firma_visiva_saga.
+**Vincolo:** `mai_dichiarata_nel_testo`.
+**Pattern A linked:** sì.
+
 
 ## Aspetto / forma
 

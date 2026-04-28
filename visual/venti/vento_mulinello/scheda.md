@@ -9,13 +9,19 @@ fonti: ["pipeline_narrativa/story_graph.json#entities.winds.vento_mulinello"]
 appare_in_storie: []
 ---
 
+
 # Vento Mulinello
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Effetto:** sposta_cose_cambia_direzione.
+**Spirito di origine:** tempesta.
+**Attribute EAR:** cambiare.
+**Specchio fratello:** noah.
+
 
 ## Aspetto / forma
 

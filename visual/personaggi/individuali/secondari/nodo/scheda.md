@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Nodo
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** mano_che_fa.
+**Tipo:** abitante_minore_mestiere.
+**Specie:** picchio.
+**Ruolo familiare episodico:** padre_pratico_zio_pratico.
+**Dimora:** casetta_bottega_villaggio_centrale (quartiere: centro_villaggio).
+
+*Funzione narrativa (dal grafo):* ripara, costruisce, insegna facendo
+
 
 ## Aspetto / forma
 

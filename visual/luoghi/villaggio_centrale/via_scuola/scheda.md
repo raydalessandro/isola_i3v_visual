@@ -24,13 +24,19 @@ cartografia:
   aliases_geo: []
 ---
 
+
 # Via della Scuola
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Tipo:** via.
+**Quadrante:** centro.
+**Posizione:** dalla_piazza_verso_scuola_stria.
+**Ruolo saga:** passaggio_scolastico_quotidiano.
+
 
 ## Aspetto / forma
 

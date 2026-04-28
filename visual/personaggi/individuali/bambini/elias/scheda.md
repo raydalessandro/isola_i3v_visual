@@ -18,13 +18,22 @@ relazioni:
     cartografia: null
 ---
 
+
 # Elias
 
 > **Stato compilazione:** body provvisorio, generato dal travaso meccanico Bible→catalogo il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo.
 
 ## Identità visuale (sintesi)
 
-_da popolare dal grafo_
+
+**Ruolo saga:** protagonista.
+**Tipo:** protagonista.
+**Specie:** umano.
+**Attribute EAR:** connettere.
+**Età:** medio.
+
+*Funzione narrativa (dal grafo):* ponte tra gli altri due, risolve con azioni non parole
+
 
 ## Aspetto / forma
 
