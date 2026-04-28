@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s01",
+  "last_updated_story": "s02",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -37,6 +37,22 @@
       "proposed_resolution": "RISOLTO in cartografia v0.6.1 (commit b5b8473): feature aggiunta come canonica.",
       "status": "resolved",
       "notes_p2b": "Promosso da P0 al rolling file. Nessun altro misalignment rilevato durante la migrazione s01: il nodo non cita Memolo, Liu' ne' acqua_trema, quindi gli accenti e casing potenzialmente problematici non sono attivati da questa storia. AGGIORNAMENTO post-P2b: il sub-agente aveva registrato il misalignment basandosi su s01_catalog_proposals.md (datato), ma sentiero_montagne_gemelle era gia' stato aggiunto al catalogo in v0.6.1 prima di P1. Status corretto a 'resolved'.",
+      "resolved_in_phase": "P0_arricchimento_catalogo"
+    },
+    {
+      "id": "mis_002",
+      "discovered_in_story": "s02",
+      "discovered_in_phase": "P0",
+      "promoted_in_phase": "P0",
+      "between": "catalog_vs_graph",
+      "type": "object_missing_from_catalog",
+      "catalog_reference": "catalogo_web/data/entities.json#pozza_abbeveratoio_pastori (aggiunta in P0 s02, 2026-04-28)",
+      "graph_reference": "story_graph.json#stories.s02.location_primary.specific_points[0] (pozza_abbeveratoio_pastori) e visual_anchors.scene_hooks[s02_h3_signature, s02_h4]",
+      "bible_reference": null,
+      "description": "La pozza_abbeveratoio_pastori e' citata nel grafo s02 come specific_point di location_primary (pascoli_alti) e come location_precise di 2 visual_anchors (signature + 1). E' il focal point della storia (titolo: 'Il Riflesso nella Pozza'). Assente dal catalogo isola_i3v_visual (113 entities pre-s02). Il nodo s02 stesso anticipava l'azione: location_primary._note dichiarava 'Da aggiungere come sub_location di pascoli_alti in ATLANTE quando si raffina (Fase E)'.",
+      "severity": "media",
+      "proposed_resolution": "RISOLTO in P0 s02 (OPZIONE A scelta da Ray): aggiunta scheda visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/scheda.md (sottotipo: water_feature, parent_location: pascoli_alti). Catalogo rigenerato da 113 a 114 entities.",
+      "status": "resolved",
       "resolved_in_phase": "P0_arricchimento_catalogo"
     }
   ]

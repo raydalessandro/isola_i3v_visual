@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-28T10:42:05",
+  "generated_at": "2026-04-28T13:19:28",
   "totals": {
-    "totale": 113,
-    "luogo": 73,
+    "totale": 114,
+    "luogo": 74,
     "oggetto": 13,
     "personaggio": 23,
     "vento": 3,
     "visual_signature": 1
   },
   "by_status": {
-    "provvisorio": 113
+    "provvisorio": 114
   },
   "tree": {
     "luoghi": {
@@ -395,7 +395,20 @@
               }
             },
             "pascoli_alti": {
-              "_children": {},
+              "_children": {
+                "pozza_abbeveratoio_pastori": {
+                  "_children": {},
+                  "_entity_id": "pozza_abbeveratoio_pastori",
+                  "_entity_meta": {
+                    "name": "Pozza dell'Abbeveratoio dei Pastori",
+                    "famiglia": "luogo",
+                    "sottotipo": "water_feature",
+                    "status": "provvisorio",
+                    "n_images": 0,
+                    "folder_path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori"
+                  }
+                }
+              },
               "_entity_id": "pascoli_alti",
               "_entity_meta": {
                 "name": "Pascoli Alti",
@@ -3464,6 +3477,64 @@
         "luoghi",
         "quartiere_aria",
         "montagne_gemelle"
+      ],
+      "images": [],
+      "n_images": 0
+    },
+    {
+      "id": "pozza_abbeveratoio_pastori",
+      "name": "Pozza dell'Abbeveratoio dei Pastori",
+      "famiglia": "luogo",
+      "sottotipo": "water_feature",
+      "status": "provvisorio",
+      "quartiere": "aria",
+      "categoria_strada": null,
+      "frontmatter": {
+        "id": "pozza_abbeveratoio_pastori",
+        "name": "Pozza dell'Abbeveratoio dei Pastori",
+        "famiglia": "luogo",
+        "sottotipo": "water_feature",
+        "quartiere": "aria",
+        "status": "provvisorio",
+        "ultima_modifica": "2026-04-28",
+        "fonti": [
+          "pipeline_narrativa/story_graph.json#stories.s02.location_primary.specific_points",
+          "pipeline_narrativa/story_graph.json#stories.s02.visual_anchors.scene_hooks"
+        ],
+        "appare_in_storie": [
+          "s02"
+        ],
+        "cartografia": {
+          "feature_id": null,
+          "type_geo": "point",
+          "status_geo": "provvisorio",
+          "quarter": "aria",
+          "category": "water_feature",
+          "centroid_m_local": null,
+          "bbox_m_local": null,
+          "size_m_local": null,
+          "altitudine_m": null,
+          "geometry_type": "Point",
+          "parent_geo": "pascoli_alti",
+          "children_geo": [],
+          "aliases_geo": []
+        },
+        "relazioni": {
+          "parent_location": "pascoli_alti",
+          "related_to": [
+            "pastori"
+          ]
+        }
+      },
+      "body_md": "# Pozza dell'Abbeveratoio dei Pastori\n\n> **Stato compilazione:** body provvisorio, generato dal porting fase E (P0 di s02) il 2026-04-28. Le sezioni con `_da popolare dal grafo_` saranno completate da Ray quando ragionerà sul grafo (fase F catalogo).\n\n## Identità visuale (sintesi)\n\n_da popolare dal grafo_\n\n## Aspetto / forma\n\nPozza piccola sui Pascoli Alti, sub-location dei Pascoli (quartiere aria). D'estate funge da abbeveratoio per le greggi dei Pastori. D'inverno gela; nelle giornate di sole il velo di superficie può sgelarsi parzialmente, mostrando l'acqua sotto.\n\n## Espressione / comportamento\n\n_da popolare dal grafo_\n\n## Palette e atmosfera\n\nQuartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco. La pozza in inverno: ghiaccio chiaro con velo d'acqua sgelata in superficie quando c'è sole; riflessi mobili.\n\n## Contesto e ambientazioni ricorrenti\n\nSub-location dei Pascoli Alti, quartiere aria. Vicino alle greggi dei Pastori (off-screen in s02). Cammino di accesso: sentiero in salita dalla Scuola di Stria / dal Villaggio.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\nÈ una pozza piccola, non un lago né una fonte. Funzione: abbeveratoio (estate). Stagionalmente cambia stato: acqua liquida d'estate, ghiaccio d'inverno con velo sgelabile nelle giornate di sole. Posizione fissa sui Pascoli Alti, quartiere aria.\n\n## Variabilità ammessa\n\nStato dell'acqua secondo stagione e meteo: liquida (estate) → ghiaccio totale (inverno freddo) → ghiaccio con velo sgelato in superficie (inverno con sole). Riflessi della superficie variano con luce e vento.\n\n## Cliché da evitare\n\nRiferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`. Lista specifica `_da popolare dal grafo_`.\n\n## Per stampa 3D\n\n_da popolare dal grafo_\n\n## Per narrativa e social\n\n_da popolare dal grafo_\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: **prima apparizione (focal point)**. Citata in `location_primary.specific_points` come unica sub-location di pascoli_alti. Visual_anchor signature hook s02_h3 (`pozza_ghiacciata_con_velo_d_acqua_sgelato_in_superficie`) e visual_anchor s02_h4 (`pozza_dopo_il_gesto_di_noah`). La storia si chiama \"Il Riflesso nella Pozza\".\n- s03-s12: `_da popolare dal grafo_` (verifica eventuali altre apparizioni nelle migrazioni successive).\n\n## Disallineamenti / domande aperte\n\n- Il `_note` di `location_primary` in s02 dichiarava: \"Da aggiungere come sub_location di pascoli_alti in ATLANTE quando si raffina (Fase E).\" Aggiunta eseguita in fase E, P0 di s02 (2026-04-28). Misalignment `mis_002` di `_canon_misalignments.json` → resolved.\n- Cartografia: feature_id ancora `null`. Da assegnare se serve geometria esplicita (probabilmente Point sui Pascoli Alti). Decisione cartografica successiva, non blocca il porting fase E.\n\n## Riferimenti puntuali (citazioni dirette dalle fonti)\n\n- `pipeline_narrativa/story_graph.json#stories.s02.location_primary._note`: \"La pozza è piccola, d'estate abbeveratoio delle capre dei Pastori, ora ghiacciata con il velo di superficie appena sgelato da una giornata di sole. Da aggiungere come sub_location di pascoli_alti in ATLANTE quando si raffina (Fase E).\"\n- `pipeline_narrativa/story_graph.json#stories.s02.location_primary.specific_points[0]`: `pozza_abbeveratoio_pastori`.\n- `pipeline_narrativa/story_graph.json#stories.s02.visual_anchors.scene_hooks[s02_h3_signature].location_precise`: `pozza_ghiacciata_con_velo_d_acqua_sgelato_in_superficie`.\n- `pipeline_narrativa/story_graph.json#stories.s02.visual_anchors.scene_hooks[s02_h4].location_precise`: `pozza_dopo_il_gesto_di_noah`.\n- `_porting_grafo/output/s02/s02_catalog_proposals.md` §C (P0 fase E, 2026-04-28).",
+      "body_size_chars": 3686,
+      "folder_path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori",
+      "scheda_path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/scheda.md",
+      "breadcrumb": [
+        "luoghi",
+        "quartiere_aria",
+        "pascoli_alti",
+        "pozza_abbeveratoio_pastori"
       ],
       "images": [],
       "n_images": 0
