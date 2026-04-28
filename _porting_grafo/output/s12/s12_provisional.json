@@ -135,57 +135,7 @@
   },
   "notes_globali": "CHIUSURA SAGA. Storia \"Quando i Tre Venti Suonano Insieme\" — concerto tre venti, frammento Grunto unicum, sigillo narratore. 9 chars in scene + 6 offscreen, 8 hooks, 16 debts_closed (0 opened, niente lasciato in sospeso). Cornice forno apertura/chiusura simmetrica con s1. Bloom architrave terna strato 3 Gabriel TIENE (gesto palmo terra, 0 parole, mano Noah su Gabriel + gomito Elias). Pattern A bloomed trasversale chiuso. when_water_trembles=True (2/2 saga quota chiusa al guado). 6 quartieri attraversati (saga tutti i quadrant tranne centro_albero_vecchio standalone, collassato in qualifier hook_07). Decisioni applicate: 9 debt_id legacy → pattern canonico (3 multi-target con flag in note); 3 hook con location stringa composita risolti a id+qualifier (pontile→risalita_fiume, foresta+radura→radura_dei_pini+attraversamento, piazza_albero→piazza+sotto_albero). key_phrase_attributed_to omesso (era null nel grafo, schema lo permette opzionale). Quote saga finali (verificate): narrator_address 4/6, narrator_meta_voice 1/2, grunto_memory_fragment 1/1, when_water_trembles 2/2, paronomastico_used False.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2 in canonical (NULL). hint_neutro originale dall'agente alt preservati come riferimento per fase C/D.",
-    "entry_point_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "cornice_forno_apertura_simmetrica_s1",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Hook 1: alba al Forno, partenza cornice apertura. Simmetria s1↔s12 esplicita in callback_summary e in cb_s12_001 (pagnotta_grunto_cornice_chiusura). Entry point cornice madre-calore Fiamma + dolce gesto pagnotta come s1."
-      }
-    },
-    "closure_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "sigillo_narratore_meta_voce_chiusura_saga",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Hook 8: forno sera cornice chiusura sigillo narratore architrave. Closure è sigillo del narratore (frase-firma narratore 1 di max 2 saga, l'altra in s1) + meta-voce + address al lettore (4 di max 6 saga). Eccezione sostanziale chiusura saga (ARCHI 3.S12)."
-      }
-    },
-    "register": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "denso_alto_meta_sigillo_finale_silenzioso",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Storia di chiusura, concerto tre venti, frammento Grunto unico saga, momento soglia Gabriel sulla Roccia Alta (gesto palmo terra), quattro modi di chiudere intessuti. Register denso ma silenzioso (drammaturgia silenziosa preservata). Voice_notes esplicita \"narratore meta-voce in chiusura, sigillo non spiega\"."
-      }
-    },
-    "estimated_length": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "3000-3800_parole",
-        "category": "A",
-        "confidence": "low",
-        "rationale": "Chiusura saga, 8 hooks (uguale a s11), 9 chars in scene + 6 offscreen, 16 debts_closed (chiusure architettoniche di tutto il blocco D + cornice s1↔s12), pattern A bloomed trasversale. Stima sulla base della ricchezza strutturale e necessità sigillo + concerto + frammento. Da confermare in C/D."
-      }
-    },
-    "descriptive_pauses_count": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": 4,
-        "category": "A",
-        "confidence": "medium",
-        "rationale": "Storia di attraversamento isola completa (6 quartieri) con 4 momenti rituali principali: alba forno apertura, guado pietre piatte (when_water_trembles), roccia alta concerto soglia, forno sera sigillo. Plausibile 4 pause descrittive (una per momento architrave). Storia chiusura tipicamente più pause delle aperture/centri. Da confermare."
-      }
-    }
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
   },
   "narrative_ideas": [
     "Tutti gli archi narrativi chiusi qui. Bloom architrave terna strato 3: Noah ha detto in s10, Elias accetta in s11, Gabriel TIENE in s12. Saga compiuta.",
@@ -193,5 +143,88 @@
     "2 debt_opened in s12 = 0 → niente lasciato in sospeso. Solo s11→s12 (frutti_da_fuori, coni_stria_gesto_annuale) chiudono qui apertura strato 3 oltre il mare per fase F.",
     "oggetti_simbolo_presenti=[] da popolare in sweep post-S12. In scena potenzialmente: pagnotta_forno, grembiule_fiamma, cicatrice_grunto (s1 cornice + grunto frammento), cesto_salvia/conchiglia_amo cammei."
   ],
-  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2)."
+  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2).",
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
+    "entry_point_type": {
+      "value": "B",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "cornice_forno_apertura_simmetrica_s1",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Hook 1: alba al Forno, partenza cornice apertura. Simmetria s1↔s12 esplicita in callback_summary e in cb_s12_001 (pagnotta_grunto_cornice_chiusura). Entry point cornice madre-calore Fiamma + dolce gesto pagnotta come s1."
+        }
+      }
+    },
+    "closure_type": {
+      "value": 7,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "sigillo_narratore_meta_voce_chiusura_saga",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Hook 8: forno sera cornice chiusura sigillo narratore architrave. Closure è sigillo del narratore (frase-firma narratore 1 di max 2 saga, l'altra in s1) + meta-voce + address al lettore (4 di max 6 saga). Eccezione sostanziale chiusura saga (ARCHI 3.S12)."
+        }
+      }
+    },
+    "register": {
+      "value": "alto",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "denso_alto_meta_sigillo_finale_silenzioso",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Storia di chiusura, concerto tre venti, frammento Grunto unico saga, momento soglia Gabriel sulla Roccia Alta (gesto palmo terra), quattro modi di chiudere intessuti. Register denso ma silenzioso (drammaturgia silenziosa preservata). Voice_notes esplicita \"narratore meta-voce in chiusura, sigillo non spiega\"."
+        }
+      }
+    },
+    "estimated_length": {
+      "value": 1175,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "3000-3800_parole",
+          "category": "A",
+          "confidence": "low",
+          "rationale": "Chiusura saga, 8 hooks (uguale a s11), 9 chars in scene + 6 offscreen, 16 debts_closed (chiusure architettoniche di tutto il blocco D + cornice s1↔s12), pattern A bloomed trasversale. Stima sulla base della ricchezza strutturale e necessità sigillo + concerto + frammento. Da confermare in C/D."
+        }
+      }
+    },
+    "descriptive_pauses_count": {
+      "value": 0,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": 4,
+          "category": "A",
+          "confidence": "medium",
+          "rationale": "Storia di attraversamento isola completa (6 quartieri) con 4 momenti rituali principali: alba forno apertura, guado pietre piatte (when_water_trembles), roccia alta concerto soglia, forno sera sigillo. Plausibile 4 pause descrittive (una per momento architrave). Storia chiusura tipicamente più pause delle aperture/centri. Da confermare."
+        }
+      }
+    }
+  }
 }

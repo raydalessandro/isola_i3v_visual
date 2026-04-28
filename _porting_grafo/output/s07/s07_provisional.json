@@ -67,46 +67,111 @@
     }
   },
   "quote_consumed": {
-    "by_category": {"A": 2, "B": 2, "C": 3},
+    "by_category": {
+      "A": 2,
+      "B": 2,
+      "C": 3
+    },
     "totale": 7,
     "_note": "season_passage non popolato (old_node era null e la storia non ha passaggio stagionale narrato — fine estate piena, non passaggio). Lasciato null per filosofia stretta del null.",
     "dettaglio": [
-      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s07_h1.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s07_h2.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s07_h3.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s07_h4.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s07_h5.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s07_h6.notes", "category": "A", "confidence": "high"}
+      {
+        "field": "key_phrase_indicative",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h1.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h2.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h3.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h4.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h5.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s07_h6.notes",
+        "category": "A",
+        "confidence": "high"
+      }
     ]
   },
   "notes_globali": "Settima storia (apertura_blocco_c, ciclo cambiare, signature implicita: 'La Zattera dei Tre Rametti'). PATTERN A ATTIVO per la prima volta in saga (h4 STRAPP: cosa rotta che arriva lo stesso). 7 provvisori (2A + 2B + 3C). Highlights: PRIMA_SCENA_ATTIVA_PATTERN_A in h4. INVERSIONE_PATTERN_FERMARSI (s1 fermarsi -> s7 continuare). PRIMO_BLOOM_FUNZIONALE_NODO_MARINARO (seed s05 in scenario reale). PRIMA_APPARIZIONE_BARTOLO_TOBA_AMO (3 archetipi blocco D installati). TAGLIO_ASSENTE_PRIMA_VOLTA_SAGA. ADDRESS_AL_LETTORE 2/6 saga, primo blocco C, primo post-s4. season=estate (rimappato da estate_piena via REGOLA 0.10). 5 callbacks (2 a s05, 2 a s06, 1 a s04). 14/14 entita' nel catalogo, 0 misalignments.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "schema_constraint": "enum ['A','B','C','D','E','F',null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Apertura preparata: fratelli concentrati sul guado, idea di Noah la sera prima. Possibili candidati: D (azione che inizia) o B (immagine ferma)."
+      "value": "F",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['A','B','C','D','E','F',null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Apertura preparata: fratelli concentrati sul guado, idea di Noah la sera prima. Possibili candidati: D (azione che inizia) o B (immagine ferma)."
+      }
     },
     "closure_type": {
-      "schema_constraint": "enum integer [1-7,null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Chiusura con ADDRESS AL LETTORE + immagine zattera che si allontana nel mare. Codice 1-7 da decidere."
+      "value": 4,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum integer [1-7,null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Chiusura con ADDRESS AL LETTORE + immagine zattera che si allontana nel mare. Codice 1-7 da decidere."
+      }
     },
     "register": {
-      "schema_constraint": "enum ['basso','medio','alto',null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Atmosfera epica del cammino lungo + Pattern A attivo + ADDRESS al lettore. Plausibile alto. Scelta autoriale."
+      "value": "medio",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['basso','medio','alto',null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Atmosfera epica del cammino lungo + Pattern A attivo + ADDRESS al lettore. Plausibile alto. Scelta autoriale."
+      }
     },
     "estimated_length": {
-      "schema_constraint": "integer (800-1200)",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "6 hook lungo l'anello fluviale (giornata intera). Probabilmente fascia lunga 1100-1200."
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (800-1200)",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "6 hook lungo l'anello fluviale (giornata intera). Probabilmente fascia lunga 1100-1200."
+      }
     },
     "descriptive_pauses_count": {
-      "schema_constraint": "integer (0-2)",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Cammino lungo + transizione palette (verde -> blu) + Pattern A attivo. Probabile 1-2 pause descrittive."
+      "value": 1,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (0-2)",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Cammino lungo + transizione palette (verde -> blu) + Pattern A attivo. Probabile 1-2 pause descrittive."
+      }
     }
   }
 }

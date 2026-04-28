@@ -68,41 +68,98 @@
     "totale": 6,
     "_note": "key_phrase_indicative + key_phrase_attributed_to NON conteggiati: il primo era gia' popolato nell'old_node (P1 ha copiato), il secondo e' stato promosso al canonical via _p1_mapping.json. Entrambi sono nel canonical, non sono provvisori P2.",
     "dettaglio": [
-      {"field": "season_passage", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s03_h1.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s03_h2_signature.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s03_h3.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s03_h4.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s03_h5.notes", "category": "A", "confidence": "high"}
+      {
+        "field": "season_passage",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s03_h1.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s03_h2_signature.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s03_h3.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s03_h4.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s03_h5.notes",
+        "category": "A",
+        "confidence": "high"
+      }
     ]
   },
   "notes_globali": "Terza storia migrata (chiusura blocco A, passaggio stagionale inverno→primavera, ciclo A si chiude per accumulo silenzioso). 7 provvisori validi: 3A + 3B + 1C — distribuzione piu' alta in confidence rispetto a s01/s02 grazie alla key_phrase esplicita di Rovo + sigillo signature h5. CASO SPECIALE: s03 e' l'unica storia con key_phrase_indicative attribuita a personaggio (eccezione giustificata in key_phrase_notes + structural_notes). Provvisorio extra propone `key_phrase_attributed_to: rovo` per il campo opzionale schema v1.2 — Ray decide se promuovere al canonical. mis_004 (pallone_di_stoffa_cucita) status open, OPZIONE B coerente con mis_003.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2 MIGRATION_PROMPT): nessuna proposta P2 perche' richiedono decisione autoriale Ray in fase C/D.",
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Apertura con i tre fratelli che giocano (no cammeo introduttivo come s02). Cantilena coltivatori sommessa in lontananza. Possibili candidati: B (immagine ferma) o D. Scelta autoriale."
+      "value": "F",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Apertura con i tre fratelli che giocano (no cammeo introduttivo come s02). Cantilena coltivatori sommessa in lontananza. Possibili candidati: B (immagine ferma) o D. Scelta autoriale."
+      }
     },
     "closure_type": {
-      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Chiusura con sigillo laconico di Rovo + accumulo silenzioso ciclo distinguere + eco strutturale a s01. Codice 1-7 da decidere autoriale."
+      "value": 7,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Chiusura con sigillo laconico di Rovo + accumulo silenzioso ciclo distinguere + eco strutturale a s01. Codice 1-7 da decidere autoriale."
+      }
     },
     "register": {
-      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Atmosfera di soglia + tensione del margine + sigillo asciutto. Plausibile medio, possibile basso (Rovo registro pratico). Scelta autoriale."
+      "value": "medio",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Atmosfera di soglia + tensione del margine + sigillo asciutto. Plausibile medio, possibile basso (Rovo registro pratico). Scelta autoriale."
+      }
     },
     "estimated_length": {
-      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "5 hook compatti su unica location (margine foresta), tre archi: gioco/calcio/threshold, incontro Rovo+Bru, sigillo. Probabile fascia media. Scelta autoriale."
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "5 hook compatti su unica location (margine foresta), tre archi: gioco/calcio/threshold, incontro Rovo+Bru, sigillo. Probabile fascia media. Scelta autoriale."
+      }
     },
     "descriptive_pauses_count": {
-      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sul_margine_foresta_come_luogo_di_soglia': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+      "value": 1,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sul_margine_foresta_come_luogo_di_soglia': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+      }
     }
   }
 }

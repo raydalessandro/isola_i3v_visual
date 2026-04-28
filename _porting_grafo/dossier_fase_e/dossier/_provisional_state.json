@@ -106,15 +106,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. Le proposte P2a sono tracciate in s01_provisional.json#rejected_no_inference per memoria."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "B",
+          "closure_type": 7,
+          "register": "medio",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 2
+        }
       },
       "seeds": {
         "planted": [
@@ -191,15 +192,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md REGOLA 0.2: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. P2 ha aggiunto un hint_neutro per ciascuno in s02_provisional.json#rejected_no_inference (non e' una proposta, e' un punto di partenza per Ray)."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "C",
+          "closure_type": 2,
+          "register": "basso",
+          "estimated_length": 850,
+          "descriptive_pauses_count": 1
+        }
       },
       "seeds": {
         "planted": [
@@ -284,15 +286,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "Cinque campi top-level identificati come no_inference_fields dal MIGRATION_PROMPT_FASE_E.md REGOLA 0.2: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. P2 ha aggiunto un hint_neutro per ciascuno in s03_provisional.json#rejected_no_inference."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "F",
+          "closure_type": 7,
+          "register": "medio",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 1
+        }
       },
       "seeds": {
         "planted": [
@@ -386,15 +389,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D. hint_neutro forniti in s04_provisional.json#rejected_no_inference."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "E",
+          "closure_type": 5,
+          "register": "alto",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 0
+        }
       },
       "seeds": {
         "planted": [
@@ -527,15 +531,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D. hint_neutro forniti in s05_provisional.json#rejected_no_inference."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "A",
+          "closure_type": 3,
+          "register": "medio",
+          "estimated_length": 1100,
+          "descriptive_pauses_count": 2
+        }
       },
       "seeds": {
         "planted": [
@@ -647,15 +652,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "D",
+          "closure_type": 7,
+          "register": "basso",
+          "estimated_length": 850,
+          "descriptive_pauses_count": 1
+        }
       },
       "seeds": {
         "planted": [
@@ -762,15 +768,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "F",
+          "closure_type": 4,
+          "register": "medio",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 1
+        }
       },
       "seeds": {
         "planted": [
@@ -855,15 +862,16 @@
         ]
       },
       "no_inference_fields_left_null": {
-        "count": 5,
-        "fields": [
-          "entry_point_type",
-          "closure_type",
-          "register",
-          "estimated_length",
-          "descriptive_pauses_count"
-        ],
-        "rationale": "REGOLA 0.2: decisione autoriale Ray fase C/D."
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "C",
+          "closure_type": 2,
+          "register": "alto",
+          "estimated_length": 1125,
+          "descriptive_pauses_count": 2
+        }
       },
       "seeds": {
         "planted": [
@@ -988,13 +996,18 @@
           }
         ]
       },
-      "no_inference_fields_left_null": [
-        "entry_point_type",
-        "closure_type",
-        "register",
-        "estimated_length",
-        "descriptive_pauses_count"
-      ],
+      "no_inference_fields_left_null": {
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "E",
+          "closure_type": 4,
+          "register": "basso",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 1
+        }
+      },
       "seeds": {
         "planted": 6,
         "picked_up": 1,
@@ -1056,13 +1069,18 @@
           }
         ]
       },
-      "no_inference_fields_left_null": [
-        "entry_point_type",
-        "closure_type",
-        "register",
-        "estimated_length",
-        "descriptive_pauses_count"
-      ],
+      "no_inference_fields_left_null": {
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "D",
+          "closure_type": 5,
+          "register": "alto",
+          "estimated_length": 975,
+          "descriptive_pauses_count": 0
+        }
+      },
       "seeds": {
         "planted": 0,
         "picked_up": 3,
@@ -1132,13 +1150,18 @@
           }
         ]
       },
-      "no_inference_fields_left_null": [
-        "entry_point_type",
-        "closure_type",
-        "register",
-        "estimated_length",
-        "descriptive_pauses_count"
-      ],
+      "no_inference_fields_left_null": {
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "A",
+          "closure_type": 3,
+          "register": "medio",
+          "estimated_length": 1175,
+          "descriptive_pauses_count": 2
+        }
+      },
       "seeds": {
         "planted": 1,
         "picked_up": 8,
@@ -1213,13 +1236,18 @@
           }
         ]
       },
-      "no_inference_fields_left_null": [
-        "entry_point_type",
-        "closure_type",
-        "register",
-        "estimated_length",
-        "descriptive_pauses_count"
-      ],
+      "no_inference_fields_left_null": {
+        "count": 0,
+        "fields": [],
+        "rationale": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (Q1-Q6 Ray): valori promossi al canonical.",
+        "decisioni_autoriali": {
+          "entry_point_type": "B",
+          "closure_type": 7,
+          "register": "alto",
+          "estimated_length": 1175,
+          "descriptive_pauses_count": 0
+        }
+      },
       "seeds": {
         "planted": 3,
         "picked_up": 13,
@@ -1273,5 +1301,6 @@
       ]
     },
     "narrator_address_remaining": "4/6 (s01-s08: 2 consumati [s04,s07], s09: 0)"
-  }
+  },
+  "fase_cd_autoriale_completata": "2026-04-28: 60 no_inference_fields decisi via 5-6 domande pattern. Tutti promossi al canonical."
 }

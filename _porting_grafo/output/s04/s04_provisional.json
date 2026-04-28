@@ -88,44 +88,113 @@
     },
     "totale": 9,
     "dettaglio": [
-      {"field": "season_passage", "category": "B", "confidence": "medium"},
-      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s04_h1.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s04_h2.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s04_h3_signature.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s04_h4.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s04_h5.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s04_h6.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s04_h7.notes", "category": "C", "confidence": "low"}
+      {
+        "field": "season_passage",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "key_phrase_indicative",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h1.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h2.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h3_signature.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h4.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h5.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h6.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s04_h7.notes",
+        "category": "C",
+        "confidence": "low"
+      }
     ]
   },
   "notes_globali": "Quarta storia (apertura blocco B, primavera piena, ciclo connettere). 9 provvisori (2A + 5B + 2C) — piu' provvisori del solito perche' s04 ha 7 hook (vs 5 standard). Highlight: 2A signature + specchio visivo (h3+h4 ad ancora-risposta, firma visiva blocco B). CANALE_VIBRAZIONE istituito come principio fisico del mondo. Prima apparizione narrativa di Salvia (cornice non risolutrice). Vento_intreccio prima manifestazione. narrator_address: true (primo della saga). 5 callbacks (3 a s01, 2 a s03), tutti con to_story=s04 derivato dallo script. 8 debts_opened raw + 3 closed: tutti seed_refs archiviati (REGOLA 0ter). Bloomed_here: 3 seeds (fermarsi_come_gesto_attivo trasferito a Noah, gabriel_sa_la_strada_senza_vedere bloomed in 'cammina seguendo il battito da sotto', foresta_tempi_modi_propri bloomed come canale vibrazione). key_phrase_attributed_to lasciato assente nel canonical (REGOLA 0.8): sara' 'narratore' in fase D quando Ray decide la frase precisa.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Apertura con cammeo Salvia che chiede aiuto + cornice serena (cantilena coltivatori). Possibili candidati: C (voce esterna che irrompe) o D. Scelta autoriale."
+      "value": "E",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Apertura con cammeo Salvia che chiede aiuto + cornice serena (cantilena coltivatori). Possibili candidati: C (voce esterna che irrompe) o D. Scelta autoriale."
+      }
     },
     "closure_type": {
-      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Chiusura con narratore che parla al lettore (ADDRESS, primo della saga). Codice 1-7 da decidere autoriale, plausibile codice associato a sigillo del narratore."
+      "value": 5,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Chiusura con narratore che parla al lettore (ADDRESS, primo della saga). Codice 1-7 da decidere autoriale, plausibile codice associato a sigillo del narratore."
+      }
     },
     "register": {
-      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Atmosfera con tenuta fisica silenziosa + canale vibrazione + abbraccio. Plausibile medio o alto. Scelta autoriale."
+      "value": "alto",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Atmosfera con tenuta fisica silenziosa + canale vibrazione + abbraccio. Plausibile medio o alto. Scelta autoriale."
+      }
     },
     "estimated_length": {
-      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "7 hook (vs 5 standard), tre archi: cornice apertura, problem+threshold (canale vibrazione), risoluzione+ritorno. Probabilmente fascia lunga 1050-1200. Scelta autoriale."
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "7 hook (vs 5 standard), tre archi: cornice apertura, problem+threshold (canale vibrazione), risoluzione+ritorno. Probabilmente fascia lunga 1050-1200. Scelta autoriale."
+      }
     },
     "descriptive_pauses_count": {
-      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sulla_foresta_come_tessuto_vivo': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+      "value": 0,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_o_2_incisi_sulla_foresta_come_tessuto_vivo': suggerisce 1-2 pause descrittive. Scelta finale autoriale."
+      }
     }
   }
 }

@@ -94,62 +94,95 @@
   },
   "notes_globali": "Storia chiave del blocco D — bloom paura Noah architrave terna strato 3 (dire-accettare-tenere, Noah dice). Grafo originale denso, palette per hook tutte presenti. Decisioni applicate: season \"autunno\"+passage=\"autunno_pieno\", interno_casa_fratelli→piazza_villaggio (mis_008 ricorrenza, 2 hooks), villaggio_centrale→piazza_villaggio (mapping deciso brief). narrator_address=True consuma 1/6 saga (cumulativo dopo s10: 3/6). Pattern A \"attivo\" continua da s07/s08. Onomatopee s10 wrap meccanico in array (2 hooks erano stringhe nel grafo).",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2 in canonical (NULL). hint_neutro originale dall'agente alt preservati come riferimento per fase C/D.",
-    "entry_point_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "cornice_sera_quotidiano_che_si_rovescia",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Hook 0: cantilena ultima, Noah si addormenta — apertura quotidiana che poi si rovescia in notte di paura. Voice_notes esplicita \"iniziare basso, sera normale, poi notte si apre come buco\". Entry point è \"cornice serale stanza fratelli\" + svolta interna."
-      }
-    },
-    "closure_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "sigillo_silenzioso_cammeo_diurno",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Hook finale: alba sul Pontile, Bartolo vede Amo tuffarsi, Fiamma cammeo. Nessun verbo di stato sulla paura risolta. Voice_notes: \"narratore non commenta che noah non ha più paura, scena sigilla senza verbo di stato\". Sigillo silenzioso confermato."
-      }
-    },
-    "register": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "denso_basso_attraversamento_paura",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Notte fonda, \"Ho paura. Qui è buio.\" (5 parole 2 frasi), cammino sotto lanterna velata, alba sul Pontile. Register denso ma basso: narratore non amplifica, lascia camminare. Active_constraints: \"drammaturgia_silenziosa\" + \"silenzio_attivo_obbligatorio_dopo_frase_noah\"."
-      }
-    },
-    "estimated_length": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "2200-2800_parole",
-        "category": "A",
-        "confidence": "low",
-        "rationale": "Apertura blocco D, attraversamento paura completo (notte→cammino→alba), 7 chars in scena con cammeo Grunto onomatopea distante. Stima sulla base di densità (4 hooks pieni, 7 debts totali, fear_touched bloomed). Da confermare in C/D."
-      }
-    },
-    "descriptive_pauses_count": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": 2,
-        "category": "A",
-        "confidence": "medium",
-        "rationale": "Plausibili 2 pause descrittive: una al cammino lanterna velata (cerchio luce sui piedi, foglie secche, paesaggio non descritto coerente con narratore), una all'alba sul Pontile (Amo tuffo, Bartolo silenzioso). Storia di blocco apertura tipicamente 1-2 pause. Da confermare."
-      }
-    }
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
   },
   "narrative_ideas": [
     "lanterna_velata_s10 e nido_vuoto_s08 sono in scena (description_visual + active_constraints), ma il grafo non li dichiara in recurring_visual_objects → oggetti_simbolo_presenti=[] per coerenza pattern P1. Decisione finale (popolare o lasciare []) in C/D o sweep post-S12.",
     "Architrave terna strato 3 chiusa qui (Noah DICE) — debt_s09_to_s12_paura_gabriel_accolta_non_risolta resta aperto (Gabriel ACCETTA in s12).",
     "Cammeo terna blocco D iniziata: Bartolo s10 → Amo s11 → Grunto s12 frammento (debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d esplicita la struttura)."
   ],
-  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2)."
+  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2).",
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
+    "entry_point_type": {
+      "value": "D",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "cornice_sera_quotidiano_che_si_rovescia",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Hook 0: cantilena ultima, Noah si addormenta — apertura quotidiana che poi si rovescia in notte di paura. Voice_notes esplicita \"iniziare basso, sera normale, poi notte si apre come buco\". Entry point è \"cornice serale stanza fratelli\" + svolta interna."
+        }
+      }
+    },
+    "closure_type": {
+      "value": 5,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "sigillo_silenzioso_cammeo_diurno",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Hook finale: alba sul Pontile, Bartolo vede Amo tuffarsi, Fiamma cammeo. Nessun verbo di stato sulla paura risolta. Voice_notes: \"narratore non commenta che noah non ha più paura, scena sigilla senza verbo di stato\". Sigillo silenzioso confermato."
+        }
+      }
+    },
+    "register": {
+      "value": "alto",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "denso_basso_attraversamento_paura",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Notte fonda, \"Ho paura. Qui è buio.\" (5 parole 2 frasi), cammino sotto lanterna velata, alba sul Pontile. Register denso ma basso: narratore non amplifica, lascia camminare. Active_constraints: \"drammaturgia_silenziosa\" + \"silenzio_attivo_obbligatorio_dopo_frase_noah\"."
+        }
+      }
+    },
+    "estimated_length": {
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "2200-2800_parole",
+          "category": "A",
+          "confidence": "low",
+          "rationale": "Apertura blocco D, attraversamento paura completo (notte→cammino→alba), 7 chars in scena con cammeo Grunto onomatopea distante. Stima sulla base di densità (4 hooks pieni, 7 debts totali, fear_touched bloomed). Da confermare in C/D."
+        }
+      }
+    },
+    "descriptive_pauses_count": {
+      "value": 0,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": 2,
+          "category": "A",
+          "confidence": "medium",
+          "rationale": "Plausibili 2 pause descrittive: una al cammino lanterna velata (cerchio luce sui piedi, foglie secche, paesaggio non descritto coerente con narratore), una all'alba sul Pontile (Amo tuffo, Bartolo silenzioso). Storia di blocco apertura tipicamente 1-2 pause. Da confermare."
+        }
+      }
+    }
+  }
 }

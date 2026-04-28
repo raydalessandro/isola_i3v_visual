@@ -444,11 +444,11 @@
       }
     ]
   },
-  "entry_point_type": null,
-  "closure_type": null,
-  "register": null,
-  "estimated_length": null,
-  "descriptive_pauses_count": null,
+  "entry_point_type": "C",
+  "closure_type": 2,
+  "register": "alto",
+  "estimated_length": 1125,
+  "descriptive_pauses_count": 2,
   "grunto_memory_fragment": false,
   "paronomastico_used": false,
   "narrator_address": false,

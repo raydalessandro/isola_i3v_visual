@@ -94,61 +94,94 @@
   },
   "notes_globali": "Storia ricca strutturalmente, grafo originale già denso (premise/problem/threshold/resolution e voice_notes già canonici). P2 si limita ai 5 no_inference + alcuni provvisori a bassa confidence. Niente provvisori Famiglia B perché season_passage è stato popolato in P1 (decisione Ray \"estate + passaggio_estate_autunno\") e key_phrase è già nel grafo. Niente provvisori Famiglia C perché ogni hook ha description_visual e visual_critique_notes già popolati nel grafo.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2 in canonical (NULL). hint_neutro originale dall'agente alt preservati come riferimento per fase C/D.",
-    "entry_point_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "cornice_costanza_giorno_chiuso",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Storia con cornice forno mattino-pomeriggio-sera (premise + structural_notes esplicitano \"il giorno chiuso del compleanno\"). Entry point fisso al forno apertura, non in medias res."
-      }
-    },
-    "closure_type": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "sigillo_silenzioso_oggetto_ferma",
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Hook finale: braccialetto in mano di Gabriel, Noah ride, Elias cenno → chiusura non-verbale, oggetto-firma fermo, sguardi che si allineano. Non è risoluzione esplicita."
-      }
-    },
-    "register": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "tenero_basso_quotidiano",
-        "category": "A",
-        "confidence": "medium",
-        "rationale": "Voce_notes esplicita \"tenerezza non sottolineata, nessuna enfasi morale\". Premise = compleanno-non-festa. Register basso ma caldo."
-      }
-    },
-    "estimated_length": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": "1800-2400_parole",
-        "category": "A",
-        "confidence": "low",
-        "rationale": "Storia centrale ciclo C, complessità bloom-paura-Gabriel. Stima sulla base della densità debts/callbacks (6+2) e 4 hooks. Da confermare con conteggio reale in C/D."
-      }
-    },
-    "descriptive_pauses_count": {
-      "schema_constraint": "",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
-      "hint_originale_agente_alt": {
-        "value": 1,
-        "category": "A",
-        "confidence": "high",
-        "rationale": "Vincolo esplicito in active_constraints_touched: \"pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole\". Una sola pausa, al forno con Memolo."
-      }
-    }
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
   },
   "narrative_ideas": [
     "Cardo \"prima voce\" (seed_cardo_prima_voce_individuata) → bloom potenziale s11 quando il cuccioli prendono voce collettiva al pozzo. Da verificare arc s11.",
     "Braccialetto-firma s09 → debt_s09_to_s12: oggetto silenzioso al polso di Gabriel in chiusura saga. Preserva strato 3 senza nominazione."
   ],
-  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2)."
+  "realign_note": "Realign post-fase E (decisione Ray): provisional originale dell'agente alt aveva 5 no_inference come provvisori A. Ora allineato al pattern delle altre 9 storie (REGOLA 0.2).",
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
+    "entry_point_type": {
+      "value": "E",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "cornice_costanza_giorno_chiuso",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Storia con cornice forno mattino-pomeriggio-sera (premise + structural_notes esplicitano \"il giorno chiuso del compleanno\"). Entry point fisso al forno apertura, non in medias res."
+        }
+      }
+    },
+    "closure_type": {
+      "value": 4,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "sigillo_silenzioso_oggetto_ferma",
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Hook finale: braccialetto in mano di Gabriel, Noah ride, Elias cenno → chiusura non-verbale, oggetto-firma fermo, sguardi che si allineano. Non è risoluzione esplicita."
+        }
+      }
+    },
+    "register": {
+      "value": "basso",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "tenero_basso_quotidiano",
+          "category": "A",
+          "confidence": "medium",
+          "rationale": "Voce_notes esplicita \"tenerezza non sottolineata, nessuna enfasi morale\". Premise = compleanno-non-festa. Register basso ma caldo."
+        }
+      }
+    },
+    "estimated_length": {
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": "1800-2400_parole",
+          "category": "A",
+          "confidence": "low",
+          "rationale": "Storia centrale ciclo C, complessità bloom-paura-Gabriel. Stima sulla base della densità debts/callbacks (6+2) e 4 hooks. Da confermare con conteggio reale in C/D."
+        }
+      }
+    },
+    "descriptive_pauses_count": {
+      "value": 1,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D (REGOLA 0.2)",
+        "hint_originale_agente_alt": {
+          "value": 1,
+          "category": "A",
+          "confidence": "high",
+          "rationale": "Vincolo esplicito in active_constraints_touched: \"pausa_descrittiva_unica_storia_pomeriggio_forno_castagna_memolo_40_60_parole\". Una sola pausa, al forno con Memolo."
+        }
+      }
+    }
+  }
 }

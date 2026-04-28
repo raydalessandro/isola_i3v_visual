@@ -72,42 +72,103 @@
     },
     "totale": 7,
     "dettaglio": [
-      {"field": "season_passage", "category": "B", "confidence": "medium"},
-      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s02_h1.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s02_h2.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s02_h3_signature.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s02_h4.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s02_h5.notes", "category": "C", "confidence": "low"}
+      {
+        "field": "season_passage",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "key_phrase_indicative",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s02_h1.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s02_h2.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s02_h3_signature.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s02_h4.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s02_h5.notes",
+        "category": "C",
+        "confidence": "low"
+      }
     ]
   },
   "notes_globali": "P2 eseguita manualmente in chat (sub-agenti falliti 3/3 in s01-s02 con stream timeout). 7 provvisori legittimi popolati: 2 top (season_passage B, key_phrase_indicative B) + 5 hook notes (s02_h1 B, s02_h2 C, s02_h3 B signature, s02_h4 B pre_eco_pattern_a, s02_h5 C). Confidence applicata: A=high, B=medium, C=low. Distribuzione: 0A + 4B + 3C. I 5 no_inference_fields restano null nel canonical (decisione Ray fase C/D). Note hook wind_visible: s02_h4 ha gia' valore dal canonical (vento_taglio_folata_cerchi_argentei); s02_h1/h2/h3/h5 restano null e NON popolati in P2 (nessuna inferenza forte; meglio null che invenzione).",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2 MIGRATION_PROMPT): nessuna proposta P2 perche' richiedono decisione autoriale Ray in fase C/D.",
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Apertura con cammeo Stria (autorita'/rilancio). Possibili candidati Carta: A (frase-firma narratore, gia' usata in s01), C (voce esterna che irrompe), B (immagine ferma). Scelta autoriale, non deducibile."
+      "value": "C",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['A','B','C','D','E','F',null] — Carta Voce §2.1",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Apertura con cammeo Stria (autorita'/rilancio). Possibili candidati Carta: A (frase-firma narratore, gia' usata in s01), C (voce esterna che irrompe), B (immagine ferma). Scelta autoriale, non deducibile."
+      }
     },
     "closure_type": {
-      "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Chiusura con ritorno silenzioso, peso non detto su Elias. Scelta autoriale tra i codici 1-7. Cornice S1-S12 NON applicabile qui (s02 non e' apertura/chiusura saga)."
+      "value": 2,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum integer [1-7,null] — Carta Voce §2.3",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Chiusura con ritorno silenzioso, peso non detto su Elias. Scelta autoriale tra i codici 1-7. Cornice S1-S12 NON applicabile qui (s02 non e' apertura/chiusura saga)."
+      }
     },
     "register": {
-      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Atmosfera con turbamento silenzioso + threshold visivo + pre_eco Pattern A. Plausibile medio o alto. Scelta autoriale."
+      "value": "basso",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Atmosfera con turbamento silenzioso + threshold visivo + pre_eco Pattern A. Plausibile medio o alto. Scelta autoriale."
+      }
     },
     "estimated_length": {
-      "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "5 hook su pari struttura di s01 ma con threshold visivo piu' compresso (signature + reazione + chiusura). Range saga 800-1200, scelta autoriale."
+      "value": 850,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (800-1200) — Carta Voce §2.5",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "5 hook su pari struttura di s01 ma con threshold visivo piu' compresso (signature + reazione + chiusura). Range saga 800-1200, scelta autoriale."
+      }
     },
     "descriptive_pauses_count": {
-      "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_inciso_sulla_pozza_dei_pastori': suggerisce 1 pausa descrittiva. Ma scelta finale autoriale (max 2 per storia, distribuzione saga)."
+      "value": 1,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (0-2) — Carta Voce §1.6 + §2.7",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "voice_notes_essential cita 'memoria_lunga_narratore_1_inciso_sulla_pozza_dei_pastori': suggerisce 1 pausa descrittiva. Ma scelta finale autoriale (max 2 per storia, distribuzione saga)."
+      }
     }
   }
 }

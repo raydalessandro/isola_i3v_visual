@@ -83,48 +83,121 @@
     }
   },
   "quote_consumed": {
-    "by_category": {"A": 3, "B": 4, "C": 2},
+    "by_category": {
+      "A": 3,
+      "B": 4,
+      "C": 2
+    },
     "totale": 9,
     "_note": "season_passage gia' popolato nell'old_node (P1 l'ha portato pari-pari, NON provvisorio P2). key_phrase_attributed_to gia' nel canonical via mapping (REGOLA 0.8, simile a s03/rovo).",
     "dettaglio": [
-      {"field": "key_phrase_indicative", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s06_h1.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s06_h2.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s06_h3.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s06_h4.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s06_h5.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s06_h6_signature.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s06_h7.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s06_h8.notes", "category": "B", "confidence": "medium"}
+      {
+        "field": "key_phrase_indicative",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h1.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h2.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h3.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h4.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h5.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h6_signature.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h7.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s06_h8.notes",
+        "category": "B",
+        "confidence": "medium"
+      }
     ]
   },
   "notes_globali": "Sesta storia: chiusura blocco B (CONNETTERE_COMPIUTO: ascoltare s4, costruire s5, sentire-quando-farsi-da-parte s6). Caso speciale TUTTI: hooks string_legacy (REGOLA 3, parsati a mano), attribute_dominant=connettere_sottile (REGOLA 0.5 -> connettere, nota qui), block_position legacy esteso (REGOLA 0.9 -> chiusura_blocco_b), season legacy (REGOLA 0.10 -> primavera + season_passage preservato). 9 provvisori (3A + 4B + 2C). Highlight: PRIMO_GIRO_COMPLETO_QUATTRO_QUARTIERI saga (escluso aria_nord). VECCHIE_FIRMA_GESTUALE_ISTITUITA. PARONOMASTICO_FISICO_MEMOLO leggero. PATTERN_A_DUE_IMMAGINI: cornetto-briciole portante (seminato), dente-da-latte eco emotiva. Modulazione PAURA_ELIAS: capire-senza-avere. key_phrase_attributed_to='memolo' promosso al canonical (REGOLA 0.8, secondo caso saga dopo s03/rovo). mis_006 logged: vecchie_del_mercato vs mercato_del_mezzogiorno, severity bassa, status open.",
   "rejected_no_inference": {
-    "_description": "5 campi top-level no_inference_fields (REGOLA 0.2): nessuna proposta P2.",
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "schema_constraint": "enum ['A','B','C','D','E','F',null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Apertura con dialogo a mezza voce in aula scuola. Possibili candidati: C (voce esterna che irrompe via Pun) o A. Scelta autoriale."
+      "value": "D",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['A','B','C','D','E','F',null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Apertura con dialogo a mezza voce in aula scuola. Possibili candidati: C (voce esterna che irrompe via Pun) o A. Scelta autoriale."
+      }
     },
     "closure_type": {
-      "schema_constraint": "enum integer [1-7,null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Sigillo del narratore in immagine (briciole sul palmo di Noah). Codice 1-7 da decidere."
+      "value": 7,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum integer [1-7,null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Sigillo del narratore in immagine (briciole sul palmo di Noah). Codice 1-7 da decidere."
+      }
     },
     "register": {
-      "schema_constraint": "enum ['basso','medio','alto',null]",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "Atmosfera di cura sociale + giro multi-quartiere + capire-senza-avere. Plausibile medio. Scelta autoriale."
+      "value": "basso",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "enum ['basso','medio','alto',null]",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "Atmosfera di cura sociale + giro multi-quartiere + capire-senza-avere. Plausibile medio. Scelta autoriale."
+      }
     },
     "estimated_length": {
-      "schema_constraint": "integer (800-1200)",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "8 hook su 4 quartieri attraversati (16 km). Probabilmente fascia lunga 1100-1200. Scelta autoriale."
+      "value": 850,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (800-1200)",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "8 hook su 4 quartieri attraversati (16 km). Probabilmente fascia lunga 1100-1200. Scelta autoriale."
+      }
     },
     "descriptive_pauses_count": {
-      "schema_constraint": "integer (0-2)",
-      "p2_status": "NULL nel canonical, da decidere in fase C/D",
-      "hint_neutro": "voice_notes 'MEMORIA_LUNGA_NARRATORE_UNO_DUE_INCISI sul quattro-quartieri attraversati': 1-2 pause descrittive. Scelta finale autoriale."
+      "value": 1,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "schema_constraint": "integer (0-2)",
+        "p2_status": "NULL nel canonical, da decidere in fase C/D",
+        "hint_neutro": "voice_notes 'MEMORIA_LUNGA_NARRATORE_UNO_DUE_INCISI sul quattro-quartieri attraversati': 1-2 pause descrittive. Scelta finale autoriale."
+      }
     }
   }
 }

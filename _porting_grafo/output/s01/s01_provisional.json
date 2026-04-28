@@ -78,52 +78,118 @@
     },
     "totale": 8,
     "dettaglio": [
-      {"field": "season_passage", "category": "B", "confidence": "medium"},
-      {"field": "key_phrase_indicative", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s01_h1.notes", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s01_h1.wind_visible", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s01_h2.wind_visible", "category": "C", "confidence": "low"},
-      {"field": "visual_anchors.scene_hooks.s01_h3.notes", "category": "B", "confidence": "medium"},
-      {"field": "visual_anchors.scene_hooks.s01_h4_signature.notes", "category": "A", "confidence": "high"},
-      {"field": "visual_anchors.scene_hooks.s01_h5.notes", "category": "C", "confidence": "low"}
+      {
+        "field": "season_passage",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "key_phrase_indicative",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h1.notes",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h1.wind_visible",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h2.wind_visible",
+        "category": "C",
+        "confidence": "low"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h3.notes",
+        "category": "B",
+        "confidence": "medium"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h4_signature.notes",
+        "category": "A",
+        "confidence": "high"
+      },
+      {
+        "field": "visual_anchors.scene_hooks.s01_h5.notes",
+        "category": "C",
+        "confidence": "low"
+      }
     ]
   },
   "notes_globali": "P2a eseguita in 2 micro-task paralleli (top + hooks). 13 provvisori inizialmente popolati. Verifica post-merge contro schema v1.2 + MIGRATION_PROMPT_FASE_E.md ha rilevato che 5 campi top-level (entry_point_type, closure_type, estimated_length, register, descriptive_pauses_count) sono no_inference_fields: vietati alla deduzione automatica, richiedono decisione autoriale di Ray in fase C/D. Spostati in `rejected_no_inference` come traccia. Nodo canonical riporta gia' null su questi 5 campi: niente da modificare in canonical. Restano legittimi: season_passage (B), key_phrase_indicative (B), e tutti i 6 hook (notes/wind_visible non sono no_inference). Totale provvisori validi P2a: 8 (2 top + 6 hook), categorie: 1 A + 3 B + 4 C. Confidence aggiunta come campo per facilitare review (mappatura: A=high, B=medium, C=low). CORREZIONE post-pubblicazione: attribute_dominant nel canonical era 'delta' (simbolo legacy v1.1); corretto a 'distinguere' (enum canonico v1.2).",
   "rejected_no_inference": {
+    "_description": "Tutti i 5 no_inference_fields decisi in fase C/D autoriale (vedi autoriale_ray_fase_cd)."
+  },
+  "autoriale_ray_fase_cd": {
+    "_description": "Decisioni autoriali Ray (Q1-Q6 fase C/D). Promossi al canonical post-fase E.",
     "entry_point_type": {
-      "proposed_value": "cornice_quotidiana",
-      "category": "C",
-      "rationale_p2a": "Il primo hook (s01_h1) e' interno Forno, mattino presto, con Fiamma che mette in mano la pagnotta: cornice domestica calda di partenza. Mappabile sul tipo B della §2.1 CARTA (immagine ferma) ma il termine canonico richiesto e' cornice_quotidiana, frame_s1_s12_at_forno_opening conferma.",
-      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
-      "schema_constraint": "enum ['A','B','C','D','E','F',null] — A-F sono codici Carta Voce §2.1"
+      "value": "B",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "proposed_value": "cornice_quotidiana",
+        "category": "C",
+        "rationale_p2a": "Il primo hook (s01_h1) e' interno Forno, mattino presto, con Fiamma che mette in mano la pagnotta: cornice domestica calda di partenza. Mappabile sul tipo B della §2.1 CARTA (immagine ferma) ma il termine canonico richiesto e' cornice_quotidiana, frame_s1_s12_at_forno_opening conferma.",
+        "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+        "schema_constraint": "enum ['A','B','C','D','E','F',null] — A-F sono codici Carta Voce §2.1"
+      }
     },
     "closure_type": {
-      "proposed_value": "ritorno_simmetrico",
-      "category": "C",
-      "rationale_p2a": "Hook s01_h5 chiude al Forno (stessa location dell'apertura), Fiamma non chiede com'e' andata: cornice S1-S12 esplicitamente dichiarata in structural_notes. La simmetria spaziale prevale; il silenzio_aperto e' presente come sfumatura ma il tratto strutturale dominante e' il ritorno alla cornice.",
-      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
-      "schema_constraint": "enum integer [1-7,null] — codici Carta Voce §2.3"
-    },
-    "estimated_length": {
-      "proposed_value": "1050-1200 parole (fascia lunga della saga)",
-      "category": "C",
-      "rationale_p2a": "Range saga §2.5 CARTA = 800-1200; s01 e' apertura con patto di lettura installato, frase-firma narratore esplicita, 5 hook visivi su 10 beat, due ambienti (Forno + Montagne) e tre archi (cornice/nebbia/Grunto): giustifica fascia lunga 1050-1200.",
-      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
-      "schema_constraint": "integer (800-1200) — non stringa"
+      "value": 7,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "proposed_value": "ritorno_simmetrico",
+        "category": "C",
+        "rationale_p2a": "Hook s01_h5 chiude al Forno (stessa location dell'apertura), Fiamma non chiede com'e' andata: cornice S1-S12 esplicitamente dichiarata in structural_notes. La simmetria spaziale prevale; il silenzio_aperto e' presente come sfumatura ma il tratto strutturale dominante e' il ritorno alla cornice.",
+        "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+        "schema_constraint": "enum integer [1-7,null] — codici Carta Voce §2.3"
+      }
     },
     "register": {
-      "proposed_value": "paesaggistico_silenzioso",
-      "category": "B",
-      "rationale_p2a": "Mix dichiarato dal nodo: cammino verso Montagne (paesaggistico_lento nel bianco totale, perdita riferimenti) + threshold silenzioso con Vento Taglio + incontro Grunto a rispettosa distanza con una sola parola. Registro medio-alto della §2.4 CARTA, dominante atmosferica fredda con rivelazione silenziosa.",
-      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
-      "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4"
+      "value": "medio",
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "proposed_value": "paesaggistico_silenzioso",
+        "category": "B",
+        "rationale_p2a": "Mix dichiarato dal nodo: cammino verso Montagne (paesaggistico_lento nel bianco totale, perdita riferimenti) + threshold silenzioso con Vento Taglio + incontro Grunto a rispettosa distanza con una sola parola. Registro medio-alto della §2.4 CARTA, dominante atmosferica fredda con rivelazione silenziosa.",
+        "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+        "schema_constraint": "enum ['basso','medio','alto',null] — Carta Voce §2.4"
+      }
+    },
+    "estimated_length": {
+      "value": 975,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "proposed_value": "1050-1200 parole (fascia lunga della saga)",
+        "category": "C",
+        "rationale_p2a": "Range saga §2.5 CARTA = 800-1200; s01 e' apertura con patto di lettura installato, frase-firma narratore esplicita, 5 hook visivi su 10 beat, due ambienti (Forno + Montagne) e tre archi (cornice/nebbia/Grunto): giustifica fascia lunga 1050-1200.",
+        "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+        "schema_constraint": "integer (800-1200) — non stringa"
+      }
     },
     "descriptive_pauses_count": {
-      "proposed_value": 2,
-      "category": "C",
-      "rationale_p2a": "§1.6 e §2.7 CARTA: max 2 per storia, distribuzione saga 3-4 storie con due pause. S01 ha due momenti che chiamano pausa descrittiva: il bianco totale della nebbia (s01_h2) e la cengia/incontro Grunto con palette firma (s01_h4). Coerente anche con le memorie lunghe del narratore previste nei voice_notes_essential.",
-      "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
-      "schema_constraint": "integer (0-2)"
+      "value": 2,
+      "category": "AUTORIALE",
+      "confidence": "high",
+      "rationale": "Decisione autoriale Ray (vedi commit 'fase C/D autoriale: 60 no_inference_fields decisi via 5-6 domande pattern').",
+      "rejected_hint": {
+        "proposed_value": 2,
+        "category": "C",
+        "rationale_p2a": "§1.6 e §2.7 CARTA: max 2 per storia, distribuzione saga 3-4 storie con due pause. S01 ha due momenti che chiamano pausa descrittiva: il bianco totale della nebbia (s01_h2) e la cengia/incontro Grunto con palette firma (s01_h4). Coerente anche con le memorie lunghe del narratore previste nei voice_notes_essential.",
+        "p2a_status": "REJECTED — no_inference_field, decisione autoriale Ray richiesta in fase C/D",
+        "schema_constraint": "integer (0-2)"
+      }
     }
   }
 }

@@ -269,11 +269,11 @@
       }
     ]
   },
-  "entry_point_type": null,
-  "closure_type": null,
-  "register": null,
-  "estimated_length": null,
-  "descriptive_pauses_count": null,
+  "entry_point_type": "C",
+  "closure_type": 2,
+  "register": "basso",
+  "estimated_length": 850,
+  "descriptive_pauses_count": 1,
   "grunto_memory_fragment": false,
   "paronomastico_used": false,
   "narrator_address": false,
