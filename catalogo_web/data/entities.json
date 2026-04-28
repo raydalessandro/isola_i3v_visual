@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-04-28T13:19:28",
+  "generated_at": "2026-04-28T20:02:33",
   "totals": {
-    "totale": 114,
+    "totale": 115,
     "luogo": 74,
-    "oggetto": 13,
+    "oggetto": 14,
     "personaggio": 23,
     "vento": 3,
     "visual_signature": 1
   },
   "by_status": {
-    "provvisorio": 114
+    "provvisorio": 115
   },
   "tree": {
     "luoghi": {
@@ -1090,6 +1090,18 @@
             "status": "provvisorio",
             "n_images": 0,
             "folder_path": "visual/oggetti/pagnotta_forno"
+          }
+        },
+        "pallone_di_stoffa_cucita": {
+          "_children": {},
+          "_entity_id": "pallone_di_stoffa_cucita",
+          "_entity_meta": {
+            "name": "Pallone di Stoffa Cucita",
+            "famiglia": "oggetto",
+            "sottotipo": "oggetto_di_scena_ricorrente",
+            "status": "provvisorio",
+            "n_images": 0,
+            "folder_path": "visual/oggetti/pallone_di_stoffa_cucita"
           }
         },
         "scialle_stria": {
@@ -6830,6 +6842,52 @@
       "breadcrumb": [
         "oggetti",
         "pagnotta_forno"
+      ],
+      "images": [],
+      "n_images": 0
+    },
+    {
+      "id": "pallone_di_stoffa_cucita",
+      "name": "Pallone di Stoffa Cucita",
+      "famiglia": "oggetto",
+      "sottotipo": "oggetto_di_scena_ricorrente",
+      "status": "provvisorio",
+      "quartiere": null,
+      "categoria_strada": null,
+      "frontmatter": {
+        "id": "pallone_di_stoffa_cucita",
+        "name": "Pallone di Stoffa Cucita",
+        "famiglia": "oggetto",
+        "sottotipo": "oggetto_di_scena_ricorrente",
+        "status": "provvisorio",
+        "ultima_modifica": "2026-04-28",
+        "fonti": [
+          "pipeline_narrativa/story_graph.json#stories.s03.visual_anchors.recurring_visual_objects",
+          "pipeline_narrativa/story_graph.json#stories.s11.visual_anchors.recurring_visual_objects"
+        ],
+        "appare_in_storie": [
+          "s03",
+          "s11"
+        ],
+        "relazioni": {
+          "associato_a_personaggio": [
+            "gabriel",
+            "elias",
+            "noah"
+          ],
+          "associato_a_luogo": [
+            "foresta_intrecciata",
+            "piazza_villaggio"
+          ]
+        }
+      },
+      "body_md": "# Pallone di Stoffa Cucita\n\n> **Stato compilazione:** scheda creata in fase E (post-saga, mis_004 OPZIONE B). Distinzione esplicita: `oggetto_di_scena_ricorrente` ≠ `oggetto_simbolo_saga` (i 13 archetipi). Il pallone è oggetto-firma del gruppo cuccioli, ricorrente trasversa s03→s11 ma senza la densità simbolica dei 13 oggetti canonici.\n\n## Identità visuale (sintesi)\n\nPallone artigianale dei fratelli, fatto di stoffa cucita. Oggetto del gioco quotidiano dei cuccioli sull'isola.\n\n## Aspetto / forma\n\nStoffa cucita a mano, forma sferica imperfetta. Pesa più di un pallone gonfio (per la stoffa) ma rotola lo stesso. Non rimbalza come un pallone moderno.\n\n## Contesto e ambientazioni ricorrenti\n\n- **s03** (chiusura blocco A, \"Il Pallone oltre la Foresta\"): oggetto centrale della storia. Calcio mal misurato di Noah, il pallone rotola oltre il margine della Foresta Intrecciata. Rovo lo restituisce posandolo a un passo dal margine.\n- **s11** (centro blocco D, \"La Festa del Raccolto\"): ricomparsa, giochi cuccioli durante la festa. Bloom collettivo del seed seminato in s03.\n\n## Coerenza cross-scena (cose che NON cambiano)\n\n- Stoffa cucita a mano, non gomma né cuoio.\n- Forma sferica imperfetta.\n- Oggetto di gioco (non strumento, non rito).\n- Appartiene al gruppo cuccioli, non a un singolo personaggio.\n\n## Distinzione\n\n`oggetto_di_scena_ricorrente`: oggetto narrativamente ricorrente in più storie ma NON tra i 13 oggetti-simbolo saga (bandana_rovo, bisaccia_zolla, braccialetto_s9, cesto_salvia, cicatrice_grunto, conchiglia_amo, corda_nodo, grembiule_fiamma, lanterna_velata_s10, nido_vuoto_s08, pagnotta_forno, scialle_stria, sciarpa_memolo). Tracciato in `recurring_visual_objects` del grafo legacy. NON entra in `oggetti_simbolo_presenti` del canonical v1.2 (REGOLA 0.6 MIGRATION_PROMPT_FASE_E.md).\n\n## Storie / scene di apparizione\n\n- s01: assente.\n- s02: assente.\n- s03: **prima apparizione** (recurring_visual_object, oggetto-perno della storia). seed_pallone_stoffa_cucita piantato.\n- s04-s10: assente.\n- s11: ricomparsa (giochi cuccioli durante festa raccolto). debt_s03_to_s11_pallone_ricomparsa_giochi_cuccioli_tentativo chiuso (bloom).\n- s12: assente.\n\n## Riferimenti puntuali\n\n- `pipeline_narrativa/story_graph.json#stories.s03.visual_anchors.recurring_visual_objects` = `[\"pallone_di_stoffa_cucita\"]`\n- `pipeline_narrativa/story_graph.json#stories.s11.visual_anchors.recurring_visual_objects` (atteso bloom)\n- `_porting_grafo/dossier_fase_e/dossier/_canon_misalignments.json#mis_004` (resolved in fase E OPZIONE B)",
+      "body_size_chars": 2536,
+      "folder_path": "visual/oggetti/pallone_di_stoffa_cucita",
+      "scheda_path": "visual/oggetti/pallone_di_stoffa_cucita/scheda.md",
+      "breadcrumb": [
+        "oggetti",
+        "pallone_di_stoffa_cucita"
       ],
       "images": [],
       "n_images": 0

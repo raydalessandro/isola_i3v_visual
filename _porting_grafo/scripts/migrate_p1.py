@@ -73,9 +73,15 @@ def normalize_block_position(value: str) -> str:
     raise ValueError(f"block_position '{value}' non normalizzabile: aggiungi al mapping in migrate_p1.py")
 
 def load_canonical_oggetti(repo: Path) -> set:
-    """Lista degli ID oggetti canonici dal catalogo (famiglia=oggetto)."""
+    """Lista degli ID oggetti-simbolo saga (i 13 archetipi). Esclude
+    oggetti con sottotipo `oggetto_di_scena_ricorrente` (post-mis_004 OPZIONE B):
+    quelli sono in catalogo come oggetti narrativi ricorrenti ma NON entrano
+    in oggetti_simbolo_presenti del canonical (REGOLA 0.6 estesa)."""
     cat = json.loads((repo / "catalogo_web/data/entities.json").read_text())
-    return {x["id"] for x in cat["entities"] if x.get("famiglia") == "oggetto"}
+    EXCLUDED = {"oggetto_di_scena_ricorrente"}
+    return {x["id"] for x in cat["entities"]
+            if x.get("famiglia") == "oggetto"
+            and x.get("sottotipo") not in EXCLUDED}
 
 
 # REGOLA 7 — character_in_scene: campi permessi dallo schema (additionalProperties: false)

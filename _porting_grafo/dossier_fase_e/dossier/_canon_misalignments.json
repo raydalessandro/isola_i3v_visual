@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "last_updated": "2026-04-28",
-  "last_updated_story": "s12",
+  "last_updated_story": "post_saga_fase_chiusura",
   "_description": "Rolling file per tracking disallineamenti tra le 3 sorgenti di verità (catalogo isola_i3v_visual, story graph, Bible). Ogni chat di Fase E può aggiungere voci in Passata 0 e Passata 2. Risoluzione in chat dedicata fine S12. Rinominato in v3.0 da _bible_graph_misalignments.json.",
   "_misalignment_schema": {
     "id": "mis_<NNN> (3 cifre, sequenziale)",
@@ -83,9 +83,9 @@
       "bible_reference": null,
       "description": "Il grafo s03 lista 'pallone_di_stoffa_cucita' tra recurring_visual_objects. Non e' nel catalogo come famiglia=oggetto (13 oggetti canonici saga). Diverso da mis_003/bastoncino_noah_s1 (oggetto-firma personaggio): il pallone e' oggetto di gruppo bambini, ricorrente trasversalmente s03 -> s11 (debt: s11_pallone_ricomparsa_giochi_cuccioli_tentativo). Potenziale 14° oggetto-simbolo saga oppure oggetto_di_scena_ricorrente (sottotipo distinto). Dropped da oggetti_simbolo_presenti del canonical s03 (REGOLA 0.6).",
       "severity": "bassa",
-      "proposed_resolution": "OPZIONE B scelta da Ray (coerente con mis_003): non aggiunto al catalogo per ora. Tracking narrativo del pallone resta in seeds_planted (seed_pallone_stoffa_cucita) + callbacks futuri (s11). Decisione finale post-saga: se promuovere a 14° oggetto-simbolo o registrare come oggetto_di_scena_ricorrente.",
-      "status": "open",
-      "resolved_in_phase": null
+      "proposed_resolution": "RISOLTO post-saga (decisione Ray fase chiusura): aggiunto a catalogo come oggetto_di_scena_ricorrente (NON tra i 13 oggetti-simbolo saga). Scheda visual/oggetti/pallone_di_stoffa_cucita/scheda.md creata, catalogo rigenerato 14 oggetti totali (13 simbolo + 1 di_scena). Lo script migrate_p1.py#load_canonical_oggetti aggiornato per escludere sottotipo 'oggetto_di_scena_ricorrente' dal filtro oggetti_simbolo_presenti (REGOLA 0.6 estesa). Tracking narrativo del pallone resta in seeds + callbacks. Distinzione esplicita per casi simili futuri.",
+      "status": "resolved",
+      "resolved_in_phase": "post_saga_fase_chiusura"
     },
     {
       "id": "mis_005",
@@ -99,9 +99,9 @@
       "bible_reference": null,
       "description": "Stessa entita' citata con preposizione diversa: 'radura_coi_pini' (grafo) vs 'radura_dei_pini' (catalogo). Mappato a id catalogo in P1 di s05 (s05_h7_radura.location.id=radura_dei_pini, qualifier oltre_torrente_100_150_metri, legacy_string preserva graph string). Da verificare se altre storie successive (es. s12 ha 'radura_coi_pini' come location di passaggio_autunnale) usano 'coi' o 'dei': se conferma 'dei' come canonico, aggiornare grafo.",
       "severity": "bassa",
-      "proposed_resolution": "Decisione post-saga: confermare 'radura_dei_pini' come nome canonico (allineato al catalogo) e aggiornare il grafo nelle storie successive che lo citano. Alternativa: aggiornare il catalogo a 'radura_coi_pini' se Ray preferisce la preposizione del grafo. P1 ha gia' applicato il mapping, nessuna azione bloccante.",
-      "status": "open",
-      "resolved_in_phase": null
+      "proposed_resolution": "RISOLTO post-saga (decisione Ray Opt A fase chiusura): 'radura_dei_pini' confermato come nome canonico (id catalogo). s05_h7_radura.location.id=radura_dei_pini gia' mappato in P1. s12_canonical hook_04_radura_pini_pascoli_alti.location.id verificato = radura_dei_pini (gia' allineato al catalogo). Riferimenti narrativi 'radura_coi_pini' nei campi liberi del grafo (structural_notes, voice_notes, key_phrase_notes) sono descrittivi, non id strutturali — lasciati invariati. Il grafo finale v1.0.0 usa solo radura_dei_pini come id luogo.",
+      "status": "resolved",
+      "resolved_in_phase": "post_saga_fase_chiusura"
     },
     {
       "id": "mis_006",
