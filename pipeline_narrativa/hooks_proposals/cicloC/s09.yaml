@@ -1,0 +1,100 @@
+# Hook ciclo C — S09 — Quel Pomeriggio di Ottobre
+# Fonte: proposta agente fase G del 2026-04-29.
+# Edit minimo: h06 accorciato a 30 parole (rimosso "in mano" ridondante:
+# "lo dà a Gabriel" implica già la consegna).
+# Convenzione storica del grafo (decisione Ray): la casa dei fratelli
+# non è entity. Hook interni alla casa usano `location.id: piazza_villaggio`
+# con qualifier `interno_casa_fratelli_non_cartografato`.
+
+story_id: s09
+
+hooks:
+  - hook_id: s09_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: prima_dell_alba
+    location:
+      id: forno
+      qualifier: interno_banco_impasto
+    characters_present: [fiamma, memolo]
+    focal_action: "Mèmolo è sulla soglia del Forno prima dell'alba. Fiamma sta per accendere il forno. Lui dice che oggi è il giorno di Gabriel. Lei comincia a impastare."
+    focal_object: null
+    atmosphere: "buio chiaro che vira, camino non ancora acceso, voce bassa di Mèmolo che arriva senza preavviso, cesto di castagne crude di Zolla sul banco"
+    palette: "blu profondo che si schiarisce, terracotta tiepida del Forno spento, ocra della sciarpa storta di Mèmolo, bianco farina sul banco, marrone scuro delle castagne crude nel cesto"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Apertura ad anello calda. Mèmolo piccolo nel riquadro della porta a sinistra, Fiamma a destra al banco. Cesto di Zolla con prime castagne dell'anno è il dettaglio-calendario (Bible §9.2). Nessuna parola in immagine — Mèmolo ha già detto e si gira a uscire."
+
+  - hook_id: s09_h02
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: scuola_stria
+      qualifier: soglia_porta_aula
+    characters_present: [stria, gabriel, elias, noah, pun, toba, bru, cardo, liu]
+    focal_action: "Stria sulla porta della scuola. Gabriel entra con Elias e Noah. I cuccioli sono ai banchi: Pun, Toba, Bru, Cardo. Liù in volo tra le travi."
+    focal_object: null
+    atmosphere: "aria chiara di ottobre che comincia, Taglio leggero che entra dalla porta aperta con foglia secca, prima individuazione dei cuccioli dal collettivo"
+    palette: "blu-grigio chiaro del cielo di ottobre fuori, giallo-arancio delle prime foglie sulla soglia, ocra dello scialle di Stria, bordeaux della maglia di Gabriel, marrone scuro dei banchi, sagome dei cuccioli un po' separate"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Stria sulla porta a sinistra in piano medio, fratelli che entrano in piano stretto al centro, cuccioli ai banchi a destra. Cardo leggermente staccato dagli altri tre — preparazione visiva alla prima voce. Liù piccola in alto, già pronta a uscire dalla finestra socchiusa."
+
+  - hook_id: s09_h03
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: pomeriggio
+    location:
+      id: forno
+      qualifier: interno_banco_laterale
+    characters_present: [gabriel, memolo, fiamma]
+    focal_action: "Mèmolo tira fuori dalla tasca una castagna cruda. La passa a Gabriel senza parole. Gabriel la prende. Fiamma sullo sfondo toglie un ciocco dal fuoco."
+    focal_object: sciarpa_memolo
+    atmosphere: "vapore del dolce in cottura, micro-azione fisica senza enfasi, inversione tenera dei ruoli S8 mai dichiarata, gesto compiuto"
+    palette: "terracotta arancione del Forno, marrone caldo della castagna cruda lucida, ocra della sciarpa storta di Mèmolo, oro del camino acceso, bianco del vapore sopra il dolce"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Close-up sulla castagna che passa di mano. Calamita: il punto in cui le due mani si incontrano — Mèmolo già guarda altrove, gesto compiuto. Inversione speculare di s08_h06: lì Gabriel teneva la mano a Mèmolo, qui Mèmolo passa qualcosa a Gabriel. Fiamma non partecipa, registra col senso laterale."
+
+  - hook_id: s09_h04
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Elias dà a Gabriel un cordino nuovo per la sciarpa sfilacciata. Poi Noah, mani dietro la schiena, tira fuori il braccialetto e lo porge: «Te l'ho fatto io. Da solo.»"
+    focal_object: braccialetto_s9
+    atmosphere: "tardo pomeriggio dorato, gesto piccolo solenne di Noah, tre parole secche orgogliose non tenere, frase di Noah che resta nell'aria"
+    palette: "legno scuro del tavolo, oro inclinato del sole pomeridiano, verde vivo dei ramoscelli del braccialetto, marrone della castagna cruda forata come perlina, bordeaux della maglia di Gabriel, ocra del cordino di Elias"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Noah al centro in piano stretto, mano tesa col braccialetto. Elias a sinistra in piano medio. Gabriel di tre quarti riceve. Il braccialetto è brutto-tenero (sforzo di Noah visibile, non disastrato): canapa + due ramoscelli flessibili + castagna cruda forata + nodo marinaro semplificato (variante mani piccole insegnata da Elias off-screen tra s08 e s09). Eco silenziosa di TUM-tum-TUM s04 (codice dei tre)."
+
+  - hook_id: s09_h05
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Gabriel ringrazia, sorride, si volta verso il tavolo per prendere una caraffa. Posa il braccialetto accanto al suo posto. Elias vede e non dice niente."
+    focal_object: braccialetto_s9
+    atmosphere: "micro-occhiata che si stacca dal precursore S7/S8 e fiorisce in paura autonoma per la prima volta, voltarsi che dice quello che la voce non dice, comprensione muta di Elias"
+    palette: "legno scuro del tavolo in primo piano, verde vivo del braccialetto posato, marrone della castagna-perlina, sagoma di Gabriel di tre quarti di spalle, oro tardo del pomeriggio, sagoma di Elias attenta sullo sfondo, sagoma di Noah ignara"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: corner_lower_right
+    notes: "HOOK FIRMA. Strato 3 puro: prima manifestazione visibile della paura autonoma di Gabriel. Il voltarsi NON è dichiarato come evitamento, si vede solo il taglio della spalla e il braccialetto che resta solo sul tavolo. Elias di tre quarti, sguardo che capisce, mai sui fratelli. Noah fuori dalla scena percettiva (lui non sa di aver scosso). NESSUNA parola — il momento è il gesto. Voce constraint: zero nominazione."
