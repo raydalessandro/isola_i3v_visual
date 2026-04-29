@@ -7421,94 +7421,281 @@
       "visual_anchors": {
         "scene_hooks": [
           {
+            "hook_id": "s10_h01",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte_fonda",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "interno_casa_fratelli_non_cartografato",
-              "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+              "qualifier": "interno_casa_fratelli_non_cartografato"
             },
-            "quadrant": "centro_villaggio",
-            "hook_id": "vh_s10_sera_cantilena_ultima_noah_si_addormenta",
-            "moment": "sera_tarda_villaggio_addormentato_ultima_cantilena_coltivatori_lontana",
-            "characters_present": [],
+            "quadrant": "centro",
+            "characters_present": [
+              "noah",
+              "gabriel",
+              "elias"
+            ],
             "elements": [],
-            "palette": "grigio_blu_tramonto_ocra_lanugine_coperte_marrone_rametti_nido_nero_imposte_socchiuse_oro_tardo_luce_morente",
-            "notes": "[VISUAL] Interno stanza dei fratelli al tramonto tardo. Tre letti accostati, coperte di lana ruvida, imposte socchiuse. Dalla finestra entra grigio-blu del crepuscolo autunnale — ultima luce diurna. Sul comodino accanto al letto di Noah: il nido vuoto curato in S8 (rametti intrecciati, muschio secco, scavo centrale vuoto). Noah con gli occhi aperti che guarda il soffitto. Gabriel sotto la coperta. Elias a fianco già respira regolarmente. Fuori — lontanissima — la cantilena serale dei Coltivatori: 'luna nera, terra ferma, mani al fuoco'. Cinque parole nell'aria.\n\n[CRITIQUE] Il nido sul comodino è centro ottico marginale — piccolo, non al centro tavola, ma visibile. Illustratore NON aggiungere orologio, lume di notte, oggetti superflui — spoglio canonico. Luce crepuscolare grigio-blu, non azzurra-fredda né arancione-calda.",
-            "stratification": {
-              "strato_1": "bambino_vede_stanza_e_fratelli_a_letto_sente_cantilena_lontana",
-              "strato_2": "lettore_registra_nido_sul_comodino_come_oggetto_presente",
-              "strato_3": "rilettore_coglie_ultima_cantilena_saga_chiude_serie_collettiva_prepara_notte_senza_luna"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Noah è sdraiato sul fianco a occhi aperti. Gabriel ed Elias dormono nei letti accanto. Sul comodino, accanto al letto di Noah, il nido.",
+            "focal_object": "nido_vuoto_s08",
+            "atmosphere": "stanza chiusa, luna nuova, imposte serrate, nessun rumore esterno, eco della cantilena dei Coltivatori già spenta da ore",
+            "palette": "nero quasi pieno, micro-accenni avorio del lenzuolo, marrone scuro dei rametti del nido, riflesso minimo sull'occhio aperto di Noah",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Apertura. Noah piccolo nel quadro, fratelli a fianco già addormentati. Il nido come centro ottico marginale (eco S8). Tipografia testo non grande — non melodramma."
           },
           {
+            "hook_id": "s10_h02",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "notte_fonda",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "interno_casa_fratelli_non_cartografato",
-              "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+              "qualifier": "interno_casa_fratelli_non_cartografato"
             },
-            "quadrant": "centro_villaggio",
-            "hook_id": "vh_s10_notte_fondo_noah_dice_ho_paura_mano_di_gabriel",
-            "moment": "notte_fonda_luna_nuova_buio_assoluto_stanza",
-            "characters_present": [],
+            "quadrant": "centro",
+            "characters_present": [
+              "noah",
+              "gabriel"
+            ],
             "elements": [],
-            "palette": "nero_assoluto_dominante_riflessi_minimi_su_occhi_e_dita_bianchi_avorio_lenzuolo_quasi_invisibile",
-            "notes": "[VISUAL] Stanza nel buio pieno. Nessuna illuminazione — luna nuova, imposte chiuse. Illustrazione quasi completamente nera con micro-accenni: contorno lievissimo del letto, riflesso tenue su un occhio aperto di Noah, sagoma indistinta della mano di Gabriel che si tende nel buio verso il letto di Noah e incontra la mano di Noah. Il nido sul comodino non visibile ma presente (sappiamo dalla scena precedente). Elias nel letto accanto si sta alzando — movimento percepibile solo dal lenzuolo che si sposta.\n\n[CRITIQUE] PAGINA PIU' NERA DELLA SAGA. Illustratore deve resistere alla tentazione di aggiungere luce. Solo due punti-luce-riflesso: occhio aperto Noah, contorno mano Gabriel. Il resto è nero pieno. Il testo 'Ho paura.' / 'Qui è buio.' sulla pagina in bianco puro, due righe tipografiche separate (silenzio visivo tra le due). Tipografia media, non grande (non melodramma).\n\n[VOICE] cinque_parole_due_frasi_su_righe_tipografiche_separate_silenzio_visivo_nessuna_descrizione_del_buio_come_entita_solo_oggetto_fisico_stanza_mano_che_si_tende_fiato_visibile\n\n[KEY_PHRASE_VISIBLE] Ho paura.\nQui è buio. (consolidata top-level)",
-            "stratification": {
-              "strato_1": "bambino_vede_una_pagina_quasi_nera_con_due_mani_che_si_trovano",
-              "strato_2": "lettore_sente_il_silenzio_tra_fratelli_e_le_cinque_parole_ho_paura_qui_e_buio",
-              "strato_3": "rilettore_coglie_architrave_strato_3_noah_DICE_prima_parola_della_terna_dire_accettare_tenere"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Noah dice ad alta voce: «Ho paura.» Pausa. «Qui è buio.» Gabriel tende la mano nel buio tra i due letti. La mano di Noah la trova. Si tengono.",
+            "focal_object": null,
+            "atmosphere": "buio assoluto, due frasi separate da silenzio tipografico, mano che cerca senza parole, architrave terna strato 3 — Noah DICE",
+            "palette": "nero pieno dominante, due punti-luce-riflesso (occhio aperto di Noah, contorno della mano di Gabriel), bianco-avorio quasi invisibile del lenzuolo",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Pagina più nera della saga. Le cinque parole («Ho paura.» / «Qui è buio.») alla lettera, due righe tipografiche separate. Strato 3: prima parola della terna dire/accettare/tenere. Constraint: fears_resolved_by_brothers_only — nessun adulto."
           },
           {
+            "hook_id": "s10_h03",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte_fonda",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_cucina_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "elias"
+            ],
+            "elements": [],
+            "focal_action": "Elias in cucina apre piano un cassetto, accende un fiammifero, accende la lanterna. Avvolge un panno di lana attorno al vetro perché esca solo un cerchio di luce dal basso.",
+            "focal_object": "lanterna_velata_s10",
+            "atmosphere": "scricchiolio del legno del corridoio, fiammifero che accende, cerchio di luce piccolo che nasce, gesto compiuto senza parole",
+            "palette": "nero della cucina, giallo caldo della prima fiamma, ocra del panno di lana che avvolge il vetro, marrone delle dita di Elias",
+            "wind_visible": null,
+            "onomatopee": [
+              "scric"
+            ],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Close-up sulle mani che avvolgono il panno attorno al vetro della lanterna. Nascita dell'oggetto-simbolo della storia. Inversione speculare di s08_h10 (Mèmolo aveva coperto il nido con una foglia per proteggerlo dal vento — qui Elias copre la luce per proteggere i fratelli dal buio). Cura-nel-buio."
+          },
+          {
+            "hook_id": "s10_h04",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte_fonda",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel non lascia la mano di Noah. Lo aiuta ad alzarsi. Si vestono sopra il pigiama: due strati, calze, sandali, un mantello di lana. Elias tiene la lanterna velata.",
+            "focal_object": "lanterna_velata_s10",
+            "atmosphere": "vestizione rapida e silenziosa nel buio, cerchio piccolo di luce della lanterna velata sui sandali, mano di Gabriel che non si stacca da quella di Noah",
+            "palette": "nero della stanza, giallo basso del cerchio di luce sui sandali, marrone-lana dei mantelli, ocra dei pigiami visibili sotto il bordo",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Tre figure quasi sagome, distinguibili solo dal cerchio di luce ai piedi. Gabriel al centro, Noah a destra mano nella mano, Elias a sinistra con la lanterna bassa. Vestizione 'in fretta', un mantello ognuno (info nei dettagli ma compressa nella focal_action). Il braccialetto di s09 NON al polso (vincolo ARCHI: castagna rugata al polso solo a S12)."
+          },
+          {
+            "hook_id": "s10_h05",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte_fonda",
+            "location": {
+              "id": "villaggio_centrale",
+              "qualifier": "piazza_attraversata"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre attraversano la Piazza. L'Albero Vecchio è una sagoma più nera del nero. Il Pozzo è una macchia grigia chiara contro il selciato. Mèmolo dorme da qualche parte.",
+            "focal_object": null,
+            "atmosphere": "piazza addormentata, aria umida d'autunno avanzato che bagna la lana, cerchio di luce piccolo davanti ai sandali, sagome appena percepibili delle case più vicine",
+            "palette": "nero pieno dominante, grigio chiarissimo macchia del Pozzo, sagoma più nera dell'Albero Vecchio, giallo-fioco velato del cerchio di luce ai piedi, marrone-lana dei mantelli",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Mèmolo offscreen («dorme da qualche parte») — non illustrato. L'Albero Vecchio e il Pozzo come sagome simboliche viste solo come ombre. Il cerchio di luce della lanterna velata occupa una porzione minima della tavola."
+          },
+          {
+            "hook_id": "s10_h06",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "notte_profonda",
             "location": {
               "id": "via_del_pontile",
-              "qualifier": null,
-              "legacy_string": "via_del_pontile"
+              "qualifier": "cammino_notturno"
             },
             "quadrant": "acqua_sud",
-            "hook_id": "vh_s10_cammino_notturno_lanterna_velata_cerchio_luce_sui_piedi",
-            "moment": "notte_profonda_via_del_pontile_quattro_figure_lanterna_velata",
-            "characters_present": [],
-            "elements": [],
-            "palette": "giallo_fiamma_velata_cerchio_piccolo_sui_piedi_nero_assoluto_tutto_attorno_ocra_foglie_secche_nel_cerchio_marrone_sentiero_marrone_lana_vestiti_bambini",
-            "notes": "[VISUAL] Via del pontile al buio. Intorno: nero pieno, nessuna stella (cielo coperto da nubi basse — realismo autunnale). Elias davanti con la lanterna di vetro già velata da un panno di casa (lana vecchia avvolta attorno al vetro, gesto dedotto non illustrato come scena a sé) a livello delle ginocchia — cerchio di luce gialla bassa che illumina solo i sassi del sentiero e le scarpe dei tre. Gabriel e Noah dietro Elias, mano nella mano. Il mondo attorno resta invisibile — case, alberi, orti, nulla è illustrato. Solo la striscia di sentiero e i piedi. Foglie secche mosse dal Mulinello passano nel cerchio di luce e spariscono nel buio. In lontananza, sulla destra, appena percepibile: suono zampate su roccia — zoccoli di Grunto nelle Montagne Gemelle, portato dall'aria ferma. Mai visto, mai nominato.\n\n[CRITIQUE] PAGINA-CHIAVE DI S10. Illustratore: resistere alla tentazione di illustrare il paesaggio — nessun contorno di case, nessuna sagoma di albero. SOLO il cerchio di luce. Il nero riempie 80-90% della tavola. Il cerchio di luce è piccolo — non un cono ampio di torcia moderna, un cerchio di 50-60 cm davanti ai piedi. Elias leggermente più avanti dei fratelli. La lanterna velata (vetro + lana avvolta) visibile nel palmo di Elias, dettaglio piccolo. Il gesto di velatura NON illustrato come scena a sé — il lettore lo deduce dal risultato (luce bassa, panno visibile).\n\n[VOICE] narratore_non_descrive_paesaggio_circostante_coerente_con_quello_che_i_personaggi_vedono_il_lettore_vede_solo_il_cerchio",
-            "onomatopee": [
-              "zampate_lontane_grunto_graficamente_piccolissime_tot_tot_tot_distante_non_drammatiche"
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah"
             ],
-            "stratification": {
-              "strato_1": "bambino_vede_tre_paia_di_piedi_in_un_cerchio_di_luce_nel_nero",
-              "strato_2": "lettore_registra_che_Noah_non_vede_la_strada_vede_solo_il_prossimo_passo",
-              "strato_3": "rilettore_coglie_metafora_ontologica_del_crescere_fare_un_passo_alla_volta_nel_non_visibile"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Elias davanti con la lanterna velata bassa. Gabriel in mezzo tiene la mano sinistra di Noah. Noah dietro. Camminano piano. Si vede solo il cerchio di luce sui piedi.",
+            "focal_object": "lanterna_velata_s10",
+            "atmosphere": "nero pieno attorno, cerchio piccolo di luce gialla che illumina sassi del sentiero e tre paia di scarpe, foglie secche mosse dal Mulinello passano nel cerchio e spariscono nel buio",
+            "palette": "nero pieno per 80-90% della tavola, giallo basso velato del cerchio di luce, ocra delle foglie secche nel cerchio, marrone del sentiero a tratti, marrone-lana dei mantelli",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Pagina-chiave di s10. Illustratore: nessun contorno di case, alberi, paesaggio — solo cerchio di luce e tre paia di piedi. Cerchio piccolo, non cono di torcia moderna. Strato 3: metafora del crescere — fare un passo alla volta nel non-visibile."
           },
           {
+            "hook_id": "s10_h07",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte_profonda",
             "location": {
-              "id": "pontile_bocca",
-              "qualifier": null,
-              "legacy_string": "pontile_bocca"
+              "id": "via_del_pontile",
+              "qualifier": "cammino_notturno_piu_avanti"
             },
             "quadrant": "acqua_sud",
-            "hook_id": "vh_s10_alba_pontile_bartolo_vede_amo_tuffo_fiamma_cammeo",
-            "moment": "alba_pontile_bocca_luce_che_cresce_taglio_oggettivo_autunnale",
-            "characters_present": [],
-            "elements": [],
-            "palette": "grigio_rosa_dorato_cielo_alba_bianco_avorio_bruma_sottile_acqua_nero_lucido_guscio_bartolo_ocra_legno_pontile_marrone_scuro_tartaruga_rosso_acceso_piccolissimo_fiamma_sullo_sfondo_giallo_tenue_lanterna_quasi_spenta",
-            "notes": "[VISUAL] Pontile della Bocca. Cielo che si apre — grigio-rosa-dorato, luce bassa da oriente. Sotto il Pontile: acqua del Fiume che Gira che esce verso il mare — movimento antiorario visibile. Bruma sottile sull'acqua. Sulle rocce piatte accanto alla struttura del Pontile: Bartolo — tartaruga di mare anziana, guscio scuro lucido di umidità, un occhio aperto uno quasi chiuso. I tre fratelli arrivano da nord (via del pontile) — Elias davanti con la lanterna ora non più velata e quasi spenta (alba la supera), Gabriel e Noah mano nella mano. Bartolo fa un movimento lentissimo del collo — fa spazio sulla panca di legno scuro accanto. In alto, sul mare: Amo in volo, tuffo per un pesce — spruzzo piccolo, lontano, cornice aerea. Fiamma sta passando sul Pontile dal lato villaggio — ha in mano qualcosa avvolto in un panno (pane caldo della prima infornata della notte, visibile solo dal vapore che esce dal panno nel freddo) — lo posa sulla panca del Pontile senza commentare e prosegue. Il Taglio è oggettivo — fiato dei fratelli visibile, lana dei vestiti leggermente umida, freddo che bagna. Dicembre si avvicina.\n\n[CRITIQUE] SCENA DI CHIUSURA. Illustratore: Bartolo tartaruga di mare, NON tasso NON nutria — guscio, pinne vestigiali, testa rugosa. Posizione su rocce piatte accanto al Pontile, NON in acqua. Amo in distanza — non dettagliato. Fiamma cammeo su lato sinistro della tavola, rosso vivo come unico squillo di colore — chiude la cornice S1 (primo squillo al Forno) e prepara S12 (cornice chiusura saga al Forno). Luce calda dell'alba compensa il freddo oggettivo — contrasto cromatico voluto.\n\n[VOICE] narratore_non_commenta_che_noah_non_ha_piu_paura_non_lo_dice_noah_non_lo_dichiara_nessuno_la_scena_sigilla_senza_verbo_di_stato",
-            "onomatopee": [
-              "tuffo_amo_graficamente_piccolo_splash_lontano_fiato_fratelli_visibile_non_onomatopeico"
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah"
             ],
-            "stratification": {
-              "strato_1": "bambino_vede_tartaruga_vecchia_sul_pontile_uccello_che_si_tuffa_volpe_che_lascia_qualcosa_di_caldo_alba_bella",
-              "strato_2": "lettore_registra_che_nessun_personaggio_dice_una_parola_la_paura_di_Noah_e_gia_passata_senza_essere_nominata",
-              "strato_3": "rilettore_coglie_terna_cornici_silenziose_blocco_d_bartolo_primo_cammeo_pieno_amo_cammeo_grunto_acustico_fiamma_ritorno_cornice_saga_via_forno"
-            },
+            "elements": [],
+            "focal_action": "I tre camminano verso sud. Alle loro spalle, dall'alto, dura due secondi un suono lievissimo di zoccolo su pietra. Continuano. Non lo nominano.",
+            "focal_object": null,
+            "atmosphere": "aria salata che comincia, rumore del Fiume che incontra il mare ancora lontano, suono di Grunto offscreen che arriva dalle Montagne Gemelle e si spegne, presenza che vigila non vista",
+            "palette": "nero quasi pieno, giallo basso del cerchio di luce, lieve grigio scuro nelle sagome delle Montagne suggerite dietro alle spalle, marrone del sentiero",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [
+              "tot tot tot"
+            ],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Grunto mai visto, mai nominato — solo il suono. Onomatopea graficamente piccolissima, in alto-destra, distante. Cammeo acustico (Bartolo cammeo pieno arriva all'alba, Amo cammeo aereo, Fiamma cammeo cromatico). Constraint Grunto: zero contatto fisico fratelli."
+          },
+          {
+            "hook_id": "s10_h08",
+            "type": "transizione",
             "is_signature": false,
-            "provenance": "original_v1"
+            "provenance": "extended_v2",
+            "moment": "prima_dell_alba",
+            "location": {
+              "id": "via_del_pontile",
+              "qualifier": "discesa_verso_pontile"
+            },
+            "quadrant": "acqua_sud",
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "La via gira e scende. Il cielo cambia piano dal nero al grigio scurissimo, poi grigio. Le sagome tornano, i bordi della via si riconoscono.",
+            "focal_object": null,
+            "atmosphere": "passaggio lento dal nero al grigio, sentiero che si materializza, aria salata più piena, fiato dei tre fratelli visibile per la prima volta, lanterna velata ancora accesa ma sempre più inutile",
+            "palette": "transizione nero → grigio scurissimo → grigio chiaro, prime sagome marroni delle case e degli alberi che riemergono, giallo-fioco della lanterna che si fa pallido, marrone-lana mantelli ora visibili",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Cerniera notte → alba. Sagome dei tre fratelli viste di spalle in piano medio sul sentiero in discesa. Per la prima volta nella storia il cielo è il soggetto, non il buio. Eco di s09_h10 (cielo di sera che chiudeva s09) — qui cielo che apre la mattina di s10."
+          },
+          {
+            "hook_id": "s10_h09",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "prima_alba",
+            "location": {
+              "id": "pontile_bocca",
+              "qualifier": "arrivo_lato_nord"
+            },
+            "quadrant": "acqua_sud",
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah",
+              "bartolo"
+            ],
+            "elements": [],
+            "focal_action": "Arrivano al Pontile. Il cielo è grigio-rosa. L'acqua della Bocca è blu-grigio brumosa. Bartolo è dentro la barca, con la coperta marrone e il guscio dietro come schienale.",
+            "focal_object": null,
+            "atmosphere": "alba senza sole netto, cielo coperto, luce che cresce, acqua brumosa con corrente antioraria che esce verso il mare, Bartolo immobile che fa spazio sulla panca senza parlare, Bartolo ha sentito arrivare i tre",
+            "palette": "grigio-rosa-dorato del cielo, bianco-avorio della bruma sull'acqua, blu-grigio brumoso della Bocca, marrone della coperta di Bartolo, nero lucido del guscio, ocra del legno del Pontile",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Apertura sul Pontile. I tre fratelli arrivano da nord (Via del Pontile) — Elias davanti con lanterna ormai quasi spenta, Gabriel e Noah mano nella mano. Bartolo nella barca, NON sulle rocce — coerente con narrazione fattuale. Il guscio dietro come schienale, dettaglio canonico. Nessuno parla. Inversione di apertura S1 (Forno caldo, Fiamma) — qui Pontile freddo, Bartolo silenzioso."
+          },
+          {
+            "hook_id": "s10_h10",
+            "type": "transizione",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "alba",
+            "location": {
+              "id": "pontile_bocca",
+              "qualifier": "panca_seduti_alba"
+            },
+            "quadrant": "acqua_sud",
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah",
+              "bartolo",
+              "amo",
+              "fiamma"
+            ],
+            "elements": [],
+            "focal_action": "Elias spegne la lanterna velata. I tre si siedono sulla panca: Elias, Noah al centro, Gabriel. Amo si tuffa e riemerge. Fiamma posa una pagnotta tiepida sulla panca: «Mangiate.» Riparte.",
+            "focal_object": "pagnotta_forno",
+            "atmosphere": "sigillo silenzioso, luce che cresce grigio-rosa-oro pallido, vapore della pagnotta nell'aria fredda, mantello rosso vivo di Fiamma unico squillo cromatico che torna verso la curva e sparisce",
+            "palette": "grigio-rosa-dorato del cielo, blu-grigio brumoso dell'acqua, nero lucido del guscio di Bartolo, marrone scuro della panca, rosso vivo del mantello di Fiamma piccolo nell'angolo, oro pallido della pagnotta tiepida con vapore bianco, sagome scure dei tre fratelli seduti",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [
+              "splash"
+            ],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Sigillo della storia e cerniera del blocco D verso S11. Tre cammei visibili in una sola tavola: Bartolo (cammeo pieno seduto in barca), Amo (cammeo aereo, splash piccolo lontano nell'acqua), Fiamma (cammeo cromatico, rosso vivo che attraversa e prosegue). Grunto resta acustico (s10_h07). Key_phrase di Fiamma alla lettera: «Mangiate.» — sola parola pronunciata in tutta la storia oltre alle cinque di Noah. Nessuno dice «ti è passata», nessuno commenta. La paura è stata attraversata, non sconfitta."
           }
         ]
       },
@@ -9768,6 +9955,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s09: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s09.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s10: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s10.yaml."
     }
   ]
 }
