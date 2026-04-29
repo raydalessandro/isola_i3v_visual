@@ -71,13 +71,3 @@ A fine cena, quando Noah ride di un'altra cosa che ha detto Elias, Gabriel allun
 Il Mulinello continua a passare attraverso le finestre aperte. Le tende si muovono. Una foglia gialla, già caduta da qualche albero del cortile, è arrivata fin dentro casa col vento e si è posata sul davanzale.
 
 Gabriel tiene il braccialetto in mano. Non si dice se lo mette o no.
-
----
-
-*[Fine Ciclo C. Pronto per Ciclo D — Autunno · Vento Mulinello forte · Tenere — al tuo via.]*
-
-# L'Isola dei Tre Venti — Narrazione di fatti
-
-> Versione di lavoro. Ciclo D — Autunno · Vento Mulinello / Concerto · Tenere · Sigillo.
->
-> Continuazione del documento dei Cicli A, B, C. Stesse convenzioni: italiano, presente narrativo, registro medio-asciutto, dialoghi codificati alla lettera, onomatopee preservate.

@@ -65,13 +65,3 @@ Lo dice e poi torna confuso. Si gira verso Pun, gli sistema la pelliccia sulla t
 I fratelli si guardano. Gabriel non chiede niente a Elias. Elias non spiega.
 
 Pun resta col padre. Loro tre si avviano verso casa. È pomeriggio inoltrato adesso. Il sole alto del mezzogiorno è virato verso il giallo più caldo di metà pomeriggio. Sui tetti, appena fuori dalla piazza, comincia a soffiare il primo Mulinello leggero della sera. Noah ha ancora i due bastoncini in mano. Ne lascia cadere uno per terra senza accorgersene, mentre cammina.
-
----
-
-*[Fine Ciclo B. Pronto per Ciclo C — Estate · Vento Mulinello · Cambiare — al tuo via.]*
-
-# L'Isola dei Tre Venti — Narrazione di fatti
-
-> Versione di lavoro. Ciclo C — Estate piena · Vento Mulinello / Intreccio · Cambiare.
->
-> Continuazione del documento dei Cicli A e B. Stesse convenzioni: italiano, presente narrativo, registro medio-asciutto, dialoghi codificati alla lettera, onomatopee preservate.

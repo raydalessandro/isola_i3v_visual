@@ -103,7 +103,3 @@ Fuori, oltre la finestra, è blu-nero di notte piena. La Piazza è vuota e dorme
 Il Mulinello cala fuori. La sera diventa notte.
 
 L'anno è finito.
-
----
-
-*[Fine Ciclo D. Saga completa, 12/12. Pronta per la Fase Hook (estensione a 10 hook/storia via agente) e poi per la stesura della voce autoriale.]*

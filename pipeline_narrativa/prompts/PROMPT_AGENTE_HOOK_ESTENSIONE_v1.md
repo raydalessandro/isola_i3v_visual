@@ -78,7 +78,7 @@ Devi distribuire le tipologie in modo bilanciato (vedi VINCOLI sotto).
 - **`introspettivo`** — soggetti fermi o quasi, densità simbolica, palette ridotta. Usato per momento-soglia o riflessione.
 - **`atmosferico`** — l'aria/luce/vento è il soggetto; figure secondarie o assenti. Nebbia, pioggia, controluce.
 - **`transizione`** — cammino, raccordo tra luoghi, ritmo del passaggio.
-- **`interno_caldo`** — interni domestici, vapore, vetri appannati. Tipico apertura/chiusura ad anello (forno, casa).
+- **`interno`** — interni domestici, vapore, vetri appannati. Tipico apertura/chiusura ad anello (forno, casa).
 - **`dettaglio`** — close-up su oggetto focale, mani, gesto piccolo.
 
 ---
@@ -128,7 +128,7 @@ Identifica 12–15 momenti illustrabili candidati dalla narrazione fattuale. NON
 Seleziona 10 momenti che insieme:
 - Coprono l'arco temporale della storia (inizio → fine)
 - Bilanciano le tipologie (vincoli 2–3)
-- Hanno almeno una `panorama` o `interno_caldo` per l'apertura
+- Hanno almeno una `panorama` o `interno` per l'apertura
 - Hanno una chiusura riconoscibile (eco di apertura, o cerniera al ciclo successivo)
 
 ### Step 4 — Compilazione

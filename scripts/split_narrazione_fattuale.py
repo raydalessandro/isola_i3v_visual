@@ -52,10 +52,14 @@ for i, line in enumerate(lines):
 
 assert len(starts) == 12, f'Trovate {len(starts)} storie, attese 12'
 
-# Prossimo confine: prima riga che inizia con "## CICLO" o "### S" o EOF
+# Confine: prossima storia/ciclo, oppure separatori inter-ciclo
+# (`*[Fine ...]*`, `# L'Isola...` h1 ripetuto, blockquote `> ` di transizione)
+END_RE = re.compile(r'^\s*(\*\[Fine|# L\'Isola)')
+
 def next_boundary(start_idx):
     for j in range(start_idx + 1, len(lines)):
-        if cycle_re.match(lines[j]) or story_re.match(lines[j]):
+        line = lines[j]
+        if cycle_re.match(line) or story_re.match(line) or END_RE.match(line):
             return j
     return len(lines)
 

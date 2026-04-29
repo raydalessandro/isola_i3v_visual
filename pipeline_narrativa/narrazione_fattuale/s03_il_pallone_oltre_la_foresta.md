@@ -39,13 +39,3 @@ Rovo non risponde subito. Si è già voltato per rientrare. Fa due passi dentro 
 Rientra. Bru lo segue, scivola tra le radici, sparisce. Si sente il passo di Rovo per qualche secondo ancora, sempre più lontano. Poi più niente.
 
 I tre fratelli tornano verso il Villaggio. Camminano in silenzio. Il pallone sotto il braccio di Gabriel. Il sole è andato giù del tutto. Il Mulinello della sera comincia adesso, basso, sui tetti.
-
----
-
-*[Fine Ciclo A. Pronto per Ciclo B — Primavera · Vento Intreccio · Connettere — al tuo via.]*
-
-# L'Isola dei Tre Venti — Narrazione di fatti
-
-> Versione di lavoro. Ciclo B — Primavera · Vento Intreccio · Connettere.
->
-> Continuazione del documento del Ciclo A. Stesse convenzioni: italiano, presente narrativo, registro medio-asciutto, dialoghi codificati mantenuti alla lettera, onomatopee preservate.
