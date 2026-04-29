@@ -13,7 +13,10 @@ Script di validazione del grafo, lanciati dall'agente di estensione hook (fase G
 
 ## Stato
 
-Da implementare prima dell'avvio della fase G. Placeholder qui per documentare il contratto.
+Da implementare come **audit posteriore** del grafo. Note importanti:
+- `audit_2_schema` — molti dei controlli (campi obbligatori, enum `type`/`composition_zone`/`provenance`, esattamente 10 hook, max 3 signature, max 3 consecutivi stesso type, almeno 4 type diversi, focal_action ≤25 parole) sono **già implementati nella validazione pre-scrittura del writer** `scripts/write_hooks_to_graph.py`. L'audit_2 standalone serve come check indipendente sul grafo a riposo.
+- `audit_3_navigability` — parzialmente coperto dal writer (location.id / characters / focal_object / wind_visible verificati contro `entities` del grafo). Da estendere a `quadrant` vs `cartografia/convenzioni/orientamenti_venti.md`.
+- `audit_1_integrity` e `audit_4_drift` — non coperti dal writer, da implementare per la copertura totale (drift richiede LLM per pattern AI banditi).
 
 ## Convenzione output
 

@@ -19,7 +19,7 @@ Questo repo contiene **due tracce di lavoro** + un input read-only + un workspac
 │   ├── documenti_progetto/         Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.
 │   ├── narrazione_fattuale/        12 narrazioni fattuali s01..s12 (input fase G, Ray)
 │   ├── prompts/                    prompt operativi versionati per agenti (es. fase G)
-│   ├── story_graph.json            grafo v1.0.0 schema 1.2
+│   ├── story_graph.json            grafo v1.1.0-pre schema 1.3 (fase G in corso)
 │   └── story_graph.v0.10.0.backup.json  backup pre-fase E
 ├── _porting_grafo/        ARCHIVIO una-tantum: workspace migrazione grafo v1.1 → v1.2 (fase E completata)
 ├── contributi/            proposte aggiunte schede da collaboratori esterni (file datati, mai modifica diretta)
@@ -65,7 +65,7 @@ Sito statico HTML+JS in [`catalogo_web/`](./catalogo_web/) per **consultare le e
 
 Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern AI da bandire, EAR, apparato — più il grafo storie aggiornato.
 
-- **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.0.0 schema 1.2** (S1-S12, fase E completata). Prossimo bump previsto v1.1.0 schema 1.3 (fase G, estensione hook).
+- **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.1.0-pre schema 1.3** (S1-S12, fase E completata + schema bump fase G eseguito). Promuove a v1.1.0 stabile alla prima scrittura di hook `extended_v2`. Backup pre-bump: `story_graph.json.pre_v1_3.backup.json`.
 - **Documenti progetto:** `pipeline_narrativa/documenti_progetto/` (Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.).
 - **Narrazione fattuale:** `pipeline_narrativa/narrazione_fattuale/` — 12 file `s01_*.md` ... `s12_*.md` con cronaca fattuale di ogni storia (input fase G, **completi al 2026-04-29**, derivati meccanicamente dal sorgente unico in `_source/Ciclo_a-b-c-d_*.txt` via `scripts/split_narrazione_fattuale.py`).
 - **Prompt operativi:** `pipeline_narrativa/prompts/` — prompt versionati per agenti dedicati (es. `PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`).
@@ -135,5 +135,5 @@ In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (
 
 **Ultimo aggiornamento:** 2026-04-28
 **Versione cartografia:** v0.6.1
-**Versione grafo storie:** v1.0.0 schema 1.2 (fase E completata; fase G in preparazione → v1.1.0 schema 1.3)
+**Versione grafo storie:** v1.1.0-pre schema 1.3 (fase E completata; schema fase G eseguito; estrazione hook s01-s03 in YAML proposals validati, in attesa di scrittura nel grafo)
 **Catalogo entità:** 115 (23 personaggi + 43 luoghi + 31 strade + 14 oggetti + 3 venti + 1 visual signature)

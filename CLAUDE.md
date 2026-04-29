@@ -30,8 +30,10 @@ In sintesi: idea autoriale (Ray, chat) → narrazione fattuale → estrazione 10
 isola_i3v_visual/
 │
 ├── pipeline_narrativa/        ⚠️ READ-ONLY (canone narrativo)
-│   ├── story_graph.json              v1.0.0 schema 1.2 (12 storie + entities + seeds + callbacks + quote_tracker)
+│   ├── story_graph.json              v1.1.0-pre schema 1.3 (12 storie + entities + seeds + callbacks + quote_tracker; fase G in corso)
 │   ├── story_graph.v0.10.0.backup.json  backup pre-migrazione fase E
+│   ├── story_graph.json.pre_v1_3.backup.json  backup pre-bump schema 1.2->1.3
+│   ├── hooks_proposals/<ciclo>/sNN.yaml  input deterministici per write_hooks_to_graph.py
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
 ├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela)
@@ -106,7 +108,7 @@ isola_i3v_visual/
 ### Fase E — COMPLETATA (2026-04-28)
 
 Migrazione una-tantum del grafo da schema legacy v1.1 a schema canonico v1.2:
-- **12/12 storie** in `pipeline_narrativa/story_graph.json` v1.0.0 schema 1.2
+- **12/12 storie** in `pipeline_narrativa/story_graph.json` v1.1.0-pre schema 1.3 (post-bump fase G)
 - **60 no_inference_fields decisi** via Q1-Q6 autoriali Ray (entry_point_type, closure_type, register, estimated_length, descriptive_pauses_count per ogni storia)
 - **87 provvisori P2** (22A + 47B + 18C) tracciati nei provisional file di `_porting_grafo/output/`
 - **8 misalignments tutti resolved** (mis_001..mis_007 + mis_008)
@@ -120,15 +122,29 @@ Compilazione body schede `visual/` usando il grafo v1.0.0 come fonte autorevole:
 - **F.2 (in corso)**: Ray + collaboratori esterni aggiungono dettagli autoriali alle schede (`Variabilità ammessa`, `Per stampa 3D`, `Per narrativa e social` + arricchimenti narrativi). Le proposte arrivano via `contributi/`.
 - **F.3 (pianificata)**: travaso inverso visual → grafo per dettagliare gli `entities` del grafo dove le schede hanno info aggiuntiva.
 
-### Fase G — IN PREPARAZIONE (2026-04-28+)
+### Fase G — IN CORSO (2026-04-29+)
 
-Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `visual_anchors.scene_hooks`. Bump grafo v1.0.0 → **v1.1.0** + schema v1.2 → **v1.3** (estensione additiva: nuovi campi `type`, `is_signature`, `provenance`, `composition_zone` su scene_hook).
+Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `visual_anchors.scene_hooks`.
 
-- **Input**: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (12/12 disponibili al 2026-04-29; sorgente unico in `_source/Ciclo*.txt`, split via `scripts/split_narrazione_fattuale.py`).
+**Schema bump GIÀ ESEGUITO** (2026-04-29): grafo v1.0.0 → v1.1.0-pre + schema v1.2 → v1.3 (estensione additiva). Nuovi campi obbligatori su hook `extended_v2`: `type`, `is_signature`, `provenance`, `composition_zone`. I 70 hook legacy esistenti sono ora `provenance: original_v1` (campi additivi opzionali). Promuove a v1.1.0 stabile alla prima scrittura. Vedi `scripts/migrate_graph_v1_2_to_v1_3.py`.
+
+- **Input fattuale**: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (12/12 disponibili al 2026-04-29; sorgente unico in `_source/Ciclo*.txt`, split via `scripts/split_narrazione_fattuale.py`).
 - **Prompt operativo**: `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
-- **Audit**: `scripts/audit/audit_1_integrity.py`, `audit_2_schema.py`, `audit_3_navigability.py`, `audit_4_drift.py` (da implementare).
+- **Workflow per ciclo (modalità deterministica):**
+  1. agente legge narrazione fattuale + grafo + Bible + Carta Voce + visual + cartografia
+  2. agente propone i 10 hook in markdown a Ray (vedi prompt)
+  3. su OK Ray → l'agente (o Ray stesso) crea `pipeline_narrativa/hooks_proposals/<ciclo>/sNN.yaml` con i 10 hook in formato deterministico
+  4. validazione: `python3 scripts/write_hooks_to_graph.py --story sNN --dry-run` (16 controlli, vincoli editoriali del prompt)
+  5. scrittura: `python3 scripts/write_hooks_to_graph.py --story sNN` oppure `--cycle <A|B|C|D>` per batch
+  6. il writer fa backup automatico (one-shot), bumpa graph_version a 1.1.0 stabile, appende migration_log
+- **Tipologie hook** (campo `type`): `panorama|azione|introspettivo|atmosferico|transizione|interno|dettaglio` (rinominato da `interno_caldo` il 2026-04-29).
+- **Audit grafo posteriore** (separato dal writer): `scripts/audit/audit_1..4.py` (da implementare; alcuni controlli già coperti dal writer).
 - **Modalità**: una storia alla volta, con approvazione Ray tra storia e storia.
-- **Output**: `pipeline_narrativa/story_graph.json` con 120 hook totali (10 × 12 storie), tutti validati.
+- **Output finale atteso**: `pipeline_narrativa/story_graph.json` con 120 hook totali (10 × 12 storie), tutti validati.
+
+**Stato avanzamento fase G:**
+- Ciclo A (s01–s03): hook scritti da Ray, YAML proposals validati, scrittura nel grafo da eseguire.
+- Cicli B/C/D: da fare.
 
 ---
 
@@ -262,8 +278,15 @@ python3 scripts/build_catalogo_web.py
 # Travaso grafo → schede (fase F.1, idempotente)
 python3 scripts/compile_visual_from_graph.py
 
-# Verifica grafo (deve essere JSON valido v1.2)
+# Verifica grafo (deve essere JSON valido schema 1.3 post-bump fase G)
 python3 -c "import json; g=json.load(open('pipeline_narrativa/story_graph.json')); print('schema:', g['schema_version'], 'graph:', g['graph_version'], 'stories:', len(g['stories']))"
+
+# Fase G — workflow hook visivi
+python3 scripts/migrate_graph_v1_2_to_v1_3.py            # bump schema (one-shot, idempotente)
+python3 scripts/promote_visual_entities_to_graph.py      # promuove entita' catalogo->grafo
+python3 scripts/write_hooks_to_graph.py --story s01 --dry-run    # validazione
+python3 scripts/write_hooks_to_graph.py --story s01              # scrittura
+python3 scripts/write_hooks_to_graph.py --cycle A                # batch ciclo
 
 # Avvia catalogo web in locale
 python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/

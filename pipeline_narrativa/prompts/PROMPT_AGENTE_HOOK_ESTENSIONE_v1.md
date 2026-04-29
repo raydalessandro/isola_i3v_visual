@@ -1,11 +1,15 @@
 # AGENTE — Estensione hook visivi 5→10 per storia
 
 > **Progetto:** L'Isola dei Tre Venti
-> **Fase grafo:** 1.0.0 → 1.1.0 (schema v1.2 → v1.3 estensione additiva campi hook)
+> **Fase grafo:** v1.1.0-pre schema v1.3 (bump eseguito 2026-04-29). Promuove a v1.1.0 stabile alla prima scrittura `extended_v2` di una storia.
 > **Output atteso:** ogni storia s01..s12 con esattamente 10 `visual_anchors.scene_hooks` validati
 > **Modalità:** una storia alla volta, con approvazione umana tra storia e storia
 >
-> *Nota Claude (operatore tecnico): il prompt originale di Ray indicava "0.3.0 → 0.4.0". Ho aggiornato a "1.0.0 → 1.1.0" per coerenza con la numerazione attuale del grafo post-fase E. Lo schema v1.2 ha `additionalProperties: false` su `scene_hook`: l'aggiunta dei nuovi campi (`type`, `is_signature`, `provenance`, `composition_zone`) richiede bump a schema v1.3. Da confermare con Ray prima di procedere.*
+> **Tooling deterministico** (post-bump):
+> - input proposta: `pipeline_narrativa/hooks_proposals/<ciclo>/sNN.yaml`
+> - validatore + writer: `python3 scripts/write_hooks_to_graph.py --story sNN [--dry-run]`
+> - 16 controlli pre-scrittura (campi obbligatori, riferimenti id catalogo, vincoli editoriali)
+> - backup automatico al primo write
 
 ---
 

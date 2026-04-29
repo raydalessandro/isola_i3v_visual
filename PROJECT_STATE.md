@@ -1,6 +1,35 @@
-# PROJECT_STATE — Snapshot al 2026-04-28
+# PROJECT_STATE — Snapshot al 2026-04-29
 
-> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → preparazione fase G) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-04-29 — Fase G in corso (schema bump fatto + ciclo A pronto)
+
+**Stato corrente:**
+- **Grafo:** `pipeline_narrativa/story_graph.json` **v1.1.0-pre schema 1.3** (post-bump fase G). 70 hook legacy normalizzati a `provenance: original_v1` + `is_signature: bool`. Backup pre-bump: `story_graph.json.pre_v1_3.backup.json`. Promuove a v1.1.0 stabile alla prima scrittura `extended_v2`.
+- **Catalogo:** 115 entities lato visual (invariato). Grafo: +4 entities promosse (`sentiero_montagne_gemelle`, `pozza_abbeveratoio_pastori`, `radura_dei_pini`, `pallone_di_stoffa_cucita`).
+- **Cartografia:** v0.6.2 — rinomina id `pozza_dei_pascoli` → `pozza_abbeveratoio_pastori` per allineamento canone (105 feature).
+- **Narrazione fattuale:** 12/12 file `s01_*.md`..`s12_*.md` derivati dal sorgente unico `_source/Ciclo_a-b-c-d_*.txt` via `scripts/split_narrazione_fattuale.py`.
+
+**Tooling fase G (nuovo):**
+- `scripts/migrate_graph_v1_2_to_v1_3.py` — bump schema one-shot, idempotente.
+- `scripts/promote_visual_entities_to_graph.py` — promozione idempotente entità catalogo → grafo.
+- `scripts/write_hooks_to_graph.py` — writer deterministico hook (input YAML per storia, 16 controlli, `--story`/`--cycle`/`--dry-run`).
+- `scripts/split_narrazione_fattuale.py` — split sorgente cicli → 12 file storia.
+
+**Avanzamento estrazione hook:**
+- Ciclo A (s01-s03): testo autoriale Ray ✅ → YAML proposals ✅ (30 hook validati dry-run) → scrittura nel grafo ⏳.
+- Cicli B/C/D: da fare. Modalità in valutazione (agente storia-per-storia o batch).
+
+**File chiave introdotti in questa sessione:**
+- `scripts/migrate_graph_v1_2_to_v1_3.py` + backup pre-bump
+- `scripts/promote_visual_entities_to_graph.py`
+- `scripts/write_hooks_to_graph.py`
+- `scripts/split_narrazione_fattuale.py`
+- `pipeline_narrativa/hooks_proposals/cicloA/s0{1,2,3}.yaml`
+- 12 file `pipeline_narrativa/narrazione_fattuale/sNN_*.md` + `_source/`
+- `docs/PIPELINE.md`
+
+---
 
 ## Sessione 2026-04-28 — Fase E completata + Fase G in preparazione
 
