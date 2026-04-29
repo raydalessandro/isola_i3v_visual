@@ -2,7 +2,9 @@
 
 Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fino al testo libro committato. Vale per ogni storia s01..s12 (e per future espansioni).
 
-> **Nota:** la repo ora è **strutturata** ma il flusso non è ancora **automatizzato** end-to-end. Questo doc fissa la mappa per ricostruire l'automazione quando le 12 storie saranno finite. Stato attuale: 70% delle tappe meccaniche sono mappate; gli artefatti (script audit, prompt scrittura prosa) sono specificati ma non tutti implementati.
+> **Nota:** la repo è **strutturata** e parzialmente **automatizzata**. La fase G (estrazione 10 hook visivi per storia) è stata completata il 2026-04-29 con tooling deterministico (`scripts/write_hooks_to_graph.py` + agenti sub `general-purpose` per la stesura). Stato: ~70% delle tappe meccaniche automatizzate; manca prompt+orchestrazione per la scrittura prosa autoriale (Tappa 6).
+>
+> **Pipeline parallela visual** (canonizzazione delle 115 schede `visual/` + immagini canoniche per illustrazioni): vedi [`_visual_pipeline/`](../_visual_pipeline/) — flusso a 6 fasi separato dal flusso storia, alimenta il prompt-immagine finale con reference visivi per personaggi/oggetti/luoghi.
 
 ---
 
@@ -98,12 +100,15 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 
 ---
 
-## Stato attuale (2026-04-28)
+## Stato attuale (2026-04-29)
 
 ### Pronto e funzionante
 
-- **Tappa 4** (scrittura grafo): pattern dimostrato in fase E (script `_porting_grafo/scripts/migrate_p1.py` + override mapping). Il grafo si scrive in modo deterministico da input strutturato.
-- **Tappa 2** (estrazione hook): prompt operativo completo già scritto in `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`. Pronto per l'avvio quando arrivano le narrazioni fattuali.
+- **Tappa 1** (narrazione fattuale): 12/12 file `pipeline_narrativa/narrazione_fattuale/sNN_*.md` disponibili (sorgente unico in `_source/Ciclo*.txt` + script `scripts/split_narrazione_fattuale.py` idempotente).
+- **Tappa 2** (estrazione hook): prompt operativo + workflow validato. Modalità: agente sub general-purpose con prompt mirato → proposta markdown → review umana → conversione YAML.
+- **Tappa 4** (scrittura grafo): `scripts/write_hooks_to_graph.py` con 16 controlli pre-scrittura, idempotente, backup automatico. **Eseguito su tutte le 12 storie il 2026-04-29 — Fase G completata, 120/120 hook v1.3 nel grafo.**
+- **Schema bump v1.2 → v1.3**: eseguito via `scripts/migrate_graph_v1_2_to_v1_3.py` (one-shot, retro-compat sui hook legacy).
+- **Promozione entità catalogo → grafo**: `scripts/promote_visual_entities_to_graph.py` (idempotente).
 
 ### Specificato ma non implementato
 

@@ -36,12 +36,20 @@ isola_i3v_visual/
 │   ├── hooks_proposals/<ciclo>/sNN.yaml  input deterministici per write_hooks_to_graph.py
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
-├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela)
+├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche
 │   ├── personaggi/                   23 schede (3 fratelli, 5 primari, 5 secondari, 5 cuccioli, 5 collettivi)
+│   │   └── individuali/primari/{fiamma,bartolo}/immagini/  4+4 immagini canoniche v1
 │   ├── luoghi/                       74 schede (per quartiere: aria/acqua/fuoco/terra/centro + perimetro + strade)
 │   ├── oggetti/                      14 schede (13 oggetti-simbolo saga + 1 oggetto_di_scena_ricorrente)
 │   ├── venti/                        3 schede (Taglio/Intreccio/Mulinello)
 │   └── visual_signatures/            1 scheda (quando_acqua_trema)
+│
+├── _visual_pipeline/          ✅ pacchetto operativo (canone, template, esempi, skill)
+│   ├── README.md                     entry point pipeline
+│   ├── _canone/                      3 doc canone saga (stylesheet, scale, palette)
+│   ├── _templates/                   5 template (scheda + prompt grok + descrizione social)
+│   ├── _skill/                       PIPELINE.md (flusso 6 fasi) + CHECKLIST.md
+│   └── _esempi/                      bartolo, fiamma, forno, grembiule_fiamma (validati)
 │
 ├── cartografia/               ✅ scrittura tecnica
 │   ├── geo/island.geojson            104 feature, sistema cartesiano locale
@@ -117,12 +125,32 @@ Migrazione una-tantum del grafo da schema legacy v1.1 a schema canonico v1.2:
 
 ### Fase F — IN CORSO (2026-04-28+)
 
-Compilazione body schede `visual/` usando il grafo v1.0.0 come fonte autorevole:
+Compilazione body schede `visual/` usando il grafo come fonte autorevole + canonizzazione completa via `_visual_pipeline/`:
 - **F.1 (fatto, meccanico)**: `scripts/compile_visual_from_graph.py` ha travasato dati grafo → 56 sezioni stub compilate (Identità visuale, Espressione/comportamento, Cliché da evitare, Storie/scene di apparizione).
-- **F.2 (in corso)**: Ray + collaboratori esterni aggiungono dettagli autoriali alle schede (`Variabilità ammessa`, `Per stampa 3D`, `Per narrativa e social` + arricchimenti narrativi). Le proposte arrivano via `contributi/`.
+- **F.2 (in corso, in collaborazione con Ray)**: completamento delle 115 schede a canone chiuso via `_visual_pipeline/` (vedi sezione dedicata sotto). 11/115 schede già canonizzate al 2026-04-29 (Fiamma, Bartolo, Forno, 7 luoghi, grembiule_fiamma, Gabriel parziale). 8 immagini canoniche generate (4 Fiamma + 4 Bartolo).
 - **F.3 (pianificata)**: travaso inverso visual → grafo per dettagliare gli `entities` del grafo dove le schede hanno info aggiuntiva.
 
-### Fase G — IN CORSO (2026-04-29+)
+### Visual pipeline (`_visual_pipeline/`) — Fase F.2 operativa
+
+Pacchetto operativo a livello root della repo per **completare le 115 schede `visual/`** con canone chiuso e immagini canoniche generate. Sviluppato da Ray in chat dedicata, validato.
+
+- **Entry point:** `_visual_pipeline/README.md`
+- **Flusso 6 fasi (per scheda):** Setup (lettura canone + template + fonti) → scheda.md → prompt_grok.md (per personaggi/oggetti) o blocco LOCATION testuale (per luoghi) → descrizione_narrativa_social.md → generazione immagini con Grok Imagine (Ray) → push GitHub → eventuale aggiornamento canone
+- **Canone saga (read-only, 3 doc):** `_visual_pipeline/_canone/01_SAGA_STYLESHEET_v1.md`, `02_SAGA_SCALE_v1.md` (Gabriel = 1.0 GU), `03_SAGA_PALETTE_v1.md`
+- **Template (5):** `_visual_pipeline/_templates/TEMPLATE_scheda_{personaggio,oggetto,luogo}.md`, `TEMPLATE_prompt_grok_personaggio.md`, `TEMPLATE_descrizione_narrativa_social.md`
+- **Esempi validati:** `_visual_pipeline/_esempi/{fiamma,bartolo,forno,grembiule_fiamma}/` — pipeline personaggi e luoghi entrambe robuste (testate su 2 specie diversissime + 1 luogo complesso 3 blocchi LOCATION)
+- **Output deliverable per scheda:**
+  - **Personaggi:** scheda + prompt_grok + descrizione_social + 4 immagini canoniche in `immagini/`
+  - **Oggetti:** scheda + prompt_grok + descrizione_social + 1-2 immagini
+  - **Luoghi:** scheda con BLOCCO LOCATION testuale + descrizione_social (NO immagini reference, le proporzioni si rompono — strategia "blocco LOCATION testuale + reference personaggi")
+  - **Luoghi complessi (es. Forno):** PIÙ blocchi LOCATION distinti nella stessa scheda (esterno/interno/cortile). Mai mischiare blocchi nel prompt scena.
+- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.png` (es. `fiamma_canonica_v1_fronte.png`) + `<id>_turnaround_v1.png`. Le `_canonica_v1_*` sono intoccabili come reference.
+- **Vincoli operativi:** mai modificare `pipeline_narrativa/` (read-only), mai inventare contenuto non derivabile, mai modificare `_canone/*.md` senza autorizzazione + bump versione, mai pushare su main senza il via di Ray, sempre rigenerare `catalogo_web/data/entities.json` dopo modifiche a `visual/`.
+- **Ordine consigliato di completamento:** test/validazione → tre fratelli (anchor scala) → primari → secondari → cuccioli → collettivi → oggetti → luoghi per quartiere → strade → venti+signatures.
+
+Vedi `_visual_pipeline/README.md` + `_visual_pipeline/_skill/PIPELINE.md` per il flusso completo.
+
+### Fase G — COMPLETATA (2026-04-29)
 
 Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `visual_anchors.scene_hooks`.
 
@@ -142,9 +170,12 @@ Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `v
 - **Modalità**: una storia alla volta, con approvazione Ray tra storia e storia.
 - **Output finale atteso**: `pipeline_narrativa/story_graph.json` con 120 hook totali (10 × 12 storie), tutti validati.
 
-**Stato avanzamento fase G:**
-- Ciclo A (s01–s03): hook scritti da Ray, YAML proposals validati, scrittura nel grafo da eseguire.
-- Cicli B/C/D: da fare.
+**Stato fase G: COMPLETATA il 2026-04-29.**
+- Tutti e 4 i cicli scritti (A: s01-s03, B: s04-s06, C: s07-s09, D: s10-s12)
+- 120/120 hook v1.3 nel grafo (10 × 12 storie), 31 signature totali (max 3/storia)
+- Workflow validato: Ciclo A scritto direttamente da Ray, Cicli B-D estratti via agente sub general-purpose con prompt mirato + review umana + edit minimi
+- Tempo medio per storia: ~3-5 min agente sub + ~5 min review + write
+- Backup chain: `pre_v1_3.backup.json` → `pre_fase_g.backup.json` → grafo corrente
 
 ---
 
@@ -158,6 +189,15 @@ Compilazione schede `visual/`. Vedi `skills/visual/compilatore.md`.
 - Travaso meccanico fonte → scheda (no inferenza)
 - Sostituisce solo placeholder `_da popolare dal grafo_`
 - Rigenera `catalogo_web/data/entities.json` dopo modifiche
+
+### Modalità "agente visual pipeline" (canonizzazione schede + immagini)
+Completamento canonico delle schede `visual/` via `_visual_pipeline/`. Vedi `_visual_pipeline/README.md` + `_visual_pipeline/_skill/PIPELINE.md`.
+- **Lettura obbligatoria**: 3 doc canone saga (`_visual_pipeline/_canone/`), template della tipologia, esempio validato (`_visual_pipeline/_esempi/`)
+- **Output per scheda (personaggio):** `scheda.md` + `prompt_grok.md` + `descrizione_narrativa_social.md` (Claude) → 4 immagini canoniche con Grok Imagine (Ray)
+- **Output per scheda (luogo):** `scheda.md` con BLOCCO LOCATION testuale (anche multipli per luoghi complessi) + `descrizione_narrativa_social.md`. NO `prompt_grok.md` per luoghi.
+- **Output per scheda (oggetto):** scheda + prompt + descrizione + 1-2 immagini canoniche
+- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.png` + `<id>_turnaround_v1.png`
+- **Vincoli:** mai modificare canone (`_visual_pipeline/_canone/*.md`) senza autorizzazione + bump versione, sempre rigenerare `catalogo_web/` dopo modifiche, sempre branch dedicato + merge ff su main
 
 ### Modalità "lettore + commentatore" (collaboratore esterno)
 Vedi sezione 5 (regole rigorose).
