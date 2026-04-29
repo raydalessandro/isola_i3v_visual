@@ -5,6 +5,8 @@ Repository di lavoro per il progetto **L'Isola dei Tre Venti** (saga di 12 stori
 > 🔎 **Visualizzatore catalogo entità (uso interno):** [`catalogo_web/`](./catalogo_web/) — sito statico che mostra tutte le 115 entità della saga (personaggi, luoghi, oggetti, venti, signatures) con sidebar navigabile e gallery immagini. Una volta abilitate le GitHub Pages: `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`. In locale: `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
 >
 > 🗺 **Viewer cartografia (mappa interattiva):** [`cartografia/geo/viewer/index.html`](./cartografia/geo/viewer/index.html) — apri con doppio click. 104 feature, ricerca, filtri, pannello dettaglio.
+>
+> 🔁 **Pipeline operativa (flusso end-to-end per una storia):** [`docs/PIPELINE.md`](./docs/PIPELINE.md) — diagramma + tabella delle 7 tappe (idea autoriale → narrazione fattuale → 10 hook → grafo → audit → prosa → commit). Fissa cosa è automatizzabile e cosa resta umano (~70% auto, by design). Stato attuale: la repo è strutturata ma il flusso non è ancora automatizzato end-to-end — il documento mappa cosa serve per scalare quando le 12 storie saranno completate.
 
 Questo repo contiene **due tracce di lavoro** + un input read-only + un workspace di porting completato:
 
@@ -26,6 +28,7 @@ Questo repo contiene **due tracce di lavoro** + un input read-only + un workspac
 │   ├── build_catalogo_web.py       rigenera catalogo_web da visual/
 │   ├── compile_visual_from_graph.py  travaso meccanico grafo → schede (fase F.1)
 │   └── audit/                      audit grafo (fase G, 4 script da implementare)
+├── docs/                  documentazione di processo (es. PIPELINE.md)
 ├── CLAUDE.md              istruzioni per istanze IA (LEGGI PRIMA DI MODIFICARE)
 ├── PROJECT_STATE.md       snapshot operativo
 └── SYNC_LOG.md            log dei cambiamenti da riflettere altrove

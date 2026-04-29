@@ -16,6 +16,12 @@ Versione: 2026-04-28 (post-fase E grafo v1.0.0).
 6. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
 7. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
 
+## Pipeline operativa (per nuova storia)
+
+Per il **flusso end-to-end** dall'idea autoriale di Ray al testo libro committato (7 tappe, ~70% automatizzabile), vedi **[`docs/PIPELINE.md`](./docs/PIPELINE.md)**.
+
+In sintesi: idea autoriale (Ray, chat) → narrazione fattuale → estrazione 10 hook visivi → review hook → scrittura grafo → audit → prosa autoriale → review → commit. Ad ogni tappa il documento dice quale prompt/script usare e che file produce.
+
 ---
 
 ## 1. Mappa della repo
