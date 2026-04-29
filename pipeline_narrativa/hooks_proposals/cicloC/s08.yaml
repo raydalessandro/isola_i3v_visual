@@ -101,3 +101,93 @@ hooks:
     onomatopee: ["CRACK", "TONFO"]
     composition_zone: corner_lower_right
     notes: "HOOK FIRMA. Onomatopea-firma CRACK isolata graficamente (fonte: narrazione fattuale s08). TONFO non isolato. Calamita: il punto in cui il ramo tocca il bordo alzato del Pozzo. Mèmolo piccolo dall'altra parte della piazza, fuori traiettoria di mezzo metro, fermo. nido_vuoto_s08 seminato qui — incastrato in una biforcazione secondaria della chioma sospesa (microdettaglio). Pattern A in bloom pieno."
+
+  - hook_id: s08_h06
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: crepuscolo
+    location:
+      id: pozzo_piazza
+      qualifier: bordo_lato_piazza_seduti
+    characters_present: [gabriel, memolo]
+    focal_action: "Gabriel siede sul bordo del Pozzo accanto a Mèmolo, gli tiene la mano. Mèmolo dice piano: «L'albero ha aspettato che nessuno fosse sotto.» Poi torna a confondersi."
+    focal_object: sciarpa_memolo
+    atmosphere: "centro silenzioso, inversione tenera dei ruoli, frase precisa che cade nel crepuscolo, mano sulla mano"
+    palette: "bianco pietra del bordo del Pozzo, ocra della sciarpa storta di Mèmolo unico punto caldo, sagoma scura di Gabriel di profilo, cielo piombo che si sta scaricando, verdi scuri del fogliame caduto sullo sfondo"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. La key_phrase di Mèmolo dal grafo (l_albero_ha_aspettato_che_nessuno_fosse_sotto) compare ALLA LETTERA, attribuita a Mèmolo. Vincolo Bible §4.7 'una a storia' rispettato. Gabriel di tre quarti, Mèmolo seduto raccolto, sciarpa di sbieco. Strato 3: inversione ruoli zio-buffo / fratello-grande mai dichiarata."
+
+  - hook_id: s08_h07
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: crepuscolo
+    location:
+      id: pozzo_piazza
+      qualifier: lato_dietro_pozzo_chioma_caduta
+    characters_present: [gabriel, noah]
+    focal_action: "Nello stesso istante Gabriel alza gli occhi. Tra le foglie dei rami caduti, dietro il Pozzo, vede passare la maglia di Noah, due mani che posano un nido vuoto."
+    focal_object: nido_vuoto_s08
+    atmosphere: "vedere-attraverso-mediazioni, micro-occhiata mai nominata, gesto piccolo di cura nel margine invisibile"
+    palette: "verdi scuri del fogliame caduto in primo piano sfocato, squillo del colore della maglia di Noah unico movimento dietro, bianco-pietra del Pozzo a sinistra fuori fuoco, marrone secco del nido posato su un punto piano, foglia grossa di copertura"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Strato 3 puro: precursore della paura autonoma di Gabriel s09 (eco di s07_h07 ai due massi, ma più chiara). Gabriel non in frame come soggetto frontale — si vede solo il taglio del suo sguardo dal basso verso il varco. Noah inquadrato attraverso il fogliame, mai pieno. Pattern A: cura di una cosa già vuota. Voice constraint: zero nominazione nel testo."
+
+  - hook_id: s08_h08
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: sera_crepuscolo_inoltrato
+    location:
+      id: via_scuola
+      qualifier: chioma_caduta_sotto_lanterne
+    characters_present: [nodo, elias, mantenitori, gabriel, noah]
+    focal_action: "Nodo tiene un ramo grosso in tensione. Elias esegue il nodo marinaro sulla corda. Quattro nodi. Dopo il quarto, Nodo lo guarda e fa un cenno. Zero parole."
+    focal_object: corda_nodo
+    atmosphere: "lavoro collettivo notturno, lanterne accese al crepuscolo, riconoscimento tecnico muto, terza applicazione del marinaro in crisi reale"
+    palette: "giallo terroso delle lanterne dei Mantenitori, marrone scuro del legno di noce spezzato, ocra della corda tesa, sagome di età diverse attorno al ramo, cielo notte che si chiude, ombre lunghe che si moltiplicano"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Bloom pieno seed marinaro (terza applicazione dopo s05 e s07, prima volta in crisi reale, non in calma). Nodo distinto da s05: qui Mantenitore part-time tra altri, non artigiano-cliente. Cenno di Nodo a Elias = riconoscimento muto, non premio (gesto del capo, non parola). TOK-TOK-TOK rimosso: presente nel quote_tracker ma non esplicito nella narrazione fattuale; coerenza fattuale prevale."
+
+  - hook_id: s08_h09
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: notte
+    location:
+      id: case_del_mattino
+      qualifier: avvicinamento_quartiere_fuoco
+    characters_present: [gabriel, elias, noah, fiamma]
+    focal_action: "Fiamma mette un altro cornetto in mano a ognuno e li manda a casa. Il Mulinello si è esaurito. L'aria è di nuovo pulita, l'afa è passata."
+    focal_object: pagnotta_forno
+    atmosphere: "notte ferma dopo la tempesta, aria come dopo lavata, ritorno al ciclo casa, cornetto come gesto cornice"
+    palette: "blu notte sopra, cornice calda arancione del Forno alle spalle dei fratelli, ocra dei sentieri verso Case del Mattino, sagome dei tre fratelli che camminano in fila, cornetti chiari nelle mani"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "Cerniera notte-mattina. Zero parole tra i fratelli. Ognuno tiene la sua cosa piccola (Noah il nido, Gabriel la micro-occhiata, Elias il cenno). Il cornetto chiude l'anello con h01 (apertura forno)."
+
+  - hook_id: s08_h10
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: piazza_villaggio
+      qualifier: lato_pozzo_e_tettoia_forno_visti_insieme
+    characters_present: [noah, memolo, stria, coltivatori_del_cerchio]
+    focal_action: "Noah va dietro il Pozzo: il nido è lì, la foglia sopra. Sotto la tettoia del Forno, il legno del noce sta catastato in pile ordinate."
+    focal_object: nido_vuoto_s08
+    atmosphere: "isola che riprende, luce nitida e pulita estiva, piccolo rituale istituito, sigillo silenzioso"
+    palette: "luce dorata del mattino estivo, bianco-pietra del Pozzo intatto, verde secco del nido coperto da foglia grossa, marrone delle pile di legno catastato sotto tettoia, ocra della sciarpa storta di Mèmolo lontano, sagoma alata di Stria sul tetto della scuola"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Chiusura ad anello visiva. Sigillo silenzioso: Mèmolo passa, si ferma davanti al Pozzo, guarda il legno catastato, si tocca la sciarpa storta, va via — figura piccola sul lato. Stria atterra sul tetto della scuola come ogni mattina (cammeo routine). Coltivatori lontani con la cantilena. Pattern A pulito: la legna del noce diventerà pane (mai detto)."
