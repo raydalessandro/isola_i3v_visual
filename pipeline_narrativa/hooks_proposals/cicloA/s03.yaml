@@ -1,0 +1,189 @@
+# Hook ciclo A — S03 — Il Pallone oltre la Foresta
+# Fonte: testo autoriale di Ray del 2026-04-29 (chat).
+# NB: s03_h10 originariamente usava `via_di_ritorno_villaggio` (assente
+# da geojson e catalogo). Sostituito con `via_degli_orti` (via canonica
+# che parte dal margine Orti del Cerchio verso Piazza del Villaggio,
+# coerente con la narrazione fattuale s03).
+
+story_id: s03
+
+hooks:
+  - hook_id: s03_h01
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: orti_del_cerchio
+      qualifier: margine_foresta
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre tirano calci al pallone. Noah corre di traverso, Elias para, Gabriel passa."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "gioco infantile, libertà del pomeriggio"
+    palette: "verde-marrone degli orti + bianco-crema del pallone + cielo grigio piatto"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: sky_space
+    notes: null
+
+  - hook_id: s03_h02
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: orti_del_cerchio
+      qualifier: vista_panoramica
+    characters_present: [coltivatori_del_cerchio, gabriel, elias, noah]
+    focal_action: "Vista d'insieme: gli Orti aperti, la Foresta come muro verde scuro. Coltivatori che chiudono il lavoro."
+    focal_object: null
+    atmosphere: "giornata che cala, cantilena bassa dei Coltivatori"
+    palette: "verde chiaro orti + verde scuro Foresta + grigio cielo"
+    wind_visible: null
+    onomatopee: ["TUM-tum-TUM"]
+    composition_zone: sky_space
+    notes: "Zappe sulle ultime zolle in lontananza."
+
+  - hook_id: s03_h03
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: orti_del_cerchio
+      qualifier: margine_foresta
+    characters_present: [noah]
+    focal_action: "Noah tira un calcio mal misurato. Il pallone parte di traverso."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "istante, errore, pallone che vola in posto sbagliato"
+    palette: "uguale h01 ma con tensione di traiettoria"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: null
+
+  - hook_id: s03_h04
+    type: dettaglio
+    is_signature: true
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: foresta_intrecciata
+      qualifier: primi_tronchi
+    characters_present: []
+    focal_action: "Il pallone rotola tra le radici. Si vede ancora per qualche metro, poi sparisce."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "soglia, l'oggetto è dall'altra parte"
+    palette: "verde scurissimo dei tronchi + bianco-crema del pallone come unico punto chiaro"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Inquadratura stretta sui primi tronchi. Il pallone come unico elemento luminoso nel buio della Foresta."
+
+  - hook_id: s03_h05
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: foresta_intrecciata
+      qualifier: confine_orti
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre si fermano sul margine. Non entrano. Sanno senza che glielo abbia detto nessuno."
+    focal_object: null
+    atmosphere: "soglia non valicata, sapere implicito, sera che avanza"
+    palette: "verde orti + nero della Foresta + sagome dei tre"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "Densità del momento. Tre piccole figure davanti a un muro verde."
+
+  - hook_id: s03_h06
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: foresta_intrecciata
+      qualifier: confine_orti
+    characters_present: [elias]
+    focal_action: "Elias fa un passo, si ferma sulla linea senza attraversare, chiama: «C'è nessuno?»"
+    focal_object: null
+    atmosphere: "chiamata nel vuoto, attesa di risposta"
+    palette: "chiaro di Elias + nero-verde della Foresta dietro"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: corner_lower_right
+    notes: null
+
+  - hook_id: s03_h07
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: foresta_intrecciata
+      qualifier: vista_dalla_soglia
+    characters_present: [rovo]
+    focal_action: "La Foresta risponde. Un passo pesante, voce brusca, fruscio di foglie morte."
+    focal_object: null
+    atmosphere: "la Foresta che reagisce, ombre che si muovono"
+    palette: "scurissimi verdi e marroni, due punti più chiari (sagoma di Rovo, occhi di Bru)"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Rovo NON ancora visibile bene. Bru come ombra appena percepibile. Tensione di soglia."
+
+  - hook_id: s03_h08
+    type: azione
+    is_signature: true
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: foresta_intrecciata
+      qualifier: confine_orti
+    characters_present: [rovo, bru, gabriel, elias, noah]
+    focal_action: "Rovo posa il pallone per terra dalla parte degli Orti. A un passo dal margine. Non lo lancia."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "scambio sulla soglia, regola implicita rispettata, Rovo brusco ma non ostile"
+    palette: "marrone-grigio della bandana + nero-occhi di Bru + verde scuro della Foresta dietro"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "HOOK FIRMA. Il pallone come oggetto-ponte tra due mondi. Rovo non attraversa il margine, i fratelli neanche."
+
+  - hook_id: s03_h09
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: foresta_intrecciata
+      qualifier: confine_orti
+    characters_present: [rovo, bru]
+    focal_action: "Rovo si ferma due passi dentro la Foresta. Senza voltarsi del tutto, dice: «Le cose della Foresta hanno il loro orario.»"
+    focal_object: null
+    atmosphere: "verità detta senza enfasi, frase che resta"
+    palette: "stessa di h08 ma con Rovo già più scuro, semi-immerso nella Foresta"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: null
+
+  - hook_id: s03_h10
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: via_degli_orti
+      qualifier: verso_villaggio
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre camminano in silenzio verso casa. Sui tetti il Mulinello della sera comincia adesso."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "chiusura serale, transizione verso il vento successivo del ciclo"
+    palette: "ultimo blu del cielo + ocra dei tetti + sagome scure dei tre"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Cerniera con il prossimo ciclo. Il Mulinello si annuncia sui tetti. Pallone sotto il braccio di Gabriel."

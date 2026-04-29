@@ -1,0 +1,187 @@
+# Hook ciclo A — S01 — La Nebbia delle Montagne Gemelle
+# Fonte: testo autoriale di Ray del 2026-04-29 (chat).
+# Formato: input deterministico per scripts/write_hooks_to_graph.py.
+# focal_action: italiano, presente indicativo, neutro, max 25 parole.
+
+story_id: s01
+
+hooks:
+  - hook_id: s01_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: forno
+      qualifier: interno
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "Fiamma mette in mano a Gabriel due pagnotte. Una è per loro, l'altra è per Grunto."
+    focal_object: pagnotta_forno
+    atmosphere: "vapore dal pane, vetri appannati, calore interno contro freddo fuori"
+    palette: "terracotta + arancio del forno + bianco del fiato"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "registro caldo. Gabriel davanti, Elias e Noah dietro. Fiamma non li guarda mai negli occhi quando parla."
+
+  - hook_id: s01_h02
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: alba
+    location:
+      id: piazza_villaggio
+      qualifier: esterno
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre escono dal forno, attraversano la piazza vuota, si avviano alla Via che Sale."
+    focal_object: pagnotta_forno
+    atmosphere: "villaggio addormentato, ombre lunghe, primo riverbero del Taglio"
+    palette: "azzurro pallido + terracotta dei tetti + oro orizzontale dell'alba"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Tre figure piccole in un campo grande. Senso di partenza."
+
+  - hook_id: s01_h03
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino
+    location:
+      id: pascoli_alti
+      qualifier: esterno
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre salgono in fila per il sentiero di mezza costa. Noah avanti, Elias mezzo, Gabriel coda."
+    focal_object: null
+    atmosphere: "aria nitida d'inverno, distanze lunghe, le Gemelle in fondo"
+    palette: "verde-grigio dei pascoli + bianco delle creste lontane + cielo aperto"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Unica immagine grande di vista sull'isola della storia. Pone le Gemelle a destra del frame."
+
+  - hook_id: s01_h04
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_tardo
+    location:
+      id: sentiero_montagne_gemelle
+      qualifier: mezza_costa
+    characters_present: [gabriel, elias, noah]
+    focal_action: "La nebbia bianca sale dal fondo e li avvolge. Si fermano."
+    focal_object: null
+    atmosphere: "bianco totale, silenzio ovattato, perdita di riferimenti"
+    palette: "bianco-grigio-azzurro freddo, sagome sbiadite"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: fog_space
+    notes: "Taglio non ancora sceso dall'est. Le tre sagome appena visibili."
+
+  - hook_id: s01_h05
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_tardo
+    location:
+      id: sentiero_montagne_gemelle
+      qualifier: mezza_costa
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Gabriel ha detto «No. Non muoverci.» I tre sono seduti fermi nella nebbia."
+    focal_object: null
+    atmosphere: "pausa, ascolto, attesa silenziosa"
+    palette: "bianco diffuso, ombre minime"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "Densità emotiva. Pochissimi colori. Le facce in primo piano lievemente."
+
+  - hook_id: s01_h06
+    type: panorama
+    is_signature: true
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: burrone
+      qualifier: bordo
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Il Vento Taglio apre la nebbia. A due passi davanti a loro, il bordo del Burrone."
+    focal_object: null
+    atmosphere: "rivelazione silenziosa, vertigine che non accade"
+    palette: "bianco che si apre + oro pallido invernale + grigio pietra + nero profondo del burrone sotto"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "HOOK FIRMA. Il Burrone NON è minaccioso, è semplicemente lì. La luce dorata vince."
+
+  - hook_id: s01_h07
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: sentiero_montagne_gemelle
+      qualifier: cengia_mezzaroccia
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre prendono a sinistra, salgono lungo la cengia stretta in mezzaroccia."
+    focal_object: null
+    atmosphere: "altitudine, freddo che pizzica, luce piena"
+    palette: "grigio roccia + verde lichene + cielo blu intenso"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: null
+
+  - hook_id: s01_h08
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: grotta_grunto
+      qualifier: cengia
+    characters_present: [grunto, gabriel, elias, noah]
+    focal_action: "Gabriel posa la pagnotta su una pietra piatta. Grunto annusa."
+    focal_object: pagnotta_forno
+    atmosphere: "incontro misurato, silenzio d'altitudine, rispetto reciproco"
+    palette: "verde scuro del muschio + pelo di Grunto che si confonde con il lichene + oro pallido invernale + cicatrice chiara"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "HOOK FIRMA. Grunto enorme a sinistra, i tre piccoli a destra, la pagnotta al centro tra di loro."
+
+  - hook_id: s01_h09
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: pascoli_alti
+      qualifier: discesa
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre scendono. Le creste delle Gemelle alle loro spalle nella luce d'oro pallido del tramonto."
+    focal_object: null
+    atmosphere: "ritorno, luce calda che vince, stanchezza buona"
+    palette: "oro pallido invernale + verde-grigio pascoli + ombre lunghe"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Eco di h03 ma in ritorno e in luce dorata."
+
+  - hook_id: s01_h10
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: forno
+      qualifier: interno
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "Fiamma non chiede com'è andata. Mette in mano a Noah un cornetto."
+    focal_object: null
+    atmosphere: "chiusura ad anello con h01, calore ritrovato"
+    palette: "terracotta + arancio del forno + bianco del fiato — identica a h01 ma più morbida"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Cornice di chiusura. Stessa inquadratura di h01, ma è sera. Speculare. La porta del forno alle loro spalle."

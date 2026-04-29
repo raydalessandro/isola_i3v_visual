@@ -17,7 +17,7 @@
       "montagne_gemelle: feature MultiPoint aggregato + parent sui due point",
       "villaggio_centrale -> alias di piazza_villaggio",
       "mercato_del_mezzogiorno_panca_di_pietra -> alias di panca_di_pietra",
-      "Nuovi luoghi canonici da storie: pozza_dei_pascoli (S2), noce_della_scuola (S8), zona_di_lavoro_salvia (S4)",
+      "Nuovi luoghi canonici da storie: pozza_abbeveratoio_pastori (S2, ex-pozza_dei_pascoli rinominata 2026-04-29 per allinearsi al catalogo visual), noce_della_scuola (S8), zona_di_lavoro_salvia (S4)",
       "Nuovi sentieri canonici: sentiero_foresta_traversata_ovest (S3), sentiero_ritorno_bocca_orti (S7), sentiero_casa_salvia_margine_foresta (S4), sentiero_orti_torrente_foresta (S5)"
     ],
     "changes_from_v0_4": [
@@ -4933,7 +4933,7 @@
     {
       "type": "Feature",
       "properties": {
-        "id": "pozza_dei_pascoli",
+        "id": "pozza_abbeveratoio_pastori",
         "name": "Pozza dei Pascoli",
         "type": "water_pool",
         "status": "canonico",

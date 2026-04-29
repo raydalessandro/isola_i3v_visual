@@ -7,6 +7,18 @@ Formato:
 
 ---
 
+## [2026-04-29] v0.6.2 — Allineamento naming `pozza_abbeveratoio_pastori` (ex `pozza_dei_pascoli`)
+
+Allineamento al canone narrativo in preparazione fase G.
+
+- **Rinominato** id geojson `pozza_dei_pascoli` → `pozza_abbeveratoio_pastori`. Stessa feature (Point, quartiere `aria`, `water_pool`, coordinate invariate). Il `name` visibile resta "Pozza dei Pascoli".
+- Motivazione: il catalogo visual (115 entità), il grafo (entities + migration_log fase E) e la scheda visual usano già `pozza_abbeveratoio_pastori`. Il geojson era l'unico disallineato (id più antico, pre-fase E). 2 modifiche puntuali (id feature + nota in `meta.changes_from_v0_5`).
+- Prep fase G: l'audit_3_navigability degli hook richiede id consistenti tra geojson, grafo e catalogo. Allineamento condizione necessaria.
+
+**Backward-compat:** 0 ID grafo rotti (era già `pozza_abbeveratoio_pastori` lato grafo). Total features: 105 (invariato).
+
+---
+
 ## [2026-04-28] v0.6.1 — Aggiunta `sentiero_montagne_gemelle` (porting grafo Fase E)
 
 Modifica puntuale durante porting grafo a schema v1.2 (Fase E, sentinella catalogo P0 di s01).
@@ -134,7 +146,7 @@ L'ID `tutta_isola_quattro_quartieri_attraversati` del grafo è **non-cartografic
 
 **Nuovi luoghi canonici estratti dalle storie S1-S8:**
 
-- `pozza_dei_pascoli` — pozza d'acqua sui Pascoli Alti a metà cammino (S2).
+- `pozza_abbeveratoio_pastori` — pozza d'acqua sui Pascoli Alti a metà cammino (S2). *Nota: rinominata 2026-04-29, ex `pozza_dei_pascoli`.*
 - `noce_della_scuola` — grande noce sulla Via della Scuola che cade (S8). Stato post-S8: caduto, ma il punto resta landmark.
 - `zona_di_lavoro_salvia` — area provvisoria polygon nella Foresta (S4).
 

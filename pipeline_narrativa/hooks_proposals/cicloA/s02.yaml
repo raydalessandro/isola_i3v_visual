@@ -1,0 +1,185 @@
+# Hook ciclo A — S02 — Il Riflesso nella Pozza
+# Fonte: testo autoriale di Ray del 2026-04-29 (chat).
+
+story_id: s02
+
+hooks:
+  - hook_id: s02_h01
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: piazza_villaggio
+      qualifier: davanti_scuola
+    characters_present: [stria, gabriel, elias, noah]
+    focal_action: "Stria con lo scialle sulle spalle affida il messaggio a voce e lo fa ripetere a Elias."
+    focal_object: scialle_stria
+    atmosphere: "scambio rapido, mattina di pieno inverno, aria ferma in piazza"
+    palette: "grigio inverno + lana bianco-crema dello scialle + ocra dei tetti"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: side_space
+    notes: null
+
+  - hook_id: s02_h02
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: piazza_villaggio
+      qualifier: cielo_basso
+    characters_present: [stria, gabriel, elias, noah]
+    focal_action: "Stria alza le braccia, vola via senza aspettare la risposta di Gabriel."
+    focal_object: scialle_stria
+    atmosphere: "partenza laconica, lei sa dove va, loro non sanno"
+    palette: "cielo invernale bianco-azzurro + sagoma scura di Stria"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "Calamita verticale. Lasciare cielo libero per la sagoma."
+
+  - hook_id: s02_h03
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino
+    location:
+      id: pascoli_alti
+      qualifier: sentiero
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre salgono lo stesso sentiero di s01, oggi asciutto, senza nebbia."
+    focal_object: null
+    atmosphere: "memoria di s01 senza ritorno della nebbia, aria limpida"
+    palette: "verde-grigio asciutto + cielo aperto"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Rimando deliberato a s01_h03. Stesso luogo, atmosfera diversa."
+
+  - hook_id: s02_h04
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_tardo
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: vista_dal_sentiero
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre arrivano sopra la conca riparata. La pozza scoperta del ghiaccio brilla in fondo."
+    focal_object: null
+    atmosphere: "scoperta di un punto d'acqua dove di solito c'è ghiaccio"
+    palette: "verde-grigio della conca + nero-blu della pozza + bianco delle ultime foglie marce intorno"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: sky_space
+    notes: null
+
+  - hook_id: s02_h05
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: bordo
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre fratelli si chinano fianco a fianco sul bordo per bere. Vedono i loro riflessi diversi."
+    focal_object: null
+    atmosphere: "strano silenzio, l'acqua mostra una versione spostata"
+    palette: "nero-blu dell'acqua + bianco freddo dei volti + riflessi un filo più scuri"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: corner_lower_right
+    notes: "HOOK FIRMA. I riflessi sono diversi senza essere mostruosi. Densità simbolica."
+
+  - hook_id: s02_h06
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: bordo
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Lite. Gesti scomposti, voci alte. Elias si zittisce e tocca l'acqua col dito."
+    focal_object: null
+    atmosphere: "rottura del silenzio, agitazione"
+    palette: "stessa di h05 ma con movimento, verde-grigio sporco"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: side_space
+    notes: "Movimento corporeo importante. Postures dissonanti."
+
+  - hook_id: s02_h07
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: superficie
+    characters_present: [noah]
+    focal_action: "Il bastoncino tocca l'acqua. I cerchi si allargano. I riflessi si rompono."
+    focal_object: null
+    atmosphere: "istante sospeso, gesto piccolo che cambia"
+    palette: "bianco del legno + nero-blu dell'acqua + cerchi argentati"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Inquadratura stretta. Calamita visiva sul gesto. Mano di Noah in primo piano, corpo fuori frame."
+
+  - hook_id: s02_h08
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: bordo
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre rialzati, in piedi sul bordo, in silenzio. La pozza si ricompone, i riflessi tornano normali."
+    focal_object: null
+    atmosphere: "quiete dopo la rottura, sollievo silenzioso"
+    palette: "stessa palette di h05 ma più calma, più pulita"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "Specchio di h05. Stesso quadro, esito diverso."
+
+  - hook_id: s02_h09
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: radura_dei_pini
+      qualifier: margine
+    characters_present: [pastori, gabriel, elias, noah]
+    focal_action: "Elias consegna il messaggio. I Pastori ascoltano in silenzio. Cenno di assenso."
+    focal_object: null
+    atmosphere: "scambio essenziale, comunità che ascolta, freddo del bordo radura"
+    palette: "verde scuro dei pini + grigio-marrone dei Pastori + chiaro dei tre fratelli"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: ground_space
+    notes: null
+
+  - hook_id: s02_h10
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: pozza_abbeveratoio_pastori
+      qualifier: vista_dal_sentiero_in_passaggio
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre passano accanto alla pozza, ora di nuovo piatta e dura. Non guardano dentro."
+    focal_object: null
+    atmosphere: "sera di inverno, freddo che si chiude, qualcosa è stato lasciato lì"
+    palette: "grigio piatto + ultimo blu del cielo + sagome scure"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Eco di h05/h08 in chiusura. Pozza vista da lontano, da chi non si china più."

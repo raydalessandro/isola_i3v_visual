@@ -1,7 +1,7 @@
 {
   "schema_version": "1.2",
   "graph_version": "1.0.0",
-  "last_updated": "2026-04-28",
+  "last_updated": "2026-04-29",
   "phase": "fase_E_completata_post_pulizia_provvisori_2026_04_28",
   "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. Provvisori P2 narrativi promossi al canonical post-pulizia (season_passage, key_phrase_indicative, key_phrase_attributed_to). 8 misalignments: 8 resolved (mis_001..mis_007 + mis_008). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere). Stato: nessuna ambiguità residua sui campi narrativi.",
   "entities": {
@@ -686,6 +686,24 @@
           "passaggio_quotidiano_cuccioli_scuola"
         ],
         "role_saga": "passaggio_scolastico_quotidiano"
+      },
+      "sentiero_montagne_gemelle": {
+        "type": "strada",
+        "quadrant": "aria_nord",
+        "parent_location": null,
+        "source": "promoted_from_catalog_2026-04-29"
+      },
+      "pozza_abbeveratoio_pastori": {
+        "type": "water_feature",
+        "quadrant": "aria_nord",
+        "parent_location": "pascoli_alti",
+        "source": "promoted_from_catalog_2026-04-29"
+      },
+      "radura_dei_pini": {
+        "type": "clearing",
+        "quadrant": "terra_ovest",
+        "parent_location": null,
+        "source": "promoted_from_catalog_2026-04-29"
       }
     },
     "objects": {
@@ -768,6 +786,14 @@
         "introduced_in_story": "s10",
         "description": "Lanterna di vetro con stoppino e riserva di grasso/cera. In S10 Elias l'avvolge con un panno di lana vecchia per ottenere luce bassa sui piedi durante il cammino notturno al Pontile. Gesto canonico una-tantum. Dopo S10 l'oggetto torna in cucina, non necessariamente riappare. Pattern formale 'object con introduced_in_story e owner ma senza seed collegato' — canone per oggetti narrativi una-tantum di forte presenza scenica (deferred #17).",
         "note_illustrazione": "Fase E: vetro tondo con riflesso giallo interno, panno di lana ruvida avvolto tre-quarti attorno al vetro, sportellino metallico parzialmente coperto."
+      },
+      "pallone_di_stoffa_cucita": {
+        "category": "oggetto_di_scena_ricorrente",
+        "appare_in_storie": [
+          "s03",
+          "s11"
+        ],
+        "source": "promoted_from_catalog_2026-04-29"
       }
     },
     "visual_signatures": {
@@ -8376,6 +8402,12 @@
       "date": "2026-04-28",
       "phase": "post_fase_E_pulizia_finale",
       "summary": "Pulizia provvisori narrativi: promossi al canonical i provvisori P2 (categoria A/B medium) per season_passage + key_phrase_indicative + key_phrase_attributed_to in 6 storie (s01/s02/s04/s05/s06/s07) + key_phrase_attributed_to=narratore in s12. Pulita nota obsoleta fase-E in s02.location_primary.note (pozza_abbeveratoio_pastori aggiunta al catalogo). Stato finale: nessun campo narrativo ambiguo nel canonical. I 5 no_inference_fields restano deciso autoriale Ray (Q1-Q6). season_passage resta NULL by design in s07/s08/s11 (nessun passaggio stagionale narrato). key_phrase_indicative resta NULL in s12 (sigillo del narratore con immagine, non frase puntuale, vincolo ARCHI 3.S12)."
+    },
+    {
+      "version": "1.0.0-promote-entities",
+      "date": "2026-04-29",
+      "phase": "pre_fase_g_promote_visual_entities",
+      "summary": "Promozione idempotente di entita' dal catalogo visual al grafo. Aggiunte: locations/sentiero_montagne_gemelle, locations/pozza_abbeveratoio_pastori, locations/radura_dei_pini, objects/pallone_di_stoffa_cucita."
     }
   ]
 }
