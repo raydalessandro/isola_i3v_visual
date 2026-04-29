@@ -99,7 +99,7 @@ Devi distribuire le tipologie in modo bilanciato (vedi VINCOLI sotto).
    - Marca preservati come `provenance: original_v1`.
    - Marca nuovi come `provenance: extended_v2`.
    - Rinumera in modo che la sequenza visiva ABBIA SENSO temporalmente (h01 = inizio, h10 = chiusura).
-7. **`focal_action`**: frase descrittiva neutra, max 25 parole, in italiano, PRESENTE indicativo. NON è il testo del libro.
+7. **`focal_action`**: frase descrittiva neutra, **max 30 parole** (allentato da 25 il 2026-04-29), in italiano, PRESENTE indicativo. NON è il testo del libro: è solo un descrittore — il prompt-immagine finale verrà montato a valle con grafo + Bible + catalogo.
    - Esempio buono: *"Gabriel posa la pagnotta su una pietra piatta."*
    - Esempio cattivo (troppo poetico/autorialità anticipata): *"Sulla pietra antica, il pane riposa come un'offerta."*
 8. **Lessico**: NON usare i pattern in `PATTERN_AI_DA_BANDIRE_v1.md`. In particolare evita: triple di aggettivi, metafore innestate, registro alto sistematico, "danza", "abbraccio", "sussurro" come verbi metaforici, ecc.

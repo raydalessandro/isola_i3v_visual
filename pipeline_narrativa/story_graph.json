@@ -3625,60 +3625,69 @@
         "scene_hooks": [
           {
             "hook_id": "s04_h01",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "margine_lato_orti",
-              "legacy_string": "margine_foresta_intrecciata_lato_orti"
+              "qualifier": "margine_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
+              "salvia",
               "gabriel",
               "elias",
               "noah",
-              "salvia"
+              "coltivatori_del_cerchio"
             ],
             "elements": [],
-            "palette": "sabbia_chiara_di_salvia_verde_tenero_foglie_nuove_ocra_orti_alle_spalle_azzurro_pallido_sopra",
-            "notes": null,
-            "focal_action": "Salvia col cesto a tracolla al margine della Foresta, dice ai fratelli di restare vicino agli Orti. I Coltivatori in lontananza cantano e battono le zappe — TUM-tum sullo sfondo.",
-            "focal_object": "salvia_col_cesto_che_entra_soglia_foresta",
-            "atmosphere": "primo_tepore_primavera_piena_lavoro_di_fondo_serenita_breve",
-            "wind_visible": "intreccio_diffuso_velature_azzurre_tra_rami",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Salvia col cesto a tracolla entra di qualche passo nella Foresta. I fratelli restano seduti sulla terra al margine, alle loro spalle gli Orti.",
+            "focal_object": "cesto_salvia",
+            "atmosphere": "primo tepore di primavera, lavoro di fondo dei Coltivatori in lontananza, serenità breve",
+            "palette": "sabbia chiara di Salvia + verde tenero delle foglie nuove + ocra degli Orti alle spalle + azzurro pallido sopra",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TUM-tum"
+            ],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Apertura larga. I Coltivatori piccoli sullo sfondo, le zappe che cantano in lontananza. La soglia della Foresta a destra del frame."
           },
           {
             "hook_id": "s04_h02",
+            "type": "dettaglio",
+            "is_signature": true,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "interno_primo_tratto_oltre_soglia_salvia",
-              "legacy_string": "interno_foresta_primo_tratto_oltre_soglia_salvia"
+              "qualifier": "primo_tratto_oltre_soglia"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
               "noah"
             ],
             "elements": [],
-            "palette": "farfalla_blu_unico_punto_cromatico_isolato_verdi_tenerissimi_primavera_marrone_tronchi_ombre_screziate_luce_di_chiome",
-            "notes": null,
-            "focal_action": "Noah segue la farfalla blu tra i tronchi. Qualche passo. Poi qualche altro. La farfalla sparisce tra due alberi e non c'e' piu'. Noah guarda in giro: alberi tutti uguali.",
-            "focal_object": "farfalla_blu_che_sparisce_tra_due_tronchi",
-            "atmosphere": "attrazione_innocente_che_diventa_smarrimento_silenzioso_alberi_che_si_ripetono",
-            "wind_visible": "intreccio_chiome_in_movimento",
+            "focal_action": "Una farfalla blu si posa davanti a Noah, poi rialza il volo di due metri. Noah la segue. Fa un passo dentro, poi due, poi cinque.",
+            "focal_object": null,
+            "atmosphere": "attrazione innocente che diventa attraversamento, luce che si chiude alle spalle",
+            "palette": "farfalla blu come unico punto cromatico isolato + verdi tenerissimi + marrone dei tronchi + ombre screziate",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. La farfalla è la calamita. Noah piccolo, di spalle, già un po' dentro. Inquadratura stretta sul punto blu."
           },
           {
             "hook_id": "s04_h03",
-            "moment": "mattino_inoltrato_inizio_mezzogiorno",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "interno_radice_esposta_grande_albero",
-              "legacy_string": "interno_foresta_elias_sulla_radice_esposta_grande_albero"
+              "qualifier": "margine_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
@@ -3686,72 +3695,156 @@
               "elias"
             ],
             "elements": [],
-            "palette": "marrone_scuro_umido_della_radice_verdi_tenerissimi_sopra_luce_che_trafila_dall_alto_a_macchie_palmo_chiaro_di_elias_unico_punto_caldo_sulla_radice",
-            "notes": null,
-            "focal_action": "Elias inginocchiato, palmo sulla radice grossa esposta, batte TUM-tum-TUM-tum-TUM. Gabriel dietro di lui in piedi, teso verso l'ascolto, una mano sul tronco dello stesso albero — sente anche lui nel legno.",
-            "focal_object": "palmo_di_elias_sulla_radice_che_batte",
-            "atmosphere": "tenuta_fisica_silenziosa_concentrazione_ritmo_che_parte_nel_tessuto",
-            "wind_visible": "intreccio_chiome_in_movimento_sopra_ma_sotto_aria_piu_ferma",
+            "focal_action": "Gabriel ed Elias gridano «Noah!» verso gli alberi. Le bocche aperte, le mani a coppa. La voce esce e si perde a cinque metri.",
+            "focal_object": null,
+            "atmosphere": "richiamo che non viaggia, fruscio alto delle chiome che inghiotte le voci corte",
+            "palette": "verde tenero del margine + chiome che si muovono in alto + sagome dei due bambini scure contro il verde",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Le voci visualmente non arrivano. L'Intreccio è soggetto secondario in alto."
           },
           {
             "hook_id": "s04_h04",
-            "moment": "mattino_inoltrato_inizio_mezzogiorno",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "interno_tra_radici_grande_albero",
-              "legacy_string": "interno_foresta_noah_tra_radici_grande_albero"
+              "qualifier": "margine_lato_orti"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "gabriel",
+              "elias"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel smette di gridare. Sta fermo, mani lungo i fianchi. Elias guarda lui. Pochi secondi di silenzio.",
+            "focal_object": null,
+            "atmosphere": "pausa, ascolto, piccola ricalibratura — eco diretta dell'«Aspettiamo» di s01",
+            "palette": "verdi della Foresta + due figure ferme in primo piano + luce diffusa",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Densità emotiva bassa, postura raccolta. Quasi privo di colore acceso. Cerniera narrativa con s01_h05."
+          },
+          {
+            "hook_id": "s04_h05",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
+            "location": {
+              "id": "foresta_intrecciata",
+              "qualifier": "interno_radici_grande_albero"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
               "noah"
             ],
             "elements": [],
-            "palette": "marrone_scuro_umido_delle_radici_verdi_scuri_della_foresta_interna_palmo_chiaro_di_noah_unico_punto_caldo_in_contatto_con_la_terra_specchio_visivo_di_elias_stesso_gesto_due_corpi_lontani",
-            "notes": null,
-            "focal_action": "Noah seduto tra le radici aggrovigliate di un grande albero, schiena al tronco, il palmo destro appoggiato sulla terra tra due radici. Occhi chiusi — non dorme, ascolta. La mano sente vibrare. Risponde col palmo.",
-            "focal_object": "palmo_di_noah_sulla_terra_tra_due_radici",
-            "atmosphere": "solitudine_che_trova_risposta_dal_sottosuolo_ascolto_tattile_che_diventa_canale",
-            "wind_visible": "intreccio_chiome_che_muovono_foglie_sopra",
+            "focal_action": "Noah seduto tra le radici grosse di un grande albero, schiena al tronco. Non piange. Aspetta. Il palmo destro appoggiato sulla terra.",
+            "focal_object": null,
+            "atmosphere": "solitudine ferma di un bambino che si ferma da solo, alberi tutti uguali intorno",
+            "palette": "marrone scuro umido delle radici + verdi scuri della Foresta interna + palmo chiaro come unico punto caldo sulla terra",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
-          },
-          {
-            "hook_id": "s04_h05",
-            "moment": "mezzogiorno_nella_foresta",
-            "location": {
-              "id": "foresta_intrecciata",
-              "qualifier": "interno_punto_di_ritrovamento",
-              "legacy_string": "interno_foresta_punto_di_ritrovamento"
-            },
-            "quadrant": "terra_ovest",
-            "characters_present": [
-              "gabriel",
-              "elias",
-              "noah",
-              "bru"
-            ],
-            "elements": [],
-            "palette": "abbraccio_al_centro_come_nucleo_caldo_verdi_foresta_intorno_bru_grigio_marrone_sullo_sfondo_tronco_scuro",
-            "notes": null,
-            "focal_action": "I tre fratelli abbracciati al punto di ritrovamento. Elias nell'abbraccio ma con lo sguardo un filo storto — non triste, solo storto, cosa che nessuno vede. Bru appoggiato a un tronco poco lontano, unghie nell'humus, occhi neri, non sorpreso.",
-            "focal_object": "abbraccio_dei_tre_con_elias_storto_dentro_e_bru_che_guarda",
-            "atmosphere": "ritrovamento_felice_con_crepa_invisibile_sotto_presenza_silenziosa_che_custodisce",
-            "wind_visible": "intreccio_attutito_nella_radura_interna",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Il palmo sulla terra come gesto irriflesso. Specchio visivo di h06 (stesso gesto, due corpi lontani)."
           },
           {
             "hook_id": "s04_h06",
+            "type": "azione",
+            "is_signature": true,
+            "provenance": "extended_v2",
             "moment": "mezzogiorno",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "interno_arrivo_di_rovo",
-              "legacy_string": "interno_foresta_arrivo_di_rovo"
+              "qualifier": "interno_radice_esposta"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "elias",
+              "gabriel"
+            ],
+            "elements": [],
+            "focal_action": "Elias inginocchiato batte col palmo aperto sulla radice grossa: TUM-tum-TUM-tum-TUM. Gabriel in piedi dietro, una mano sul tronco dello stesso albero.",
+            "focal_object": null,
+            "atmosphere": "tenuta fisica silenziosa, ritmo che parte nel tessuto sotterraneo, concentrazione",
+            "palette": "marrone scuro umido della radice + verdi tenerissimi sopra + luce a macchie che trafila dall'alto + palmo di Elias unico punto caldo",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TUM-tum-TUM-tum-TUM"
+            ],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Calamita verticale sulla radice. Il ritmo è il principio fisico del mondo che si istituisce qui. Elias come ancora."
+          },
+          {
+            "hook_id": "s04_h07",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
+            "location": {
+              "id": "foresta_intrecciata",
+              "qualifier": "interno_radici_grande_albero"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Noah solleva il palmo dalla terra, lo riappoggia. Poi alza la mano e la riabbatte: TUM-tum-TUM-tum-TUM. Lo stesso ritmo, di risposta.",
+            "focal_object": null,
+            "atmosphere": "riconoscimento sotterraneo, ritmo che torna indietro per la stessa via",
+            "palette": "marrone scuro umido + palmo chiaro di Noah in primo piano + radici aggrovigliate sullo sfondo",
+            "wind_visible": null,
+            "onomatopee": [
+              "TUM-tum-TUM-tum-TUM"
+            ],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Inquadratura stretta sulla mano di Noah. Specchio diretto di h06. Corpo di Noah parzialmente fuori frame."
+          },
+          {
+            "hook_id": "s04_h08",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
+            "location": {
+              "id": "foresta_intrecciata",
+              "qualifier": "interno_tra_tronchi"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "gabriel"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel cammina piano tra i tronchi. Si ferma, ascolta con i piedi, riparte. Non guarda con gli occhi tra gli alberi.",
+            "focal_object": null,
+            "atmosphere": "orientamento tattile, il battito che trafila dal terreno guida i polpacci",
+            "palette": "verdi scuri della Foresta interna + marrone delle radici + sagoma di Gabriel di tre quarti",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Movimento. Lui solo nel frame. Elias resta dietro, fuori scena, ancora alla radice."
+          },
+          {
+            "hook_id": "s04_h09",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "primo_pomeriggio",
+            "location": {
+              "id": "foresta_intrecciata",
+              "qualifier": "punto_di_ritrovamento"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
@@ -3762,41 +3855,45 @@
               "rovo"
             ],
             "elements": [],
-            "palette": "grigio_marrone_di_rovo_con_bandana_scura_verdi_foresta_interna_bru_piccolo_al_suo_fianco",
-            "notes": null,
-            "focal_action": "Rovo arriva passo pesante tra le radici, bandana marrone-grigia sulla fronte. Brontola. I fratelli si staccano dall'abbraccio. Bru si raddrizza, fa un passo verso lo zio.",
-            "focal_object": "rovo_in_piedi_tra_tronchi_bandana_sulla_fronte_bru_un_passo_verso_di_lui",
-            "atmosphere": "ingresso_brusco_non_minaccioso_zio_che_verifica_e_ripartira",
-            "wind_visible": "intreccio_diffuso",
+            "focal_action": "I tre fratelli si abbracciano tra le radici. Più in là, Bru appoggiato a un tronco. Rovo arriva da un'altra direzione, bandana scura, brontolando.",
+            "focal_object": "bandana_rovo",
+            "atmosphere": "ritrovamento silenzioso, presenza che custodisce, ingresso brusco non ostile",
+            "palette": "abbraccio caldo al centro + grigio-marrone di Rovo con bandana scura + nero-occhi di Bru + verdi profondi della Foresta intorno",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Tre piani: i fratelli al centro, Bru a sinistra (3-4 metri di distanza, unghie nell'humus, occhi neri), Rovo che entra da destra. Elias nell'abbraccio con lo sguardo un filo storto (mai nominato)."
           },
           {
-            "hook_id": "s04_h07",
+            "hook_id": "s04_h10",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "margine_ritorno_da_salvia",
-              "legacy_string": "margine_foresta_ritorno_da_salvia"
+              "qualifier": "margine_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
+              "salvia",
               "gabriel",
               "elias",
-              "noah",
-              "salvia"
+              "noah"
             ],
             "elements": [],
-            "palette": "cesto_verde_scuro_di_ortica_sabbia_chiara_di_salvia_ocra_orti_alle_spalle_primo_pomeriggio_luce_alta",
-            "notes": null,
-            "focal_action": "Salvia esce dalla Foresta col cesto pieno di ortica giovane. Non si e' accorta di nulla. I fratelli arrivano al margine dall'interno. 'Pronti? Andiamo.' I Coltivatori in lontananza ancora cantano, cantilena piena della semina.",
-            "focal_object": "salvia_col_cesto_pieno_che_esce_al_margine",
-            "atmosphere": "ritorno_al_visibile_nulla_e_cambiato_per_chi_guarda_da_fuori",
-            "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Salvia esce dalla Foresta col cesto pieno di foglie d'ortica. I fratelli arrivano al margine dall'interno. «Pronti? Andiamo.»",
+            "focal_object": "cesto_salvia",
+            "atmosphere": "ritorno al visibile, nulla è cambiato per chi guarda da fuori, primo pomeriggio di luce alta",
+            "palette": "cesto verde scuro di ortica + sabbia chiara di Salvia + ocra degli Orti alle spalle + azzurro pallido sopra",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TUM-tum"
+            ],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Eco di h01. Stessa inquadratura, esito invertito: ora Salvia esce e i fratelli vengono dall'interno. La cantilena dei Coltivatori ancora di fondo."
           }
         ]
       },
@@ -8998,6 +9095,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s03: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloA/s03.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s04: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloB/s04.yaml."
     }
   ]
 }

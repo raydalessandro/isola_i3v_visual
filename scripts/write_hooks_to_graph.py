@@ -233,11 +233,13 @@ def validate_hooks(story_id: str, hooks: list, graph: dict) -> None:
                 f'{prefix}: wind_visible {wv!r} assente da entities.winds'
             )
 
-        # focal_action max 25 parole
+        # focal_action max 30 parole (vincolo editoriale: descrittore neutro,
+        # non prosa autoriale; il prompt-immagine finale viene montato altrove
+        # con grafo + Bible + catalogo, qui basta che la frase sia sintetica).
         n_words = len(h['focal_action'].split())
-        if n_words > 25:
+        if n_words > 30:
             raise ValidationError(
-                f'{prefix}: focal_action {n_words} parole > 25 (rendere piu\' neutra)'
+                f'{prefix}: focal_action {n_words} parole > 30 (rendere piu\' neutra)'
             )
 
     # vincoli aggregate
