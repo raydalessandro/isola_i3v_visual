@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-29T19:20:04",
+  "generated_at": "2026-04-29T19:39:47",
   "totals": {
     "totale": 115,
     "luogo": 74,
@@ -7602,23 +7602,23 @@
       ],
       "images": [
         {
-          "filename": "bartolo_canonica_v1_barca.png",
-          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.png",
+          "filename": "bartolo_canonica_v1_barca.jpg",
+          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
           "size_kb": 151
         },
         {
-          "filename": "bartolo_canonica_v1_fronte.png",
-          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.png",
+          "filename": "bartolo_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
           "size_kb": 175
         },
         {
-          "filename": "bartolo_canonica_v1_ritratto.png",
-          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.png",
+          "filename": "bartolo_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
           "size_kb": 187
         },
         {
-          "filename": "bartolo_turnaround_v1.png",
-          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.png",
+          "filename": "bartolo_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg",
           "size_kb": 154
         }
       ],
@@ -7667,23 +7667,23 @@
       ],
       "images": [
         {
-          "filename": "fiamma_canonica_v1_ferma.png",
-          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.png",
+          "filename": "fiamma_canonica_v1_ferma.jpg",
+          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
           "size_kb": 175
         },
         {
-          "filename": "fiamma_canonica_v1_fronte.png",
-          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.png",
+          "filename": "fiamma_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
           "size_kb": 172
         },
         {
-          "filename": "fiamma_canonica_v1_impasta.png",
-          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.png",
+          "filename": "fiamma_canonica_v1_impasta.jpg",
+          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
           "size_kb": 161
         },
         {
-          "filename": "fiamma_turnaround_v1.png",
-          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.png",
+          "filename": "fiamma_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg",
           "size_kb": 109
         }
       ],

@@ -106,7 +106,7 @@ pure quadruped fox pose.
 
 ## 🖼️ IMMAGINE 1 — Veduta canonica principale (FRONTE, in piedi, modalità chiacchiera)
 
-**Filename suggerito**: `fiamma_canonica_v1_fronte.png`
+**Filename suggerito**: `fiamma_canonica_v1_fronte.jpg`
 
 ```
 [STYLESHEET CANONICA SAGA]
@@ -143,7 +143,7 @@ Composition: full body visible, head to feet, centered. Aspect ratio
 
 ## 🖼️ IMMAGINE 2 — Veduta in azione (3/4, mentre impasta)
 
-**Filename suggerito**: `fiamma_canonica_v1_impasta.png`
+**Filename suggerito**: `fiamma_canonica_v1_impasta.jpg`
 
 ```
 [STYLESHEET CANONICA SAGA]
@@ -180,7 +180,7 @@ working and talking at once.
 
 ## 🖼️ IMMAGINE 3 — Veduta modalità ferma (ritratto, sguardo dritto)
 
-**Filename suggerito**: `fiamma_canonica_v1_ferma.png`
+**Filename suggerito**: `fiamma_canonica_v1_ferma.jpg`
 
 ```
 [STYLESHEET CANONICA SAGA]
@@ -216,7 +216,7 @@ mode" pose for use whenever a story turns serious.
 
 ## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
 
-**Filename suggerito**: `fiamma_turnaround_v1.png`
+**Filename suggerito**: `fiamma_turnaround_v1.jpg`
 
 ```
 [STYLESHEET CANONICA SAGA]

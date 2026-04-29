@@ -56,7 +56,7 @@ NEVER: [lista cliché da evitare specifici per questo personaggio]
 
 ## 🖼️ IMMAGINE 1 — Veduta canonica principale (fronte, modalità default)
 
-**Filename suggerito:** `<id>_canonica_v1_fronte.png`
+**Filename suggerito:** `<id>_canonica_v1_fronte.jpg`
 **Aspect ratio:** 3:4 (portrait)
 
 ```
@@ -76,7 +76,7 @@ Composition: full body visible, head to feet, centered. Aspect ratio 3:4 (portra
 
 ## 🖼️ IMMAGINE 2 — Veduta in azione (modalità default)
 
-**Filename suggerito:** `<id>_canonica_v1_azione.png`
+**Filename suggerito:** `<id>_canonica_v1_azione.jpg`
 **Aspect ratio:** 4:5 (portrait)
 
 ```
@@ -96,7 +96,7 @@ Composition: medium shot, from waist up to slightly above the head. Aspect ratio
 
 ## 🖼️ IMMAGINE 3 — Modalità alternativa (opzionale)
 
-**Filename suggerito:** `<id>_canonica_v1_<modalità>.png`
+**Filename suggerito:** `<id>_canonica_v1_<modalità>.jpg`
 **Aspect ratio:** 4:5 (portrait)
 
 ⚠️ **Generare solo se il personaggio ha modalità comportamentali visivamente distinguibili** (es: Fiamma chiacchiera/ferma/brace; Bartolo se ha modalità tipiche; etc.)
@@ -118,7 +118,7 @@ Composition: [coerente]
 
 ## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
 
-**Filename suggerito:** `<id>_turnaround_v1.png`
+**Filename suggerito:** `<id>_turnaround_v1.jpg`
 **Aspect ratio:** 16:9 (landscape)
 
 ```

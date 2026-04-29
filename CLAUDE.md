@@ -38,7 +38,8 @@ isola_i3v_visual/
 │
 ├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche
 │   ├── personaggi/                   23 schede (3 fratelli, 5 primari, 5 secondari, 5 cuccioli, 5 collettivi)
-│   │   └── individuali/primari/{fiamma,bartolo}/immagini/  4+4 immagini canoniche v1
+│   │   │  ⚠️ NB: la Bible usa il termine "Abitanti maggiori" per gli stessi 5 di `primari/` — stesso insieme, vocabolari diversi (narrativo vs filesystem)
+│   │   └── individuali/primari/{fiamma,bartolo}/immagini/  4+4 immagini canoniche v1 (.jpg)
 │   ├── luoghi/                       74 schede (per quartiere: aria/acqua/fuoco/terra/centro + perimetro + strade)
 │   ├── oggetti/                      14 schede (13 oggetti-simbolo saga + 1 oggetto_di_scena_ricorrente)
 │   ├── venti/                        3 schede (Taglio/Intreccio/Mulinello)
@@ -68,9 +69,14 @@ isola_i3v_visual/
 │   └── (file .md datati, vedi sezione 5)
 │
 ├── scripts/                   ✅ tool Python condivisi (idempotenti)
-│   ├── build_catalogo_web.py         rigenera catalogo_web/data/entities.json da visual/
-│   ├── build_visual_skeleton.py      ricrea schede stub da grafo (non usare in fase F)
-│   └── compile_visual_from_graph.py  travaso meccanico grafo → schede (fase F.1)
+│   ├── build_catalogo_web.py            rigenera catalogo_web/data/entities.json da visual/
+│   ├── build_visual_skeleton.py         ricrea schede stub da grafo (non usare in fase F)
+│   ├── compile_visual_from_graph.py     travaso meccanico grafo → schede (fase F.1)
+│   ├── split_narrazione_fattuale.py     split sorgente Ciclo*.txt → 12 sNN_*.md
+│   ├── migrate_graph_v1_2_to_v1_3.py    bump schema fase G (one-shot, idempotente)
+│   ├── promote_visual_entities_to_graph.py  promozione catalogo visual → grafo entities
+│   ├── write_hooks_to_graph.py          writer deterministico fase G (input YAML hooks_proposals/)
+│   └── audit/                           audit grafo (4 script da implementare)
 │
 ├── skills/                    ✅ skill agente IA
 │   ├── README.md                     orchestratore
@@ -144,7 +150,7 @@ Pacchetto operativo a livello root della repo per **completare le 115 schede `vi
   - **Oggetti:** scheda + prompt_grok + descrizione_social + 1-2 immagini
   - **Luoghi:** scheda con BLOCCO LOCATION testuale + descrizione_social (NO immagini reference, le proporzioni si rompono — strategia "blocco LOCATION testuale + reference personaggi")
   - **Luoghi complessi (es. Forno):** PIÙ blocchi LOCATION distinti nella stessa scheda (esterno/interno/cortile). Mai mischiare blocchi nel prompt scena.
-- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.png` (es. `fiamma_canonica_v1_fronte.png`) + `<id>_turnaround_v1.png`. Le `_canonica_v1_*` sono intoccabili come reference.
+- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.jpg` (es. `fiamma_canonica_v1_fronte.jpg`) + `<id>_turnaround_v1.jpg`. Le `_canonica_v1_*` sono intoccabili come reference.
 - **Vincoli operativi:** mai modificare `pipeline_narrativa/` (read-only), mai inventare contenuto non derivabile, mai modificare `_canone/*.md` senza autorizzazione + bump versione, mai pushare su main senza il via di Ray, sempre rigenerare `catalogo_web/data/entities.json` dopo modifiche a `visual/`.
 - **Ordine consigliato di completamento:** test/validazione → tre fratelli (anchor scala) → primari → secondari → cuccioli → collettivi → oggetti → luoghi per quartiere → strade → venti+signatures.
 
@@ -196,7 +202,7 @@ Completamento canonico delle schede `visual/` via `_visual_pipeline/`. Vedi `_vi
 - **Output per scheda (personaggio):** `scheda.md` + `prompt_grok.md` + `descrizione_narrativa_social.md` (Claude) → 4 immagini canoniche con Grok Imagine (Ray)
 - **Output per scheda (luogo):** `scheda.md` con BLOCCO LOCATION testuale (anche multipli per luoghi complessi) + `descrizione_narrativa_social.md`. NO `prompt_grok.md` per luoghi.
 - **Output per scheda (oggetto):** scheda + prompt + descrizione + 1-2 immagini canoniche
-- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.png` + `<id>_turnaround_v1.png`
+- **Naming immagini canoniche:** `<id>_canonica_v1_<vista>.jpg` + `<id>_turnaround_v1.jpg`
 - **Vincoli:** mai modificare canone (`_visual_pipeline/_canone/*.md`) senza autorizzazione + bump versione, sempre rigenerare `catalogo_web/` dopo modifiche, sempre branch dedicato + merge ff su main
 
 ### Modalità "lettore + commentatore" (collaboratore esterno)

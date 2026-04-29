@@ -159,7 +159,7 @@ Per i luoghi: il frontmatter porta i metadati cartografici (centroide, bbox, dim
 
 ### Principio 6 — Immagini di riferimento, non illustrazioni finali
 
-Le immagini in `<entita>/immagini/` sono **riferimenti** per modelli e illustratori — non illustrazioni finali del libro. Per stampa 3D, ogni entità tridimensionale (personaggi, oggetti) avrà tipicamente **4 vedute** (fronte, retro, profilo dx, profilo sx). Convenzione di naming consigliata: `<id>_<vista>_<varianteN>.png` (es. `gabriel_fronte_v1.png`).
+Le immagini in `<entita>/immagini/` sono **riferimenti** per modelli e illustratori — non illustrazioni finali del libro. Per stampa 3D, ogni entità tridimensionale (personaggi, oggetti) avrà tipicamente **4 vedute** (fronte, retro, profilo dx, profilo sx). Convenzione di naming consigliata: `<id>_<vista>_<varianteN>.jpg` (o `.png`) (es. `gabriel_fronte_v1.jpg`).
 
 ---
 
@@ -193,7 +193,7 @@ Per ogni entità l'agente (vedi `compilatore.md` per dettaglio):
 
 1. Scrivi prompt completo a partire dalla scheda (compositing dei campi descrittivi).
 2. Genera con il modello scelto.
-3. Salva in `<entita>/immagini/` con metadati (file `<id>_<vista>_<varianteN>.png` + opzionale `<id>_<vista>_<varianteN>.meta.md` con prompt usato, modello, seed, data, stato).
+3. Salva in `<entita>/immagini/` con metadati (file `<id>_<vista>_<varianteN>.jpg` (o `.png`) + opzionale `<id>_<vista>_<varianteN>.meta.md` con prompt usato, modello, seed, data, stato).
 
 ### Task D — Aggiornare metadati cartografici
 

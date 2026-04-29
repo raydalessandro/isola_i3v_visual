@@ -65,6 +65,8 @@ L'intera saga vive in una palette **earthy / muted / warm**. Mai colori neon, ma
 
 ## 👥 PALETTE PERSONAGGI (Bible §6 — Abitanti maggiori + minori)
 
+> **Nota terminologica:** "Abitanti maggiori" è il termine **narrativo** della Bible. Nel filesystem della repo gli stessi personaggi vivono in `visual/personaggi/individuali/primari/`. "Maggiori" e "primari" designano lo stesso insieme.
+
 ### Tre fratelli
 
 | Nome | Toni | Note |

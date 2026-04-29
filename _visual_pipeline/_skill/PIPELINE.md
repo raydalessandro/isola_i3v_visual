@@ -228,10 +228,10 @@ Per ogni scheda completata, l'output finale nella repo (`visual/<famiglia>/.../<
 ├── prompt_grok.md                         ← prompt per generazione 4 immagini
 ├── descrizione_narrativa_social.md        ← testi standalone A-G
 └── immagini/
-    ├── <id>_canonica_v1_fronte.png        ← img 1
-    ├── <id>_canonica_v1_azione.png        ← img 2
-    ├── <id>_canonica_v1_<modalità>.png    ← img 3 (opzionale)
-    └── <id>_turnaround_v1.png             ← img 4
+    ├── <id>_canonica_v1_fronte.jpg        ← img 1
+    ├── <id>_canonica_v1_azione.jpg        ← img 2
+    ├── <id>_canonica_v1_<modalità>.jpg    ← img 3 (opzionale)
+    └── <id>_turnaround_v1.jpg             ← img 4
 ```
 
 ### Oggetti
@@ -241,8 +241,8 @@ Per ogni scheda completata, l'output finale nella repo (`visual/<famiglia>/.../<
 ├── prompt_grok.md
 ├── descrizione_narrativa_social.md
 └── immagini/
-    ├── <id>_canonica_v1.png               ← img canonica principale
-    └── <id>_in_uso_v1.png                 ← (opzionale, indossato/in azione)
+    ├── <id>_canonica_v1.jpg               ← img canonica principale
+    └── <id>_in_uso_v1.jpg                 ← (opzionale, indossato/in azione)
 ```
 
 ### Luoghi
@@ -251,7 +251,7 @@ Per ogni scheda completata, l'output finale nella repo (`visual/<famiglia>/.../<
 ├── scheda.md                              ← contiene il BLOCCO LOCATION testuale
 ├── descrizione_narrativa_social.md        ← testi standalone
 └── immagini/
-    └── <id>_establishing_v1.png           ← (opzionale, solo per atlante/preview)
+    └── <id>_establishing_v1.jpg           ← (opzionale, solo per atlante/preview)
 ```
 
 ⚠️ **I luoghi NON hanno `prompt_grok.md`** — il blocco LOCATION è dentro la scheda.

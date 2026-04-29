@@ -165,6 +165,13 @@ Quando questa pipeline viene portata su `isola_i3v_visual`, va a integrarsi con 
 | `skills/visual/` | Skill esistente. Questa pipeline è il "next step" del compilatore. |
 | `scripts/` | Tool condivisi (idempotenti). |
 
+### ⚠️ Convenzione naming filesystem vs narrativa
+
+- **Bible / canone narrativo**: usa il termine "**Abitanti maggiori**" per i 5 personaggi adulti centrali (Bartolo, Fiamma, Rovo, Stria, Mèmolo).
+- **Filesystem repo**: usa la cartella `visual/personaggi/individuali/`**primari**`/` per gli stessi personaggi.
+
+I due termini designano lo **stesso insieme** ma vivono in livelli diversi (narrativo vs filesystem). **Non sono in conflitto.** Quando un pacchetto esterno arriva con path `maggiori/`, va adattato a `primari/` per coerenza con la struttura repo.
+
 ---
 
 ## 🔄 Versioning della pipeline

@@ -155,7 +155,7 @@ Prima di consegnare a Ray:
 - [ ] I cliché da evitare sono completi (Bible + visivi specifici)
 - [ ] La stylesheet saga è incollata INVARIATA (se applicabile)
 - [ ] Il negative prompt è incluso (se applicabile)
-- [ ] Il filename suggerito segue convenzione `<id>_<vista>_v1.png`
+- [ ] Il filename suggerito segue convenzione `<id>_<vista>_v1.jpg`
 
 ---
 

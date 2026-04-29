@@ -152,7 +152,7 @@ laughter or wide smile. NO visible teeth. NO physical affection
 
 ## 🖼️ IMMAGINE 1 — Veduta canonica principale (fronte, sul Pontile, modalità ferma)
 
-**Filename suggerito:** `bartolo_canonica_v1_fronte.png`
+**Filename suggerito:** `bartolo_canonica_v1_fronte.jpg`
 **Aspect ratio:** 3:4 (portrait)
 
 ```
@@ -193,7 +193,7 @@ reference pose.
 
 ## 🖼️ IMMAGINE 2 — In azione (sulla barca, modalità "in viaggio")
 
-**Filename suggerito:** `bartolo_canonica_v1_barca.png`
+**Filename suggerito:** `bartolo_canonica_v1_barca.jpg`
 **Aspect ratio:** 4:5 (portrait)
 
 ```
@@ -232,7 +232,7 @@ Captures Bartolo in his rare "in motion" canonical state.
 
 ## 🖼️ IMMAGINE 3 — Ritratto modalità ferma (testa/busto, sguardo placido)
 
-**Filename suggerito:** `bartolo_canonica_v1_ritratto.png`
+**Filename suggerito:** `bartolo_canonica_v1_ritratto.jpg`
 **Aspect ratio:** 4:5 (portrait)
 
 ```
@@ -273,7 +273,7 @@ scenes (S7, S10, S12).
 
 ## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute, IMPORTANTE: vista retro mostra cicatrici sul guscio)
 
-**Filename suggerito:** `bartolo_turnaround_v1.png`
+**Filename suggerito:** `bartolo_turnaround_v1.jpg`
 **Aspect ratio:** 16:9 (landscape)
 
 ```
