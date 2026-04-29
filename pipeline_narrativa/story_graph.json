@@ -2,8 +2,8 @@
   "schema_version": "1.2",
   "graph_version": "1.0.0",
   "last_updated": "2026-04-28",
-  "phase": "fase_E_completata_grafo_v1.0.0",
-  "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. 8 misalignments tracciati: 8 resolved (mis_001..mis_007 + mis_004/005 post-saga). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere).",
+  "phase": "fase_E_completata_post_pulizia_provvisori_2026_04_28",
+  "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. Provvisori P2 narrativi promossi al canonical post-pulizia (season_passage, key_phrase_indicative, key_phrase_attributed_to). 8 misalignments: 8 resolved (mis_001..mis_007 + mis_008). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere). Stato: nessuna ambiguità residua sui campi narrativi.",
   "entities": {
     "characters": {
       "gabriel": {
@@ -1949,7 +1949,7 @@
       "attribute_dominant": "distinguere",
       "block_position": "apertura_blocco_a",
       "season": "inverno",
-      "season_passage": null,
+      "season_passage": "Inverno pieno, mattina fredda con nebbia di inversione termica sui Pascoli Alti; il Vento Taglio scende dall'est all'alba e apre il bianco.",
       "wind_active": "vento_taglio",
       "wind_notes": "Taglio all'alba atteso. Notte ferma prima (i tre venti dormono). Quando arriva, apre la nebbia — visibilmente marcato perché la scena lo richiede narrativamente.",
       "pattern_a_active": "none",
@@ -2047,7 +2047,7 @@
       "callback_summary": "Nessun callback (è la prima storia).",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
+      "key_phrase_indicative": "A volte fermarsi è la cosa che muove.",
       "key_phrase_notes": "Direzione: immagine che sigilla, non regola. Sigillo del narratore in chiusura (non di Fiamma). Nessuna frase-chiave dichiarativa di personaggio. Da scrivere in D.",
       "premise": "I fratelli decidono di salire alle Montagne Gemelle per vedere l'isola dall'alto. Passano dal Forno per scaldarsi. Fiamma li guarda, capisce dove vanno, gli mette in mano una pagnotta: se passate dal Burrone, una per Grunto, una sola.",
       "problem": "Sopra i Pascoli Alti, nebbia di inversione termica li avvolge. Bianco totale. Non vedono più sentiero né montagne. Noah vuole correre. Elias propone di tenersi per mano. Gabriel sente che muoversi è sbagliato — ma non sa spiegare perché.",
@@ -2246,7 +2246,8 @@
             "mai_preannunciare_rivelazione"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     },
     "s02": {
       "id": "s02",
@@ -2255,7 +2256,7 @@
       "attribute_dominant": "distinguere",
       "block_position": "centro_blocco_a",
       "season": "inverno",
-      "season_passage": null,
+      "season_passage": "Inverno pieno, mattina fredda; il Vento Taglio non ancora sceso all'alba ma manda una folata tardiva durante la scena della pozza — primo soffio visibile del Taglio in saga.",
       "wind_active": "vento_taglio",
       "wind_notes": "Taglio (alba) atteso; nella storia soffia una folata tardiva che increspa il velo d'acqua al momento-soglia — primo soffio visibile del Taglio in saga.",
       "pattern_a_active": "pre_eco",
@@ -2265,7 +2266,7 @@
       "when_water_trembles": false,
       "location_primary": {
         "id": "pascoli_alti",
-        "note": "La pozza è piccola, d'estate abbeveratoio delle capre dei Pastori, ora ghiacciata con il velo di superficie appena sgelato da una giornata di sole. Da aggiungere come sub_location di pascoli_alti in ATLANTE quando si raffina (Fase E). | specific_points: ['pozza_abbeveratoio_pastori']"
+        "note": "La pozza è piccola, d'estate abbeveratoio delle capre dei Pastori, ora ghiacciata con il velo di superficie appena sgelato da una giornata di sole. La pozza è entity canonica del catalogo (catalogo_web/data/entities.json#pozza_abbeveratoio_pastori, sub_location di pascoli_alti, sottotipo: water_feature, quartiere: aria). | specific_points: ['pozza_abbeveratoio_pastori']"
       },
       "locations_secondary": [
         {
@@ -2363,7 +2364,7 @@
       "callback_summary": "Bastoncino di Noah da S1 (oggetto → oggetto-fantasma). Gesto-firma di Noah che raccoglie (S1 → conferma qui).",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
+      "key_phrase_indicative": "Il riflesso non era la verità: era solo come l'acqua si era fermata in quel momento.",
       "key_phrase_notes": "Direzione: rifiuto della falsa fissità senza dichiararla. Da affidare al narratore in chiusura, non a un personaggio. Nessuna frase-regola. Da scrivere in D.",
       "premise": "Stria affida ai fratelli un messaggio per i Pastori sui Pascoli Alti — quel mattino lei vola altrove. 'Tu cosa pensi?' — chiede a Gabriel quando lui le domanda dove stia andando. Vola via senza spiegare. Loro salgono.",
       "problem": "A metà cammino trovano la pozza scoperta. Si chinano a bere. Vedono i loro riflessi — diversi da come si vedono loro. Gabriel si vede con la bocca tirata. Elias si vede piccolo — molto piccolo, tra i fratelli che nello specchio risultano più grandi di quanto siano. Noah si vede fermo (e lui non è mai fermo). Litigano. Elias resta zitto. Tocca l'acqua col dito, ritrae la mano.",
@@ -2546,7 +2547,8 @@
             "mai_commuovere_visibilmente"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     },
     "s03": {
       "id": "s03",
@@ -2877,7 +2879,7 @@
       "attribute_dominant": "connettere",
       "block_position": "apertura_blocco_b",
       "season": "primavera",
-      "season_passage": null,
+      "season_passage": "Primavera piena: primo tepore vero dopo l'inverno (passaggio già segnato in s03 come 'aria un filo più tiepida', qui è pienezza). Mattino inoltrato → mezzogiorno → primo pomeriggio. Foglie nuove, rugiada appena asciugata.",
       "wind_active": "vento_intreccio",
       "wind_notes": "Intreccio (giorno) in regime pieno — prima storia saga dove Intreccio e' vento attivo protagonista. Porta le voci basse e continue da lontano (la cantilena dei Coltivatori resta riconoscibile dal margine). Disperde invece le voci corte ad alto volume dentro le chiome in movimento — gridare dentro la Foresta non funziona, il suono si confonde nel fruscio. Eco silenziosa nome=cosa: Vento Intreccio + radici intrecciate + fratelli che si ritrovano via canale che intreccia. Mai detto.",
       "pattern_a_active": "none",
@@ -3079,7 +3081,7 @@
       "callback_summary": "Callback a S1: fermarsi come gesto attivo bloomato (trasferito da Gabriel a Noah); 'Gridiamo no. Pensiamo.' eco diretta di 'Aspettiamo'; Gabriel sa la strada senza vedere bloomato (cammina nella direzione del battito). Callback a S3: Rovo (secondo registro, abitante-Foresta), Bru (da intravisto a presenza concreta), cantilena Coltivatori (sommessa -> piena), 'la Foresta ha i suoi modi' bloom del 'loro orario'.",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
+      "key_phrase_indicative": "Quello che hanno trovato non era il sentiero — era un modo.",
       "key_phrase_notes": "Nessuna frase-chiave dichiarativa di personaggio. Sigillo del narratore in chiusura (ADDRESS AL LETTORE, 1 di <=6, primo della saga). Direzione: quello che hanno trovato non era il sentiero — era un modo. Mai dichiarato come regola, il narratore puo' aprirsi al lettore con una domanda o un'immagine (es. direzione: se tocchi una radice qui, chissa' dove arriva il tocco; il tipo di frase va fissata in D).",
       "premise": "Primavera piena — primo tepore vero dopo l'inverno. Salvia passa dalla casa dei fratelli e chiede se l'accompagnano fino al margine della Foresta — deve raccogliere foglie di ortica giovane, crescono qualche metro dentro. I fratelli vanno volentieri. Al margine, Salvia dice loro di restare fuori, vicino agli Orti: 'Voi qua. Torno presto.' Entra con il cesto. In lontananza, cantilena piena della semina dei Coltivatori — TUM-tum delle zappe sullo sfondo, portato chiaro dall'Intreccio perche' e' suono basso e continuo.",
       "problem": "Noah vede una farfalla blu. La segue di qualche passo. Poi qualche altro. Attraversa senza accorgersi la soglia oltre la zona di lavoro di Salvia. La farfalla sparisce. Noah e' solo. Alberi tutti uguali. Gabriel ed Elias si accorgono dopo qualche minuto che Noah non c'e' piu'. Gridano una volta. La Foresta non risponde — l'Intreccio passa tra le chiome e confonde le loro voci corte nel fruscio. Gridare non funziona.",
@@ -3349,7 +3351,8 @@
             "mai_eroe"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     },
     "s05": {
       "id": "s05",
@@ -3358,7 +3361,7 @@
       "attribute_dominant": "connettere",
       "block_position": "centro_blocco_b",
       "season": "primavera",
-      "season_passage": null,
+      "season_passage": "Primavera piena, qualche settimana dopo s04 — fiori aperti, Fiume più alto, sole che scalda. Mattino inoltrato → mezzogiorno → primo pomeriggio. Foglie nuove, pertiche cadute dell'inverno disponibili come materia (Pattern A).",
       "wind_active": "vento_intreccio",
       "wind_notes": "Intreccio (giorno) in regime pieno — seconda storia consecutiva con Intreccio attivo. Sopra le chiome soffia, muove i rami in alto, passa tra le fronde — ma sul torrente passa sopra l'acqua senza increspare forte (aria calda parallela alla corrente, non contro). Porta voci basse e continue da lontano, disperde voci corte ad alto volume — coerente col principio fisico istituito in S4. Il TOK-TOK-TOK di Nodo viaggia bene in questo vento perche' e' suono ritmico secco su legno: viaggia via-aria (colpi distinti, non parole sfumate) E vibra nel legno dei tronchi circostanti — doppio canale, nuovamente coerente con S4. Eco silenziosa nome=cosa: Vento Intreccio + rami intrecciati + fratelli che intrecciano azioni. Mai detto.",
       "pattern_a_active": "seminato",
@@ -3528,7 +3531,7 @@
       "callback_summary": "Callback a S4: Bru che indica col mento la direzione della radura (richiamo gesto di fine S4). Foresta come tessuto che ha suoi modi (da canale vibrazione di S4 a accessibilita' costruttiva di S5 — principio fisico che si estende). Fermarsi come gesto attivo non rilevante qui ma ereditato. Callback a S3: Rovo/Bru contesto Foresta ma in modalita' diversa (S5 costruttiva non margine).",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
+      "key_phrase_indicative": "Non hanno trovato qualcosa: hanno fatto qualcosa che resta.",
       "key_phrase_notes": "Nessuna frase-chiave dichiarativa di personaggio. Sigillo del narratore in chiusura — direzione: non hanno trovato qualcosa, hanno fatto qualcosa che resta. Mai dichiarato come regola. Il narratore puo' chiudere con un'immagine sul ponte che e' ancora li' (cose fatte dai fratelli che continuano a tenere anche quando nessuno guarda), o su Nodo che non ha visto il collaudo ma sapeva — qualcosa di pratico, non filosofico. Da scrivere in D.",
       "premise": "Primavera piena, qualche settimana dopo S4 — fiori aperti, Fiume piu' alto, sole che scalda. I fratelli vogliono vedere una radura nuova che Bru ha indicato loro mentre tornavano con Salvia dalla raccolta di ortica (callback S4: Bru ha fatto col mento un gesto silenzioso verso una direzione dentro la Foresta). Chiamano Bru. Vanno insieme. Seguono la sua indicazione per 20-30 minuti di cammino dentro la Foresta, arrivano al torrente: il vecchio tronco che faceva da ponte non c'e' piu' — la piena lo ha portato via. L'acqua corre alta, non si guada.",
       "problem": "L'altra sponda e' a quattro-cinque metri. Tornare = rinunciare. Cercare un altro punto = ore nella Foresta. Stanno pensando di tornare quando sentono TOK-TOK-TOK poco distante, verso il margine degli Orti — suono ritmico secco che viaggia bene nel vento, riconoscibile. E' Nodo, sta riparando una scaletta dei Coltivatori. Camminano 50 metri per raggiungerlo.",
@@ -3822,7 +3825,8 @@
             "mai_eroe"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     },
     "s06": {
       "id": "s06",
@@ -4096,8 +4100,8 @@
       "callback_summary": "S6 chiude blocco B con sei callback distribuiti. Bru offscreen (S5). Salvia con pianta diversa (S4, calendario stagionale). Fiamma modalita chiacchiera detto popolare (eco S1). Stria rilancia non risponde (S2). Messaggio Pastori S2 chiuso implicitamente. Seed Noah raccoglie primo uso canonico (pickup). Pattern A rinforzato da S5 verso S7. Seed Elias piccolo in maturing leggero verso bloom S11. Due semi nuovi piantati. Due debts opened, due debts closed.",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
-      "key_phrase_notes": null,
+      "key_phrase_indicative": "Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.",
+      "key_phrase_notes": "Frase precisa di Memolo (vincolo Bible §4.7 'una a storia se compare', prima saga). Detta nel cortile mentre Memolo infila la scatoletta in tasca senza guardarla. Eccezione attribuita a personaggio (non al narratore) — pratica non filosofia. Meccanica installata: una a storia quando Memolo compare. Ricorre in S8 con seconda frase precisa diversa.",
       "key_phrase_attributed_to": "memolo",
       "premise": "Mèmolo è triste — non lo dice. Si vede da come trotterella più piano del solito, dalla sciarpa che sistema mille volte ma non con la solita allegria. Pun, suo figlio, lo nota. A scuola lo dice ai fratelli: 'Papà ha perso una cosa. Non si ricorda dove.' Stria dalla cattedra sente e chiede una sola frase — 'E quale cosa?'. Pun: 'Non lo sa. Ma è una cosa importante.' Stria torna alla lezione. I fratelli si guardano.",
       "problem": "Aiutare Mèmolo a ritrovare l'oggetto perduto. Ma Mèmolo stesso non sa cosa ha perso né dove. Chiedergli direttamente è inutile — lo conoscono. Bisogna ricostruire la sua giornata chiedendo agli abitanti dove l'hanno visto passare. Il giro da fare attraversa tutta l'isola — est (Forno), ovest (Orti), centro (Mercato). Nord (Pascoli) è troppo lontano per Mèmolo, lo escludono subito.",
@@ -4695,7 +4699,7 @@
       "callback_summary": "S7 apre blocco C con cinque callback distribuiti. Nodo marinaro insegnato da Nodo in S4-S5 e praticato nella radura (S5) trova prima applicazione funzionale reale fuori dalla radura di insegnamento — Elias lega i tre rametti al guado, il nodo tiene, sono i sassi a strappare l'erba. Pattern A: pertiche cadute che diventarono ponte in S5 (prima semina formale) trovano variante piu' piccola e fragile nei tre rametti della zattera che diventano zattera e dopo STRAPP arrivano lo stesso al mare — prima scena ATTIVA del Pattern A in saga. Cornetto di Noah per Bru in S6 che diventa briciole fa eco di rinforzo: seconda immagine famiglia Pattern A. Pattern fermarsi come gesto attivo (S1 Gabriel, S4 Noah) viene invertito come previsto da origine: andiamo avanti diventa postura tre fratelli al momento-soglia, apertura ciclo cambiare. Noah cresciuto: continuita' evolutiva dal non-tornare-a-casa di S3, al fermarsi-tra-radici di S4, al consegnare-senza-piangere di S6, al non-piangere-allo-STRAPP di S7 — prima storia dove Noah e' motore dell'idea. Due semi nuovi piantati (seed_bartolo_vede_e_basta, seed_gabriel_micro_occhiata_noah_cresciuto). Quattro debts opened, uno debts closed (nodo_marinaro bloom funzionale). Bartolo Toba Amo prima apparizione canonica come characters_in_scene.",
       "debts_opened": [],
       "debts_closed": [],
-      "key_phrase_indicative": null,
+      "key_phrase_indicative": "Hai visto? Anche quando una cosa si rompe, l'altra parte arriva lo stesso.",
       "key_phrase_notes": "Nessuna frase-chiave dichiarativa di personaggio. Sigillo del narratore in chiusura con ADDRESS AL LETTORE (2 di <=6 saga, primo del blocco C, primo post-S4). Direzione: la zattera esce nel mare aperto con due rametti legati dal marinaro. Il terzo e' rimasto tra i due massi. Il narratore si rivolge al lettore senza nominare nulla — forse qualcosa come 'hai visto? anche quando una cosa si rompe, l'altra parte arriva lo stesso' (bozza grezza, da limare in D). L'address non strizza l'occhio sul narratore (vincolo §3.7 Carta v1.2), non preannuncia la rivelazione post-saga. Chiude come immagine, non come regola. Il tre-rametti-diventa-due ricalibra il mandala dei Tre: numero sacro che si assottiglia senza rompere il senso. Pattern A nella sua prima scena attiva — mai nominato. Frasi candidate-direzione (tutte da limare in D): 'due rametti sono bastati', 'la zattera era di tre e ne ha portati due', 'quello che si rompe non smette di andare'. Evitare: qualunque cosa che dichiari Pattern A, qualunque morale, qualunque 'hai imparato che'. Da scrivere in Fase D.",
       "premise": "Alla fine dell'estate piena, Noah la sera ha un'idea e la dice agli Orti del Cerchio mentre raccolgono l'erba lunga tenace: \"Mettiamo qualcosa nel Fiume e seguiamolo fino al mare.\" Elias raccoglie tre rametti, Gabriel chiede dove andrà. Decidono insieme. Il mattino dopo partono presto dal guado di pietre piatte a nord del Fiume che Gira. Elias lega i tre rametti col marinaro imparato da Nodo. La zattera tocca l'acqua. I fratelli camminano in fila lungo la riva interna lato ovest, la zattera scende nel Fiume accanto a loro, spinta dalla corrente antioraria che porta verso la Bocca.",
       "problem": "Portare la zattera fino al mare aperto camminando lungo il Fiume per una giornata intera, senza intervenire sulla corrente. Il Fiume fa quello che fa — loro guardano. Per Noah (4-5 anni) è una camminata lunga al limite della fatica. A mezzogiorno al punto dei due massi il letto del Fiume si stringe: la zattera si incastra, la corrente preme. Elias allunga il bastoncino per liberarla. STRAPP — l'erba tenace cede dove tira la pressione, il terzo rametto resta incastrato tra i massi, gli altri due ancora legati dal marinaro riprendono la corsa. Il problema non è tecnico (il nodo di Elias ha tenuto): è che la cosa costruita si è rotta e bisogna decidere cosa farne.",
@@ -4946,7 +4950,8 @@
             "mai_conflitto_aperto"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     },
     "s08": {
       "id": "s08",
@@ -7776,7 +7781,8 @@
             "mai_preannunciare_rivelazione"
           ]
         }
-      ]
+      ],
+      "key_phrase_attributed_to": "narratore"
     }
   },
   "quote_tracker": {
@@ -8364,6 +8370,12 @@
         "graph_version: -> 1.0.0"
       ],
       "notes": "Backup v0.10.0 conservato in pipeline_narrativa/story_graph.v0.10.0.backup.json. Slim entities NON eseguito (decisione Ray: no slim aggressivo, mantieni state_by_story + voice_notes + narrative_function come riferimento). Catalogo isola_i3v_visual aggiornato a 115 entities (114 + pallone_di_stoffa_cucita come oggetto_di_scena_ricorrente). Workspace fase E (_porting_grafo/) rimane in repo come trail di audit."
+    },
+    {
+      "version": "1.0.0-post-pulizia",
+      "date": "2026-04-28",
+      "phase": "post_fase_E_pulizia_finale",
+      "summary": "Pulizia provvisori narrativi: promossi al canonical i provvisori P2 (categoria A/B medium) per season_passage + key_phrase_indicative + key_phrase_attributed_to in 6 storie (s01/s02/s04/s05/s06/s07) + key_phrase_attributed_to=narratore in s12. Pulita nota obsoleta fase-E in s02.location_primary.note (pozza_abbeveratoio_pastori aggiunta al catalogo). Stato finale: nessun campo narrativo ambiguo nel canonical. I 5 no_inference_fields restano deciso autoriale Ray (Q1-Q6). season_passage resta NULL by design in s07/s08/s11 (nessun passaggio stagionale narrato). key_phrase_indicative resta NULL in s12 (sigillo del narratore con immagine, non frase puntuale, vincolo ARCHI 3.S12)."
     }
   ]
 }
