@@ -1,0 +1,188 @@
+# Hook ciclo B — S06 — Il Dono per Mèmolo
+# Fonte: proposta agente fase G del 2026-04-29.
+# Edit: h09 accorciato a 29 parole preservando la key_phrase di Memolo
+# alla lettera (vincolo Bible §4.7 "una a storia"). Dettagli scartati
+# ("vede il dente", "senza guardarla") spostati in notes.
+
+story_id: s06
+
+hooks:
+  - hook_id: s06_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: scuola_stria
+      qualifier: interno_aula
+    characters_present: [stria, gabriel, elias, noah, pun]
+    focal_action: "Stria scrive numeri alla lavagna, di spalle. Pun si china verso Gabriel: «Papà ha perso una cosa. Non si ricorda dove.» Dalla finestra, Memolo trotterella in piazza."
+    focal_object: null
+    atmosphere: "mattino fresco di primavera matura, aula raccolta, due piani sovrapposti — la lezione dentro e Memolo piccolo fuori"
+    palette: "terracotta dei muri interni + nero della lavagna + ocra del legno dei banchi + chiazza chiara della finestra con Memolo piccolo nel riquadro"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Apertura ad anello (chiuderà su altro interno-cortile). La finestra è il vero soggetto del frame: Memolo nel riquadro a fuoco medio, la classe in primo piano sfocata. Stria di spalle, orecchie alte."
+
+  - hook_id: s06_h02
+    type: dettaglio
+    is_signature: true
+    provenance: extended_v2
+    moment: mattino_presto
+    location:
+      id: piazza_villaggio
+      qualifier: esterno_lato_albero_vecchio
+    characters_present: [memolo]
+    focal_action: "Memolo si ferma a metà piazza. Si sistema la sciarpa una, due, tre volte. La sciarpa torna storta. Lui riparte, si ferma di nuovo."
+    focal_object: sciarpa_memolo
+    atmosphere: "allegria distratta che oggi non c'è, gesto ripetuto che non riesce, piazza ancora vuota"
+    palette: "lana sbiadita della sciarpa di sbieco + pelo chiaro di Memolo + terracotta della piazza vuota + ombra lunga del mattino"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "HOOK FIRMA. Prima apparizione visiva piena di Memolo nella saga. La sciarpa storta è la calamita. Memolo piccolo, di tre quarti, l'Albero Vecchio fuori frame a destra. Vista esterna in eco alla finestra di h01."
+
+  - hook_id: s06_h03
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: forno
+      qualifier: interno_soglia_porta
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "Fiamma impasta con le maniche rimboccate e parla in modalità chiacchiera. Noah, di nascosto, si infila mezzo cornetto nel taschino della giacca."
+    focal_object: pagnotta_forno
+    atmosphere: "vapore di pane, calore del forno aperto, parola che non si ferma, gesto piccolo di Noah che intasca"
+    palette: "terracotta arancione del forno + bianco farina sui banconi + grembiule chiaro di Fiamma + chiazza dorata del cornetto nel taschino"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Tappa est. Il taschino col cornetto è dettaglio focale secondario (semina Pattern A — cornetto destinato a Bru). Fiamma in piano medio a sinistra, i fratelli a destra in soglia."
+
+  - hook_id: s06_h04
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: via_dell_alba
+      qualifier: tratto_verso_orti
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre fratelli camminano verso ovest. Noah si abbassa senza fermare il passo, raccoglie un bastoncino da terra e lo tiene in mano."
+    focal_object: null
+    atmosphere: "strada che si apre, energia piena del mattino, gesto en passant che non viene annunciato"
+    palette: "ocra della strada battuta + verdi maturi degli Orti che si vedono in fondo + sagome dei tre fratelli in fila + bastoncino chiaro nella mano di Noah"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Firma Noah-bastoncini istituita en passant. Primo dei due bastoncini della giornata. I fratelli di tre quarti, di spalle in cammino."
+
+  - hook_id: s06_h05
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: casa_salvia
+      qualifier: cortile_giardino_erbe
+    characters_present: [salvia, gabriel, elias, noah]
+    focal_action: "Salvia separa foglie di ortica con le mani occupate. Risponde brevemente senza fermarsi. I fratelli stanno in piedi davanti alla cesta."
+    focal_object: cesto_salvia
+    atmosphere: "lavoro che non si interrompe, calendario proprio di Salvia (oggi le ortiche maturano), tappa rapida"
+    palette: "sabbia chiara di Salvia + verde scuro delle foglie d'ortica seccate + verde tenero di quelle fresche + ocra del cortile"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Tappa ovest uno. Cesto di Salvia in primo piano, mani occupate. I fratelli in piano medio, attesa breve. Tiglio off-scene (nel grafo voce_essential, non illustrato qui per coerenza con narrazione fattuale)."
+
+  - hook_id: s06_h06
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: casa_zolla
+      qualifier: gradino_esterno_ingresso
+    characters_present: [zolla, gabriel, elias, noah]
+    focal_action: "Zolla seduto sul gradino allinea ghiande per terra, una accanto all'altra. «Quattordici raccolte. Quindici se conto questa.» I fratelli guardano per cortesia."
+    focal_object: bisaccia_zolla
+    atmosphere: "mondo proprio di Zolla, conta delle stagioni che precede l'informazione, tappa che non risolve"
+    palette: "marrone delle ghiande in fila + ocra del gradino + sagoma raccolta di Zolla + verdi degli Orti dietro"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Tappa ovest due. Le ghiande sono il dettaglio focale a terra. Zolla a sinistra, fratelli a destra in piedi, leggermente di tre quarti."
+
+  - hook_id: s06_h07
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: mercato_del_mezzogiorno_panca_di_pietra
+      qualifier: panca_in_ombra_lato_albero_vecchio
+    characters_present: [gabriel, elias, noah, mercato_del_mezzogiorno]
+    focal_action: "Le tre Vecchie del Mercato siedono sulla panca, in ombra. Una sola, in mezzo, solleva lentamente il braccio e indica un cespuglio dietro l'Albero Vecchio. Le altre non guardano."
+    focal_object: null
+    atmosphere: "istituzione corale silente, gesto mai detto in saga prima d'ora, mezzogiorno verticale che pesa"
+    palette: "terracotta calda della piazza al sole + ombra densa sulla panca + sagome scure delle Vecchie indistinte + chiazza di chiome verdi dell'Albero Vecchio sullo sfondo"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: corner_lower_right
+    notes: "HOOK FIRMA. Prima istituzione visiva della firma gestuale 'indicare in silenzio' (riprenderà in s08, s11). Le Vecchie sempre indistinte, mai individuate (vincolo). Il braccio levato è la calamita."
+
+  - hook_id: s06_h08
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: cespuglio_dietro_albero_vecchio
+      qualifier: dietro_tronco_lato_ovest
+    characters_present: [elias, pun, gabriel, noah, liu]
+    focal_action: "Elias apre la scatoletta. Dentro, un dente da latte piccolo e bianco. Pun arriva di corsa, si abbassa accanto e dice piano: «È mio. L'avevo perso anni fa.»"
+    focal_object: null
+    atmosphere: "momento-soglia, riconoscimento che cambia il senso del giro, Elias capisce e non parla"
+    palette: "marrone scuro del legno della scatoletta + bianco unico riflesso freddo del dente + verdi del cespuglio intorno + sagome chinate di Elias e Pun in primo piano"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Il dente piccolo e bianco è l'unico accent freddo della tavolozza calda della giornata. Elias e Pun chini al centro; Gabriel e Noah un passo indietro a destra; Liù in fondo, già di spalle, riparte. Densità silenziosa."
+
+  - hook_id: s06_h09
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: pomeriggio_inoltrato
+    location:
+      id: casa_memolo_cortile
+      qualifier: cortile_albero_piccolo_centro
+    characters_present: [memolo, pun, gabriel, elias, noah]
+    focal_action: "Pun mette la scatoletta in mano a Memolo, che ride e la infila in tasca: «Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.»"
+    focal_object: null
+    atmosphere: "sollievo commosso, riso piccolo di Memolo, frase precisa che non sembra saggia, fratelli cornice non risolutori"
+    palette: "terracotta calda del pomeriggio inoltrato + sabbia del cortile battuto + lana sbiadita della sciarpa storta + verdi tenui dell'albero piccolo + chiazza scura della scatoletta in mano"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Memolo in piano medio centro, Pun davanti a lui in basso, fratelli a destra in semicerchio (Noah un passo indietro). Memolo apre la scatoletta, vede il dente, ride; la infila in tasca senza guardarla — gesto pratico, non commozione. La key_phrase di Memolo dal grafo (key_phrase_indicative) compare qui ALLA LETTERA, attribuita a Memolo. Vincolo 'una a storia' rispettato."
+
+  - hook_id: s06_h10
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: pomeriggio_inoltrato
+    location:
+      id: piazza_villaggio
+      qualifier: margine_uscita_verso_case
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre fratelli si avviano. Noah tira fuori dal taschino una manciata di briciole dorate del cornetto, le tiene in mano un attimo, lascia cadere un bastoncino senza accorgersene."
+    focal_object: null
+    atmosphere: "sole virato al giallo caldo di metà pomeriggio, primo Mulinello leggero sui tetti, chiusura senza commento"
+    palette: "giallo caldo del pomeriggio sui tetti + ocra della piazza che si svuota + briciole dorate sul palmo come ultimo punto cromatico + sagome dei tre fratelli che si allontanano"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Chiusura ad anello esterna (apertura interna h01, chiusura aperta h10). Pattern A in immagine pulita: il cornetto destinato a Bru è diventato briciole, finisce per terra. Mai nominato. Bastoncino lasciato cadere è eco minore della firma Noah. Tre venti distribuiti nella giornata si chiudono sul Mulinello leggero."
