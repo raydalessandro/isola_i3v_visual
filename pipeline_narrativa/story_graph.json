@@ -5491,136 +5491,261 @@
         "scene_hooks": [
           {
             "hook_id": "s07_h01",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mattino_presto",
             "location": {
               "id": "guado_di_pietre_piatte",
-              "qualifier": "partenza_mattino_presto_pietre_piatte",
-              "legacy_string": "guado_di_pietre_piatte_fiume_che_gira_nord"
+              "qualifier": "sponda_pietra_piatta_lato_ovest"
             },
             "quadrant": "acqua_nord",
             "characters_present": [
-              "gabriel",
               "elias",
+              "gabriel",
               "noah"
             ],
             "elements": [],
-            "palette": "oro_caldo_pietre_piatte_grigio_verdi_acqua_limpida_che_scende_marroni_chiari_dei_rametti_verdi_freschi_dell_erba_tenace",
-            "notes": null,
-            "focal_action": "I tre fratelli al guado di pietre piatte al mattino presto. Elias seduto sulla pietra piu' grande, tre rametti davanti a lui, in mano un mazzo di erba lunga tenace raccolta la sera prima agli Orti. Noah in piedi accanto, bastoncino gia' in mano. Gabriel poco discosto, guarda il Fiume scendere. Elias lega i tre rametti col marinaro — gesto preciso, mani controllate. Nessuno parla mentre Elias lavora.",
-            "focal_object": "tre_rametti_legati_dal_marinaro_sulla_pietra_piatta_al_guado",
-            "atmosphere": "partenza_preparata_concentrazione_silenziosa_aria_gia_calda_estate_piena_alba_estiva",
-            "wind_visible": "intreccio_leggero_sopra_pelo_acqua_parallelo_corrente_nessuna_increspatura",
+            "focal_action": "Elias seduto sulla pietra piatta lega tre rametti col nodo marinaro. Tre giri, sotto, mezza chiave, tira. Gabriel e Noah lo guardano da vicino, in silenzio.",
+            "focal_object": null,
+            "atmosphere": "alba estiva già calda, silenzio raro senza Taglio, concentrazione sulle mani",
+            "palette": "oro caldo dell'alba sulle pietre piatte + grigi-verdi dell'acqua che scende + marrone chiaro dei tre rametti + verde dell'erba lunga tenace ancora flessibile",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Apertura. Le mani di Elias sono il vero soggetto in piano stretto, i fratelli a destra in piano medio. Niente Taglio sopra l'acqua — primo mattino della saga senza il vento dell'est. Primo bloom funzionale del seed marinaro (S5)."
           },
           {
             "hook_id": "s07_h02",
-            "moment": "mattina",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattino_presto",
             "location": {
-              "id": "fiume_che_gira",
-              "qualifier": "lato_ovest_tratto_accanto_a_foresta_intrecciata",
-              "legacy_string": "fiume_che_gira_lato_ovest_tratto_accanto_a_foresta_intrecciata"
+              "id": "guado_di_pietre_piatte",
+              "qualifier": "bordo_acqua_lato_ovest"
             },
-            "quadrant": "terra_ovest",
+            "quadrant": "acqua_nord",
             "characters_present": [
-              "gabriel",
               "elias",
+              "gabriel",
               "noah"
             ],
             "elements": [],
-            "palette": "verdi_scuri_foresta_a_sinistra_verdi_chiari_acqua_a_destra_marrone_chiaro_della_riva_tra_le_due_zone_ombra_screziata_sul_sentiero",
-            "notes": null,
-            "focal_action": "I tre fratelli camminano in fila lungo la riva interna lato ovest. La zattera va nel Fiume a fianco sulla loro destra, spinta dalla corrente antioraria che scende verso la Bocca. Gabriel davanti, passo regolare. Elias dietro di lui. Noah ultimo, bastoncino in mano, occhi sulla zattera. Sulla loro sinistra, la Foresta Intrecciata scura, vista da fuori — verdi profondi, ombra screziata sulla riva.",
-            "focal_object": "zattera_che_naviga_nel_fiume_sulla_destra_dei_fratelli_accanto_a_loro_che_camminano_con_foresta_intrecciata_sulla_sinistra",
-            "atmosphere": "cammino_fiducioso_della_prima_meta_storia_ritmo_appena_trovato_odori_di_foresta_sul_verso_del_fiume",
-            "wind_visible": "intreccio_tra_chiome_foresta_e_sopra_acqua_a_tratti_parallelo_a_tratti_trasversale",
+            "focal_action": "Elias tiene la zattera finita nel palmo aperto. Tre rametti paralleli, larga come una mano. I fratelli la toccano con un dito ognuno.",
+            "focal_object": null,
+            "atmosphere": "gesto piccolo solenne, scala minima, tre dita che si incontrano sull'oggetto costruito",
+            "palette": "marrone chiaro dei rametti + verde fibroso dell'erba tenace al nodo + rosa caldo della pelle delle mani all'alba + verde acqua sotto",
+            "wind_visible": null,
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "Close-up sulla zattera in mano. La calamita è la zattera nel palmo, non i visi. Tre dita che la toccano = firma del momento (cosa fatta da tre, decisa da tre)."
           },
           {
             "hook_id": "s07_h03",
-            "moment": "fine_mattina_verso_mezzogiorno",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattina",
             "location": {
               "id": "fiume_che_gira",
-              "qualifier": "lato_ovest_tratto_accanto_a_orti_del_cerchio",
-              "legacy_string": "fiume_che_gira_lato_ovest_tratto_accanto_a_orti_del_cerchio"
+              "qualifier": "riva_interna_lato_ovest_tratto_foresta_intrecciata"
             },
-            "quadrant": "terra_ovest",
+            "quadrant": null,
             "characters_present": [
               "gabriel",
               "elias",
               "noah"
             ],
             "elements": [],
-            "palette": "ocra_terra_orti_verdi_tenerissimi_ortaggi_filari_scuri_acqua_verde_chiara_accanto_oro_del_sole_quasi_a_picco",
-            "notes": null,
-            "focal_action": "I tre fratelli proseguono lungo la riva. Sulla sinistra, gli Orti del Cerchio — filari ordinati, terra lavorata, qualche coltivatore chino lontano sul campo senza alzare lo sguardo. La zattera continua a scendere nel Fiume parallela a loro. Noah tiene il bastoncino come strumento, gia' non come raccolta.",
-            "focal_object": "filari_ordinati_degli_orti_sulla_sinistra_zattera_nel_fiume_sulla_destra_tre_fratelli_tra_le_due_zone",
-            "atmosphere": "passaggio_tra_due_mondi_lavorati_la_terra_coltivata_e_l_acqua_che_scorre_coltivatori_sullo_sfondo_non_interagiscono",
-            "wind_visible": "intreccio_piu_caldo_portato_odori_di_terra_lavorata_e_di_piante_in_fiore",
+            "focal_action": "I tre fratelli camminano in fila sulla riva ovest. La zattera scende nel Fiume sulla loro destra. Sulla sinistra la Foresta Intrecciata, scura, vista da fuori.",
+            "focal_object": null,
+            "atmosphere": "ritmo trovato, Intreccio alto tra le chiome, in basso quasi fermo, ombra screziata sul sentiero",
+            "palette": "verdi profondi della Foresta a sinistra + verde chiaro acqua a destra + ocra del sentiero in mezzo + sagome dei tre fratelli di tre quarti di spalle",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Primo tratto del cammino. Zattera già piccola sulla destra del frame, fratelli al centro-sinistra. Foresta vista da fuori (eco S4 vista da dentro)."
           },
           {
             "hook_id": "s07_h04",
-            "moment": "mezzogiorno_sole_alto",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "meta_mattina",
             "location": {
               "id": "fiume_che_gira",
-              "qualifier": "due_massi_che_stringono_letto_meta_percorso",
-              "legacy_string": "punto_dei_due_massi_che_stringono_il_letto_fiume_meta_percorso"
+              "qualifier": "riva_interna_lato_ovest_tratto_orti_del_cerchio"
             },
-            "quadrant": "perimetro_fiume_che_gira",
+            "quadrant": null,
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah",
+              "coltivatori_del_cerchio"
+            ],
+            "elements": [],
+            "focal_action": "La Foresta finisce, comincia il margine degli Orti. I Coltivatori lavorano lontano, dall'altra parte del campo. Gabriel corre due passi per stare alla zattera che si è fatta più veloce.",
+            "focal_object": null,
+            "atmosphere": "apertura del campo, cantilena bassa di metà mattina sullo sfondo, Fiume che si allarga",
+            "palette": "ocra terra lavorata + verdi teneri ortaggi in filari + chiazze chiare delle vesti dei Coltivatori in lontananza + oro del sole che sale + acqua verde-chiara",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Vista aperta, soggetti piccoli. Coltivatori sempre lontani (vincolo collettivo), non interagiscono. Gabriel di scorcio in corsa breve sulla destra."
+          },
+          {
+            "hook_id": "s07_h05",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "quasi_mezzogiorno",
+            "location": {
+              "id": "fiume_che_gira",
+              "qualifier": "punto_dei_due_massi_letto_che_si_stringe"
+            },
+            "quadrant": null,
             "characters_present": [
               "gabriel",
               "elias",
               "noah"
             ],
             "elements": [],
-            "palette": "grigio_caldo_dei_massi_verde_scuro_acqua_nella_strettoia_marrone_chiaro_rametti_verde_erba_tenace_che_si_sfrangia_bianco_schiuma_alla_base_dei_massi",
-            "notes": null,
-            "focal_action": "Il Fiume si stringe tra due massi affioranti. La zattera si incastra — rallenta, si ferma contro le pietre, la corrente la preme. I fratelli sulla riva si fermano. Elias allunga il bastoncino (passato da Noah o suo? da decidere in D) per liberarla — gesto controllato, non ansioso. La corrente preme piu' forte contro i rametti bloccati. STRAPP: l'erba tenace cede dove tira la pressione, il terzo rametto si stacca, resta incastrato tra i due massi. Due rametti ancora legati escono dalla strettoia e riprendono la corsa. Noah si ferma un attimo. Non piange.",
-            "focal_object": "zattera_incastrata_tra_due_massi_erba_tenace_che_cede_un_rametto_resta_bloccato_due_proseguono",
-            "atmosphere": "momento_soglia_della_storia_sole_alto_tempo_sospeso_corrente_che_preme_strapp_arrivato_continuazione_pulita_subito_dopo",
-            "wind_visible": "intreccio_sopra_acqua_trasversale_al_punto_stretto_leggere_rughe_superficiali_corrente_visibilmente_piu_veloce",
+            "focal_action": "Il sole è quasi verticale. Davanti a loro due grossi sassi affioranti stringono il letto del Fiume. L'acqua si comprime, accelera, fa schiuma alla base.",
+            "focal_object": null,
+            "atmosphere": "tempo che si sospende, rumore d'acqua che si fa più alto, ombra dei massi corta sotto sole zenitale",
+            "palette": "grigio caldo dei massi sotto sole alto + verde scuro dell'acqua nella strettoia + bianco schiuma alla base + ocra spento delle rive a mezzogiorno + zero ombra lunga",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Hook di sospensione prima dello STRAPP. I due massi al centro del frame, fratelli piccoli a sinistra in arrivo. La zattera ancora intera, già dentro la corrente che accelera."
           },
           {
-            "hook_id": "s07_h05",
-            "moment": "pomeriggio_avanzato",
+            "hook_id": "s07_h06",
+            "type": "azione",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
             "location": {
               "id": "fiume_che_gira",
-              "qualifier": "lato_ovest_discesa_verso_bocca",
-              "legacy_string": "fiume_che_gira_lato_ovest_discesa_verso_bocca_pomeriggio"
+              "qualifier": "punto_dei_due_massi_strettoia"
+            },
+            "quadrant": null,
+            "characters_present": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Elias allunga il bastoncino dalla riva e tocca un rametto. L'erba tenace cede sotto la torsione. Il terzo rametto resta incastrato. Gli altri due, ancora legati, riprendono la corsa.",
+            "focal_object": null,
+            "atmosphere": "istante di rottura, corrente che preme, schiuma bianca sotto la pressione, gesto controllato di Elias non ansioso",
+            "palette": "grigio caldo dei massi + verde tenace dell'erba che si sfrangia in fibre + bianco schiuma + marrone chiaro del rametto bloccato + due rametti chiari che scendono già due metri più giù",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "STRAPP"
+            ],
+            "composition_zone": "corner_lower_right",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Onomatopea-firma di saga. Calamita: il punto esatto in cui l'erba si sfrangia tra i massi. Elias di profilo a sinistra col bastoncino, fratelli un passo dietro. Il nodo marinaro (visibile sui due rametti che escono dalla strettoia) ha tenuto — nessuno lo dice."
+          },
+          {
+            "hook_id": "s07_h07",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
+            "location": {
+              "id": "fiume_che_gira",
+              "qualifier": "riva_ovest_appena_a_valle_dei_due_massi"
+            },
+            "quadrant": null,
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre fermi sulla riva. Noah non piange, guarda i due rametti scendere. Elias guarda il bastoncino in mano. Gabriel guarda Noah un attimo più del normale, poi l'acqua.",
+            "focal_object": null,
+            "atmosphere": "momento-soglia, sole verticale che pesa, fermarsi che si inverte in continuare, micro-occhiata mai nominata",
+            "palette": "grigio caldo dei massi sullo sfondo + ocra spento della riva a mezzogiorno + sagome ferme dei tre in piedi + bianco schiuma piccolo in fondo + zero ombra",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Apertura ciclo C cambiare. La micro-occhiata di Gabriel a Noah è il punto del frame ma non è dichiarata: Gabriel di tre quarti, sguardo deviato verso Noah, durata di un attimo solo. Elias guarda il bastoncino, non se stesso. Strato 3: precursore della paura S9."
+          },
+          {
+            "hook_id": "s07_h08",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio_inoltrato",
+            "location": {
+              "id": "fiume_che_gira",
+              "qualifier": "riva_ovest_discesa_verso_bocca_paesaggio_che_cambia"
+            },
+            "quadrant": null,
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre proseguono. Il verde si dirada, la terra si fa chiara e sabbiosa, l'aria cambia odore. La zattera a due rametti naviga davanti a loro, intera, più veloce.",
+            "focal_object": null,
+            "atmosphere": "transizione cromatica e olfattiva, sole inclinato a ovest, cammino stanco ma continuato",
+            "palette": "verdi che sbiadiscono + ocra che vira al sabbioso chiaro + azzurri che crescono in fondo + oro inclinato del sole pomeridiano + due rametti chiari sull'acqua davanti",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Cammino lungo. Noah un passo più avanti del solito, bastoncino in mano come strumento. Gabriel ed Elias dietro. Vista frontale o di tre quarti dall'alto sulla riva."
+          },
+          {
+            "hook_id": "s07_h09",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "crepuscolo",
+            "location": {
+              "id": "pontile_bocca",
+              "qualifier": "lato_ovest_della_bocca_arrivo_dei_fratelli"
             },
             "quadrant": "acqua_sud",
             "characters_present": [
               "gabriel",
               "elias",
-              "noah"
+              "noah",
+              "bartolo",
+              "toba"
             ],
             "elements": [],
-            "palette": "verdi_che_sbiadiscono_azzurri_che_crescono_ocra_del_letto_che_si_allarga_oro_caldo_del_sole_pomeridiano_inclinato",
-            "notes": null,
-            "focal_action": "Il cammino verso la Bocca. I fratelli proseguono in silenzio dopo lo STRAPP. La zattera a due rametti navi nel Fiume davanti a loro, piu' leggera, piu' veloce. Il paesaggio cambia: la vegetazione si dirada, si sente l'aria piu' salata, il Fiume si allarga. Noah piu' avanti del solito, guarda la zattera. Gabriel e Elias dietro, un passo piu' lento. In questo tratto avviene la micro-occhiata: Noah dice 'pero' due rametti vanno avanti', Gabriel lo guarda un attimo.",
-            "focal_object": "zattera_a_due_rametti_che_naviga_davanti_ai_fratelli_verso_il_mare_noah_in_testa_col_bastoncino",
-            "atmosphere": "transizione_dal_verde_al_blu_dal_dolce_al_salato_cammino_stanco_ma_continuato_momento_di_crescita_silenziosa",
-            "wind_visible": "intreccio_che_si_diluisce_intreccio_piu_caldo_di_aria_salata_vento_parallelo_alla_corrente_che_si_allarga",
+            "focal_action": "I fratelli arrivano sul Pontile. Bartolo è semi-disteso nella barca legata, occhi aperti. Toba seduta sul bordo guarda l'acqua. La zattera a due rametti entra nell'acqua mista della Bocca.",
+            "focal_object": null,
+            "atmosphere": "arrivo silenzioso, presenze che non parlano, sole basso arancio-viola sul mare est, acqua mista dolce e salata",
+            "palette": "arancio crepuscolo sul mare + viola del cielo alto + legno scuro del Pontile e della barca + sagoma raccolta di Bartolo nella barca + cucciola chiara di Toba sul bordo + due rametti chiari sull'acqua riflessa",
+            "wind_visible": "vento_mulinello",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Prima istituzione visiva di Bartolo nonno silenzioso nel blocco D (vincolo). Bartolo in barca, mai in piedi. Toba sul bordo, una domanda che arriverà nell'h10. Mulinello appena cominciato, leggero. La zattera è il punto basso a destra del frame."
           },
           {
-            "hook_id": "s07_h06",
-            "moment": "crepuscolo_tardo_tramonto",
+            "hook_id": "s07_h10",
+            "type": "atmosferico",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "crepuscolo",
             "location": {
-              "id": "pontile_bocca",
-              "qualifier": "arrivo_tramonto_vista_scogliera_est_amo",
-              "legacy_string": "bocca_pontile_di_bartolo_arrivo_tramonto_vista_scogliera_est_amo"
+              "id": "bocca",
+              "qualifier": "diramazione_sud_vista_dal_pontile_verso_scogliera_est"
             },
             "quadrant": "acqua_sud",
             "characters_present": [
@@ -5632,15 +5757,15 @@
               "amo"
             ],
             "elements": [],
-            "palette": "arancio_crepuscolo_sul_mare_est_viola_cielo_alto_nero_sagoma_amo_su_scogliera_legno_scuro_pontile_acqua_riflessa_oro_rosso_marrone_chiaro_due_rametti_distanti_che_scompaiono",
-            "notes": null,
-            "focal_action": "I tre fratelli arrivano al Pontile di Bartolo nella Bocca. Acqua mista dolce e salata, luce del crepuscolo. Bartolo nella barca legata al Pontile, semi-disteso, occhi aperti. Toba seduta sul bordo del Pontile vicino al padre. La zattera a due rametti entra nell'acqua mista, il Mulinello sera comincia a girare alla Bocca, sposta la zattera verso il mare aperto. Toba fa una domanda: 'E poi?'. Noah le risponde: 'E' arrivata.' Bartolo non parla — un occhio si chiude lento e si riapre lento. Al di la' della Bocca, sulla scogliera est della Spiaggia delle Conchiglie, Amo sta con le ali aperte al sole calante, croce nera contro il cielo crepuscolare. I fratelli lo vedono da lontano, in silenzio. La zattera esce nel mare aperto.",
-            "focal_object": "zattera_che_esce_nel_mare_aperto_due_rametti_ancora_legati_visti_da_pontile_con_amo_croce_nera_sullo_sfondo_est",
-            "atmosphere": "arrivo_compiuto_crepuscolo_calmo_presenze_silenziose_bartolo_e_amo_come_cornici_il_mondo_va_per_conto_suo_zattera_si_allontana_nel_mare",
-            "wind_visible": "mulinello_sera_che_gira_leggero_sull_acqua_mista_della_bocca_sposta_verso_l_aperto_intreccio_residuo_porta_odori_di_sale_e_alghe",
+            "focal_action": "Il Mulinello gira alla diramazione sud e spinge la zattera fuori, nel mare aperto. Sulla scogliera est, Amo a ali aperte è croce nera contro il cielo arancio-viola.",
+            "focal_object": null,
+            "atmosphere": "chiusura aperta, mondo che va per conto suo, zero parole oltre lo scambio Toba/Noah, distanza che separa i due lati della Bocca",
+            "palette": "arancio-viola del cielo crepuscolare + nero pieno della sagoma di Amo come croce + acqua mista oro-rosso riflessa + due rametti che diventano un puntino + legno scuro del Pontile in primo piano sfocato",
+            "wind_visible": "vento_mulinello",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Chiusura saga-immagine. Pattern A in immagine pulita: la cosa rotta (due rametti) arriva lo stesso. Amo croce nera sulla scogliera est è la calamita visiva alta a destra; il Pontile col gruppo in primo piano sfocato a sinistra; la zattera puntino al centro-basso del mare. Toba ha appena chiesto «E poi?», Noah ha appena risposto «È arrivata» — non illustrate come labbra in movimento, restano nell'aria. Bartolo: un occhio si chiude lento, si riapre lento (gestuale di scheda)."
           }
         ]
       },
@@ -9216,6 +9341,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s06: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloB/s06.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s07: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s07.yaml."
     }
   ]
 }
