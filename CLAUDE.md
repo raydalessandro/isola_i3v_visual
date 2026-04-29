@@ -111,8 +111,18 @@ Migrazione una-tantum del grafo da schema legacy v1.1 a schema canonico v1.2:
 
 Compilazione body schede `visual/` usando il grafo v1.0.0 come fonte autorevole:
 - **F.1 (fatto, meccanico)**: `scripts/compile_visual_from_graph.py` ha travasato dati grafo → 56 sezioni stub compilate (Identità visuale, Espressione/comportamento, Cliché da evitare, Storie/scene di apparizione).
-- **F.2 (in corso)**: Ray + collaboratori esterni aggiungono dettagli autoriali alle schede (`Variabilità ammessa`, `Per stampa 3D`, `Per narrativa e social` + arricchimenti narrativi).
+- **F.2 (in corso)**: Ray + collaboratori esterni aggiungono dettagli autoriali alle schede (`Variabilità ammessa`, `Per stampa 3D`, `Per narrativa e social` + arricchimenti narrativi). Le proposte arrivano via `contributi/`.
 - **F.3 (pianificata)**: travaso inverso visual → grafo per dettagliare gli `entities` del grafo dove le schede hanno info aggiuntiva.
+
+### Fase G — IN PREPARAZIONE (2026-04-28+)
+
+Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `visual_anchors.scene_hooks`. Bump grafo v1.0.0 → **v1.1.0** + schema v1.2 → **v1.3** (estensione additiva: nuovi campi `type`, `is_signature`, `provenance`, `composition_zone` su scene_hook).
+
+- **Input**: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (Ray sta preparando le 12 narrazioni fattuali, una storia per file).
+- **Prompt operativo**: `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
+- **Audit**: `scripts/audit/audit_1_integrity.py`, `audit_2_schema.py`, `audit_3_navigability.py`, `audit_4_drift.py` (da implementare).
+- **Modalità**: una storia alla volta, con approvazione Ray tra storia e storia.
+- **Output**: `pipeline_narrativa/story_graph.json` con 120 hook totali (10 × 12 storie), tutti validati.
 
 ---
 
@@ -132,6 +142,14 @@ Vedi sezione 5 (regole rigorose).
 
 ### Modalità "porting grafo"
 **Non più attiva.** Fase E completata. Riferimento storico in `_porting_grafo/`.
+
+### Modalità "estensione hook visivi" (fase G)
+Ampliamento dei `visual_anchors.scene_hooks` da N a 10 per storia. Vedi `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
+
+- **Lettura**: 7 fonti di verità nell'ordine prescritto (vedi prompt).
+- **Scrittura**: SOLO `pipeline_narrativa/story_graph.json#stories.s0X.visual_anchors.scene_hooks` + metadati `graph_version`, `last_updated`, `phase`. Nient'altro.
+- **Step obbligatori**: lettura → inventario candidati → selezione 10 → compilazione → proposta a Ray → ATTESA approvazione → scrittura → audit (4 script) → conferma.
+- **Una storia alla volta.** Mai parallelo. Mai saltare l'approvazione.
 
 ---
 

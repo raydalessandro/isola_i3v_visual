@@ -1,3 +1,44 @@
+# PROJECT_STATE — Snapshot al 2026-04-28
+
+> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-04-28 — Fase E completata + Fase G in preparazione
+
+**Stato corrente:**
+- **Grafo:** `pipeline_narrativa/story_graph.json` v1.0.0 schema 1.2 (12 storie + entities + seeds + callbacks + quote_tracker). Backup pre-fase E in `story_graph.v0.10.0.backup.json`.
+- **Catalogo:** 115 entities (23 personaggi + 43 luoghi + 31 strade + 14 oggetti + 3 venti + 1 visual signature).
+- **Schede `visual/`:** 115 schede tutte `provvisorio`. Compilazione meccanica fase F.1 fatta (56 sezioni stub popolate da grafo). Sezioni autoriali pure (Variabilità ammessa, Per stampa 3D, Per narrativa social) restano vuote in attesa di Ray + collaboratori esterni (`contributi/`).
+- **Cartografia:** v0.6.1 (104 feature, viewer Leaflet).
+- **Misalignments:** 8/8 resolved.
+
+**Fase E (completata 2026-04-28):**
+Migrazione grafo schema v1.1 → v1.2. 60 no_inference_fields decisi via Q1-Q6 autoriali Ray. 87 provvisori P2 (22A + 47B + 18C). Workspace archiviato in `_porting_grafo/`.
+
+**Fase F (in corso):**
+- F.1 ✅ travaso meccanico grafo → schede (56 sezioni popolate).
+- F.2 🔄 aggiunte autoriali Ray + collaboratori (`contributi/` accoglie proposte datate).
+- F.3 ⏳ travaso inverso visual → grafo.
+
+**Fase G (in preparazione):**
+Estensione hook visivi 5→10 per storia. Bump grafo v1.0.0 → v1.1.0 + schema v1.2 → v1.3 (additivo: nuovi campi `type`, `is_signature`, `provenance`, `composition_zone` su scene_hook).
+- Input: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (Ray sta producendo i 12 file).
+- Prompt operativo: `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
+- Audit: `scripts/audit/` (4 script da implementare).
+- Modalità: una storia alla volta, approvazione Ray tra storia e storia.
+- Output finale atteso: 120 hook validati totali (10 × 12).
+
+**File chiave introdotti in questa sessione:**
+- `CLAUDE.md` (radice) — istruzioni operative per istanze IA + collaboratori.
+- `contributi/README.md` + `contributi/TEMPLATE.md` — workflow per collaboratori esterni.
+- `pipeline_narrativa/narrazione_fattuale/README.md` — placeholder per le 12 narrazioni fattuali.
+- `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md` — prompt fase G.
+- `scripts/audit/README.md` — specs dei 4 audit.
+- `scripts/compile_visual_from_graph.py` — compilatore fase F.1 (idempotente).
+
+---
+
+## Sessioni precedenti (storico)
+
 # PROJECT_STATE — Snapshot al 2026-04-25
 
 Documento riassuntivo di **dove siamo oggi**. Per il dettaglio storico vedi `cartografia/CHANGELOG.md`.

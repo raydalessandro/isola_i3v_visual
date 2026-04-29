@@ -14,9 +14,19 @@ Questo repo contiene **due tracce di lavoro** + un input read-only + un workspac
 ├── visual/                descrizioni visive di tutte le entità (personaggi, luoghi, oggetti, venti, signatures)
 ├── catalogo_web/          sito statico interno per consultare visual/ da browser (GitHub Pages)
 ├── pipeline_narrativa/    INPUT read-only: grafo storie + corpus canonico narrativo
+│   ├── documenti_progetto/         Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.
+│   ├── narrazione_fattuale/        12 narrazioni fattuali s01..s12 (input fase G, Ray)
+│   ├── prompts/                    prompt operativi versionati per agenti (es. fase G)
+│   ├── story_graph.json            grafo v1.0.0 schema 1.2
+│   └── story_graph.v0.10.0.backup.json  backup pre-fase E
 ├── _porting_grafo/        ARCHIVIO una-tantum: workspace migrazione grafo v1.1 → v1.2 (fase E completata)
+├── contributi/            proposte aggiunte schede da collaboratori esterni (file datati, mai modifica diretta)
 ├── skills/                skill dell'agente IA (cartografo, visual con sotto-skill) + regole comuni
 ├── scripts/               tool Python condivisi (idempotenti) tra le skill
+│   ├── build_catalogo_web.py       rigenera catalogo_web da visual/
+│   ├── compile_visual_from_graph.py  travaso meccanico grafo → schede (fase F.1)
+│   └── audit/                      audit grafo (fase G, 4 script da implementare)
+├── CLAUDE.md              istruzioni per istanze IA (LEGGI PRIMA DI MODIFICARE)
 ├── PROJECT_STATE.md       snapshot operativo
 └── SYNC_LOG.md            log dei cambiamenti da riflettere altrove
 ```
@@ -47,15 +57,30 @@ Sito statico HTML+JS in [`catalogo_web/`](./catalogo_web/) per **consultare le e
 - **Locale:** `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
 - **Deploy:** GitHub Pages (Settings → Pages → Source: main / `/`) → URL `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`.
 
-## 4. Pipeline narrativa (read-only)
+## 4. Pipeline narrativa (read-only per cartografia/visual; modificabile solo da agente di fase dedicato)
 
 Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern AI da bandire, EAR, apparato — più il grafo storie aggiornato.
 
-- **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.0.0 schema 1.2** (S1-S12, fase E completata).
-- **Backup pre-migrazione:** `pipeline_narrativa/story_graph.v0.10.0.backup.json` (snapshot v0.10.0 schema 0.1, conservato come trail di audit).
-- **Regola:** mai modificato dalla cartografia o dal visual. Se si rilevano incoerenze, **si segnalano**, non si risolvono in autonomia.
+- **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.0.0 schema 1.2** (S1-S12, fase E completata). Prossimo bump previsto v1.1.0 schema 1.3 (fase G, estensione hook).
+- **Documenti progetto:** `pipeline_narrativa/documenti_progetto/` (Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.).
+- **Narrazione fattuale:** `pipeline_narrativa/narrazione_fattuale/` — 12 file `s01_*.md` ... `s12_*.md` con cronaca fattuale di ogni storia (input fase G, in produzione da Ray).
+- **Prompt operativi:** `pipeline_narrativa/prompts/` — prompt versionati per agenti dedicati (es. `PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`).
+- **Backup pre-migrazione:** `pipeline_narrativa/story_graph.v0.10.0.backup.json` (snapshot v0.10.0 schema 0.1).
+- **Regola:** mai modificato dalla cartografia o dal visual. Solo agenti di fase dedicati (con prompt specifico) toccano il grafo, e solo le sezioni autorizzate dal prompt.
 
-## 5. Porting grafo (archivio una-tantum, non pipeline)
+## 5. Fase G — Estensione hook visivi (in preparazione)
+
+Ampliamento dei `visual_anchors.scene_hooks` di ogni storia da N (2–8 attuali) a esattamente **10**. Bump grafo v1.0.0 → v1.1.0 + schema v1.2 → v1.3 (estensione additiva).
+
+- **Prompt operativo:** `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
+- **Input principale:** `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (Ray sta producendo i 12 file fattuali).
+- **Audit:** `scripts/audit/` — 4 script di validazione (integrity, schema, navigability, drift) da implementare prima dell'avvio.
+- **Modalità:** una storia alla volta, approvazione Ray tra storia e storia.
+- **Output finale:** 120 hook validati totali (10 × 12).
+
+Vedi `CLAUDE.md` sezione "Fase G" per dettagli.
+
+## 6. Porting grafo (archivio una-tantum, non pipeline)
 
 `_porting_grafo/` contiene il workspace della **fase E**: migrazione del story_graph dalla schema v1.1 (legacy) alla schema canonica v1.2. Lavoro **una-tantum**, completato il 2026-04-28. Non entra nella pipeline operativa, ma resta nel repo come trail di audit.
 
@@ -88,7 +113,7 @@ L'output canonico finale è promosso in `pipeline_narrativa/story_graph.json` v1
 
 ---
 
-## 6. Istruzioni per agenti IA
+## 7. Istruzioni per agenti IA
 
 Vedi `skills/README.md` (orchestratore) e le skill specifiche:
 - [`skills/cartografo.md`](./skills/cartografo.md) — manutenzione cartografia.
@@ -96,7 +121,7 @@ Vedi `skills/README.md` (orchestratore) e le skill specifiche:
 
 In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (`cartografia/` o `visual/`), non tocca mai `pipeline_narrativa/` (eccezione: la migrazione una-tantum di `_porting_grafo/`, ora chiusa), non decide canone narrativo, segnala invece di reinterpretare.
 
-## 7. Stato e contesto
+## 8. Stato e contesto
 
 - **Snapshot operativo:** `PROJECT_STATE.md`.
 - **Autore narrativo e proprietario:** Ray.
@@ -106,5 +131,5 @@ In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (
 
 **Ultimo aggiornamento:** 2026-04-28
 **Versione cartografia:** v0.6.1
-**Versione grafo storie:** v1.0.0 schema 1.2 (fase E completata)
+**Versione grafo storie:** v1.0.0 schema 1.2 (fase E completata; fase G in preparazione → v1.1.0 schema 1.3)
 **Catalogo entità:** 115 (23 personaggi + 43 luoghi + 31 strade + 14 oggetti + 3 venti + 1 visual signature)
