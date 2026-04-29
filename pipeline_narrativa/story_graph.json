@@ -8284,217 +8284,276 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "hook_01_alba_orti_raccolto_rituale",
-            "moment": "alba_taglio",
+            "hook_id": "s11_h01",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "alba",
             "location": {
               "id": "orti_del_cerchio",
-              "qualifier": "alba_raccolto_rituale_inizio_giornata",
-              "legacy_string": "orti_del_cerchio"
+              "qualifier": "alba_raccolto_rituale_inizio_giornata"
             },
             "quadrant": "terra_ovest",
-            "characters_present": [],
-            "elements": [
-              "coltivatori_alzano_primi_sacchi_raccolto",
-              "luce_radente_fiato_bianco_autunno",
-              "gabriel_gia_in_piedi_elias_con_mantenitori_noah_assonnato"
+            "characters_present": [
+              "coltivatori_del_cerchio",
+              "pastori"
             ],
-            "palette": "arancione_sole_basso_bruno_castagne_verde_scuro_foglie_tarde",
-            "notes": "Cornice solo, pochi istanti, non scena piena.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "I Coltivatori chiudono i sacchi del raccolto in fila sui filari. In alto, lontani, i Pastori scendono dai Pascoli con mantelli grezzi e zaini.",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "luce radente da est che taglia la bruma bassa sui filari, fiato bianco dei Coltivatori, file di sacchi appoggiati a terra, sagome dei Pastori piccolissime sul versante alto",
+            "palette": "arancione del sole basso a est, bruno scuro delle castagne nei sacchi, verde scuro delle foglie tarde, ocra dell'erba alta tagliata e legata, grigio chiaro della bruma",
+            "wind_visible": "vento_taglio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Apertura della storia. Pattern A in regime quieto (l'isola che fa). Pastori in alto-destra come puntini, Coltivatori in primo piano. Cantilena dei Coltivatori NON in scena (vincolo: festa non lavoro, contatore resta 4). Nessun fratello in scena qui."
           },
           {
-            "hook_id": "hook_02_mattino_piazza_allestimento",
-            "moment": "mattino_intreccio",
+            "hook_id": "s11_h02",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattino",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "mattino_allestimento_banchi_festa",
-              "legacy_string": "piazza_villaggio"
+              "qualifier": "mattino_allestimento_banchi_festa"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "banchi_montati_sotto_albero_vecchio",
-              "nodo_tok_tok_tok_quarta_occorrenza_ripara_banco_improvvisato",
-              "elias_passa_corda_intrecciata_nodo_marinaro_callback_s5",
-              "salvia_entra_col_cesto_di_rosmarino_diretta_al_forno",
-              "stria_arriva_dalla_scuola"
+            "quadrant": "centro",
+            "characters_present": [
+              "nodo",
+              "elias",
+              "fiamma",
+              "salvia",
+              "stria",
+              "mantenitori"
             ],
-            "palette": "terracotta_banchi_verde_scuro_rosmarino_giallo_oro_cuscini_foglie_cadute",
-            "notes": "Allestimento corale, molte voci basse, nessuna saturazione.",
-            "focal_action": null,
-            "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Nodo ripara un banco improvvisato. TOK-TOK-TOK. Elias gli passa una corda intrecciata. Salvia entra col cesto di rosmarino verso il banco di Fiamma. Stria arriva dalla scuola.",
+            "focal_object": "corda_nodo",
+            "atmosphere": "mattino chiaro di ottobre, voci basse multiple senza saturare, banchi mezzi montati sotto l'Albero Vecchio, foglie cadute sul selciato, primo Intreccio che porta odore di rosmarino dal cesto di Salvia",
+            "palette": "terracotta dei banchi, verde scuro del rosmarino, giallo-oro dei cuscini e delle foglie tarde, ocra dello scialle di Stria, marrone delle assi del banco riparato, bordeaux della maglia di Gabriel non ancora in scena",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TOK-TOK-TOK"
+            ],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "TOK-TOK-TOK quarta occorrenza saga (entro quota 4/5). Callback s05 — il nodo Marinaro insegnato da Nodo a Elias si manifesta festivo sulla corda intrecciata. Salvia prima volta saga nomina rosmarino (1 pianta per apparizione). Nessun fratello al banco ancora."
           },
           {
-            "hook_id": "hook_03_stria_distribuisce_coni",
-            "moment": "mezzogiorno_intreccio",
+            "hook_id": "s11_h03",
+            "type": "dettaglio",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "mezzogiorno_stria_distribuisce_coni_ghiande_dipinte",
-              "legacy_string": "piazza_villaggio"
+              "qualifier": "mezzogiorno_stria_distribuisce_coni_ghiande_dipinte_ai_fratelli"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "stria_consegna_coni_di_carta_con_ghiande_dipinte",
-              "a_pun_le_porti_a_memolo_da_parte_mia",
-              "a_bru_per_rovo",
-              "a_cardo_per_te_cardo_non_ha_nessuno_a_cui_portarle_micro_strato_3_mai_sottolineato",
-              "a_toba_per_bartolo",
-              "ai_tre_fratelli_quattro_coni_a_elias_invece_di_tre_sguardo_mezzo_secondo_piu_lungo_zero_commento"
+            "quadrant": "centro",
+            "characters_present": [
+              "stria",
+              "elias",
+              "gabriel",
+              "noah"
             ],
-            "palette": "giallo_oro_ghiande_dipinte_grigio_cenere_stria_carta_chiara_coni",
-            "notes": "Distribuzione a ritmo veloce, fermata mezzo secondo su Elias. Mai sottolineato. Stria non sbaglia mai.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "Stria mette in mano a Elias quattro coni di ghiande dipinte, non tre. Lo fa veloce, non spiega. Lo guarda mezzo secondo più del solito. Si gira, continua a distribuire.",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "scatola di coni sotto il braccio di Stria, mano di Elias che riceve, gesto trattenuto un soffio sul mezzo secondo in più, Gabriel e Noah accanto già con il loro cono in mano",
+            "palette": "giallo-oro delle ghiande dipinte (strisce, puntini, motivi), carta chiara dei coni, grigio-cenere dello scialle di Stria, marrone delle dita di Elias, verde-rosso degli altri due coni di Gabriel e Noah",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Strato 3: Stria vede prima (callback semina S2 «Tu cosa pensi?», maturing S6/S9, bloom qui). Quattro coni intenzionali, non errore — vincolo voce: zero commento, sguardo mezzo secondo più lungo, mai sottolineato dal narratore. Close-up sulle quattro punte di carta nella mano di Elias."
           },
           {
-            "hook_id": "hook_04_mezzogiorno_tre_cose_che_spostano_elias",
-            "moment": "mezzogiorno_intreccio",
+            "hook_id": "s11_h04",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "mezzogiorno_tre_cose_spostano_elias_pomo_rotola_etc",
-              "legacy_string": "piazza_villaggio"
+              "qualifier": "mezzogiorno_fondo_piazza_prova_di_forza_pastori"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "gabriel_vince_scherzosa_prova_di_forza_coi_pastori_solleva_sacco_castagne_risate_il_maggiore_dei_tre_eh",
-              "noah_gioca_coi_cuccioli_cardo_pun_toba_rompono_sgabello_pomo_che_rotola_paronomastico_2_di_2_saga_noah_ride_forte_vivo_e_visto",
-              "elias_guarda_i_suoi_quattro_coni_in_mano_non_c_e_scritto_chi_sono_sente_piccola_cosa_storta_dentro_senza_parole"
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "pastori",
+              "elias"
             ],
-            "palette": "rossi_arancioni_festa_pomo_rosso_rotolante_terra_polvere_cuccioli",
-            "notes": "Tre micro-spostamenti laterali Elias, ognuno piccolo, accumulano.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "Gabriel solleva il sacco di castagne sopra la testa. Risate piene, applausi. Un Pastore grida: «Il maggiore dei tre, eh!» Più in là Elias sente, si volta al banco.",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "cerchio di gente attorno a Gabriel in fondo alla piazza, sacco grosso di iuta, Pastori che ridono coi mantelli grezzi, Elias di spalle al banco di Nodo che sposta corde sul tavolo",
+            "palette": "rossi e arancioni della festa di mezzogiorno, marrone scuro del sacco di iuta, bruno delle castagne intraviste, grigio-lana dei mantelli dei Pastori, ocra del banco di Nodo sullo sfondo, sagoma di Elias di tre quarti laterale al banco",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "corner_lower_right",
+            "stratification": null,
+            "notes": "Prima delle tre micro-pressioni laterali su Elias. Gabriel al centro del cerchio sotto luce piena, Elias staccato due banchi più in là sul lato (sistema le corde sul tavolo). La frase del Pastore alla lettera (ARCHI). Strato 3: seconda micro-pressione sulla paura autonoma di Gabriel — Gabriel ride, non sa cosa succede a Elias."
           },
           {
-            "hook_id": "hook_05_vecchie_indicare_culmine_architrave",
-            "moment": "pomeriggio_intreccio",
+            "hook_id": "s11_h05",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
             "location": {
-              "id": "panca_di_pietra",
-              "qualifier": "pomeriggio_vecchie_indicano_culmine_architrave_riconoscimento_muto_a_elias",
-              "legacy_string": "mercato_del_mezzogiorno_panca_di_pietra"
+              "id": "piazza_villaggio",
+              "qualifier": "mezzogiorno_sgabello_rotto_pomo_rotola_panca_di_pietra"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "sotto_albero_vecchio_panca_di_pietra_vecchie_sedute",
-              "una_vecchia_alza_la_mano_e_indica_elias_solo_lui",
-              "lo_guarda_negli_occhi_una_volta_annuisce_piano",
-              "torna_a_guardare_avanti_zero_parole_nessuna_spiegazione",
-              "elias_si_ferma_capisce_di_essere_stato_visto",
-              "va_bene_due_parole_piano_senza_enfasi_frase_soglia_terna_strato_3"
+            "quadrant": "centro",
+            "characters_present": [
+              "noah",
+              "cardo",
+              "pun",
+              "toba",
+              "mercato_del_mezzogiorno"
             ],
-            "palette": "ombra_lunga_pomeriggio_sotto_albero_vecchio_pietra_chiara_panca_sagome_scure_vecchie",
-            "notes": "ARCHITRAVE SAGA. Scena-soglia architrave strato 3 Elias ACCETTA. Riconoscimento muto pre-linguistico. Curare contesto scenico per non far scivolare 'Va bene.' su rassegnazione (pausa, respiro, Elias si ferma).",
-            "focal_action": null,
-            "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "elements": [],
+            "focal_action": "Lo sgabello si rovescia. Un pomo rotola sul selciato fino ai piedi delle Vecchie. Una di loro abbassa la mano e ferma il pomo. Noah ride. Cardo lo trascina via.",
+            "focal_object": "pallone_di_stoffa_cucita",
+            "atmosphere": "sgabello rovesciato a terra, mele sparpagliate, pomo rosso che rotola in linea, palmo di una Vecchia che si abbassa lento e ferma e tiene il pomo, tre Vecchie sedute in fila sulla Panca, pallone di stoffa cucita di s03 a margine fra i giochi dei cuccioli, Noah ride forte",
+            "palette": "rosso vivo del pomo lucido, marrone polvere del selciato, ocra dello sgabello rovesciato, pietra chiara della Panca, sagome scure delle tre Vecchie nell'ombra dell'Albero Vecchio, beige-rattoppato del pallone di stoffa cucita ai bordi",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Paronomastico fisico pomo-che-rotola (2/2 saga, dentro quota). Pallone di stoffa cucita di s03 ricomparso fra i giochi dei cuccioli — chiude debt_s03_to_s11. Vecchie sempre indistinte, mai individuate (vincolo): solo il palmo di una di loro che si abbassa, ferma e tiene il pomo. Seconda micro-pressione su Elias: vede Noah vivo e libero (offscreen del quadro o margine)."
           },
           {
-            "hook_id": "hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo",
-            "moment": "pomeriggio_intreccio",
+            "hook_id": "s11_h06",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
+            "location": {
+              "id": "mercato_del_mezzogiorno_panca_di_pietra",
+              "qualifier": "pomeriggio_riconoscimento_muto_a_elias_culmine_architrave"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "elias",
+              "mercato_del_mezzogiorno"
+            ],
+            "elements": [],
+            "focal_action": "Elias passa accanto alla Panca con i quattro coni in una mano. La Vecchia al centro alza il braccio. Indica Elias. Lo guarda negli occhi una volta. Annuisce piano.",
+            "focal_object": null,
+            "atmosphere": "ombra lunga del pomeriggio sotto l'Albero Vecchio, pietra chiara della Panca con tre figure sedute, le due laterali continuano a guardare avanti, gesto della Vecchia centrale lento, occhio incrociato un secondo, la festa rallenta sullo sfondo sfocato",
+            "palette": "ombra fonda sotto l'Albero Vecchio, pietra chiara della Panca, sagome grigio-scure delle Vecchie, giallo-oro dei quattro coni in mano a Elias, ocra del banco di Nodo sullo sfondo, raggi obliqui pomeridiani che tagliano l'ombra",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. ARCHITRAVE SAGA. Bloom pieno firma-gruppo «indicare in silenzio» (semina s06, manifestazione s08, culmine s11). Vecchie indistinte: solo la sagoma centrale che alza il braccio, le altre due immobili guardano avanti. Riconoscimento pre-linguistico. Elias di tre quarti, fermo, sguardo che riceve. Pausa scenica preparatoria della frase-soglia."
+          },
+          {
+            "hook_id": "s11_h07",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
+            "location": {
+              "id": "albero_vecchio",
+              "qualifier": "pomeriggio_elias_si_ferma_dopo_riconoscimento_vecchie"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "elias"
+            ],
+            "elements": [],
+            "focal_action": "Elias si ferma. Sta fermo qualche istante. Dice piano: «Va bene.» Due parole. Non parla a nessuno in particolare. Lo dice e basta. Continua a tenere i quattro coni.",
+            "focal_object": null,
+            "atmosphere": "Elias solo nel quadro, Panca alle spalle fuori fuoco, festa sullo sfondo lontano e quasi muta, respiro trattenuto un secondo, frase non rivolta, mani con i quattro coni e qualche corda dell'altra mano",
+            "palette": "ocra-marrone della maglia di Elias, giallo-oro dei quattro coni in mano, marrone della corda nell'altra mano, ombra fonda dell'Albero Vecchio sullo sfondo, raggi obliqui dorati pomeridiani, sagome sfocate dei banchi sullo sfondo",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Frase-soglia ALLA LETTERA. Seconda parola terna strato 3 dire/accettare/tenere — curva discendente 5/2/0 (Noah s10 cinque, Elias s11 due, Gabriel s12 zero). Vincolo voce: curare contesto scenico per non far scivolare la frase su rassegnazione (pausa prima, respiro, Elias fermo). Tipografia non grande. Le Vecchie già fuori dal quadro o sfocate alle spalle."
+          },
+          {
+            "hook_id": "s11_h08",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
             "location": {
               "id": "pozzo_piazza",
-              "qualifier": "pomeriggio_elias_distribuisce_quattro_coni_bru_al_pozzo",
-              "legacy_string": "pozzo_piazza"
+              "qualifier": "pomeriggio_elias_consegna_quarto_cono_a_bru"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "elias_distribuisce_quattro_coni_uno_gabriel_uno_noah_uno_se",
-              "il_quarto_dopo_un_secondo_di_esitazione_lo_da_a_bru_solo_accanto_al_pozzo",
-              "bru_lo_prende_non_dice_grazie_si_guardano_bru_annuisce_piccolissimo",
-              "rovo_non_e_venuto_alla_festa_bible_4_5_bru_porta_qualcosa_al_ritorno_sacchetto_erbe_salvia_porzione_dolce_fiamma_mai_descritto_solo_visto"
+            "quadrant": "centro",
+            "characters_present": [
+              "elias",
+              "bru"
             ],
-            "palette": "pietra_chiara_pozzo_giallo_oro_coni_marrone_scuro_pelliccia_bru",
-            "notes": "Strato 3 puro. Dare a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato. Sigillo del narratore sull'immagine.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "Elias si abbassa. Mette il quarto cono in mano a Bru accanto al Pozzo. Bru lo prende, lo guarda, annuisce piccolissimo. Accanto a sé ha già il cono di Rovo.",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "Pozzo in piano stretto, due figure piegate, mano di Elias che cede il cono, mano piccola di Bru che riceve, Bru seduto solo, due coni accostati a terra accanto a Bru (uno per Rovo, uno appena dato), festa lontana che continua sfocata",
+            "palette": "pietra chiara del Pozzo, marrone scuro della pelliccia di Bru, giallo-oro dei due coni accostati, ocra del selciato, ombra blu morbida dietro il Pozzo, raggi tardi pomeridiani",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "Strato 3 puro: dare ciò che hai in più a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato — vive solo nell'immagine. Bru riconosciuto da Elias, chiude debt_s03_to_s11_bru. Rovo offscreen segnato via Bru (Bible §4.5). Bru zero parole, solo annuisce piccolissimo (vincolo voce)."
           },
           {
-            "hook_id": "hook_07_bartolo_arriva_frutti_da_fuori",
-            "moment": "pomeriggio_tardi_intreccio",
+            "hook_id": "s11_h09",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio_tardi",
             "location": {
               "id": "pontile_bocca",
-              "qualifier": "pomeriggio_tardi_bartolo_arriva_frutti_da_fuori",
-              "legacy_string": "pontile_bocca"
+              "qualifier": "pomeriggio_tardi_bartolo_arriva_dal_mare_cesto_frutti"
             },
             "quadrant": "acqua_sud",
-            "characters_present": [],
-            "elements": [
-              "bartolo_arriva_dal_mare_nel_pomeriggio_con_la_barca",
-              "cesto_di_frutti_che_non_crescono_sull_isola_mai_descritti_in_dettaglio",
-              "posa_al_banco_di_fiamma_non_dice_da_dove",
-              "mano_alzata_che_ricade_modo_canonico_fa_zero_parole"
+            "characters_present": [
+              "bartolo",
+              "fiamma"
             ],
-            "palette": "verde_mare_antico_bartolo_colori_sconosciuti_dei_frutti_da_fuori_terracotta_banco_fiamma",
-            "notes": "Pattern A manifestazione: cose in più che arrivano. Porta Fase F 'oltre il mare' aperta. Debt s11→s12 aperto per chiusura parziale finale saga.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "Bartolo posa al banco di Fiamma un cesto di frutti che non crescono sull'isola, colori diversi dai soliti. Alza la mano in saluto, la riabbassa. Si siede accanto al Forno.",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "barca lasciata al Pontile sullo sfondo lontano, cesto in primo piano sul banco di Fiamma, frutti dai colori non visti sull'isola, mano di Bartolo che si alza e ricade, sgabello accanto alla parete del Forno, silenzio del personaggio dentro la festa corale",
+            "palette": "verde-mare antico dei vestiti di Bartolo, colori sconosciuti dei frutti (sospesi fra rosa, viola, giallo intenso non saga), terracotta del banco di Fiamma, oro caldo del Forno alle spalle, marrone-grigio della parete del Forno",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Pattern A variante collettiva — cose in più che arrivano senza chiedere permesso da dove. Bartolo modo canonico: vede e fa, zero parole, mano alzata che ricade. Apre debt_s11_to_s12 per «oltre il mare» (Fase F). I frutti non descritti in dettaglio — illustratore può variare libero ma non deve riferirsi a frutti dell'isola noti."
           },
           {
-            "hook_id": "hook_08_ritorno_casa_mulinello_sera_due_battute",
-            "moment": "sera_mulinello",
+            "hook_id": "s11_h10",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "sera",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "sera_mulinello_ritorno_casa_villaggio_centrale_due_battute",
-              "legacy_string": "villaggio_centrale"
+              "qualifier": "sera_mulinello_sagome_fratelli_verso_casa_poi_interno_casa_fratelli_non_cartografato"
             },
-            "quadrant": "centro_villaggio",
-            "characters_present": [],
-            "elements": [
-              "tornano_a_casa_col_mulinello_della_sera_fuochi_lanterne_banchi_che_chiudono",
-              "a_casa_due_battute_asciutte",
-              "elias_oggi_mi_ha_indicato_una_vecchia",
-              "gabriel_quale",
-              "elias_una",
-              "conversazione_si_chiude_su_una_sillaba_gabriel_non_capisce_non_sapra_mai_e_questo_e_giusto"
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "viola_arancione_mulinello_crepuscolo_fuochi_lanterne_caldo_luce_lampada_interno_casa",
-            "notes": "Chiusura storia. Noah non partecipa alla conversazione (dorme già o mangia ancora). Due battute asciutte non cornice frase-soglia — la frase-soglia è Va bene. del pomeriggio. Noah fuori dalla conversazione mantiene Elias e Gabriel sul fuoco di Elias.",
-            "focal_action": null,
+            "elements": [],
+            "focal_action": "Sagome viola dei tre fratelli contro il cielo arancione. Lanterne dei banchi accese una a una. A casa Elias dice: «Oggi mi ha indicato una vecchia.» Gabriel: «Quale?» Elias: «Una.»",
             "focal_object": null,
-            "atmosphere": null,
-            "wind_visible": null,
+            "atmosphere": "Mulinello che passa basso sulla Piazza che si svuota, banchi che chiudono, lanterne accese ai bordi, foglie secche mosse, interno casa con lampada ferma sul tavolo, Noah sull'altro lato della stanza che gioca per terra mezzo addormentato",
+            "palette": "viola scuro delle sagome dei tre fratelli, arancione del cielo del crepuscolo, oro caldo delle lanterne accese una a una, blu profondo della sera che cala, giallo lampada sul tavolo dentro casa, ocra del legno",
+            "wind_visible": "vento_mulinello",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Cerniera doppia esterno-interno in un'unica tavola (sopra esterno crepuscolo, sotto vignette interno casa) o tavola sequenziale a illustratore. Gabriel davanti, Noah in mezzo, Elias coda — coerente con narrazione fattuale. Le due battute asciutte ALLA LETTERA — non sono la frase-soglia, sono cornice: Gabriel non capisce e non saprà mai, e questo è giusto. Casa fratelli non cartografata: location.id = piazza_villaggio con qualifier (convenzione s09/s10). Mulinello come terzo vento del giorno (prefigurazione strutturale Concerto s12)."
           }
         ]
       },
@@ -9961,6 +10020,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s10: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s10.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s11: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s11.yaml."
     }
   ]
 }
