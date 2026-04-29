@@ -1,0 +1,100 @@
+# Hook ciclo D — S10 — La Notte senza Luna
+# Fonte: proposta agente fase G del 2026-04-29.
+# Edit minimi (4 hook >30 parole, accorciati alla soglia):
+# - h04 (32->29): rimosso "in fretta" + "ognuno"
+# - h08 (33->25): condensato finale frasi su sagome
+# - h09 (34->28): rimosso "legata" + ultima frase ("Ha sentito arrivare i tre" -> notes)
+# - h10 (31->30): rimosso "lontano" -> notes
+
+story_id: s10
+
+hooks:
+  - hook_id: s10_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: notte_fonda
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [noah, gabriel, elias]
+    focal_action: "Noah è sdraiato sul fianco a occhi aperti. Gabriel ed Elias dormono nei letti accanto. Sul comodino, accanto al letto di Noah, il nido."
+    focal_object: nido_vuoto_s08
+    atmosphere: "stanza chiusa, luna nuova, imposte serrate, nessun rumore esterno, eco della cantilena dei Coltivatori già spenta da ore"
+    palette: "nero quasi pieno, micro-accenni avorio del lenzuolo, marrone scuro dei rametti del nido, riflesso minimo sull'occhio aperto di Noah"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Apertura. Noah piccolo nel quadro, fratelli a fianco già addormentati. Il nido come centro ottico marginale (eco S8). Tipografia testo non grande — non melodramma."
+
+  - hook_id: s10_h02
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: notte_fonda
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [noah, gabriel]
+    focal_action: "Noah dice ad alta voce: «Ho paura.» Pausa. «Qui è buio.» Gabriel tende la mano nel buio tra i due letti. La mano di Noah la trova. Si tengono."
+    focal_object: null
+    atmosphere: "buio assoluto, due frasi separate da silenzio tipografico, mano che cerca senza parole, architrave terna strato 3 — Noah DICE"
+    palette: "nero pieno dominante, due punti-luce-riflesso (occhio aperto di Noah, contorno della mano di Gabriel), bianco-avorio quasi invisibile del lenzuolo"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Pagina più nera della saga. Le cinque parole («Ho paura.» / «Qui è buio.») alla lettera, due righe tipografiche separate. Strato 3: prima parola della terna dire/accettare/tenere. Constraint: fears_resolved_by_brothers_only — nessun adulto."
+
+  - hook_id: s10_h03
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: notte_fonda
+    location:
+      id: piazza_villaggio
+      qualifier: interno_cucina_casa_fratelli_non_cartografato
+    characters_present: [elias]
+    focal_action: "Elias in cucina apre piano un cassetto, accende un fiammifero, accende la lanterna. Avvolge un panno di lana attorno al vetro perché esca solo un cerchio di luce dal basso."
+    focal_object: lanterna_velata_s10
+    atmosphere: "scricchiolio del legno del corridoio, fiammifero che accende, cerchio di luce piccolo che nasce, gesto compiuto senza parole"
+    palette: "nero della cucina, giallo caldo della prima fiamma, ocra del panno di lana che avvolge il vetro, marrone delle dita di Elias"
+    wind_visible: null
+    onomatopee: ["scric"]
+    composition_zone: vignette
+    notes: "Close-up sulle mani che avvolgono il panno attorno al vetro della lanterna. Nascita dell'oggetto-simbolo della storia. Inversione speculare di s08_h10 (Mèmolo aveva coperto il nido con una foglia per proteggerlo dal vento — qui Elias copre la luce per proteggere i fratelli dal buio). Cura-nel-buio."
+
+  - hook_id: s10_h04
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: notte_fonda
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Gabriel non lascia la mano di Noah. Lo aiuta ad alzarsi. Si vestono sopra il pigiama: due strati, calze, sandali, un mantello di lana. Elias tiene la lanterna velata."
+    focal_object: lanterna_velata_s10
+    atmosphere: "vestizione rapida e silenziosa nel buio, cerchio piccolo di luce della lanterna velata sui sandali, mano di Gabriel che non si stacca da quella di Noah"
+    palette: "nero della stanza, giallo basso del cerchio di luce sui sandali, marrone-lana dei mantelli, ocra dei pigiami visibili sotto il bordo"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Tre figure quasi sagome, distinguibili solo dal cerchio di luce ai piedi. Gabriel al centro, Noah a destra mano nella mano, Elias a sinistra con la lanterna bassa. Vestizione 'in fretta', un mantello ognuno (info nei dettagli ma compressa nella focal_action). Il braccialetto di s09 NON al polso (vincolo ARCHI: castagna rugata al polso solo a S12)."
+
+  - hook_id: s10_h05
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: notte_fonda
+    location:
+      id: villaggio_centrale
+      qualifier: piazza_attraversata
+    characters_present: [elias, gabriel, noah]
+    focal_action: "I tre attraversano la Piazza. L'Albero Vecchio è una sagoma più nera del nero. Il Pozzo è una macchia grigia chiara contro il selciato. Mèmolo dorme da qualche parte."
+    focal_object: null
+    atmosphere: "piazza addormentata, aria umida d'autunno avanzato che bagna la lana, cerchio di luce piccolo davanti ai sandali, sagome appena percepibili delle case più vicine"
+    palette: "nero pieno dominante, grigio chiarissimo macchia del Pozzo, sagoma più nera dell'Albero Vecchio, giallo-fioco velato del cerchio di luce ai piedi, marrone-lana dei mantelli"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Mèmolo offscreen («dorme da qualche parte») — non illustrato. L'Albero Vecchio e il Pozzo come sagome simboliche viste solo come ombre. Il cerchio di luce della lanterna velata occupa una porzione minima della tavola."
