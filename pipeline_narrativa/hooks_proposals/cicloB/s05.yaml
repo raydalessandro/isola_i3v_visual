@@ -1,0 +1,185 @@
+# Hook ciclo B — S05 — Il Ponte di Rami
+# Fonte: proposta agente fase G del 2026-04-29 + OK Ray senza modifiche.
+
+story_id: s05
+
+hooks:
+  - hook_id: s05_h01
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: foresta_intrecciata
+      qualifier: margine_lato_orti
+    characters_present: [bru, gabriel, elias, noah]
+    focal_action: "Bru entra per primo nella Foresta senza voltarsi. I tre fratelli lo seguono in fila lungo una direzione che da soli non avrebbero scelto."
+    focal_object: null
+    atmosphere: "primavera piena, luce alta che batte di taglio sulle chiome nuove, cammino guidato da un muso che non parla"
+    palette: "verdi tenerissimi delle foglie nuove + marrone scuro dei tronchi + grigio-marrone di Bru in primo piano + ocra degli Orti che si chiude alle spalle"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Apertura. Bru di tre quarti davanti, i fratelli più piccoli dietro. L'Intreccio passa alto, in basso quasi non si sente."
+
+  - hook_id: s05_h02
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: torrente_affluente_foresta
+      qualifier: sponda_lato_orti
+    characters_present: [gabriel, elias, noah, bru]
+    focal_action: "I fratelli si fermano sulla sponda. Bru un passo indietro. L'acqua corre alta. Sull'altra riva il sentiero comincia a quattro o cinque metri."
+    focal_object: null
+    atmosphere: "scoperta dell'ostacolo, scioglimento di neve sulle Gemelle che gonfia il torrente, sentiero al di là che chiama"
+    palette: "verde liscio dell'acqua corrente + marrone bagnato delle sponde + verdi della Foresta che si apre + chiazza di muschio chiaro dove poggiava il vecchio tronco"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Inquadratura larga sul torrente. Si vede ancora il muschio sulla pietra dove poggiava il tronco caduto, oggi assente."
+
+  - hook_id: s05_h03
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: foresta_intrecciata
+      qualifier: tra_torrente_e_margine_orti
+    characters_present: [gabriel, elias, noah, bru]
+    focal_action: "I quattro alzano la testa. Tra le chiome arriva un battere ritmico secco, tre colpi e pausa, tre colpi e pausa, da qualche parte verso il margine."
+    focal_object: null
+    atmosphere: "suono che viaggia bene nel vento di primavera, riconoscimento immediato che non viene detto, decisione che si forma sola"
+    palette: "verdi screziati delle chiome + sagome dei fratelli e di Bru in basso + tronchi che incorniciano l'ascolto"
+    wind_visible: vento_intreccio
+    onomatopee: ["TOK-TOK-TOK"]
+    composition_zone: side_space
+    notes: "Il suono è il soggetto. L'Intreccio porta il martello. Le quattro figure piccole, tutte in ascolto verso la stessa direzione fuori frame."
+
+  - hook_id: s05_h04
+    type: azione
+    is_signature: true
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: foresta_intrecciata
+      qualifier: margine_lato_orti
+    characters_present: [nodo, gabriel, elias, noah, bru]
+    focal_action: "Nodo accosciato sulla scaletta non alza la testa. Finisce il giro di nodo che ha in mano, tira, verifica. Solo poi guarda i fratelli: «Cosa vi serve.»"
+    focal_object: corda_nodo
+    atmosphere: "lavoro che non si interrompe, presenza paterna pratica, attesa rispettosa dei fratelli"
+    palette: "cresta rossa di Nodo unico punto vivo + corda chiara come filo caldo + verde tenero delle foglie nuove + marrone della scaletta + ocra degli Orti che trafila tra i tronchi"
+    wind_visible: vento_intreccio
+    onomatopee: ["TOK-TOK-TOK"]
+    composition_zone: corner_lower_right
+    notes: "HOOK FIRMA. Prima apparizione piena di Nodo. La cresta rossa come calamita. I fratelli a sinistra in attesa, la matassa di corda al braccio di Nodo ben visibile."
+
+  - hook_id: s05_h05
+    type: dettaglio
+    is_signature: true
+    provenance: extended_v2
+    moment: mattino_inoltrato
+    location:
+      id: foresta_intrecciata
+      qualifier: margine_lato_orti_presso_scaletta
+    characters_present: [nodo, elias]
+    focal_action: "Nodo taglia un pezzo di corda con un colpo secco di lama. Lo porge a Elias e fa il marinaro una sola volta: giro, passaggio sotto, mezza chiave."
+    focal_object: corda_nodo
+    atmosphere: "trasmissione tecnica senza spiegazione, gesto unico mostrato lentamente, peso del «adesso fai tu»"
+    palette: "corda chiara in primo piano + dita scure di Nodo + cresta rossa fuori fuoco + verdi della Foresta come fondale tenero"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Inquadratura stretta sulle mani e la corda. Il nodo marinaro al centro, in formazione, fra le due paia di mani. Elias di profilo a destra, Nodo a sinistra."
+
+  - hook_id: s05_h06
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: foresta_intrecciata
+      qualifier: tra_torrente_e_alberi_caduti
+    characters_present: [bru, noah]
+    focal_action: "Bru si ferma davanti a una pertica caduta e la indica col muso. Noah dietro raccoglie altri rami, alcuni troppo piccoli. Bru ne sceglie un'altra in silenzio."
+    focal_object: null
+    atmosphere: "sapere selvatico che non si spiega, entusiasmo del piccolo che eccede, scelta che corregge senza correggere"
+    palette: "marrone chiaro delle pertiche cadute + grigio-marrone di Bru + verdi fitti del sottobosco + macchie di luce a terra"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Bru indica col muso, mai con la voce. Vincolo bru_agency_narrativa_tramite_gesti_silenziosi. Noah parzialmente in frame, Bru più definito."
+
+  - hook_id: s05_h07
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: torrente_affluente_foresta
+      qualifier: sponda_lato_orti
+    characters_present: [elias, gabriel, noah, bru]
+    focal_action: "Elias inginocchiato sulla sponda lega un marinaro intorno alla pertica. Gabriel tiene ferme le pertiche sul muschio. Noah passa la corda. Bru seduto poco lontano guarda."
+    focal_object: corda_nodo
+    atmosphere: "lavoro coordinato silenzioso, terza prova che riesce, pertiche che prendono forma di ponte"
+    palette: "marrone chiaro delle quattro pertiche affiancate + corda chiara come filo caldo dei nodi + verdi acqua liscia che corre sotto + sagome chine dei tre fratelli"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Quattro pertiche parallele, due nodi alle estremità, due di rinforzo a metà. Niente parapetto. La luce alta filtra dall'alto."
+
+  - hook_id: s05_h08
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: torrente_affluente_foresta
+      qualifier: sul_ponte
+    characters_present: [elias]
+    focal_action: "Elias cammina sul ponte di rami, le braccia un po' aperte per equilibrio. Le pertiche vibrano. Reggono. Sotto, il torrente corre veloce."
+    focal_object: null
+    atmosphere: "chi ha legato collauda, concentrazione che chiude la responsabilità tecnica, vibrazione fisica del legno sotto i piedi"
+    palette: "marrone chiaro delle pertiche al centro + verde liscio dell'acqua sotto + verdi della Foresta intorno + sagoma di Elias in mezzo, sola"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "HOOK FIRMA. Elias al centro del ponte, sospeso sopra l'acqua. Gabriel e Noah fuori frame sulla sponda di partenza. Densità silenziosa."
+
+  - hook_id: s05_h09
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: radura_dei_pini
+      qualifier: interno_cerchio_erba
+    characters_present: [bru, gabriel, elias, noah]
+    focal_action: "Bru si siede al centro della radura per primo. I tre fratelli si siedono in cerchio intorno a lui. Non parlano. La luce cade verticale tra le chiome."
+    focal_object: null
+    atmosphere: "luogo trovato in silenzio, proprietà del momento ripresa da Bru, seduta che non chiede nulla"
+    palette: "verde quasi giallo dell'erba nella luce verticale + tronchi scuri di pino in cerchio intorno + grigio-marrone di Bru al centro + sagome dei fratelli più piccole intorno"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "La luce verticale è il soggetto secondario. Bru al centro, fratelli in tre punti del cerchio. Possibile micro-sguardo storto di Elias verso Bru, mai nominato (vedi vincolo)."
+
+  - hook_id: s05_h10
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: torrente_affluente_foresta
+      qualifier: sponda_lato_orti
+    characters_present: [gabriel, elias, noah, bru]
+    focal_action: "I quattro tornano sulla sponda di partenza. Il ponte è ancora lì. Della scaletta di Nodo nessuna traccia. Il TOK-TOK-TOK arriva lontanissimo da un'altra direzione."
+    focal_object: null
+    atmosphere: "chiusura asciutta, lavoro che resta, artigiano che non torna a vedere il collaudo, suono che si allontana nella Foresta"
+    palette: "marrone chiaro del ponte come unico punto chiaro tra i verdi + verdi della Foresta che si chiude + chiazza di muschio dove era la scaletta + ocra degli Orti che ricomincia in fondo"
+    wind_visible: vento_intreccio
+    onomatopee: ["TOK-TOK-TOK"]
+    composition_zone: sky_space
+    notes: "Eco di h02 con esito invertito: ora il ponte c'è. Il TOK-TOK-TOK sempre più lontano è la firma sonora di Nodo che se n'è andato senza vedere."

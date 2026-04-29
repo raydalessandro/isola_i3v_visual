@@ -4187,37 +4187,41 @@
         "scene_hooks": [
           {
             "hook_id": "s05_h01",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
-              "qualifier": "cammino_interno_verso_torrente",
-              "legacy_string": "foresta_intrecciata_cammino_interno_verso_torrente"
+              "qualifier": "margine_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
+              "bru",
               "gabriel",
               "elias",
-              "noah",
-              "bru"
+              "noah"
             ],
             "elements": [],
-            "palette": "verdi_tenerissimi_primavera_marroni_tronchi_grigio_marrone_bru_luce_screziata_dall_alto",
-            "notes": null,
-            "focal_action": "I quattro camminano in fila dentro la Foresta seguendo la direzione che Bru ha indicato. Bru davanti, silenzioso, occhi neri attenti. I fratelli dietro. Primavera piena — foglie nuove, luce screziata dalle chiome.",
-            "focal_object": "bru_davanti_che_guida_col_passo_i_fratelli_in_fila",
-            "atmosphere": "cammino_di_scoperta_fiducia_reciproca_silenziosa_primavera_piena",
-            "wind_visible": "intreccio_tra_chiome_velature_azzurre_diffuse",
+            "focal_action": "Bru entra per primo nella Foresta senza voltarsi. I tre fratelli lo seguono in fila lungo una direzione che da soli non avrebbero scelto.",
+            "focal_object": null,
+            "atmosphere": "primavera piena, luce alta che batte di taglio sulle chiome nuove, cammino guidato da un muso che non parla",
+            "palette": "verdi tenerissimi delle foglie nuove + marrone scuro dei tronchi + grigio-marrone di Bru in primo piano + ocra degli Orti che si chiude alle spalle",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Apertura. Bru di tre quarti davanti, i fratelli più piccoli dietro. L'Intreccio passa alto, in basso quasi non si sente."
           },
           {
             "hook_id": "s05_h02",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "torrente_affluente_foresta",
-              "qualifier": "punto_vecchio_tronco_portato_via",
-              "legacy_string": "torrente_punto_del_vecchio_tronco_portato_via"
+              "qualifier": "sponda_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
@@ -4227,155 +4231,219 @@
               "bru"
             ],
             "elements": [],
-            "palette": "marrone_scuro_della_terra_dove_era_il_tronco_verde_acqua_chiara_che_corre_verde_foresta_su_entrambe_le_sponde",
-            "notes": null,
-            "focal_action": "I quattro fermi sulla sponda. Acqua che corre alta tra loro e l'altra sponda. Il vecchio tronco non c'e' — si vede un taglio fresco dove si era adagiato da anni, ora terra e erba schiacciata dove era appoggiato. L'altra sponda a 4-5 metri.",
-            "focal_object": "torrente_in_piena_tra_le_due_sponde_assenza_del_tronco",
-            "atmosphere": "arresto_davanti_al_vuoto_scoperta_del_passaggio_mancante",
-            "wind_visible": "intreccio_sopra_le_chiome_aria_parallela_al_torrente_acqua_liscia_non_increspata",
+            "focal_action": "I fratelli si fermano sulla sponda. Bru un passo indietro. L'acqua corre alta. Sull'altra riva il sentiero comincia a quattro o cinque metri.",
+            "focal_object": null,
+            "atmosphere": "scoperta dell'ostacolo, scioglimento di neve sulle Gemelle che gonfia il torrente, sentiero al di là che chiama",
+            "palette": "verde liscio dell'acqua corrente + marrone bagnato delle sponde + verdi della Foresta che si apre + chiazza di muschio chiaro dove poggiava il vecchio tronco",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Inquadratura larga sul torrente. Si vede ancora il muschio sulla pietra dove poggiava il tronco caduto, oggi assente."
           },
           {
             "hook_id": "s05_h03",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
-              "id": "torrente_affluente_foresta",
-              "qualifier": "posizione_nodo_50m_a_valle_scaletta",
-              "legacy_string": "posizione_nodo_a_50_metri_al_lavoro_sulla_scaletta"
+              "id": "foresta_intrecciata",
+              "qualifier": "tra_torrente_e_margine_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
               "gabriel",
               "elias",
               "noah",
-              "bru",
-              "nodo"
+              "bru"
             ],
             "elements": [],
-            "palette": "nero_bianco_rosso_di_nodo_con_cresta_accesa_corda_chiara_sul_braccio_marroni_scaletta_verdi_foresta_alle_spalle",
-            "notes": null,
-            "focal_action": "Nodo sulla scaletta a terra rovesciata, gradino rotto in mano, corda arrotolata sul braccio sinistro, cresta rossa visibile tra il verde. TOK-TOK-TOK del becco sul legno. Alza la testa verso i fratelli che sono arrivati, aspetta di finire il giro di nodo corrente, poi: 'Cosa vi serve.'",
-            "focal_object": "nodo_al_lavoro_con_corda_sul_braccio_e_scaletta_sotto",
-            "atmosphere": "incontro_con_maestria_calma_pratica_che_non_si_interrompe",
-            "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "I quattro alzano la testa. Tra le chiome arriva un battere ritmico secco, tre colpi e pausa, tre colpi e pausa, da qualche parte verso il margine.",
+            "focal_object": null,
+            "atmosphere": "suono che viaggia bene nel vento di primavera, riconoscimento immediato che non viene detto, decisione che si forma sola",
+            "palette": "verdi screziati delle chiome + sagome dei fratelli e di Bru in basso + tronchi che incorniciano l'ascolto",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TOK-TOK-TOK"
+            ],
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Il suono è il soggetto. L'Intreccio porta il martello. Le quattro figure piccole, tutte in ascolto verso la stessa direzione fuori frame."
           },
           {
             "hook_id": "s05_h04",
+            "type": "azione",
+            "is_signature": true,
+            "provenance": "extended_v2",
             "moment": "mattino_inoltrato",
             "location": {
-              "id": "torrente_affluente_foresta",
-              "qualifier": "posizione_nodo_corda_tagliata",
-              "legacy_string": "posizione_nodo_momento_della_corda_tagliata"
+              "id": "foresta_intrecciata",
+              "qualifier": "margine_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
+              "nodo",
               "gabriel",
               "elias",
               "noah",
-              "bru",
-              "nodo"
+              "bru"
             ],
             "elements": [],
-            "palette": "corda_chiara_come_filo_caldo_unico_gesto_tra_le_due_mani_nero_bianco_rosso_di_nodo_marrone_e_verde_di_elias",
-            "notes": null,
-            "focal_action": "Nodo si toglie un pezzo di corda dalla matassa al braccio. Taglia con un colpo secco del becco. La porge a Elias insieme a un gesto-nodo mostrato una volta sola. 'Adesso fai tu.' Elias prende la corda. Gli altri guardano.",
-            "focal_object": "corda_che_passa_dalla_matassa_di_nodo_alla_mano_di_elias",
-            "atmosphere": "trasmissione_silenziosa_eredita_tecnica_e_materiale_in_un_gesto",
-            "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Nodo accosciato sulla scaletta non alza la testa. Finisce il giro di nodo che ha in mano, tira, verifica. Solo poi guarda i fratelli: «Cosa vi serve.»",
+            "focal_object": "corda_nodo",
+            "atmosphere": "lavoro che non si interrompe, presenza paterna pratica, attesa rispettosa dei fratelli",
+            "palette": "cresta rossa di Nodo unico punto vivo + corda chiara come filo caldo + verde tenero delle foglie nuove + marrone della scaletta + ocra degli Orti che trafila tra i tronchi",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TOK-TOK-TOK"
+            ],
+            "composition_zone": "corner_lower_right",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Prima apparizione piena di Nodo. La cresta rossa come calamita. I fratelli a sinistra in attesa, la matassa di corda al braccio di Nodo ben visibile."
           },
           {
             "hook_id": "s05_h05",
-            "moment": "tarda_mattina_inizio_mezzogiorno",
+            "type": "dettaglio",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "mattino_inoltrato",
             "location": {
-              "id": "torrente_affluente_foresta",
-              "qualifier": "durante_costruzione_ponte",
-              "legacy_string": "torrente_durante_costruzione_ponte"
+              "id": "foresta_intrecciata",
+              "qualifier": "margine_lato_orti_presso_scaletta"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
-              "gabriel",
-              "elias",
-              "noah",
-              "bru"
+              "nodo",
+              "elias"
             ],
             "elements": [],
-            "palette": "pertiche_marroni_chiare_di_rami_caduti_corda_chiara_di_nodo_ponte_che_prende_forma_verdi_foresta_luce_che_trafila_dall_alto",
-            "notes": null,
-            "focal_action": "I quattro al lavoro sul ponte. Gabriel tiene ferme le pertiche stese sull'acqua da sponda a sponda. Noah passa la corda a Elias. Elias inginocchiato lega un nodo marinaro sulle giunture. Bru sceglie in silenzio la prossima pertica da quelle raccolte alla rinfusa da Noah. TOK-TOK-TOK di Nodo in lontananza sulla scaletta.",
-            "focal_object": "ponte_in_costruzione_con_quattro_ruoli_simultanei",
-            "atmosphere": "lavoro_coordinato_silenzioso_ognuno_al_proprio_ruolo_intreccio_di_azioni",
-            "wind_visible": "intreccio_chiome_mosse_sopra_acqua_liscia_sotto_sistema_a_due_piani",
+            "focal_action": "Nodo taglia un pezzo di corda con un colpo secco di lama. Lo porge a Elias e fa il marinaro una sola volta: giro, passaggio sotto, mezza chiave.",
+            "focal_object": "corda_nodo",
+            "atmosphere": "trasmissione tecnica senza spiegazione, gesto unico mostrato lentamente, peso del «adesso fai tu»",
+            "palette": "corda chiara in primo piano + dita scure di Nodo + cresta rossa fuori fuoco + verdi della Foresta come fondale tenero",
+            "wind_visible": null,
             "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Inquadratura stretta sulle mani e la corda. Il nodo marinaro al centro, in formazione, fra le due paia di mani. Elias di profilo a destra, Nodo a sinistra."
           },
           {
             "hook_id": "s05_h06",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
+            "location": {
+              "id": "foresta_intrecciata",
+              "qualifier": "tra_torrente_e_alberi_caduti"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "bru",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Bru si ferma davanti a una pertica caduta e la indica col muso. Noah dietro raccoglie altri rami, alcuni troppo piccoli. Bru ne sceglie un'altra in silenzio.",
+            "focal_object": null,
+            "atmosphere": "sapere selvatico che non si spiega, entusiasmo del piccolo che eccede, scelta che corregge senza correggere",
+            "palette": "marrone chiaro delle pertiche cadute + grigio-marrone di Bru + verdi fitti del sottobosco + macchie di luce a terra",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Bru indica col muso, mai con la voce. Vincolo bru_agency_narrativa_tramite_gesti_silenziosi. Noah parzialmente in frame, Bru più definito."
+          },
+          {
+            "hook_id": "s05_h07",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
             "moment": "mezzogiorno",
             "location": {
               "id": "torrente_affluente_foresta",
-              "qualifier": "ponte_finito_passaggio_elias",
-              "legacy_string": "ponte_finito_momento_passaggio_elias"
+              "qualifier": "sponda_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
-              "gabriel",
               "elias",
+              "gabriel",
               "noah",
               "bru"
             ],
             "elements": [],
-            "palette": "elias_sulle_pertiche_al_centro_della_scena_verdi_foresta_specchiati_nell_acqua_sotto_ponte_chiaro_tra_verdi_scuri",
-            "notes": null,
-            "focal_action": "Elias primo passo sul ponte appena finito. Le braccia un po' aperte per equilibrio. Gli altri lo guardano dalla sponda. Sotto di lui l'acqua corre. Nodo in lontananza a testa bassa sulla scaletta — non sta guardando.",
-            "focal_object": "elias_sul_ponte_primo_passaggio_gabriel_e_noah_che_guardano",
-            "atmosphere": "collaudo_responsabile_tensione_sottile_chi_ha_fatto_prova",
-            "wind_visible": "intreccio_che_fa_oscillare_leggermente_le_chiome_sopra",
+            "focal_action": "Elias inginocchiato sulla sponda lega un marinaro intorno alla pertica. Gabriel tiene ferme le pertiche sul muschio. Noah passa la corda. Bru seduto poco lontano guarda.",
+            "focal_object": "corda_nodo",
+            "atmosphere": "lavoro coordinato silenzioso, terza prova che riesce, pertiche che prendono forma di ponte",
+            "palette": "marrone chiaro delle quattro pertiche affiancate + corda chiara come filo caldo dei nodi + verdi acqua liscia che corre sotto + sagome chine dei tre fratelli",
+            "wind_visible": "vento_intreccio",
             "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
-          },
-          {
-            "hook_id": "s05_h7_radura",
-            "moment": "mezzogiorno",
-            "location": {
-              "id": "radura_dei_pini",
-              "qualifier": "oltre_torrente_100_150_metri",
-              "legacy_string": "radura_coi_pini_oltre_torrente_100_150_metri"
-            },
-            "quadrant": "terra_ovest",
-            "characters_present": [
-              "gabriel",
-              "elias",
-              "noah",
-              "bru"
-            ],
-            "elements": [],
-            "palette": "verde_quasi_giallo_dell_erba_sotto_luce_verticale_tronchi_scuri_di_pino_intorno_bru_grigio_marrone_al_centro_tre_fratelli_piu_chiari_in_cerchio",
-            "notes": null,
-            "focal_action": "La radura: cerchio d'erba, pini intorno, luce verticale dall'alto. Bru seduto al centro per primo. I tre fratelli in cerchio intorno, seduti anche loro. Nessuno parla. Elias con lo sguardo un filo storto che nessuno vede.",
-            "focal_object": "bru_al_centro_del_cerchio_d_erba_i_tre_fratelli_intorno",
-            "atmosphere": "silenzio_verticale_centro_che_si_prende_dopo_che_il_ponte_e_stato_fatto_conflitto_sottile_invisibile",
-            "wind_visible": "intreccio_attutito_nella_radura_luce_piu_che_aria",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Quattro pertiche parallele, due nodi alle estremità, due di rinforzo a metà. Niente parapetto. La luce alta filtra dall'alto."
           },
           {
             "hook_id": "s05_h08",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "torrente_affluente_foresta",
-              "qualifier": "ritorno_ponte_ancora_li",
-              "legacy_string": "torrente_ritorno_ponte_ancora_li"
+              "qualifier": "sul_ponte"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "elias"
+            ],
+            "elements": [],
+            "focal_action": "Elias cammina sul ponte di rami, le braccia un po' aperte per equilibrio. Le pertiche vibrano. Reggono. Sotto, il torrente corre veloce.",
+            "focal_object": null,
+            "atmosphere": "chi ha legato collauda, concentrazione che chiude la responsabilità tecnica, vibrazione fisica del legno sotto i piedi",
+            "palette": "marrone chiaro delle pertiche al centro + verde liscio dell'acqua sotto + verdi della Foresta intorno + sagoma di Elias in mezzo, sola",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Elias al centro del ponte, sospeso sopra l'acqua. Gabriel e Noah fuori frame sulla sponda di partenza. Densità silenziosa."
+          },
+          {
+            "hook_id": "s05_h09",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "primo_pomeriggio",
+            "location": {
+              "id": "radura_dei_pini",
+              "qualifier": "interno_cerchio_erba"
+            },
+            "quadrant": "terra_ovest",
+            "characters_present": [
+              "bru",
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Bru si siede al centro della radura per primo. I tre fratelli si siedono in cerchio intorno a lui. Non parlano. La luce cade verticale tra le chiome.",
+            "focal_object": null,
+            "atmosphere": "luogo trovato in silenzio, proprietà del momento ripresa da Bru, seduta che non chiede nulla",
+            "palette": "verde quasi giallo dell'erba nella luce verticale + tronchi scuri di pino in cerchio intorno + grigio-marrone di Bru al centro + sagome dei fratelli più piccole intorno",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "La luce verticale è il soggetto secondario. Bru al centro, fratelli in tre punti del cerchio. Possibile micro-sguardo storto di Elias verso Bru, mai nominato (vedi vincolo)."
+          },
+          {
+            "hook_id": "s05_h10",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "primo_pomeriggio",
+            "location": {
+              "id": "torrente_affluente_foresta",
+              "qualifier": "sponda_lato_orti"
             },
             "quadrant": "terra_ovest",
             "characters_present": [
@@ -4385,15 +4453,17 @@
               "bru"
             ],
             "elements": [],
-            "palette": "ponte_chiaro_tra_verdi_scuri_ancora_li_luce_piu_gialla_pomeridiana",
-            "notes": null,
-            "focal_action": "I quattro tornano dall'altra parte, attraversano il ponte al contrario. Il ponte e' ancora li', tiene. Niente Nodo in lontananza — TOK-TOK-TOK gia' sparito nella Foresta. I quattro non si voltano a controllare di aver fatto bene.",
-            "focal_object": "ponte_al_ritorno_ancora_in_piedi_senza_nodo",
-            "atmosphere": "cose_fatte_che_continuano_a_tenere_anche_quando_nessuno_guarda_quiete",
-            "wind_visible": "intreccio_che_gira_verso_mulinello_pomeridiano_velature_piu_mosse",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "I quattro tornano sulla sponda di partenza. Il ponte è ancora lì. Della scaletta di Nodo nessuna traccia. Il TOK-TOK-TOK arriva lontanissimo da un'altra direzione.",
+            "focal_object": null,
+            "atmosphere": "chiusura asciutta, lavoro che resta, artigiano che non torna a vedere il collaudo, suono che si allontana nella Foresta",
+            "palette": "marrone chiaro del ponte come unico punto chiaro tra i verdi + verdi della Foresta che si chiude + chiazza di muschio dove era la scaletta + ocra degli Orti che ricomincia in fondo",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [
+              "TOK-TOK-TOK"
+            ],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Eco di h02 con esito invertito: ora il ponte c'è. Il TOK-TOK-TOK sempre più lontano è la firma sonora di Nodo che se n'è andato senza vedere."
           }
         ]
       },
@@ -9101,6 +9171,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s04: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloB/s04.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s05: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloB/s05.yaml."
     }
   ]
 }
