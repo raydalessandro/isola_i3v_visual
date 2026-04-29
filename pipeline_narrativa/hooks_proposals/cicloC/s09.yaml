@@ -98,3 +98,93 @@ hooks:
     onomatopee: []
     composition_zone: corner_lower_right
     notes: "HOOK FIRMA. Strato 3 puro: prima manifestazione visibile della paura autonoma di Gabriel. Il voltarsi NON è dichiarato come evitamento, si vede solo il taglio della spalla e il braccialetto che resta solo sul tavolo. Elias di tre quarti, sguardo che capisce, mai sui fratelli. Noah fuori dalla scena percettiva (lui non sa di aver scosso). NESSUNA parola — il momento è il gesto. Voce constraint: zero nominazione."
+
+  - hook_id: s09_h06
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: forno
+      qualifier: interno_banco_consegna_dolce
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "Fiamma avvolge il dolce di castagne, lo dà a Gabriel. Lo guarda un secondo: «Anno che gira non è anno che torna. Ne fa un altro, diverso.» Continua a chiacchierare."
+    focal_object: null
+    atmosphere: "modalità chiacchiera di Fiamma che scorre, detto popolare generico dentro il flusso, mai sentenza, ruolo madre-calore variante distribuita per Gabriel"
+    palette: "terracotta del Forno, oro caldo del camino, bianco farina sul grembiule di Fiamma, rosa-bordeaux scuro del dolce lucido di miele dentro il panno chiaro, sagome dei tre fratelli al banco"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "La key_phrase di Fiamma dal grafo (callback cb_s09_002) compare ALLA LETTERA, attribuita a Fiamma in modalità chiacchiera (Bible §4.7, max 2 detti per storia, qui 1). Eco S1 e S6. Fratelli in piano medio davanti al banco, Fiamma di profilo che porge il pacco — Gabriel al centro, gli altri due a fianco."
+
+  - hook_id: s09_h07
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Gabriel taglia il dolce. Una fetta piccola per Noah, una media per Elias, una grande per sé. Noah guarda il piatto: «Perché il mio è piccolo?»"
+    focal_object: null
+    atmosphere: "gesto automatico di sempre, dolce scuro lucido di miele, tre fette diseguali nel piatto, domanda di Noah che apre"
+    palette: "rosa-bordeaux del dolce lucido di miele, marrone scuro della crosta, legno scuro del tavolo, ceramica chiara dei piatti, sagome dei tre seduti, luce arancione di tramonto tarda dalla finestra"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Coltello in mano di Gabriel, prima fetta già nel piatto di Noah piccola, le altre due ancora sospese. Noah di tre quarti che guarda il suo piatto. Elias di lato, in ascolto, sguardo basso non al piatto. Il braccialetto è ancora sul tavolo accanto al piatto di Gabriel — visibile ma non centrale (vincolo: NON al polso per tutto il dolce)."
+
+  - hook_id: s09_h08
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Noah dice: «Non sono più piccolo come prima.» Pausa. Gabriel guarda Noah, la fetta, Elias. Riprende il coltello. Sposta dalla sua fetta a quella di Noah. Tre fette uguali."
+    focal_object: null
+    atmosphere: "silenzio attivo centrale, Mulinello di sera che attraversa le finestre aperte, tende che si muovono, sorriso di Gabriel commosso non spiegato, terna strato 3 dire/accettare/tenere — Noah dice"
+    palette: "rosa-bordeaux del dolce ri-tagliato, legno scuro del tavolo, sagoma di Gabriel di tre quarti che guarda, sagoma di Elias con sguardo basso non al piatto, arancione del tramonto che si sta esaurendo dalla finestra, tende chiare mosse"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Momento-soglia centrale della storia. La key_phrase di Noah dal grafo («Non sono più piccolo come prima») compare ALLA LETTERA, attribuita a Noah (rivendicazione concreta, non sentenza). Strato 1: il fratello grande ridivide il dolce. Strato 2: Gabriel ha sentito che Noah cresce, ha cambiato il taglio. Strato 3: la paura di Gabriel si tocca per la prima volta — sorriso commosso non spiegato. Pausa = il momento stesso."
+
+  - hook_id: s09_h09
+    type: introspettivo
+    is_signature: false
+    provenance: extended_v2
+    moment: fine_sera
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Piatti vuoti, briciole. Noah ride di una cosa di Elias. Gabriel allunga la mano, prende il braccialetto rimasto sul tavolo, lo tiene tra le dita. Lo guarda."
+    focal_object: braccialetto_s9
+    atmosphere: "tre fratelli insieme ma in tempi interni diversi, Noah ed Elias nella loro cosa separata, Gabriel solo nel suo momento ma non escluso, prime ombre di sera, lanterna appena accesa"
+    palette: "marrone delle briciole di dolce, ceramica chiara dei piatti vuoti, lanterna appena accesa calda su un mobile laterale, prime ombre blu della sera, verde vivo del braccialetto tra le dita di Gabriel, castagna-perlina visibile non enfatizzata"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "Gabriel in piano stretto a sinistra col braccialetto tra le dita; Noah ed Elias a destra in piano medio nella loro chiacchiera. Il braccialetto NON va ancora al polso (vincolo Ray ARCHI: castagna rugata al polso S12 come memento mori stagionale, qui ancora cruda fresca). Decisione del lettore — o del Gabriel di mesi dopo. Elias ha già fatto micro-cenno, ora torna a Noah."
+
+  - hook_id: s09_h10
+    type: atmosferico
+    is_signature: true
+    provenance: extended_v2
+    moment: sera_tarda
+    location:
+      id: piazza_villaggio
+      qualifier: interno_casa_fratelli_finestre_aperte_davanzale
+    characters_present: [gabriel]
+    focal_action: "Il Mulinello continua a passare attraverso le finestre aperte. Le tende si muovono. Una foglia gialla si è posata sul davanzale. Gabriel tiene il braccialetto in mano."
+    focal_object: braccialetto_s9
+    atmosphere: "sigillo del narratore-iniziato, chiusura sospesa non circolare, vento di sera calmo regime di passaggio stagionale, aria di ottobre dentro casa, decisione di Gabriel non dichiarata"
+    palette: "blu profondo della sera, lanterna calda dentro, tende chiare mosse leggere, giallo della foglia caduta sul davanzale di legno scuro, verde vivo del braccialetto, sagoma di Gabriel di tre quarti raccolta"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "HOOK FIRMA. Sigillo narratore. Mulinello regime di passaggio stagionale (non più forte come s08 — esaurito col CRACK e con l'afa che virava). La foglia gialla sul davanzale è il calendario silenzioso (autunno comincia, mai autunno arrivato). Gabriel col braccialetto in mano, NON si dice se lo mette o no — chiusura sospesa. Cerniera verso s10 (notte intera scena piena)."
