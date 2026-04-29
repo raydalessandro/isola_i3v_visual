@@ -6187,84 +6187,283 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s08_h1_signature_crack",
-            "moment": "tarda_sera_mulinello_forte",
+            "hook_id": "s08_h01",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "primo_pomeriggio",
+            "location": {
+              "id": "forno",
+              "qualifier": "interno_banco"
+            },
+            "quadrant": "fuoco_est",
+            "characters_present": [
+              "fiamma",
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre fratelli finiscono un cornetto al banco. Fiamma li trattiene, posa una sfoglia nuova davanti a loro. Fuori la luce è bianca di afa.",
+            "focal_object": "pagnotta_forno",
+            "atmosphere": "afa pomeridiana sospesa, calore stagnante del forno, parola ridotta",
+            "palette": "terracotta arancione del forno, bianco farina sui banconi, grembiule chiaro di Fiamma, bianco di afa nel riquadro della porta",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Apertura ad anello calda. Cornice Forno, fratelli al banco a destra in piano medio, Fiamma a sinistra. La porta aperta sullo sfondo è il primo segnale del mutamento esterno (luce bianca piatta)."
+          },
+          {
+            "hook_id": "s08_h02",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "primo_pomeriggio_inoltrato",
+            "location": {
+              "id": "forno",
+              "qualifier": "esterno_soglia_porta"
+            },
+            "quadrant": "fuoco_est",
+            "characters_present": [
+              "liu",
+              "gabriel",
+              "elias",
+              "noah",
+              "fiamma"
+            ],
+            "elements": [],
+            "focal_action": "Liù si aggrappa al cornicione del Forno. Una folata la sbatte di lato. Dice ai fratelli: «Il vento sale forte stasera. Forse l'acqua trema.» Riparte con la corrente.",
+            "focal_object": null,
+            "atmosphere": "il cielo vira al piombo, imposte che cominciano a sbattere, messaggera aerea che resta un istante e riparte",
+            "palette": "cielo che vira dal bianco afa al grigio piombo, verdi scuri delle chiome che cominciano a piegarsi, ocra delle imposte del Forno, sagoma chiara di Liù aggrappata",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "Lore-hook di saga when_water_trembles (1 di 2 menzioni saga: s08, s12). Liù piccola in alto a sinistra aggrappata al cornicione, fratelli nel riquadro della porta. La frase di Liù è ipotesi, non veggenza. NON marcata is_signature per riservare i 3 slot ai culmini Pozzo."
+          },
+          {
+            "hook_id": "s08_h03",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "tardo_pomeriggio",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "noce_che_cade",
-              "legacy_string": "piazza_villaggio_noce_caduta_pozzo"
+              "qualifier": "attraversamento_lato_sud"
             },
-            "quadrant": "centro_villaggio",
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre fratelli attraversano la piazza piegati in avanti. Il Mulinello fa muro contro di loro. La piazza è quasi vuota, l'Albero Vecchio al centro, il Pozzo a est.",
+            "focal_object": null,
+            "atmosphere": "vento che si fa muro, cielo color piombo, polvere alzata dal selciato, piazza svuotata in fretta",
+            "palette": "cielo piombo, ocra spento del selciato, verdi scuri della chioma dell'Albero Vecchio piegata, sagome dei tre fratelli piegate in avanti, polvere chiara contro luce piombo",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Cerniera di passaggio. Vista aperta della piazza con i fratelli piccoli a sud-ovest del frame, Albero Vecchio al centro intatto (calamita visiva intermedia), Pozzo a destra. Il vento è il vero soggetto."
+          },
+          {
+            "hook_id": "s08_h04",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "tardo_pomeriggio_pre_crepuscolo",
+            "location": {
+              "id": "via_scuola",
+              "qualifier": "imbocco_lato_nord_piazza"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Sul lato nord della piazza il grande noce si piega. Si raddrizza. Si piega di nuovo, di più. La biforcazione della chioma cigola sotto la spinta del Mulinello.",
+            "focal_object": null,
+            "atmosphere": "istante di sospensione, legno che ondeggia oltre il suo limite, polvere e foglie sollevate",
+            "palette": "verde-grigio della chioma del noce piegato sotto cielo piombo, ocra della via della scuola sgombra, sagoma scura del tronco, piccole sagome dei fratelli al margine sud",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Hook di sospensione prima del CRACK. Noce occupa metà destra del frame, fratelli puntini al margine inferiore sinistro. Nessuno è ancora sotto (informazione visiva neutra: la via è vuota)."
+          },
+          {
+            "hook_id": "s08_h05",
+            "type": "azione",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "crepuscolo_che_si_avvicina",
+            "location": {
+              "id": "pozzo_piazza",
+              "qualifier": "bordo_pietra_alzata_lato_est_piazza"
+            },
+            "quadrant": "centro",
             "characters_present": [
               "gabriel",
               "elias",
               "noah",
               "memolo"
             ],
-            "elements": [
-              "Cielo color piombo, Vento Mulinello forte alza polvere",
-              "Noce piegato dal vento alla biforcazione della chioma",
-              "CRACK isolato graficamente — il ramo principale si stacca",
-              "Ramo cade sul pozzo, bordo pietra alzata fa da leva, la chioma scarta sulla via_scuola",
-              "TONFO sordo (non isolato graficamente)",
-              "Memolo al riparo dall'altro lato della piazza, fratelli vedono spaccarsi la biforcazione",
-              "Pattern A in bloom pieno: cosa che si rompe e arriva lo stesso (l'albero ha aspettato che nessuno fosse sotto)"
-            ],
-            "palette": "cielo_piombo_verde_grigio_noce_piegato_bianco_pietra_pozzo_nero_lucido_legno_spaccato_fresco",
-            "notes": null,
-            "focal_action": "Il noce si piega al Mulinello forte, CRACK alla biforcazione, ramo principale colpisce il bordo del pozzo (leva) e devia la chioma sulla via_scuola, TONFO. Nessuno ferito.",
-            "focal_object": "noce_caduto_ramo_leva_sul_pozzo",
-            "atmosphere": "crack_che_spacca_il_silenzio_serale_pozzo_che_salva_traiettoria_via_libera_dietro_pattern_a_bloom_pieno",
-            "wind_visible": "vento_mulinello_che_piega_chiome_forte_sera_color_piombo",
+            "elements": [],
+            "focal_action": "Il noce si spacca alla biforcazione. Il ramo principale tocca per primo il bordo del Pozzo, fa da leva, devia la chioma sulla via della scuola con un tonfo sordo.",
+            "focal_object": "nido_vuoto_s08",
+            "atmosphere": "istante di rottura visibile, polvere alzata, foglie che continuano a cadere, pietra del Pozzo che tiene",
+            "palette": "nero lucido del legno spaccato fresco, bianco-pietra del bordo del Pozzo, verdi scuri della chioma che scarta di lato, cielo piombo, sciarpa ocra di Mèmolo punto caldo unico, polvere chiara",
+            "wind_visible": "vento_mulinello",
             "onomatopee": [
               "CRACK",
               "TONFO"
             ],
-            "stratification": {
-              "strato_1": "bambino_4_anni_vede_albero_che_cade_paura_sorpresa",
-              "strato_2": "lettore_giovane_registra_che_nessuno_si_fa_male_albero_vecchio_li_vicino_non_cade",
-              "strato_3": "rilettore_coglie_scarto_tra_fisica_ramo_leva_e_lettura_soggettiva_memolo_pattern_a_nasce_qui"
-            },
-            "is_signature": true,
-            "provenance": "original_v1"
+            "composition_zone": "corner_lower_right",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Onomatopea-firma CRACK isolata graficamente (fonte: narrazione fattuale s08). TONFO non isolato. Calamita: il punto in cui il ramo tocca il bordo alzato del Pozzo. Mèmolo piccolo dall'altra parte della piazza, fuori traiettoria di mezzo metro, fermo. nido_vuoto_s08 seminato qui — incastrato in una biforcazione secondaria della chioma sospesa (microdettaglio). Pattern A in bloom pieno."
           },
           {
-            "hook_id": "s08_h2_pozzo_duplice_centro",
-            "moment": "subito_dopo_caduta_crepuscolo_che_si_avvicina",
+            "hook_id": "s08_h06",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "crepuscolo",
             "location": {
               "id": "pozzo_piazza",
-              "qualifier": "duplice_centro_gabriel_memolo_noah_dietro",
-              "legacy_string": "gabriel_accanto_pozzo_memolo_seduto_bordo_noah_dietro_varco_foglie"
+              "qualifier": "bordo_lato_piazza_seduti"
             },
-            "quadrant": "centro_villaggio",
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "memolo"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel siede sul bordo del Pozzo accanto a Mèmolo, gli tiene la mano. Mèmolo dice piano: «L'albero ha aspettato che nessuno fosse sotto.» Poi torna a confondersi.",
+            "focal_object": "sciarpa_memolo",
+            "atmosphere": "centro silenzioso, inversione tenera dei ruoli, frase precisa che cade nel crepuscolo, mano sulla mano",
+            "palette": "bianco pietra del bordo del Pozzo, ocra della sciarpa storta di Mèmolo unico punto caldo, sagoma scura di Gabriel di profilo, cielo piombo che si sta scaricando, verdi scuri del fogliame caduto sullo sfondo",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. La key_phrase di Mèmolo dal grafo (l_albero_ha_aspettato_che_nessuno_fosse_sotto) compare ALLA LETTERA, attribuita a Mèmolo. Vincolo Bible §4.7 'una a storia' rispettato. Gabriel di tre quarti, Mèmolo seduto raccolto, sciarpa di sbieco. Strato 3: inversione ruoli zio-buffo / fratello-grande mai dichiarata."
+          },
+          {
+            "hook_id": "s08_h07",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "crepuscolo",
+            "location": {
+              "id": "pozzo_piazza",
+              "qualifier": "lato_dietro_pozzo_chioma_caduta"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Nello stesso istante Gabriel alza gli occhi. Tra le foglie dei rami caduti, dietro il Pozzo, vede passare la maglia di Noah, due mani che posano un nido vuoto.",
+            "focal_object": "nido_vuoto_s08",
+            "atmosphere": "vedere-attraverso-mediazioni, micro-occhiata mai nominata, gesto piccolo di cura nel margine invisibile",
+            "palette": "verdi scuri del fogliame caduto in primo piano sfocato, squillo del colore della maglia di Noah unico movimento dietro, bianco-pietra del Pozzo a sinistra fuori fuoco, marrone secco del nido posato su un punto piano, foglia grossa di copertura",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Strato 3 puro: precursore della paura autonoma di Gabriel s09 (eco di s07_h07 ai due massi, ma più chiara). Gabriel non in frame come soggetto frontale — si vede solo il taglio del suo sguardo dal basso verso il varco. Noah inquadrato attraverso il fogliame, mai pieno. Pattern A: cura di una cosa già vuota. Voice constraint: zero nominazione nel testo."
+          },
+          {
+            "hook_id": "s08_h08",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "sera_crepuscolo_inoltrato",
+            "location": {
+              "id": "via_scuola",
+              "qualifier": "chioma_caduta_sotto_lanterne"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "nodo",
+              "elias",
+              "mantenitori",
+              "gabriel",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Nodo tiene un ramo grosso in tensione. Elias esegue il nodo marinaro sulla corda. Quattro nodi. Dopo il quarto, Nodo lo guarda e fa un cenno. Zero parole.",
+            "focal_object": "corda_nodo",
+            "atmosphere": "lavoro collettivo notturno, lanterne accese al crepuscolo, riconoscimento tecnico muto, terza applicazione del marinaro in crisi reale",
+            "palette": "giallo terroso delle lanterne dei Mantenitori, marrone scuro del legno di noce spezzato, ocra della corda tesa, sagome di età diverse attorno al ramo, cielo notte che si chiude, ombre lunghe che si moltiplicano",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Bloom pieno seed marinaro (terza applicazione dopo s05 e s07, prima volta in crisi reale, non in calma). Nodo distinto da s05: qui Mantenitore part-time tra altri, non artigiano-cliente. Cenno di Nodo a Elias = riconoscimento muto, non premio (gesto del capo, non parola). TOK-TOK-TOK rimosso: presente nel quote_tracker ma non esplicito nella narrazione fattuale; coerenza fattuale prevale."
+          },
+          {
+            "hook_id": "s08_h09",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "notte",
+            "location": {
+              "id": "case_del_mattino",
+              "qualifier": "avvicinamento_quartiere_fuoco"
+            },
+            "quadrant": "fuoco_est",
             "characters_present": [
               "gabriel",
               "elias",
               "noah",
-              "memolo"
+              "fiamma"
             ],
-            "elements": [
-              "Gabriel in ginocchio accanto al pozzo, mano sposta mucchietto di foglie rotte dall'impatto",
-              "Memolo confuso seduto al bordo del pozzo, sciarpa di sbieco",
-              "Mano di Gabriel sulla mano di Memolo — frase precisa di Memolo sussurrata: 'L'albero ha aspettato che nessuno fosse sotto'",
-              "Gabriel alza gli occhi DIETRO il pozzo, attraverso un varco tra le foglie dei rami caduti",
-              "Movimento della maglia di Noah — due mani che posano un nido (precursore paura Gabriel s09)",
-              "Inversione ruoli: Gabriel accudisce Memolo e nello stesso istante inizia a vedere Noah attraverso mediazioni"
-            ],
-            "palette": "bianco_pietra_pozzo_ocra_sciarpa_memolo_verdi_scuri_sfondo_cataste_rami_luce_crepuscolo_che_si_avvicina_squillo_colore_maglia_noah_unica_figura_in_movimento_tra_fogliame_dietro",
-            "notes": "frase_precisa_visibile=l'albero ha aspettato che nessuno fosse sotto | voice_constraint=micro_occhiata_zero_nominazione_solo_immagine_gabriel_non_pensa_niente_nel_testo",
-            "focal_action": "Gabriel siede vicino a Memolo confuso (mano sulla mano, frase precisa sussurrata 'l'albero ha aspettato che nessuno fosse sotto') e nello stesso istante alza gli occhi dietro il pozzo: micro-occhiata su Noah che cura il nido attraverso il varco delle foglie. Vedere-attraverso-mediazioni installato (precursore paura Gabriel s09).",
-            "focal_object": "frase_precisa_memolo_sul_bordo_pozzo_e_varco_di_foglie_su_noah",
-            "atmosphere": "doppio_centro_silenzioso_accudimento_visibile_e_micro_occhiata_invisibile_inversione_ruoli_precursore_paura_gabriel",
-            "wind_visible": "vento_che_si_e_calmato_dopo_la_caduta_aria_che_torna_ferma",
+            "elements": [],
+            "focal_action": "Fiamma mette un altro cornetto in mano a ognuno e li manda a casa. Il Mulinello si è esaurito. L'aria è di nuovo pulita, l'afa è passata.",
+            "focal_object": "pagnotta_forno",
+            "atmosphere": "notte ferma dopo la tempesta, aria come dopo lavata, ritorno al ciclo casa, cornetto come gesto cornice",
+            "palette": "blu notte sopra, cornice calda arancione del Forno alle spalle dei fratelli, ocra dei sentieri verso Case del Mattino, sagome dei tre fratelli che camminano in fila, cornetti chiari nelle mani",
+            "wind_visible": null,
             "onomatopee": [],
-            "stratification": {
-              "strato_1": "bambino_vede_fratello_grande_che_aiuta_signore_confuso_poi_guarda_altrove",
-              "strato_2": "lettore_registra_frase_precisa_memolo_albero_che_ha_aspettato",
-              "strato_3": "rilettore_vede_inversione_ruoli_gabriel_accudisce_memolo_e_nello_stesso_istante_inizia_a_vedere_noah_attraverso_mediazioni_varco_foglie_mani_tracce_precursore_paura_s9_i_fratelli_che_crescono_diversi"
-            },
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Cerniera notte-mattina. Zero parole tra i fratelli. Ognuno tiene la sua cosa piccola (Noah il nido, Gabriel la micro-occhiata, Elias il cenno). Il cornetto chiude l'anello con h01 (apertura forno)."
+          },
+          {
+            "hook_id": "s08_h10",
+            "type": "panorama",
             "is_signature": false,
-            "provenance": "original_v1"
+            "provenance": "extended_v2",
+            "moment": "mattino_presto",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "lato_pozzo_e_tettoia_forno_visti_insieme"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "noah",
+              "memolo",
+              "stria",
+              "coltivatori_del_cerchio"
+            ],
+            "elements": [],
+            "focal_action": "Noah va dietro il Pozzo: il nido è lì, la foglia sopra. Sotto la tettoia del Forno, il legno del noce sta catastato in pile ordinate.",
+            "focal_object": "nido_vuoto_s08",
+            "atmosphere": "isola che riprende, luce nitida e pulita estiva, piccolo rituale istituito, sigillo silenzioso",
+            "palette": "luce dorata del mattino estivo, bianco-pietra del Pozzo intatto, verde secco del nido coperto da foglia grossa, marrone delle pile di legno catastato sotto tettoia, ocra della sciarpa storta di Mèmolo lontano, sagoma alata di Stria sul tetto della scuola",
+            "wind_visible": "vento_taglio",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Chiusura ad anello visiva. Sigillo silenzioso: Mèmolo passa, si ferma davanti al Pozzo, guarda il legno catastato, si tocca la sciarpa storta, va via — figura piccola sul lato. Stria atterra sul tetto della scuola come ogni mattina (cammeo routine). Coltivatori lontani con la cantilena. Pattern A pulito: la legna del noce diventerà pane (mai detto)."
           }
         ]
       },
@@ -9347,6 +9546,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s07: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s07.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s08: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s08.yaml."
     }
   ]
 }
