@@ -6767,68 +6767,278 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "location": {
-              "id": "scuola_stria",
-              "qualifier": null,
-              "legacy_string": "scuola_stria"
-            },
-            "quadrant": "fuoco_est",
-            "hook_id": "vh_s09_mattino_scuola_stria_frase_rilancio_cuccioli_individuati",
-            "moment": "mattino_presto_prima_lezione",
-            "characters_present": [],
-            "elements": [],
-            "palette": "mattino_ottobre_chiaro_taglio_leggero_sul_pavimento_aula_giallo_arancio_prime_foglie_visibili_attraverso_porta",
-            "notes": "[VISUAL] Stria sulla porta della scuola, mattino di ottobre chiaro. Gabriel entra. Cuccioli sullo sfondo, seduti o in piedi — Pun, Toba, Bru, Cardo. Liu' in volo sopra. Luce di Taglio leggero sul pavimento dell'aula. Foglia secca appena soffiata dentro dalla porta. Prime foglie autunnali gialle-arancioni visibili fuori attraverso la porta aperta.\n\n[CRITIQUE] Il Taglio e' percepito freddo da Gabriel (soggettivo) — l'illustrazione non rende il quartiere Fuoco come gia' invernale. L'aria e' chiara di ottobre che comincia, non di novembre. Cuccioli disposti in modo che Cardo sia leggermente distinto dagli altri tre (preparazione prima voce). Liu' in volo in un angolo, pronta a uscire. Stria sulla porta — non e' maestra severa, e' zia che rilancia.",
+            "hook_id": "s09_h01",
+            "type": "interno",
             "is_signature": false,
-            "provenance": "original_v1"
-          },
-          {
+            "provenance": "extended_v2",
+            "moment": "prima_dell_alba",
             "location": {
               "id": "forno",
-              "qualifier": null,
-              "legacy_string": "forno"
+              "qualifier": "interno_banco_impasto"
             },
             "quadrant": "fuoco_est",
-            "hook_id": "vh_s09_pomeriggio_forno_castagna_memolo_a_gabriel",
-            "moment": "pomeriggio_forno_profumo_dolce_in_cottura",
-            "characters_present": [],
+            "characters_present": [
+              "fiamma",
+              "memolo"
+            ],
             "elements": [],
-            "palette": "terracotta_forno_marrone_castagne_crude_vapore_dolce_in_cottura_oro_camino_caldo_pomeriggio",
-            "notes": "[VISUAL] Interno Forno di Fiamma nel primo pomeriggio. Dolce di castagne in cottura (profumo visibile attraverso il vapore sopra il camino). Cesto di Zolla con castagne crude su un banco laterale. Gabriel in piedi accanto al banco. Memolo (riccio) vicino, una zampa sul bordo del cesto. Una castagna cruda nella mano di Gabriel — appena consegnata da Memolo. Fiamma sullo sfondo, che toglie con cura un ciocco dal fuoco. Nessuno parla. Luce di pomeriggio dorata dalla porta aperta.\n\n[CRITIQUE] La castagna nella mano di Gabriel e' il centro ottico della tavola. Memolo NON la guarda piu' (gia' consegnata), sta gia' guardando altrove — non e' un cammeo di tenerezza dichiarata, e' un gesto compiuto. Gabriel la guarda. Fiamma impegnata col fuoco, non partecipa alla scena-castagna — la registra col senso laterale della volpe. Eco silenziosa inversione ruoli S8. NESSUNA enfasi — e' un momento in mezzo al pomeriggio, poi passa.",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "focal_action": "Mèmolo è sulla soglia del Forno prima dell'alba. Fiamma sta per accendere il forno. Lui dice che oggi è il giorno di Gabriel. Lei comincia a impastare.",
+            "focal_object": null,
+            "atmosphere": "buio chiaro che vira, camino non ancora acceso, voce bassa di Mèmolo che arriva senza preavviso, cesto di castagne crude di Zolla sul banco",
+            "palette": "blu profondo che si schiarisce, terracotta tiepida del Forno spento, ocra della sciarpa storta di Mèmolo, bianco farina sul banco, marrone scuro delle castagne crude nel cesto",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Apertura ad anello calda. Mèmolo piccolo nel riquadro della porta a sinistra, Fiamma a destra al banco. Cesto di Zolla con prime castagne dell'anno è il dettaglio-calendario (Bible §9.2). Nessuna parola in immagine — Mèmolo ha già detto e si gira a uscire."
           },
           {
-            "location": {
-              "id": "piazza_villaggio",
-              "qualifier": "interno_casa_fratelli_non_cartografato",
-              "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
-            },
-            "quadrant": "centro_villaggio",
-            "hook_id": "vh_s09_sera_tavolo_dolce_fette_diseguali_poi_uguali",
-            "moment": "sera_interno_finestre_aperte_mulinello_leggero",
-            "characters_present": [],
-            "elements": [],
-            "palette": "legno_tavolo_castagna_scura_lucido_miele_rosa_bordeaux_luce_calda_lanterna_finestra_aperta_grigio_arancio_tramonto",
-            "notes": "[VISUAL] Tavolo di legno, tre fratelli seduti. Dolce di castagne al centro — forma semplice, color castagna scura, superficie lucida di miele. Gabriel col coltello in mano, momento sospeso tra la prima e la seconda porzione di taglio. Sul tavolo: tre piatti vuoti che aspettano, bicchieri d'acqua, il braccialetto appoggiato accanto al piatto di Gabriel. Finestra aperta a destra — tende mosse dal Mulinello sera. Luce arancione di tramonto tarda estate che entra di taglio. Foglia autunnale (gialla) caduta dall'albero fuori, appoggiata sul davanzale. Noah sul lato opposto, Elias al centro.\n\n[CRITIQUE] L'illustrazione cattura il MOMENTO-SOGLIA — Gabriel ha appena sentito 'Non sono piu' piccolo come prima', sta per cambiare il taglio. NON si vede la reazione sul volto (il lettore la costruisce). Il braccialetto e' SUL TAVOLO, non al polso (cura Ray ARCHI). Le fette NON sono ancora tagliate nel dolce — il gesto e' sospeso. Foglia sul davanzale: ottobre che comincia, non inverno. NOTA: l'interno casa non e' entity del grafo (decisione Ray Blocco 0) — e' scene hook.",
+            "hook_id": "s09_h02",
+            "type": "introspettivo",
             "is_signature": false,
-            "provenance": "original_v1"
+            "provenance": "extended_v2",
+            "moment": "mattino_presto",
+            "location": {
+              "id": "scuola_stria",
+              "qualifier": "soglia_porta_aula"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "stria",
+              "gabriel",
+              "elias",
+              "noah",
+              "pun",
+              "toba",
+              "bru",
+              "cardo",
+              "liu"
+            ],
+            "elements": [],
+            "focal_action": "Stria sulla porta della scuola. Gabriel entra con Elias e Noah. I cuccioli sono ai banchi: Pun, Toba, Bru, Cardo. Liù in volo tra le travi.",
+            "focal_object": null,
+            "atmosphere": "aria chiara di ottobre che comincia, Taglio leggero che entra dalla porta aperta con foglia secca, prima individuazione dei cuccioli dal collettivo",
+            "palette": "blu-grigio chiaro del cielo di ottobre fuori, giallo-arancio delle prime foglie sulla soglia, ocra dello scialle di Stria, bordeaux della maglia di Gabriel, marrone scuro dei banchi, sagome dei cuccioli un po' separate",
+            "wind_visible": "vento_taglio",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Stria sulla porta a sinistra in piano medio, fratelli che entrano in piano stretto al centro, cuccioli ai banchi a destra. Cardo leggermente staccato dagli altri tre — preparazione visiva alla prima voce. Liù piccola in alto, già pronta a uscire dalla finestra socchiusa."
           },
           {
+            "hook_id": "s09_h03",
+            "type": "dettaglio",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
+            "location": {
+              "id": "forno",
+              "qualifier": "interno_banco_laterale"
+            },
+            "quadrant": "fuoco_est",
+            "characters_present": [
+              "gabriel",
+              "memolo",
+              "fiamma"
+            ],
+            "elements": [],
+            "focal_action": "Mèmolo tira fuori dalla tasca una castagna cruda. La passa a Gabriel senza parole. Gabriel la prende. Fiamma sullo sfondo toglie un ciocco dal fuoco.",
+            "focal_object": "sciarpa_memolo",
+            "atmosphere": "vapore del dolce in cottura, micro-azione fisica senza enfasi, inversione tenera dei ruoli S8 mai dichiarata, gesto compiuto",
+            "palette": "terracotta arancione del Forno, marrone caldo della castagna cruda lucida, ocra della sciarpa storta di Mèmolo, oro del camino acceso, bianco del vapore sopra il dolce",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Close-up sulla castagna che passa di mano. Calamita: il punto in cui le due mani si incontrano — Mèmolo già guarda altrove, gesto compiuto. Inversione speculare di s08_h06: lì Gabriel teneva la mano a Mèmolo, qui Mèmolo passa qualcosa a Gabriel. Fiamma non partecipa, registra col senso laterale."
+          },
+          {
+            "hook_id": "s09_h04",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "tardo_pomeriggio",
             "location": {
               "id": "piazza_villaggio",
-              "qualifier": "interno_casa_fratelli_non_cartografato",
-              "legacy_string": "interno_casa_fratelli_non_codificato_scene_hook_non_location"
+              "qualifier": "interno_casa_fratelli_non_cartografato"
             },
-            "quadrant": "centro_villaggio",
-            "hook_id": "vh_s09_fine_sera_braccialetto_in_mano_gabriel_noah_ride",
-            "moment": "fine_sera_dolce_mangiato_piatti_vuoti",
-            "characters_present": [],
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
             "elements": [],
-            "palette": "briciole_castagna_marrone_lanterna_accesa_calda_prime_ombre_sera_braccialetto_tra_dita_gabriel",
-            "notes": "[VISUAL] Stesso tavolo. Tre piatti vuoti ora, briciole di dolce. Il braccialetto ancora sul tavolo accanto a Gabriel. Gabriel lo ha appena preso in mano — lo tiene tra le dita. Lo guarda. Noah ride (bocca aperta, guarda Elias). Elias (con il micro-cenno del capo a Gabriel gia' fatto, poi torna a Noah) sta dicendo qualcosa a Noah. Luce e' cambiata — tramonto finito, prime ombre di sera. Lanterna appena accesa su un mobile laterale. Mulinello continua attraverso la finestra.\n\n[CRITIQUE] ULTIMA IMMAGINE prima del sigillo narratore. Gabriel col braccialetto IN MANO (non al polso ancora). Lo guarda. Noah e Elias nella loro cosa separata. Gabriel e' solo nel suo momento, ma non e' escluso dalla scena — i tre sono INSIEME ma in tempi interni diversi. Il braccialetto puo' essere piccolo nell'inquadratura (non oggetto centrale ottico, ma occhio del lettore lo trova). Castagna-perlina visibile ma non enfatizzata — il bambino di 4 la nota, il rilettore registra, l'adulto si commuove pensando che si secchera'.",
+            "focal_action": "Elias dà a Gabriel un cordino nuovo per la sciarpa sfilacciata. Poi Noah, mani dietro la schiena, tira fuori il braccialetto e lo porge: «Te l'ho fatto io. Da solo.»",
+            "focal_object": "braccialetto_s9",
+            "atmosphere": "tardo pomeriggio dorato, gesto piccolo solenne di Noah, tre parole secche orgogliose non tenere, frase di Noah che resta nell'aria",
+            "palette": "legno scuro del tavolo, oro inclinato del sole pomeridiano, verde vivo dei ramoscelli del braccialetto, marrone della castagna cruda forata come perlina, bordeaux della maglia di Gabriel, ocra del cordino di Elias",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Noah al centro in piano stretto, mano tesa col braccialetto. Elias a sinistra in piano medio. Gabriel di tre quarti riceve. Il braccialetto è brutto-tenero (sforzo di Noah visibile, non disastrato): canapa + due ramoscelli flessibili + castagna cruda forata + nodo marinaro semplificato (variante mani piccole insegnata da Elias off-screen tra s08 e s09). Eco silenziosa di TUM-tum-TUM s04 (codice dei tre)."
+          },
+          {
+            "hook_id": "s09_h05",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "tardo_pomeriggio",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel ringrazia, sorride, si volta verso il tavolo per prendere una caraffa. Posa il braccialetto accanto al suo posto. Elias vede e non dice niente.",
+            "focal_object": "braccialetto_s9",
+            "atmosphere": "micro-occhiata che si stacca dal precursore S7/S8 e fiorisce in paura autonoma per la prima volta, voltarsi che dice quello che la voce non dice, comprensione muta di Elias",
+            "palette": "legno scuro del tavolo in primo piano, verde vivo del braccialetto posato, marrone della castagna-perlina, sagoma di Gabriel di tre quarti di spalle, oro tardo del pomeriggio, sagoma di Elias attenta sullo sfondo, sagoma di Noah ignara",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "corner_lower_right",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Strato 3 puro: prima manifestazione visibile della paura autonoma di Gabriel. Il voltarsi NON è dichiarato come evitamento, si vede solo il taglio della spalla e il braccialetto che resta solo sul tavolo. Elias di tre quarti, sguardo che capisce, mai sui fratelli. Noah fuori dalla scena percettiva (lui non sa di aver scosso). NESSUNA parola — il momento è il gesto. Voce constraint: zero nominazione."
+          },
+          {
+            "hook_id": "s09_h06",
+            "type": "interno",
             "is_signature": false,
-            "provenance": "original_v1"
+            "provenance": "extended_v2",
+            "moment": "sera",
+            "location": {
+              "id": "forno",
+              "qualifier": "interno_banco_consegna_dolce"
+            },
+            "quadrant": "fuoco_est",
+            "characters_present": [
+              "fiamma",
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Fiamma avvolge il dolce di castagne, lo dà a Gabriel. Lo guarda un secondo: «Anno che gira non è anno che torna. Ne fa un altro, diverso.» Continua a chiacchierare.",
+            "focal_object": null,
+            "atmosphere": "modalità chiacchiera di Fiamma che scorre, detto popolare generico dentro il flusso, mai sentenza, ruolo madre-calore variante distribuita per Gabriel",
+            "palette": "terracotta del Forno, oro caldo del camino, bianco farina sul grembiule di Fiamma, rosa-bordeaux scuro del dolce lucido di miele dentro il panno chiaro, sagome dei tre fratelli al banco",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "La key_phrase di Fiamma dal grafo (callback cb_s09_002) compare ALLA LETTERA, attribuita a Fiamma in modalità chiacchiera (Bible §4.7, max 2 detti per storia, qui 1). Eco S1 e S6. Fratelli in piano medio davanti al banco, Fiamma di profilo che porge il pacco — Gabriel al centro, gli altri due a fianco."
+          },
+          {
+            "hook_id": "s09_h07",
+            "type": "azione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "sera",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel taglia il dolce. Una fetta piccola per Noah, una media per Elias, una grande per sé. Noah guarda il piatto: «Perché il mio è piccolo?»",
+            "focal_object": null,
+            "atmosphere": "gesto automatico di sempre, dolce scuro lucido di miele, tre fette diseguali nel piatto, domanda di Noah che apre",
+            "palette": "rosa-bordeaux del dolce lucido di miele, marrone scuro della crosta, legno scuro del tavolo, ceramica chiara dei piatti, sagome dei tre seduti, luce arancione di tramonto tarda dalla finestra",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Coltello in mano di Gabriel, prima fetta già nel piatto di Noah piccola, le altre due ancora sospese. Noah di tre quarti che guarda il suo piatto. Elias di lato, in ascolto, sguardo basso non al piatto. Il braccialetto è ancora sul tavolo accanto al piatto di Gabriel — visibile ma non centrale (vincolo: NON al polso per tutto il dolce)."
+          },
+          {
+            "hook_id": "s09_h08",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "sera",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Noah dice: «Non sono più piccolo come prima.» Pausa. Gabriel guarda Noah, la fetta, Elias. Riprende il coltello. Sposta dalla sua fetta a quella di Noah. Tre fette uguali.",
+            "focal_object": null,
+            "atmosphere": "silenzio attivo centrale, Mulinello di sera che attraversa le finestre aperte, tende che si muovono, sorriso di Gabriel commosso non spiegato, terna strato 3 dire/accettare/tenere — Noah dice",
+            "palette": "rosa-bordeaux del dolce ri-tagliato, legno scuro del tavolo, sagoma di Gabriel di tre quarti che guarda, sagoma di Elias con sguardo basso non al piatto, arancione del tramonto che si sta esaurendo dalla finestra, tende chiare mosse",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Momento-soglia centrale della storia. La key_phrase di Noah dal grafo («Non sono più piccolo come prima») compare ALLA LETTERA, attribuita a Noah (rivendicazione concreta, non sentenza). Strato 1: il fratello grande ridivide il dolce. Strato 2: Gabriel ha sentito che Noah cresce, ha cambiato il taglio. Strato 3: la paura di Gabriel si tocca per la prima volta — sorriso commosso non spiegato. Pausa = il momento stesso."
+          },
+          {
+            "hook_id": "s09_h09",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "fine_sera",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_non_cartografato"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "Piatti vuoti, briciole. Noah ride di una cosa di Elias. Gabriel allunga la mano, prende il braccialetto rimasto sul tavolo, lo tiene tra le dita. Lo guarda.",
+            "focal_object": "braccialetto_s9",
+            "atmosphere": "tre fratelli insieme ma in tempi interni diversi, Noah ed Elias nella loro cosa separata, Gabriel solo nel suo momento ma non escluso, prime ombre di sera, lanterna appena accesa",
+            "palette": "marrone delle briciole di dolce, ceramica chiara dei piatti vuoti, lanterna appena accesa calda su un mobile laterale, prime ombre blu della sera, verde vivo del braccialetto tra le dita di Gabriel, castagna-perlina visibile non enfatizzata",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "Gabriel in piano stretto a sinistra col braccialetto tra le dita; Noah ed Elias a destra in piano medio nella loro chiacchiera. Il braccialetto NON va ancora al polso (vincolo Ray ARCHI: castagna rugata al polso S12 come memento mori stagionale, qui ancora cruda fresca). Decisione del lettore — o del Gabriel di mesi dopo. Elias ha già fatto micro-cenno, ora torna a Noah."
+          },
+          {
+            "hook_id": "s09_h10",
+            "type": "atmosferico",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "sera_tarda",
+            "location": {
+              "id": "piazza_villaggio",
+              "qualifier": "interno_casa_fratelli_finestre_aperte_davanzale"
+            },
+            "quadrant": "centro",
+            "characters_present": [
+              "gabriel"
+            ],
+            "elements": [],
+            "focal_action": "Il Mulinello continua a passare attraverso le finestre aperte. Le tende si muovono. Una foglia gialla si è posata sul davanzale. Gabriel tiene il braccialetto in mano.",
+            "focal_object": "braccialetto_s9",
+            "atmosphere": "sigillo del narratore-iniziato, chiusura sospesa non circolare, vento di sera calmo regime di passaggio stagionale, aria di ottobre dentro casa, decisione di Gabriel non dichiarata",
+            "palette": "blu profondo della sera, lanterna calda dentro, tende chiare mosse leggere, giallo della foglia caduta sul davanzale di legno scuro, verde vivo del braccialetto, sagoma di Gabriel di tre quarti raccolta",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Sigillo narratore. Mulinello regime di passaggio stagionale (non più forte come s08 — esaurito col CRACK e con l'afa che virava). La foglia gialla sul davanzale è il calendario silenzioso (autunno comincia, mai autunno arrivato). Gabriel col braccialetto in mano, NON si dice se lo mette o no — chiusura sospesa. Cerniera verso s10 (notte intera scena piena)."
           }
         ]
       },
@@ -9552,6 +9762,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s08: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s08.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s09: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloC/s09.yaml."
     }
   ]
 }
