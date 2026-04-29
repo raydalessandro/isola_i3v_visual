@@ -27,6 +27,7 @@ Questo repo contiene **due tracce di lavoro** + un input read-only + un workspac
 ├── scripts/               tool Python condivisi (idempotenti) tra le skill
 │   ├── build_catalogo_web.py       rigenera catalogo_web da visual/
 │   ├── compile_visual_from_graph.py  travaso meccanico grafo → schede (fase F.1)
+│   ├── split_narrazione_fattuale.py  split sorgente Ciclo*.txt → 12 sNN_*.md
 │   └── audit/                      audit grafo (fase G, 4 script da implementare)
 ├── docs/                  documentazione di processo (es. PIPELINE.md)
 ├── CLAUDE.md              istruzioni per istanze IA (LEGGI PRIMA DI MODIFICARE)
@@ -66,7 +67,7 @@ Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern A
 
 - **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.0.0 schema 1.2** (S1-S12, fase E completata). Prossimo bump previsto v1.1.0 schema 1.3 (fase G, estensione hook).
 - **Documenti progetto:** `pipeline_narrativa/documenti_progetto/` (Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.).
-- **Narrazione fattuale:** `pipeline_narrativa/narrazione_fattuale/` — 12 file `s01_*.md` ... `s12_*.md` con cronaca fattuale di ogni storia (input fase G, in produzione da Ray).
+- **Narrazione fattuale:** `pipeline_narrativa/narrazione_fattuale/` — 12 file `s01_*.md` ... `s12_*.md` con cronaca fattuale di ogni storia (input fase G, **completi al 2026-04-29**, derivati meccanicamente dal sorgente unico in `_source/Ciclo_a-b-c-d_*.txt` via `scripts/split_narrazione_fattuale.py`).
 - **Prompt operativi:** `pipeline_narrativa/prompts/` — prompt versionati per agenti dedicati (es. `PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`).
 - **Backup pre-migrazione:** `pipeline_narrativa/story_graph.v0.10.0.backup.json` (snapshot v0.10.0 schema 0.1).
 - **Regola:** mai modificato dalla cartografia o dal visual. Solo agenti di fase dedicati (con prompt specifico) toccano il grafo, e solo le sezioni autorizzate dal prompt.
@@ -76,7 +77,7 @@ Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern A
 Ampliamento dei `visual_anchors.scene_hooks` di ogni storia da N (2–8 attuali) a esattamente **10**. Bump grafo v1.0.0 → v1.1.0 + schema v1.2 → v1.3 (estensione additiva).
 
 - **Prompt operativo:** `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
-- **Input principale:** `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (Ray sta producendo i 12 file fattuali).
+- **Input principale:** `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (12/12 disponibili al 2026-04-29).
 - **Audit:** `scripts/audit/` — 4 script di validazione (integrity, schema, navigability, drift) da implementare prima dell'avvio.
 - **Modalità:** una storia alla volta, approvazione Ray tra storia e storia.
 - **Output finale:** 120 hook validati totali (10 × 12).

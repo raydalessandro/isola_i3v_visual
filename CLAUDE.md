@@ -124,7 +124,7 @@ Compilazione body schede `visual/` usando il grafo v1.0.0 come fonte autorevole:
 
 Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `visual_anchors.scene_hooks`. Bump grafo v1.0.0 → **v1.1.0** + schema v1.2 → **v1.3** (estensione additiva: nuovi campi `type`, `is_signature`, `provenance`, `composition_zone` su scene_hook).
 
-- **Input**: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (Ray sta preparando le 12 narrazioni fattuali, una storia per file).
+- **Input**: `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (12/12 disponibili al 2026-04-29; sorgente unico in `_source/Ciclo*.txt`, split via `scripts/split_narrazione_fattuale.py`).
 - **Prompt operativo**: `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
 - **Audit**: `scripts/audit/audit_1_integrity.py`, `audit_2_schema.py`, `audit_3_navigability.py`, `audit_4_drift.py` (da implementare).
 - **Modalità**: una storia alla volta, con approvazione Ray tra storia e storia.

@@ -2,8 +2,8 @@
 
 Narrazione **fattuale** delle 12 storie della saga. Cosa è successo in ogni storia, **senza** la voce autoriale.
 
-> Ray sta preparando questi 12 file (uno per storia: `s01_*.md` ... `s12_*.md`).
-> Sono la **fonte primaria** per l'agente di estensione hook visivi (vedi `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE.md`).
+> 12/12 file presenti (split meccanico dal sorgente in `_source/Ciclo_a-b-c-d_260429_111628.txt`, fornito da Ray il 2026-04-29).
+> Sono la **fonte primaria** per l'agente di estensione hook visivi (vedi `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`).
 
 ## Pattern dei file
 
@@ -41,7 +41,9 @@ Servono all'agente per identificare **i 10 momenti illustrabili** che diventano 
 
 ## Stato
 
-Le 12 narrazioni fattuali sono in produzione (Ray). Saranno aggiunte qui mano mano, una storia alla volta.
+**12/12 storie presenti** (caricate il 2026-04-29). Ciclo A (s01-s03 inverno · Taglio · distinguere), Ciclo B (s04-s06 primavera · Intreccio · connettere), Ciclo C (s07-s09 estate · cambiare), Ciclo D (s10-s12 autunno · tenere · sigillo).
+
+Sorgente unico: `_source/Ciclo_a-b-c-d_260429_111628.txt`. I 12 file `sNN_*.md` sono derivati meccanicamente con script di split (header + body) e devono essere considerati lo specchio del sorgente. Se Ray modifica il sorgente, ri-eseguire lo split.
 
 ## Read-only per agenti
 
