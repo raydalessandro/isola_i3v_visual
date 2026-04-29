@@ -1,0 +1,105 @@
+# Hook ciclo D — S12 — Quando i Tre Venti Suonano Insieme
+# SIGILLO della saga. Fonte: proposta agente fase G del 2026-04-29.
+# Edit minimi:
+# - h04 (signature): agente ha auto-corretto in note finali (per quota
+#   3 max signature) ma il testo del hook era ancora true -> false.
+# - h05 (33->28): condenso frammento Grunto, preservando "Una volta era
+#   diverso. Suonavano in tre, erano tre persone." La coda "non tre
+#   venti" e' detta visivamente da h08 (Concerto).
+# - h08 (36->28): condensata descrizione tre venti.
+# - h09 (33->27): "Pochi secondi dopo... Pochi secondi dopo" -> "Poco
+#   dopo... Poi"
+# - h10 (34->27): condensato finale Fiamma a tavola.
+
+story_id: s12
+
+hooks:
+  - hook_id: s12_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: alba
+    location:
+      id: forno
+      qualifier: alba_partenza_cornice_apertura_saga
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "Fiamma mette in mano a Noah due cornetti caldi e a Gabriel una sacca di tela con la pagnotta. Dice: «Andate. Una è per Grunto.»"
+    focal_object: pagnotta_forno
+    atmosphere: "forno acceso da ore, fiato bianco dei fratelli sulla soglia, finestra socchiusa già lasciata da Liù, prima brina fuori sul selciato, modalità ferma di Fiamma — pochi gesti, frasi essenziali"
+    palette: "arancione del Forno acceso, terracotta del banco, bianco farina sul grembiule di Fiamma, viola-blu del cielo pre-alba dietro la porta aperta, bianco del fiato, marrone della sacca di tela, oro dei cornetti caldi"
+    wind_visible: vento_taglio
+    onomatopee: ["frrr"]
+    composition_zone: vignette
+    notes: "Apertura saga, simmetria S1↔S12. Le due frasi di Fiamma alla lettera (callback s01: «Una è per Grunto.»). Liù appena ripartita — frrr lievissimo in alto-destra, foglia mossa sul davanzale. Sguardo lungo di Fiamma a Gabriel non in questo hook (è in h02) — qui prevale la consegna."
+
+  - hook_id: s12_h02
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: alba
+    location:
+      id: forno
+      qualifier: stipite_porta_uscita_micro_seme_fase_f
+    characters_present: [fiamma, gabriel]
+    focal_action: "Fiamma sullo stipite si volta. Guarda a lungo Gabriel. Gabriel non si volta, è già un passo fuori. Esce."
+    focal_object: null
+    atmosphere: "stipite di legno scuro, sguardo lungo che non si trasforma in parola, Gabriel di tre quarti di spalle, primo piano del taglio della spalla, prima luce di est che entra obliqua, cielo dietro che vira al chiaro"
+    palette: "arancione tiepido del Forno alle spalle di Fiamma, bordeaux della maglia di Gabriel, grembiule bianco-farina di Fiamma, viola-blu del cielo che si schiarisce, ocra del legno dello stipite, sagome di Elias e Noah già fuori sfocate"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Micro-seme Fase F (mai dichiarato). Vincolo voce: zero parola, sguardo che resta più del normale. Strato 3 — Fiamma sa che oggi è il giorno di Gabriel, Gabriel non lo sa ancora. Tipografia minima, no didascalia."
+
+  - hook_id: s12_h03
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino
+    location:
+      id: pontile_bocca
+      qualifier: passaggio_verso_riva_interna_ovest_fiume
+    characters_present: [bartolo, gabriel, elias, noah]
+    focal_action: "Bartolo è nella barca, occhi aperti. I tre passano sul Pontile. Bartolo alza la mano. La mano resta a metà, ricade. I fratelli salutano con un cenno, non si fermano."
+    focal_object: null
+    atmosphere: "Pontile umido di brina, barca con coperta marrone, guscio dietro come schienale, mano alzata che ricade quando i fratelli sono oltre, passo regolare, nessuna parola, foglie autunnali galleggianti vicino al palo"
+    palette: "verde-mare antico dei vestiti di Bartolo, marrone della coperta, nero lucido del guscio, ocra del legno del Pontile, blu-grigio dell'acqua della Bocca, giallo-bruno delle foglie galleggianti, viola-rosa pallido del cielo basso a est"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Quarto cammeo Bartolo (s07→s10→s11→s12), modo canonico «fa» silenzioso. Mano a metà che ricade — gesto chiave. Apre porta Fase F oltre il mare (mai dichiarato). I fratelli proseguono verso nord risalendo la riva interna ovest del Fiume."
+
+  - hook_id: s12_h04
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: guado_di_pietre_piatte
+      qualifier: tappa_di_passaggio_when_water_trembles_2_di_2
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I fratelli si fermano un secondo sul guado. Sulla superficie dell'acqua, una piccola increspatura va contro la corrente, dentro il flusso. Loro la vedono. Non la nominano. Riprendono."
+    focal_object: null
+    atmosphere: "pietre piatte affioranti, acqua che scende, piega lieve controcorrente che non rompe il flusso, fiato lieve dei tre, Orti del Cerchio quasi spogli sull'altra riva, zolle nere di pioggia, niente uccelli acquatici"
+    palette: "grigio chiaro delle pietre piatte, blu-verde freddo dell'acqua, bianco minimo della schiuma controcorrente, riflesso del cielo autunnale chiaro, giallo-bruno delle foglie sulla riva, marrone scuro delle zolle degli Orti dietro"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: fog_space
+    notes: "When_water_trembles 2/2 saga (quota chiusa). Pattern A in miniatura (l'increspatura non rompe il flusso) — mai nominato. Nessuna reazione dei fratelli, solo vista di passaggio. Tipografia: nessuna parola, l'immagine basta. Atmosferico forte, NON signature (riservate ai 3 culmini h02/h05/h08)."
+
+  - hook_id: s12_h05
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: pomeriggio
+    location:
+      id: burrone
+      qualifier: cengia_grunto_pomeriggio_inoltrato
+    characters_present: [grunto, gabriel, elias, noah]
+    focal_action: "Gabriel posa la pagnotta sulla pietra piatta. Grunto annusa, mastica. Noah dice: «Buono?» Grunto: «Buono.» Poi guarda lontano: «Una volta era diverso. Suonavano in tre, erano tre persone.»"
+    focal_object: pagnotta_forno
+    atmosphere: "sole alto sui fianchi di Grunto, cicatrice chiara sulla spalla ben visibile, pagnotta tiepida sulla pietra, sguardo di Grunto che non guarda i fratelli ma lontano, frammento detto a se stesso o a chi non c'è più, fratelli fermi"
+    palette: "verde-scuro lichene della cengia, grigio-pietra del Burrone, marrone-bruno del manto di Grunto, bianco sporco della cicatrice, oro pallido della pagnotta, ocra dell'erba secca della cengia, sagome dei tre fratelli un passo indietro"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "HOOK FIRMA. Frammento pre-Vento unico saga (1 di 2 budget utilizzato). Scambio «Buono?/Buono.» rovesciato S1→S12 (Noah parla per primo). Grunto guarda lontano, soggetto sparito (vincolo: mai nomi propri Ariete/Ondina/Tempesta nel frammento). La coda originale del frammento «non tre venti» è espressa visivamente da h08 (Concerto), qui omessa per limite parola. Pagnotta callback s01."
