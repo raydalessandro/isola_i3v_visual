@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.3",
-  "graph_version": "1.1.0-pre",
+  "schema_version": "1.2",
+  "graph_version": "1.0.0",
   "last_updated": "2026-04-29",
-  "phase": "fase_g_pre_writeback_schema_v1_3_2026-04-29",
+  "phase": "fase_E_completata_post_pulizia_provvisori_2026_04_28",
   "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. Provvisori P2 narrativi promossi al canonical post-pulizia (season_passage, key_phrase_indicative, key_phrase_attributed_to). 8 misalignments: 8 resolved (mis_001..mis_007 + mis_008). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere). Stato: nessuna ambiguità residua sui campi narrativi.",
   "entities": {
     "characters": {
@@ -2113,7 +2113,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s01_h01",
+            "hook_id": "s01_h1",
             "moment": "mattino_presto",
             "location": {
               "id": "forno",
@@ -2134,12 +2134,10 @@
             "focal_object": "pagnotta_forno",
             "atmosphere": "caldo_interno_freddo_fuori_vapore_dal_pane",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s01_h02",
+            "hook_id": "s01_h2",
             "moment": "mattino",
             "location": {
               "id": "pascoli_alti",
@@ -2159,12 +2157,10 @@
             "focal_object": "nebbia",
             "atmosphere": "bianco_totale_silenzio_ovattato_perdita_di_riferimenti",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s01_h03",
+            "hook_id": "s01_h3",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "sentiero_montagne_gemelle",
@@ -2184,12 +2180,10 @@
             "focal_object": "bordo_del_burrone_rivelato",
             "atmosphere": "rivelazione_silenziosa_luce_che_taglia_nebbia_vertigine_che_non_accade",
             "wind_visible": "linee_di_luce_gialla_tra_nebbia_che_si_apre_ombre_lunghe_definite_capelli_scolpiti_in_una_direzione",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s01_h04",
+            "hook_id": "s01_h4_signature",
             "moment": "mezzogiorno_montagna",
             "location": {
               "id": "grotta_grunto",
@@ -2210,12 +2204,10 @@
             "focal_object": "pagnotta_su_pietra_piatta",
             "atmosphere": "incontro_misurato_silenzio_altitudine_rispetto_reciproco",
             "wind_visible": "taglio_residuo_in_alta_quota",
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s01_h05",
+            "hook_id": "s01_h5",
             "moment": "tardo_pomeriggio_quasi_sera",
             "location": {
               "id": "forno",
@@ -2236,9 +2228,7 @@
             "focal_object": "forno_acceso_cornice_di_chiusura",
             "atmosphere": "ritorno_calore_quiete_non_trionfo",
             "wind_visible": "mulinello_sera_leggero_fuori",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -2439,7 +2429,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s02_h01",
+            "hook_id": "s02_h1",
             "moment": "mattino_presto",
             "location": {
               "id": "scuola_stria",
@@ -2460,12 +2450,10 @@
             "focal_object": "stria_che_si_alza_in_volo",
             "atmosphere": "autorita_calma_alba_invernale_rilancio_mai_risposta",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s02_h02",
+            "hook_id": "s02_h2",
             "moment": "mattino",
             "location": {
               "id": "pascoli_alti",
@@ -2485,12 +2473,10 @@
             "focal_object": "bastoncino_in_mano_a_noah",
             "atmosphere": "cammino_in_salita_freddo_secco_chiaro",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s02_h03",
+            "hook_id": "s02_h3_signature",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "pozza_abbeveratoio_pastori",
@@ -2510,12 +2496,10 @@
             "focal_object": "riflessi_falsati_sull_acqua",
             "atmosphere": "momento_di_falsa_fissita_turbamento_silenzioso_litigio_freddo",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s02_h04",
+            "hook_id": "s02_h4",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "pozza_abbeveratoio_pastori",
@@ -2535,12 +2519,10 @@
             "focal_object": "bastoncino_che_sparisce_sotto_il_velo",
             "atmosphere": "rottura_della_falsa_fissita_via_gesto_irriflesso_vento_che_increspa",
             "wind_visible": "vento_taglio_folata_cerchi_argentei",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s02_h05",
+            "hook_id": "s02_h5",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "pascoli_alti",
@@ -2560,9 +2542,7 @@
             "focal_object": "i_tre_in_fila",
             "atmosphere": "ritorno_piu_silenzioso_del_previsto",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -2760,7 +2740,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s03_h01",
+            "hook_id": "s03_h1",
             "moment": "tardo_pomeriggio",
             "location": {
               "id": "foresta_intrecciata",
@@ -2780,12 +2760,10 @@
             "focal_object": "pallone_di_stoffa_cucita",
             "atmosphere": "gioco_gia_lungo_luce_che_cala_fatica_dolce",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s03_h02",
+            "hook_id": "s03_h2_signature",
             "moment": "quasi_sera",
             "location": {
               "id": "foresta_intrecciata",
@@ -2805,12 +2783,10 @@
             "focal_object": "pallone_che_sparisce_tra_i_tronchi",
             "atmosphere": "errore_piccolo_che_fa_rumore_grande_luce_che_cambia_da_arancione_a_blu",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s03_h03",
+            "hook_id": "s03_h3",
             "moment": "crepuscolo",
             "location": {
               "id": "foresta_intrecciata",
@@ -2830,12 +2806,10 @@
             "focal_object": "elias_che_chiama_nel_buio",
             "atmosphere": "tensione_del_margine_buio_che_non_risponde",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s03_h04",
+            "hook_id": "s03_h4",
             "moment": "crepuscolo",
             "location": {
               "id": "foresta_intrecciata",
@@ -2857,12 +2831,10 @@
             "focal_object": "rovo_col_pallone_in_mano_posato_a_terra",
             "atmosphere": "incontro_brusco_tenerezza_mediata_pallone_restituito_con_gesto_preciso",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s03_h05",
+            "hook_id": "s03_h5",
             "moment": "sera_piena",
             "location": {
               "id": "foresta_intrecciata",
@@ -2883,9 +2855,7 @@
             "focal_object": "rovo_di_spalle_che_rientra_nella_foresta",
             "atmosphere": "sigillo_laconico_dignita_del_margine",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -3198,7 +3168,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s04_h01",
+            "hook_id": "s04_h1",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
@@ -3219,12 +3189,10 @@
             "focal_object": "salvia_col_cesto_che_entra_soglia_foresta",
             "atmosphere": "primo_tepore_primavera_piena_lavoro_di_fondo_serenita_breve",
             "wind_visible": "intreccio_diffuso_velature_azzurre_tra_rami",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h02",
+            "hook_id": "s04_h2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
@@ -3242,12 +3210,10 @@
             "focal_object": "farfalla_blu_che_sparisce_tra_due_tronchi",
             "atmosphere": "attrazione_innocente_che_diventa_smarrimento_silenzioso_alberi_che_si_ripetono",
             "wind_visible": "intreccio_chiome_in_movimento",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h03",
+            "hook_id": "s04_h3_signature",
             "moment": "mattino_inoltrato_inizio_mezzogiorno",
             "location": {
               "id": "foresta_intrecciata",
@@ -3266,12 +3232,10 @@
             "focal_object": "palmo_di_elias_sulla_radice_che_batte",
             "atmosphere": "tenuta_fisica_silenziosa_concentrazione_ritmo_che_parte_nel_tessuto",
             "wind_visible": "intreccio_chiome_in_movimento_sopra_ma_sotto_aria_piu_ferma",
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h04",
+            "hook_id": "s04_h4",
             "moment": "mattino_inoltrato_inizio_mezzogiorno",
             "location": {
               "id": "foresta_intrecciata",
@@ -3289,12 +3253,10 @@
             "focal_object": "palmo_di_noah_sulla_terra_tra_due_radici",
             "atmosphere": "solitudine_che_trova_risposta_dal_sottosuolo_ascolto_tattile_che_diventa_canale",
             "wind_visible": "intreccio_chiome_che_muovono_foglie_sopra",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h05",
+            "hook_id": "s04_h5",
             "moment": "mezzogiorno_nella_foresta",
             "location": {
               "id": "foresta_intrecciata",
@@ -3315,12 +3277,10 @@
             "focal_object": "abbraccio_dei_tre_con_elias_storto_dentro_e_bru_che_guarda",
             "atmosphere": "ritrovamento_felice_con_crepa_invisibile_sotto_presenza_silenziosa_che_custodisce",
             "wind_visible": "intreccio_attutito_nella_radura_interna",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h06",
+            "hook_id": "s04_h6",
             "moment": "mezzogiorno",
             "location": {
               "id": "foresta_intrecciata",
@@ -3342,12 +3302,10 @@
             "focal_object": "rovo_in_piedi_tra_tronchi_bandana_sulla_fronte_bru_un_passo_verso_di_lui",
             "atmosphere": "ingresso_brusco_non_minaccioso_zio_che_verifica_e_ripartira",
             "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s04_h07",
+            "hook_id": "s04_h7",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "foresta_intrecciata",
@@ -3368,9 +3326,7 @@
             "focal_object": "salvia_col_cesto_pieno_che_esce_al_margine",
             "atmosphere": "ritorno_al_visibile_nulla_e_cambiato_per_chi_guarda_da_fuori",
             "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -3663,7 +3619,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s05_h01",
+            "hook_id": "s05_h1",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "foresta_intrecciata",
@@ -3684,12 +3640,10 @@
             "focal_object": "bru_davanti_che_guida_col_passo_i_fratelli_in_fila",
             "atmosphere": "cammino_di_scoperta_fiducia_reciproca_silenziosa_primavera_piena",
             "wind_visible": "intreccio_tra_chiome_velature_azzurre_diffuse",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h02",
+            "hook_id": "s05_h2",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3710,12 +3664,10 @@
             "focal_object": "torrente_in_piena_tra_le_due_sponde_assenza_del_tronco",
             "atmosphere": "arresto_davanti_al_vuoto_scoperta_del_passaggio_mancante",
             "wind_visible": "intreccio_sopra_le_chiome_aria_parallela_al_torrente_acqua_liscia_non_increspata",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h03",
+            "hook_id": "s05_h3",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3737,12 +3689,10 @@
             "focal_object": "nodo_al_lavoro_con_corda_sul_braccio_e_scaletta_sotto",
             "atmosphere": "incontro_con_maestria_calma_pratica_che_non_si_interrompe",
             "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h04",
+            "hook_id": "s05_h4",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3764,12 +3714,10 @@
             "focal_object": "corda_che_passa_dalla_matassa_di_nodo_alla_mano_di_elias",
             "atmosphere": "trasmissione_silenziosa_eredita_tecnica_e_materiale_in_un_gesto",
             "wind_visible": "intreccio_diffuso",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h05",
+            "hook_id": "s05_h5_signature",
             "moment": "tarda_mattina_inizio_mezzogiorno",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3790,12 +3738,10 @@
             "focal_object": "ponte_in_costruzione_con_quattro_ruoli_simultanei",
             "atmosphere": "lavoro_coordinato_silenzioso_ognuno_al_proprio_ruolo_intreccio_di_azioni",
             "wind_visible": "intreccio_chiome_mosse_sopra_acqua_liscia_sotto_sistema_a_due_piani",
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h06",
+            "hook_id": "s05_h6",
             "moment": "mezzogiorno",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3816,9 +3762,7 @@
             "focal_object": "elias_sul_ponte_primo_passaggio_gabriel_e_noah_che_guardano",
             "atmosphere": "collaudo_responsabile_tensione_sottile_chi_ha_fatto_prova",
             "wind_visible": "intreccio_che_fa_oscillare_leggermente_le_chiome_sopra",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "s05_h7_radura",
@@ -3842,12 +3786,10 @@
             "focal_object": "bru_al_centro_del_cerchio_d_erba_i_tre_fratelli_intorno",
             "atmosphere": "silenzio_verticale_centro_che_si_prende_dopo_che_il_ponte_e_stato_fatto_conflitto_sottile_invisibile",
             "wind_visible": "intreccio_attutito_nella_radura_luce_piu_che_aria",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s05_h08",
+            "hook_id": "s05_h8",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "torrente_affluente_foresta",
@@ -3868,9 +3810,7 @@
             "focal_object": "ponte_al_ritorno_ancora_in_piedi_senza_nodo",
             "atmosphere": "cose_fatte_che_continuano_a_tenere_anche_quando_nessuno_guarda_quiete",
             "wind_visible": "intreccio_che_gira_verso_mulinello_pomeridiano_velature_piu_mosse",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -4238,7 +4178,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s06_h01",
+            "hook_id": "s06_h1",
             "moment": "mattino_presto",
             "location": {
               "id": "scuola_stria",
@@ -4264,12 +4204,10 @@
             "focal_object": "scena_apertura_aula",
             "atmosphere": "scuola_quieta_di_mattina_richiesta_sottovoce_tra_pari",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h02",
+            "hook_id": "s06_h2",
             "moment": "mattino",
             "location": {
               "id": "forno",
@@ -4295,12 +4233,10 @@
             "focal_object": "cornetti_sul_banco",
             "atmosphere": "forno_caldo_chiacchiera_di_fiamma_seed_briciole_pattern_a_rinforzo",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h03",
+            "hook_id": "s06_h3",
             "moment": "mattino_inoltrato",
             "location": {
               "id": "casa_salvia",
@@ -4325,12 +4261,10 @@
             "focal_object": "sacchettino_tiglio_appeso",
             "atmosphere": "casa_salvia_ordinata_calma_pratica_pianta_diversa_da_s4",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h04",
+            "hook_id": "s06_h4",
             "moment": "tarda_mattina",
             "location": {
               "id": "casa_zolla",
@@ -4355,12 +4289,10 @@
             "focal_object": "ghiande_in_ciotola",
             "atmosphere": "tana_zolla_quieta_lenta_pragmatica",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h05",
+            "hook_id": "s06_h5",
             "moment": "mezzogiorno",
             "location": {
               "id": "panca_di_pietra",
@@ -4387,12 +4319,10 @@
             "focal_object": "dito_che_indica_albero_vecchio",
             "atmosphere": "mercato_quieto_indicazione_silenziosa_via_dito_minimo_seed_pattern_a_rinforzo",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h06",
+            "hook_id": "s06_h6_signature",
             "moment": "primo_pomeriggio",
             "location": {
               "id": "cespuglio_dietro_albero_vecchio",
@@ -4416,12 +4346,10 @@
             "focal_object": "scatoletta_dente_da_latte",
             "atmosphere": "trovamento_silenzioso_capire_senza_avere_dente_unico_freddo_nel_caldo",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": true,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h07",
+            "hook_id": "s06_h7",
             "moment": "pomeriggio_inoltrato",
             "location": {
               "id": "casa_memolo_cortile",
@@ -4450,12 +4378,10 @@
             "focal_object": "scatoletta_restituita",
             "atmosphere": "chiusura_quieta_riso_sollievo_pomeriggio_lungo_ombre_basse",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s06_h08",
+            "hook_id": "s06_h8",
             "moment": "pomeriggio_inoltrato_chiusura",
             "location": {
               "id": "casa_memolo_cortile",
@@ -4478,9 +4404,7 @@
             "focal_object": "briciole_cornetto_sul_palmo",
             "atmosphere": "sigillo_silenzioso_seed_pattern_a_rinforzo_gesto_caratteriale_noah",
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -4864,7 +4788,7 @@
       "visual_anchors": {
         "scene_hooks": [
           {
-            "hook_id": "s07_h01",
+            "hook_id": "s07_h1",
             "moment": "mattino_presto",
             "location": {
               "id": "guado_di_pietre_piatte",
@@ -4884,12 +4808,10 @@
             "focal_object": "tre_rametti_legati_dal_marinaro_sulla_pietra_piatta_al_guado",
             "atmosphere": "partenza_preparata_concentrazione_silenziosa_aria_gia_calda_estate_piena_alba_estiva",
             "wind_visible": "intreccio_leggero_sopra_pelo_acqua_parallelo_corrente_nessuna_increspatura",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s07_h02",
+            "hook_id": "s07_h2",
             "moment": "mattina",
             "location": {
               "id": "fiume_che_gira",
@@ -4909,12 +4831,10 @@
             "focal_object": "zattera_che_naviga_nel_fiume_sulla_destra_dei_fratelli_accanto_a_loro_che_camminano_con_foresta_intrecciata_sulla_sinistra",
             "atmosphere": "cammino_fiducioso_della_prima_meta_storia_ritmo_appena_trovato_odori_di_foresta_sul_verso_del_fiume",
             "wind_visible": "intreccio_tra_chiome_foresta_e_sopra_acqua_a_tratti_parallelo_a_tratti_trasversale",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s07_h03",
+            "hook_id": "s07_h3",
             "moment": "fine_mattina_verso_mezzogiorno",
             "location": {
               "id": "fiume_che_gira",
@@ -4934,12 +4854,10 @@
             "focal_object": "filari_ordinati_degli_orti_sulla_sinistra_zattera_nel_fiume_sulla_destra_tre_fratelli_tra_le_due_zone",
             "atmosphere": "passaggio_tra_due_mondi_lavorati_la_terra_coltivata_e_l_acqua_che_scorre_coltivatori_sullo_sfondo_non_interagiscono",
             "wind_visible": "intreccio_piu_caldo_portato_odori_di_terra_lavorata_e_di_piante_in_fiore",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s07_h04",
+            "hook_id": "s07_h4",
             "moment": "mezzogiorno_sole_alto",
             "location": {
               "id": "fiume_che_gira",
@@ -4959,12 +4877,10 @@
             "focal_object": "zattera_incastrata_tra_due_massi_erba_tenace_che_cede_un_rametto_resta_bloccato_due_proseguono",
             "atmosphere": "momento_soglia_della_storia_sole_alto_tempo_sospeso_corrente_che_preme_strapp_arrivato_continuazione_pulita_subito_dopo",
             "wind_visible": "intreccio_sopra_acqua_trasversale_al_punto_stretto_leggere_rughe_superficiali_corrente_visibilmente_piu_veloce",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s07_h05",
+            "hook_id": "s07_h5",
             "moment": "pomeriggio_avanzato",
             "location": {
               "id": "fiume_che_gira",
@@ -4984,12 +4900,10 @@
             "focal_object": "zattera_a_due_rametti_che_naviga_davanti_ai_fratelli_verso_il_mare_noah_in_testa_col_bastoncino",
             "atmosphere": "transizione_dal_verde_al_blu_dal_dolce_al_salato_cammino_stanco_ma_continuato_momento_di_crescita_silenziosa",
             "wind_visible": "intreccio_che_si_diluisce_intreccio_piu_caldo_di_aria_salata_vento_parallelo_alla_corrente_che_si_allarga",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
-            "hook_id": "s07_h06",
+            "hook_id": "s07_h6",
             "moment": "crepuscolo_tardo_tramonto",
             "location": {
               "id": "pontile_bocca",
@@ -5012,9 +4926,7 @@
             "focal_object": "zattera_che_esce_nel_mare_aperto_due_rametti_ancora_legati_visti_da_pontile_con_amo_croce_nera_sullo_sfondo_est",
             "atmosphere": "arrivo_compiuto_crepuscolo_calmo_presenze_silenziose_bartolo_e_amo_come_cornici_il_mondo_va_per_conto_suo_zattera_si_allontana_nel_mare",
             "wind_visible": "mulinello_sera_che_gira_leggero_sull_acqua_mista_della_bocca_sposta_verso_l_aperto_intreccio_residuo_porta_odori_di_sale_e_alghe",
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -5473,9 +5385,7 @@
               "strato_1": "bambino_4_anni_vede_albero_che_cade_paura_sorpresa",
               "strato_2": "lettore_giovane_registra_che_nessuno_si_fa_male_albero_vecchio_li_vicino_non_cade",
               "strato_3": "rilettore_coglie_scarto_tra_fisica_ramo_leva_e_lettura_soggettiva_memolo_pattern_a_nasce_qui"
-            },
-            "is_signature": true,
-            "provenance": "original_v1"
+            }
           },
           {
             "hook_id": "s08_h2_pozzo_duplice_centro",
@@ -5511,9 +5421,7 @@
               "strato_1": "bambino_vede_fratello_grande_che_aiuta_signore_confuso_poi_guarda_altrove",
               "strato_2": "lettore_registra_frase_precisa_memolo_albero_che_ha_aspettato",
               "strato_3": "rilettore_vede_inversione_ruoli_gabriel_accudisce_memolo_e_nello_stesso_istante_inizia_a_vedere_noah_attraverso_mediazioni_varco_foglie_mani_tracce_precursore_paura_s9_i_fratelli_che_crescono_diversi"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            }
           }
         ]
       },
@@ -5828,9 +5736,7 @@
             "characters_present": [],
             "elements": [],
             "palette": "mattino_ottobre_chiaro_taglio_leggero_sul_pavimento_aula_giallo_arancio_prime_foglie_visibili_attraverso_porta",
-            "notes": "[VISUAL] Stria sulla porta della scuola, mattino di ottobre chiaro. Gabriel entra. Cuccioli sullo sfondo, seduti o in piedi — Pun, Toba, Bru, Cardo. Liu' in volo sopra. Luce di Taglio leggero sul pavimento dell'aula. Foglia secca appena soffiata dentro dalla porta. Prime foglie autunnali gialle-arancioni visibili fuori attraverso la porta aperta.\n\n[CRITIQUE] Il Taglio e' percepito freddo da Gabriel (soggettivo) — l'illustrazione non rende il quartiere Fuoco come gia' invernale. L'aria e' chiara di ottobre che comincia, non di novembre. Cuccioli disposti in modo che Cardo sia leggermente distinto dagli altri tre (preparazione prima voce). Liu' in volo in un angolo, pronta a uscire. Stria sulla porta — non e' maestra severa, e' zia che rilancia.",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "[VISUAL] Stria sulla porta della scuola, mattino di ottobre chiaro. Gabriel entra. Cuccioli sullo sfondo, seduti o in piedi — Pun, Toba, Bru, Cardo. Liu' in volo sopra. Luce di Taglio leggero sul pavimento dell'aula. Foglia secca appena soffiata dentro dalla porta. Prime foglie autunnali gialle-arancioni visibili fuori attraverso la porta aperta.\n\n[CRITIQUE] Il Taglio e' percepito freddo da Gabriel (soggettivo) — l'illustrazione non rende il quartiere Fuoco come gia' invernale. L'aria e' chiara di ottobre che comincia, non di novembre. Cuccioli disposti in modo che Cardo sia leggermente distinto dagli altri tre (preparazione prima voce). Liu' in volo in un angolo, pronta a uscire. Stria sulla porta — non e' maestra severa, e' zia che rilancia."
           },
           {
             "location": {
@@ -5844,9 +5750,7 @@
             "characters_present": [],
             "elements": [],
             "palette": "terracotta_forno_marrone_castagne_crude_vapore_dolce_in_cottura_oro_camino_caldo_pomeriggio",
-            "notes": "[VISUAL] Interno Forno di Fiamma nel primo pomeriggio. Dolce di castagne in cottura (profumo visibile attraverso il vapore sopra il camino). Cesto di Zolla con castagne crude su un banco laterale. Gabriel in piedi accanto al banco. Memolo (riccio) vicino, una zampa sul bordo del cesto. Una castagna cruda nella mano di Gabriel — appena consegnata da Memolo. Fiamma sullo sfondo, che toglie con cura un ciocco dal fuoco. Nessuno parla. Luce di pomeriggio dorata dalla porta aperta.\n\n[CRITIQUE] La castagna nella mano di Gabriel e' il centro ottico della tavola. Memolo NON la guarda piu' (gia' consegnata), sta gia' guardando altrove — non e' un cammeo di tenerezza dichiarata, e' un gesto compiuto. Gabriel la guarda. Fiamma impegnata col fuoco, non partecipa alla scena-castagna — la registra col senso laterale della volpe. Eco silenziosa inversione ruoli S8. NESSUNA enfasi — e' un momento in mezzo al pomeriggio, poi passa.",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "[VISUAL] Interno Forno di Fiamma nel primo pomeriggio. Dolce di castagne in cottura (profumo visibile attraverso il vapore sopra il camino). Cesto di Zolla con castagne crude su un banco laterale. Gabriel in piedi accanto al banco. Memolo (riccio) vicino, una zampa sul bordo del cesto. Una castagna cruda nella mano di Gabriel — appena consegnata da Memolo. Fiamma sullo sfondo, che toglie con cura un ciocco dal fuoco. Nessuno parla. Luce di pomeriggio dorata dalla porta aperta.\n\n[CRITIQUE] La castagna nella mano di Gabriel e' il centro ottico della tavola. Memolo NON la guarda piu' (gia' consegnata), sta gia' guardando altrove — non e' un cammeo di tenerezza dichiarata, e' un gesto compiuto. Gabriel la guarda. Fiamma impegnata col fuoco, non partecipa alla scena-castagna — la registra col senso laterale della volpe. Eco silenziosa inversione ruoli S8. NESSUNA enfasi — e' un momento in mezzo al pomeriggio, poi passa."
           },
           {
             "location": {
@@ -5860,9 +5764,7 @@
             "characters_present": [],
             "elements": [],
             "palette": "legno_tavolo_castagna_scura_lucido_miele_rosa_bordeaux_luce_calda_lanterna_finestra_aperta_grigio_arancio_tramonto",
-            "notes": "[VISUAL] Tavolo di legno, tre fratelli seduti. Dolce di castagne al centro — forma semplice, color castagna scura, superficie lucida di miele. Gabriel col coltello in mano, momento sospeso tra la prima e la seconda porzione di taglio. Sul tavolo: tre piatti vuoti che aspettano, bicchieri d'acqua, il braccialetto appoggiato accanto al piatto di Gabriel. Finestra aperta a destra — tende mosse dal Mulinello sera. Luce arancione di tramonto tarda estate che entra di taglio. Foglia autunnale (gialla) caduta dall'albero fuori, appoggiata sul davanzale. Noah sul lato opposto, Elias al centro.\n\n[CRITIQUE] L'illustrazione cattura il MOMENTO-SOGLIA — Gabriel ha appena sentito 'Non sono piu' piccolo come prima', sta per cambiare il taglio. NON si vede la reazione sul volto (il lettore la costruisce). Il braccialetto e' SUL TAVOLO, non al polso (cura Ray ARCHI). Le fette NON sono ancora tagliate nel dolce — il gesto e' sospeso. Foglia sul davanzale: ottobre che comincia, non inverno. NOTA: l'interno casa non e' entity del grafo (decisione Ray Blocco 0) — e' scene hook.",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "[VISUAL] Tavolo di legno, tre fratelli seduti. Dolce di castagne al centro — forma semplice, color castagna scura, superficie lucida di miele. Gabriel col coltello in mano, momento sospeso tra la prima e la seconda porzione di taglio. Sul tavolo: tre piatti vuoti che aspettano, bicchieri d'acqua, il braccialetto appoggiato accanto al piatto di Gabriel. Finestra aperta a destra — tende mosse dal Mulinello sera. Luce arancione di tramonto tarda estate che entra di taglio. Foglia autunnale (gialla) caduta dall'albero fuori, appoggiata sul davanzale. Noah sul lato opposto, Elias al centro.\n\n[CRITIQUE] L'illustrazione cattura il MOMENTO-SOGLIA — Gabriel ha appena sentito 'Non sono piu' piccolo come prima', sta per cambiare il taglio. NON si vede la reazione sul volto (il lettore la costruisce). Il braccialetto e' SUL TAVOLO, non al polso (cura Ray ARCHI). Le fette NON sono ancora tagliate nel dolce — il gesto e' sospeso. Foglia sul davanzale: ottobre che comincia, non inverno. NOTA: l'interno casa non e' entity del grafo (decisione Ray Blocco 0) — e' scene hook."
           },
           {
             "location": {
@@ -5876,9 +5778,7 @@
             "characters_present": [],
             "elements": [],
             "palette": "briciole_castagna_marrone_lanterna_accesa_calda_prime_ombre_sera_braccialetto_tra_dita_gabriel",
-            "notes": "[VISUAL] Stesso tavolo. Tre piatti vuoti ora, briciole di dolce. Il braccialetto ancora sul tavolo accanto a Gabriel. Gabriel lo ha appena preso in mano — lo tiene tra le dita. Lo guarda. Noah ride (bocca aperta, guarda Elias). Elias (con il micro-cenno del capo a Gabriel gia' fatto, poi torna a Noah) sta dicendo qualcosa a Noah. Luce e' cambiata — tramonto finito, prime ombre di sera. Lanterna appena accesa su un mobile laterale. Mulinello continua attraverso la finestra.\n\n[CRITIQUE] ULTIMA IMMAGINE prima del sigillo narratore. Gabriel col braccialetto IN MANO (non al polso ancora). Lo guarda. Noah e Elias nella loro cosa separata. Gabriel e' solo nel suo momento, ma non e' escluso dalla scena — i tre sono INSIEME ma in tempi interni diversi. Il braccialetto puo' essere piccolo nell'inquadratura (non oggetto centrale ottico, ma occhio del lettore lo trova). Castagna-perlina visibile ma non enfatizzata — il bambino di 4 la nota, il rilettore registra, l'adulto si commuove pensando che si secchera'.",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "[VISUAL] Stesso tavolo. Tre piatti vuoti ora, briciole di dolce. Il braccialetto ancora sul tavolo accanto a Gabriel. Gabriel lo ha appena preso in mano — lo tiene tra le dita. Lo guarda. Noah ride (bocca aperta, guarda Elias). Elias (con il micro-cenno del capo a Gabriel gia' fatto, poi torna a Noah) sta dicendo qualcosa a Noah. Luce e' cambiata — tramonto finito, prime ombre di sera. Lanterna appena accesa su un mobile laterale. Mulinello continua attraverso la finestra.\n\n[CRITIQUE] ULTIMA IMMAGINE prima del sigillo narratore. Gabriel col braccialetto IN MANO (non al polso ancora). Lo guarda. Noah e Elias nella loro cosa separata. Gabriel e' solo nel suo momento, ma non e' escluso dalla scena — i tre sono INSIEME ma in tempi interni diversi. Il braccialetto puo' essere piccolo nell'inquadratura (non oggetto centrale ottico, ma occhio del lettore lo trova). Castagna-perlina visibile ma non enfatizzata — il bambino di 4 la nota, il rilettore registra, l'adulto si commuove pensando che si secchera'."
           }
         ]
       },
@@ -6277,9 +6177,7 @@
               "strato_1": "bambino_vede_stanza_e_fratelli_a_letto_sente_cantilena_lontana",
               "strato_2": "lettore_registra_nido_sul_comodino_come_oggetto_presente",
               "strato_3": "rilettore_coglie_ultima_cantilena_saga_chiude_serie_collettiva_prepara_notte_senza_luna"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            }
           },
           {
             "location": {
@@ -6298,9 +6196,7 @@
               "strato_1": "bambino_vede_una_pagina_quasi_nera_con_due_mani_che_si_trovano",
               "strato_2": "lettore_sente_il_silenzio_tra_fratelli_e_le_cinque_parole_ho_paura_qui_e_buio",
               "strato_3": "rilettore_coglie_architrave_strato_3_noah_DICE_prima_parola_della_terna_dire_accettare_tenere"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            }
           },
           {
             "location": {
@@ -6322,9 +6218,7 @@
               "strato_1": "bambino_vede_tre_paia_di_piedi_in_un_cerchio_di_luce_nel_nero",
               "strato_2": "lettore_registra_che_Noah_non_vede_la_strada_vede_solo_il_prossimo_passo",
               "strato_3": "rilettore_coglie_metafora_ontologica_del_crescere_fare_un_passo_alla_volta_nel_non_visibile"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            }
           },
           {
             "location": {
@@ -6346,9 +6240,7 @@
               "strato_1": "bambino_vede_tartaruga_vecchia_sul_pontile_uccello_che_si_tuffa_volpe_che_lascia_qualcosa_di_caldo_alba_bella",
               "strato_2": "lettore_registra_che_nessun_personaggio_dice_una_parola_la_paura_di_Noah_e_gia_passata_senza_essere_nominata",
               "strato_3": "rilettore_coglie_terna_cornici_silenziose_blocco_d_bartolo_primo_cammeo_pieno_amo_cammeo_grunto_acustico_fiamma_ritorno_cornice_saga_via_forno"
-            },
-            "is_signature": false,
-            "provenance": "original_v1"
+            }
           }
         ]
       },
@@ -6957,9 +6849,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_02_mattino_piazza_allestimento",
@@ -6984,9 +6874,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_03_stria_distribuisce_coni",
@@ -7012,9 +6900,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_04_mezzogiorno_tre_cose_che_spostano_elias",
@@ -7037,9 +6923,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_05_vecchie_indicare_culmine_architrave",
@@ -7065,9 +6949,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_06_elias_distribuisce_quattro_coni_bru_al_pozzo",
@@ -7091,9 +6973,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_07_bartolo_arriva_frutti_da_fuori",
@@ -7117,9 +6997,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           },
           {
             "hook_id": "hook_08_ritorno_casa_mulinello_sera_due_battute",
@@ -7145,9 +7023,7 @@
             "focal_object": null,
             "atmosphere": null,
             "wind_visible": null,
-            "onomatopee": [],
-            "is_signature": false,
-            "provenance": "original_v1"
+            "onomatopee": []
           }
         ]
       },
@@ -7638,9 +7514,7 @@
               "liu_appena_volata_via_frrr_oggi_suonano_andate_interrogativo"
             ],
             "palette": "prima_brina_su_erba_autunnale_arancione_del_forno_bianco_del_fiato_viola_blu_cielo_pre_alba",
-            "notes": "simmetria S1<->S12 cornice apertura saga; Liu appena andata via; bambino 4 non vede lo sguardo di Fiamma, rilettore coglie",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "simmetria S1<->S12 cornice apertura saga; Liu appena andata via; bambino 4 non vede lo sguardo di Fiamma, rilettore coglie"
           },
           {
             "location": {
@@ -7661,9 +7535,7 @@
               "vento_intreccio_odori_terra_interna"
             ],
             "palette": "grigio_verde_del_mare_marrone_legno_pontile_cielo_autunnale_aperto_blu_scuro_acqua_giallo_bruno_foglie_verde_smorto_riva",
-            "notes": "Bartolo modo canonico quarto cammeo saga S7->S10->S11->S12; fisica Fiume canonica anello antiorario lato est S->N deferred #2; accorpamento hook deciso chat B3 S12",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "Bartolo modo canonico quarto cammeo saga S7->S10->S11->S12; fisica Fiume canonica anello antiorario lato est S->N deferred #2; accorpamento hook deciso chat B3 S12"
           },
           {
             "location": {
@@ -7682,9 +7554,7 @@
               "uccelli_acquatici_assenti"
             ],
             "palette": "grigio_chiaro_pietre_bianco_schiuma_minima_controcorrente_blu_verde_acqua_fredda_riflessi_del_cielo",
-            "notes": "2a e ultima manifestazione saga when_water_trembles quota <=2 chiusa; Pattern A immagine in miniatura (l'increspatura non rompe il flusso - cose rotte arrivano lo stesso, MAI NOMINATO)",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "2a e ultima manifestazione saga when_water_trembles quota <=2 chiusa; Pattern A immagine in miniatura (l'increspatura non rompe il flusso - cose rotte arrivano lo stesso, MAI NOMINATO)"
           },
           {
             "location": {
@@ -7704,9 +7574,7 @@
               "montagne_gemelle_che_si_avvicinano"
             ],
             "palette": "giallo_pallido_foglie_cadute_verde_scuro_aghi_pini_nero_bruno_cortecce_beige_oro_erba_secca_grigio_verde_rocce_bianco_sporco_pecore_blu_del_cielo_che_si_abbassa",
-            "notes": "bloom radura luogo silenzioso S5 passaggio autunnale senza sosta; pascoli senza Stria eccezione narrativa; accorpamento hook deciso chat B3 S12",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "bloom radura luogo silenzioso S5 passaggio autunnale senza sosta; pascoli senza Stria eccezione narrativa; accorpamento hook deciso chat B3 S12"
           },
           {
             "location": {
@@ -7729,9 +7597,7 @@
               "fratelli_salgono_cengia_verso_roccia_alta_senza_indicazione_bloom_due_passi_dal_burrone"
             ],
             "palette": "verde_scuro_del_lichene_verde_di_grunto_grigio_della_pietra_cicatrice_chiara_marrone_pagnotta",
-            "notes": "ARCHITRAVE: budget grunto_fragments_used 0->1/2; tre cure operative ARCHI 3.S12 rispettate; seed_grunto_prima_apparizione + seed_pagnotta_grunto_rito + seed_due_passi_dal_burrone tutti bloomed; vincolo 4.19 no nomi propri",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "ARCHITRAVE: budget grunto_fragments_used 0->1/2; tre cure operative ARCHI 3.S12 rispettate; seed_grunto_prima_apparizione + seed_pagnotta_grunto_rito + seed_due_passi_dal_burrone tutti bloomed; vincolo 4.19 no nomi propri"
           },
           {
             "location": {
@@ -7755,9 +7621,7 @@
               "gabriel_non_dice_niente"
             ],
             "palette": "tutti_colori_quattro_quartieri_visibili_dall_alto_aria_vibrante_colori_che_si_scaldano_insieme_vento_che_porta_odori_cielo_autunnale_alto",
-            "notes": "ARCHITRAVE momento-soglia bloom paura Gabriel TENERE 0 parole gesto mano sulla terra terza parola terna strato 3; co-bloom seed_tum_tum_tum + seed_gesto_palmo (stesso evento fisico); curva 5->2->0 completata; Concerto installato come fenomeno mondo nuovo seed; strato 3 silenzioso Montagne Gemelle alle spalle",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "ARCHITRAVE momento-soglia bloom paura Gabriel TENERE 0 parole gesto mano sulla terra terza parola terna strato 3; co-bloom seed_tum_tum_tum + seed_gesto_palmo (stesso evento fisico); curva 5->2->0 completata; Concerto installato come fenomeno mondo nuovo seed; strato 3 silenzioso Montagne Gemelle alle spalle"
           },
           {
             "location": {
@@ -7779,9 +7643,7 @@
               "lampada_accesa_al_forno_in_fondo_via_dell_alba"
             ],
             "palette": "blu_profondo_crepuscolo_viola_cielo_grigio_arancio_lanterne_verde_scuro_oro_ghianda_dipinta",
-            "notes": "eco visive multiple: ghianda dipinta chiude debt coni_stria rilievo basso; casetta Memolo luce ambigua chiude parte s12 debt memolo_pozzo; Albero Vecchio silhouette; tono asciutto cammino senza dialoghi",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "eco visive multiple: ghianda dipinta chiude debt coni_stria rilievo basso; casetta Memolo luce ambigua chiude parte s12 debt memolo_pozzo; Albero Vecchio silhouette; tono asciutto cammino senza dialoghi"
           },
           {
             "location": {
@@ -7808,9 +7670,7 @@
               "fuori_mulinello_cala_sera_diventa_notte_bartolo_implicito_barca_mai_mostrato"
             ],
             "palette": "candela_calda_arancione_del_forno_marrone_del_dolce_grigio_rosa_ceramica_tazze_sagome_fratelli_fiamma_intorno_tavolo_oltre_finestra_blu_nero_notte",
-            "notes": "SIGILLO narratore quattro funzioni (giorno/anno/paura Gabriel/Fase F oltre il mare); frase-firma narratore esplicita 1 di <=2 saga unica rimanente (altra S1); address al lettore 4 di <=6 ultimo saga; Pattern A chiusura trasversale convergenza piu immagini; cornice S1<->S12 chiusa; massima sobrieta simmetria; isola dorme con tutti dentro promessa Fase F",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "notes": "SIGILLO narratore quattro funzioni (giorno/anno/paura Gabriel/Fase F oltre il mare); frase-firma narratore esplicita 1 di <=2 saga unica rimanente (altra S1); address al lettore 4 di <=6 ultimo saga; Pattern A chiusura trasversale convergenza piu immagini; cornice S1<->S12 chiusa; massima sobrieta simmetria; isola dorme con tutti dentro promessa Fase F"
           }
         ]
       },
@@ -8548,12 +8408,6 @@
       "date": "2026-04-29",
       "phase": "pre_fase_g_promote_visual_entities",
       "summary": "Promozione idempotente di entita' dal catalogo visual al grafo. Aggiunte: locations/sentiero_montagne_gemelle, locations/pozza_abbeveratoio_pastori, locations/radura_dei_pini, objects/pallone_di_stoffa_cucita."
-    },
-    {
-      "version": "1.1.0-pre",
-      "date": "2026-04-29",
-      "phase": "schema_v1_2_to_v1_3_migration",
-      "summary": "Bump schema 1.2 -> 1.3 (estensione additiva hook). Normalizzato hook_id zero-pad e estratto is_signature dal suffisso legacy. Aggiunto provenance=original_v1 a tutti i 70 hook esistenti (7 signature). Nessun campo narrativo inferito sui legacy: type e composition_zone restano assenti finche' write_hooks_to_graph.py non sostituisce gli hook con provenance=extended_v2."
     }
   ]
 }

@@ -326,8 +326,9 @@ def write_story(story_id: str, dry_run: bool) -> None:
     # scrittura
     g['stories'][story_id]['visual_anchors']['scene_hooks'] = hooks_out
 
-    # bump versione (solo prima volta)
-    if g.get('graph_version') == '1.0.0':
+    # bump versione: dopo la migrazione schema il grafo e' 1.1.0-pre;
+    # alla prima scrittura di hook extended_v2 promuove a 1.1.0 stabile.
+    if g.get('graph_version') in ('1.0.0', '1.1.0-pre'):
         g['graph_version'] = '1.1.0'
     if g.get('schema_version') == '1.2':
         g['schema_version'] = '1.3'
