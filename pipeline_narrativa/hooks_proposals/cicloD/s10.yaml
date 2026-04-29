@@ -98,3 +98,93 @@ hooks:
     onomatopee: []
     composition_zone: ground_space
     notes: "Mèmolo offscreen («dorme da qualche parte») — non illustrato. L'Albero Vecchio e il Pozzo come sagome simboliche viste solo come ombre. Il cerchio di luce della lanterna velata occupa una porzione minima della tavola."
+
+  - hook_id: s10_h06
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: notte_profonda
+    location:
+      id: via_del_pontile
+      qualifier: cammino_notturno
+    characters_present: [elias, gabriel, noah]
+    focal_action: "Elias davanti con la lanterna velata bassa. Gabriel in mezzo tiene la mano sinistra di Noah. Noah dietro. Camminano piano. Si vede solo il cerchio di luce sui piedi."
+    focal_object: lanterna_velata_s10
+    atmosphere: "nero pieno attorno, cerchio piccolo di luce gialla che illumina sassi del sentiero e tre paia di scarpe, foglie secche mosse dal Mulinello passano nel cerchio e spariscono nel buio"
+    palette: "nero pieno per 80-90% della tavola, giallo basso velato del cerchio di luce, ocra delle foglie secche nel cerchio, marrone del sentiero a tratti, marrone-lana dei mantelli"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "HOOK FIRMA. Pagina-chiave di s10. Illustratore: nessun contorno di case, alberi, paesaggio — solo cerchio di luce e tre paia di piedi. Cerchio piccolo, non cono di torcia moderna. Strato 3: metafora del crescere — fare un passo alla volta nel non-visibile."
+
+  - hook_id: s10_h07
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: notte_profonda
+    location:
+      id: via_del_pontile
+      qualifier: cammino_notturno_piu_avanti
+    characters_present: [elias, gabriel, noah]
+    focal_action: "I tre camminano verso sud. Alle loro spalle, dall'alto, dura due secondi un suono lievissimo di zoccolo su pietra. Continuano. Non lo nominano."
+    focal_object: null
+    atmosphere: "aria salata che comincia, rumore del Fiume che incontra il mare ancora lontano, suono di Grunto offscreen che arriva dalle Montagne Gemelle e si spegne, presenza che vigila non vista"
+    palette: "nero quasi pieno, giallo basso del cerchio di luce, lieve grigio scuro nelle sagome delle Montagne suggerite dietro alle spalle, marrone del sentiero"
+    wind_visible: vento_mulinello
+    onomatopee: ["tot tot tot"]
+    composition_zone: ground_space
+    notes: "Grunto mai visto, mai nominato — solo il suono. Onomatopea graficamente piccolissima, in alto-destra, distante. Cammeo acustico (Bartolo cammeo pieno arriva all'alba, Amo cammeo aereo, Fiamma cammeo cromatico). Constraint Grunto: zero contatto fisico fratelli."
+
+  - hook_id: s10_h08
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: prima_dell_alba
+    location:
+      id: via_del_pontile
+      qualifier: discesa_verso_pontile
+    characters_present: [elias, gabriel, noah]
+    focal_action: "La via gira e scende. Il cielo cambia piano dal nero al grigio scurissimo, poi grigio. Le sagome tornano, i bordi della via si riconoscono."
+    focal_object: null
+    atmosphere: "passaggio lento dal nero al grigio, sentiero che si materializza, aria salata più piena, fiato dei tre fratelli visibile per la prima volta, lanterna velata ancora accesa ma sempre più inutile"
+    palette: "transizione nero → grigio scurissimo → grigio chiaro, prime sagome marroni delle case e degli alberi che riemergono, giallo-fioco della lanterna che si fa pallido, marrone-lana mantelli ora visibili"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Cerniera notte → alba. Sagome dei tre fratelli viste di spalle in piano medio sul sentiero in discesa. Per la prima volta nella storia il cielo è il soggetto, non il buio. Eco di s09_h10 (cielo di sera che chiudeva s09) — qui cielo che apre la mattina di s10."
+
+  - hook_id: s10_h09
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: prima_alba
+    location:
+      id: pontile_bocca
+      qualifier: arrivo_lato_nord
+    characters_present: [elias, gabriel, noah, bartolo]
+    focal_action: "Arrivano al Pontile. Il cielo è grigio-rosa. L'acqua della Bocca è blu-grigio brumosa. Bartolo è dentro la barca, con la coperta marrone e il guscio dietro come schienale."
+    focal_object: null
+    atmosphere: "alba senza sole netto, cielo coperto, luce che cresce, acqua brumosa con corrente antioraria che esce verso il mare, Bartolo immobile che fa spazio sulla panca senza parlare, Bartolo ha sentito arrivare i tre"
+    palette: "grigio-rosa-dorato del cielo, bianco-avorio della bruma sull'acqua, blu-grigio brumoso della Bocca, marrone della coperta di Bartolo, nero lucido del guscio, ocra del legno del Pontile"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Apertura sul Pontile. I tre fratelli arrivano da nord (Via del Pontile) — Elias davanti con lanterna ormai quasi spenta, Gabriel e Noah mano nella mano. Bartolo nella barca, NON sulle rocce — coerente con narrazione fattuale. Il guscio dietro come schienale, dettaglio canonico. Nessuno parla. Inversione di apertura S1 (Forno caldo, Fiamma) — qui Pontile freddo, Bartolo silenzioso."
+
+  - hook_id: s10_h10
+    type: transizione
+    is_signature: true
+    provenance: extended_v2
+    moment: alba
+    location:
+      id: pontile_bocca
+      qualifier: panca_seduti_alba
+    characters_present: [elias, gabriel, noah, bartolo, amo, fiamma]
+    focal_action: "Elias spegne la lanterna velata. I tre si siedono sulla panca: Elias, Noah al centro, Gabriel. Amo si tuffa e riemerge. Fiamma posa una pagnotta tiepida sulla panca: «Mangiate.» Riparte."
+    focal_object: pagnotta_forno
+    atmosphere: "sigillo silenzioso, luce che cresce grigio-rosa-oro pallido, vapore della pagnotta nell'aria fredda, mantello rosso vivo di Fiamma unico squillo cromatico che torna verso la curva e sparisce"
+    palette: "grigio-rosa-dorato del cielo, blu-grigio brumoso dell'acqua, nero lucido del guscio di Bartolo, marrone scuro della panca, rosso vivo del mantello di Fiamma piccolo nell'angolo, oro pallido della pagnotta tiepida con vapore bianco, sagome scure dei tre fratelli seduti"
+    wind_visible: vento_mulinello
+    onomatopee: ["splash"]
+    composition_zone: corner_lower_left
+    notes: "HOOK FIRMA. Sigillo della storia e cerniera del blocco D verso S11. Tre cammei visibili in una sola tavola: Bartolo (cammeo pieno seduto in barca), Amo (cammeo aereo, splash piccolo lontano nell'acqua), Fiamma (cammeo cromatico, rosso vivo che attraversa e prosegue). Grunto resta acustico (s10_h07). Key_phrase di Fiamma alla lettera: «Mangiate.» — sola parola pronunciata in tutta la storia oltre alle cinque di Noah. Nessuno dice «ti è passata», nessuno commenta. La paura è stata attraversata, non sconfitta."
