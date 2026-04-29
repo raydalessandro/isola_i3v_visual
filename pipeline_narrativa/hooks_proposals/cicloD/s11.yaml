@@ -1,0 +1,101 @@
+# Hook ciclo D — S11 — La Festa del Raccolto
+# Fonte: proposta agente fase G del 2026-04-29.
+# Edit minimi (5 hook >30 parole, accorciati alla soglia):
+# - h04 (33->29): condensata coda finale ("due banchi più in là...le corde")
+# - h05 (34->30): rimossi "col palmo" + "Lo tiene" + "forte"; dettagli in notes
+# - h08 (34->30): rimosso "seduto solo" + condensato
+# - h09 (34->30): rimosso "su uno sgabello" + condensato
+# - h10 (36->30): condensata descrizione iniziale e attribuzioni battute
+
+story_id: s11
+
+hooks:
+  - hook_id: s11_h01
+    type: panorama
+    is_signature: false
+    provenance: extended_v2
+    moment: alba
+    location:
+      id: orti_del_cerchio
+      qualifier: alba_raccolto_rituale_inizio_giornata
+    characters_present: [coltivatori_del_cerchio, pastori]
+    focal_action: "I Coltivatori chiudono i sacchi del raccolto in fila sui filari. In alto, lontani, i Pastori scendono dai Pascoli con mantelli grezzi e zaini."
+    focal_object: null
+    atmosphere: "luce radente da est che taglia la bruma bassa sui filari, fiato bianco dei Coltivatori, file di sacchi appoggiati a terra, sagome dei Pastori piccolissime sul versante alto"
+    palette: "arancione del sole basso a est, bruno scuro delle castagne nei sacchi, verde scuro delle foglie tarde, ocra dell'erba alta tagliata e legata, grigio chiaro della bruma"
+    wind_visible: vento_taglio
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Apertura della storia. Pattern A in regime quieto (l'isola che fa). Pastori in alto-destra come puntini, Coltivatori in primo piano. Cantilena dei Coltivatori NON in scena (vincolo: festa non lavoro, contatore resta 4). Nessun fratello in scena qui."
+
+  - hook_id: s11_h02
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: mattino
+    location:
+      id: piazza_villaggio
+      qualifier: mattino_allestimento_banchi_festa
+    characters_present: [nodo, elias, fiamma, salvia, stria, mantenitori]
+    focal_action: "Nodo ripara un banco improvvisato. TOK-TOK-TOK. Elias gli passa una corda intrecciata. Salvia entra col cesto di rosmarino verso il banco di Fiamma. Stria arriva dalla scuola."
+    focal_object: corda_nodo
+    atmosphere: "mattino chiaro di ottobre, voci basse multiple senza saturare, banchi mezzi montati sotto l'Albero Vecchio, foglie cadute sul selciato, primo Intreccio che porta odore di rosmarino dal cesto di Salvia"
+    palette: "terracotta dei banchi, verde scuro del rosmarino, giallo-oro dei cuscini e delle foglie tarde, ocra dello scialle di Stria, marrone delle assi del banco riparato, bordeaux della maglia di Gabriel non ancora in scena"
+    wind_visible: vento_intreccio
+    onomatopee: ["TOK-TOK-TOK"]
+    composition_zone: ground_space
+    notes: "TOK-TOK-TOK quarta occorrenza saga (entro quota 4/5). Callback s05 — il nodo Marinaro insegnato da Nodo a Elias si manifesta festivo sulla corda intrecciata. Salvia prima volta saga nomina rosmarino (1 pianta per apparizione). Nessun fratello al banco ancora."
+
+  - hook_id: s11_h03
+    type: dettaglio
+    is_signature: true
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: piazza_villaggio
+      qualifier: mezzogiorno_stria_distribuisce_coni_ghiande_dipinte_ai_fratelli
+    characters_present: [stria, elias, gabriel, noah]
+    focal_action: "Stria mette in mano a Elias quattro coni di ghiande dipinte, non tre. Lo fa veloce, non spiega. Lo guarda mezzo secondo più del solito. Si gira, continua a distribuire."
+    focal_object: null
+    atmosphere: "scatola di coni sotto il braccio di Stria, mano di Elias che riceve, gesto trattenuto un soffio sul mezzo secondo in più, Gabriel e Noah accanto già con il loro cono in mano"
+    palette: "giallo-oro delle ghiande dipinte (strisce, puntini, motivi), carta chiara dei coni, grigio-cenere dello scialle di Stria, marrone delle dita di Elias, verde-rosso degli altri due coni di Gabriel e Noah"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Strato 3: Stria vede prima (callback semina S2 «Tu cosa pensi?», maturing S6/S9, bloom qui). Quattro coni intenzionali, non errore — vincolo voce: zero commento, sguardo mezzo secondo più lungo, mai sottolineato dal narratore. Close-up sulle quattro punte di carta nella mano di Elias."
+
+  - hook_id: s11_h04
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: piazza_villaggio
+      qualifier: mezzogiorno_fondo_piazza_prova_di_forza_pastori
+    characters_present: [gabriel, pastori, elias]
+    focal_action: "Gabriel solleva il sacco di castagne sopra la testa. Risate piene, applausi. Un Pastore grida: «Il maggiore dei tre, eh!» Più in là Elias sente, si volta al banco."
+    focal_object: null
+    atmosphere: "cerchio di gente attorno a Gabriel in fondo alla piazza, sacco grosso di iuta, Pastori che ridono coi mantelli grezzi, Elias di spalle al banco di Nodo che sposta corde sul tavolo"
+    palette: "rossi e arancioni della festa di mezzogiorno, marrone scuro del sacco di iuta, bruno delle castagne intraviste, grigio-lana dei mantelli dei Pastori, ocra del banco di Nodo sullo sfondo, sagoma di Elias di tre quarti laterale al banco"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: corner_lower_right
+    notes: "Prima delle tre micro-pressioni laterali su Elias. Gabriel al centro del cerchio sotto luce piena, Elias staccato due banchi più in là sul lato (sistema le corde sul tavolo). La frase del Pastore alla lettera (ARCHI). Strato 3: seconda micro-pressione sulla paura autonoma di Gabriel — Gabriel ride, non sa cosa succede a Elias."
+
+  - hook_id: s11_h05
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: mezzogiorno
+    location:
+      id: piazza_villaggio
+      qualifier: mezzogiorno_sgabello_rotto_pomo_rotola_panca_di_pietra
+    characters_present: [noah, cardo, pun, toba, mercato_del_mezzogiorno]
+    focal_action: "Lo sgabello si rovescia. Un pomo rotola sul selciato fino ai piedi delle Vecchie. Una di loro abbassa la mano e ferma il pomo. Noah ride. Cardo lo trascina via."
+    focal_object: pallone_di_stoffa_cucita
+    atmosphere: "sgabello rovesciato a terra, mele sparpagliate, pomo rosso che rotola in linea, palmo di una Vecchia che si abbassa lento e ferma e tiene il pomo, tre Vecchie sedute in fila sulla Panca, pallone di stoffa cucita di s03 a margine fra i giochi dei cuccioli, Noah ride forte"
+    palette: "rosso vivo del pomo lucido, marrone polvere del selciato, ocra dello sgabello rovesciato, pietra chiara della Panca, sagome scure delle tre Vecchie nell'ombra dell'Albero Vecchio, beige-rattoppato del pallone di stoffa cucita ai bordi"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Paronomastico fisico pomo-che-rotola (2/2 saga, dentro quota). Pallone di stoffa cucita di s03 ricomparso fra i giochi dei cuccioli — chiude debt_s03_to_s11. Vecchie sempre indistinte, mai individuate (vincolo): solo il palmo di una di loro che si abbassa, ferma e tiene il pomo. Seconda micro-pressione su Elias: vede Noah vivo e libero (offscreen del quadro o margine)."
