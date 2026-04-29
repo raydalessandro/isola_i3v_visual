@@ -9027,196 +9027,279 @@
       "visual_anchors": {
         "scene_hooks": [
           {
+            "hook_id": "s12_h01",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "alba",
             "location": {
               "id": "forno",
-              "qualifier": null,
-              "legacy_string": "forno"
+              "qualifier": "alba_partenza_cornice_apertura_saga"
             },
             "quadrant": "fuoco_est",
-            "hook_id": "hook_01_alba_forno_partenza_cornice_apertura",
-            "moment": "alba_taglio",
-            "characters_present": [],
-            "elements": [
-              "fiamma_stipite_porta_modalita_ferma",
-              "pagnotta_nella_sacca_gabriel_due_cornetti_caldi_mano_noah",
-              "andate_una_e_per_grunto_callback_s1",
-              "sguardo_lungo_fiamma_a_gabriel_mentre_escono_micro_seme_fase_f",
-              "liu_appena_volata_via_frrr_oggi_suonano_andate_interrogativo"
+            "characters_present": [
+              "fiamma",
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "prima_brina_su_erba_autunnale_arancione_del_forno_bianco_del_fiato_viola_blu_cielo_pre_alba",
-            "notes": "simmetria S1<->S12 cornice apertura saga; Liu appena andata via; bambino 4 non vede lo sguardo di Fiamma, rilettore coglie",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Fiamma mette in mano a Noah due cornetti caldi e a Gabriel una sacca di tela con la pagnotta. Dice: «Andate. Una è per Grunto.»",
+            "focal_object": "pagnotta_forno",
+            "atmosphere": "forno acceso da ore, fiato bianco dei fratelli sulla soglia, finestra socchiusa già lasciata da Liù, prima brina fuori sul selciato, modalità ferma di Fiamma — pochi gesti, frasi essenziali",
+            "palette": "arancione del Forno acceso, terracotta del banco, bianco farina sul grembiule di Fiamma, viola-blu del cielo pre-alba dietro la porta aperta, bianco del fiato, marrone della sacca di tela, oro dei cornetti caldi",
+            "wind_visible": "vento_taglio",
+            "onomatopee": [
+              "frrr"
+            ],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Apertura saga, simmetria S1↔S12. Le due frasi di Fiamma alla lettera (callback s01: «Una è per Grunto.»). Liù appena ripartita — frrr lievissimo in alto-destra, foglia mossa sul davanzale. Sguardo lungo di Fiamma a Gabriel non in questo hook (è in h02) — qui prevale la consegna."
           },
           {
+            "hook_id": "s12_h02",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "alba",
+            "location": {
+              "id": "forno",
+              "qualifier": "stipite_porta_uscita_micro_seme_fase_f"
+            },
+            "quadrant": "fuoco_est",
+            "characters_present": [
+              "fiamma",
+              "gabriel"
+            ],
+            "elements": [],
+            "focal_action": "Fiamma sullo stipite si volta. Guarda a lungo Gabriel. Gabriel non si volta, è già un passo fuori. Esce.",
+            "focal_object": null,
+            "atmosphere": "stipite di legno scuro, sguardo lungo che non si trasforma in parola, Gabriel di tre quarti di spalle, primo piano del taglio della spalla, prima luce di est che entra obliqua, cielo dietro che vira al chiaro",
+            "palette": "arancione tiepido del Forno alle spalle di Fiamma, bordeaux della maglia di Gabriel, grembiule bianco-farina di Fiamma, viola-blu del cielo che si schiarisce, ocra del legno dello stipite, sagome di Elias e Noah già fuori sfocate",
+            "wind_visible": "vento_taglio",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Micro-seme Fase F (mai dichiarato). Vincolo voce: zero parola, sguardo che resta più del normale. Strato 3 — Fiamma sa che oggi è il giorno di Gabriel, Gabriel non lo sa ancora. Tipografia minima, no didascalia."
+          },
+          {
+            "hook_id": "s12_h03",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mattino",
             "location": {
               "id": "pontile_bocca",
-              "qualifier": "risalita_verso_fiume_che_gira_sud",
-              "legacy_string": "pontile_bocca_poi_fiume_che_gira"
+              "qualifier": "passaggio_verso_riva_interna_ovest_fiume"
             },
             "quadrant": "acqua_sud",
-            "hook_id": "hook_02_pontile_bartolo_e_risalita_riva_fiume_sud",
-            "moment": "mattina_piena_transizione_intreccio",
-            "characters_present": [],
-            "elements": [
-              "bartolo_seduto_pontile_barca_accanto",
-              "mano_alzata_che_ricade_quando_fratelli_oltre_zero_parole",
-              "frutti_da_fuori_callback_s11_implicito_seed_fase_f_oltre_il_mare",
-              "fratelli_risalgono_riva_sud_del_fiume_verso_nord",
-              "foglie_autunnali_galleggianti_passo_regolare_nessun_dialogo",
-              "vento_intreccio_odori_terra_interna"
+            "characters_present": [
+              "bartolo",
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "grigio_verde_del_mare_marrone_legno_pontile_cielo_autunnale_aperto_blu_scuro_acqua_giallo_bruno_foglie_verde_smorto_riva",
-            "notes": "Bartolo modo canonico quarto cammeo saga S7->S10->S11->S12; fisica Fiume canonica anello antiorario lato est S->N deferred #2; accorpamento hook deciso chat B3 S12",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Bartolo è nella barca, occhi aperti. I tre passano sul Pontile. Bartolo alza la mano. La mano resta a metà, ricade. I fratelli salutano con un cenno, non si fermano.",
+            "focal_object": null,
+            "atmosphere": "Pontile umido di brina, barca con coperta marrone, guscio dietro come schienale, mano alzata che ricade quando i fratelli sono oltre, passo regolare, nessuna parola, foglie autunnali galleggianti vicino al palo",
+            "palette": "verde-mare antico dei vestiti di Bartolo, marrone della coperta, nero lucido del guscio, ocra del legno del Pontile, blu-grigio dell'acqua della Bocca, giallo-bruno delle foglie galleggianti, viola-rosa pallido del cielo basso a est",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "ground_space",
+            "stratification": null,
+            "notes": "Quarto cammeo Bartolo (s07→s10→s11→s12), modo canonico «fa» silenzioso. Mano a metà che ricade — gesto chiave. Apre porta Fase F oltre il mare (mai dichiarato). I fratelli proseguono verso nord risalendo la riva interna ovest del Fiume."
           },
           {
+            "hook_id": "s12_h04",
+            "type": "atmosferico",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "mezzogiorno",
             "location": {
               "id": "guado_di_pietre_piatte",
-              "qualifier": null,
-              "legacy_string": "guado_di_pietre_piatte"
+              "qualifier": "tappa_di_passaggio_when_water_trembles_2_di_2"
             },
             "quadrant": "acqua_nord",
-            "hook_id": "hook_03_guado_pietre_piatte_nord_when_water_trembles_2di2",
-            "moment": "mezzogiorno_intreccio",
-            "characters_present": [],
-            "elements": [
-              "fratelli_sulle_pietre_piatte_del_guado",
-              "acqua_che_trema_piccola_increspatura_controcorrente_non_rompe_il_flusso",
-              "nessuna_reazione_dei_fratelli_solo_vista_di_passaggio",
-              "uccelli_acquatici_assenti"
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "grigio_chiaro_pietre_bianco_schiuma_minima_controcorrente_blu_verde_acqua_fredda_riflessi_del_cielo",
-            "notes": "2a e ultima manifestazione saga when_water_trembles quota <=2 chiusa; Pattern A immagine in miniatura (l'increspatura non rompe il flusso - cose rotte arrivano lo stesso, MAI NOMINATO)",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "I fratelli si fermano un secondo sul guado. Sulla superficie dell'acqua, una piccola increspatura va contro la corrente, dentro il flusso. Loro la vedono. Non la nominano. Riprendono.",
+            "focal_object": null,
+            "atmosphere": "pietre piatte affioranti, acqua che scende, piega lieve controcorrente che non rompe il flusso, fiato lieve dei tre, Orti del Cerchio quasi spogli sull'altra riva, zolle nere di pioggia, niente uccelli acquatici",
+            "palette": "grigio chiaro delle pietre piatte, blu-verde freddo dell'acqua, bianco minimo della schiuma controcorrente, riflesso del cielo autunnale chiaro, giallo-bruno delle foglie sulla riva, marrone scuro delle zolle degli Orti dietro",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "fog_space",
+            "stratification": null,
+            "notes": "When_water_trembles 2/2 saga (quota chiusa). Pattern A in miniatura (l'increspatura non rompe il flusso) — mai nominato. Nessuna reazione dei fratelli, solo vista di passaggio. Tipografia: nessuna parola, l'immagine basta. Atmosferico forte, NON signature (riservate ai 3 culmini h02/h05/h08)."
           },
           {
-            "location": {
-              "id": "radura_dei_pini",
-              "qualifier": "attraversamento_da_foresta_intrecciata_a_pascoli_alti",
-              "legacy_string": "foresta_intrecciata_radura_pini_poi_pascoli_alti"
-            },
-            "quadrant": "terra_ovest",
-            "hook_id": "hook_04_radura_pini_pascoli_alti_attraversamenti_silenziosi_autunnali",
-            "moment": "primo_pomeriggio_intreccio_tardo",
-            "characters_present": [],
-            "elements": [
-              "foglie_gialle_cadute_sull_aghi_di_pino_radura_pini_neri_verticali",
-              "silenzio_sacro_attraversano_senza_sosta_senza_dialogo_aria_ferma",
-              "pascoli_alti_erba_autunnale_secca_figure_lontane_pastori_silenziosi",
-              "pecore_sparse_stria_non_c_e_vista_sul_burrone_sulla_destra",
-              "montagne_gemelle_che_si_avvicinano"
-            ],
-            "palette": "giallo_pallido_foglie_cadute_verde_scuro_aghi_pini_nero_bruno_cortecce_beige_oro_erba_secca_grigio_verde_rocce_bianco_sporco_pecore_blu_del_cielo_che_si_abbassa",
-            "notes": "bloom radura luogo silenzioso S5 passaggio autunnale senza sosta; pascoli senza Stria eccezione narrativa; accorpamento hook deciso chat B3 S12",
-            "is_signature": false,
-            "provenance": "original_v1"
-          },
-          {
+            "hook_id": "s12_h05",
+            "type": "introspettivo",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
             "location": {
               "id": "burrone",
-              "qualifier": null,
-              "legacy_string": "burrone"
+              "qualifier": "cengia_grunto_pomeriggio_inoltrato"
             },
             "quadrant": "aria_nord",
-            "hook_id": "hook_05_burrone_grunto_frammento_unico_saga_architrave",
-            "moment": "pomeriggio_inoltrato_transizione_verso_mulinello",
-            "characters_present": [],
-            "elements": [
-              "grunto_sulla_cengia_bassa_burrone_verde_scuro_lichene_cicatrice_chiara",
-              "fratelli_salgono_dall_ingresso_del_burrone",
-              "gabriel_posa_pagnotta_sulla_pietra_accanto_a_grunto_callback_s1",
-              "grunto_annusa",
-              "grunto_guardando_lontano_non_i_fratelli_una_volta_era_visto_adesso_si_respira_frammento_pre_vento_unico_saga",
-              "nessuna_reazione_fratelli_forse_noah_sposta_un_piede_massimo",
-              "noah_buono_interrogativo_grunto_buono_affermativo_una_parola_identica_s1_rovesciato",
-              "fratelli_salgono_cengia_verso_roccia_alta_senza_indicazione_bloom_due_passi_dal_burrone"
+            "characters_present": [
+              "grunto",
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "verde_scuro_del_lichene_verde_di_grunto_grigio_della_pietra_cicatrice_chiara_marrone_pagnotta",
-            "notes": "ARCHITRAVE: budget grunto_fragments_used 0->1/2; tre cure operative ARCHI 3.S12 rispettate; seed_grunto_prima_apparizione + seed_pagnotta_grunto_rito + seed_due_passi_dal_burrone tutti bloomed; vincolo 4.19 no nomi propri",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Gabriel posa la pagnotta sulla pietra piatta. Grunto annusa, mastica. Noah dice: «Buono?» Grunto: «Buono.» Poi guarda lontano: «Una volta era diverso. Suonavano in tre, erano tre persone.»",
+            "focal_object": "pagnotta_forno",
+            "atmosphere": "sole alto sui fianchi di Grunto, cicatrice chiara sulla spalla ben visibile, pagnotta tiepida sulla pietra, sguardo di Grunto che non guarda i fratelli ma lontano, frammento detto a se stesso o a chi non c'è più, fratelli fermi",
+            "palette": "verde-scuro lichene della cengia, grigio-pietra del Burrone, marrone-bruno del manto di Grunto, bianco sporco della cicatrice, oro pallido della pagnotta, ocra dell'erba secca della cengia, sagome dei tre fratelli un passo indietro",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "corner_lower_left",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Frammento pre-Vento unico saga (1 di 2 budget utilizzato). Scambio «Buono?/Buono.» rovesciato S1→S12 (Noah parla per primo). Grunto guarda lontano, soggetto sparito (vincolo: mai nomi propri Ariete/Ondina/Tempesta nel frammento). La coda originale del frammento «non tre venti» è espressa visivamente da h08 (Concerto), qui omessa per limite parola. Pagnotta callback s01."
           },
           {
+            "hook_id": "s12_h06",
+            "type": "transizione",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
+            "location": {
+              "id": "burrone",
+              "qualifier": "cengia_ripida_che_sale_verso_roccia_alta"
+            },
+            "quadrant": "aria_nord",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
+            ],
+            "elements": [],
+            "focal_action": "I tre salgono la cengia ripida. In qualche punto usano le mani. Mezz'ora di salita silenziosa. Grunto è già rientrato nella grotta dietro di loro.",
+            "focal_object": null,
+            "atmosphere": "cengia stretta di pietra grigia, appigli a tratti, fiato corto, ombra della parete a sinistra, sole obliquo a destra che taglia la roccia, sagome piccole dei fratelli che salgono in fila",
+            "palette": "grigio chiaro della pietra del Burrone, marrone-bruno della cengia, bordeaux della maglia di Gabriel davanti, ocra-marrone della maglia di Elias, marrone chiaro di Noah ultimo, blu-azzurro del cielo che si vede oltre il bordo, ombra blu fonda della parete",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "side_space",
+            "stratification": null,
+            "notes": "Pattern A laterale: la cengia non è indicata, i fratelli la prendono perché sanno (Pattern A 'le cose si fanno senza chiedere'). Grunto offscreen rientrato, mai più visto saga."
+          },
+          {
+            "hook_id": "s12_h07",
+            "type": "panorama",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio",
             "location": {
               "id": "roccia_alta",
-              "qualifier": null,
-              "legacy_string": "roccia_alta"
+              "qualifier": "poggio_piatto_sopra_burrone_arrivo_e_seduta_sul_bordo"
             },
             "quadrant": "aria_nord",
-            "hook_id": "hook_06_roccia_alta_concerto_momento_soglia_gabriel_architrave",
-            "moment": "pomeriggio_tardo_tre_venti_insieme",
-            "characters_present": [],
-            "elements": [
-              "vista_totale_isola_dall_alto_foresta_orti_villaggio_forno_pontile_bocca_mare_attorno",
-              "montagne_gemelle_alle_spalle_dei_fratelli_mito_alle_spalle_mondo_presente_davanti",
-              "tre_fratelli_seduti_vicini_sulla_roccia",
-              "aria_piena_di_tutta_isola_insieme_concerto_non_suono_letterale",
-              "palmo_gabriel_sulla_terra_accanto_a_se_momento_soglia",
-              "mano_noah_irriflessa_sulla_mano_gabriel",
-              "gomito_elias_senza_guardare_dall_altro_lato",
-              "pochi_secondi_niente",
-              "gabriel_non_dice_niente"
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "tutti_colori_quattro_quartieri_visibili_dall_alto_aria_vibrante_colori_che_si_scaldano_insieme_vento_che_porta_odori_cielo_autunnale_alto",
-            "notes": "ARCHITRAVE momento-soglia bloom paura Gabriel TENERE 0 parole gesto mano sulla terra terza parola terna strato 3; co-bloom seed_tum_tum_tum + seed_gesto_palmo (stesso evento fisico); curva 5->2->0 completata; Concerto installato come fenomeno mondo nuovo seed; strato 3 silenzioso Montagne Gemelle alle spalle",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "I tre si siedono sul bordo di Roccia Alta. Piedi che ciondolano nel vuoto. Elias a sinistra, Noah al centro, Gabriel a destra. Niente parole.",
+            "focal_object": null,
+            "atmosphere": "piattaforma di pietra grigia con ciuffi di erba secca tra le crepe, isola intera leggibile in basso (Foresta a ovest, Orti a nord-ovest, Villaggio al centro col fumo del Forno sottile, Pontile a sud, Bocca, mare aperto su tre lati), Montagne Gemelle alle spalle vicinissime",
+            "palette": "grigio chiaro della pietra, ocra dell'erba secca, verde-marrone della Foresta lontana, giallo-marrone degli Orti quadrati, terracotta dei tetti del Villaggio in miniatura, bianco sottile del fumo del Forno, blu-grigio del mare su tre lati, grigio scuro delle Montagne Gemelle dietro",
+            "wind_visible": null,
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "Panorama-architrave saga. Disposizione fratelli alla lettera (Elias-Noah-Gabriel). Cartografia leggibile: tutti i quartieri visibili insieme — unico hook saga in cui l'isola è intera nel quadro. Vento ancora 'ordinario' — il Concerto comincia in h08. Tipografia minima."
           },
           {
+            "hook_id": "s12_h08",
+            "type": "atmosferico",
+            "is_signature": true,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio_inoltrato",
             "location": {
-              "id": "piazza_villaggio",
-              "qualifier": "sotto_albero_vecchio",
-              "legacy_string": "piazza_villaggio_con_albero_vecchio"
+              "id": "roccia_alta",
+              "qualifier": "concerto_tre_venti_insieme_unicum_saga"
             },
-            "quadrant": "centro_villaggio",
-            "hook_id": "hook_07_discesa_piazza_crepuscolo_echi_silenziose_ghianda_e_casetta_memolo",
-            "moment": "crepuscolo_mulinello_cala",
-            "characters_present": [],
-            "elements": [
-              "ombre_lunghe_sui_sentieri_discesa_silenziosa_dalla_roccia_alta",
-              "grunto_gia_rientrato_nella_grotta_non_si_vede_piu",
-              "mulinello_che_cala",
-              "albero_vecchio_sagoma_scura_contro_viola_del_cielo",
-              "ghianda_dipinta_caduta_a_terra_accanto_panca_di_pietra_eco_festa_s11_nessuno_la_raccoglie",
-              "casetta_tonda_memolo_luce_ambigua_dietro_persiane_lampadina_lontana_vista_o_riflesso_cielo_su_vetro",
-              "lampada_accesa_al_forno_in_fondo_via_dell_alba"
+            "quadrant": "aria_nord",
+            "characters_present": [
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "blu_profondo_crepuscolo_viola_cielo_grigio_arancio_lanterne_verde_scuro_oro_ghianda_dipinta",
-            "notes": "eco visive multiple: ghianda dipinta chiude debt coni_stria rilievo basso; casetta Memolo luce ambigua chiude parte s12 debt memolo_pozzo; Albero Vecchio silhouette; tono asciutto cammino senza dialoghi",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Da est arriva il Taglio. Da ovest l'Intreccio porta foresta. Da sud il Mulinello gira e porta sale. Sopra Roccia Alta soffiano insieme. L'aria è piena dell'isola intera.",
+            "focal_object": null,
+            "atmosphere": "tre correnti che convergono sopra il poggio senza annullarsi, pieno d'aria, odori sovrapposti — vegetale di foresta, salato del mare, secco di est — fratelli seduti sul bordo, capelli mossi in tre direzioni leggermente diverse, sole basso pomeridiano dorato",
+            "palette": "azzurro-dorato del cielo pomeridiano, oro caldo della luce radente, grigio chiaro della pietra di Roccia Alta, sagome dei tre fratelli controluce sul bordo, sfumature verde-foresta a ovest, blu-mare a sud, bruno-est, bianco della luce alta che si fa densa",
+            "wind_visible": "vento_taglio",
+            "onomatopee": [],
+            "composition_zone": "sky_space",
+            "stratification": null,
+            "notes": "HOOK FIRMA. Apice saga. Tutti e tre i venti visibili insieme — unicum saga, raro allineamento meteo (ARCHI 3.S12). Concerto NON è suono letterale: è aria piena, l'isola «come un corpo solo». Nessuna onomatopea (vincolo: il pieno è silenzioso, non rumoroso). Tipografia non grande. Bambino 4 sente l'aria, adulto coglie il sigillo. wind_visible riporta il vento dominante (Taglio); gli altri due (Intreccio + Mulinello) descritti in atmosphere e focal_action."
           },
           {
+            "hook_id": "s12_h09",
+            "type": "introspettivo",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "pomeriggio_inoltrato",
+            "location": {
+              "id": "roccia_alta",
+              "qualifier": "bordo_seduti_momento_soglia_terna_strato_3_tenere_zero_parole"
+            },
+            "quadrant": "aria_nord",
+            "characters_present": [
+              "gabriel",
+              "noah",
+              "elias"
+            ],
+            "elements": [],
+            "focal_action": "Gabriel appoggia il palmo sulla pietra calda. Poco dopo Noah posa la sua mano sulla mano di Gabriel. Poi Elias appoggia il gomito sul braccio di Gabriel.",
+            "focal_object": null,
+            "atmosphere": "tre gesti irriflessi, sequenza minima, piedi nel vuoto sul bordo, sole basso pomeridiano caldo sulla pietra, Concerto continua attorno, paura di Gabriel intera che non si scioglie, gesto che è risposta non soluzione",
+            "palette": "grigio caldo della pietra di Roccia Alta scaldata dal sole, oro tardo del pomeriggio, bordeaux della maglia di Gabriel, ocra-marrone della manica di Elias, marrone della mano piccola di Noah, sagome di tre quarti dei fratelli di lato, viola tenue dell'orizzonte sud",
+            "wind_visible": "vento_intreccio",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Architrave saga zero-parole. Terza parola terna strato 3 dire/accettare/tenere — Gabriel TENERE, curva 5/2/0 chiusa (Noah s10 cinque, Elias s11 due, Gabriel s12 zero). Il gesto è il libro che chiude. Close-up basso sulle tre mani/gomito sulla pietra — viso di Gabriel non in primo piano, taglio della spalla. Vincolo voce: nessuna didascalia, nessun pensiero attribuito. NON signature ma momento-soglia centrale, riservata la signature di chiusura ad h08 (apice atmosferico) e h02 (sguardo Fiamma)."
+          },
+          {
+            "hook_id": "s12_h10",
+            "type": "interno",
+            "is_signature": false,
+            "provenance": "extended_v2",
+            "moment": "sera",
             "location": {
               "id": "forno",
-              "qualifier": null,
-              "legacy_string": "forno"
+              "qualifier": "tavolo_piccolo_quattro_sedie_chiusura_saga_braccialetto_al_polso"
             },
             "quadrant": "fuoco_est",
-            "hook_id": "hook_08_forno_sera_cornice_chiusura_sigillo_narratore_architrave",
-            "moment": "sera_prima_che_diventi_notte",
-            "characters_present": [],
-            "elements": [
-              "fiamma_sta_rimettendo_a_posto_cucina_non_sta_cuocendo",
-              "li_vede_entrare_non_chiede_sa_sedete",
-              "piccolo_dolce_non_da_festa_dal_forno_ancora_caldo",
-              "quattro_fette_uguali_una_per_ciascuno_una_per_fiamma_siede_con_loro_prima_volta_saga_eco_silenziosa_s9",
-              "mangiano_in_silenzio_fiamma_modalita_ferma_nessun_detto_popolare",
-              "una_sola_frase_en_passant_domani_brina_mentre_versa_qualcosa_caldo_nelle_tazze",
-              "gabriel_mani_sulla_tazza_elias_mastica_piano_noah_gambe_dondolano_sedia",
-              "gabriel_prende_briciola_dal_piatto_noah_col_dito_gesto_di_sempre_gesto_di_adesso",
-              "noah_sposta_piatto_verso_gabriel_prendi_se_vuoi",
-              "braccialetto_al_polso_gabriel_visibile_mai_descritto_come_oggetto_importante",
-              "candela_tazze_fumanti_dolce_mangiato_a_meta",
-              "fuori_mulinello_cala_sera_diventa_notte_bartolo_implicito_barca_mai_mostrato"
+            "characters_present": [
+              "fiamma",
+              "gabriel",
+              "elias",
+              "noah"
             ],
-            "palette": "candela_calda_arancione_del_forno_marrone_del_dolce_grigio_rosa_ceramica_tazze_sagome_fratelli_fiamma_intorno_tavolo_oltre_finestra_blu_nero_notte",
-            "notes": "SIGILLO narratore quattro funzioni (giorno/anno/paura Gabriel/Fase F oltre il mare); frase-firma narratore esplicita 1 di <=2 saga unica rimanente (altra S1); address al lettore 4 di <=6 ultimo saga; Pattern A chiusura trasversale convergenza piu immagini; cornice S1<->S12 chiusa; massima sobrieta simmetria; isola dorme con tutti dentro promessa Fase F",
-            "is_signature": false,
-            "provenance": "original_v1"
+            "elements": [],
+            "focal_action": "Fiamma taglia il dolce in quattro fette uguali e si siede al tavolo. Versa l'infuso: «Domani brina.» Gabriel prende una briciola dal piatto di Noah col dito.",
+            "focal_object": "braccialetto_s9",
+            "atmosphere": "tavolo piccolo accanto alla porta, quattro sedie, candela ferma sul tavolo, dolce normale tagliato in quattro, tazze fumanti, Noah con le gambe che dondolano dalla sedia, Elias mastica piano, Gabriel ha al polso destro il braccialetto di Noah — castagna ora rugata — visibile appena nella luce della candela, Piazza vuota fuori la finestra, blu-nero di notte piena",
+            "palette": "giallo caldo della candela, terracotta del Forno spento ma ancora tiepido, bordeaux della maglia di Gabriel, ocra-marrone delle sagome dei fratelli, blu-nero della finestra, verde scuro del braccialetto col marrone rugato della castagna ai bordi, bianco del vapore delle tazze, marrone scuro del legno del tavolo",
+            "wind_visible": "vento_mulinello",
+            "onomatopee": [],
+            "composition_zone": "vignette",
+            "stratification": null,
+            "notes": "Sigillo saga ad anello con s12_h01 (Forno apre, Forno chiude). Quattro fette uguali — bloom silenzioso fette_uguali (Fiamma fa al posto del fratello grande, eco s09). Fiamma siede a tavola coi fratelli — prima volta saga. Frase alla lettera: «Domani brina.» Gesto antico Gabriel-briciola-piatto-di-Noah preservato. Braccialetto al polso destro, castagna rugata (memento mori stagionale, debt_s09_to_s12 chiuso). NESSUNA key_phrase di sigillo: il sigillo è IMMAGINE, non frase (ARCHI 3.S12). Mulinello cala fuori, l'anno è finito."
           }
         ]
       },
@@ -10026,6 +10109,12 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s11: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s11.yaml."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-04-29",
+      "phase": "fase_g_hook_extension",
+      "summary": "s12: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s12.yaml."
     }
   ]
 }
