@@ -1,0 +1,103 @@
+# Hook ciclo C — S08 — L'Albero che Cadde di Sera
+# Fonte: proposta agente fase G del 2026-04-29.
+# Edit minimi:
+# - h08 accorciato a 28 parole (rimosso "con la testa") + rimosso
+#   TOK-TOK-TOK dalle onomatopee (presente nel quote_tracker ma non
+#   esplicito nella narrazione fattuale; coerenza fattuale prevale).
+# - h10 accorciato a 27 parole (rimosso "è ancora" + "In fondo,").
+# - h02 ("Forse l'acqua trema" di Liù) NON marcata signature: i 3
+#   slot signature sono riservati ai 3 culmini Pozzo (h05/h06/h07).
+#   La frase è lore-hook di saga (when_water_trembles, max 4-5 storie).
+
+story_id: s08
+
+hooks:
+  - hook_id: s08_h01
+    type: interno
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio
+    location:
+      id: forno
+      qualifier: interno_banco
+    characters_present: [fiamma, gabriel, elias, noah]
+    focal_action: "I tre fratelli finiscono un cornetto al banco. Fiamma li trattiene, posa una sfoglia nuova davanti a loro. Fuori la luce è bianca di afa."
+    focal_object: pagnotta_forno
+    atmosphere: "afa pomeridiana sospesa, calore stagnante del forno, parola ridotta"
+    palette: "terracotta arancione del forno, bianco farina sui banconi, grembiule chiaro di Fiamma, bianco di afa nel riquadro della porta"
+    wind_visible: null
+    onomatopee: []
+    composition_zone: vignette
+    notes: "Apertura ad anello calda. Cornice Forno, fratelli al banco a destra in piano medio, Fiamma a sinistra. La porta aperta sullo sfondo è il primo segnale del mutamento esterno (luce bianca piatta)."
+
+  - hook_id: s08_h02
+    type: azione
+    is_signature: false
+    provenance: extended_v2
+    moment: primo_pomeriggio_inoltrato
+    location:
+      id: forno
+      qualifier: esterno_soglia_porta
+    characters_present: [liu, gabriel, elias, noah, fiamma]
+    focal_action: "Liù si aggrappa al cornicione del Forno. Una folata la sbatte di lato. Dice ai fratelli: «Il vento sale forte stasera. Forse l'acqua trema.» Riparte con la corrente."
+    focal_object: null
+    atmosphere: "il cielo vira al piombo, imposte che cominciano a sbattere, messaggera aerea che resta un istante e riparte"
+    palette: "cielo che vira dal bianco afa al grigio piombo, verdi scuri delle chiome che cominciano a piegarsi, ocra delle imposte del Forno, sagoma chiara di Liù aggrappata"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "Lore-hook di saga when_water_trembles (1 di 2 menzioni saga: s08, s12). Liù piccola in alto a sinistra aggrappata al cornicione, fratelli nel riquadro della porta. La frase di Liù è ipotesi, non veggenza. NON marcata is_signature per riservare i 3 slot ai culmini Pozzo."
+
+  - hook_id: s08_h03
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio
+    location:
+      id: piazza_villaggio
+      qualifier: attraversamento_lato_sud
+    characters_present: [gabriel, elias, noah]
+    focal_action: "I tre fratelli attraversano la piazza piegati in avanti. Il Mulinello fa muro contro di loro. La piazza è quasi vuota, l'Albero Vecchio al centro, il Pozzo a est."
+    focal_object: null
+    atmosphere: "vento che si fa muro, cielo color piombo, polvere alzata dal selciato, piazza svuotata in fretta"
+    palette: "cielo piombo, ocra spento del selciato, verdi scuri della chioma dell'Albero Vecchio piegata, sagome dei tre fratelli piegate in avanti, polvere chiara contro luce piombo"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Cerniera di passaggio. Vista aperta della piazza con i fratelli piccoli a sud-ovest del frame, Albero Vecchio al centro intatto (calamita visiva intermedia), Pozzo a destra. Il vento è il vero soggetto."
+
+  - hook_id: s08_h04
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: tardo_pomeriggio_pre_crepuscolo
+    location:
+      id: via_scuola
+      qualifier: imbocco_lato_nord_piazza
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Sul lato nord della piazza il grande noce si piega. Si raddrizza. Si piega di nuovo, di più. La biforcazione della chioma cigola sotto la spinta del Mulinello."
+    focal_object: null
+    atmosphere: "istante di sospensione, legno che ondeggia oltre il suo limite, polvere e foglie sollevate"
+    palette: "verde-grigio della chioma del noce piegato sotto cielo piombo, ocra della via della scuola sgombra, sagoma scura del tronco, piccole sagome dei fratelli al margine sud"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: side_space
+    notes: "Hook di sospensione prima del CRACK. Noce occupa metà destra del frame, fratelli puntini al margine inferiore sinistro. Nessuno è ancora sotto (informazione visiva neutra: la via è vuota)."
+
+  - hook_id: s08_h05
+    type: azione
+    is_signature: true
+    provenance: extended_v2
+    moment: crepuscolo_che_si_avvicina
+    location:
+      id: pozzo_piazza
+      qualifier: bordo_pietra_alzata_lato_est_piazza
+    characters_present: [gabriel, elias, noah, memolo]
+    focal_action: "Il noce si spacca alla biforcazione. Il ramo principale tocca per primo il bordo del Pozzo, fa da leva, devia la chioma sulla via della scuola con un tonfo sordo."
+    focal_object: nido_vuoto_s08
+    atmosphere: "istante di rottura visibile, polvere alzata, foglie che continuano a cadere, pietra del Pozzo che tiene"
+    palette: "nero lucido del legno spaccato fresco, bianco-pietra del bordo del Pozzo, verdi scuri della chioma che scarta di lato, cielo piombo, sciarpa ocra di Mèmolo punto caldo unico, polvere chiara"
+    wind_visible: vento_mulinello
+    onomatopee: ["CRACK", "TONFO"]
+    composition_zone: corner_lower_right
+    notes: "HOOK FIRMA. Onomatopea-firma CRACK isolata graficamente (fonte: narrazione fattuale s08). TONFO non isolato. Calamita: il punto in cui il ramo tocca il bordo alzato del Pozzo. Mèmolo piccolo dall'altra parte della piazza, fuori traiettoria di mezzo metro, fermo. nido_vuoto_s08 seminato qui — incastrato in una biforcazione secondaria della chioma sospesa (microdettaglio). Pattern A in bloom pieno."
