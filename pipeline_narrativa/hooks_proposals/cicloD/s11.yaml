@@ -99,3 +99,93 @@ hooks:
     onomatopee: []
     composition_zone: ground_space
     notes: "Paronomastico fisico pomo-che-rotola (2/2 saga, dentro quota). Pallone di stoffa cucita di s03 ricomparso fra i giochi dei cuccioli — chiude debt_s03_to_s11. Vecchie sempre indistinte, mai individuate (vincolo): solo il palmo di una di loro che si abbassa, ferma e tiene il pomo. Seconda micro-pressione su Elias: vede Noah vivo e libero (offscreen del quadro o margine)."
+
+  - hook_id: s11_h06
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: pomeriggio
+    location:
+      id: mercato_del_mezzogiorno_panca_di_pietra
+      qualifier: pomeriggio_riconoscimento_muto_a_elias_culmine_architrave
+    characters_present: [elias, mercato_del_mezzogiorno]
+    focal_action: "Elias passa accanto alla Panca con i quattro coni in una mano. La Vecchia al centro alza il braccio. Indica Elias. Lo guarda negli occhi una volta. Annuisce piano."
+    focal_object: null
+    atmosphere: "ombra lunga del pomeriggio sotto l'Albero Vecchio, pietra chiara della Panca con tre figure sedute, le due laterali continuano a guardare avanti, gesto della Vecchia centrale lento, occhio incrociato un secondo, la festa rallenta sullo sfondo sfocato"
+    palette: "ombra fonda sotto l'Albero Vecchio, pietra chiara della Panca, sagome grigio-scure delle Vecchie, giallo-oro dei quattro coni in mano a Elias, ocra del banco di Nodo sullo sfondo, raggi obliqui pomeridiani che tagliano l'ombra"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. ARCHITRAVE SAGA. Bloom pieno firma-gruppo «indicare in silenzio» (semina s06, manifestazione s08, culmine s11). Vecchie indistinte: solo la sagoma centrale che alza il braccio, le altre due immobili guardano avanti. Riconoscimento pre-linguistico. Elias di tre quarti, fermo, sguardo che riceve. Pausa scenica preparatoria della frase-soglia."
+
+  - hook_id: s11_h07
+    type: introspettivo
+    is_signature: true
+    provenance: extended_v2
+    moment: pomeriggio
+    location:
+      id: albero_vecchio
+      qualifier: pomeriggio_elias_si_ferma_dopo_riconoscimento_vecchie
+    characters_present: [elias]
+    focal_action: "Elias si ferma. Sta fermo qualche istante. Dice piano: «Va bene.» Due parole. Non parla a nessuno in particolare. Lo dice e basta. Continua a tenere i quattro coni."
+    focal_object: null
+    atmosphere: "Elias solo nel quadro, Panca alle spalle fuori fuoco, festa sullo sfondo lontano e quasi muta, respiro trattenuto un secondo, frase non rivolta, mani con i quattro coni e qualche corda dell'altra mano"
+    palette: "ocra-marrone della maglia di Elias, giallo-oro dei quattro coni in mano, marrone della corda nell'altra mano, ombra fonda dell'Albero Vecchio sullo sfondo, raggi obliqui dorati pomeridiani, sagome sfocate dei banchi sullo sfondo"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: vignette
+    notes: "HOOK FIRMA. Frase-soglia ALLA LETTERA. Seconda parola terna strato 3 dire/accettare/tenere — curva discendente 5/2/0 (Noah s10 cinque, Elias s11 due, Gabriel s12 zero). Vincolo voce: curare contesto scenico per non far scivolare la frase su rassegnazione (pausa prima, respiro, Elias fermo). Tipografia non grande. Le Vecchie già fuori dal quadro o sfocate alle spalle."
+
+  - hook_id: s11_h08
+    type: dettaglio
+    is_signature: false
+    provenance: extended_v2
+    moment: pomeriggio
+    location:
+      id: pozzo_piazza
+      qualifier: pomeriggio_elias_consegna_quarto_cono_a_bru
+    characters_present: [elias, bru]
+    focal_action: "Elias si abbassa. Mette il quarto cono in mano a Bru accanto al Pozzo. Bru lo prende, lo guarda, annuisce piccolissimo. Accanto a sé ha già il cono di Rovo."
+    focal_object: null
+    atmosphere: "Pozzo in piano stretto, due figure piegate, mano di Elias che cede il cono, mano piccola di Bru che riceve, Bru seduto solo, due coni accostati a terra accanto a Bru (uno per Rovo, uno appena dato), festa lontana che continua sfocata"
+    palette: "pietra chiara del Pozzo, marrone scuro della pelliccia di Bru, giallo-oro dei due coni accostati, ocra del selciato, ombra blu morbida dietro il Pozzo, raggi tardi pomeridiani"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: corner_lower_left
+    notes: "Strato 3 puro: dare ciò che hai in più a chi non aveva è il modo di stare in mezzo come funzione, non come limite. Mai dichiarato — vive solo nell'immagine. Bru riconosciuto da Elias, chiude debt_s03_to_s11_bru. Rovo offscreen segnato via Bru (Bible §4.5). Bru zero parole, solo annuisce piccolissimo (vincolo voce)."
+
+  - hook_id: s11_h09
+    type: atmosferico
+    is_signature: false
+    provenance: extended_v2
+    moment: pomeriggio_tardi
+    location:
+      id: pontile_bocca
+      qualifier: pomeriggio_tardi_bartolo_arriva_dal_mare_cesto_frutti
+    characters_present: [bartolo, fiamma]
+    focal_action: "Bartolo posa al banco di Fiamma un cesto di frutti che non crescono sull'isola, colori diversi dai soliti. Alza la mano in saluto, la riabbassa. Si siede accanto al Forno."
+    focal_object: null
+    atmosphere: "barca lasciata al Pontile sullo sfondo lontano, cesto in primo piano sul banco di Fiamma, frutti dai colori non visti sull'isola, mano di Bartolo che si alza e ricade, sgabello accanto alla parete del Forno, silenzio del personaggio dentro la festa corale"
+    palette: "verde-mare antico dei vestiti di Bartolo, colori sconosciuti dei frutti (sospesi fra rosa, viola, giallo intenso non saga), terracotta del banco di Fiamma, oro caldo del Forno alle spalle, marrone-grigio della parete del Forno"
+    wind_visible: vento_intreccio
+    onomatopee: []
+    composition_zone: ground_space
+    notes: "Pattern A variante collettiva — cose in più che arrivano senza chiedere permesso da dove. Bartolo modo canonico: vede e fa, zero parole, mano alzata che ricade. Apre debt_s11_to_s12 per «oltre il mare» (Fase F). I frutti non descritti in dettaglio — illustratore può variare libero ma non deve riferirsi a frutti dell'isola noti."
+
+  - hook_id: s11_h10
+    type: transizione
+    is_signature: false
+    provenance: extended_v2
+    moment: sera
+    location:
+      id: piazza_villaggio
+      qualifier: sera_mulinello_sagome_fratelli_verso_casa_poi_interno_casa_fratelli_non_cartografato
+    characters_present: [gabriel, elias, noah]
+    focal_action: "Sagome viola dei tre fratelli contro il cielo arancione. Lanterne dei banchi accese una a una. A casa Elias dice: «Oggi mi ha indicato una vecchia.» Gabriel: «Quale?» Elias: «Una.»"
+    focal_object: null
+    atmosphere: "Mulinello che passa basso sulla Piazza che si svuota, banchi che chiudono, lanterne accese ai bordi, foglie secche mosse, interno casa con lampada ferma sul tavolo, Noah sull'altro lato della stanza che gioca per terra mezzo addormentato"
+    palette: "viola scuro delle sagome dei tre fratelli, arancione del cielo del crepuscolo, oro caldo delle lanterne accese una a una, blu profondo della sera che cala, giallo lampada sul tavolo dentro casa, ocra del legno"
+    wind_visible: vento_mulinello
+    onomatopee: []
+    composition_zone: sky_space
+    notes: "Cerniera doppia esterno-interno in un'unica tavola (sopra esterno crepuscolo, sotto vignette interno casa) o tavola sequenziale a illustratore. Gabriel davanti, Noah in mezzo, Elias coda — coerente con narrazione fattuale. Le due battute asciutte ALLA LETTERA — non sono la frase-soglia, sono cornice: Gabriel non capisce e non saprà mai, e questo è giusto. Casa fratelli non cartografata: location.id = piazza_villaggio con qualifier (convenzione s09/s10). Mulinello come terzo vento del giorno (prefigurazione strutturale Concerto s12)."
