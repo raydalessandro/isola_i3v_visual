@@ -78,4 +78,88 @@ NEGATIVE: no dreamy/philosophical gaze (eyes must be FOCUSED on a concrete objec
 
 ---
 
-> ⏸️ **STOP — fine pezzo 1/2.** Prossimo pezzo: IMMAGINE 3 (in barca col padre) + IMMAGINE 4 (turnaround) + checklist.
+## IMMAGINE 3 — Toba modalità "in barca col padre"
+
+**Aspect ratio:** 4:5 (verticale leggero)
+**Filename atteso al salvataggio:** `toba_canonica_v1_barca_padre.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON TOBA — incolla blocco sopra]
+
+SCENE: Toba, the young tortoise child (hand-sized pale sea-green shell with thin yellow stripes), on a small wooden island fishing boat together with her father Bartolo (an old, larger tortoise with a deep antique sea-green shell, dark and pale-scarred). Toba is positioned near the edge of the boat, head extended out of her shell, big round eyes wide and curious as she watches her father working with the wood — or scanning the calm water beside the hull. Posture small, attentive, joyful in a quiet way (she ADORES being on the water with him). Bartolo is calm, focused, slightly stooped over his work, the older shell visible behind/beside her as visual contrast (PALE Toba shell + DARK Bartolo shell side by side). Soft warm late-afternoon light over the water, watercolor and ink linework, painterly storybook atmosphere.
+
+NEGATIVE: no Toba alone on a pier or dock (she must be WITH her father), no Toba running, no philosophical dreamy gaze, no shell darker than father's (must be paler), no adult-like Toba, no shell bigger than a hand, no modern clothes, no cartoon, no manga, no anime, no 3D render, no Pixar.
+```
+
+---
+
+## IMMAGINE 4 — Toba turnaround (4 viste)
+
+**Aspect ratio:** 16:9 (orizzontale, 4 figure intere affiancate)
+**Filename atteso al salvataggio:** `toba_turnaround_v1.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON TOBA — incolla blocco sopra]
+
+SCENE: Character turnaround sheet of Toba, the young tortoise child. Four full-body views of the same character in a single horizontal image, side by side, evenly spaced, on a neutral warm cream/off-white background: FRONT view, three-quarter LEFT view, SIDE PROFILE view (left side), BACK view. All four views show the same young tortoise: hand-sized PALE sea-green shell with thin yellow stripes running along the dome, short rounded beige-olive legs, warm beige-olive head and neck, big round dark alert eyes (visible in front and 3/4 views). Same scale, same proportions, same posture across all four views. No color shift between views, no shell-color drift. Watercolor and ink linework, painterly storybook style, model-sheet clarity. NO scene, NO background details, just the four views and a clean cream background.
+
+NEGATIVE: no inconsistencies between views, no different shell colors, no different sizes, no scene details, no props, no background environment, no modern clothes, no philosophical gaze, no running pose, no shell bigger than a hand, no dark adult shell, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## Note tecniche per Grok Imagine
+
+- Genera ogni immagine con **upload del documento canone Toba** (questo file) o copia-incolla i blocchi STYLESHEET + CHARACTER CANON in cima a ogni prompt.
+- **Sempre un solo aspect ratio per immagine** — non far decidere a Grok, specifica esplicitamente.
+- **Re-generation policy:** se la prima generazione non è canonica (guscio scuro come padre, occhi persi, in fuga, troppo grande, modalità sbagliata), rigenera fino a 3 volte con piccole variazioni di prompt prima di scartare.
+- **Dopo l'approvazione**, salva con il filename canonico esatto in `visual/personaggi/individuali/cuccioli/toba/immagini/`.
+
+---
+
+## Negative prompt globale (incolla in coda a ogni prompt se Grok non rispetta)
+
+```
+no manga, no anime, no Pixar, no 3D render, no flat vector art, no hard digital outlines, no cartoon, no chibi, no kawaii, no modern clothing (no t-shirts, no jeans, no sneakers), no logos, no text, no signatures, no watermarks, no extra characters in scene unless required.
+```
+
+---
+
+## Negative prompt specifici Toba
+
+```
+no Toba running or sprinting (she's a tortoise — slow with cub-fretta, never racing), no Toba alone on a pier or dock (she's never abandoned/solo on the pontile), no philosophical dreamy gaze with eyes lost in space (curiosity must be CONCRETE — pointed at a specific object/person), no shell darker than her father Bartolo's (her shell is PALER, with thin yellow stripes), no shell bigger than a human hand, no elongated adult legs, no adult tortoise proportions, no missing yellow stripes (signature visual), no modern human clothing.
+```
+
+---
+
+## Checklist post-generazione (verifica canone su ogni immagine)
+
+- [ ] Guscio piccolo (poco più di una mano umana)?
+- [ ] Guscio PIÙ CHIARO di Bartolo (verde mare antico)?
+- [ ] Righe gialle sottili sulla cupola del guscio (firma)?
+- [ ] Zampe corte e tonde (mai allungate)?
+- [ ] Occhi grandi e tondi, vigili e curiosi?
+- [ ] Sguardo CONCRETO (mai perso nel vuoto, mai filosofico-sognante)?
+- [ ] Postura tartaruga (mai in corsa, mai sprint)?
+- [ ] Mai sola al pontile (in IMMAGINE 3 deve essere CON Bartolo)?
+- [ ] Stile acquerello + inchiostro storybook (mai cartoon/anime/3D)?
+- [ ] Scala cucciola (≈ 0.25 GU, significativamente più piccola di Bartolo già basso/largo)?
+
+---
+
+## Ordine di generazione consigliato
+
+1. **IMMAGINE 4 (turnaround)** per primo — fissa la coerenza anatomica (scala, guscio, zampe, palette).
+2. **IMMAGINE 1 (fronte)** subito dopo — la "carta d'identità" canonica.
+3. **IMMAGINE 2 (domanda)** — la modalità più caratteristica di Toba.
+4. **IMMAGINE 3 (in barca col padre)** per ultima — la più complessa (richiede coerenza con Bartolo).
+
