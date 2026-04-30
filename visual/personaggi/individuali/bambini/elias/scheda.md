@@ -109,3 +109,47 @@ Quello che fa il ponte tra gli altri due. Quando litigano trova cosa fare insiem
 **Tipo di luce**: Elias funziona benissimo in **luce calda diffusa** (mezzogiorno chiaro, primo pomeriggio dorato, luce di forno). I suoi toni arancione/giallo si valorizzano sotto luce calda. Mai sotto luce magenta o verde.
 
 **Atmosfera predominante**: presente, fattivo, in movimento misurato. Elias porta nella scena un'**aria di "fare"** — la scena con Elias è quasi sempre una scena in cui si costruisce, si lega, si trova come. È il polo "costruttore" del trio (contro Gabriel polo "osservatore" e Noah polo "imprevisto").
+
+## Contesto e ambientazioni ricorrenti
+
+I tre fratelli sono umani, gli unici umani dell'isola. I genitori non sono mai citati nelle 12 storie — fuori scena, né assenti né morti (porta socchiusa Fase F). **P6 (inseparabilità)**: ogni storia richiede tutti e tre i fratelli; nessuno da solo risolve.
+
+**Casa dei fratelli**: presente nelle scene S9 (sera, casa con tavolo e dolce di castagne), S10 (notte buia, partono con la lanterna velata), S12 (mattino partenza). Posizione esatta non dichiarata.
+
+**Scene tipiche di Elias:**
+- **In cammino con i fratelli, leggermente inclinato, raccoglie qualcosa** (default in molte storie)
+- **Si china e fa un nodo, costruisce, lega** (S5 nodo marinaro su pertica, S5 ponte di rami, S8 lavoro coi Mantenitori)
+- **Batte sulla radice** (S4, dialogo a distanza con Noah perso)
+- **Apre il quarto cono** (S11, momento-soglia: Stria gliene dà uno in più, lui dice "Va bene.")
+- **Dà il quarto cono a Bru al Pozzo** (S11, gesto silenzioso di "stare in mezzo come funzione")
+- **Attraversa il ponte di rami per primo per collaudarlo** (S5, modalità costruttore)
+
+**Vento dominante per Elias**: nessuno specifico — coerente con **Vento Intreccio** (mezzogiorno, connettere, porta odori e notizie) per simbiosi tematica.
+
+## Coerenza cross-scena (cose che NON cambiano)
+
+- Specie: umano, bambino
+- Statura: 0.85 GU (medio dei tre fratelli, anchor saga)
+- Capelli: corti lisci, castani chiari/castano-mediomelati
+- Occhi: castani caldi mediomelati
+- Pelle: chiara di tono caldo, leggermente abbronzata, qualche lentiggine sul ponte del naso
+- Outfit base: camicia/maglia arancione caldo + pantaloni marrone-grigio + cordino/bandana giallo ocra + scarpette di cuoio chiaro
+- Cordino/bandana giallo ocra al collo: **firma visiva** sempre presente
+- Maniche arrotolate (sempre, anche in inverno se possibile)
+- Postura leggermente inclinata verso ciò che sta facendo
+- Modalità "costruttore" come default, "ponte" relazionale, "fermo-che-ha-capito" rara
+- Mani sempre IN MOVIMENTO o che HANNO APPENA FATTO qualcosa
+- Sorriso piccolo laterale come espressione caratteristica del momento "ho capito"
+- Mai a piedi nudi fuori casa
+
+## Variabilità ammessa
+
+- **Età narrativa lungo la saga**: Elias è leggermente più piccolo in S1 (inverno apertura) e leggermente più grande/maturo in S12 (autunno chiusura). Variazione di pochi mesi (la saga è 1 anno). Visivamente trascurabile, ma nelle scene tarde S9-S12 può apparire un filo più alto/proporzioni un po' meno bambine. **Mai rendere "molto cresciuto" — è sempre lo stesso bambino di mezzo.**
+- **Mantello in inverno**: solo in S1, S2, S3 (e parziali S10, S12 se freddo).
+- **Stato dei vestiti**: più puliti all'inizio della scena, più sporchi/stropicciati a fine scena se ha lavorato (linfa, terra, polvere sui ginocchi).
+- **Posizione delle mani**: nel lavoro (default costruttore), tese verso un fratello (modalità ponte), in tasca brevemente (rarissimo, contrario al suo default), incrociate sul petto (modalità fermo-che-ha-capito).
+- **Espressione**: concentrata serena (default), sorriso piccolo laterale (ho capito), bocca leggermente aperta (concentrazione), occhi vivi (sempre), mai pianto, mai sorriso esagerato.
+- **In S5**: nodo marinaro in mano, postura inginocchiata sulla riva.
+- **In S11 h07**: postura insolitamente immobile per Elias, mani con i quattro coni, sguardo che riceve il riconoscimento delle Vecchie.
+
+**Mai variabile:** colore base dei capelli, statura relativa rispetto a Gabriel e Noah, outfit canonico, postura bipede.
