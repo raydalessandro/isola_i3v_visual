@@ -221,3 +221,176 @@ view. The extended hand and the small object it holds is the visual
 calamita — composition leaves space toward the left for the implied
 recipient. Aspect ratio 4:5 (portrait).
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "fermo-che-ha-capito" (ritratto)
+
+**Filename suggerito**: `elias_canonica_v1_fermo.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Elias]
+
+SCENE — Elias in still-having-understood mode (the rare quiet moment):
+Elias stands facing the viewer, three-quarter view, posture UNUSUALLY
+STILL FOR HIM — upright, shoulders relaxed, both arms hanging naturally
+at his sides. His hands hold a small object loosely — a small bundle
+of paper cones (4 painted-acorn cones, a canonical s11 detail) or
+nothing at all if generic. The hands have stopped moving — that is
+the key visual signal of this mode.
+
+His face is calm and present. Eyes meet the viewer directly with a
+quiet steadiness — not the lively dart of his default builder mode,
+but a moment of having-understood-something. The lateral smile is
+GONE in this image, replaced by a soft neutral mouth, slightly
+pressed but not tense. Eyebrows are level. The expression is the
+expression of a child who has just received something silent and
+important and is now still, holding it.
+
+The mustard cord at his neck is straight, undisturbed. Shirt and
+trousers are slightly more composed than usual — even Elias's clothes
+are quieter in this mode.
+
+Background: a quiet outdoor setting — stones of a low wall behind him,
+shadowed warm grey, hints of late afternoon golden light from the
+right. NO market stalls, NO scene clutter. The atmosphere is
+suspended — a hush around the figure.
+
+Lighting: warm late-afternoon golden side-light from the right, gentle
+shadow pooling along his left side. The air feels quieter, as in
+image 3 of Gabriel's set — same canonical "still" treatment.
+
+Composition: from waist up to slightly above the head, three-quarter
+view. Aspect ratio 4:5 (portrait). This image fixes the canonical
+"still-having-understood" pose for use in S11 (recognition by the Old
+Women) and S6 (silent understanding moments).
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `elias_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Elias]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Elias in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him in the same
+neutral standing pose: arms relaxed at his sides, feet slightly apart,
+neutral attentive expression. NO props except the mustard cord at his
+neck and the rolled-up sleeves of his orange shirt (signature features
+that must be visible in all four views).
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile
+4. BACK view — from behind, showing the back of the orange shirt, the
+   trouser cord at the waist, the back of the light leather shoes
+
+The character must look IDENTICAL across all four views: same hair
+color and length, same skin tone with the small freckles on the nose,
+same orange shirt with rolled-up sleeves, same earth-brown trousers,
+same light leather shoes, same height (0.85 GU) and proportions, same
+mustard cord at the neck visible in front and side views.
+
+CRITICAL SCALE NOTE: this turnaround should clearly show that Elias
+is SHORTER than the canonical Gabriel reference (1.0 GU). If
+generated AFTER the Gabriel turnaround, ensure proportional
+consistency — Elias is roughly 85% of Gabriel's height, slightly
+slighter build.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Flux Kontext Pro
+
+- **Tier raccomandato**: `flux-kontext-pro`. Per casi difficili: `flux-kontext-max`.
+- **Aspect ratio**: come specificato (3:4, 4:5, 16:9).
+- **Reference image**: usare `gabriel_turnaround_v1.jpg` (se già generato) oppure `fiamma_canonica_v1_fronte.jpg` come reference per allineare lo stile saga. Se Gabriel è già fatto, usarlo prioritariamente per garantire coerenza FRA I FRATELLI (stesso stile, scale relativa corretta).
+- **Seed**: salvare il seed per riuso. Usare seed simile/uguale tra le 4 immagini.
+- **Iterazione**: 4-6 varianti per immagine, selezionare la migliore.
+- **Coerenza tra le 4 immagini**: stesso bambino, stessa altezza, stessi tratti.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, photographic, oil painting, anime, manga, chibi,
+disney cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, necklace, earrings, cap,
+hat, prince outfit, perfectly clean clothes, brand new clothes, torn
+rags, bare feet outdoors, sandals indoors winter, melodramatic crying,
+visible tears, wide-open laughing mouth, exaggerated expression, sage-
+like grand gaze, heroic chin-lifted pose, sword, weapon, magic effects,
+glowing aura, sparkle effects, cute mascot, kawaii, doll-like
+proportions, huge head, multiple children visible (this is a solo
+reference sheet)
+```
+
+## Negative prompt specifici per Elias
+
+```
+NO black hair, NO blond hair, NO red hair, NO curly hair, NO long hair
+past ears, NO bangs covering eyes, NO blue eyes, NO green eyes, NO
+grey eyes, NO eyes darker than warm honey-brown (he is lighter than
+Gabriel, warmer in tone), NO extremely pale skin, NO very dark skin,
+NO baby-faced toddler proportions, NO teenager proportions, NO middle-
+child melancholy victim look (his fear is silent), NO heroic pose, NO
+sword, NO weapon, NO crown, NO modern technology in scene
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] Bambino umano età 5-6 anni (proporzioni 1:5 testa-corpo)
+- [ ] Capelli corti lisci castani chiari/castano-mediomelati (più chiari di Gabriel)
+- [ ] Occhi castani caldi mediomelati (warm honey-brown)
+- [ ] Pelle chiara di tono caldo, leggermente abbronzata, qualche lentiggine sul naso
+- [ ] Camicia/maglia arancione caldo (terracotta/zucca/ocra-bruciato)
+- [ ] **Maniche arrotolate** (FIRMA — controllo critico)
+- [ ] Pantaloni marrone-grigio terra
+- [ ] **Cordino/bandana mustard yellow al collo** (FIRMA VISIVA — controllo critico)
+- [ ] Scarpe basse di cuoio chiaro ai piedi (mai a piedi nudi)
+- [ ] **Sorriso piccolo laterale** (firma espressiva, presente in imm. 1 e 2)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: costruttore (mani in azione, sguardo concentrato, sorriso laterale)
+  - Imm. 2: ponte (mano tesa con oggetto, mid-gesto, voce in proposta)
+  - Imm. 3: fermo-che-ha-capito (mani calme, sorriso GONE, sguardo dritto quieto)
+  - Imm. 4: 4 vedute neutre identiche
+- [ ] Coerenza tra le 4 immagini (stesso bambino, stesse proporzioni, stesso colore)
+- [ ] **Statura coerente con anchor 0.85 GU** (più piccolo di Gabriel 1.0, più grande di Noah 0.65)
+- [ ] Niente accessori vistosi
+- [ ] Nessun pattern AI bandito
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo del personaggio.
+2. **Imm. 1 (fronte costruttore)** — ID card canonica.
+3. **Imm. 2 (ponte)** — modalità relazionale.
+4. **Imm. 3 (fermo-che-ha-capito)** — modalità delicata, l'ultima.
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Flux Kontext Pro
