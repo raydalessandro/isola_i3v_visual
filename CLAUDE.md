@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-04-28 (post-fase E grafo v1.0.0).
+Versione: 2026-04-30 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer installato).
 
 ---
 
@@ -30,18 +30,28 @@ In sintesi: idea autoriale (Ray, chat) → narrazione fattuale → estrazione 10
 isola_i3v_visual/
 │
 ├── pipeline_narrativa/        ⚠️ READ-ONLY (canone narrativo)
-│   ├── story_graph.json              v1.1.0-pre schema 1.3 (12 storie + entities + seeds + callbacks + quote_tracker; fase G in corso)
+│   ├── story_graph.json              v1.2.0 schema 1.4 (post-cornice-del-mondo: world_conventions root + cornice_dettagli + path_details)
 │   ├── story_graph.v0.10.0.backup.json  backup pre-migrazione fase E
 │   ├── story_graph.json.pre_v1_3.backup.json  backup pre-bump schema 1.2->1.3
+│   ├── story_graph.json.pre_fase_g.backup.json  backup pre-hook estesi
+│   ├── story_graph.json.pre_cornice_mondo.backup.json  backup pre-Step 1+2 (2026-04-30)
+│   ├── story_graph.json.pre_step4_cornici.backup.json  backup pre-Step 4 (2026-04-30)
+│   ├── story_graph.json.pre_step5_sentieri.backup.json backup pre-Step 5 (2026-04-30)
+│   ├── story_graph.json.pre_step6_path_details.backup.json backup pre-Step 6 (2026-04-30)
 │   ├── hooks_proposals/<ciclo>/sNN.yaml  input deterministici per write_hooks_to_graph.py
+│   ├── narrazione_fattuale/sNN_*.md  12/12 file narrazione fattuale derivati dal sorgente _source/
+│   ├── writing_briefs/sNN_writing_brief.md  12 brief autosufficienti per agente prosa (output zero-token brieffer)
+│   ├── writing_briefs/_reference/    s01_writing_brief_FINAL.md (reference Ray, validato)
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
-├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche
-│   ├── personaggi/                   23 schede (3 fratelli, 5 primari, 5 secondari, 5 cuccioli, 5 collettivi)
-│   │   │  ⚠️ NB: la Bible usa il termine "Abitanti maggiori" per gli stessi 5 di `primari/` — stesso insieme, vocabolari diversi (narrativo vs filesystem)
-│   │   └── individuali/primari/{fiamma,bartolo}/immagini/  4+4 immagini canoniche v1 (.jpg)
+├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche + prompt_grok.md
+│   ├── personaggi/                   24 schede (3 fratelli, 5 primari, 5 secondari, 5 cuccioli, 6 collettivi inclusi pescatori_case_basse)
+│   │   │  ⚠️ NB: la Bible usa "Abitanti maggiori" per gli stessi 5 di `primari/` — stesso insieme, vocabolari diversi (narrativo vs filesystem)
+│   │   ├── individuali/{bambini,primari,secondari,cuccioli}/<id>/  scheda.md + prompt_grok.md (28 prompt grok pubblicati al 2026-04-30) + immagini/
+│   │   └── collettivi/{camminanti,mantenitori,coltivatori_del_cerchio,mercato_del_mezzogiorno,pastori,pescatori_case_basse}/scheda.md  con sezione `## Saluto del gruppo` (DOC_2)
 │   ├── luoghi/                       74 schede (per quartiere: aria/acqua/fuoco/terra/centro + perimetro + strade)
-│   ├── oggetti/                      14 schede (13 oggetti-simbolo saga + 1 oggetto_di_scena_ricorrente)
+│   │   └── 5 schede sentieri Tier A (via_dell_alba, sentiero_orti_torrente_foresta, via_che_sale, sentiero_orti_casa_salvia, viottolo_perimetrale_piazza) con `## Coerenza cross-scena` aggiornata con dettagli stabili da `path_details.paths.<id>` del grafo
+│   ├── oggetti/                      14 schede (13 oggetti-simbolo + 1 oggetto_di_scena_ricorrente) — tutte con prompt_grok.md
 │   ├── venti/                        3 schede (Taglio/Intreccio/Mulinello)
 │   └── visual_signatures/            1 scheda (quando_acqua_trema)
 │
@@ -76,11 +86,21 @@ isola_i3v_visual/
 │   ├── migrate_graph_v1_2_to_v1_3.py    bump schema fase G (one-shot, idempotente)
 │   ├── promote_visual_entities_to_graph.py  promozione catalogo visual → grafo entities
 │   ├── write_hooks_to_graph.py          writer deterministico fase G (input YAML hooks_proposals/)
+│   ├── build_writing_brief.py           ⭐ NEW (2026-04-30) generatore zero-token brief writing per agente prosa
+│   ├── cornice_mondo/                   ⭐ NEW (2026-04-30) pacchetto 7 step "cornice del mondo"
+│   │   ├── step1_world_conventions.py   crea nodo radice world_conventions + extends quote_tracker
+│   │   ├── step4_cornici.py             scrive 24 cornice_dettagli + 8 formule + 2 cantilene
+│   │   ├── step5_sentieri_fantasma.py   appende 36 sentieri a locations_secondary
+│   │   ├── step6_path_details.py        popola path_details.paths con 5 sentieri Tier A
+│   │   ├── _data/                       4 YAML deterministici (refrain, cornici_24, sentieri_fantasma, path_details_tierA)
+│   │   └── _audit/                      riservata audit successivi
 │   └── audit/                           audit grafo (4 script da implementare)
 │
 ├── skills/                    ✅ skill agente IA
 │   ├── README.md                     orchestratore
 │   ├── cartografo.md                 manutenzione cartografia
+│   ├── brieffer/                     ⭐ NEW (2026-04-30) genera writing_briefs autosufficienti
+│   │   └── SKILL.md
 │   └── visual/
 │       ├── README.md                 skill visual generale
 │       └── compilatore.md            sotto-skill compilazione schede
@@ -183,6 +203,52 @@ Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `v
 - Tempo medio per storia: ~3-5 min agente sub + ~5 min review + write
 - Backup chain: `pre_v1_3.backup.json` → `pre_fase_g.backup.json` → grafo corrente
 
+### Fase F.2 visual prompt grok — IN CORSO (28/115 al 2026-04-30)
+
+Generazione prompt grok canonici per le 115 schede `visual/`. Workflow esterno: Ray estrae prompt da GitHub e genera con **Grok Imagine** (sostituisce piano Flux precedente — Grok rispetta meglio lo stile saga).
+
+**Pubblicato al 2026-04-30 (28 prompt grok totali):**
+- 14 personaggi: 3 fratelli (Gabriel/Elias/Noah, opzione B fittizio canonico), 4 primari (Rovo/Stria/Mèmolo/Grunto), 4 secondari (Salvia/Nodo/Amo/Zolla), 5 cuccioli (Pun/Toba/Bru/Cardo/Liù). Fiamma e Bartolo già canonizzati con immagini in 2026-04-29.
+- 14 oggetti: 13 oggetti-simbolo + grembiule_fiamma + pallone_di_stoffa_cucita.
+
+**Restano da fare (al 2026-04-30):**
+- 5 collettivi (Camminanti, Mantenitori, Coltivatori, Mercato, Pastori) + Pescatori delle case basse
+- 3 venti (Taglio, Intreccio, Mulinello) + 1 visual_signature (quando_acqua_trema)
+- 74 luoghi (per quartiere, strade)
+
+### Fase Cornice del Mondo — COMPLETATA (2026-04-30)
+
+Pacchetto consegnato da Ray come 6 documenti DOC_1..DOC_6 + README in root. **7 step eseguiti** con script idempotenti dry-run/--apply, backup automatico, idempotenza verificata.
+
+| Step | Cosa | Commit | Output principale |
+|---|---|---|---|
+| 1+2 | nodo radice `world_conventions` + extends `quote_tracker` + bump versioni | `c824496` | `refrain_animal_identification` (formula sg/pl), `path_details: { paths: {} }`, `quote_tracker.refrain_animal_used_per_story: []` |
+| 3 | saluti gruppi nelle 5+1 schede catalogo collettivi | `a3e654e` | `## Saluto del gruppo` + nuova scheda `pescatori_case_basse/` (6° gruppo) |
+| 4 | 24 cornici nelle 12 storie + 8 formule + 2 cantilene | `8b70958` | `stories.<sid>.cornice_dettagli` (2 per storia) |
+| 5 | sentieri "fantasma" in `locations_secondary` | `92e87b6` | 36 sentieri appesi |
+| 6 | path_details Tier A (5 sentieri × 20 dettagli) | `83e361e` | `world_conventions.path_details.paths.<id>` |
+| 7 | schede sentieri Tier A aggiornate | `de87ac2` + `9b8c30e` | `## Coerenza cross-scena` con dettagli stabili |
+
+**Decisioni autoriali Ray applicate (2026-04-30):** 6° gruppo Pescatori SI; Pattern A pre-eco s03 NO; narrator_address s09 NO; riequilibrio Giro E SI; schema slot dettaglio senza campo `tipo`; vincolo "tre nomi" in plurale; vincolo unicità saga animale.
+
+**Tooling cornice del mondo:** `scripts/cornice_mondo/{step1,step4,step5,step6}*.py` (idempotenti, --dry-run di default, backup auto), `scripts/cornice_mondo/_data/*.yaml` (4 file dati deterministici).
+
+**Stato grafo finale:** schema 1.4, graph 1.2.0. **Backup chain:** + 4 nuovi backup canonici (`pre_cornice_mondo`, `pre_step4_cornici`, `pre_step5_sentieri`, `pre_step6_path_details`).
+
+### Fase Brieffer — COMPLETATA (2026-04-30)
+
+Pacchetto `brieffer_pkg` installato. Generatore meccanico (zero token LLM) di brief writing autosufficienti per agente prosa.
+
+- **Script:** `scripts/build_writing_brief.py` (1128 righe). Usa: `--story sNN` o `--all`. Output in `pipeline_narrativa/writing_briefs/sNN_writing_brief.md`.
+- **Skill:** `skills/brieffer/SKILL.md`.
+- **12 brief generati** (16k-32k parole/brief, idempotente).
+- **Reference Ray validato:** `pipeline_narrativa/writing_briefs/_reference/s01_writing_brief_FINAL.md` — `s01_writing_brief.md` generato dallo script è IDENTICO (1730 righe, diff vuoto).
+- **13 sezioni standard** per brief: frontmatter operativo, core narrativo, narrazione fattuale integrale, 10 hook visivi, cast in scena (voci + canone visivo), cornici del mondo, sentieri attraversati con dettagli, saluti, formula ritornello, vincoli universali (PATTERN_AI_DA_BANDIRE integrale), quote tracker awareness, echi/callback/semi, istruzione operativa.
+
+**Quando rilanciare lo script:** dopo modifiche a grafo / schede catalogo / prompt grok / narrazione fattuale. Idempotente: sovrascrive con versione aggiornata.
+
+**Cosa NON fa:** non scrive prosa (compito agente prosa, oggi gestito a mano da Ray), non modifica il grafo, non chiama API LLM.
+
 ---
 
 ## 4. Modalità operative (chi fa cosa)
@@ -218,6 +284,21 @@ Ampliamento dei `visual_anchors.scene_hooks` da N a 10 per storia. Vedi `pipelin
 - **Scrittura**: SOLO `pipeline_narrativa/story_graph.json#stories.s0X.visual_anchors.scene_hooks` + metadati `graph_version`, `last_updated`, `phase`. Nient'altro.
 - **Step obbligatori**: lettura → inventario candidati → selezione 10 → compilazione → proposta a Ray → ATTESA approvazione → scrittura → audit (4 script) → conferma.
 - **Una storia alla volta.** Mai parallelo. Mai saltare l'approvazione.
+
+### Modalità "cornice del mondo" (fase 2026-04-30)
+**COMPLETATA.** Pacchetto `cornice_mondo` consegnato + 7 step eseguiti. Pattern di lavoro replicabile per pacchetti futuri tipo Tier B/Tier C dettagli sentieri.
+
+- **Pattern script:** idempotente, `--dry-run` di default, `--apply` scrive con backup auto, log umano, dati separati in YAML deterministici.
+- **Vincoli:** SEMPRE additivo + retrocompatibile (mai rinomi/rimozioni nel grafo). Backup canonici con nome esplicito (es. `pre_step4_cornici.backup.json`). Audit posteriore.
+- **Approvazione Ray esplicita richiesta** prima di toccare il grafo (eccezione alla regola "pipeline_narrativa read-only").
+
+### Modalità "brieffer" (zero-token writing brief generator)
+Genera brief autosufficienti per agente prosa (oggi: Ray scrive a mano).
+
+- **Comando:** `python3 scripts/build_writing_brief.py --story sNN` o `--all`.
+- **Output:** `pipeline_narrativa/writing_briefs/sNN_writing_brief.md`.
+- **Skill:** `skills/brieffer/SKILL.md` (procedura standard).
+- **Quando rilanciare:** dopo modifiche a grafo / schede catalogo / prompt grok / narrazione fattuale. Idempotente.
 
 ---
 
@@ -324,15 +405,26 @@ python3 scripts/build_catalogo_web.py
 # Travaso grafo → schede (fase F.1, idempotente)
 python3 scripts/compile_visual_from_graph.py
 
-# Verifica grafo (deve essere JSON valido schema 1.3 post-bump fase G)
-python3 -c "import json; g=json.load(open('pipeline_narrativa/story_graph.json')); print('schema:', g['schema_version'], 'graph:', g['graph_version'], 'stories:', len(g['stories']))"
+# Verifica grafo (deve essere JSON valido schema 1.4, graph 1.2.0 post-cornice del mondo)
+python3 -c "import json; g=json.load(open('pipeline_narrativa/story_graph.json')); print('schema:', g['schema_version'], 'graph:', g['graph_version'], 'stories:', len(g['stories']), 'world_conventions keys:', sorted(g.get('world_conventions', {}).keys()))"
 
-# Fase G — workflow hook visivi
+# Fase G — workflow hook visivi (gia completata)
 python3 scripts/migrate_graph_v1_2_to_v1_3.py            # bump schema (one-shot, idempotente)
 python3 scripts/promote_visual_entities_to_graph.py      # promuove entita' catalogo->grafo
 python3 scripts/write_hooks_to_graph.py --story s01 --dry-run    # validazione
 python3 scripts/write_hooks_to_graph.py --story s01              # scrittura
 python3 scripts/write_hooks_to_graph.py --cycle A                # batch ciclo
+
+# Fase Cornice del Mondo — completata 2026-04-30 (rilanciabile per idempotenza)
+python3 scripts/cornice_mondo/step1_world_conventions.py        # dry-run
+python3 scripts/cornice_mondo/step1_world_conventions.py --apply
+python3 scripts/cornice_mondo/step4_cornici.py --apply
+python3 scripts/cornice_mondo/step5_sentieri_fantasma.py --apply
+python3 scripts/cornice_mondo/step6_path_details.py --apply
+
+# Brieffer — generazione writing briefs (zero token, idempotente)
+python3 scripts/build_writing_brief.py --story s01    # un brief
+python3 scripts/build_writing_brief.py --all          # tutti i 12 brief
 
 # Avvia catalogo web in locale
 python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/
@@ -354,4 +446,4 @@ python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/
 
 **Autore narrativo e proprietario**: Ray.
 **Manutenzione tecnica**: Ray + agenti IA in collaborazione (Claude Sonnet/Opus tipicamente).
-**Ultimo aggiornamento istruzioni**: 2026-04-28.
+**Ultimo aggiornamento istruzioni**: 2026-04-30 (post-cornice-del-mondo + brieffer install).
