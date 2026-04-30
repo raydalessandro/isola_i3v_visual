@@ -181,3 +181,128 @@ Composition: from waist up to the spines on the crown, three-quarter
 view. Aspect ratio 4:5 (portrait). The pointing finger is the visual
 calamita.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Pun col padre Mèmolo (cucciolo che fa da ponte)
+
+**Filename suggerito**: `pun_canonica_v1_con_papa.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Pun]
+
+SCENE — Pun standing beside his father Mèmolo:
+Pun stands beside Mèmolo (small, round adult hedgehog with the crooked
+ochre scarf), three-quarter view from the front. Pun is shorter than
+his father (Pun ~0.4 GU vs Mèmolo ~0.55 GU — Pun is smaller). Pun's
+posture is more upright and coordinated than his father's slightly
+bowed gait. His right hand reaches up to gently touch his father's
+arm — the canonical gesture of "io aiuto papà a ricordare". His left
+hand holds the satchel strap.
+
+His face shows soft attention to his father: small black eyes turned
+toward Mèmolo, mouth slightly open ("Al pozzo, papà."). Mèmolo is
+turned slightly to the side, the typical confused expression on his
+muzzle, the crooked scarf at his neck.
+
+Background: the village piazza, warm ochre packed earth, a hint of
+the casetta tonda di Mèmolo in soft watercolor wash behind. Late
+morning warm light.
+
+Lighting: warm side-light from the upper-left, both hedgehog figures
+in gentle warm glow. The crooked scarf of Mèmolo and the satchel of
+Pun catch small highlights.
+
+Composition: medium shot, two figures side by side, Pun on the right
+slightly shorter than Mèmolo. Aspect ratio 4:5 (portrait). The two
+characters create a soft generational pair.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `pun_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Pun]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Pun in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him standing
+upright in NEUTRAL pose: arms relaxed, feet slightly apart, head
+upright, neutral attentive expression. The muted-ochre tunic and
+the cloth satchel must be visible.
+
+Views from left to right:
+1. FRONT view — frontal full body
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — left profile, the long young hedgehog muzzle in
+   silhouette, the spine pattern visible on the back
+4. BACK view — from behind, showing the back spines and the satchel
+   strap across the back
+
+Identical across all four views: same pale-beige spines, same cream
+belly, same muted-ochre tunic, same satchel, same height (~0.4 GU)
+and young-cub proportions.
+
+Lighting: even neutral, soft watercolor wash on cream background.
+Composition: 16:9 (landscape), four figures side by side.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- Aspect ratio: 3:4 (imm 1), 4:5 (imm 2-3), 16:9 (turnaround).
+- 4-6 varianti per immagine.
+- Coerenza tra le 4 immagini: stesso riccino, stesso satchel, stesso tunic ochre.
+
+## Negative prompt
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, modern backpack,
+school uniform, eyeglasses, sapientello-wise-cub pose, bristled
+aggressive spines, porcupine quills, baby-bottle, pacifier, sitting
+on Memolo's head, identical-to-Memolo (Pun is more coordinated, his
+own person), cute mascot, kawaii
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book
+- [ ] **Riccino europeo cub anatomicamente corretto** (non istrice/porcupine)
+- [ ] **Spine giovani soft pale-beige laying back** (non bristled)
+- [ ] Pelo cream-beige su faccia, ventre, parte sotto
+- [ ] Lungo muso del riccino (cub version, leggermente più corto di Mèmolo)
+- [ ] Occhi piccoli neri perlina (non huge anime)
+- [ ] **Tunica muted-ochre child-style** (echo Mèmolo register, ma sua propria)
+- [ ] **Satchel di stoffa scuola sulla spalla** (FIRMA — controllo critico)
+- [ ] A piedi nudi (zampe del riccino)
+- [ ] Statura ~0.4 GU (più piccolo di Noah 0.65, più piccolo di Mèmolo 0.55)
+- [ ] Modalità di registro corretta:
+  - Imm.1: eager school-cub (skip-frenato, mano alza satchel, voce mid-sentence)
+  - Imm.2: lateral-intuition pause (fermo, dito laterale, eyes briefly clear)
+  - Imm.3: con Mèmolo (Pun più piccolo, mano sul braccio del padre, gesto "io aiuto")
+  - Imm.4: 4 vedute neutre
+- [ ] Nessun pattern AI bandito (no sapientello, no Disney baby cuteness, no porcupine)
+
+---
+
+## Ordine di generazione consigliato
+
+1. Imm.4 (turnaround). 2. Imm.1 (eager school-cub). 3. Imm.2 (lateral-intuition). 4. Imm.3 (con Mèmolo).
+
+---
+
+**Maintainer:** Ray + Claude · **v1.0 (2026-04-30)** · Status: pronto per Grok Imagine
