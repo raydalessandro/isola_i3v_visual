@@ -110,14 +110,28 @@ Claude apre `TEMPLATE_descrizione_narrativa_social.md`:
    - G: frasi tipiche (solo per personaggi)
 2. Output: file `descrizione_narrativa_social.md`
 
-### Fase 4 — Generazione immagini (fa Ray)
+### Fase 4 — Generazione immagini (workflow esterno)
 
-Ray:
-1. Apre `prompt_grok.md`
-2. Genera le immagini canoniche con Grok Imagine
-3. Verifica con la checklist post-generazione
-4. Salva in `visual/<famiglia>/.../<id>/immagini/<id>_<vista>_v1.png`
-5. Se l'immagine non passa la checklist → torna a Claude con feedback per aggiustare il prompt
+**Setup attuale (dal 2026-04-30):** la generazione è delegata a una persona terza coordinata in stanza con Ray, che usa il modulo `_visual_pipeline/_api/` (Flux Kontext Pro via fal.ai) sul suo PC.
+
+**Flusso:**
+1. Claude prepara `scheda.md` + `prompt_grok.md` per N personaggi (mandate di 3-5)
+2. Ray pusha su main
+3. La persona terza fa `git pull` e legge i prompt dei personaggi del batch
+4. Esegue Flux Kontext Pro coi prompt, usando come `reference_image` un'immagine canonica già esistente (Fiamma o Bartolo) per coerenza di stile
+5. Verifica le immagini con la `CHECKLIST.md` post-generazione
+6. Eventuale tuning seed/prompt se l'output non è in canone
+7. Manda a Ray una zip di immagini via Telegram (filename: `<id>_canonica_v1_<vista>.jpg`)
+8. Ray pusha le immagini su `visual/<famiglia>/.../<id>/immagini/`
+9. Ray rigenera `catalogo_web/data/entities.json`
+
+**Vincoli per la persona terza:** vedi [`_visual_pipeline/_api/README.md`](../_api/README.md) per la guida operativa completa. Sintesi: niente push diretto, output solo immagini, decisioni autoriali sempre con Ray.
+
+**Tier raccomandato:** `flux-kontext-pro` ($0.04/img). Stima budget totale catalogo: ~$10-12.
+
+**Storia provider:**
+- 2026-04-29: 8 immagini di Fiamma + Bartolo generate da Ray con **Grok Imagine** (validano lo stylesheet saga). Restano canoniche e si usano come reference visive per allineare i prossimi personaggi.
+- 2026-04-30+: switch a **Flux Kontext Pro** (più economico, character consistency nativa via reference image, scalabile per il resto del catalogo).
 
 ### Fase 5 — Push su GitHub (fa Ray)
 

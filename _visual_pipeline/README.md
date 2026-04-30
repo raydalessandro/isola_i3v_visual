@@ -47,6 +47,14 @@ _visual_pipeline/
 │   ├── PIPELINE.md                    ← flusso completo (cosa fare, in che ordine)
 │   └── CHECKLIST.md                   ← checklist passo-passo per ogni scheda
 │
+├── _api/                              ← modulo generazione immagini (Flux + OpenAI)
+│   ├── README.md                      ← guida operativa per la persona terza
+│   ├── flux_image_gen.py              ← Flux via fal.ai (4 tier, kontext per consistency)
+│   ├── openai_image_gen.py            ← alternativa GPT Image (text-to-img + edit)
+│   ├── example_generate.py            ← test rapido
+│   ├── .env.example                   ← template chiavi API (FAL_KEY, OPENAI_API_KEY)
+│   └── requirements.txt               ← deps Python
+│
 └── _esempi/                           ← schede validate da usare come riferimento
     ├── fiamma/                        ← ✅ personaggio (validato 2026-04-29) — STANDARD
     │   ├── scheda.md
