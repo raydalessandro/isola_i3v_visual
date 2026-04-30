@@ -223,3 +223,166 @@ above the head, three-quarter view. The hand reaching into the
 bush and the bisaccia are the focal points. Aspect ratio 4:5
 (portrait).
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "walking with full pouch"
+
+**Filename suggerito**: `zolla_canonica_v1_cammino.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Zolla]
+
+SCENE — Zolla walking back home with full bisaccia:
+Zolla walks along a packed-earth path between the Orti and his
+cottage. Three-quarter view from the front-left, mid-step — small
+old-squirrel feet planted unevenly (one slightly forward), the body
+in measured walking gait. The bisaccia pouch is OBVIOUSLY FULL on
+his hip, bouncing slightly with each step, a few items (acorns, a
+chestnut, a seed-pod) visible at the top. The bushy silver-gray
+tail sways behind him.
+
+His face shows the satisfied-but-measured expression: eyes ahead on
+the path, mouth closed but a hint of the small old-squirrel smile
+of a job done, ears slightly relaxed. The brown-ochre vest is fully
+visible front, the cream-beige shirt underneath at the chest.
+
+Background: the path between Orti and cottage, soft earth tones,
+late-afternoon light. Hints of cultivated rows on one side, the
+forest edge on the other. NO other figures. The cottage suggested
+in the distance ahead (warm low building, smoke from chimney
+optional in autumn scenes).
+
+Lighting: warm afternoon golden-hour light from the side. The fur
+catches a soft highlight, the items in the pouch glint in the warm
+light, the tail in soft shadow.
+
+Composition: full body visible, mid-stride three-quarter view, the
+path extending ahead toward the implied home. Aspect ratio 4:5
+(portrait). The figure occupies center, the path leading forward
+to the right.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `zolla_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Zolla]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Zolla in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him standing
+upright in NEUTRAL pose: hands relaxed at his sides (NO acorns for
+this turnaround — anatomical clarity), feet slightly apart, the tail
+held in a relaxed neutral position arched slightly behind. The
+brown-ochre vest, the bisaccia pouch on the hip, and the bare
+squirrel feet must all be visible.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal — shows the
+   silver-gray fur, white-gray muzzle and belly, small dark eyes,
+   small tufted ears, the brown-ochre vest, the bisaccia
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile, the BIG BUSHY TAIL clearly
+   visible behind him, the squirrel rounded muzzle in silhouette,
+   the bisaccia on the hip
+4. BACK view — from behind, showing the FULL BUSHY SILVER-GRAY TAIL
+   (most visible feature from this angle), the back of the vest, the
+   bisaccia strap across the back, the small rounded ears
+
+The character must look IDENTICAL across all four views: same silver-
+gray fur with age-lightening at muzzle and belly, same big bushy
+tail, same brown-ochre vest, same bisaccia pouch, same height
+(~0.7-0.75 GU) and small old-squirrel build.
+
+CRITICAL ANATOMICAL DETAILS visible: the BUSHY SILVER TAIL (especially
+in profile and back views), the small tufted ears, the small dark
+eyes, the small dexterous hands, the rounded muzzle.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- Aspect ratio: 3:4 (imm 1), 4:5 (imm 2-3), 16:9 (turnaround).
+- 4-6 varianti per immagine.
+- Coerenza tra le 4 immagini: stesso scoiattolo grigio anziano, stessa coda, stessa bisaccia.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, beret, chef-hat,
+red squirrel coloration (he is GRAY, not red), Cinderella squirrel-
+friend cute style, Disney chipmunk huge cheek pouches, Alvin-and-
+the-chipmunks style, modern satchel with zipper, eyeglasses always
+worn (rare exception only), human-style long beard on squirrel face,
+ecological lecture pose, sage-master pose, cute mascot, kawaii
+```
+
+## Negative prompt specifici per Zolla
+
+```
+NO RED squirrel coloration — STRICTLY gray squirrel (Sciurus
+carolinensis aged), silver-gray fur. NO huge cheek pouches like a
+chipmunk (he is a SQUIRREL, not a chipmunk). NO Disney/Pixar cute
+exaggeration. NO carrying acorns like jewelry — bisaccia is
+functional. NO modern satchel — woven jute hand-made. NO ecological
+preachy gaze. NO "I remember when there were more chestnuts" pose
+(canonical: NO nostalgia). NO smoking pipe (no, even if he is old).
+NO running fast — he is OLD, slow squirrel rhythm. NO hat or beret.
+NO long human-style beard on the squirrel face.
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D)
+- [ ] **Scoiattolo GRIGIO anziano anatomicamente corretto** (Sciurus carolinensis aged, NON scoiattolo rosso, NON chipmunk)
+- [ ] **Pelo silver-gray con muso e ventre più chiari** (firma age-lightening)
+- [ ] **CODA BIG BUSHY silver-gray** (firma anatomica, controllo critico — soprattutto in profile e back view)
+- [ ] Piccoli orecchini tufted, occhi piccoli neri-bruni
+- [ ] Muso arrotondato di scoiattolo (NON chipmunk con cheek-pouches)
+- [ ] **Vest brown-ochre** aperto sul davanti con due piccole tasche (FIRMA — controllo critico)
+- [ ] **Bisaccia di juta pouch sull'anca** con noci/semi visibili (FIRMA — controllo critico)
+- [ ] Camicia cream-beige opzionale sotto il vest
+- [ ] A piedi nudi (zampe scoiattolo)
+- [ ] Statura ~0.7-0.75 GU (più alto di Mèmolo riccio, più basso dei fratelli)
+- [ ] Modalità di registro corretta:
+  - Imm.1: counting at the doorstep (seduto, mani con acorns/semi, fila ordinata sul gradino, voce mid-count)
+  - Imm.2: gathering nei cespugli (chinato a margine Foresta, mano in cespuglio, bisaccia aperta)
+  - Imm.3: cammino con bisaccia full (mid-stride, pouch bouncing, autumn light)
+  - Imm.4: 4 vedute neutre, anatomia squirrel completa, coda bushy visibile
+- [ ] Nessun pattern AI bandito (no scoiattolo rosso Disney, no chipmunk, no nostalgia ambientalista, no sage-master)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine.
+
+## Ordine di generazione consigliato
+
+1. Imm.4 (turnaround) per primo — fissa il pattern grigio + coda bushy + bisaccia.
+2. Imm.1 (counting at doorstep) — ID card.
+3. Imm.2 (gathering nei cespugli) — modalità di lavoro.
+4. Imm.3 (cammino con bisaccia full) — modalità in motion.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
