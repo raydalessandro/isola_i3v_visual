@@ -133,3 +133,97 @@ his head or being "tamed" by him. NO pipe, NO walking stick (he
 walks unsteadily but uses no aid). NO eyeglasses. NO vest with
 buttons or watch chain (no Wind-in-the-Willows toad style).
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (piazza, modalità confuso-trotterellante)
+
+**Filename suggerito**: `memolo_canonica_v1_fronte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Mèmolo]
+
+SCENE — Canonical full-body view, confused-trottering mode in the
+piazza:
+Mèmolo stands on the sand-ochre packed earth of the village piazza,
+slightly bowed forward, three-quarter view from the front-left. He
+appears to have just stopped mid-step — one short hedgehog leg slightly
+ahead of the other, as if he was trotting and just forgot why. His
+small front paws are raised in front of his belly, fidgeting with the
+crooked scarf at his neck (he is in the act of trying to straighten
+it for the thousandth time). His head is tilted slightly to one side.
+
+His face shows the default confused expression: long hedgehog muzzle
+pointing slightly down, small dark mouth open as if mid-sentence
+("Aspetta dove andavo..."). The small black beady eyes catch a tiny
+glint of light — they look unfocused but are actually sharp. The
+spines on his back and crown lay BACK (soft, adult, not bristled).
+
+The muted-ochre / russet scarf is clearly visible, knotted CROOKEDLY
+on his neck, the tail-end hanging slightly off-center on his chest.
+The light cream-beige face fur and belly fur are visible, the spines
+on the back creating the typical hedgehog silhouette.
+
+Background: the village piazza, suggested in soft watercolor wash —
+warm ochre packed earth, a hint of the Albero Vecchio in the upper-
+left corner of the frame (NOT centered, just suggested at the edge —
+canonical Bible vincolo: the Old Tree is the center of the mandala,
+must remain free, but it can be hinted at as an off-center
+background). Soft cream-yellow village stone walls in the distant
+background, low to the ground.
+
+Lighting: warm late-morning natural light, slightly diffused. Mèmolo
+catches a gentle warm glow on his light belly fur and on his ochre
+scarf. Soft shadows pool around his small feet.
+
+Composition: full body visible, head to feet, slight three-quarter
+view. Aspect ratio 3:4 (portrait). The figure occupies the lower-
+center of the frame (Mèmolo is small and round, low to the ground —
+the composition emphasizes his height-on-ground).
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "sciarpa storta" (close-up firma visiva)
+
+**Filename suggerito**: `memolo_canonica_v1_sciarpa.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Mèmolo]
+
+SCENE — Mèmolo adjusting the scarf for the thousandth time:
+Close-up medium shot of Mèmolo from the chest up, three-quarter view
+from the front. Both small front paws are raised at his neck, busy
+trying to re-knot the scarf — but the scarf is OBVIOUSLY GOING TO
+BE CROOKED AGAIN no matter what he does. The hands move clumsily,
+one paw holds an end while the other tugs.
+
+His face is fully visible at this close range. Long hedgehog muzzle,
+small dark mouth slightly open in concentration ("Eh... no, così no,
+così..."), small dark beady eyes looking down at the scarf-knot. The
+spines on his crown lay back. The light cream-beige facial fur is
+soft, with small individual hair-strokes visible in painterly style.
+
+The muted-ochre / russet scarf is the focal point of the image: small
+fabric, slightly faded, slightly fringed at the edges, IN THE ACT OF
+BEING ADJUSTED but clearly destined to remain crooked. Loose threads
+visible.
+
+Background: BLURRED to put all focus on the face and the scarf-
+gesture. A soft cream-warm wash with hints of the village in
+painterly suggestion (not specific architecture).
+
+Lighting: soft warm natural light from the upper-left, the scarf and
+the face catching gentle highlights, the back of the head and spines
+in soft shadow.
+
+Composition: medium close-up, from chest/scarf up to slightly above
+the spines on the crown. Aspect ratio 4:5 (portrait). The hands and
+scarf occupy the lower-center, the face the upper-center. This image
+fixes the canonical "scarf-adjustment" gesture for use in any scene
+where Mèmolo is in default mode.
+```
