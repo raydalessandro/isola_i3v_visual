@@ -1,6 +1,89 @@
-# PROJECT_STATE — Snapshot al 2026-04-29
+# PROJECT_STATE — Snapshot al 2026-04-30
 
-> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → preparazione fase G) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → fase G → cornice del mondo) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-04-30 — Visual prompt grok + Cornice del Mondo + Brieffer
+
+**Tre macro-fasi nello stesso giorno.**
+
+### A. Fase F.2 visual: 28 prompt grok generati
+
+- **14 personaggi:** 3 fratelli (Gabriel/Elias/Noah, opzione B fittizio canonico), 4 primari (Rovo/Stria/Mèmolo/Grunto — Fiamma/Bartolo già canonizzati), 4 secondari (Salvia/Nodo/Amo/Zolla), 5 cuccioli (Pun/Toba/Bru/Cardo/Liù).
+- **14 oggetti:** 13 oggetti-simbolo saga (bandana_rovo, bisaccia_zolla, braccialetto_s9, cesto_salvia, cicatrice_grunto, conchiglia_amo, corda_nodo, lanterna_velata_s10, nido_vuoto_s08, pagnotta_forno, scialle_stria, sciarpa_memolo, pallone_di_stoffa_cucita) + grembiule_fiamma pre-esistente.
+- **Stylesheet saga uniforme:** acquerello + inchiostro storybook tradizione Beatrix Potter / Brian Wildsmith / Ernest H. Shepard. Mai cartoon/anime/3D/Pixar.
+- **Output per scheda:** 4 immagini canoniche per personaggi (`fronte` + 2 modalità + `turnaround`), 1-2 per oggetti.
+- **Naming canonico:** `<id>_canonica_v1_<vista>.jpg` + `<id>_turnaround_v1.jpg` (intoccabili come reference).
+- **Workflow esterno:** Ray estrae prompt da GitHub, genera con **Grok Imagine** (sostituisce piano Flux precedente perché Grok rispetta meglio lo stile), carica immagini in `immagini/` di ogni entità.
+
+### B. Fase "Cornice del Mondo" — 7 step completati
+
+Pacchetto consegnato da Ray come 6 documenti DOC_1..DOC_6 + README. Tutti i 7 step eseguiti con script idempotenti dry-run/--apply, backup automatico, verifica idempotenza.
+
+| Step | Cosa | Commit |
+|---|---|---|
+| 1+2 | nodo radice `world_conventions` (`refrain_animal_identification` + `path_details: {paths: {}}`); `quote_tracker.refrain_animal_used_per_story: []`; bump `schema_version 1.3 → 1.4`, `graph_version 1.1.0 → 1.2.0` | `c824496` |
+| 3 | `## Saluto del gruppo` in 5 schede collettivi + nuova scheda `pescatori_case_basse/scheda.md` (6° gruppo) | `a3e654e` |
+| 4 | 24 `cornice_dettagli` distribuite (2/storia × 12); 8 tuple in `refrain_animal_used_per_story`; 2 entry in `cantilene_coltivatori_stories` | `8b70958` |
+| 5 | 36 sentieri "fantasma" appesi a `locations_secondary` di 12 storie | `92e87b6` |
+| 6 | `world_conventions.path_details.paths` popolato con 5 sentieri Tier A (20 dettagli totali, schema senza `tipo`) | `83e361e` |
+| 7 | `## Coerenza cross-scena` di 5 schede sentieri Tier A aggiornata con dettagli stabili | `de87ac2` + `9b8c30e` |
+
+**Decisioni autoriali Ray applicate (2026-04-30):**
+- 6° gruppo `pescatori_case_basse`: SI.
+- Pattern A pre-eco s03 (conchiglia): NO incremento `pattern_a_pre_eco_stories` (cornice scritta come `oggetto_anomalo`, minimo invasivo).
+- `narrator_address` s09 (cantilena modulata): NO (resta a 4 voci).
+- Riequilibrio Giro E: SI (S07-C1 spostata da D a E).
+- Schema slot dettaglio sentiero: campo `tipo` rimosso.
+- Vincolo "tre nomi, mai quattro" plurale formula: applicato (s08-c2 = arvicola/ghiro/faina).
+- Vincolo unicità saga animale: applicato (s12-c1 ermellino sostituisce "faina" già usata in s08).
+
+**Distribuzione cornici per processo:** A=4, B=5, C=6, D=6, E=3 (24 tot).
+**Formule applicate:** 8 occorrenze (5 SG + 2 PL + 1 in s11 doppia) in 6 storie, 11 animali distinti unici saga.
+
+### C. Brieffer install — 12 brief writing generati
+
+- **Pacchetto installato:** `scripts/build_writing_brief.py` (1128 righe, zero token LLM) + `skills/brieffer/SKILL.md`.
+- **Output:** `pipeline_narrativa/writing_briefs/sNN_writing_brief.md` (12 file).
+- **Reference Ray:** `pipeline_narrativa/writing_briefs/_reference/s01_writing_brief_FINAL.md`. Test passato: `s01_writing_brief.md` identico a reference (1730 righe, diff vuoto).
+- **Token budget per brief:** 16k-32k parole (s11=32670, s12=29314, s06=24653, etc.).
+- **13 sezioni standard** per ogni brief: frontmatter operativo, core narrativo, narrazione fattuale integrale, 10 hook visivi, cast in scena (voci + vincoli + frasi codificate + canone visivo), cornici del mondo, sentieri attraversati con dettagli, saluti, formula ritornello, vincoli universali (PATTERN_AI_DA_BANDIRE integrale), quote tracker awareness, echi/callback/semi, istruzione operativa.
+
+### Stato finale grafo (2026-04-30 sera)
+
+- **`pipeline_narrativa/story_graph.json`:** schema 1.4, graph 1.2.0
+- **Nuovi nodi root:** `world_conventions { refrain_animal_identification, path_details: { paths: {5 sentieri Tier A, 20 dettagli} } }`
+- **Quote tracker esteso:** `refrain_animal_used_per_story` (8 tuple), `cantilene_coltivatori_stories` (+2 entry)
+- **`stories.<sid>.cornice_dettagli`:** 24 cornici distribuite (2/storia × 12)
+- **`stories.<sid>.locations_secondary`:** +36 sentieri fantasma
+- **Migration log:** entry `cornice_mondo_step1_2`, `cornice_mondo_step4`, `cornice_mondo_step5`, `cornice_mondo_step6`
+- **Backup chain:** 4 nuovi backup canonici (`pre_cornice_mondo`, `pre_step4_cornici`, `pre_step5_sentieri`, `pre_step6_path_details`)
+
+### Catalogo
+
+- **Visual entità:** 115 → 116 (+pescatori_case_basse)
+- **Schede `provvisorio`:** 112; **`canonico`:** 4 (Fiamma, Bartolo, Forno, grembiule_fiamma)
+- **Catalogo web:** rigenerato (auto-rideploy GitHub Pages su push main)
+
+### Tooling nuovo introdotto in questa sessione
+
+- `scripts/cornice_mondo/` (nuova directory):
+  - `step1_world_conventions.py` (Step 1+2)
+  - `step4_cornici.py`
+  - `step5_sentieri_fantasma.py`
+  - `step6_path_details.py`
+  - `_data/{refrain_animal_identification.yaml, cornici_24.yaml, sentieri_fantasma.yaml, path_details_tierA.yaml}`
+  - `_audit/` (riservata per audit successivi)
+- `scripts/build_writing_brief.py` (1128 righe)
+- `skills/brieffer/SKILL.md`
+- `pipeline_narrativa/writing_briefs/` (12 brief + `_reference/`)
+
+### Prossimi passi
+
+- **Per Ray:** rifetcha repo, valida brief, **scrive a mano la prosa** delle 12 storie partendo dai brief autosufficienti (workflow dichiarato: "tocca a me che faccio a mano il processo di scrittura").
+- **Per chi genera immagini esterno:** lavorare sui 28 prompt grok già pubblicati. Caricare immagini canoniche in `immagini/` di ogni entità.
+- **Pacchetto pendente:** Tier B + Tier C dettagli sentieri (annunciato da Ray, non ancora consegnato).
+
+---
 
 ## Sessione 2026-04-29 — Fase G in corso (schema bump fatto + ciclo A pronto)
 
