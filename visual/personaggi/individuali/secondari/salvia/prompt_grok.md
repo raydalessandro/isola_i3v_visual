@@ -220,3 +220,168 @@ quarter view. Aspect ratio 4:5 (portrait). The extended hand and the
 herb bundle create the visual focus toward the implicit child off-
 frame to the left.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "walking with basket"
+
+**Filename suggerito**: `salvia_canonica_v1_cammino.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Salvia]
+
+SCENE — Salvia walking with her basket:
+Salvia walks along a path between the Orchards and the edge of the
+Forest. Three-quarter view from the front-left, mid-step — one long
+hare leg slightly forward, the other just lifting at the back. Her
+basket is on her right hip, held by the right hand, full of mixed
+green plants and herbs visible at the top. Her left hand swings
+naturally with the stride. The body has a measured forward lean,
+characteristic of the hare gait.
+
+Her face shows the walking-silent expression: ears upright and alert,
+amber-brown eyes looking forward along the path, mouth closed. The
+narrow hare muzzle catches the side light. The sandy-beige fur and
+the cream-ivory underside are clearly visible.
+
+The sage-green apron flutters slightly with the motion. The dress
+underneath shows the natural creases of walking. The dried-herb
+bundle at her belt sways. The basket is steady on her hip.
+
+Background: a path of packed earth between two zones — sage-green
+Orchards on one side, deep green Forest edge on the other, suggested
+in painterly wash. Soft muted sky above. NO other figures visible.
+
+Lighting: bright warm midday light from above-left. The figure casts
+a small shadow on the path. The basket plants catch a gentle highlight.
+
+Composition: from feet to head with ears fully visible, three-quarter
+view. Aspect ratio 4:5 (portrait). The figure occupies center-left,
+the path extending to the right ahead — composition leaves space in
+the direction of motion.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `salvia_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Salvia]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Salvia in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show her standing
+upright in a NEUTRAL pose: arms relaxed at her sides (NO basket, NO
+plants in hand for this turnaround — the canonical anatomy must be
+visible without props), feet slightly apart, ears upright, neutral
+attentive expression. The sage-green apron over the sand-beige dress
+must be visible in all four views (the apron is a signature). The
+small dried-herb bundle at her belt must also be visible.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal
+2. THREE-QUARTER view — turned 45 degrees to her left
+3. SIDE PROFILE — full left profile, the long hare ears in silhouette,
+   the long muzzle clearly visible
+4. BACK view — from behind, showing the back of the apron tie at the
+   waist, the sand-beige dress, the back of the long hare ears, the
+   bare hare feet
+
+The character must look IDENTICAL across all four views: same sandy-
+beige fur with darker ear-tips and eye-mask, same cream-ivory
+underside, same long ears, same amber-brown eyes, same sage-green
+apron, same sand-beige dress, same height (~1.0 GU lean), same
+dried-herb bundle at belt.
+
+CRITICAL ANATOMICAL DETAILS visible: the LONG hare ears (especially
+in front, three-quarter, and profile), the narrow hare muzzle (front
+center, profile fully), the long hare legs (back view), the hare
+feet (front and back).
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- Aspect ratio: 3:4 (imm 1), 4:5 (imm 2-3), 16:9 (turnaround).
+- 4-6 varianti per immagine, scegliere la migliore.
+- Coerenza tra le 4 immagini: stessa lepre, stesso pattern di palette, stesso grembiule sage-green, stesse erbe firma.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, cap, ribbons,
+white fluffy bunny look, Easter Bunny pastel colors, basket of eggs,
+carrots in basket, magical glowing herbs, floating petals around
+character, crystal ball, mortar and pestle, mother-figure warm hug
+pose, long flowing hair, cute mascot, kawaii, doll-like proportions
+```
+
+## Negative prompt specifici per Salvia
+
+```
+NO white rabbit (she is a HARE — sandy-beige, longer, leaner, more
+athletic). NO drooping rabbit ears (her ears are upright). NO
+chubby rabbit face (the hare face is narrow). NO domestic-pet look.
+NO carrots in basket. NO magical sparkles around the herbs. NO
+Easter pastels. NO Fiamma-style warm motherly hug pose (she is
+efficient, not warm-cuddly — Bible vincolo). NO chatty conversational
+pose. NO mortar and pestle (she gives plants directly). NO modern
+labels on herbs. NO scientific botanical illustration look (she is
+a healer, not a botanist).
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D)
+- [ ] **Lepre europea anatomicamente corretta** (Lepus europaeus, NON coniglio domestico)
+- [ ] **Lunghe orecchie del hare upright** (firma anatomica)
+- [ ] Pelo sandy-beige/taupe, **punte orecchie e maschera occhi più scure**
+- [ ] Ventre cream-ivory chiaro
+- [ ] Muso narrow del hare (più appuntito del coniglio)
+- [ ] Occhi amber-brown grandi, attenti, laterali (non frontali da coniglio domestico)
+- [ ] Lunghe gambe e piedi del hare nudi (mai scarpe)
+- [ ] **Grembiule sage-green** indossato sopra dress sand-beige (FIRMA)
+- [ ] Maniche arrotolate al gomito
+- [ ] **Piccolo bundle erbe secche al cinturone/grembiule** (FIRMA — controllo critico)
+- [ ] Cestino di vimini con erbe in mano o sull'anca (in imm.1, imm.3)
+- [ ] Statura ~1.0 GU (alta come Gabriel, ma più magra/allungata)
+- [ ] Modalità di registro corretta:
+  - Imm.1: gathering (chinata su un'erba, cestino sull'anca)
+  - Imm.2: examining (in ginocchio, mano tesa verso bambino implicito, frase pratica breve)
+  - Imm.3: cammino (mid-stride, basket sull'anca, ears upright)
+  - Imm.4: 4 vedute neutre, no props, anatomia hare ben visibile
+- [ ] Nessun pattern AI bandito (no Easter Bunny, no Disney bunny, no fairy-healer con sparkles, no madre-warmth-hug)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine.
+
+## Ordine di generazione consigliato
+
+1. Imm.4 (turnaround) per primo.
+2. Imm.1 (fronte gathering) — ID card.
+3. Imm.2 (examining/cura) — modalità relazionale.
+4. Imm.3 (cammino) — ultimo, in motion.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
