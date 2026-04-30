@@ -6,8 +6,8 @@ sottotipo: bambini
 specie: umano
 tipo_grafo: protagonista
 ruolo_saga: protagonista
-status: provvisorio
-ultima_modifica: 2026-04-29
+status: canonico
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.gabriel"]
 appare_in_storie: []
 relazioni:
@@ -215,11 +215,13 @@ Vedere `descrizione_narrativa_social.md` nella stessa cartella.
 
 ## Disallineamenti / domande aperte
 
-- **Età narrativa nelle storie**: il grafo dice "nato 28-10-2021". Ad oggi (2026) Gabriel reale avrebbe ~5 anni. Ma le storie lo ritraggono con autonomia da bambino di **6-7 anni**: cammina ore, fa decisioni, va alle Montagne, ecc. **Decisione autoriale**: età narrativa Gabriel = 6-7 anni nelle storie (proiezione in avanti rispetto alla data nel grafo). **Da confermare con Ray** se vuole età diversa o se vuole aderenza stretta alle date.
-- **Colore capelli**: derivazione "castani scuri/castano-chiari" da palette "toni profondi" + standard bambino italiano/mediterraneo. **Ray potrebbe voler castani specifici, biondi, rossicci** in base ai suoi figli reali. Confermare.
-- **Colore occhi**: derivazione "castani scuri/marrone profondo" da palette "toni profondi". **Da confermare con Ray** (azzurri, verdi, nocciola sono alternative possibili).
-- **Aderenza ai figli reali**: Ray potrebbe voler somiglianza visiva diretta ai suoi figli. **Decisione attuale**: tratti coerenti col canone saga ma fittizi. Ray può sostituire con tratti precisi dei figli reali — la pipeline non perde stabilità, basta aggiornare la scheda con i tratti definitivi.
-- **Casa dei fratelli**: posizione esatta sull'isola non è dichiarata in Bible. Coerente col Villaggio centrale ma non confermato.
+> **Decisione autoriale Ray del 2026-04-30 (opzione B):** i tratti fisici sotto NON sono modellati sui figli reali. Sono **tratti coerenti col canone saga (palette §6 Bible "toni profondi" + standard bambino mediterraneo)**, fittizi ma stabili. La pipeline non perde stabilità: se in futuro Ray vuole sostituirli con tratti precisi dei figli reali basta aggiornare la scheda e rigenerare le immagini canoniche. **Per i prompt di generazione attuali (Flux Kontext Pro), si usano questi tratti.**
+
+- **Età narrativa nelle storie**: 6-7 anni (proiezione narrativa rispetto alla data di nascita 28-10-2021 nel grafo). Ray può ricalibrare se serve coerenza temporale stretta.
+- **Colore capelli**: castani scuri/castano-chiari (derivazione "toni profondi" + standard mediterraneo). ✅ confermato opzione B.
+- **Colore occhi**: castani scuri / marrone profondo (derivazione "toni profondi"). ✅ confermato opzione B.
+- **Aderenza ai figli reali**: Bible §7.2 dichiara "i tre fratelli sono i figli di Ray (con riconoscibilità visiva costante)". Decisione autoriale 2026-04-30: per ora si usano tratti canonici-fittizi coerenti col mondo. Sostituibili in futuro senza rotture pipeline.
+- **Casa dei fratelli**: posizione esatta sull'isola non è dichiarata in Bible. Coerente col Villaggio centrale ma non confermato. Non blocca le illustrazioni (le scene casa s09/s12 si svolgono dentro, non serve facciata canonica).
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
