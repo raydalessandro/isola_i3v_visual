@@ -239,3 +239,100 @@ Composition: from feet to slightly above head, three-quarter view, the
 figure occupies the center-right of the frame leaving space ahead in
 the direction of his motion. Aspect ratio 4:5 (portrait).
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "sentire interno" (ritratto, sguardo distolto)
+
+**Filename suggerito**: `gabriel_canonica_v1_interno.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Gabriel]
+
+SCENE — Gabriel in inner-feeling mode (the rare "face-elsewhere"):
+Gabriel sits on a low stone wall or wooden bench, three-quarter view
+from the front-right. His posture is composed but slightly closed —
+shoulders not squared, leaning forward a touch, both feet on the ground.
+His left hand rests on his right upper arm (a quiet self-holding gesture).
+His right hand rests on his thigh, fingers lightly curled, not gripping.
+
+His face is the key visual element. He is NOT looking at the viewer
+and NOT looking at any specific thing in front of him — his gaze is
+directed sideways and slightly downward, not blank, not lost, just
+turned aside. The expression is the expression of a child who has felt
+something and doesn't want it shown. The mouth is slightly more pressed
+than in observer mode, the lower lip a fraction tucked. Eyebrows are
+drawn together with a small vertical line between them. The whole face
+has gone QUIET — no smile, no frown, just a private interior weight.
+
+The deep purple scarf is visible at his chest, gathered in a soft fold.
+His indigo shirt is slightly creased at the collar. His left hand on
+his upper arm is the small "tell" of this mode — barely noticeable,
+canonical signal of his hidden fear (his brothers will grow apart).
+
+Background: a quiet outdoor setting — a stone wall behind him, soft
+warm grey-ochre tones, a hint of late afternoon golden light coming
+from his right. A single tree branch with a few leaves visible at the
+upper edge of the frame. Background figures NOT visible — this is a
+character study moment.
+
+Lighting: warm late afternoon golden side-light from the right, gentle
+shadow pooling under his eyes and along his left side. Slightly more
+contained than the observer image — as if the air itself has gone
+quieter.
+
+Composition: from waist up to slightly above the head, three-quarter
+view. Aspect ratio 4:5 (portrait). This image fixes the canonical
+"inner-feeling" pose for use in scenes s07/s08/s09/s12 when the story
+turns delicate.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `gabriel_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Gabriel]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Gabriel in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him in the same
+neutral standing pose: arms relaxed at his sides, feet slightly apart,
+neutral attentive expression (observer mode default). No background
+scenery, no props except the deep purple scarf at his neck (signature),
+just the character clearly visible for reference.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile
+4. BACK view — from behind, showing the back of the indigo shirt, the
+   trouser cord at the waist, the back of the dark brown leather shoes
+
+The character must look IDENTICAL across all four views: same hair
+color and length, same skin tone, same indigo shirt, same earth-brown
+trousers, same leather shoes, same height and proportions, same purple
+scarf knot visible at the neck (front and side; partly visible on
+back). This is a model sheet for visual consistency reference, NOT
+four separate illustrations.
+
+The figure is shown at a HEIGHT THAT WILL BE THE 1.0 GU REFERENCE for
+the saga — Gabriel sets the canonical scale. His proportions in this
+sheet are the master reference against which Elias (0.85 GU) and Noah
+(0.65 GU) will be measured.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing. Add small height tick
+marks at the bottom of the ground line if possible (subtle, not
+distracting), to anchor the 1.0 GU scale reference.
+```
