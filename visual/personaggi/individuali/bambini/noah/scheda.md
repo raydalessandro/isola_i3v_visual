@@ -156,3 +156,92 @@ I tre fratelli sono umani, gli unici umani dell'isola. I genitori non sono mai c
 - **In s10**: dice "Ho paura. Qui è buio." con voce piccola e ferma — le 5 parole canoniche di Noah (terna strato 3 "DIRE").
 
 **Mai variabile:** colore base dei capelli, statura relativa rispetto a Gabriel ed Elias (sempre il più piccolo), outfit canonico, postura bipede.
+
+## Cliché da evitare
+
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+
+**Specifici per Noah (e per i tre fratelli in generale):**
+- Mai Noah "fratellino zuccheroso" con guance super tonde, occhi enormi disney, espressioni esagerate.
+- Mai Noah "infanzia luminosa idilliaca" con sorriso disney perfetto.
+- Mai Noah "fratellino infantilizzato" con vezzeggiativi visivi (ciuccio, peluche, occhi enormi acquosi). È un bambino vero di 3-4 anni, non una mascotte.
+- Mai Noah "anime kid" con ciuffo davanti agli occhi, occhi enormi luminosi, espressioni esagerate.
+- Mai Noah disney/pixar con animazione esagerata di volto.
+- Mai Noah che piange lacrime grosse/copiose — la sua paura è espressa con le 5 parole "Ho paura. Qui è buio." (s10), trattenuta, non esibita.
+- Mai Noah "bambino-eroe" con posa di sfida.
+- Mai Noah "carino-mascotte" con proporzioni esagerate (testa enorme, occhi enormi, gambine cortissime sproporzionate).
+- Mai Noah scalzo fuori casa.
+- Mai Noah con accessori vistosi (cappellino, occhiali, gioielli).
+- Mai Noah solo (P6: ogni scena con Noah ha anche Gabriel ed Elias o almeno uno).
+- Mai Noah "bambino terribile" o "monello" — il suo rompi-equilibri non è cattiveria, è ⟳ pura.
+- Mai Noah con espressione di stupore esagerato (bocca enorme aperta a O, occhi sgranati cartoon). Le sue espressioni sono mobili ma non esagerate.
+
+## Per stampa 3D
+
+- **Scala**: 0.65 GU rispetto a Gabriel (anchor canonico saga). Se scala toy 1:6, Noah misura ~18 cm. Se miniatura 1:24, ~4.5 cm. **Il più piccolo dei tre — controllo critico di proporzione.**
+- **Postura canonica per la veduta principale**: in piedi, una gamba leggermente avanti come se fosse appena partito (non fermo del tutto), una mano in avanti che sta indicando o tenendo qualcosa di piccolo, l'altra rilassata. Sguardo dritto avanti vivace, bocca semi-aperta. Volto in espressione esploratore (curioso, vivace).
+- **4 vedute consigliate**: fronte, retro, profilo dx, profilo sx.
+- **Geometria**: corpo bipede di bambino umano piccolo, proporzioni 3-4 anni (testa rapportata 1:4.5 al corpo — più grande proporzionalmente di quella di Gabriel/Elias).
+- **Materiale di stampa consigliato**: PLA o resina. Pelle base color carne calda chiara, capelli marrone medio chiaro (più chiari di Elias), maglia verde chiaro, pantaloni marrone-grigio chiaro, sciarpa turchese.
+- **Punti critici**: dita delle mani (geometria piccolissima), lacci scarpe, sciarpa turchese (può essere pezzo separato o basso rilievo).
+- **Orientamento di stampa**: in piedi sulla base, eventualmente con un piedino leggermente sollevato (mid-step).
+
+_Scala canonica precisa rinviata a definizione saga._
+
+## Per narrativa e social
+
+Vedere `descrizione_narrativa_social.md` nella stessa cartella.
+
+**Registri d'uso testuale:**
+- Voce narrante: "Noah" (mai "il piccolo" da solo, mai "il bambino" da solo).
+- I fratelli si chiamano per nome tra loro. Mai "fratellino", mai "Noino" o vezzeggiativi.
+- Le sue battute non vanno introdotte da "esclamò entusiasta" o "gridò curioso" — la sua voce è già esclamativa.
+- Mai descrivere Noah con aggettivi morali (curioso, vivace, simpatico). Mostra invece le azioni (corre dietro alla farfalla, getta il bastoncino, dice "Ho paura. Qui è buio.").
+- **Voce tipica**: frasi spezzate, esclamative, percezione fisica al primo posto, ripete parole. *"Buono?"* (s12), *"È mio. L'avevo perso anni fa."* (no, quello è Pun in s06), *"Te l'ho fatto io. Da solo."* (s09), *"Non sono più piccolo come prima."* (s09), *"Ho paura. Qui è buio."* (s10, frase-soglia, terna strato 3 — Noah DIRE), *"Perché il mio è piccolo?"* (s09).
+
+## Storie / scene di apparizione
+
+- s01: protagonista, azione (incontro con Grunto sulla nebbia, apre la fila ma deve essere fermato da Gabriel).
+- s02: protagonista Δ-trickster (getta il bastoncino nella pozza, **rompe** i riflessi distorti — modalità trickster).
+- s03: protagonista (calcio mal misurato che spedisce il pallone nella Foresta — modalità trickster).
+- s04: **movente** (corre dietro alla farfalla blu, attraversa la soglia della Foresta, si perde, risponde col palmo al ritmo di Elias TUM-tum-TUM-tum-TUM).
+- s05: protagonista, modalità esploratore-concentrato (raccoglie pertiche con Bru, sceglie ma sbaglia, Bru corregge in silenzio).
+- s06: protagonista trickster (cornetto in taschino, sgabello rovesciato, pomo alle Vecchie, briciole sul palmo).
+- s07: protagonista, dice "Buono?" a Grunto (s12, in realtà — verifica: è in s12 il "Buono?"). In s07 modalità esploratore-curioso, segue la zattera.
+- s08: passa al varco di foglie dietro al Pozzo, posa il nido vuoto sotto una foglia (modalità concentrato + cura silenziosa).
+- s09: **protagonista del momento-soglia**: porge il braccialetto a Gabriel ("Te l'ho fatto io. Da solo."), poi dice "Non sono più piccolo come prima." — il pivot della sua crescita.
+- s10: **protagonista architrave**: dice "Ho paura. Qui è buio." (terna strato 3 — Noah DIRE, 5 parole canoniche), tende la mano nel buio, Gabriel la trova.
+- s11: trickster vivace (sgabello rotto, pomo che rotola alle Vecchie, ride forte, Cardo lo trascina via).
+- s12: protagonista del trio nel sigillo, siede al centro tra Elias e Gabriel su Roccia Alta, posa la mano sulla mano di Gabriel sulla pietra calda. Modalità aggrappato-quieta. (Domanda "Buono?" a Grunto in s12_h05.)
+
+## Disallineamenti / domande aperte
+
+> **Decisione autoriale Ray del 2026-04-30 (opzione B):** i tratti fisici sotto NON sono modellati sui figli reali. Sono **tratti coerenti col canone saga (palette §6 Bible "toni vivaci" + standard bambino mediterraneo piccolo)**, fittizi ma stabili. Sostituibili in futuro senza rotture pipeline.
+
+- **Età narrativa nelle storie**: 3-4 anni (proiezione narrativa rispetto alla data di nascita probabile 6-6-2026 nel grafo). Calibrata su Gabriel = 6-7 anni e Elias = 5-6 anni. Noah è il bambino piccolo del trio.
+- **Colore capelli**: castani chiari (derivazione "toni vivaci" + standard mediterraneo, leggermente più chiari di Elias). ✅ confermato opzione B.
+- **Colore occhi**: castani caldi vivaci (derivazione "toni vivaci"). ✅ confermato opzione B.
+- **Postura sempre in movimento**: derivazione da "rompi-equilibri" + età 3-4. ✅ confermato.
+- **Casa dei fratelli**: posizione esatta sull'isola non è dichiarata in Bible. Coerente col Villaggio centrale ma non confermato.
+
+## Riferimenti puntuali (citazioni dirette dalle fonti)
+
+**Fonti canoniche dirette:**
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.1 Struttura familiare: "I tre fratelli sono umani, gli unici umani dell'isola... P6 (inseparabilità): ogni storia richiede tutti e tre i fratelli."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.4 Noah — Il Piccolo: "Nato (probabile) 6 giugno 2026. Gemelli (aria mutabile). Funzione narrativa: rompe gli equilibri. Quando le cose sono bloccate fa l'imprevisto. Vede l'insetto, la nuvola, il sentiero nascosto. ⟳ incarnato (sente, reagisce, cambia). Voce: frasi spezzate, esclamative, percezione fisica al primo posto. Ripete parole. Paura nascosta: il buio. Non lo ammette. Di notte si avvicina ai fratelli senza dire niente. Sviluppo emotivo previsto: storia 10."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.5 Dinamiche tra fratelli: "Gabriel ↔ Noah: protezione, litigano spesso (grande vs piccolo), Gabriel sposta coperta di notte, Noah cerca Gabriel nel buio — Elias ↔ Noah: complicità nel fare."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA, Fratelli: "Noah: toni vivaci (verde chiaro, turchese)."
+- `pipeline_narrativa/story_graph.json#stories.s10.visual_anchors.scene_hooks#s10_h02`: "«Ho paura.» Pausa. «Qui è buio.» Gabriel tende la mano nel buio tra i due letti." — frase-soglia, terna strato 3 Noah DIRE (5 parole).
+- `pipeline_narrativa/story_graph.json#stories.s09.visual_anchors.scene_hooks#s09_h08`: "Noah dice: «Non sono più piccolo come prima.»" — pivot strato 3.
+- `pipeline_narrativa/story_graph.json#entities.characters.noah`: `species: umano`, `type: protagonista`, `age_band: piccolo_dei_tre`, `birth: 2026-06-06_probabile`, `attribute_ear: ⟳`, `role_saga: protagonista`.
+- `_canone/02_SAGA_SCALE_v1.md`: Noah = 0.65 GU.
+
+**Derivazioni autoriali:**
+- *Età narrativa 3-4 anni nelle storie*: derivata da scala saga (più piccolo) + relazione con Gabriel (6-7) e Elias (5-6) + autonomia limitata.
+- *Capelli castani chiari + occhi castani caldi vivaci*: derivata da palette "toni vivaci" + standard bambino mediterraneo piccolo.
+- *Outfit canonico (camicia verde chiaro + pantaloni marrone-grigio chiaro + sciarpa turchese chiaro + scarpette di cuoio chiaro)*: derivata da palette §6 "verde chiaro, turchese" + registro pre-industriale + funzionalità per bambino piccolo.
+- *Quattro modalità visive (esploratore / concentrato / aggrappato / trickster)*: derivate da §2.4 + ARCHI s10 paura del buio + s02/s03/s04/s06/s11 trickster.
+- *Mani sempre che esplorano*: derivata da §2.4 "vede l'insetto, la nuvola, il sentiero nascosto" + ⟳ incarnato.
+- *Sciarpa turchese chiaro come firma visiva*: derivata da palette §6 + accento di palette per coerenza coi suoi gesti veloci.
+
+**Cliché da evitare specifici**: derivati da `PATTERN_AI_DA_BANDIRE_v1.md` applicato al caso bambino-piccolo-umano-protagonista + vincoli §2.4.
