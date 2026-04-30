@@ -57,3 +57,15 @@ _porting_grafo/dossier_fase_e/dossier/validation_checklist.json
 # NB: MIGRATION_PROMPT_FASE_E.md, README.md e TEMPLATE_catalog_proposals.md
 # sono tracciati: il prompt evolve con patch durante la migrazione (es. REGOLA 0.5
 # aggiunta dopo s01), Ray deve vederne lo stato corrente.
+
+# API keys / secrets — NEVER commit
+.env
+**/.env
+!.env.example
+!**/.env.example
+
+# Visual pipeline — generazione immagini in locale
+# NON committare cartelle di staging della persona terza, solo le immagini
+# approvate finiscono in visual/<entita>/immagini/
+_visual_pipeline/_api/output_test.*
+_visual_pipeline/_api/_staging/
