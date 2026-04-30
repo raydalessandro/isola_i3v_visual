@@ -225,3 +225,178 @@ slightly wider) OR 16:9 (landscape) depending on illustrator
 preference — 4:5 emphasizes the descent, 16:9 the wingspan.
 Recommended: 4:5 portrait.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "alla porta della scuola" (autorità calma)
+
+**Filename suggerito**: `stria_canonica_v1_scuola.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Stria]
+
+SCENE — Stria standing at the schoolhouse door, both legs visible:
+Stria stands upright on BOTH legs (not the one-leg pose), three-
+quarter view from the front-right, near the threshold of her
+schoolhouse. Her neck is gently bowed forward in a soft curve, as if
+she has just spoken to a child below her (the children are NOT in
+this frame — this is a character study). Her long beak points
+slightly down toward where a child would be. Her wings are folded
+against her body, the ash-gray shawl draped neatly on her shoulders
+(she has just landed and put it back on, canonical sequence).
+
+Her face shows the calm-authority expression. Yellow-gold eyes are
+attentive, looking down toward the implied listener with the steady
+heron gaze. The beak is closed, with the slightest hint of having
+just released a single word ("Aspetta." or "Tu cosa pensi?") — the
+moment AFTER the phrase, when she waits.
+
+Behind her, the schoolhouse interior or threshold is visible: a low
+wooden door, a hint of a slate-blackboard inside, perhaps a low
+wooden bench. Outside the door, soft sage-green grass and warm
+ochre packed earth, the village edge in the distance suggested in
+painterly wash.
+
+Her ash-gray plumage is well-kept. The shawl falls along her wings,
+the fringes visible. The small dark crest at her crown is upright.
+
+Lighting: warm mid-morning natural light coming from the left
+(outside), the schoolhouse interior in soft shadow on the right. The
+yellow eyes catch the warm light. No harsh contrast.
+
+Composition: from above-knee up to slightly above the head and beak,
+three-quarter view. Aspect ratio 4:5 (portrait). This image fixes the
+canonical "schoolteacher at the threshold" pose for use in scenes
+S02/S06/S08/S09/S11.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `stria_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Stria]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Stria in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show her standing
+UPRIGHT ON BOTH LEGS (NOT the one-leg pose for the turnaround — the
+turnaround needs the full anatomy visible), wings folded against the
+body, ash-gray shawl on her shoulders, neck in a relaxed neutral
+position (not curved, not extended — neutral). Beak closed, eyes
+attentive forward.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal, both legs and
+   wings visible, the shawl draping symmetrically
+2. THREE-QUARTER view — turned 45 degrees to her left
+3. SIDE PROFILE — full left profile, the long neck and beak in
+   silhouette, the wing-tips visible at the back
+4. BACK view — from behind, showing the back plumage, the wing-tips
+   crossed at the lower back, the back of the shawl with the fringes,
+   the long thin legs
+
+The character must look IDENTICAL across all four views: same ash-
+gray plumage with darker wing-tips, same white-cream throat and
+breast, same yellow-gold eyes, same bone-white beak, same bone-yellow
+legs, same pale dove-gray fringed shawl, same height proportions
+(very tall and slim).
+
+CRITICAL ANATOMICAL DETAILS visible in all views: the long S-curve
+neck (in front and three-quarter), the long straight beak (front
+center, profile fully, back faintly visible above the head from
+behind), the very thin legs, the small dark crest at the crown of
+the head, the wing-tips noticeably darker than the body.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- **Modalità consigliata**: illustrazione / acquerello / picture book.
+- **Aspect ratio**: come specificato (3:4, 4:5, 16:9).
+- **Iterazione**: 4-6 varianti per immagine.
+- **Coerenza tra le 4 immagini**: stesso airone, stesso pattern di palette, stesso scialle.
+- **Posa una-zampa**: solo per imm.1 (firma); imm.3 e imm.4 entrambe le zampe a terra.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, cap, ribbons,
+hair-bows (no hair anyway), shoes, sandals, eagle/hawk fierce gaze,
+predatory expression, stork-with-baby trope, schoolmarm spectacles,
+ruler-in-hand stern teacher trope, cute mascot, kawaii, doll-like
+proportions, shawl with floral pattern, shawl with embroidery
+```
+
+## Negative prompt specifici per Stria
+
+```
+NO white plumage (she is ASH-GRAY, not white egret/stork). NO long
+extended neck during flight (heron flies with neck FOLDED back, not
+straight). NO cartoon-grandma smile. NO grandmother glasses. NO
+school-bell tied to her neck. NO chalk in her wing. NO ruler. NO
+slate-tablet in her wing as a prop (she stands at the door, not
+holding teaching tools). NO walking with both legs flat when waiting
+(canonical waiting pose is ONE leg). NO stork-baby connotations.
+NO pelican pouch. NO fierce predator gaze.
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] **Airone cenerino** anatomicamente corretto (Ardea cinerea, NON cicogna, NON pellicano, NON aquila)
+- [ ] Piume ash-gray sul corpo
+- [ ] **Punte delle ali più scure** (slate-gray) — controllo visibile
+- [ ] Bianco-crema su gola/petto, piccole striature nere sul collo
+- [ ] **Piccolo crest scuro alla sommità della testa** (canonico airone cenerino)
+- [ ] Becco lungo dritto color osso, leggermente più scuro nella parte alta
+- [ ] **Occhi gialli-oro fermi** (firma) — non grandi anime, non cute disney
+- [ ] **Zampe sottili color osso-giallo** (anatomia airone)
+- [ ] **Scialle pale dove-gray sulle spalle** (FIRMA VISIVA — controllo critico, eccetto in imm.2 volo)
+- [ ] Niente scarpe, niente sandali (zampe nude airone)
+- [ ] Niente cappelli, niente nastri, niente accessori
+- [ ] Modalità di registro corretta:
+  - Imm. 1: una zampa sola (posa firma attesa), collo curvato a S, sguardo dritto
+  - Imm. 2: in volo, ali aperte, **collo PIEGATO indietro** (canonico airone), zampe trailing, scialle assente
+  - Imm. 3: alla porta scuola, entrambe le zampe a terra, collo curvato in basso (parla a bambino implicito)
+  - Imm. 4: 4 vedute neutre con tutti i dettagli anatomici visibili, posa simmetrica entrambe le zampe
+- [ ] Statura ~1.0-1.1 GU (alta vicino a Gabriel come altezza ma molto più magra)
+- [ ] Mai sopra/sotto Albero Vecchio (vincolo Bible — non includerlo nel frame)
+- [ ] Nessun pattern AI bandito (no nonna sorridente, no insegnante severa con righello, no predatore feroce)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo dell'airone.
+2. **Imm. 1 (una zampa sola)** — posa firma canonica.
+3. **Imm. 3 (alla porta scuola)** — modalità relazionale.
+4. **Imm. 2 (volo)** — modalità transitoria, anatomicamente più complessa (collo piegato indietro).
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
+**Nota scheda:** la scheda `visual/personaggi/individuali/primari/stria/scheda.md` è ancora in stato `provvisorio` (formato fase F.1). Il prompt qui è scritto direttamente da Bible §4.6 + scheda provvisoria. Espansione completa scheda canonica in batch successivo se serve.
