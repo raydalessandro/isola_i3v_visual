@@ -228,3 +228,179 @@ ratio 4:5 (portrait). The eye should travel: ball → Rovo's hand →
 Rovo's averted face → suggestion of Bru in the depth of the Forest
 behind.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "cede ma non lo dice" (ritratto stretto)
+
+**Filename suggerito**: `rovo_canonica_v1_cede.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Rovo]
+
+SCENE — Rovo in the rare quiet "yields but doesn't say so" mode:
+Rovo stands unusually still, three-quarter view from the front, both
+hands at his sides for once (no hip pose, no stick), shoulders relaxed
+slightly from their default forward lean. The walking stick may be
+visible leaning against a tree trunk just behind him.
+
+His face is the key visual signal of this mode. The forehead
+unwrinkles for a second — just a second. Eyebrows still lightly
+furrowed (he is Rovo, not a different character) but not pulled
+together hard. Mouth still pulled down slightly but the tension is
+gone. His gaze, characteristically averted, is now turned a fraction
+back toward the viewer-or-listener — as if he has just decided
+something he doesn't want to admit. NEVER a smile. The yielding lives
+in the relaxation of the muscles, not in any positive expression.
+
+The brown-gray bandana is tight as always, the white badger mask
+visible. His tunic and trousers are settled, less moving than in
+default mode.
+
+Background: deeper inside the Forest edge, more dappled green light
+than in image 1. A quieter atmosphere — Rovo has stepped slightly back
+from the margin, into his own territory. Dark-green leaves above, a
+hint of moss on a trunk to one side. NO other figures visible — this
+is a still character moment.
+
+Lighting: soft dappled woodland light, slightly cooler than image 1.
+Gentle highlights on the white badger mask and on his bandana. The
+overall atmosphere is hushed.
+
+Composition: from waist up to slightly above the head, three-quarter
+view. Aspect ratio 4:5 (portrait). This image fixes the canonical
+"yielding without saying" pose for use in scenes where Rovo cedes
+something silently — typically followed in narrative by a phrase
+like "Fine. But just once." or by a quiet practical gesture.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `rovo_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Rovo]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Rovo in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him in the same
+neutral standing pose: arms relaxed at his sides (no hip pose for
+this reference), feet slightly apart (bare badger feet with claws
+visible), neutral attentive expression with the typical slight
+forehead furrow. NO walking stick, NO props except the brown-gray
+bandana on his head (signature, must be visible in all four views).
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal — clearly shows
+   the white badger mask on the forehead, the black eye-mask, the
+   bandana
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile, the asymmetric shoulder line
+   subtly visible, the elongated badger muzzle in profile
+4. BACK view — from behind, showing the back of the head with the
+   bandana knot, the back of the gray-fur body, the mud-brown tunic
+   and trouser cord, the bare digger feet with long claws visible
+
+The character must look IDENTICAL across all four views: same dark
+gray fur, same white badger mask pattern (head stripe + cheek bands +
+black eye-mask), same brown-gray bandana, same mud-brown tunic, same
+mud-brown trousers, same height (~0.85-0.9 GU) and stocky build,
+same bare badger feet.
+
+CRITICAL ANATOMICAL DETAILS visible in all views: the shoulder
+asymmetry (one slightly higher), the long digging claws on hands and
+feet, the small close-set eyes, the small slightly bent ears.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- **Modalità consigliata**: illustrazione / acquerello / picture book.
+- **Aspect ratio**: come specificato (3:4, 4:5, 16:9).
+- **Iterazione**: 4-6 varianti per immagine, selezionare la migliore.
+- **Coerenza tra le 4 immagini**: stesso badger, stesso pattern della maschera bianca, stessa bandana, stesse proporzioni.
+- **Reference image** (opzionale, se Grok lo accetta): usare `bartolo_canonica_v1_fronte.jpg` per allineare lo stile saga (acquerello/picture book + abitante anziano).
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, cap, beret,
+elegant vest, princely outfit, perfectly clean clothes, brand new
+clothes, torn rags, friendly cartoon badger smile, sage-of-the-forest
+long beard, magical staff with crystal, profound master gaze,
+threatening ringing growl, bared aggressive teeth, hugging Bru,
+stroking head, four-legged badger pose, quadruped, cute mascot,
+kawaii, doll-like proportions
+```
+
+## Negative prompt specifici per Rovo
+
+```
+NO white badger pattern reversed (mask is on the FACE, white stripe
+center forehead, NOT on the body). NO friendly grandfatherly smile.
+NO bare head without bandana. NO shoes (he is barefoot). NO
+walking stick with magic crystal or carved decorations (just plain
+gnarled wood). NO clean ironed clothes. NO open jovial laugh. NO
+direct frontal gaze (he glances askance). NO modern technology.
+NO apron (he is NOT a baker — that is Fiamma; do not confuse).
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] Tasso antropomorfo, bipede stabile, postura curvata in avanti
+- [ ] **Maschera bianca canonica del tasso** sulla testa (FIRMA — controllo critico)
+- [ ] **Pelo nero attorno agli occhi** (mascherina bandit del tasso)
+- [ ] Pelo grigio-scuro su corpo e arti
+- [ ] **Bandana marrone-grigio sulla fronte** (FIRMA VISIVA — controllo critico)
+- [ ] Tunica/camicia marrone-fango dirty/lived-in
+- [ ] Pantaloni marrone-grigio terra
+- [ ] **A piedi nudi** con unghie lunghe da scavatore visibili
+- [ ] **Una spalla un po' più alta dell'altra** (firma anatomica — sottile ma presente)
+- [ ] **Sguardo di sbieco**, mai diretto (tranne quando ha deciso qualcosa)
+- [ ] Sopracciglia aggrottate, bocca tirata in basso
+- [ ] Statura ~0.85-0.9 GU (più basso di Bartolo, più alto di Mèmolo)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: scontroso al margine (mano sull'anca, sguardo di sbieco, contesto Foresta-margine)
+  - Imm. 2: cura mediata (chinato a posare il pallone, sguardo distolto, gesto preciso senza affetto)
+  - Imm. 3: cede ma non lo dice (postura ferma rilassata, fronte un attimo distesa, NO sorriso)
+  - Imm. 4: 4 vedute neutre con tutti i dettagli anatomici visibili
+- [ ] Niente accessori vistosi, niente cappello, niente gioielli, niente bastone con cristallo
+- [ ] Nessun pattern AI bandito (no nonno saggio, no orco minaccioso, no cute mascot)
+- [ ] Sfondo coerente con margine Foresta Intrecciata / quartiere Terra ovest
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo del badger.
+2. **Imm. 1 (margine scontroso)** — ID card canonica.
+3. **Imm. 3 (cede ma non lo dice)** — modalità rara di transizione.
+4. **Imm. 2 (cura mediata)** — gesto canonico s03 (posa il pallone).
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
