@@ -94,3 +94,65 @@ Quello che rompe gli equilibri. Quando le cose sono bloccate fa l'imprevisto. **
 **Rapporti con i fratelli (visivi):**
 - **Con Gabriel**: protezione + litigio. Visivamente: Noah cerca Gabriel nel buio (s10 letterale), Gabriel sposta la coperta su Noah di notte (s2.5 Bible, non illustrato ma canonico). Litigano spesso ("grande vs piccolo"). Gabriel taglia le fette piccole per lui finché s9 (Noah dice "Non sono più piccolo come prima" e Gabriel ridivide uguali).
 - **Con Elias**: complicità nel fare. Spesso si chinano insieme su cose. Elias gli insegna piccole abilità tecniche (off-screen tra s08 e s09: il nodo marinaro variante mani piccole, che Noah userà nel braccialetto-Gabriel s09).
+
+## Palette e atmosfera
+
+**Colori principali del corpo:**
+- Capelli castani chiari (più chiari di Elias, simili in tono ma più giovani)
+- Pelle chiara di tono caldo, leggermente abbronzata, con spesso piccole tracce di terra/polvere
+- Occhi castani caldi, vivaci
+
+**Colori dell'abbigliamento:**
+- **Verde chiaro** (camicia/maglia — colore principale: verde foglia primaverile, salvia chiaro, verde acqua-tenero)
+- **Turchese chiaro / azzurro acqua** (sciarpa/fazzoletto — colore-firma)
+- Marrone-grigio chiaro / sabbia (pantaloni)
+- Ocra-sabbia chiaro cuoio (scarpe)
+
+**Quartiere di appartenenza**: nessuno specifico — Noah attraversa tutta l'isola, casa dei fratelli probabilmente nel Villaggio centrale.
+
+**Tipo di luce**: Noah funziona benissimo in **luce vivace e diurna piena** (mattino chiaro, mezzogiorno aperto, primo pomeriggio). I suoi toni verde-chiaro/turchese si valorizzano sotto luce naturale piena. **Specialmente bene in luce d'acqua** (riflessi del fiume in s07, della pozza in s02). In luce notturna (s10) la sua palette si attenua e diventa silhouette — il turchese scompare nel blu-nero.
+
+**Atmosfera predominante**: presente, vivace, in movimento continuo. Noah porta nella scena un'**aria di "succede qualcosa"** — la scena con Noah è quasi sempre una scena in cui qualcosa cambia, si rompe, si rivela. È il polo "imprevisto" del trio (contro Gabriel polo "osservatore" e Elias polo "costruttore").
+
+## Contesto e ambientazioni ricorrenti
+
+I tre fratelli sono umani, gli unici umani dell'isola. I genitori non sono mai citati nelle 12 storie — fuori scena, né assenti né morti (porta socchiusa Fase F). **P6 (inseparabilità)**: ogni storia richiede tutti e tre i fratelli; nessuno da solo risolve.
+
+**Casa dei fratelli**: presente nelle scene S9 (sera, casa con tavolo e dolce di castagne), S10 (notte buia, primo a parlare nel buio), S12 (mattino partenza). Posizione esatta non dichiarata.
+
+**Scene tipiche di Noah:**
+- **In cammino davanti, troppo veloce per le sue gambe** (default in molte storie, canonico s01)
+- **Si china a guardare una cosa piccola** (insetti, foglie, pietre): modalità concentrato
+- **Rompe l'equilibrio**: getta il bastoncino nella pozza (s02), corre dietro alla farfalla blu (s04), fa rotolare lo sgabello e il pomo alle Vecchie (s11), risponde al ritmo della radice (s04)
+- **Aggrappato/cerca**: tende la mano nel buio (s10), si tiene a Gabriel
+- **Costruisce qualcosa di tenero**: braccialetto per Gabriel (s09: canapa + ramoscelli + castagna cruda forata)
+- **In sigillo** (s12): siede al centro tra Elias e Gabriel su Roccia Alta, posa la mano sulla mano di Gabriel — terna strato 3, gesto silenzioso
+
+**Vento dominante per Noah**: nessuno specifico — coerente con **Vento Mulinello** (sera, cambia direzione, sposta le cose) per simbiosi tematica.
+
+## Coerenza cross-scena (cose che NON cambiano)
+
+- Specie: umano, bambino piccolo
+- Statura: 0.65 GU (il più piccolo, anchor saga)
+- Capelli: corti lisci, castani chiari (più chiari di Elias)
+- Occhi: castani caldi, vivaci
+- Pelle: chiara di tono caldo, leggermente abbronzata, piccole tracce di terra spesso
+- Outfit base: camicia/maglia verde chiaro + pantaloni marrone-grigio chiaro + sciarpa turchese + scarpette di cuoio chiaro
+- Sciarpa/fazzoletto turchese chiaro al collo: **firma visiva** sempre presente
+- Postura mai del tutto ferma, bocca spesso semi-aperta
+- Modalità "esploratore" come default (~60%), "concentrato" raro, "aggrappato" centrale-raro, "trickster" sparso
+- Mani sempre IN MOVIMENTO o che HANNO APPENA RACCOLTO/TOCCATO qualcosa
+- Mai a piedi nudi fuori casa
+- In s09 in costruzione/consegna del braccialetto a Gabriel
+
+## Variabilità ammessa
+
+- **Età narrativa lungo la saga**: Noah è leggermente più piccolo in S1 (inverno apertura) e leggermente più grande/maturo in S12 (autunno chiusura). La frase di Noah "Non sono più piccolo come prima" in S9 è il pivot narrativo della sua crescita interna. Visivamente è ancora il bambino piccolo, ma le scene tarde S9-S12 possono mostrarlo un filo più sicuro nei movimenti, leggermente meno "sgangherato" nella postura.
+- **Mantello in inverno**: solo in S1, S2, S3 (e parziali S10, S12 se freddo).
+- **Stato dei vestiti**: praticamente sempre con qualcosa di sporco/segnato, ma più o meno a seconda della scena.
+- **Posizione delle mani**: che esplorano (default), su un dettaglio (concentrato), sulla mano del fratello (aggrappato), in azione impulsiva (trickster).
+- **Espressione**: bocca semi-aperta (default), occhi grandi vivaci, sopracciglia molto mobili, sorriso largo nella gioia improvvisa, lacrime mai melodrammatiche (eventualmente solo trattenute in s10).
+- **In s09**: ha il braccialetto in mano, lo porge con l'espressione di orgoglio piccolo del bambino che ha fatto da solo.
+- **In s10**: dice "Ho paura. Qui è buio." con voce piccola e ferma — le 5 parole canoniche di Noah (terna strato 3 "DIRE").
+
+**Mai variabile:** colore base dei capelli, statura relativa rispetto a Gabriel ed Elias (sempre il più piccolo), outfit canonico, postura bipede.
