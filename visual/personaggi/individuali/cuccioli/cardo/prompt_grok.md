@@ -84,4 +84,91 @@ NEGATIVE: no aggressive/violent action (must be playful tease, not attack), no b
 
 ---
 
-> ⏸️ **STOP — fine pezzo 1/2.** Prossimo pezzo: IMMAGINE 3 (lealtà silenziosa) + IMMAGINE 4 (turnaround) + checklist.
+## IMMAGINE 3 — Cardo modalità "lealtà silenziosa" (la modalità rara)
+
+**Aspect ratio:** 4:5 (verticale leggero)
+**Filename atteso al salvataggio:** `cardo_canonica_v1_lealta_silenziosa.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON CARDO — incolla blocco sopra]
+
+SCENE: Cardo, the young wolf cub (tall for a cucciolo, grey-brown variegated fur, bushy tail, erect ears, yellow eyes), in his RARE silent-loyalty mode. He sits or stands quietly NEXT TO an indistinct, slightly-blurred companion cucciolo who is in real difficulty (perhaps another small animal cub head-down on the ground, posture quietly unhappy). Cardo's body is for once relaxed, NOT in tension — he is just there, present, silent. NO toothy smile (mouth closed or barely parted in a soft line). Yellow eyes calm, watching the friend or looking at the same horizon, no provocative glint. Tail still, no swishing. The body language is "I am here, I do not say it." Soft warm muted light, watercolor and ink linework, painterly storybook tone of restrained tenderness — never sentimental, never theatrical, never visibly redemptive. The companion is BLURRED so this remains a Cardo portrait, not a duo scene.
+
+NEGATIVE: no smiling, no toothy grin, no mischievous expression, no visible verbal comfort gesture, no hand-on-shoulder theatrical comfort, no tears, no Cardo as visible savior/hero, no companion in sharp focus (must be blurred indistinct), no redemption-arc visual, no predator stance, no menacing pose, no modern clothing, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## IMMAGINE 4 — Cardo turnaround (4 viste)
+
+**Aspect ratio:** 16:9 (orizzontale, 4 figure intere affiancate)
+**Filename atteso al salvataggio:** `cardo_turnaround_v1.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON CARDO — incolla blocco sopra]
+
+SCENE: Character turnaround sheet of Cardo, the young wolf cub. Four full-body views of the same character in a single horizontal image, side by side, evenly spaced, on a neutral warm cream/off-white background: FRONT view, three-quarter LEFT view, SIDE PROFILE view (left side, showing the bushy tail clearly), BACK view (showing the tail and back fur). All four views show the same tall-for-a-cucciolo wolf cub: long lean limbs in subtle tension, grey-brown variegated fur, lighter throat/belly, bushy thick tail, erect pointed ears, yellow lively eyes (visible in front and 3/4 views), slight playful smile (visible in front and 3/4). Same scale, same proportions, same posture across all four views. No color shift, no fur-tone drift, no tail-fluffiness drift. Watercolor and ink linework, painterly storybook style, model-sheet clarity. NO scene, NO background details, just the four views and a clean cream background.
+
+NEGATIVE: no inconsistencies between views, no different fur colors, no tail-fluffiness drift (always bushy), no different sizes, no scene details, no props, no other characters, no menacing fangs in any view, no modern clothes, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## Note tecniche per Grok Imagine
+
+- Genera ogni immagine con **upload del documento canone Cardo** (questo file) o copia-incolla i blocchi STYLESHEET + CHARACTER CANON in cima a ogni prompt.
+- **Sempre un solo aspect ratio per immagine** — non far decidere a Grok, specifica esplicitamente.
+- **Re-generation policy:** se la prima generazione vira al menacing/predator (specie operativa), rigenera. Mai accettare: lupo aggressivo, fauci scoperte, posa di caccia, occhi minacciosi.
+- **Dopo l'approvazione**, salva con il filename canonico esatto in `visual/personaggi/individuali/cuccioli/cardo/immagini/`.
+
+---
+
+## Negative prompt globale (incolla in coda a ogni prompt se Grok non rispetta)
+
+```
+no manga, no anime, no Pixar, no 3D render, no flat vector art, no hard digital outlines, no cartoon, no chibi, no kawaii, no modern clothing (no t-shirts, no jeans, no sneakers), no logos, no text, no signatures, no watermarks, no extra characters in scene unless required.
+```
+
+---
+
+## Negative prompt specifici Cardo
+
+```
+no predator wolf mode (no hunting, no stalking, no fear-of-wolf-as-species), no bared menacing fangs (only a playful provocative smile with small teeth), no scary wolf, no aggressive attack pose, no Cardo with prey, no Cardo "punished" or in shame pose, no Cardo in visible redemption-arc moment, no Cardo betraying anyone, no Cardo's parents present (they're never on scene), no light/pale fur (must be grey-brown variegated, the §6 cucciolo exception), no floppy/relaxed limbs (always in tension, ready to run), no Cardo doing wolf-things (only cucciolo punzecchio things), no modern clothing.
+```
+
+---
+
+## Checklist post-generazione (verifica canone su ogni immagine)
+
+- [ ] Più alto degli altri cuccioli (signature scala)?
+- [ ] Pelo grigio-marrone (eccezione §6, NON pallido-cucciolo)?
+- [ ] Coda folta e pronunciata?
+- [ ] Orecchie dritte/erette?
+- [ ] Occhi gialli vivaci e provocatori (mai minacciosi)?
+- [ ] Sorriso con dentini visibili in IMMAGINE 1 e 2 (mai in IMMAGINE 3)?
+- [ ] Zampe lunghe in tensione (mai flosce)?
+- [ ] Mai fauci scoperte/minacciose?
+- [ ] Mai posa predatore/caccia?
+- [ ] Mai posa eroica o di redenzione visibile?
+- [ ] Mai compagni vittime in primo piano (sempre sfocati/indistinti)?
+- [ ] Stile acquerello + inchiostro storybook (mai cartoon/anime/3D)?
+- [ ] Scala cucciolo (≈ 0.55 GU, **più alto** dei coetanei)?
+
+---
+
+## Ordine di generazione consigliato
+
+1. **IMMAGINE 4 (turnaround)** per primo — fissa la coerenza anatomica (scala alta, pelo grigio-marrone, coda).
+2. **IMMAGINE 1 (fronte)** subito dopo — la "carta d'identità" canonica.
+3. **IMMAGINE 2 (provocazione)** — la modalità più caratteristica di Cardo.
+4. **IMMAGINE 3 (lealtà silenziosa)** per ultima — la più sottile (richiede ribaltamento espressivo senza tradire il canone provocativo).
+
