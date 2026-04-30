@@ -7,7 +7,7 @@ specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: cura_delle_cose_del_villaggio
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.mantenitori"]
 appare_in_storie: []
 relazioni:
@@ -41,6 +41,23 @@ Gruppo di abitanti (varie specie) che si occupa della **manutenzione del bene co
 ## Espressione / comportamento
 
 Lavorano. Quando dopo una pioggia grossa qualche tetto perde acqua, due o tre Mantenitori vanno con scale e canne. Quando il pontile si scheggia, due Mantenitori riparano. Quando il sentiero alla Roccia Alta è coperto di rami, i Mantenitori passano. Lavorano spesso al mattino presto e nel pomeriggio.
+
+## Saluto del gruppo
+
+**Saluto:** un colpetto del nodo della corda contro il legno o la pietra: **TOK.** Singolo. Secco.
+
+**Logica.** Lavorano con corde e legno. Il loro suono di lavoro è il TOK-TOK-TOK di Nodo (già nel `quote_tracker.tok_tok_tok_stories`). Il **TOK singolo** è il saluto — eco minima del lavoro, riconoscibile a distanza.
+
+**Importante.** Il saluto Mantenitori è **un solo TOK**. Il lavoro di Nodo è **TOK-TOK-TOK** (tre, ritmico). Non vanno confusi: il singolo è gesto sociale, il triplo è azione di lavoro.
+
+**Risposta dei fratelli.** Cenno breve del capo. Non ripetono il TOK (non hanno la corda).
+
+**Quote saga:** TOK saluto Mantenitori non incide sulla quota TOK-TOK-TOK lavorativo di Nodo. Tracciato separatamente.
+
+> *Esempio testuale (DOC_2 §2.2):*
+> *Due mantenitori passarono accanto al Pozzo. Un TOK breve, una corda contro un legno. I tre fratelli annuirono.*
+
+Fonte: `DOC_2_saluti_gruppi.md` §2.2 + §3.
 
 ## Palette e atmosfera
 

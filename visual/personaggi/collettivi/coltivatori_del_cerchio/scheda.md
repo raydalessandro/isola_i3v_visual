@@ -7,7 +7,7 @@ specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: coralita_del_lavoro_agricolo
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.coltivatori_del_cerchio"]
 appare_in_storie: []
 relazioni:
@@ -42,6 +42,21 @@ Gruppo eterogeneo di abitanti (varie specie) che lavora gli Orti del Cerchio —
 ## Espressione / comportamento
 
 Coltivano. Zappano, seminano, innaffiano, raccolgono. Lavorano per stagioni — primavera-semina, estate-cura, autunno-raccolto, inverno-riposo. Cantano spesso mentre lavorano — non canzoni precise, mezze frasi ritmiche che danno il tempo del gesto.
+
+## Saluto del gruppo
+
+**Saluto:** la cantilena cambia di un tono per un battito quando si passa accanto. Chi conosce, sente. Chi non conosce, non si accorge.
+
+**Logica.** I Coltivatori cantano sempre mentre lavorano (`quote_tracker.cantilene_coltivatori_stories`). Non possono interrompere il lavoro per salutare. Il loro saluto è una **modulazione del canto** — un cambio impercettibile per uno solo che passa.
+
+**Risposta dei fratelli.** Abbassano la voce per qualche secondo, per non disturbare la cantilena. Camminano un po' più piano. Riprendono dopo aver superato la fila.
+
+**Vincolo:** la modulazione è **percepibile dai fratelli ma non commentata**. Il narratore può vedere che è successa. I fratelli reagiscono, ma non dicono "ci hanno salutato".
+
+> *Esempio testuale (DOC_2 §2.3):*
+> *Quando passarono dietro la fila dei coltivatori, la cantilena scese di un tono per un battito, poi tornò. Elias smise di parlare. Tutti e tre rallentarono il passo.*
+
+Fonte: `DOC_2_saluti_gruppi.md` §2.3 + §3.
 
 ## Palette e atmosfera
 

@@ -7,7 +7,7 @@ specie: animali_misti_pastori_stagionali
 tipo_grafo: gruppo_istituzione
 ruolo_saga: sfondo_stagionale_coltivatori_del_vento_nord
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.pastori"]
 appare_in_storie: []
 relazioni:
@@ -43,6 +43,21 @@ _da popolare dal grafo_
 ## Espressione / comportamento
 
 Scendono con le greggi in autunno (S11). Non individuati. Funzionano come "Coltivatori del Vento Nord" — sfondo stagionale del Quartiere d'Aria.
+
+## Saluto del gruppo
+
+**Saluto:** uno scuotere del bastone da pastore, tre volte: due brevi e una lunga. **TIK-TIK-TIIK.** È il loro segnale di lavoro (orientare il gregge) che diventa anche segnale sociale.
+
+**Logica.** I Pastori vivono sui Pascoli Alti. Il bastone è il loro strumento principale — guida il gregge, segna il passo, tiene d'equilibrio in pendenza. Il **TIK-TIK-TIIK** è un riadattamento del loro segnale di richiamo a uso sociale.
+
+**Risposta dei fratelli.** Quando passano vicino, alzano una mano (come per i Camminanti), oppure picchiano due volte un sasso contro un altro sasso se ne hanno uno in mano (eco del bastone con strumenti diversi).
+
+**Quote saga:** TIK-TIK-TIIK è onomatopea-firma nuova (non in lista §1.4 Carta Voce). Quota: max 3-4 storie su 12. Sentita più sui Pascoli (s02, s12) che altrove.
+
+> *Esempio testuale (DOC_2 §2.5):*
+> *Sui Pascoli, due pastori si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK. I fratelli alzarono una mano.*
+
+Fonte: `DOC_2_saluti_gruppi.md` §2.5 + §3.
 
 ## Palette e atmosfera
 

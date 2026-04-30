@@ -7,7 +7,7 @@ specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: luogo_di_scambio_voci_e_cose
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.mercato_del_mezzogiorno"]
 appare_in_storie: []
 relazioni:
@@ -44,6 +44,21 @@ Non un gruppo di persone — un'**istituzione ricorrente**. Si svolge ogni giorn
 Si scambia (non c'è denaro nell'isola — scambio cose contro cose, debiti di favore o oggetto saldati nei giorni seguenti). Si chiacchiera. Si vedono i bambini correre tra le bancarelle. Si decidono piccole cose comuni. Le Vecchie del Mercato vedono tutto, commentano poco ma giusto.
 
 Il Mercato dura un'ora circa, poi la piazza si svuota e l'Albero Vecchio resta solo fino al pomeriggio.
+
+## Saluto del gruppo
+
+**Saluto:** un cenno breve del mento + uno spostamento minimo della cosa che hanno in mano. Una mela offerta a mezz'aria, un cesto inclinato verso chi passa, una manciata di erbe sollevata di pochi centimetri. Mai parole.
+
+**Logica.** Il Mercato è il luogo dello scambio — gesto economico, non parlato. Non c'è denaro nell'isola: scambio cose contro cose, debiti di favore. Il saluto è un *micro-scambio offerto*, anche quando non si chiude. Se chi passa accetta, prende; se non accetta, fa un cenno e va.
+
+**Risposta dei fratelli.** Cenno breve del mento di rimando. Se vogliono, prendono. Se non prendono, sorridono e proseguono. Mai imbarazzo.
+
+**Vincolo:** il saluto Mercato non si applica alle **Vecchie del Mercato** (loro non salutano mai, è codificato — `representation_constraint: mai_antropomorfizzate_come_vecchiette_personaggio`). Si applica solo ai venditori dei banchi.
+
+> *Esempio testuale (DOC_2 §2.4):*
+> *Una venditrice inclinò il cesto verso Noah, mezzo passo. Un fringuello. Noah scelse una mela. Tre cenni del mento, e il banco proseguì col suo lavoro.*
+
+Fonte: `DOC_2_saluti_gruppi.md` §2.4 + §3.
 
 ## Palette e atmosfera
 

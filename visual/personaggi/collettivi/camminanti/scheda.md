@@ -7,7 +7,7 @@ specie: null
 tipo_grafo: gruppo_istituzione
 ruolo_saga: movimento_tra_quartieri
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.camminanti"]
 appare_in_storie: []
 relazioni:
@@ -41,6 +41,19 @@ Gruppo di abitanti (varie specie) che si occupa del **trasporto interno** all'is
 ## Espressione / comportamento
 
 Camminano. Conoscono ogni sentiero — quale è più breve, quale più riparato dal vento, quale praticabile dopo la pioggia. Si fanno carico della consegna e si garantiscono per la cura del trasportato. Camminano a tutte le ore, non hanno orari fissi.
+
+## Saluto del gruppo
+
+**Saluto:** una mano lasciata dal manico della carriola di vimini, alzata e riabbassata in un gesto unico, senza fermarsi. La carriola continua il suo percorso con una sola mano per il tempo del saluto, poi torna sulle due mani.
+
+**Logica.** Il movimento è la loro essenza — non si fermano mai. Il saluto è un *gesto rubato al lavoro*, non un'interruzione.
+
+**Risposta dei fratelli.** Alzano una mano in alto, una sola, brevemente. Mai parole.
+
+> *Esempio testuale (DOC_2 §2.1):*
+> *Una camminante attraversò la piazza con la carriola. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.*
+
+Fonte: `DOC_2_saluti_gruppi.md` §2.1 + §3.
 
 ## Palette e atmosfera
 
