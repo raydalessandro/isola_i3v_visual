@@ -1,0 +1,237 @@
+# DOC_3 cornici — 24 cornici (12 storie × 2)
+# Decisioni autoriali Ray 2026-04-30:
+#   - 6° gruppo pescatori_case_basse: SI
+#   - Pattern A pre-eco s03 (conchiglia): NO incremento quote_tracker (cornice scritta come oggetto_anomalo)
+#   - narrator_address s09: NO (cornice resta fatto narrativo)
+#   - Riequilibrio Giro E: S07-C1 spostata da D a E
+#   - Vincolo DOC_1 §2 "tre nomi, mai quattro": s08-c2 plurale = 3 nomi (arvicola, ghiro, faina; non "ramarra")
+#   - Vincolo DOC_1 §3.4 unicita animale saga: s12-c1 Camminanti = ermellino (non "faina" che e gia in s08)
+#
+# Schema cornice (DOC_3 §3, schema_version 1.4):
+#   id, process (A|B|C|D|E), type, who{kind,ref,species_assigned},
+#   where{location_id,qualifier}, what, saluto, formula_applicata,
+#   visibility, intensity (low|medium|high), proposed_text,
+#   structural_role, quote_tracker_impact, notes
+
+cornici:
+
+  # ============================================================
+  # S01 — La Nebbia delle Montagne Gemelle (alba inverno)
+  # ============================================================
+
+  - id: s01_c1
+    story: s01
+    process: D
+    type: cameo_lontano
+    who: { kind: gruppo, ref: camminanti, species_assigned: null }
+    where: { location_id: piazza_villaggio, qualifier: attraversamento_visivo_est_ovest }
+    what: "Sagoma con carriola di vimini che attraversa la piazza vuota da est a ovest, prima che il villaggio si svegli."
+    saluto: true
+    formula_applicata: false
+    visibility: visto_da_lontano_durante_uscita_dal_forno
+    intensity: low
+    proposed_text: "Sulla piazza, una sagoma con una carriola di vimini attraversò da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò."
+    structural_role: apertura_giro_d_pre_alba
+    quote_tracker_impact: null
+    notes: "Prima introduzione Camminanti — formula NON applicata (troppo presto in saga). La formula apparirà la 2a volta in s06."
+
+  - id: s01_c2
+    story: s01
+    process: A
+    type: luce_distante
+    who: { kind: anonimo, ref: null, species_assigned: null }
+    where: { location_id: piazza_villaggio, qualifier: finestra_casa_accesa }
+    what: "Una finestra accesa molto presto in piazza. Qualcuno, dentro, lavora qualcosa di farina."
+    saluto: false
+    formula_applicata: false
+    visibility: visibile_attraversando_piazza
+    intensity: low
+    proposed_text: "Una finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina."
+    structural_role: apertura_giro_a_focolaio_non_solo_forno
+    quote_tracker_impact: null
+    notes: "Apre Giro A — il pane non nasce dal nulla. Il Forno di Fiamma non e il solo focolaio acceso."
+
+  # ============================================================
+  # S02 — Il Riflesso nella Pozza (inverno avanzato)
+  # ============================================================
+
+  - id: s02_c1
+    story: s02
+    process: C
+    type: cameo_ravvicinato
+    who: { kind: nominato, ref: memolo, species_assigned: null }
+    where: { location_id: piazza_villaggio, qualifier: passaggio_durante_dialogo_stria }
+    what: "Mèmolo attraversa con sciarpa di sbieco, fa cenno breve a Stria, va. Pre-installa il personaggio prima di s06."
+    saluto: false
+    formula_applicata: false
+    visibility: visto_durante_dialogo_stria_fratelli
+    intensity: low
+    proposed_text: "Mentre Stria parlava, dalla parte della casetta tonda passò Mèmolo, sciarpa di sbieco. Le fece un cenno breve. Lei rispose con la testa, senza interrompere quello che stava dicendo ai fratelli."
+    structural_role: pre_install_per_s06
+    quote_tracker_impact: null
+    notes: "Memolo nominato — no formula. La rete delle notizie funziona anche per cenni."
+
+  - id: s02_c2
+    story: s02
+    process: D
+    type: cameo_lontano
+    who: { kind: nominato, ref: bru, species_assigned: null }
+    where: { location_id: margine_foresta_intrecciata, qualifier: ritorno_pascoli_visto_di_passaggio }
+    what: "Bru fermo sul bordo della Foresta, occhi neri verso i fratelli, non si avvicina, non si allontana."
+    saluto: false
+    formula_applicata: false
+    visibility: visto_di_passaggio_via_di_ritorno
+    intensity: low
+    proposed_text: "Sulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò."
+    structural_role: pre_install_presenza_onnisciente_bru
+    quote_tracker_impact: null
+    notes: "Bru nominato — no formula. Apre Giro D nella dimensione animali del Quartiere di Terra."
+
+  # ============================================================
+  # S03 — Il Pallone oltre la Foresta (fine inverno)
+  # ============================================================
+
+  - id: s03_c1
+    story: s03
+    process: B
+    type: cameo_lontano
+    who: { kind: nominato, ref: salvia, species_assigned: null }
+    where: { location_id: sentiero_orti_casa_salvia, qualifier: vista_lontana_da_orti }
+    what: "Salvia separa erbe in cortile mentre i tre giocano in lontananza. Pre-installa la sua presenza per s04."
+    saluto: false
+    formula_applicata: false
+    visibility: vista_lontana_da_zona_gioco
+    intensity: low
+    proposed_text: "In lontananza, davanti a una casa col cortile basso, Salvia separava ortica vecchia da quella ancora verde. Le mani si muovevano senza che lei alzasse gli occhi."
+    structural_role: pre_install_per_s04
+    quote_tracker_impact: null
+    notes: "Salvia nominata — no formula. Cura del villaggio non si ferma mai."
+
+  - id: s03_c2
+    story: s03
+    process: C
+    type: oggetto_anomalo
+    who: { kind: anonimo, ref: null, species_assigned: null }
+    where: { location_id: margine_foresta_intrecciata, qualifier: zona_gioco_fratelli }
+    what: "Una conchiglia conica scura per terra, vicino al margine. Le conchiglie sono al mare. Non si spiega. Forse Liù, forse un cucciolo che è passato."
+    saluto: false
+    formula_applicata: false
+    visibility: visibile_a_terra_vicino_al_pallone
+    intensity: low
+    proposed_text: "Vicino al pallone, per terra, c'era una conchiglia. Una sola, conica, scura. Le conchiglie erano al mare. Nessuno la nominò. Quando ripartirono, nessuno la raccolse."
+    structural_role: oggetto_anomalo_non_spiegato
+    quote_tracker_impact: null
+    notes: "DOC_3 §5.2 proponeva incremento pattern_a_pre_eco_stories. Decisione Ray 2026-04-30 minimo invasivo: cornice scritta come oggetto_anomalo, NO incremento pattern_a_pre_eco_stories (resta s02 only)."
+
+  # ============================================================
+  # S04 — Le Radici che Parlano (primavera)
+  # ============================================================
+
+  - id: s04_c1
+    story: s04
+    process: C
+    type: cameo_lontano
+    who: { kind: nominato, ref: liu, species_assigned: null }
+    where: { location_id: orti_del_cerchio, qualifier: volo_di_traverso_sopra_orti }
+    what: "Liù passa veloce sopra gli Orti mentre Salvia raccoglie. Frrr breve."
+    saluto: false
+    formula_applicata: false
+    visibility: vista_di_passaggio_dall_alto
+    intensity: low
+    proposed_text: "Sopra gli orti passò Liù — un *frrr* breve, una piega d'aria. Salvia non alzò la testa. Le sue mani continuarono."
+    structural_role: rete_liu_viva_anche_in_routine
+    quote_tracker_impact: null
+    notes: "Liu nominata — no formula. Liu non saluta nessuno, e velocita."
+
+  - id: s04_c2
+    story: s04
+    process: D
+    type: cameo_lontano
+    who: { kind: nominato, ref: cardo, species_assigned: null }
+    where: { location_id: margine_foresta_intrecciata, qualifier: lontano_oltre_alberi }
+    what: "Cardo lontano, lo sguardo si posa sui fratelli per un attimo e si stacca. Pre-installa la sua presenza per s09 e s11."
+    saluto: false
+    formula_applicata: false
+    visibility: lontano_oltre_limite_alberi
+    intensity: low
+    proposed_text: "Più lontano, oltre il limite degli alberi, Cardo era fermo. Guardò i fratelli per un secondo. Poi si voltò e sparì tra le radici."
+    structural_role: pre_install_per_s09_s11
+    quote_tracker_impact: null
+    notes: "Cardo cucciolo nominato — no formula."
+
+  # ============================================================
+  # S05 — Il Ponte di Rami (primavera piena)
+  # ============================================================
+
+  - id: s05_c1
+    story: s05
+    process: B
+    type: cameo_lontano
+    who: { kind: gruppo, ref: mantenitori, species_assigned: donnola }
+    where: { location_id: torrente_affluente_foresta, qualifier: piu_a_monte_su_ansa_torrente }
+    what: "Una mantenitrice donnola lavora a una passerella più a monte del guado dei fratelli. Scaletta a pioli appoggiata. Lavoro silenzioso."
+    saluto: true
+    formula_applicata: true
+    visibility: vista_da_lontano_mentre_bru_porta_al_guado
+    intensity: medium
+    proposed_text: "Più a monte, su un'ansa del torrente, c'era una scaletta a pioli appoggiata a un tronco. Una mantenitrice — quale, oggi? Una donnola. Riparava una passerella. Da lontano arrivò un TOK breve, di corda contro legno. I fratelli annuirono. Bru proseguì."
+    structural_role: prima_apparizione_canonica_formula_in_saga
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s05, mantenitori, donnola, singular]
+    notes: "Prima apparizione canonica della formula. Mantenitori = donnola. Verifica unicita saga: donnola usata solo qui."
+
+  - id: s05_c2
+    story: s05
+    process: C
+    type: cameo_ravvicinato
+    who: { kind: nominato, ref: pun_e_memolo, species_assigned: null }
+    where: { location_id: forno, qualifier: davanti_al_forno_visti_di_passaggio }
+    what: "Pun gira accanto a Mèmolo, lo aiuta a sistemarsi la sciarpa. Stabilisce la coppia padre-figlio prima di s06."
+    saluto: false
+    formula_applicata: false
+    visibility: visti_di_passaggio_mentre_partono
+    intensity: low
+    proposed_text: "Davanti al Forno, Pun stava sistemando la sciarpa di Mèmolo, che gli era andata storta. Mèmolo lo lasciava fare. Il riccino tirava un capo, poi l'altro, finché la sciarpa stava un po' meno male. Mèmolo gli toccò la testa con la zampa."
+    structural_role: stabilisce_coppia_padre_figlio_per_s06
+    quote_tracker_impact: null
+    notes: "Memolo e Pun nominati — no formula."
+
+  # ============================================================
+  # S06 — Il Dono per Mèmolo (primavera/estate)
+  # ============================================================
+
+  - id: s06_c1
+    story: s06
+    process: A
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: camminanti, species_assigned: talpa }
+    where: { location_id: piazza_villaggio, qualifier: vista_due_volte_giro_completo_mattina_pomeriggio }
+    what: "Una camminante talpa con la carriola passa due volte: mattina (carica, va a ovest verso gli Orti), pomeriggio (vuota, torna a est verso il Pontile)."
+    saluto: true
+    formula_applicata: true
+    visibility: incrociata_in_due_momenti_diversi_del_giro
+    intensity: medium
+    proposed_text_morning: "Nella piazza, una camminante con carriola di vimini stava attraversando da est. Era una camminante — quale, oggi? Una talpa. Aveva sacchi pieni nella carriola. Una mano si staccò dal manico, salì verso i fratelli, ricadde. Gabriel alzò la sua. La carriola proseguì verso ovest."
+    proposed_text_afternoon: "In piazza tornarono a passare. La stessa talpa camminante li vide. La carriola adesso era vuota. Le ruote suonavano leggere sul selciato. Una mano salì, ricadde. Andò verso est."
+    structural_role: prima_apparizione_formula_camminanti_giro_completo_cibo
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s06, camminanti, talpa, singular]
+    notes: "Prima apparizione formula Camminanti. Solo prima volta della giornata applica formula; al ritorno solo richiamo deittico."
+
+  - id: s06_c2
+    story: s06
+    process: E
+    type: cameo_lontano
+    who: { kind: nominato, ref: toba, species_assigned: null }
+    where: { location_id: pontile, qualifier: vista_da_lontano_dalla_piazza_oltre_tetti }
+    what: "Toba seduta sul Pontile in lontananza, una piccola sagoma. Pre-installa lei e il quartiere acqua per s07."
+    saluto: false
+    formula_applicata: false
+    visibility: vista_da_fondo_via_pontile_oltre_tetti
+    intensity: low
+    proposed_text: "Dal fondo della via, oltre i tetti, si vedeva la sagoma del Pontile. Sul bordo, una piccola figura. Toba, che guardava l'acqua."
+    structural_role: apertura_giro_e_pre_install_per_s07
+    quote_tracker_impact: null
+    notes: "Toba cucciolo nominato — no formula."
+
+# Continua nel pezzo 2/2: cornici s07-s12 + summary
