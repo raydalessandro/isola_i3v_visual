@@ -235,3 +235,174 @@ Composition: full body in profile, body diagonal forward toward the
 water. Aspect ratio 4:5 (portrait). The composition emphasizes the
 verticality of the watching pose and the implicit fish below.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "diving / surfacing"
+
+**Filename suggerito**: `amo_canonica_v1_tuffo.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Amo]
+
+SCENE — Amo in dynamic moment of fishing (surfacing with fish):
+Amo emerges from the water, three-quarter view from the front. His
+head and neck are above the surface, beak holding a small silver
+fish. The body is partially visible just under the water — wings
+tucked, plumage soaked-dark, the form streamlined. Water streams
+off his head and shoulders, droplets and ripples spreading from
+him on the surface.
+
+His face shows the focused-just-caught-it expression: turquoise
+eyes alive, beak firmly holding the fish (the fish's tail and
+fins visible), neck extended slightly. The white-cream throat
+patch is briefly highlighted by the water-shine. The yellow-orange
+face patch is darker when wet but visible.
+
+The slate-blue tunic is fully soaked, dark with water. The oyster
+pendant glistens.
+
+Background: the water surface around him, ripples spreading out.
+Above the water, the cliff or pontile in the upper background of
+the frame — soft painterly wash. The horizon visible at the upper
+edge. Sky overcast or soft.
+
+Lighting: bright water-reflected light, the wet plumage catching
+sharp highlights along the back and head. The fish in the beak
+catches a silvery glint. Cool color palette dominant.
+
+Composition: medium close-up from chest up, the head and the fish
+in the upper-center, the water surface filling the lower frame.
+Aspect ratio 4:5 (portrait). This image fixes the canonical
+"caught a fish" moment for use in cammeo aquatic (s07/s10/s11).
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `amo_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Amo]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Amo in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him standing
+upright with WINGS FOLDED tight against the body (NOT the drying
+pose, NOT the hunched pose — the neutral standing pose), feet
+slightly apart, head upright. The slate-blue tunic, the oyster
+pendant, and the visible webbed feet must all be consistent across
+the four views.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal — shows the
+   black plumage front, the white-cream throat patch, the yellow-
+   orange face patch around beak base, the long hooked beak, the
+   turquoise eyes, the slate-blue tunic, the pendant, the webbed feet
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile, the long hooked beak in
+   silhouette, the long folded wing extending almost to the tail,
+   the seabird stance
+4. BACK view — from behind, showing the deep-black back plumage,
+   the bronze-green sheen along the upper feathers, the back of the
+   tunic, the back of the head and neck
+
+The character must look IDENTICAL across all four views: same deep-
+black plumage with bronze-green sheen, same white-cream throat
+patch (visible in front, three-quarter, profile), same long hooked
+beak, same turquoise-green eyes, same slate-blue tunic, same oyster
+pendant, same height (~1.0-1.1 GU) and lean robust build.
+
+CRITICAL ANATOMICAL DETAILS visible: the long hooked beak (front,
+three-quarter, profile fully), the white throat patch, the long
+folded wings reaching toward the tail (especially in profile), the
+WEBBED FEET (front and back views).
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- Aspect ratio: 4:5 (imm 1-2-3), 16:9 (turnaround).
+- 4-6 varianti per immagine.
+- Coerenza tra le 4 immagini: stesso cormorano, stesse iridescenze, stessa tunica slate-blue.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, modern fishing rod,
+fishing line, fishing reel, multicolored bird plumage, parrot
+colors, peacock colors, friendly cartoon-bird smile, dancing pose,
+nostalgic-staring-at-horizon pose, melancholic gaze, conflict pose,
+village domestic clothes, modern boat with motor, cute mascot,
+kawaii
+```
+
+## Negative prompt specifici per Amo
+
+```
+NO bright multicolored plumage — STRICTLY deep black with bronze-
+green oily sheen. NO huge anime eyes — small but vivid turquoise.
+NO modern fishing gear (rod, reel, line, hooks). He fishes with his
+beak (cormorant style, dives and catches). NO sociable smiling
+cartoon-bird. NO Pixar-fishing-bird with funny moves. NO village
+visiting (he is on the cliff or at the water — only delivers to
+Mercato del Mezzogiorno offscreen). NO crown of feathers on the
+head. NO scarf or hat. NO seagull look (he is a CORMORANT — sleeker,
+darker, hooked beak, webbed feet, NOT a seagull). NO pelican pouch
+(beak is hooked but no big throat pouch — the gular patch is small
+yellow). NO group with other birds.
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D)
+- [ ] **Cormorano comune anatomicamente corretto** (Phalacrocorax carbo, NON gabbiano, NON pellicano)
+- [ ] **Plumaggio nero profondo con sheen bronze-green** sotto luce diretta
+- [ ] **Patch bianco-crema sulla gola** sotto il becco (firma adulto)
+- [ ] **Patch giallo-arancio piccola intorno alla base del becco** (gular patch firma sottile)
+- [ ] **Becco lungo dritto con punta uncinata** (firma anatomica)
+- [ ] **Occhi TURCHESE-VERDI** piccoli ma vividi (firma — controllo critico, non gialli, non neri)
+- [ ] **Piedi palmati** grigio-neri visibili (firma cormorano, non gabbiano-divisi)
+- [ ] **Tunica slate-blue** semplice, scura, leggermente umida (FIRMA — controllo critico)
+- [ ] **Pendente di conchiglia/madreperla** al collo (firma piccola)
+- [ ] A piedi nudi (palmi visibili)
+- [ ] Statura ~1.0-1.1 GU (lean, robust, cormorant build)
+- [ ] Modalità di registro corretta:
+  - Imm.1: wing-spread drying (ali aperte 45 gradi, plumaggio con goccioline, scogliera, pose CANONICA)
+  - Imm.2: silent fishing (immobile sull'acqua, neck lowered, eyes turchese fissi su pesce sotto)
+  - Imm.3: surfacing (testa fuori dall'acqua, pesce nel becco, gocce e onde)
+  - Imm.4: 4 vedute neutre, ali folded, anatomy completa
+- [ ] Nessun pattern AI bandito (no gabbiano, no pellicano, no Pixar-bird, no fishing rod moderno, no nostalgia melodrammatica)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine.
+
+## Ordine di generazione consigliato
+
+1. Imm.4 (turnaround) per primo — fissa il pattern cormorano + tunica slate.
+2. Imm.1 (wing-spread drying) — POSE FIRMA canonica del personaggio.
+3. Imm.2 (silent fishing) — modalità di pazienza/insegnamento.
+4. Imm.3 (surfacing con pesce) — modalità dinamica acquatica.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
