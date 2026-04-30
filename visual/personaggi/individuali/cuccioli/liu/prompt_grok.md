@@ -84,4 +84,88 @@ NEGATIVE: no Liù lingering/settled (must be transient, in motion-pause), no ful
 
 ---
 
-> ⏸️ **STOP — fine pezzo 1/2.** Prossimo pezzo: IMMAGINE 3 (ascolto da foglia) + IMMAGINE 4 (turnaround) + checklist.
+## IMMAGINE 3 — Liù modalità "ascolto da una foglia"
+
+**Aspect ratio:** 4:5 (verticale leggero)
+**Filename atteso al salvataggio:** `liu_canonica_v1_ascolto_foglia.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON LIÙ — incolla blocco sopra]
+
+SCENE: Liù, the tiny dragonfly (finger-length, slim twig-body, transparent blue-green iridescent wings folded back), perched silently and very still on a single green leaf above the heads of two indistinct, blurred adult animal silhouettes (the conversation below — the abitanti who have already forgotten she's there). Her wings are folded back/at rest (not beating now — she is listening, not flying). Body small and composed, large compound eyes attentive but not staring, head turned slightly toward the conversation below. The viewer's perspective is slightly above her — she's the tiny secret in the canopy. Soft dappled warm light filtering through leaves, watercolor and ink linework, painterly storybook atmosphere. The blurred adults below are out of focus — Liù is the focal point, but she is COMPOSED and INVISIBLE-by-being-tiny, not theatrical-spy.
+
+NEGATIVE: no theatrical spy pose (no comic eavesdropping cliché), no malicious gossip expression (her listening is neutral/curious), no wings beating (in this mode they are FOLDED at rest), no large/oversized Liù, no clear focus on the adults below (must be blurred), no kawaii eyes, no cartoon, no manga, no anime, no 3D, no Pixar, no modern clothing.
+```
+
+---
+
+## IMMAGINE 4 — Liù turnaround (4 viste)
+
+**Aspect ratio:** 16:9 (orizzontale, 4 figure intere affiancate)
+**Filename atteso al salvataggio:** `liu_turnaround_v1.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON LIÙ — incolla blocco sopra]
+
+SCENE: Character turnaround sheet of Liù, the tiny young dragonfly. Four full-body views of the same character in a single horizontal image, side by side, evenly spaced, on a neutral warm cream/off-white background: FRONT view (wings spread), three-quarter LEFT view (wings spread), SIDE PROFILE view (left side, wings spread, body horizontal showing tail and body length), BACK view (wings spread showing wing pattern from above). All four views show the same finger-length dragonfly: slim twig-body in olive-iridescent green-grey, four delicate transparent wings with iridescent AZZURRO-VERDI (blue-green) reflections, large dark compound eyes (visible in front and 3/4). Each view has a small reference scale element (a single child's finger silhouette in light grey, or a small leaf) to make the tininess legible. Same scale, same proportions across all four. No color shift, no wing-iridescence drift. Watercolor and ink linework, painterly storybook style, model-sheet clarity. NO scene, NO background details, just the four views and a clean cream background with the discreet scale reference.
+
+NEGATIVE: no inconsistencies between views, no wing color drift (must keep blue-green iridescence in all 4), no different sizes, no Liù appearing larger than finger-scale, no opaque wings, no walking/grounded poses, no kawaii eyes, no scene environment, no other characters in focus, no modern clothes, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## Note tecniche per Grok Imagine
+
+- Genera ogni immagine con **upload del documento canone Liù** (questo file) o copia-incolla i blocchi STYLESHEET + CHARACTER CANON in cima a ogni prompt.
+- **Sempre un solo aspect ratio per immagine** — non far decidere a Grok, specifica esplicitamente.
+- **Re-generation policy:** la sfida principale è la SCALA. Liù è grande come un dito di un fratello — se Grok la fa anche solo grande come una mano, è già troppo. Rigenera con riferimenti scala espliciti (foglia, dito, piccola moneta).
+- **Dopo l'approvazione**, salva con il filename canonico esatto in `visual/personaggi/individuali/cuccioli/liu/immagini/`.
+
+---
+
+## Negative prompt globale (incolla in coda a ogni prompt se Grok non rispetta)
+
+```
+no manga, no anime, no Pixar, no 3D render, no flat vector art, no hard digital outlines, no cartoon, no chibi, no kawaii, no modern clothing (no t-shirts, no jeans, no sneakers), no logos, no text, no signatures, no watermarks, no extra characters in scene unless required.
+```
+
+---
+
+## Negative prompt specifici Liù
+
+```
+no oversized dragonfly (Liù is the size of a finger, NOT bigger), no opaque colored wings (must be TRANSPARENT with blue-green iridescent reflections), no kawaii cute compound eyes (large but realistic dragonfly, not anime-cute), no walking/grounded poses (almost always flying or perched lightly), no thick heavy body (must be twig-slim), no Liù lingering as star of a scene (she enters/says/leaves — she's transient), no malicious gossip expression (she chooses what to say but never with cruelty), no Liù as comic relief in serious scenes, no Liù knowing things hidden from the reader, no parents present, no other large cuccioli for direct scale comparison (her finger-scale is best shown via leaf/twig/finger reference), no modern clothing.
+```
+
+---
+
+## Checklist post-generazione (verifica canone su ogni immagine)
+
+- [ ] Taglia minuscola (lunga come un dito di un fratello, ≈ 0.04 GU)?
+- [ ] Corpo sottile come un fuscello?
+- [ ] Quattro ali trasparenti con riflessi azzurro-verdi (signature §6 exception)?
+- [ ] Occhi composti grandi (mai kawaii)?
+- [ ] Volo: ali in motion blur in IMMAGINE 1-2 / ali piegate in IMMAGINE 3?
+- [ ] Postura sospesa in aria o appoggiata leggera (mai camminata pesante)?
+- [ ] Riferimento scala visibile (foglia, dito, contesto)?
+- [ ] Mai scena prolungata (sempre transient, "passa di qui")?
+- [ ] Mai espressione pettegolezzo cattivo / mai voce comica in scene serie?
+- [ ] Stile acquerello + inchiostro storybook (mai cartoon/anime/3D/kawaii)?
+
+---
+
+## Ordine di generazione consigliato
+
+1. **IMMAGINE 4 (turnaround)** per primo — fissa la coerenza anatomica + scala (riferimento dito/foglia).
+2. **IMMAGINE 1 (fronte)** subito dopo — la "carta d'identità" canonica.
+3. **IMMAGINE 2 (stop in aria *frrr*)** — la modalità più caratteristica di Liù.
+4. **IMMAGINE 3 (ascolto da foglia)** per ultima — la più sottile (presenza nascosta, ali piegate, non spia teatrale).
+
