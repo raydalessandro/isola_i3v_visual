@@ -67,3 +67,84 @@ Tasso antropomorfo, bipede stabile (cammina su due zampe come tutti gli abitanti
 - A volte un **bastone di legno scuro nodoso** in mano (per scavare, indicare, tenere a distanza)
 - Mai borse a tracolla, mai accessori vistosi
 - **Mai cappelli o berretti** (la bandana basta)
+
+## Espressione / comportamento
+
+Rovo fa **cose-da-rovo (cespuglio)** attraverso il corpo del tasso: punge verbalmente secco, si attacca quando prende qualcuno sotto la sua protezione, ha frutti sotto le spine (la dolcezza c'è ma sta sepolta), scava — in cerca di radici e tane d'altri animali, ma anche dentro le situazioni: arriva sotto al problema invece che intorno. Conosce la Foresta come si conosce la propria tana.
+
+**Modalità visivamente distinguibili:**
+
+- **Scontroso al margine** (default ~70% delle scene): postura curvata in avanti, una mano sull'anca, l'altra che indica con un dito storto o tiene il bastone, sguardo di sbieco. Sopracciglia aggrottate, bocca tirata in basso. **Brontola anche quando non parla** — la postura DICE "ho da fare". Voce secca, frasi corte: *"Non da questa parte."* / *"Ho da fare."*
+
+- **Cede ma non lo dice** (~20% delle scene): postura insolitamente ferma per Rovo (smette di muoversi), sguardo che si distoglie, mani che si calmano. La fronte si distende un attimo. **NON sorride mai esplicitamente** — la cessione si vede in un piccolissimo cambio di postura. Voce che diventa un filo meno secca: *"E va bene. Ma una volta sola."*
+
+- **Cura mediata** (~10%, raro ma centrale, S03/S04/S11_off): postura come default ma con un dettaglio piccolo che dice protezione — Rovo controlla con la coda dell'occhio Bru in lontananza, oppure posa il pallone per terra dalla parte degli Orti per i fratelli (s03), oppure mette qualcosa in tasca senza commento. **Mai abbraccio. Mai parola di affetto.** Il gesto È la cura. Voce: tipicamente rivolta a Bru senza guardarlo, *"Qua."*
+
+**Rapporti con gli altri personaggi (visivi):**
+- **Con Bru**: non lo accarezza mai. Bru gli sta dietro a rispettosa distanza. Quando torna a casa la sera, controlla che Bru ci sia. **Visivamente Bru è SEMPRE un passo o due dietro Rovo, mai accanto, mai davanti.** Il loro legame si vede in *come Rovo non lo guarda mai direttamente ma sa esattamente dov'è*.
+- **Con i fratelli umani**: scontroso, secco, ma riceve. **Mai compagno di viaggio** (perderebbe la firma di abitante-ai-margini). I fratelli vanno da lui (s03 margine Foresta, s04 ricerca di Noah perso). Lui non va da loro quasi mai.
+- **Con la Foresta Intrecciata**: la conosce intimamente — si muove dentro come se la Foresta fosse un'estensione del corpo. Quando esce dalla Foresta è UN PASSO DENTRO ANCORA — mai pienamente fuori.
+
+## Palette e atmosfera
+
+**Colori principali del corpo:**
+- Pelo: grigio-scuro principale, con la **maschera bianca del tasso** sulla testa (canonica), pelo nero attorno agli occhi, ventre più chiaro
+- Tartufo: nero umido
+- Occhi: marroni quasi neri, piccoli
+- Unghie: scure (corno marrone-nero), lunghe da scavatore
+
+**Colori dell'abbigliamento:**
+- **Marrone-grigio** della bandana (firma visiva, sempre presente)
+- **Marrone-fango / grigio-terra** della camicia/tunica e dei pantaloni
+- Nessun accento di colore vivace — Rovo è nel registro **terra/foresta**
+
+**Quartiere di appartenenza**: **Terra ovest** — Foresta Intrecciata, margini. Coerente con palette saga §6 "abitanti minori" terra (verdi scuri, marroni terra, grigi muschiosi).
+
+**Tipo di luce**: Rovo funziona benissimo in **luce filtrata di sottobosco** (foglie sopra, ombra screziata) e in **luce di crepuscolo** (tipicamente quando torna alla tana). Mai sotto luce piena diurna senza riparo: il suo pelo grigio-scuro si valorizza nelle penombre, non nel sole pieno.
+
+**Atmosfera predominante**: presente, ma sempre un passo dentro la Foresta — anche quando è al margine. Rovo porta nella scena un'**aria di "limite"**, di confine. Quando entra in scena la temperatura della scena scende un grado, l'aria si fa più seria. Non per minaccia: per **densità**.
+
+## Contesto e ambientazioni ricorrenti
+
+**Dimora**: tana scavata sotto un grosso ceppo coperto di muschio, ai margini esterni della Foresta Intrecciata, lato che dà sugli Orti del Cerchio. **La tana ha tre uscite** (canonico Bible — Rovo è scavatore esperto, le vie di fuga/lavoro multiple sono parte del personaggio). Vedi `visual/luoghi/quartiere_terra/foresta_intrecciata/tana_rovo/scheda.md`.
+
+**Quartiere narrativo**: **Terra ovest**, Quartiere della Foresta Intrecciata. Rovo non lascia mai il quartiere — la sua presenza nelle storie è SEMPRE in zona Foresta-margine.
+
+**Scene tipiche di Rovo:**
+- **Al margine della Foresta che riceve i fratelli con scontrosità** (s03 margine, s04 ricerca Noah)
+- **Posa il pallone per terra dalla parte degli Orti** (s03 — gesto di cura mediata: non lo lancia, lo posa, a un passo dal margine)
+- **Brontola istruzioni** (es. *"Le cose della Foresta hanno il loro orario."* in s03, frase di Rovo all'uscita)
+- **Cammina con Bru un passo dietro** (sempre, in qualsiasi scena dove Bru è presente)
+- **In s11 NON viene alla festa** — cura a distanza tramite Bru. Bru in s11 ha il cono di Rovo accanto a sé (s11_h08), Rovo è offscreen ma presente.
+
+**Vento dominante per Rovo**: nessuno specifico — coerente con **Vento Intreccio** (giorno/Foresta) per simbiosi tematica con il quartiere Terra.
+
+## Coerenza cross-scena (cose che NON cambiano)
+
+- Specie: tasso antropomorfo, bipede stabile
+- Statura: bassa e robusta (~0.8-0.9 GU equivalente, più basso di Bartolo)
+- Pelo: grigio-scuro con maschera bianca canonica del tasso (firma anatomica)
+- Pelo nero attorno agli occhi (mascherina bandit-like del tasso)
+- Una spalla un po' più alta dell'altra (firma anatomica derivata dal canone Bible)
+- Unghie lunghe da scavatore sempre visibili
+- **Bandana marrone-grigio sulla fronte: firma visiva sempre presente**
+- Camicia/tunica marrone-fango + pantaloni marrone-grigio
+- A piedi nudi (zampe del tasso)
+- Postura curvata in avanti, baricentro basso
+- Sguardo di sbieco come default
+- Brontola anche quando non parla
+- Mai sorride esplicitamente, mai abbracci, mai parole di affetto dirette
+- Bru sempre un passo o due dietro (mai accanto, mai davanti)
+
+## Variabilità ammessa
+
+- **Stato dei vestiti**: più o meno sporchi a seconda della scena (Rovo dopo aver scavato è più sporco di Rovo che ha appena ricevuto i fratelli al margine).
+- **Postura**: scontroso al margine (default), fermo che cede (rara), modalità cura mediata (rarissima).
+- **Espressione**: brontolante (default), distesa per un istante (cessione), severa-controllo (osserva Bru di lato).
+- **Posizione delle mani**: sull'anca (default), sul bastone (cammino/lavoro), in tasca (rarissimo, contrario al suo default), che indica con dito storto.
+- **Il bastone di legno**: lo porta in alcune scene di lavoro/cammino, in altre lo lascia. Mai accessorio decorativo.
+- **In s03**: posa il pallone per terra dalla parte degli Orti — il gesto specifico è canonico.
+- **In s04**: appare in secondo registro (presenza implicita o cammeo silenzioso).
+- **In s11**: assente in scena — la sua presenza è raccontata da Bru col cono accanto.
+
+**Mai variabile:** maschera bianca del tasso, bandana marrone-grigio, postura bipede curvata, riga bianca sulla testa, pelo grigio-scuro principale.
