@@ -148,3 +148,94 @@ Rovo fa **cose-da-rovo (cespuglio)** attraverso il corpo del tasso: punge verbal
 - **In s11**: assente in scena — la sua presenza è raccontata da Bru col cono accanto.
 
 **Mai variabile:** maschera bianca del tasso, bandana marrone-grigio, postura bipede curvata, riga bianca sulla testa, pelo grigio-scuro principale.
+
+## Cliché da evitare
+
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+
+Da Bible §4.5 "Note e vincoli":
+- ❌ Mai una scena di confidenza calorosa con Rovo — sarebbe rottura del personaggio.
+- ❌ Tenerezza sempre mediata (un gesto pratico, una porta lasciata aperta). Mai diretta.
+- ❌ Mai spiegare perché Bru sta con Rovo (porta socchiusa Fase F).
+- ❌ Mai Rovo compagno di viaggio prolungato dei fratelli (perderebbe la firma di abitante-ai-margini).
+- ❌ Quando i fratelli vanno da lui, lui li riceve. Lui non va dai fratelli quasi mai.
+
+**Specifici per Rovo (e tassi antropomorfi in genere):**
+- ❌ Mai Rovo "tasso simpatico" sorridente da cartone animato.
+- ❌ Mai Rovo "saggio della Foresta" con barba lunga, bastone con cristallo, sguardo profondo da maestro yoda.
+- ❌ Mai Rovo "orco minaccioso" con denti scoperti, ringhio, postura aggressiva. La sua scontrosità è secca e verbale, non fisica.
+- ❌ Mai Rovo che abbraccia Bru, che gli accarezza la testa, che lo chiama "piccolo".
+- ❌ Mai Rovo che ride a bocca aperta. Al massimo un mezzo sorriso che non si vede sotto le sopracciglia.
+- ❌ Mai Rovo a quattro zampe (è bipede stabile).
+- ❌ Mai Rovo "elegante" con cappello, gilet, accessori vistosi. Lui è terra, non corte.
+- ❌ Mai Rovo "saggio rabbioso" alla Disney/anime con energia esagerata. La sua energia è bassa, contenuta.
+- ❌ Mai Rovo che spiega cose ai fratelli (lui dice frasi corte secche, mai monologhi).
+- ❌ Mai sguardo di Rovo che si commuove visibilmente — al massimo distoglie lo sguardo.
+
+## Per stampa 3D
+
+- **Scala**: ~0.85-0.9 GU rispetto a Gabriel (più basso ma più robusto). Se scala toy 1:6, Rovo misura ~24-26 cm. Se miniatura 1:24, ~6.5 cm.
+- **Postura canonica per la veduta principale**: in piedi, leggermente curvato in avanti, una mano sull'anca, l'altra che tiene un bastone di legno scuro. Sguardo di sbieco verso destra, sopracciglia aggrottate. Testa con bandana marrone-grigio ben visibile. Mascherina bianca canonica del tasso visibile sulla fronte.
+- **4 vedute consigliate**: fronte, retro, profilo dx, profilo sx. La vista frontale è la canonica principale.
+- **Geometria**: corpo di tasso antropomorfo, bipede, proporzioni tarchiate. Testa larga e bassa. Spalle larghe. Braccia robuste, gambe corte.
+- **Materiale di stampa consigliato**: PLA o resina. Pelo principale color grigio-scuro topo (Pantone 19-3906 indicativo), maschera bianca avorio (Pantone 11-0507), bandana marrone-grigio (Pantone 18-0820), camicia marrone-fango (Pantone 19-1020). Post-stampa airbrush per le aree di transizione del pelo.
+- **Punti critici**: la maschera bianca del tasso (geometria di colore precisa, attenzione ai contorni), le unghie lunghe (geometria piccola), la bandana (può essere pezzo separato o integrato).
+- **Orientamento di stampa**: in piedi sulla base, leggermente di tre quarti.
+
+_Scala canonica precisa rinviata a definizione saga._
+
+## Per narrativa e social
+
+Vedere `descrizione_narrativa_social.md` nella stessa cartella (da scrivere in batch successivo se necessario per la persona terza).
+
+**Registri d'uso testuale:**
+- Voce narrante: "Rovo" (mai "il tasso" da solo come sostantivo principale).
+- Tra i personaggi: "Rovo" per nome. Mai vezzeggiativi.
+- Le sue battute non vanno introdotte da "disse burbero" o "brontolò severo" — la sua voce è già scontrosa per natura.
+- Mai descrivere Rovo con aggettivi morali (severo, generoso, protettivo). Mostra invece le azioni (posa il pallone per terra, controlla Bru con la coda dell'occhio).
+- **Voce tipica**: frasi corte secche. *"Non da questa parte."*, *"Ho da fare."*, *"E va bene. Ma una volta sola."*, (a Bru, senza guardarlo) *"Qua."*, *"Le cose della Foresta hanno il loro orario."* (s03).
+
+## Storie / scene di apparizione
+
+- s01: assente.
+- s02: assente.
+- s03: **maggiore — prima apparizione**. Margine Foresta Intrecciata. Riceve i fratelli scontroso (*"Cosa volete?"*), cede (riporta il pallone), gesto di cura mediata: posa il pallone per terra dalla parte degli Orti a un passo dal margine. Bru un passo dietro di lui in penombra fra i tronchi. Frase di chiusura uscendo: *"Le cose della Foresta hanno il loro orario."*
+- s04: **apparizione in secondo registro**. Cammeo silenzioso o presenza implicita nel momento del ritrovamento di Noah perso (s04_h09: arriva da un'altra direzione, brontolando, bandana scura).
+- s05: assente.
+- s06: assente.
+- s07: assente.
+- s08: assente.
+- s09: assente.
+- s10: assente.
+- s11: **assente in scena** — Rovo non viene alla festa (cura a distanza tramite Bru). Bru in s11_h08 ha accanto a sé il cono di Rovo (s11_h08 dettaglio canonico). Rovo è offscreen ma presente nella mente.
+- s12: assente.
+
+## Disallineamenti / domande aperte
+
+- **Età narrativa precisa**: dichiarata "adulto stagionato" ma non c'è data nel grafo. Coerente con ~50-60 anni umani equivalenti. Da confermare se serve precisione maggiore.
+- **Storia di Bru**: porta socchiusa Bible. Mai spiegata. Vincolo della saga, non da risolvere visivamente.
+- **Casa di Rovo dentro la tana**: la scheda di `tana_rovo` ha 3 uscite canoniche; gli interni non sono visivamente fissati ma per ora non servono (Rovo appare al margine della Foresta, non nella tana).
+
+## Riferimenti puntuali (citazioni dirette dalle fonti)
+
+**Fonti canoniche dirette:**
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §4.5 ROVO (intero blocco, vedi sopra in scheda).
+- `pipeline_narrativa/story_graph.json#entities.characters.rovo`: `species: tasso`, `type: abitante_maggiore`, `role_saga: resistenza_che_protegge`.
+- `pipeline_narrativa/story_graph.json#stories.s03.characters_in_scene[rovo].scene_role`: "maggiore_prima_apparizione".
+- `pipeline_narrativa/story_graph.json#stories.s04.characters_in_scene[rovo].scene_role`: "apparizione_secondo_registro".
+- `pipeline_narrativa/story_graph.json#stories.s03.visual_anchors.scene_hooks#s03_h08`: "Rovo posa il pallone per terra dalla parte degli Orti. A un passo dal margine. Non lo lancia." — gesto canonico di cura mediata.
+- `pipeline_narrativa/story_graph.json#stories.s03.visual_anchors.scene_hooks#s03_h09`: «Le cose della Foresta hanno il loro orario.» — frase canonica.
+- `pipeline_narrativa/story_graph.json#stories.s11.visual_anchors.scene_hooks#s11_h08`: "Bru lo prende. Lo guarda. Annuisce, una volta, piccolissimo. Accanto a sé ha già il cono di Rovo." — Rovo offscreen segnato via Bru.
+- `visual/oggetti/bandana_rovo/scheda.md`: scheda canonica della bandana firma visiva.
+- `visual/luoghi/quartiere_terra/foresta_intrecciata/tana_rovo/scheda.md`: scheda canonica della dimora.
+
+**Derivazioni autoriali:**
+- *Statura ~0.85-0.9 GU*: derivata da scala saga (più basso di Bartolo che è abitante anziano alto, più alto di Mèmolo riccio). Da raffinare quando si fa la prova di scala col turnaround.
+- *Tre modalità visive (scontroso al margine / cede ma non lo dice / cura mediata)*: derivate da §4.5 + ARCHI s03 + vincoli "tenerezza sempre mediata".
+- *A piedi nudi*: derivata da registro abitante anziano dell'isola che vive nella Foresta + zampe del tasso con unghie da scavatore come strumento.
+- *Bastone di legno scuro nodoso*: derivato da funzione "scava + cammina nella Foresta" + registro pre-industriale.
+- *Sguardo di sbieco come default*: derivato da §4.5 "Quando i fratelli vanno da lui lui li riceve" + Bru "rispettosa distanza" — Rovo non guarda diretto se non ha deciso.
+- *Pelo nero attorno agli occhi*: derivato da anatomia canonica Meles meles (tasso europeo) — la maschera scura attorno agli occhi è canonica della specie, non aggiunta autoriale.
+- *Outfit marrone-fango / grigio-terra*: derivato da palette quartiere Terra ovest §6 + funzionalità (vestiti che non si vedono nella Foresta, camuffamento naturale).
+
+**Cliché da evitare specifici**: derivati da `PATTERN_AI_DA_BANDIRE_v1.md` applicato al caso tasso-antropomorfo-anziano-scontroso + vincoli §4.5.
