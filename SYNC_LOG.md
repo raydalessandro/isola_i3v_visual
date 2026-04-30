@@ -12,7 +12,79 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
-## SYNC-2026-04-25-001 — Bootstrap repo `isola_i3v_visual`
+## SYNC-2026-04-30-009 — Fase F.2 visual prompt grok (28 prompt) + Fase Cornice del Mondo (7 step) + Brieffer install (12 brief)
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** visual + pipeline_narrativa (modifica autorizzata da Ray con pacchetto `cornice_mondo_pacchetto`) + governance
+- **Repo target:** archivio storico `isola_tre_venti_github` (Bible/grafo riallineamento), pipeline immagini esterna (chi genera con Grok Imagine).
+- **Cambiamento (3 macro-fasi nello stesso giorno):**
+
+  **A. Visual prompt grok (Fase F.2 in corso, 28 prompt totali):**
+  - 14 prompt_grok.md per personaggi: 3 fratelli (Gabriel/Elias/Noah), 4 primari (Rovo/Stria/Mèmolo/Grunto — Fiamma/Bartolo già canonizzati), 4 secondari (Salvia/Nodo/Amo/Zolla), 5 cuccioli (Pun/Toba/Bru/Cardo/Liù).
+  - 13 prompt_grok.md per oggetti: tutti i 13 oggetti-simbolo + grembiule_fiamma pre-esistente + pallone_di_stoffa_cucita (oggetto di scena ricorrente).
+  - Schede personaggio canonizzate per fratelli (Gabriel/Elias/Noah, opzione B "fittizio canonico"), Rovo (canonical), pescatori_case_basse (nuovo collettivo).
+  - Stylesheet saga acquerello+inchiostro storybook applicato uniforme (Beatrix Potter / Brian Wildsmith). Ogni prompt = 4 immagini canoniche per personaggi (`fronte`/`modalità_X`/`modalità_Y`/`turnaround`), 1-2 per oggetti. Naming canonico `<id>_canonica_v1_<vista>.jpg`.
+  - **Workflow esterno:** Ray estrae i prompt da GitHub, genera con Grok Imagine, carica le immagini negli `immagini/` di ogni entità.
+
+  **B. Fase "Cornice del Mondo" (7 step, completata):**
+  - **Step 1+2** (`c824496`): nuovo nodo radice `world_conventions` nel grafo con `refrain_animal_identification` (formula sg+pl, 6 gruppi eligibili tra cui il nuovo `pescatori_case_basse`, pool animali, vincoli) + `path_details: {paths: {}}` placeholder. Esteso `quote_tracker.refrain_animal_used_per_story: []`. Bump `schema_version 1.3 → 1.4`, `graph_version 1.1.0 → 1.2.0`.
+  - **Step 3** (`a3e654e`): `## Saluto del gruppo` aggiunto in 5 schede collettivi esistenti (camminanti/mantenitori/coltivatori_del_cerchio/mercato_del_mezzogiorno/pastori) + creata nuova scheda `visual/personaggi/collettivi/pescatori_case_basse/scheda.md` (6° gruppo-istituzione, decisione Ray 2026-04-30). Catalogo: 115 → 116 entità.
+  - **Step 4** (`8b70958`): 24 `cornice_dettagli` distribuite nelle 12 storie (2/storia) + 8 tuple in `quote_tracker.refrain_animal_used_per_story` (5 SG + 2 PL formule applicate, 11 animali distinti tutti unici saga) + 2 nuove entry `cantilene_coltivatori_stories` (s08 pre-crack, s09 modulazione compleanno). Distribuzione cornici per processo: A=4, B=5, C=6, D=6, E=3.
+  - **Step 5** (`92e87b6`): 36 sentieri "fantasma" appesi a `locations_secondary` di 12 storie (mappa DOC_4 §4).
+  - **Step 6** (`83e361e`): popolato `world_conventions.path_details.paths` con i 5 sentieri Tier A (via_dell_alba 6 dettagli, sentiero_orti_torrente_foresta 4, via_che_sale 4 incluso cardo evolvente, sentiero_orti_casa_salvia 3, viottolo_perimetrale_piazza 3 = 20 totali). Schema slot **senza campo `tipo`** (decisione Ray).
+  - **Step 7** (`de87ac2` + `9b8c30e`): aggiornata sezione `## Coerenza cross-scena (cose che NON cambiano)` di 5 schede sentieri Tier A con elenco dettagli stabili (rimando al grafo via `path_details.paths.<id>`).
+
+  **C. Brieffer install (`544d5fc` + `b7a2b6c`):**
+  - Aggiunto `scripts/build_writing_brief.py` (1128 righe). Generatore meccanico (zero token LLM) di dossier autosufficiente per agente prosa: pesca da grafo + narrazione fattuale + schede catalogo + prompt grok + cornici + sentieri + saluti + formula ritornello.
+  - Aggiunto `skills/brieffer/SKILL.md`.
+  - Generati 12 brief in `pipeline_narrativa/writing_briefs/sNN_writing_brief.md` (16k-32k parole/brief).
+  - Reference originale Ray salvato in `pipeline_narrativa/writing_briefs/_reference/s01_writing_brief_FINAL.md`.
+  - Test: `s01_writing_brief.md` identico a reference (1730 righe, diff vuoto).
+
+- **Decisioni autoriali Ray applicate (2026-04-30):**
+  - 6° gruppo-istituzione `pescatori_case_basse`: SI (catalogo + grafo + 2 cornici).
+  - Pattern A pre-eco s03 (conchiglia caduta): NO incremento `pattern_a_pre_eco_stories` (cornice scritta come oggetto_anomalo, minimo invasivo).
+  - narrator_address s09 (cantilena modulata): NO incremento `addresses_to_reader` (resta a 4 voci).
+  - Riequilibrio Giro E: SI, cornice S07-C1 spostata da Giro D a Giro E.
+  - Schema slot dettaglio sentiero: campo `tipo` rimosso.
+  - Vincolo DOC_1 §2 "tre nomi, mai quattro": s08-c2 plurale Mantenitori = 3 nomi (arvicola/ghiro/faina).
+  - Vincolo DOC_1 §3.4 unicità saga: s12-c1 Camminanti = ermellino (sostituito da "faina" che era già usata in s08).
+
+- **Backup chain (in `pipeline_narrativa/`):**
+  - `story_graph.v0.10.0.backup.json` (pre-fase E)
+  - `story_graph.json.pre_v1_3.backup.json` (pre-bump schema 1.3)
+  - `story_graph.json.pre_fase_g.backup.json` (pre-hook estesi)
+  - `story_graph.json.pre_cornice_mondo.backup.json` (pre-Step 1+2 oggi)
+  - `story_graph.json.pre_step4_cornici.backup.json` (pre-Step 4 oggi)
+  - `story_graph.json.pre_step5_sentieri.backup.json` (pre-Step 5 oggi)
+  - `story_graph.json.pre_step6_path_details.backup.json` (pre-Step 6 oggi)
+
+- **Commit principali della giornata:** `c824496` `a3e654e` `8b70958` `92e87b6` `83e361e` `de87ac2` `9b8c30e` `544d5fc` `b7a2b6c` (+ ~25 commit di prompt grok prima di pacchetto cornice del mondo).
+
+- **File toccati (alto livello):**
+  - `pipeline_narrativa/story_graph.json` (additivo) + 4 backup canonici nuovi.
+  - `pipeline_narrativa/writing_briefs/` (nuova directory, 12 brief + reference).
+  - `scripts/cornice_mondo/` (nuova directory: 4 script + 4 YAML + audit/ vuota).
+  - `scripts/build_writing_brief.py` (nuovo).
+  - `skills/brieffer/SKILL.md` (nuovo).
+  - `visual/personaggi/individuali/{bambini,primari,secondari,cuccioli}/*/prompt_grok.md` (28 file totali fino a oggi).
+  - `visual/personaggi/individuali/bambini/{gabriel,elias,noah}/scheda.md` (canonical, opzione B).
+  - `visual/personaggi/individuali/primari/rovo/scheda.md` (canonical).
+  - `visual/personaggi/collettivi/{camminanti,mantenitori,coltivatori_del_cerchio,mercato_del_mezzogiorno,pastori}/scheda.md` (Saluto del gruppo).
+  - `visual/personaggi/collettivi/pescatori_case_basse/scheda.md` (nuovo).
+  - `visual/oggetti/*/prompt_grok.md` (13 nuovi + grembiule preesistente).
+  - 5 schede sentieri Tier A in `visual/luoghi/.../strade/.../scheda.md` con dettagli stabili.
+  - DOC_1..DOC_6 e README originale del pacchetto cornice del mondo presenti in root come riferimento autoriale.
+  - `catalogo_web/data/entities.json` rigenerato (115 → 116 entità).
+
+- **Da riflettere altrove:**
+  - **Pipeline immagini esterna (Grok Imagine):** chi genera ha ora 28 prompt canonici disponibili in `visual/personaggi/.../prompt_grok.md` e `visual/oggetti/.../prompt_grok.md`. Le immagini canoniche generate vanno in `immagini/<id>_canonica_v1_<vista>.jpg`.
+  - **Archivio storico `isola_tre_venti_github`:** schema grafo bumpato 1.3 → 1.4 (additivo). Se la copia storica è 1.3, va sincronizzata o lasciata congelata come snapshot.
+  - **Repo prompt esterne:** se cachano lista entità/animali/gruppi-istituzione, c'è ora un 6° gruppo (`pescatori_case_basse`) e nuove tuple animali assegnate alle storie (vedi `quote_tracker.refrain_animal_used_per_story` per dettaglio).
+  - **GitHub Pages catalogo_web:** auto-rideploy su push main, già aggiornato. Niente azione richiesta.
+
+---
+
 - **Stato:** DA_RIFLETTERE
 - **Tipo:** bootstrap
 - **Repo target:** archivio storico `isola_tre_venti_github` (informativo, archive-only). Eventuali repo che linkavano a `cartografia_tecnica/` come path.
