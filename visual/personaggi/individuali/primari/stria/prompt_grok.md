@@ -131,3 +131,97 @@ silent center of the mandala, must remain free). NO visible emotional
 display (she never visibly weeps or laughs broadly). NO giving an
 explicit moral lesson (her authority is in the HOW, never the WHAT).
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (UNA ZAMPA, modalità attesa)
+
+**Filename suggerito**: `stria_canonica_v1_attesa.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Stria]
+
+SCENE — Canonical full-body view, the iconic one-leg waiting pose:
+Stria stands on her LEFT leg only, the right leg folded up and tucked
+against her body just under the line of the shawl (canonical heron
+posture). Three-quarter view from the front-left. Her long neck is
+gently curved in a soft S-shape, the head tilted slightly to her
+right side as if listening. Her long bone-colored beak points
+forward and slightly down. Wings are folded against the body,
+wing-tips visible at the lower back where they cross.
+
+The ash-gray shawl is draped on her shoulders, falling softly along
+her wings, the fringed edges visible. Her ash-gray body plumage and
+the darker wing-tips create the typical heron color graduation.
+
+Her face is calm-attentive. The yellow-gold eyes are fixed straight
+ahead at the viewer (or at an implied listener) with the steady
+heron gaze — alive, patient, NOT predatory, NOT condescending. The
+beak is closed. The small dark crest at the crown of her head is
+visible (the canonical heron plume).
+
+Background: the threshold of the schoolhouse — a small clearing of
+soft sage-green grass, the wooden door of the school visible behind
+her on the right (warm earth-brown wood, very steeply pitched roof
+suggested above frame). NO other figures visible — this is a
+character study. The Albero Vecchio is NOT in this frame (canonical
+vincolo — Stria is never near the Old Tree).
+
+Lighting: soft morning natural light, slightly diffused, coming from
+the left. The ash-gray plumage picks up cool ambient tones, the
+shawl catches a gentle highlight, the yellow eyes catch a small warm
+glint. No harsh contrast.
+
+Composition: full body visible, head to single standing leg, slight
+three-quarter view. Aspect ratio 3:4 (portrait). The figure occupies
+the center, the schoolhouse hint to the right, soft sage-green
+ground at the base.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "volo" (atterraggio sul tetto della casa)
+
+**Filename suggerito**: `stria_canonica_v1_volo.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Stria]
+
+SCENE — Stria in flight, descending toward her steeply pitched roof:
+Stria is in mid-flight, wings spread WIDE in slow heron beat (not
+fluttering — broad measured wingbeat). Three-quarter view from below
+or side, capturing both wings extended fully. Her long neck is
+folded back into an S-curve close to the body (the canonical flight
+posture of the grey heron — neck NOT extended forward like a stork).
+Her legs trail behind, long thin bone-yellow lines, slightly tucked.
+Her long beak points forward, parallel to the body axis.
+
+The ash-gray shawl is ABSENT in this image (she has taken it off
+before flight, canonical Bible). The body plumage and wing-tips are
+fully visible — the darker wing-tips contrast with the lighter ash-
+gray body, the white-cream throat catches the light.
+
+Below her, the steeply pitched roof of her tall narrow house is
+suggested — warm reddish-brown roof tiles, the apex of the roof a
+sharp triangle, suggested in soft watercolor wash. Just behind, the
+schoolhouse and a hint of the village edge — soft ochre, sage-green,
+warm village rooftops, all out of focus.
+
+Her face shows the calm flight expression — eyes ahead, beak closed,
+the small dark crest visible. She is descending with measured grace,
+not landing yet — perhaps a meter or two above the roof.
+
+Lighting: warm late-morning natural light from the side, the wings
+catching gentle highlights along their upper edges, the underside in
+soft shadow. The sky above is muted blue with a few soft clouds.
+
+Composition: medium-wide shot capturing the full wingspan, the body
+diagonal in the frame as if descending. Aspect ratio 4:5 (portrait,
+slightly wider) OR 16:9 (landscape) depending on illustrator
+preference — 4:5 emphasizes the descent, 16:9 the wingspan.
+Recommended: 4:5 portrait.
+```
