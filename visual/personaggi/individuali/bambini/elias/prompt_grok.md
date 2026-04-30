@@ -128,3 +128,96 @@ mascot proportions. NO prince outfit. NO bare feet outdoors. NO flashy
 accessories. Always at least one brother in scene EXCEPT for these
 canonical reference images.
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (FRONTE, modalità costruttore)
+
+**Filename suggerito**: `elias_canonica_v1_fronte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Elias]
+
+SCENE — Canonical full-body front view, builder mode:
+Elias stands facing the viewer, slightly turned three-quarters to his
+right, with a posture leaning very gently forward — the natural body
+position of a child who is about to do something with his hands. His
+right hand holds a small piece of natural cord or rope (a few
+centimeters, just enough to be visible), his left hand is half-raised
+as if he has just shown the cord to someone, fingers slightly curled.
+His feet are slightly apart in a stable but ready stance. Sleeves
+rolled up to mid-forearm.
+
+His face is alive and engaged. Warm honey-brown eyes look toward the
+viewer with a hint of energy — not staring, but in mid-thought.
+His SIGNATURE small lateral smile is present: one corner of the mouth
+lifted, the other neutral, the expression of a child who has just
+figured something out. A few light chestnut hair strands are slightly
+tousled. The few small freckles across his nose are visible.
+
+The mustard-yellow cord/bandana is clearly visible at his neck, knotted
+narrow at the side. His warm orange shirt is slightly creased at the
+elbows where the rolled sleeves bunch. His earth-brown trousers fall
+just below the knee. His light leather shoes are dusty.
+
+Background: a muted, soft outdoor setting evoking the outskirts of the
+village or the edge of a workshop area — packed earth ground, a wooden
+post or low structure suggested in warm grey-brown watercolor wash, a
+hint of muted sky above. The background is gentle painterly suggestion.
+
+Lighting: warm midday natural daylight, diffuse, coming from the upper
+right. Soft shadow on his left side. No harsh contrast.
+
+Composition: full body visible, head to feet, centered. Aspect ratio
+3:4 (portrait). The figure occupies roughly 70% of the vertical frame.
+Elias should be visibly SMALLER than the canonical Gabriel reference
+(0.85 GU vs 1.0 GU) — proportionally a touch shorter and slighter.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "ponte" (3/4, in azione di passaggio)
+
+**Filename suggerito**: `elias_canonica_v1_ponte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Elias]
+
+SCENE — Elias in bridge mode, mid-gesture of passing/showing:
+Elias stands or kneels lightly on one knee, three-quarter view from
+the front-left, his upper body twisted gently to his left as if turning
+toward someone just out of frame. His right hand is extended forward,
+palm half-open, holding a small object — a piece of rope tied with a
+simple knot, OR a small wooden stick that has been notched, OR an open
+hand offering a found pebble. The object is the visual focus of the
+gesture. His left hand rests on his thigh or on the ground for balance.
+
+His face shows the bridge-mode expression: lips parted as if mid-
+sentence ("E se...", "Possiamo..."), eyes looking toward where the
+hand is reaching, the lateral smile fully present and a touch warmer
+than in image 1. Eyebrows slightly raised in invitation. The mustard
+cord at his neck has shifted slightly with the body twist.
+
+His warm orange shirt sleeves are rolled up to nearly the elbow. The
+trouser knees show the small smudge of earth where he has been kneeling
+or leaning. The light leather shoes are clearly visible if standing.
+
+Background: a stretch of softly-suggested island terrain — packed earth
+or low rolling grass, hints of trees or a wooden fence in distant
+painterly wash. NO other figures clearly visible (the brothers are
+implied off-frame to the left). Sky pale warm. Some scattered leaves
+or small natural details on the ground near him.
+
+Lighting: warm afternoon natural light, soft shadows. The light falls
+on his face from the front-left, illuminating the gesture of his
+extended hand.
+
+Composition: from feet (or knees if kneeling) to head, three-quarter
+view. The extended hand and the small object it holds is the visual
+calamita — composition leaves space toward the left for the implied
+recipient. Aspect ratio 4:5 (portrait).
+```
