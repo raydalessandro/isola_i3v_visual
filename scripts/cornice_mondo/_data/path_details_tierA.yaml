@@ -1,0 +1,180 @@
+# DOC_6 — Mercato delle idee Tier A · Sentieri (decisioni autoriali approvate)
+# 5 sentieri Tier A, 20 dettagli totali.
+# Schema slot dettaglio: campo `tipo` rimosso (README §9 + DOC_5 §6.2 decisione Ray).
+#
+# Schema:
+#   id: <prefix>_d<NN>_<slug>      # unique detail id
+#   what: "<descrizione canonica>"
+#   where_along_path: "<dove>"
+#   visibility: "<quando si vede>"
+#   appears_in_stories: [<list>]
+#   perception_pattern: "<chi nota cosa, ottenuto da DOC_6>"
+#   state_by_story: { sNN: "..." }  # opzionale, per dettagli evolventi
+#   notes: ""
+
+paths:
+
+  # ============================================================
+  # via_dell_alba — Tier A · 6 storie · 6 dettagli
+  # Anatomia: 4 vie principali. Da Piazza est a Quartiere di Fuoco.
+  # 1502 m. Forno + Case del Mattino. Vento Taglio entra all'alba.
+  # ============================================================
+  via_dell_alba:
+    tier: A
+    anatomy: "Da Piazza in direzione est verso il Quartiere di Fuoco. 1502 m. Forno + Case del Mattino. Tragitto canonico Piazza → Forno: 30 minuti. Vento Taglio entra da est all'alba e taglia la nebbia."
+    appears_in_stories: [s06, s08, s09, s10, s11, s12]
+    details:
+      - id: vda_d01_pietre_in_fila_su_muretto
+        what: "Il muretto basso a metà via dove qualcuno (anonimo, nessuno l'ha mai visto farlo) dispone le pietre piatte in fila ordinata. Le pietre cambiano numero di volta in volta — chi le tiene vuole un certo ordine ma il vento le sposta."
+        where_along_path: "metà via, lato sud, su un muretto basso"
+        visibility: "visibile sempre, di passaggio"
+        appears_in_stories: [s06, s12]
+        perception_pattern: "s06 prima vista (i tre fratelli notano l'ordine senza fermarsi); s12 chiusura (3 pietre sole, brina del mattino)"
+        state_by_story:
+          s06: "7 pietre piatte allineate, asciutte"
+          s12: "solo 3 pietre, ricoperte di brina del mattino"
+        notes: "Dettaglio evolvente — saga-firma del sentiero. Anonima cura: non si sa chi le mette."
+
+      - id: vda_d02_olivastro_storto
+        what: "L'olivastro storto sul lato nord della via, due terzi del percorso. Cresce piegato dal Vento Taglio. La sua corteccia ha una piccola crepa verticale che forma un disegno simile a un fulmine."
+        where_along_path: "due terzi del percorso, lato nord"
+        visibility: "visibile sempre, ma in luce di piombo (s08) si percepisce solo come sagoma"
+        appears_in_stories: [s08, s11]
+        perception_pattern: "s08 sagoma appena visibile sotto cielo piombo pre-temporale; s11 foglie d'argento che brillano nella luce di festa"
+        state_by_story:
+          s08: "appena visibile nella luce di piombo del temporale, corteccia che assorbe la luce grigia"
+          s11: "foglie d'argento brillano nella luce di festa, corteccia chiara"
+        notes: "Dettaglio evolvente. Albero piegato dal Vento Taglio, fulmine sulla corteccia come firma del vento."
+
+      - id: vda_d03_punto_del_riflesso
+        what: "Il punto del riflesso — una pietra del selciato lucidata da generazioni di passi, dove al mattino il primo raggio del sole rimbalza creando una macchia di luce sul muro opposto per qualche minuto."
+        where_along_path: "metà-percorso del tratto pianeggiante, lato sud verso est"
+        visibility: "macchia di luce visibile solo all'alba (qualche minuto), pietra lucidata visibile sempre"
+        appears_in_stories: [s09, s12]
+        perception_pattern: "s09 Gabriel passa nel pomeriggio (no riflesso, solo memoria che ci sarà); s12 ultima volta che la macchia di luce appare prima dell'inverno"
+        state_by_story:
+          s09: "pomeriggio: pietra asciutta, nessun riflesso, ma la memoria del riflesso del mattino"
+          s12: "alba: ultima macchia di luce della stagione prima della brina"
+        notes: "Dettaglio evolvente per opposizione (assenza vs presenza). Memento stagionale."
+
+      - id: vda_d04_odore_di_pane
+        what: "L'odore di pane che cresce mano a mano che ci si avvicina al Forno. È così costante che chi cammina lì sa quanto manca all'arrivo solo dall'intensità."
+        where_along_path: "tutto il tratto finale verso Forno (ultimi 300m)"
+        visibility: "olfattivo, percepito sempre tranne quando il forno è spento"
+        appears_in_stories: [s10, s06, s12]
+        perception_pattern: "s10 notte: l'odore non c'è — il forno è spento, dato confonde Noah; s06 mattino: pieno; s12 sera: tornato pieno, ultima cottura della stagione"
+        state_by_story:
+          s10: "ASSENTE — forno spento di notte, l'assenza si nota per chi conosce"
+          s06: "pieno, all'altezza di mezza via già percepibile"
+          s12: "tornato pieno, ultima cottura della stagione"
+        notes: "Dettaglio evolvente non-oggetto (olfattivo). L'assenza in s10 è il punto drammatico — Noah si confonde nel buio."
+
+      - id: vda_d05_tracce_di_carriola
+        what: "Le tracce di carriola — due sottili solchi paralleli sulla terra battuta del lato sud della via, dove le carriole dei Camminanti passano sempre. Restano visibili anche dopo la pioggia."
+        where_along_path: "lato sud, terra battuta lungo tutta la via"
+        visibility: "visibili sempre sul fondo terroso, più fresche/molteplici durante eventi (festa)"
+        appears_in_stories: [s11]
+        perception_pattern: "s11 festa: tracce molteplici, fresche, sovrapposte"
+        notes: "Anonimato del lavoro. Le carriole si vedono raramente in scena ma le tracce restano sempre."
+
+      - id: vda_d06_scodella_di_metallo_chiodo
+        what: "Una scodella di metallo appesa a un chiodo vicino alla porta di una delle Case del Mattino. Tintinna piano col vento, sempre stesso suono."
+        where_along_path: "ultime case prima del Forno (Case del Mattino), porta laterale"
+        visibility: "visiva e acustica, costante"
+        appears_in_stories: [s12]
+        perception_pattern: "s12 notte di brina: suona più sordo, coperta di gelo"
+        state_by_story:
+          s12: "nella notte di brina suona più sordo, coperta di gelo"
+        notes: "Suono firma del sentiero. In s12 il cambio di stato (gelo) suggerisce l'inverno arrivato."
+
+  # ============================================================
+  # sentiero_orti_torrente_foresta — Tier A · 4 storie · 4 dettagli
+  # Anatomia: Quartiere di Terra. Orti del Cerchio → margine
+  # Foresta Intrecciata → torrente affluente. Sentiero della soglia.
+  # ============================================================
+  sentiero_orti_torrente_foresta:
+    tier: A
+    anatomy: "Sentiero del Quartiere di Terra. Collega Orti del Cerchio al margine della Foresta Intrecciata e prosegue verso il torrente affluente. Primo sentiero della soglia — chi va dentro la Foresta passa di qui."
+    appears_in_stories: [s03, s04, s05, s11]
+    details:
+      - id: sotf_d01_sasso_di_soglia
+        what: "Il sasso di soglia — una grossa pietra grigio-verde, rotonda, con una concavità in alto dove si raccoglie acqua piovana. Il sasso segna il confine tra Orti e Foresta. Si vedono sempre tracce di animali che ci hanno bevuto."
+        where_along_path: "esattamente al confine Orti-Foresta, lato sentiero"
+        visibility: "visibile sempre, di passaggio. La concavità contiene acqua dopo pioggia."
+        appears_in_stories: [s03]
+        perception_pattern: "s03 prima volta: il pallone passa accanto al sasso senza che nessuno lo nomini"
+        notes: "Dettaglio-soglia. Il sasso fa da cardine geografico. In s03 introduce la zona di gioco dei fratelli."
+
+      - id: sotf_d02_ramo_basso_curvato
+        what: "Il ramo basso curvato — un ramo di carpino che pende attraverso il sentiero, basso. Bisogna abbassarsi per passare. Per i bambini è più che altro per gli adulti — i tre fratelli ci passano sotto senza notarlo."
+        where_along_path: "qualche metro dentro il margine, primo terzo del tratto in foresta"
+        visibility: "visibile sempre, basso e in vista"
+        appears_in_stories: [s04]
+        perception_pattern: "s04 Bru segue Salvia da sotto (basso quanto basta per Bru, naturale per i fratelli che ci passano sotto)"
+        notes: "Il sentiero si 'ricorda' di essere sentiero per piccoli — per gli adulti è scomodo, per i cuccioli è normale."
+
+      - id: sotf_d03_mucchio_di_pigne_ammassato
+        what: "Il mucchio di pigne ammassato sulla destra, qualche metro dentro il margine. È un nido di scoiattoli abbandonato anni fa, ma la forma resta. Salvia ci raccoglie pigne secche per farne accendifuoco."
+        where_along_path: "lato destro entrando, qualche metro dopo il sasso di soglia"
+        visibility: "visibile sempre, di passaggio"
+        appears_in_stories: [s05]
+        perception_pattern: "s05 Bru ci passa accanto come se fosse un punto-controllo. Forse è il suo segnale per scegliere la direzione."
+        notes: "Storia stratificata: nido vecchio + uso attuale. Punto di orientamento per chi conosce."
+
+      - id: sotf_d04_foglie_sempre_umide
+        what: "Le foglie sempre umide — un tratto di una decina di metri dove, qualunque sia la stagione, il fondo è coperto di foglie marce e umide. La luce qua è sempre filtrata dalle chiome più dense, l'umidità non se ne va mai."
+        where_along_path: "tratto centrale di una decina di metri, sotto chiome più dense"
+        visibility: "visibile sempre, fondo sempre scuro/umido per filtraggio luce"
+        appears_in_stories: [s11]
+        perception_pattern: "s11 i Coltivatori scendono coi sacchi e qui rallentano sempre il passo per non scivolare"
+        notes: "Microclima del sentiero. Il rallentamento è cura del lavoro, non timore."
+
+  # ============================================================
+  # via_che_sale — Tier A · 4 storie · 4 dettagli
+  # Anatomia: via principale Nord, 1800 m. Da Piazza ai Pascoli Alti.
+  # Sale costantemente. Quartiere d'Aria.
+  # ============================================================
+  via_che_sale:
+    tier: A
+    anatomy: "Via principale Nord, 1800 m, dalla Piazza ai Pascoli Alti. Sale costantemente. Quartiere d'Aria. Tragitto canonico Villaggio → Pascoli → Roccia Alta → Burrone."
+    appears_in_stories: [s01, s02, s11, s12]
+    details:
+      - id: vcs_d01_pietra_dei_tre_passi
+        what: "La pietra dei tre passi — una pietra piatta, posata di traverso al sentiero verso il primo terzo della salita. Tre passi prima e tre passi dopo, il sentiero pianeggia leggermente. Chi sale di buon ritmo la usa come 'fermata' — uno o due secondi per riprendere fiato."
+        where_along_path: "primo terzo della salita, sentiero pianeggia tre passi prima e tre passi dopo"
+        visibility: "visibile sempre, di passaggio"
+        appears_in_stories: [s01]
+        perception_pattern: "s01 prima volta della saga in ascesa. I tre fratelli ci si fermano d'istinto."
+        notes: "Saggezza del corpo, sentiero che insegna il ritmo. La 'fermata' breve è gesto fisico, non scelta."
+
+      - id: vcs_d02_cardo_isolato
+        what: "Il piccolo cardo isolato sul ciglio est del sentiero, nel tratto medio. Cresce solo lui, da una crepa nella terra. Fiorisce viola in primavera, secco e dorato d'autunno. Non si ricorda da quanti anni è lì."
+        where_along_path: "tratto medio, ciglio est, da una crepa nella terra"
+        visibility: "visibile sempre, evolve con le stagioni"
+        appears_in_stories: [s02, s11, s12]
+        perception_pattern: "s02 fine inverno: ancora secco, dorato; s11 autunno: di nuovo dorato; s12 vigilia brina: coperto di brina, le punte bianche"
+        state_by_story:
+          s02: "secco dorato (fine inverno - ancora la forma autunnale)"
+          s11: "secco dorato di nuovo (autunno pieno)"
+          s12: "coperto di brina, punte bianche (vigilia brina, fine stagione)"
+        notes: "DETTAGLIO EVOLVENTE PRINCIPALE — oggetto-firma del sentiero. Il cardo torna in 3 storie con stati stagionali diversi (DOC_6 §4 nota), funziona come 'orologio del sentiero'."
+
+      - id: vcs_d03_sasso_del_campanaccio
+        what: "Il sasso del campanaccio — una grossa roccia tonda incassata nel pendio dove i Pastori in discesa appoggiano il bastone (TIK-TIK-TIIK eco) per radunare il gregge prima di entrare in piazza. La roccia ha un punto liscio in cima, dove il bastone batte sempre."
+        where_along_path: "tratto in alto vicino ai Pascoli, punto di radunamento gregge"
+        visibility: "visibile sempre, attivata in s11 (Pastori in discesa)"
+        appears_in_stories: [s11]
+        perception_pattern: "s11 Pastori scendono con le greggi per la festa. Il TIK-TIK-TIIK risuona qui prima della piazza."
+        notes: "Punto-funzione: il sasso ha un uso operativo specifico (radunamento). Collega il saluto Pastori (TIK-TIK-TIIK, DOC_2 §2.5) al sentiero."
+
+      - id: vcs_d04_segno_del_passaggio
+        what: "Il segno del passaggio — l'erba ai due lati del sentiero, nel tratto in alto vicino ai Pascoli, è schiacciata in due righe parallele dalle generazioni di pastori che passano. Non ricresce mai dritta. Anche se nessuno passa per giorni, le righe restano."
+        where_along_path: "tratto in alto vicino ai Pascoli, due lati del sentiero"
+        visibility: "visibile sempre, evolve coi passaggi"
+        appears_in_stories: [s12]
+        perception_pattern: "s12 vigilia brina: le righe d'erba sono ingiallite e brillano leggermente alla luce del Concerto"
+        state_by_story:
+          s12: "righe d'erba ingiallite, brillano leggermente alla luce del Concerto"
+        notes: "Memoria geologica del sentiero. Le righe persistono anche senza passaggi recenti — testimonianza fisica della comunità."
+
+  # Continua nel pezzo 2/2: sentiero_orti_casa_salvia + viottolo_perimetrale_piazza
