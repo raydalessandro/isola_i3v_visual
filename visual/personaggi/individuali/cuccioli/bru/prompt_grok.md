@@ -81,4 +81,89 @@ NEGATIVE: no Bru in the foreground center, no Bru as star of the scene, no other
 
 ---
 
-> ⏸️ **STOP — fine pezzo 1/2.** Prossimo pezzo: IMMAGINE 3 (vicino a Rovo a distanza giusta) + IMMAGINE 4 (turnaround) + checklist.
+## IMMAGINE 3 — Bru modalità "vicino a Rovo a distanza giusta"
+
+**Aspect ratio:** 4:5 (verticale leggero)
+**Filename atteso al salvataggio:** `bru_canonica_v1_vicino_a_rovo.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON BRU — incolla blocco sopra]
+
+SCENE: Bru, the young badger child (compact-robust, soft grey-dark fur, thin white head stripe, sad-attentive black eyes), positioned NEAR but not touching Rovo, his gruff adult badger uncle. Rovo is the bigger figure (full thick white head stripe, weathered grey-brown earth-toned fur, dark bandana around his neck), standing on packed earth at the edge of the village or on a wooden plank. The space BETWEEN them is the gesture — measured, deliberate, neither too close (no clinging, no leaning on Rovo) nor too far. Bru's body is faintly oriented toward Rovo, mid-step (the "due passi piccoli" — two small soft steps of relief that he himself doesn't see himself making). Both characters quiet, walking in the same direction or about to. Soft warm afternoon light, watercolor and ink linework, painterly storybook tone of measured tenderness — never sentimental, never theatrical.
+
+NEGATIVE: no Bru clinging to or hugging Rovo, no overly sentimental hand-on-shoulder gesture, no Rovo bending down theatrically, no Bru in foreground star pose, no visible tears, no Bru running, no missing distance between them (the SPACE is the point), no thick adult stripe on Bru, no modern clothing, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## IMMAGINE 4 — Bru turnaround (4 viste)
+
+**Aspect ratio:** 16:9 (orizzontale, 4 figure intere affiancate)
+**Filename atteso al salvataggio:** `bru_turnaround_v1.jpg`
+
+**Prompt completo:**
+
+```
+[STYLESHEET CANONICA SAGA — incolla blocco sopra]
+
+[CHARACTER CANON BRU — incolla blocco sopra]
+
+SCENE: Character turnaround sheet of Bru, the young badger child. Four full-body views of the same character in a single horizontal image, side by side, evenly spaced, on a neutral warm cream/off-white background: FRONT view, three-quarter LEFT view, SIDE PROFILE view (left side), BACK view. All four views show the same compact-robust young badger: soft grey-dark fur, the thin canonical white head stripe (thinner than adult Rovo's), small dark rounded paws, soft rounded ears, sad-attentive black eyes (visible in front and 3/4 views). Same scale, same proportions, same listening posture across all four views. No color shift between views, no fur-tone drift, no stripe-thickness drift. Watercolor and ink linework, painterly storybook style, model-sheet clarity. NO scene, NO background details, just the four views and a clean cream background.
+
+NEGATIVE: no inconsistencies between views, no different fur colors, no stripe-thickness drift (must be thin in ALL views), no different sizes, no scene details, no props, no Rovo present, no other characters, no modern clothes, no theatrical sad expression, no cartoon, no manga, no anime, no 3D, no Pixar.
+```
+
+---
+
+## Note tecniche per Grok Imagine
+
+- Genera ogni immagine con **upload del documento canone Bru** (questo file) o copia-incolla i blocchi STYLESHEET + CHARACTER CANON in cima a ogni prompt.
+- **Sempre un solo aspect ratio per immagine** — non far decidere a Grok, specifica esplicitamente.
+- **Re-generation policy:** se la prima generazione non è canonica (Bru come star, lacrime visibili, posa eroica, striscia troppo spessa), rigenera fino a 3 volte con piccole variazioni di prompt prima di scartare.
+- **Dopo l'approvazione**, salva con il filename canonico esatto in `visual/personaggi/individuali/cuccioli/bru/immagini/`.
+
+---
+
+## Negative prompt globale (incolla in coda a ogni prompt se Grok non rispetta)
+
+```
+no manga, no anime, no Pixar, no 3D render, no flat vector art, no hard digital outlines, no cartoon, no chibi, no kawaii, no modern clothing (no t-shirts, no jeans, no sneakers), no logos, no text, no signatures, no watermarks, no extra characters in scene unless required.
+```
+
+---
+
+## Negative prompt specifici Bru
+
+```
+no Bru as center/star of group scene (he's always at edge or back), no theatrical orphan look, no visible tears (sadness stays in EYES only, never on face), no heroic poses, no bravura gestures, no Bru telling-his-story expression (porta socchiusa rule), no Bru playing loud or hyperactive, no clinging to Rovo, no thin/delicate body (he's ROBUST compact), no thick full adult stripe (must be THINNER than Rovo's), no smiling joyful cucciolo expression (his "happy" still has the slight sadness), no modern clothing.
+```
+
+---
+
+## Checklist post-generazione (verifica canone su ogni immagine)
+
+- [ ] Corpo compatto e robusto (mai magro/allungato)?
+- [ ] Pelo grigio-scuro, morbido (non adulto)?
+- [ ] Striscia bianca sulla testa **sottile** (più sottile di Rovo)?
+- [ ] Occhi neri, attenti, con tristezza-sotto-la-calma?
+- [ ] Postura silenziosa, in ascolto (mai esibita)?
+- [ ] Margine/sfondo (mai centro scena, salvo IMMAGINE 1 ritratto)?
+- [ ] Mai lacrime visibili (sadness solo negli occhi)?
+- [ ] Mai posa eroica o teatrale?
+- [ ] Mai aggrappato a Rovo (distanza misurata in IMMAGINE 3)?
+- [ ] Stile acquerello + inchiostro storybook (mai cartoon/anime/3D)?
+- [ ] Scala cucciolo (≈ 0.40 GU, robusto-compatto, più piccolo di Rovo)?
+
+---
+
+## Ordine di generazione consigliato
+
+1. **IMMAGINE 4 (turnaround)** per primo — fissa la coerenza anatomica (compattezza, striscia, palette).
+2. **IMMAGINE 1 (fronte)** subito dopo — la "carta d'identità" canonica.
+3. **IMMAGINE 2 (silenzio attento)** — la modalità più caratteristica di Bru (ascolto, margine).
+4. **IMMAGINE 3 (vicino a Rovo)** per ultima — la più complessa (richiede coerenza con Rovo + gestione "distanza giusta").
+
