@@ -6,7 +6,7 @@ sottotipo: strada
 categoria_strada: sentiero_foresta
 quartiere: terra
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_orti_torrente_foresta"]
 appare_in_storie: []
 cartografia:
@@ -61,6 +61,17 @@ Strada del quartiere Terra. Categoria: `sentiero_foresta`. Status cartografico: 
 ## Coerenza cross-scena (cose che NON cambiano)
 
 Dagli Orti del Cerchio entra nella Foresta verso ovest-sud-ovest, porta al torrente dopo 20-30 minuti di cammino (~1.5-2km). Canonico S5: percorso del Ponte di Rami.
+
+### Dettagli stabili (path_details Tier A)
+
+Riferimento canonico: `pipeline_narrativa/story_graph.json#world_conventions.path_details.paths.sentiero_orti_torrente_foresta` (DOC_6, decisioni autoriali Ray 2026-04-30). Sentiero della soglia: chi va dentro la Foresta passa di qui.
+
+- **`sotf_d01_sasso_di_soglia`** — *al confine Orti-Foresta, lato sentiero*. Pietra grigio-verde rotonda, concavità in alto raccoglie acqua piovana. Tracce di animali che vi hanno bevuto. Segna il confine. *Storie:* s03 (prima volta — il pallone passa accanto senza che nessuno lo nomini).
+- **`sotf_d02_ramo_basso_curvato`** — *primo terzo del tratto in foresta*. Ramo di carpino pende attraverso il sentiero, basso. Per gli adulti scomodo, naturale per i cuccioli. *Storie:* s04 (Bru segue Salvia da sotto — il sentiero si "ricorda" di essere sentiero per piccoli).
+- **`sotf_d03_mucchio_di_pigne_ammassato`** — *lato destro entrando, qualche metro dopo il sasso di soglia*. Vecchio nido di scoiattoli abbandonato anni fa, ma la forma resta. Salvia ci raccoglie pigne secche per accendifuoco. *Storie:* s05 (Bru ci passa come punto-controllo — forse segnale per scegliere direzione).
+- **`sotf_d04_foglie_sempre_umide`** — *tratto centrale di una decina di metri, sotto chiome più dense*. Fondo coperto di foglie marce e umide in qualunque stagione. Luce sempre filtrata, l'umidità non se ne va mai. *Storie:* s11 (Coltivatori scendono coi sacchi e qui rallentano sempre il passo).
+
+I dettagli sono fonte autorevole della firma visuale e narrativa del sentiero. Ogni illustrazione/scena deve rispettarli.
 
 ## Variabilita' ammessa
 
