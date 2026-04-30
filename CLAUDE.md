@@ -75,6 +75,10 @@ isola_i3v_visual/
 │   ├── output/s01..s12/              per ogni storia: canonical, provisional, migration_notes, catalog_proposals, _p1_mapping
 │   └── scripts/migrate_p1.py         script P1 (carpentiere meccanico)
 │
+├── _pacchetti_consegnati/     🗄️  ARCHIVIO pacchetti autoriali Ray gia integrati (2026-04-30)
+│   ├── README.md                     orchestratore + pattern di integrazione futura
+│   └── cornice_mondo/                pacchetto integrato 2026-04-30 (DOC_1..DOC_6 + README dedicato)
+│
 ├── contributi/                ✅ scrittura per collaboratori esterni (proposte/aggiunte)
 │   └── (file .md datati, vedi sezione 5)
 │
@@ -121,6 +125,7 @@ isola_i3v_visual/
 
 - ❌ **Mai modificare `pipeline_narrativa/` senza autorizzazione esplicita di Ray.** Né il grafo, né la Bible, né i documenti narrativi. Se rilevi un'incoerenza, **segnalala**, non risolverla in autonomia.
 - ❌ **Mai modificare `_porting_grafo/`.** È un archivio chiuso. La fase E è completata. Se serve rifare la migrazione, parla con Ray.
+- ❌ **Mai modificare `_pacchetti_consegnati/`.** È un archivio dei pacchetti autoriali Ray già integrati (trail di audit). I documenti sono fonte autorevole storica e si consultano in lettura. Se Ray consegna un nuovo pacchetto, l'integrazione fa parte del lavoro normale; al termine, i documenti del pacchetto vanno archiviati qui (e non più toccati).
 - ❌ **Mai inventare contenuto narrativo.** Niente descrizioni di scene, palette, personaggi, vincoli che non sono nelle fonti (grafo, Bible, character_constraints, canonical, schede esistenti).
 - ❌ **Mai modificare schede in `visual/` aggiungendo info NON presenti nelle fonti.** È accettabile riformulare per chiarezza, ma il contenuto semantico deve essere tracciabile a fonte.
 - ❌ **Mai eliminare o sovrascrivere lavoro precedente** senza prima leggerlo e capire perché c'era.

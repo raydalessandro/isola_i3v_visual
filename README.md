@@ -106,18 +106,15 @@ Per il flusso end-to-end dall'idea autoriale di Ray al testo libro committato (7
 | [`SYNC_LOG.md`](./SYNC_LOG.md) | log cambiamenti che impattano altre repo del sistema (archivio storico, pipeline immagini esterna) |
 | [`docs/PIPELINE.md`](./docs/PIPELINE.md) | flusso end-to-end nuova storia |
 
-## Pacchetti operativi consegnati da Ray (root)
+## Pacchetti operativi consegnati da Ray
 
-I documenti DOC_1..DOC_6 in root sono il **pacchetto "cornice del mondo"** consegnato da Ray il 2026-04-30 (formula ritornello, saluti gruppi, cornici processi, audit sentieri, index sentieri, dettagli Tier A). Sono fonte autorevole delle decisioni autoriali e restano in repo come trail di audit anche dopo che gli script di integrazione li hanno applicati al grafo.
+Quando Ray consegna un pacchetto operativo (es. file in zip o documenti in root), l'agente IA esegue gli step di integrazione (script idempotenti + commit puntuali) e poi sposta i documenti in [`_pacchetti_consegnati/<nome_pacchetto>/`](./_pacchetti_consegnati/) come trail di audit autoriale.
 
-- `DOC_1_formula_ritornello.md` → `world_conventions.refrain_animal_identification` (grafo)
-- `DOC_2_saluti_gruppi.md` → `## Saluto del gruppo` nelle 6 schede collettivi
-- `DOC_3_cornici_processi.md` → `stories.<sid>.cornice_dettagli` (24 cornici)
-- `DOC_4_audit_sentieri.md` → audit + mappa append `locations_secondary`
-- `DOC_5_index_sentieri.md` → schema slot dettaglio
-- `DOC_6_mercato_idee_tierA.md` → `world_conventions.path_details.paths` (5 sentieri Tier A, 20 dettagli)
+Pacchetti integrati:
 
-Vedi `scripts/cornice_mondo/` per gli script idempotenti che hanno applicato il pacchetto.
+- **`_pacchetti_consegnati/cornice_mondo/`** (2026-04-30) — formula ritornello, saluti gruppi, 24 cornici, audit sentieri, index sentieri, dettagli stabili Tier A. 7 step integrati nel grafo + catalogo. Vedi [`_pacchetti_consegnati/cornice_mondo/README.md`](./_pacchetti_consegnati/cornice_mondo/README.md).
+
+Per i tooling permanenti correlati (script idempotenti rilanciabili), vedi `scripts/cornice_mondo/`.
 
 ---
 
