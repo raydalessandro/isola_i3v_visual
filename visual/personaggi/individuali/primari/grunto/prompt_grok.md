@@ -237,3 +237,200 @@ ratio 4:5 (portrait). The implicit space toward the viewer should
 suggest the brothers' position (out of frame, the warning is
 directed at them).
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "frammento pre-Vento" (s12 architrave saga)
+
+**Filename suggerito**: `grunto_canonica_v1_frammento.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Grunto]
+
+SCENE — Grunto in the rare "pre-Wind fragment" mode (canonical s12):
+Grunto stands motionless on the cengia as in image 1, but his head is
+TURNED to look afar — past the viewer, past the Burrone, toward a
+distant horizon. Three-quarter view, but the head is rotated to nearly
+profile, looking off to the right (or off-frame at the open sea, the
+distance, the past). The body remains still on all four legs, but the
+neck has lifted slightly — this is a moment of remembering.
+
+His yellow horizontal-pupil eyes are slightly NARROWED as if seeing
+something distant in time. The mouth is open ever so slightly — JUST
+having said one fragment-phrase to no one in particular ("Adesso il
+vento respira. Una volta camminava." or "Quassù la roccia ricorda
+diverso. Loro c'erano stati."). The fragment-mode lasts only a
+second. NEVER a sage-old-master pose — Grunto is not pronouncing, he
+is REMEMBERING, almost involuntarily.
+
+The dark moss-green coat picks up cooler tones from the high-altitude
+light. The long beard sways gently. The horns catch the light along
+their backward curve. The scar on the left flank may be partly
+visible.
+
+Background: a more open vista from the Burrone — the open sky beyond
+the chasm, a distant view of the sea on the horizon (canonical s12
+view from Roccia Alta-adjacent area, but Grunto is on his cengia not
+on Roccia Alta — they are separate locations, both with high views).
+The atmosphere is briefly hushed, ancient — the moment when memory
+opens for one second and then closes again.
+
+CRITICAL DIRECTION: NOT a sage giving a teaching. NOT a wise-elder
+moment. Grunto says the fragment to NO ONE — he is alone (or with
+the brothers visible as small figures at a distance, not in the
+foreground). He doesn't realize he said it. He is not performing
+wisdom. He is REMEMBERING IN SPITE OF HIMSELF.
+
+Lighting: warm afternoon mountain light, golden-hour quality, more
+directional than image 1, catching the head and horns from the side
+that is turned toward the distance. The body in slightly cooler
+shadow. The atmosphere has gone briefly still — even the wind seems
+to pause.
+
+Composition: from full body to head-with-horns, three-quarter view
+with head rotated toward profile. Aspect ratio 4:5 (portrait). The
+direction of his gaze leaves space toward the right (or wherever the
+distant horizon is suggested). This image fixes the canonical "pre-
+Wind fragment" pose — the once-per-saga moment from §1.4.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `grunto_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Grunto]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Grunto in 4 standard QUADRUPED
+views (he is the only major character not bipedal — the turnaround
+must respect this), evenly spaced from left to right against a
+neutral cream background with a faint horizontal ground line. All
+four views show him in the same neutral standing pose: all four legs
+planted firmly, head held forward, neck in neutral position, horns
+visible, beard hanging.
+
+Views from left to right:
+1. SIDE LEFT view — full left profile, the canonical scar on the
+   left flank clearly visible, the horns in profile, the beard
+   silhouette
+2. THREE-QUARTER FRONT view — from the front-left, head turned
+   slightly toward the viewer, both eyes visible, full body diagonal
+   in frame
+3. SIDE RIGHT view — full right profile (mirror of view 1), no scar
+   visible (it's only on the left side), horns in profile
+4. BACK view — from behind, showing the back of the body (green
+   coat, lighter belly visible from the angle), the back of the
+   horns curving away from the head, the tail (small ibex tail), all
+   four hooves
+
+The character must look IDENTICAL across all four views: same dark
+moss-green coat with lighter belly, same long green beard, same
+backward-curving horns with growth rings, same yellow horizontal-
+pupil eyes, same black hooves, same scar on the LEFT flank only
+(visible in views 1 and possibly 2, NOT in views 3 and 4 because
+of angle).
+
+CRITICAL ANATOMICAL DETAILS visible across views: the four-legged
+quadruped stance (NEVER bipedal — Grunto is the canonical exception),
+the long beard, the horizontal pupils (visible in front and three-
+quarter views), the growth rings on the horns (especially in
+profile), the scar position on the left flank ONLY.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each (longer horizontally than the bipedal
+characters), equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- **Modalità consigliata**: illustrazione / acquerello / picture book.
+- **Aspect ratio**: come specificato (4:5 per imm 1-2-3 — Grunto è più orizzontale; 16:9 per turnaround).
+- **Iterazione**: 4-6 varianti per immagine.
+- **Coerenza tra le 4 immagini**: stesso stambecco verde, stesse corna con anelli, stessa cicatrice sul fianco SINISTRO.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, clothes (Grunto wears
+NOTHING), scarf, vest, hat, magical glowing aura, fantasy magic,
+sage-old-mountain-master pose, wise pointing hoof, predatory snarling
+teeth, charging aggressive pose, lion-like flowing mane, warrior
+helmet horns, mythological halo, friendly grandfather smile,
+disney-cartoon goat character, cute mascot, kawaii
+```
+
+## Negative prompt specifici per Grunto
+
+```
+NO bipedal pose (Grunto is the canonical QUADRUPED exception). NO
+clothes whatsoever — no scarf, no vest, no apron. NO Grinch caricature
+look (his green is a different shade, naturalistic moss-green). NO
+brown or gray fur (he is GREEN — dark moss/sage green). NO round
+pupils (his pupils are HORIZONTAL — canonical goat/ibex anatomy). NO
+straight horns (his horns curve BACKWARD with visible rings). NO
+charging pose. NO descending mountain to village (canonical: he never
+leaves the height). NO group scene with other characters in the same
+frame (canonical: never in group scenes). NO scar on the right flank
+(scar is on the LEFT flank only). NO dramatically lit nostalgic
+expression (he is not nostalgic — burbero, not melancholic). NO
+visualization of the pre-Wind era (canonical: only fragments, never
+full scenes). NO Ariete/Ondina/Tempesta named or visualized (canonical
+vincolo).
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] **Stambecco anatomicamente corretto** (Capra ibex, NON capra domestica, NON cervo)
+- [ ] **Quadrupede su quattro zampe** (canonico — eccezione del cast saga)
+- [ ] **Pelo verde scuro come muschio bagnato** sul corpo (FIRMA — no marrone, no grigio)
+- [ ] Pelo più chiaro sul ventre
+- [ ] **Lunga barba verde** sotto il mento (firma)
+- [ ] **Corna grandi ricurve all'indietro con anelli di crescita visibili** (firma)
+- [ ] **Occhi gialli con pupilla orizzontale** (firma anatomica — controllo critico)
+- [ ] Zoccoli neri duri, due dita
+- [ ] **Cicatrice lunga sul FIANCO SINISTRO** (firma — visibile in imm.1 e imm.4 vista 1)
+- [ ] **Niente abbigliamento** (non ha sciarpa, non ha gilet, niente)
+- [ ] Statura ~1.4-1.6 GU al garrese (più alto di un fratello in piedi)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: cengia ferma di profilo (fianco sinistro con cicatrice visibile, ambient Burrone)
+  - Imm. 2: gesto Via (zoccolo anteriore alzato/pestato, NON carica, warning chiaro burbero non cattivo)
+  - Imm. 3: frammento pre-Vento (testa girata a vedere lontano, momento ricordare s12, NON pose saggia)
+  - Imm. 4: 4 vedute neutre quadrupedi con tutti i dettagli anatomici visibili
+- [ ] Sfondo coerente con Burrone / Quartiere d'Aria nord (grigio pietra, blu ghiaccio, lichene, vento secco)
+- [ ] Nessun pattern AI bandito (no Grinch caricatura, no saggio mountain master, no cattivo aggressivo, no nostalgico melodrammatico)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo dello stambecco (anatomia quadrupede, pattern colore, posizione cicatrice).
+2. **Imm. 1 (cengia ferma)** — ID card canonica, fianco sinistro con cicatrice.
+3. **Imm. 2 (Via)** — modalità di confronto vero (la più rischiosa di scivolare nell'aggressivo — controllo: warning, non charge).
+4. **Imm. 3 (frammento pre-Vento)** — modalità rara (la più delicata da rendere senza scivolare nel "saggio" o nel "nostalgico").
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
+**Nota scheda:** la scheda `visual/personaggi/individuali/primari/grunto/scheda.md` è ancora in stato `provvisorio` (formato fase F.1). Espansione completa scheda canonica in batch successivo se serve.
