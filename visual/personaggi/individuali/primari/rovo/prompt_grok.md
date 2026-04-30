@@ -127,3 +127,104 @@ hat, vest, flashy accessories. NO Disney/anime exaggerated rage. NO
 explaining things to the brothers in long monologues. NO visibly
 moved gaze — at most he averts.
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (margine Foresta, modalità scontroso)
+
+**Filename suggerito**: `rovo_canonica_v1_fronte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Rovo]
+
+SCENE — Canonical full-body view, grumpy-at-the-margin mode:
+Rovo stands at the edge of the Foresta Intrecciata (Twined Forest),
+just before the first dark trunks of the woodland. Three-quarter view
+from the front-left. He is leaning forward slightly, his characteristic
+posture, one hand resting on his hip, the other holding a dark gnarled
+wooden walking stick that touches the ground at his side. His feet are
+bare, planted firmly on packed forest-edge earth.
+
+His face shows the grumpy-margin default. Small dark eyes look SIDEWAYS
+to the right, NOT directly at the viewer — the canonical askance Rovo
+gaze. Eyebrows furrowed, mouth pulled down, the badger mask of white
+fur on his forehead and the black around the eyes giving the typical
+"bandit" badger appearance. The brown-gray bandana is tied tight on
+his forehead under the ears, frayed edges visible.
+
+His mud-brown tunic is dusty, sleeves rolled up to mid-forearm, V-neck
+open. Mud-brown trousers fall to mid-shin, cord at the waist. The
+shoulder asymmetry (one a bit higher than the other) is subtly visible.
+
+Background: the threshold between the Foresta Intrecciata (dark green-
+brown trunks behind him, slightly out of focus, suggesting depth) and
+the open Orti del Cerchio (warmer ochre-green light visible at the
+edge of frame on the right). Rovo stands at the boundary — neither
+fully outside nor fully inside the Forest. A few scattered leaves on
+the ground, soft moss on a tree trunk visible behind.
+
+Lighting: soft filtered woodland light, dappled through canopy, warm
+brown-green tones. The badger fur picks up the green-brown ambient,
+making him almost blend with the trees behind. The white badger mask
+catches the most light.
+
+Composition: full body visible, head to feet, slight three-quarter
+angle. Aspect ratio 3:4 (portrait). The figure occupies the center,
+the Forest depth on the left, the Orchards' light hint on the right.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "cura mediata" (posa il pallone)
+
+**Filename suggerito**: `rovo_canonica_v1_cura.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Rovo]
+
+SCENE — Rovo placing the cloth ball on the ground (s03 canonical
+gesture, mediated care):
+Rovo is bent slightly forward, three-quarter view from the front-
+right, his low center of gravity emphasized. His right hand is in
+the act of placing a small handmade cloth ball (the pallone_di_
+stoffa_cucita — beige patched, never quite round) on the packed
+earth one step inside the Orchards' side of the Forest margin. His
+left hand rests on his hip in a balancing posture. His knees are
+bent, his weight distributed between his bare badger feet with the
+visible long claws.
+
+His face does NOT look at the ball or at the viewer — Rovo's gaze
+is averted to the side, almost looking back into the Forest. His
+mouth is closed, neutral but with the typical pulled-down corners.
+The brown-gray bandana is tight, the fur of the white badger mask
+clearly visible on his forehead.
+
+THIS IS A GESTURE, NOT A SCENE OF AFFECTION. He places the ball, he
+doesn't throw it. One step from the margin, on the brothers' side.
+The placement is precise, careful, but the body language stays
+gruff — care happens in the action, never in the expression.
+
+His mud-brown tunic is creased from the bending posture. Trousers
+slightly soiled at the knees from contact with leaves and earth.
+
+Background: the same Forest-edge boundary, but slightly more open —
+the Orchards visible in warm ochre-green just beyond, a hint of late
+afternoon golden light coming from the open side. Bru, the small
+badger nephew, can be hinted as a small dark shape ONE OR TWO STEPS
+BEHIND ROVO (further inside the Forest, slightly out of focus, dark
+fur blending with dark trunks). The brothers are NOT in the frame.
+
+Lighting: warm late-afternoon woodland light, the ball catching a
+gentle highlight as it touches the ground. Soft shadows pool around
+Rovo's feet.
+
+Composition: medium-low shot, from waist up to feet (the ball-
+placement gesture is the focal point, lower-center of frame). Aspect
+ratio 4:5 (portrait). The eye should travel: ball → Rovo's hand →
+Rovo's averted face → suggestion of Bru in the depth of the Forest
+behind.
+```
