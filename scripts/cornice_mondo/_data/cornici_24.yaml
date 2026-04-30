@@ -234,4 +234,253 @@ cornici:
     quote_tracker_impact: null
     notes: "Toba cucciolo nominato — no formula."
 
-# Continua nel pezzo 2/2: cornici s07-s12 + summary
+  # ============================================================
+  # S07 — La Zattera dei Tre Rametti (fine estate)
+  # ============================================================
+
+  - id: s07_c1
+    story: s07
+    process: E
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: pescatori_case_basse, species_assigned: rana_di_palude }
+    where: { location_id: case_basse_pescatori, qualifier: pescatrice_tira_rete_su_pietre }
+    what: "Una pescatrice rana_di_palude tira una rete sulle pietre delle Case Basse, mentre i tre arrivano alla Bocca."
+    saluto: true
+    formula_applicata: true
+    visibility: vista_di_profilo_arrivando_alla_bocca
+    intensity: medium
+    proposed_text: "Sulla riva delle case basse, una pescatrice tirava una rete. Era una pescatrice delle case basse — quale, oggi? Una rana di palude. Si vedeva di profilo: il sale sulle pietre, la rete che usciva piano. Una mano toccò la rete, salì un istante, ricadde."
+    structural_role: apertura_quartiere_acqua_apertura_pescatori_6_gruppo
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s07, pescatori_case_basse, rana_di_palude, singular]
+    notes: "DOC_3 §5.4 riequilibrio: cornice spostata da Giro D a Giro E (decisione Ray 2026-04-30). Prima apparizione del 6° gruppo Pescatori delle case basse con formula. Animale rana_di_palude scelto da pool DOC_1 §4 anfibi/rettili (max 1-2 saga, plausibile pescatore)."
+
+  - id: s07_c2
+    story: s07
+    process: D
+    type: cameo_lontano
+    who: { kind: nominato, ref: rovo, species_assigned: null }
+    where: { location_id: margine_foresta_intrecciata, qualifier: visto_passando_da_orti }
+    what: "Rovo fermo sul margine, bandana scura. Non si avvicina, non scompare subito. È lì."
+    saluto: false
+    formula_applicata: false
+    visibility: visto_passando_dagli_orti_in_ritorno
+    intensity: low
+    proposed_text: "Quando passarono accanto al margine, Rovo era in piedi tra due tronchi, bandana scura sui capelli. Non si mosse. Non disse niente. I fratelli non si fermarono."
+    structural_role: continuita_cross_storia_quartiere_terra
+    quote_tracker_impact: null
+    notes: "Rovo nominato — no formula. Rovo e sempre li."
+
+  # ============================================================
+  # S08 — L'Albero che Cadde di Sera (estate piena)
+  # ============================================================
+
+  - id: s08_c1
+    story: s08
+    process: C
+    type: suono_di_sfondo
+    who: { kind: gruppo, ref: coltivatori_del_cerchio, species_assigned: null }
+    where: { location_id: orti_del_cerchio, qualifier: sentita_di_lontano_dal_villaggio }
+    what: "La cantilena dei Coltivatori si interrompe quando il vento di piombo si alza. Pre-crack del noce. Il mondo intero registra l'evento."
+    saluto: false
+    formula_applicata: false
+    visibility: sentita_di_lontano_da_villaggio
+    intensity: high
+    proposed_text: "In lontananza, dagli Orti, la cantilena si interruppe a metà di un battito. Restò sospesa. Poi non riprese. Fiamma chiuse l'imposta più veloce."
+    structural_role: trigger_drammatico_pre_crack_noce
+    quote_tracker_impact:
+      cantilene_coltivatori_stories: s08_interrotta_pre_crack
+    notes: "Coltivatori in lontananza — no saluto, no formula. Interruzione di routine = registrazione collettiva di anomalia. Aggiunge entry a cantilene_coltivatori_stories (oltre s08_lontana_mattina_dopo gia presente)."
+
+  - id: s08_c2
+    story: s08
+    process: B
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: mantenitori, species_assigned: [arvicola, ghiro, faina] }
+    where: { location_id: piazza_villaggio, qualifier: arrivo_sotto_noce_caduto }
+    what: "Mantenitori arrivano dopo il crack del noce con scale, corde, lanterne. Variante plurale formula."
+    saluto: true
+    formula_applicata: true
+    visibility: arrivo_collettivo_in_piazza
+    intensity: high
+    proposed_text: "Cominciarono ad arrivare i mantenitori. Erano i mantenitori — chi, oggi? Un'arvicola, un ghiro, una faina. Portavano scale, corde, lanterne. TOK, una corda contro un legno. Sapevano cosa fare."
+    structural_role: variante_plurale_formula_mantenitori
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s08, mantenitori, [arvicola, ghiro, faina], plural]
+    notes: "DOC_3 §2 proponeva 4 nomi (arvicola, ghiro, faina, ramarra) ma DOC_1 §2 vincola a 3. Tenuti i 3 mammiferi piccoli (arvicola, ghiro, faina). Ramarra era anche refuso (DOC_1 pool ha 'ramarro' non 'ramarra')."
+
+  # ============================================================
+  # S09 — Quel Pomeriggio di Ottobre (autunno)
+  # ============================================================
+
+  - id: s09_c1
+    story: s09
+    process: C
+    type: cameo_lontano
+    who: { kind: nominato, ref: liu, species_assigned: null }
+    where: { location_id: piazza_villaggio, qualifier: volo_da_forno_a_casa_memolo }
+    what: "Liù vola con una notizia da Fiamma a Mèmolo (o viceversa). Il compleanno di Gabriel è notizia che gira."
+    saluto: false
+    formula_applicata: false
+    visibility: vista_passare_sopra_durante_ritorno_a_casa
+    intensity: low
+    proposed_text: "Mentre i tre tornavano a casa, Liù passò sopra di loro — un *frrr* veloce. Andava verso la casetta tonda, da Mèmolo. Aveva qualcosa da dire."
+    structural_role: rete_notizie_compleanno_senza_far_festa
+    quote_tracker_impact: null
+    notes: "Liu nominata — no formula. Liu non saluta in volo."
+
+  - id: s09_c2
+    story: s09
+    process: A
+    type: suono_di_sfondo
+    who: { kind: gruppo, ref: coltivatori_del_cerchio, species_assigned: null }
+    where: { location_id: orti_del_cerchio, qualifier: sentita_dal_sentiero_di_ritorno }
+    what: "La cantilena del Cerchio quel pomeriggio batte un tono diverso. Solo chi sapeva, sapeva."
+    saluto: false
+    formula_applicata: false
+    visibility: sentita_dal_sentiero_ritorno_pomeriggio
+    intensity: medium
+    proposed_text: "Le cantilene del Cerchio battevano sempre lo stesso tempo. Quel pomeriggio batterono un tono diverso. I tre rallentarono il passo senza accorgersene."
+    structural_role: villaggio_celebra_senza_dichiararlo
+    quote_tracker_impact:
+      cantilene_coltivatori_stories: s09_modulazione_pomeriggio_compleanno
+    notes: "DOC_3 §5.3 proponeva narrator_address. Decisione Ray 2026-04-30 minimo invasivo: NO incremento addresses_to_reader (resta 4 voci: s04, s07, s10, s12). Cornice resta fatto narrativo. Aggiunge entry a cantilene_coltivatori_stories."
+
+  # ============================================================
+  # S10 — La Notte senza Luna (autunno avanzato, notte)
+  # ============================================================
+
+  - id: s10_c1
+    story: s10
+    process: E
+    type: cameo_lontano
+    who: { kind: nominato, ref: amo, species_assigned: null }
+    where: { location_id: quartiere_acqua, qualifier: sagoma_lontana_pontile_alba }
+    what: "Amo sagoma lontanissima nel grigio dell'alba dal Pontile. Pesca dell'alba dice che il giorno comincia."
+    saluto: false
+    formula_applicata: false
+    visibility: sagoma_lontana_dal_pontile_alba_che_cresce
+    intensity: low
+    proposed_text: "Lontano sull'acqua si vide una sagoma. Era Amo. Si tuffò una volta, riemerse. La pesca dell'alba era cominciata."
+    structural_role: apertura_giro_e_mentre_notte_chiude
+    quote_tracker_impact: null
+    notes: "Amo nominato — no formula. Verifica grafo: cornici_silenziose_blocco_d_stories esistente menziona s11:amo. NO modifica al tracker esistente (decisione minimo invasivo)."
+
+  - id: s10_c2
+    story: s10
+    process: B
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: mantenitori, species_assigned: fringuello }
+    where: { location_id: piazza_villaggio, qualifier: incrocio_alla_curva_alba }
+    what: "Un mantenitore fringuello esce di casa per pulire la piazza all'alba. Apre la giornata mentre la notte dei fratelli si chiude."
+    saluto: true
+    formula_applicata: true
+    visibility: incrocio_diretto_alla_curva_della_piazza
+    intensity: medium
+    proposed_text: "Alla curva della piazza incontrarono qualcuno. Era un mantenitore — quale, oggi? Un fringuello. Stava aprendo la porta di casa con la scopa in mano. La scopa toccò il selciato — TOK. I tre annuirono. Lui annuì. La giornata cominciò di lì."
+    structural_role: speculare_a_s01c1_apertura_giornata_speculare_alba
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s10, mantenitori, fringuello, singular]
+    notes: "Speculare strutturale a s01-c1 (sagoma alba). Verifica unicita: fringuello solo qui."
+
+  # ============================================================
+  # S11 — La Festa del Raccolto (pieno autunno)
+  # ============================================================
+
+  - id: s11_c1
+    story: s11
+    process: A
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: camminanti, species_assigned: [capinera, allodola, marmotta] }
+    where: { location_id: piazza_villaggio, qualifier: avanti_indietro_banchi_periferia_durante_festa }
+    what: "Camminanti vanno e vengono dai banchi alla periferia, scaricando merce, riportando scarti."
+    saluto: true
+    formula_applicata: true
+    visibility: ripetuto_durante_festa
+    intensity: medium
+    proposed_text: "Tra i banchi e le case più fuori, i camminanti facevano avanti e indietro. Erano i camminanti — chi, oggi? Una capinera, un'allodola, una marmotta. Le carriole entravano cariche e uscivano vuote. Una mano si staccava dal manico ogni volta che passavano vicino ai fratelli. I tre alzavano una mano in cambio."
+    structural_role: variante_plurale_camminanti_giro_a_festivo
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s11, camminanti, [capinera, allodola, marmotta], plural]
+    notes: "Verifica unicita: capinera, allodola, marmotta tutti unici saga."
+
+  - id: s11_c2
+    story: s11
+    process: D
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: pescatori_case_basse, species_assigned: rondine_di_mare }
+    where: { location_id: piazza_villaggio, qualifier: banco_bartolo_durante_festa }
+    what: "Una pescatrice rondine_di_mare si avvicina al banco di Bartolo. Si fa dare un frutto strano. Va via senza parole."
+    saluto: false
+    formula_applicata: true
+    visibility: incontro_breve_al_banco_durante_festa
+    intensity: medium
+    proposed_text: "Al banco di Bartolo si avvicinò qualcuna. Era una pescatrice delle case basse — quale, oggi? Una rondine di mare. Bartolo fece il cenno del mento e inclinò il banco. Lei prese un frutto strano e ricambiò il cenno. Andò via senza parole."
+    structural_role: quartiere_acqua_partecipa_festa_silenziosamente
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s11, pescatori_case_basse, rondine_di_mare, singular]
+    notes: "Saluto Mercato (Bartolo) verso pescatrice (anonima): cenno del mento. La formula si applica al primo incontro pescatrice in scena. s11 ha 2 formule (1 plural Camminanti + 1 singular Pescatori) = limite max DOC_1 §3.4."
+
+  # ============================================================
+  # S12 — Quando i Tre Venti Suonano Insieme (fine autunno, vigilia brina)
+  # ============================================================
+
+  - id: s12_c1
+    story: s12
+    process: D
+    type: cameo_ravvicinato
+    who: { kind: gruppo, ref: camminanti, species_assigned: ermellino }
+    where: { location_id: guado_di_pietre_piatte, qualifier: incontro_al_guado_entrambi_si_fermano }
+    what: "Un camminante ermellino attraversa il guado da est a ovest mentre i fratelli risalgono. Cenno reciproco."
+    saluto: true
+    formula_applicata: true
+    visibility: incontro_diretto_al_guado
+    intensity: medium
+    proposed_text: "Al guado di pietre piatte trovarono qualcuno. Era un camminante — quale, oggi? Un ermellino. Stava attraversando da est. Si fermò un attimo, mano via dal manico. Anche i fratelli si fermarono. La carriola passò. Tutti ripresero, ognuno verso la sua direzione."
+    structural_role: chiusura_giro_d_movimento_continua_anche_concerto
+    quote_tracker_impact:
+      refrain_animal_used_per_story: [s12, camminanti, ermellino, singular]
+    notes: "DOC_3 §2 proponeva 'faina' ma faina gia in s08 plurale (mantenitori) — conflitto unicita saga DOC_1 §3.4. Sostituito con ermellino (mammifero piccolo, pool DOC_1, unico saga)."
+
+  - id: s12_c2
+    story: s12
+    process: B
+    type: cameo_lontano
+    who: { kind: gruppo, ref: mantenitori, species_assigned: null }
+    where: { location_id: piazza_villaggio, qualifier: spegnimento_lanterne_sera_chiusura }
+    what: "Un mantenitore spegne le ultime lanterne della piazza. Il villaggio si chiude per la stagione."
+    saluto: true
+    formula_applicata: false
+    visibility: visto_da_fondo_via_in_lontananza
+    intensity: low
+    proposed_text: "In fondo alla via verso casa, qualcuno stava spegnendo le ultime lanterne della piazza. Da lontano si sentì un TOK. Poi una luce in meno. Poi un'altra. Un mantenitore di sera, l'ultimo della stagione."
+    structural_role: speculare_a_s10c2_chiusura_annuale
+    quote_tracker_impact: null
+    notes: "Mantenitore lontano — no formula (gia usata sg in s10 e pl in s08). Saluto TOK in lontananza ammesso. Speculare a s10-c2."
+
+# ============================================================
+# Summary distribuzione
+# ============================================================
+# Cornici per processo:
+#   A (cibo):    s01-c2, s06-c1, s09-c2, s11-c1                     = 4
+#   B (cura):    s03-c1, s05-c1, s08-c2, s10-c2, s12-c2             = 5
+#   C (notizie): s02-c1, s03-c2, s04-c1, s05-c2, s08-c1, s09-c1     = 6
+#   D (venti):   s01-c1, s02-c2, s04-c2, s07-c2, s11-c2, s12-c1     = 6
+#   E (acqua):   s06-c2, s07-c1 (riequilibrio Ray), s10-c1          = 3
+# Totale: 24
+#
+# Formule applicate (refrain_animal_used_per_story):
+#   s05_c1 SG mantenitori = donnola
+#   s06_c1 SG camminanti = talpa
+#   s07_c1 SG pescatori_case_basse = rana_di_palude
+#   s08_c2 PL mantenitori = [arvicola, ghiro, faina]
+#   s10_c2 SG mantenitori = fringuello
+#   s11_c1 PL camminanti = [capinera, allodola, marmotta]
+#   s11_c2 SG pescatori_case_basse = rondine_di_mare
+#   s12_c1 SG camminanti = ermellino
+# Totale: 8 occorrenze in 6 storie su 12. Animali distinti: 11. Tutti unici saga ✓.
+#
+# Cantilene Coltivatori (oltre quote_tracker esistente):
+#   s08_interrotta_pre_crack       (NUOVO)
+#   s09_modulazione_pomeriggio_compleanno  (NUOVO)
+
