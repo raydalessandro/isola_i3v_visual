@@ -6,7 +6,7 @@ sottotipo: strada
 categoria_strada: sentiero_interno_quartiere
 quartiere: terra
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["cartografia/geo/island.geojson#features.id=sentiero_orti_casa_salvia"]
 appare_in_storie: []
 cartografia:
@@ -61,6 +61,16 @@ Strada del quartiere Terra. Categoria: `sentiero_interno_quartiere`. Status cart
 ## Coerenza cross-scena (cose che NON cambiano)
 
 Collega Orti del Cerchio alla Casa di Salvia. Inferito — usato quando i fratelli vanno a cercare Salvia.
+
+### Dettagli stabili (path_details Tier A)
+
+Riferimento canonico: `pipeline_narrativa/story_graph.json#world_conventions.path_details.paths.sentiero_orti_casa_salvia` (DOC_6, decisioni autoriali Ray 2026-04-30).
+
+- **`socs_d01_rosmarino_vecchio`** — *lato nord, primi due terzi del sentiero*. Cespuglio enorme, alto come un bambino di 5 anni. Salvia ci passa la mano ogni volta che torna a casa, foglie spesso staccate. Profumo che rimane sulle dita per ore. Visivo + olfattivo. *Storie:* s04 (prima vista, primavera, fiorito — Salvia ci passa la mano d'istinto). Oggetto-firma anche di Salvia.
+- **`socs_d02_muretto_a_secco_crollato_piuma_memolo`** — *tratto centrale, separazione due appezzamenti privati*. Muretto crollato un anno fa, nessuno lo ha rimesso in piedi: tre o quattro pietre cadute coperte di muschio. Parte del paesaggio. *Storie:* s06 (i fratelli passano dopo Mèmolo — segno di passaggio: una piuma viola di passero caduta tra le pietre, di quelle che Mèmolo perde sempre dalla sua sciarpa). Marker di passaggio Mèmolo.
+- **`socs_d03_orto_di_rape_semi_abbandonato`** — *lato sud, ultimo terzo prima di casa Salvia*. Piccolo orto privato che non sa di chi è. Le rape nascono e nessuno le raccoglie. D'autunno seccano in piedi, foglie cartone. *Storie:* s09 (autunno: Mèmolo raccoglie una foglia secca senza pensarci, gli si attacca alla sciarpa). *Evolvente stagionale.*
+
+I dettagli sono fonte autorevole della firma visuale e narrativa del sentiero. Ogni illustrazione/scena deve rispettarli.
 
 ## Variabilita' ammessa
 

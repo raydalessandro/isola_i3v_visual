@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: path
 quartiere: aria
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.via_che_sale", "cartografia/geo/island.geojson#features.id=via_che_sale"]
 appare_in_storie: []
 cartografia:
@@ -59,6 +59,17 @@ Esce dalla Piazza del Villaggio in direzione nord, sale attraverso i Pascoli Alt
 ## Coerenza cross-scena (cose che NON cambiano)
 
 Direzione: nord. Origine: Piazza del Villaggio. Tappa intermedia: Pascoli Alti. Tappa di vetta: Roccia Alta (a 2 ore, altitudine 550 m). Continuazione: Burrone e Montagne Gemelle (4-5 ore alla grotta di Grunto).
+
+### Dettagli stabili (path_details Tier A)
+
+Riferimento canonico: `pipeline_narrativa/story_graph.json#world_conventions.path_details.paths.via_che_sale` (DOC_6, decisioni autoriali Ray 2026-04-30).
+
+- **`vcs_d01_pietra_dei_tre_passi`** — *primo terzo della salita, sentiero pianeggia tre passi prima e tre passi dopo*. Pietra piatta posata di traverso. Chi sale di buon ritmo la usa come "fermata" — uno o due secondi per riprendere fiato. Saggezza del corpo, sentiero che insegna il ritmo. *Storie:* s01 (prima volta della saga in ascesa — i fratelli si fermano d'istinto).
+- **`vcs_d02_cardo_isolato`** — *tratto medio, ciglio est, da una crepa nella terra*. Cresce solo lui, fiorisce viola in primavera, secco e dorato d'autunno. Non si ricorda da quanti anni è lì. **Oggetto-firma evolvente del sentiero**, "orologio del sentiero". *Storie:* s02 (secco dorato, fine inverno), s11 (secco dorato, autunno), s12 (coperto di brina, punte bianche, vigilia brina). *Evolvente principale Tier A.*
+- **`vcs_d03_sasso_del_campanaccio`** — *tratto in alto vicino ai Pascoli, punto di radunamento gregge*. Roccia tonda incassata nel pendio, punto liscio in cima dove il bastone batte sempre. I Pastori in discesa appoggiano il bastone (TIK-TIK-TIIK eco) per radunare il gregge prima della piazza. *Storie:* s11 (Pastori scendono per la festa — il TIK-TIK-TIIK risuona qui prima della piazza). Collega saluto Pastori (DOC_2 §2.5) al sentiero.
+- **`vcs_d04_segno_del_passaggio`** — *tratto in alto vicino ai Pascoli, due lati del sentiero*. Erba schiacciata in due righe parallele dalle generazioni di pastori. Non ricresce mai dritta — anche senza passaggi recenti, le righe restano. *Storie:* s12 (vigilia brina: righe ingiallite brillano alla luce del Concerto). *Evolvente.* Memoria geologica del sentiero.
+
+I dettagli sono fonte autorevole della firma visuale e narrativa del sentiero. Ogni illustrazione/scena deve rispettarli.
 
 ## Variabilità ammessa
 

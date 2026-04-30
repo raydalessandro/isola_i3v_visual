@@ -6,7 +6,7 @@ sottotipo: strada
 categoria_strada: viottolo
 quartiere: centro
 status: provvisorio
-ultima_modifica: 2026-04-28
+ultima_modifica: 2026-04-30
 fonti: ["cartografia/geo/island.geojson#features.id=viottolo_perimetrale_piazza"]
 appare_in_storie: []
 cartografia:
@@ -60,7 +60,17 @@ Strada del quartiere Centro. Categoria: `viottolo`. Status cartografico: `provvi
 
 ## Coerenza cross-scena (cose che NON cambiano)
 
-Anello stretto intorno alla Piazza che collega le case sul suo perimetro.
+Anello stretto intorno alla Piazza che collega le case sul suo perimetro. Più stretto delle vie principali, lastricato di pietre piatte con piccoli interstizi dove cresce erba.
+
+### Dettagli stabili (path_details Tier A)
+
+Riferimento canonico: `pipeline_narrativa/story_graph.json#world_conventions.path_details.paths.viottolo_perimetrale_piazza` (DOC_6, decisioni autoriali Ray 2026-04-30).
+
+- **`vpp_d01_pietra_che_traballa`** — *lato del Pozzo, lastricato*. Pietra del lastricato che si muove leggermente quando ci si appoggia col piede. Tutti del villaggio sanno dov'è. La gente la salta di istinto. Conoscenza tacita del villaggio. *Storie:* s08 (Gabriel la salta senza pensarci, Noah ci pesta sopra, sente che si muove, non commenta).
+- **`vpp_d02_angolo_dove_si_raccoglie_il_vento`** — *vicino a casa con muro angolare, lato nord-est del viottolo*. Punto dove il Mulinello della sera fa sempre un piccolo vortice di foglie. Anche con vento debole, lì gira un mulinello in miniatura. *Storie:* s10 (notte: ASSENTE — nessun vento, niente foglie, è l'assenza che si nota). *Evolvente per opposizione (presenza vs assenza).*
+- **`vpp_d03_chiodo_arrugginito_a_vista`** — *muretto basso lungo viottolo, lato verso la piazza*. Chiodo grosso piantato male anni fa. Usato dai bambini per appendere brevemente cose durante i giochi. Sempre vuoto fuori dai giochi. *Storie:* s11 (festa: per la prima volta nella saga il chiodo ha qualcosa appeso — un cestino piccolo lasciato lì da un cucciolo). *Evolvente.*
+
+I dettagli sono fonte autorevole della firma visuale e narrativa del sentiero. Ogni illustrazione/scena deve rispettarli.
 
 ## Variabilita' ammessa
 
