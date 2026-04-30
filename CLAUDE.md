@@ -99,8 +99,10 @@ isola_i3v_visual/
 ├── skills/                    ✅ skill agente IA
 │   ├── README.md                     orchestratore
 │   ├── cartografo.md                 manutenzione cartografia
-│   ├── brieffer/                     ⭐ NEW (2026-04-30) genera writing_briefs autosufficienti
+│   ├── brieffer/                     genera writing_briefs autosufficienti (2026-04-30)
 │   │   └── SKILL.md
+│   ├── prosa/                        ⭐ NEW (2026-04-30) agente prosa: scrive il testo finale delle storie
+│   │   └── SKILL.md                  da incollare in chat Claude.ai per attivare modalita scrittura
 │   └── visual/
 │       ├── README.md                 skill visual generale
 │       └── compilatore.md            sotto-skill compilazione schede
@@ -299,6 +301,16 @@ Genera brief autosufficienti per agente prosa (oggi: Ray scrive a mano).
 - **Output:** `pipeline_narrativa/writing_briefs/sNN_writing_brief.md`.
 - **Skill:** `skills/brieffer/SKILL.md` (procedura standard).
 - **Quando rilanciare:** dopo modifiche a grafo / schede catalogo / prompt grok / narrazione fattuale. Idempotente.
+
+### Modalità "agente prosa" (scrittura collaborativa)
+Scrive il testo finale di una delle 12 storie in chat collaborativa con Ray, una pagina alla volta.
+
+- **Skill:** `skills/prosa/SKILL.md`. Si incolla all'inizio di una chat Claude.ai (è prompt autoiniziante).
+- **Workflow:** chat Claude.ai → incolla SKILL → Ray dice quale storia → agente fetcha brief da GitHub raw → conferma + piano → scrive pagina 1 → aspetta "vai" di Ray → pagina 2 → ... → consuntivo dopo pagina 10.
+- **Input canonico:** `pipeline_narrativa/writing_briefs/sNN_writing_brief.md` (autosufficiente, generato da `build_writing_brief.py`).
+- **Output:** testo finale del libro, voce autoriale picture book 3-6 anni, italiano. Mai prosa fuori dai 10 blocchi-pagina.
+- **Vincoli forti:** frasi-codice dei personaggi inalterabili, formula ritornello solo dove brief la indica, pattern AI da bandire integrale, una pagina = un hook visivo, mai 2 pagine in fila senza pausa Ray.
+- **Modalità ortogonale alle altre:** non tocca grafo, non tocca catalogo, non tocca cartografia. Lavora solo nella chat.
 
 ---
 
