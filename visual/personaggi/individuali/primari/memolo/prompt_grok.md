@@ -227,3 +227,187 @@ scarf occupy the lower-center, the face the upper-center. This image
 fixes the canonical "scarf-adjustment" gesture for use in any scene
 where Mèmolo is in default mode.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "istante preciso" (la frase rara)
+
+**Filename suggerito**: `memolo_canonica_v1_preciso.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Mèmolo]
+
+SCENE — Mèmolo in the rare "precise instant" mode:
+Mèmolo stands UNUSUALLY STILL (rare for him), three-quarter view
+from the front. His small body is upright, NOT bowed forward as in
+default. His head is straight, NOT tilted to one side. Both small
+front paws have stopped fidgeting — they hang loosely at his sides
+or are held quietly in front of his belly. Even the scarf seems
+oddly settled (still crooked, but not being adjusted).
+
+His face shows the canonical paradox of Mèmolo: the small black beady
+eyes are BRIEFLY CLEAR AND DIRECT — focused on something specific
+just out of frame. Mouth is in mid-sentence, JUST having said one
+precise phrase ("La nebbia oggi viene dal basso, non dall'alto." or
+"L'albero ha aspettato che nessuno fosse sotto." or "Le cose che si
+perdono non si perdono. Si nascondono dove non sai cercare."). The
+expression is a moment of clarity. NOT proud, NOT knowing — just
+clear.
+
+The light cream-beige face fur catches the warm light. The small
+spines on the crown lay back. The muted-ochre scarf is at the neck,
+crooked but quiet.
+
+Background: a softly-suggested setting — could be the piazza, could
+be near the Pozzo (well), could be the threshold of his round house.
+Soft cream-warm wash, blurred suggestion. NO specific architecture.
+The atmosphere is briefly QUIET — the piazza around him has gone
+faintly hushed for just this moment.
+
+CRITICAL DIRECTION: this image must NOT look like a sage giving a
+lesson. It must look like a confused hedgehog who, for one second,
+sees clearly — without realizing it. The eyes are clear but the
+posture is still slightly uncertain (he is Mèmolo, not a different
+character). After this instant he will return to default confused
+trottering.
+
+Lighting: warm gentle light, slightly more concentrated on the face
+than usual (the air has gone briefly still around him). Soft
+highlights on the eyes. No drama.
+
+Composition: from waist up to slightly above the crown spines, three-
+quarter view. Aspect ratio 4:5 (portrait). The eyes are the focal
+point — they catch the brief clarity.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `memolo_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Mèmolo]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Mèmolo in 4 standard views,
+evenly spaced from left to right against a neutral cream background
+with a faint horizontal ground line. All four views show him
+standing in a NEUTRAL upright pose: small front paws relaxed in
+front of the belly (not actively adjusting the scarf for once), feet
+slightly apart, head NOT tilted, neutral attentive expression.
+The crooked scarf at the neck is visible in all four views (the
+defining signature must remain).
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal — clearly shows
+   the long hedgehog muzzle, the small dark mouth, the small black
+   beady eyes, the crown spines, the scarf
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile, the long hedgehog muzzle in
+   silhouette, the spines visible all along the back from neck to
+   tail-end
+4. BACK view — from behind, showing the full back of spines (the
+   typical hedgehog silhouette), the back of the scarf knot
+
+The character must look IDENTICAL across all four views: same body
+proportions (small and round, ~0.55-0.6 GU), same spine pattern
+(short soft, laying back), same light cream-beige face fur, same
+small black eyes, same scarf color (muted ochre / russet) and
+crooked knot.
+
+CRITICAL ANATOMICAL DETAILS visible: the long hedgehog muzzle (front,
+three-quarter, profile), the round body (front, back), the spine
+pattern of pale-brown-with-darker-tips spines covering the back and
+crown but NOT the face/belly, the small clawed paws.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- **Modalità consigliata**: illustrazione / acquerello / picture book.
+- **Aspect ratio**: come specificato (3:4, 4:5, 16:9).
+- **Iterazione**: 4-6 varianti per immagine.
+- **Coerenza tra le 4 immagini**: stesso riccio, stesso pattern spine, stesso scialle muted-ochre crooked.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, cap, eyeglasses,
+pipe, walking stick / cane, watch chain, Wind-in-the-Willows toad
+vest with brass buttons, pacifier, baby bottle, predatory pose,
+threatening bristled defensive ball with sharp spikes, rolled-up
+defensive ball with bristled aggressive spines, cute mascot smile,
+kawaii, doll-like proportions, perfectly straight scarf
+```
+
+## Negative prompt specifici per Mèmolo
+
+```
+NO straight scarf — the scarf is ALWAYS CROOKED (it's the signature).
+NO sage-old-hedgehog wise-look (his precision must seem casual).
+NO bristled-aggressive spines (his spines lay BACK, soft adult). NO
+porcupine quills (he is a HEDGEHOG, not a porcupine — short soft
+spines, not long sharp quills). NO disney smile huge mouth wide
+open. NO walking stick (he walks unsteadily but uses no aid). NO
+glasses. NO pipe. NO vest with buttons. NO Pun (his offspring) on
+his head or sitting on him. NO modern technology. NO him standing
+ABOVE or UNDER the Albero Vecchio (canonical Bible vincolo also
+applies to Mèmolo — the Old Tree is the silent center, must remain
+free of figures).
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] **Riccio europeo** anatomicamente corretto (Erinaceus europaeus, NON istrice/porcupine)
+- [ ] **Spine corte e morbide** che giacciono indietro (mai bristled aggressive)
+- [ ] Spine pale-brown con punte più scure su dorso e corona
+- [ ] Pelo cream-beige chiaro su faccia, ventre, parte sotto
+- [ ] **Lungo muso allungato del riccio** (firma anatomica)
+- [ ] Tartufo nero umido piccolo
+- [ ] **Occhi piccoli neri perlina** (non grandi anime, non cute disney)
+- [ ] **Sciarpa muted-ochre/russet annodata STORTA** al collo (FIRMA VISIVA — controllo critico)
+- [ ] A piedi nudi (zampe del riccio con artigli piccoli scuri)
+- [ ] Statura ~0.55-0.6 GU (piccolo e tondo, ma adulto NON bambino)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: confuso-trotterellante (default, sistema sciarpa, postura piegata, espressione confusa, eyes-but-bright)
+  - Imm. 2: close-up sciarpa (mani al collo che annodano, scarf chiaramente storto, faccia in concentrazione)
+  - Imm. 3: istante preciso (postura insolitamente ferma, occhi un attimo chiari, una frase appena detta — MA non sapiente)
+  - Imm. 4: 4 vedute neutre con tutti i dettagli anatomici visibili
+- [ ] Niente accessori vistosi (no occhiali, no pipa, no bastone, no panciotto Wind-in-the-Willows)
+- [ ] Nessun pattern AI bandito (no saggio finto-confuso, no porcupine aggressivo, no disney huge eyes, no Mr Tiggy-Winkle stereotype)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo del riccio.
+2. **Imm. 1 (piazza confuso)** — ID card canonica.
+3. **Imm. 2 (sciarpa storta close-up)** — gesto firma.
+4. **Imm. 3 (istante preciso)** — modalità rara (la più delicata da rendere senza scivolare nel "saggio").
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
+**Nota scheda:** la scheda `visual/personaggi/individuali/primari/memolo/scheda.md` è ancora in stato `provvisorio` (formato fase F.1). Espansione completa scheda canonica in batch successivo se serve.
