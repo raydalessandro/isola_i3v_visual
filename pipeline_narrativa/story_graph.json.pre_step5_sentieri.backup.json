@@ -1991,10 +1991,6 @@
         {
           "id": "forno",
           "role": "cornice_apertura_e_chiusura"
-        },
-        {
-          "id": "via_che_sale",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -2507,14 +2503,6 @@
         {
           "id": "pascoli_alti",
           "role": "cornice_consegna_pastori_off_screen"
-        },
-        {
-          "id": "via_che_sale",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_capanne_pastori_pascoli",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -3021,10 +3009,6 @@
         {
           "id": "orti_del_cerchio",
           "role": "sfondo_coltivatori_cantilena_sommessa"
-        },
-        {
-          "id": "sentiero_orti_torrente_foresta",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -3547,14 +3531,6 @@
         {
           "id": "casa_salvia",
           "role": "implicita_punto_partenza_e_ritorno_salvia_off_screen"
-        },
-        {
-          "id": "sentiero_orti_torrente_foresta",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_orti_casa_salvia",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -4198,14 +4174,6 @@
         {
           "id": "orti_del_cerchio",
           "role": "confine_con_foresta_motivo_della_presenza_di_nodo_mai_in_inquadratura_diretta"
-        },
-        {
-          "id": "sentiero_orti_torrente_foresta",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_foresta_traversata_ovest",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -4843,26 +4811,6 @@
         {
           "id": "casa_memolo_cortile",
           "role": "chiusura_memolo_frase_precisa_pun_restituisce_scatoletta_al_padre_noah_briciole_cornetto_bru"
-        },
-        {
-          "id": "sentiero_forno_orti_diretto",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_orti_casa_salvia",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_casa_salvia_casa_zolla",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_orti_casa_zolla",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "viottolo_piazza_casa_memolo",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -5594,26 +5542,6 @@
         {
           "id": "casa_amo",
           "role": "presenza_iconica_dalla_riva_opposta_amo_sulla_scogliera_est_ali_aperte_croce_nera_contro_cielo_crepuscolo_i_fratelli_lo_osservano_in_silenzio_dalla_riva_ovest_mentre_arrivano_al_pontile_tra_loro_c_e_l_intera_foce_della_bocca_il_mondo_va_per_conto_suo"
-        },
-        {
-          "id": "sentiero_al_guado",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_riva_ovest",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_ritorno_bocca_orti",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_pontile_spiaggia",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_case_basse_bocca",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -6308,14 +6236,6 @@
         {
           "id": "panca_di_pietra",
           "role": "vecchie_del_mercato_cammeo_silenzioso_quando_noce_cade_una_alza_mano_altre_annuiscono_zero_parole | vecchie_del_mercato_cammeo_silenzioso_gruppo_narrativo_senza_entity_vincolo_bible_4_19_mai_individuate_una_alza_una_mano_un_attimo_quando_noce_cade_altre_annuiscono_zero_parole_primo_bloom_cammeo_seed_vecchie_indicare_in_silenzio_secondo_bloom_pieno_pianificato_s11"
-        },
-        {
-          "id": "viottolo_perimetrale_piazza",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_fuoco_ring",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -7072,14 +6992,6 @@
         {
           "id": "via_dell_alba",
           "role": "via_di_passaggio_quartiere_fuoco_primi_passi_nell_aria_di_ottobre_foglie_per_terra"
-        },
-        {
-          "id": "sentiero_orti_casa_salvia",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "viottolo_piazza_casa_memolo",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -7815,18 +7727,6 @@
         {
           "id": "piazza_villaggio",
           "note": "attraversato in partenza, invisibile sotto il buio pieno — nessun dettaglio architettonico descritto [legacy_id_villaggio_centrale_mappato_a_piazza_villaggio]"
-        },
-        {
-          "id": "viottolo_perimetrale_piazza",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_pontile_forno",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "via_dell_alba",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -8517,26 +8417,6 @@
         {
           "id": "pascoli_alti",
           "role": ""
-        },
-        {
-          "id": "via_che_sale",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "via_dell_alba",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_fuoco_ring",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "viottolo_perimetrale_piazza",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_orti_torrente_foresta",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -9479,30 +9359,6 @@
         {
           "id": "albero_vecchio",
           "note": "sagoma_scura_contro_viola_cielo_attraversamento_serale"
-        },
-        {
-          "id": "sentiero_riva_ovest",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_al_guado",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_capanne_pastori_pascoli",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "sentiero_pascoli_burrone_diretto",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "via_che_sale",
-          "role": "sentiero_attraversato"
-        },
-        {
-          "id": "via_dell_alba",
-          "role": "sentiero_attraversato"
         }
       ],
       "characters_in_scene": [
@@ -11029,27 +10885,6 @@
         "s12"
       ],
       "cornici_count": 24,
-      "additive_only": true
-    },
-    {
-      "timestamp": "2026-04-30",
-      "phase": "cornice_mondo_step5",
-      "action": "appended 36 sentieri fantasma to locations_secondary",
-      "doc_source": "DOC_4_audit_sentieri.md §4",
-      "stories_modified": [
-        "s01",
-        "s02",
-        "s03",
-        "s04",
-        "s05",
-        "s06",
-        "s07",
-        "s08",
-        "s09",
-        "s10",
-        "s11",
-        "s12"
-      ],
       "additive_only": true
     }
   ],

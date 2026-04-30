@@ -1,0 +1,56 @@
+# DOC_4 §4 — sentieri "fantasma" da aggiungere a stories.<sid>.locations_secondary
+# Mappa storia → lista sentieri percorsi nella narrazione fattuale ma non dichiarati nel grafo.
+# Append idempotente: se id sentiero già presente, no-op.
+# Role uniforme = sentiero_attraversato (i dettagli vivono in world_conventions.path_details, Step 6).
+
+mapping:
+  s01:
+    - via_che_sale
+  s02:
+    - via_che_sale
+    - sentiero_capanne_pastori_pascoli
+  s03:
+    - sentiero_orti_torrente_foresta
+  s04:
+    - sentiero_orti_torrente_foresta
+    - sentiero_orti_casa_salvia
+  s05:
+    - sentiero_orti_torrente_foresta
+    - sentiero_foresta_traversata_ovest
+  s06:
+    - sentiero_forno_orti_diretto
+    - sentiero_orti_casa_salvia
+    - sentiero_casa_salvia_casa_zolla
+    - sentiero_orti_casa_zolla
+    - viottolo_piazza_casa_memolo
+  s07:
+    - sentiero_al_guado
+    - sentiero_riva_ovest
+    - sentiero_ritorno_bocca_orti
+    - sentiero_pontile_spiaggia
+    - sentiero_case_basse_bocca
+  s08:
+    - viottolo_perimetrale_piazza
+    - sentiero_fuoco_ring
+  s09:
+    - sentiero_orti_casa_salvia
+    - viottolo_piazza_casa_memolo
+  s10:
+    - viottolo_perimetrale_piazza
+    - sentiero_pontile_forno
+    - via_dell_alba
+  s11:
+    - via_che_sale
+    - via_dell_alba
+    - sentiero_fuoco_ring
+    - viottolo_perimetrale_piazza
+    - sentiero_orti_torrente_foresta
+  s12:
+    - sentiero_riva_ovest
+    - sentiero_al_guado
+    - sentiero_capanne_pastori_pascoli
+    - sentiero_pascoli_burrone_diretto
+    - via_che_sale
+    - via_dell_alba
+
+role_default: sentiero_attraversato
