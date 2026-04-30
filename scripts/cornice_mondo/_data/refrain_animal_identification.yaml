@@ -1,0 +1,67 @@
+# refrain_animal_identification (DOC_1)
+# La formula del ritornello "che animale è" — convenzione del mondo isola.
+# Si applica solo agli individui anonimi dei 5 (ora 6) gruppi-istituzione, mai ai personaggi nominati,
+# mai alle Vecchie del Mercato, mai ai cuccioli protagonisti.
+
+formula:
+  singular: "Era un/una <ruolo del gruppo> — quale, oggi? Una/Un <animale>."
+  plural: "Erano i/le <gruppo> — chi, oggi? Una/Un <animale>, una/un <animale>, una/un <animale>."
+
+groups_eligible:
+  - camminanti
+  - mantenitori
+  - coltivatori_del_cerchio
+  - mercato_del_mezzogiorno
+  - pastori
+  - pescatori_case_basse  # 6° gruppo, decisione autoriale 2026-04-30
+
+excluded_targets:
+  named_characters: "Mai ai personaggi nominati. La specie loro è canone, non si rinomina mai."
+  vecchie_del_mercato: "Mai. Sono umane (mai_antropomorfizzate_come_vecchiette_personaggio). Restano coralità silenziosa."
+  cuccioli_protagonisti: "Mai. Sono nominati e fissi (Pun, Toba, Bru, Cardo, Liù)."
+
+activation_rules:
+  primo_incontro_only: "Solo al primo incontro di un membro del gruppo nella storia."
+  doppia_formula_max: "Massimo 2 formule per storia (1 sg + 1 pl, oppure 2 sg di gruppi diversi)."
+  paesaggio_omittibile: "Se l'apparizione è puramente di sfondo, formula omissibile. Giudizio: incontro vs paesaggio."
+  plurale_tre_nomi: "Variante plurale: tre nomi, mai due, mai quattro. Almeno uno insolito o specifico."
+  plurale_max_uno: "Mai più di una formula plurale per storia."
+
+quotes_saga:
+  max_per_story: 2
+  unique_animal_saga: "Lo stesso animale non può apparire come individuo del gruppo due volte in tutta la saga."
+  stagionalita: "Se in una stagione un gruppo non è attivo, niente formula."
+
+typography:
+  position: inline_paragrafo
+  pause: trattino_lungo
+  variations: "Mai variare la formula nei primi 4-5 incontri di saga. Poi 1-2 micro-varianti consentite nelle ultime storie."
+
+pool_excluded_priori:
+  - volpe_rossa  # Fiamma
+  - airone_cenerino  # Stria
+  - riccio_adulto  # Mèmolo
+  - tartaruga_di_mare_anziana  # Bartolo
+  - tasso  # Rovo
+  - tassino  # Bru
+  - stambecco_verde_vecchio  # Grunto
+  - lepre  # Salvia
+  - picchio  # Nodo
+  - cormorano  # Amo
+  - scoiattolo_grigio_anziano  # Zolla
+  - riccino  # Pun
+  - tartarughina  # Toba
+  - lupacchiotto  # Cardo
+  - libellulina  # Liù
+
+pool_available:
+  mammiferi_piccoli: [talpa, donnola, faina, ermellino, arvicola, ghiro, marmotta]
+  mammiferi_medi: [volpe_argentata, volpe_della_sabbia, cinghialino, capriolo, daino]
+  domestici_lavoro: [capra, pecora, asino, mulo, cane_da_pastore]
+  uccelli: [allodola, pettirosso, fringuello, capinera, rondine, rondine_di_mare, gazza, cornacchia, tortora, poiana, gheppio]
+  anfibi_rettili_max_1_2: [rospo, rana_di_palude, ramarro, lucertola]
+
+# refrain_animal_used_per_story (quote_tracker extension)
+# Tracking deterministico: lista di tuple [story_id, group_id, animal, formula_type]
+# Popolato da Step 4 (cornici).
+tracker_initial: []

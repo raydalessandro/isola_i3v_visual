@@ -1,7 +1,7 @@
 {
-  "schema_version": 1.4,
-  "graph_version": "1.2.0",
-  "last_updated": "2026-04-30",
+  "schema_version": "1.3",
+  "graph_version": "1.1.0",
+  "last_updated": "2026-04-29",
   "phase": "fase_g_in_corso_2026-04-29",
   "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. Provvisori P2 narrativi promossi al canonical post-pulizia (season_passage, key_phrase_indicative, key_phrase_attributed_to). 8 misalignments: 8 resolved (mis_001..mis_007 + mis_008). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere). Stato: nessuna ambiguità residua sui campi narrativi.",
   "entities": {
@@ -9544,8 +9544,7 @@
         "story": "s11",
         "cornice": "amo"
       }
-    ],
-    "refrain_animal_used_per_story": []
+    ]
   },
   "active_constraints_global": [
     "ear_framework_invisible",
@@ -10116,126 +10115,6 @@
       "date": "2026-04-29",
       "phase": "fase_g_hook_extension",
       "summary": "s12: scritti 10 scene_hooks v1.3 da pipeline_narrativa/hooks_proposals/cicloD/s12.yaml."
-    },
-    {
-      "timestamp": "2026-04-30",
-      "phase": "cornice_mondo_step1_2",
-      "action": "added world_conventions root + extended quote_tracker.refrain_animal_used_per_story",
-      "doc_sources": [
-        "DOC_1_formula_ritornello.md",
-        "DOC_5_index_sentieri.md"
-      ],
-      "graph_version_bump": "1.1.0 -> 1.2.0",
-      "schema_version_bump": "1.3 -> 1.4",
-      "additive_only": true
     }
-  ],
-  "world_conventions": {
-    "refrain_animal_identification": {
-      "doc_source": "DOC_1_formula_ritornello.md",
-      "approved_date": "2026-04-30",
-      "formula": {
-        "singular": "Era un/una <ruolo del gruppo> — quale, oggi? Una/Un <animale>.",
-        "plural": "Erano i/le <gruppo> — chi, oggi? Una/Un <animale>, una/un <animale>, una/un <animale>."
-      },
-      "groups_eligible": [
-        "camminanti",
-        "mantenitori",
-        "coltivatori_del_cerchio",
-        "mercato_del_mezzogiorno",
-        "pastori",
-        "pescatori_case_basse"
-      ],
-      "excluded_targets": {
-        "named_characters": "Mai ai personaggi nominati. La specie loro è canone.",
-        "vecchie_del_mercato": "Mai. Restano coralità silenziosa.",
-        "cuccioli_protagonisti": "Mai (Pun, Toba, Bru, Cardo, Liù)."
-      },
-      "activation_rules": {
-        "primo_incontro_only": true,
-        "max_formule_per_story": 2,
-        "max_plurale_per_story": 1,
-        "tre_nomi_in_plurale": true,
-        "almeno_uno_insolito_in_plurale": true,
-        "paesaggio_omittibile": true
-      },
-      "quotes_saga": {
-        "max_per_story": 2,
-        "unique_animal_saga": true,
-        "stagionalita_rispettata": true
-      },
-      "typography": {
-        "position": "inline_paragrafo",
-        "pause": "trattino_lungo",
-        "variations_allowed_after_first": "4-5 incontri",
-        "max_variants_in_late_stories": 2
-      },
-      "pool_excluded_priori": [
-        "volpe_rossa",
-        "airone_cenerino",
-        "riccio_adulto",
-        "tartaruga_di_mare_anziana",
-        "tasso",
-        "tassino",
-        "stambecco_verde_vecchio",
-        "lepre",
-        "picchio",
-        "cormorano",
-        "scoiattolo_grigio_anziano",
-        "riccino",
-        "tartarughina",
-        "lupacchiotto",
-        "libellulina"
-      ],
-      "pool_available": {
-        "mammiferi_piccoli": [
-          "talpa",
-          "donnola",
-          "faina",
-          "ermellino",
-          "arvicola",
-          "ghiro",
-          "marmotta"
-        ],
-        "mammiferi_medi": [
-          "volpe_argentata",
-          "volpe_della_sabbia",
-          "cinghialino",
-          "capriolo",
-          "daino"
-        ],
-        "domestici_lavoro": [
-          "capra",
-          "pecora",
-          "asino",
-          "mulo",
-          "cane_da_pastore"
-        ],
-        "uccelli": [
-          "allodola",
-          "pettirosso",
-          "fringuello",
-          "capinera",
-          "rondine",
-          "rondine_di_mare",
-          "gazza",
-          "cornacchia",
-          "tortora",
-          "poiana",
-          "gheppio"
-        ],
-        "anfibi_rettili_max_1_2": [
-          "rospo",
-          "rana_di_palude",
-          "ramarro",
-          "lucertola"
-        ]
-      }
-    },
-    "path_details": {
-      "doc_source": "DOC_5_index_sentieri.md + DOC_6_mercato_idee_tierA.md",
-      "schema_note": "campo `tipo` rimosso dallo slot dettaglio — un dettaglio è un dettaglio, libero",
-      "paths": {}
-    }
-  }
+  ]
 }
