@@ -230,3 +230,179 @@ quarter view. The knot/hands occupy the lower-center as visual
 calamita. Aspect ratio 4:5 (portrait). Composition leaves space to
 the right where the implicit learner stands.
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "in flight"
+
+**Filename suggerito**: `nodo_canonica_v1_volo.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Nodo]
+
+SCENE — Nodo in mid-flight between rooftops:
+Nodo flies between two village rooftops, mid-air, three-quarter
+view from below or side. His wings are SPREAD WIDE in the
+characteristic woodpecker undulating flight pattern (NOT a smooth
+gliding flight — woodpecker flight is up-down undulating, more
+abrupt). Body slightly horizontal, head forward and alert, the
+strong black beak pointing forward.
+
+The black-and-white plumage pattern is fully visible from the
+flight angle: black back and wings, white shoulder patches, the
+white-spotted wing markings, white throat and belly. The RED NAPE
+patch at the back of the head catches the sunlight.
+
+In one foot/talon he carries a small wooden mallet (he is flying to
+a roof-repair job, canonical of his role). The work apron is visible
+at the body, tools poking out of the pockets even in flight.
+
+His face shows the focused-on-task expression: small sharp dark
+eyes ahead, beak closed, neck slightly extended. NOT manic, NOT
+frantic — efficient.
+
+Background: the village rooftops below, in soft painterly wash —
+warm terracotta tiles, smoking chimneys, the Albero Vecchio visible
+in the distance NOT centered (canonical: never directly above or
+below the Old Tree). A glimpse of the Forno's chimney in one
+corner. Soft sky above, mid-day.
+
+Lighting: bright midday light from above, the wings catching strong
+highlights along the upper edges, the body in soft shadow below.
+The red nape patch is the brightest accent.
+
+Composition: medium shot capturing the full wingspan, body diagonal
+ascending or descending in the frame. Aspect ratio 4:5 (portrait)
+or 16:9 (landscape) — recommended 4:5 portrait, the body diagonal
+in the frame.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `nodo_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Nodo]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Nodo in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him standing
+upright in a NEUTRAL pose: arms (wings-as-arms) relaxed at his
+sides (NO mallet for the turnaround), feet slightly apart, head
+upright (NOT tilted, since the turnaround needs anatomical clarity),
+neutral attentive expression. The deep-ochre work apron, the cream-
+white tunic, and the rope coiled at the hip must all be visible.
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal — shows the
+   black crown with the white face stripe, the white throat and
+   breast, the apron with tools, the rope, the bare woodpecker feet
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile, the long woodpecker beak in
+   silhouette (canonical anatomy detail), the wing folded against
+   the body, the RED NAPE PATCH clearly visible at the back of the
+   head
+4. BACK view — from behind, showing the full BLACK BACK PLUMAGE,
+   the WHITE SHOULDER PATCHES, the WHITE-SPOTTED WING MARKINGS,
+   the rope coiled, the back of the apron tie, the back of the
+   head with the RED NAPE patch
+
+The character must look IDENTICAL across all four views: same black
+and white plumage pattern with the canonical RED nape, same deep-
+ochre apron with tools, same cream-white tunic, same rope, same
+height (~0.95-1.0 GU) and lean wiry build, same beak.
+
+CRITICAL ANATOMICAL DETAILS visible: the great spotted woodpecker
+plumage pattern (front, profile, back), the long straight chisel
+beak (front center, profile fully), the RED NAPE patch (especially
+in side profile and back view), the woodpecker zygodactyl feet (two
+forward, two backward toes, visible front and back), the apron tools
+poking out.
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Grok Imagine
+
+- Aspect ratio: 3:4 (imm 1), 4:5 (imm 2-3), 16:9 (turnaround).
+- 4-6 varianti per immagine, scegliere la migliore.
+- Coerenza tra le 4 immagini: stesso picchio, stesso pattern bianco-nero, stesso nape rosso, stesso grembiule ochre.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, oil painting, anime, manga, chibi, disney
+cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, hat, beret, baseball
+cap, modern power tools, electric drill, metric measuring tape,
+manic Woody-Woodpecker style cartoon, exaggerated red crest like a
+mohawk, rainbow plumage, perfectly clean apron, sage-craftsman
+contemplative pose, master-explaining-philosophy pose, cute mascot,
+kawaii, doll-like proportions
+```
+
+## Negative prompt specifici per Nodo
+
+```
+NO Woody Woodpecker style (no manic laugh, no exaggerated colors,
+no zany energy). NO huge red crest like a mohawk — the red is ONLY
+on the NAPE/back of the head, NOT on the top crown (the crown is
+black). NO rainbow plumage colors — STRICTLY black + white + small
+red nape. NO modern tools (no power drill, no plastic-handle hammer,
+no metric tape). NO Nodo doing the work FOR a learner (he shows,
+they do). NO long contemplative monologue pose. NO chef-style hat.
+NO smith hammer — his is a small wood mallet. NO talking about
+feelings.
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D)
+- [ ] **Picchio rosso maggiore anatomicamente corretto** (Dendrocopos major, NON Woody Woodpecker)
+- [ ] **Pattern piume nero-bianco classico**: black crown + back + wings, white throat + breast, white shoulder patches, white-spotted wings
+- [ ] **RED NAPE PATCH** sulla nuca/dietro testa (FIRMA — controllo critico, NON sulla cima del capo)
+- [ ] **Becco lungo dritto cesello nero** (firma anatomica, strumento canonico TOK-TOK-TOK)
+- [ ] Occhi piccoli scuri con anello amber, alert
+- [ ] Zampe zygodactyl da picchio, scalzo
+- [ ] **Grembiule da lavoro ochre/mustard-brown** con strumenti visibili nelle tasche (FIRMA — controllo critico)
+- [ ] Tunica/canottiera cream-white sotto
+- [ ] **Corda di canapa avvolta sull'anca o spalla** (firma del nodo guy)
+- [ ] Maniche rimboccate / movimenti rapidi nervosi
+- [ ] Statura ~0.95-1.0 GU (lean, wiry)
+- [ ] Modalità di registro corretta:
+  - Imm.1: at work (workbench, mallet alzato, head turned check, apron dusty)
+  - Imm.2: teaching (knot just done, hands held still, gaze toward implicit learner, "adesso fai tu" implicit)
+  - Imm.3: in flight (wings open, undulating woodpecker flight, mallet in talons, apron visible)
+  - Imm.4: 4 vedute neutre, no mallet, anatomy completa visibile
+- [ ] Nessun pattern AI bandito (no Woody-cartoon, no mohawk crest, no rainbow plumage, no power tools, no master-explaining)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine.
+
+## Ordine di generazione consigliato
+
+1. Imm.4 (turnaround) per primo — fissa il pattern piume + nape rosso.
+2. Imm.1 (at work) — ID card.
+3. Imm.2 (teaching by showing) — modalità relazionale.
+4. Imm.3 (in flight) — modalità più complessa anatomicamente (volo undulante).
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Grok Imagine
