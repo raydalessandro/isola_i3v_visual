@@ -132,3 +132,108 @@ NO mythological aura, glowing aura, magical effects. NO long flowing
 mane like a lion. NO explained scar (the scar is visible but its
 story is never visualized).
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (cengia, modalità ferma)
+
+**Filename suggerito**: `grunto_canonica_v1_cengia.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Grunto]
+
+SCENE — Canonical full-body view, standing motionless on the cengia
+(rocky ledge):
+Grunto stands on all four legs on a narrow rocky ledge of the Burrone
+(chasm) between the Twin Mountains. Three-quarter side view from the
+front-left, so the LEFT FLANK with the canonical scar is visible. His
+body is oriented perpendicular to the viewer, head turned three-
+quarters toward the viewer. All four black hooves are planted firmly
+on the rock. His weight is centered, the body still — he could remain
+this way for hours.
+
+His head is held forward and slightly lowered (natural ibex carriage),
+the LARGE BACKWARD-CURVING HORNS rising over the head with their
+visible growth rings catching gentle light. The long green beard hangs
+from his chin, slightly tangled by the high mountain wind. Small ears
+are alert.
+
+The dark moss-green coat is clearly visible on the body, lighter green
+on the belly. The LONG SCAR ON THE LEFT FLANK is visible — a strip of
+lighter naked skin where the green fur gives way. The scar is just a
+detail, NOT highlighted dramatically.
+
+His yellow eyes with HORIZONTAL PUPILS are fixed forward toward the
+viewer (or just past, at something only he sees). The gaze is steady,
+ancient, NOT friendly NOT hostile — the gaze of someone who has seen
+things you cannot have seen.
+
+Background: the Burrone — gray stone walls of the chasm rising on
+both sides, soft blue sky visible above, a distant view of one of the
+Twin Mountains' peaks, dry sparse vegetation (lichen, small mountain
+herbs) on the rocks. The Burrone interior is in cooler tones: gray
+stone, blue-ice distant peak, dry dust on the ledge. Grunto's green
+coat blends slightly with the lichen of the rocks behind him —
+natural camouflage.
+
+Lighting: cool diffuse mountain light, slightly bright but not harsh.
+A gentle highlight catches the curve of the horns and the beard. The
+overall atmosphere is HIGH-ALTITUDE STILLNESS.
+
+Composition: full body visible, head with horns to all four hooves,
+side view three-quarter. Aspect ratio 4:5 (portrait, slightly wider)
+OR 3:4 — recommended 4:5 because Grunto's body is more horizontally
+extended than vertically. The figure occupies most of the frame, the
+Burrone setting around him.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "sending away" (Via — s01 prima parte)
+
+**Filename suggerito**: `grunto_canonica_v1_via.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Grunto]
+
+SCENE — Grunto in the "sending away" gesture (canonical s01):
+Grunto stands on all four legs but with one FRONT HOOF SLIGHTLY
+RAISED AND STAMPED on the rock — a clear "Via" (go away) gesture.
+Three-quarter front view from the right. His head is slightly lowered,
+the horns angled forward (NOT in charging position — just clear
+warning), ears flat to the head. The body is tense but not in motion
+— he is HOLDING the warning, not executing it.
+
+His mouth is closed but the implicit low chest "grunt" is suggested
+by the tension in the throat fur. The yellow eyes with horizontal
+pupils are FIXED on the implicit visitor (the brothers, just out of
+frame in front-left). The gaze is direct, clear, ancient, with no
+hostility but with absolute authority.
+
+The scar on the left flank may be partly visible depending on angle
+but is not the focus here.
+
+Background: the cengia ledge in the Burrone, but slightly more open —
+maybe the entry to his shallow cave is suggested at the back of frame
+(a darker recess in the rock). Gray stone walls rising, blue sky
+above. The atmosphere is TENSE-STILL — the moment a wild creature
+warns you to step back.
+
+CRITICAL DIRECTION: NOT a charging pose. NOT aggressive. The pose is
+WARNING, not ATTACK. The body is centered, the hoof is stamped not
+raised to strike. Grunto is burbero, not cattivo (canonical Bible
+vincolo — burbero non è cattivo).
+
+Lighting: cool mountain light, slightly more directional than image
+1, casting a small shadow under the raised hoof. The horns catch a
+strong highlight along their forward curve.
+
+Composition: from full body (all four legs) to head with horns. Aspect
+ratio 4:5 (portrait). The implicit space toward the viewer should
+suggest the brothers' position (out of frame, the warning is
+directed at them).
+```
