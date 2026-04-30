@@ -141,3 +141,102 @@ NO sparkles, NO flashy accessories. NO hero pose, NO sage child
 look. NO bare feet outdoors. Always at least one brother in scene
 EXCEPT for these canonical reference images.
 ```
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (FRONTE, modalità esploratore)
+
+**Filename suggerito**: `noah_canonica_v1_fronte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Noah]
+
+SCENE — Canonical full-body front view, explorer mode:
+Noah stands facing the viewer, slightly turned three-quarters to his
+left, but with one foot lifted slightly mid-step — the natural body
+position of a small child who is never fully still. His right hand is
+slightly raised, holding a small object (a small smooth pebble, OR a
+short stick, OR an open palm with nothing) — the gesture of a child
+who has just picked something up and is showing it. His left hand is
+relaxed at his side, fingers slightly curled.
+
+His face is alive and engaged. Warm chestnut-brown eyes look toward
+the viewer with curiosity, not staring — about to flick to something
+else. His mouth is slightly OPEN, on the verge of saying something or
+having just said it. Eyebrows are very mobile, slightly raised in the
+expressive baseline. A few light chestnut hair strands are tousled at
+the sides.
+
+The light turquoise scarf/kerchief is clearly visible at his neck,
+knotted with the front end left a bit long. His light green shirt is
+soft and slightly rumpled. His sandy-beige trousers fall just below
+the knee; one knee shows a small dust smudge. His light ochre leather
+shoes are dusty.
+
+Background: a muted, soft outdoor setting evoking the village or a
+small clearing — packed earth ground, hints of low grass, a soft
+muted sky above. The background is gentle painterly suggestion,
+slightly more "spring/early summer" feeling to match Noah's lively
+palette.
+
+Lighting: warm midday natural daylight, slightly bright, coming from
+the upper right. Soft shadow on his left side. No harsh contrast.
+
+Composition: full body visible, head to feet, centered. Aspect ratio
+3:4 (portrait). The figure occupies roughly 65% of the vertical
+frame (proportionally smaller than Gabriel's frame, since Noah is
+0.65 GU). CRITICAL: Noah must be visibly SHORTER than the canonical
+Gabriel (1.0 GU) and Elias (0.85 GU) reference figures — proportion-
+ally a small child of 3-4 years.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "concentrato" (close, china su un dettaglio)
+
+**Filename suggerito**: `noah_canonica_v1_concentrato.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Noah]
+
+SCENE — Noah in focused mode, crouched on a small detail:
+Noah is crouched low or sitting on his heels, three-quarter view from
+the front-right. His upper body is leaned forward, both knees on or
+near the ground, hands placed on the earth or hovering just above a
+small object — a still insect (a beetle, a butterfly with closed
+wings on a leaf), OR a feather, OR a small flower, OR a smooth pebble.
+The object he is studying is the visual focus of the scene, but it is
+SMALL — perhaps half the size of his hand.
+
+His face is the rare quiet focus expression of Noah. Eyes are fixed
+on the small object with intense attention, mouth CLOSED (unusual for
+him), eyebrows lightly drawn together. The face has gone STILL — the
+brief moment when Noah is not in motion. The stillness itself is
+characteristic.
+
+The light turquoise kerchief is hanging slightly forward as he leans
+down. His light green shirt sleeves are at his wrists. The trousers
+show clear dust on the knees from kneeling. His light leather shoes
+are at the bottom of the frame.
+
+Background: a quiet outdoor setting — soft grass or earth at his
+feet, a few scattered leaves or small natural elements, hints of
+distant landscape in painterly wash but very out-of-focus. The world
+around Noah is slightly blurred — only the small object he is
+focused on is in clear focus.
+
+Lighting: soft natural light, slightly diffused, coming from above.
+A gentle highlight on the back of his head and shoulders. The small
+object he is studying catches a tiny touch of light — it is the
+calamita.
+
+Composition: from above-waist down to feet (or three-quarter shot
+including hands and the small object), three-quarter view. Aspect
+ratio 4:5 (portrait). This image fixes the canonical "focused" pose
+for use in scenes where Noah finds the small detail (s05 pertiche con
+Bru, s08 nido vuoto, momenti silenziosi).
+```
