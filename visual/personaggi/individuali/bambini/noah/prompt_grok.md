@@ -240,3 +240,185 @@ ratio 4:5 (portrait). This image fixes the canonical "focused" pose
 for use in scenes where Noah finds the small detail (s05 pertiche con
 Bru, s08 nido vuoto, momenti silenziosi).
 ```
+
+---
+
+## 🖼️ IMMAGINE 3 — Modalità "aggrappato" (paura del buio, mano tesa)
+
+**Filename suggerito**: `noah_canonica_v1_aggrappato.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Noah]
+
+SCENE — Noah in clinging mode (the rare big-feeling moment):
+Noah stands or sits with a smaller-than-usual posture — shoulders
+slightly drawn together, body a touch more compact than his explorer
+default. Three-quarter view from the front-left. One hand is reaching
+forward — not toward the viewer but toward an empty space at his
+level, fingers spread in the gesture of a child looking for a hand
+to find. His other hand is closed in a small fist near his chest.
+
+His face is the key visual signal of this mode. Eyes are wide but
+NOT exaggerated — alive with a feeling that is not laughed off. Mouth
+is closed for once, lips slightly pressed but not crying. Possibly
+held-back tears can be hinted at the corner of the eyes (a very small
+glistening), but NEVER tears flowing down. Eyebrows are gently raised
+at the inner corners — the universal expression of a child feeling
+something big.
+
+The light turquoise kerchief is at his neck, slightly twisted by the
+hand that has been touching it. His light green shirt sleeves are at
+the wrists, the cuffs slightly rumpled. The trousers fall just below
+the knee. His light leather shoes are quiet on the ground.
+
+Background: a quiet darker setting evoking night or evening — the
+world is darker than in the other images, soft blue-black wash, a
+hint of a window or a faint warm light source far in the distance.
+The deep-green wool cloak/cape can be visible over the pajamas (s10
+night canon). NO other figures clearly visible — but the empty space
+toward which Noah is reaching should leave room for an implied hand
+just out of frame.
+
+Lighting: dim ambient light, possibly a single warm light source from
+the lower-right (a hidden lantern, a fire, a window). Most of the
+scene is in soft blue-black shadow, with a gentle highlight on Noah's
+face and his outstretched hand.
+
+Composition: from waist up to slightly above the head, three-quarter
+view. Aspect ratio 4:5 (portrait). This image fixes the canonical
+"clinging/big-feeling" pose for use in S10 (notte buia, "Ho paura.
+Qui è buio.") and analogous quiet moments in S2/S3/S12.
+```
+
+---
+
+## 🖼️ IMMAGINE 4 — Style sheet / turnaround (4 vedute)
+
+**Filename suggerito**: `noah_turnaround_v1.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Noah]
+
+SCENE — Character turnaround sheet for visual consistency:
+A character reference sheet showing Noah in 4 standard views, evenly
+spaced from left to right against a neutral cream background with a
+faint horizontal ground line. All four views show him in the same
+neutral standing pose: arms relaxed at his sides, feet slightly apart,
+neutral attentive expression with the mouth just barely open. NO
+props except the light turquoise kerchief at his neck (signature
+feature, must be visible in all four views).
+
+Views from left to right:
+1. FRONT view — facing viewer directly, full frontal
+2. THREE-QUARTER view — turned 45 degrees to his left
+3. SIDE PROFILE — full left profile
+4. BACK view — from behind, showing the back of the light green shirt,
+   the trouser cord at the waist, the back of the light leather shoes
+
+The character must look IDENTICAL across all four views: same hair
+color and length (light chestnut, lighter than Elias), same skin tone
+with the slight dirt smudges, same light green shirt, same sandy-beige
+trousers, same light leather shoes, same height (0.65 GU) and
+proportions, same light turquoise kerchief at the neck visible in
+front and side views.
+
+CRITICAL SCALE NOTE: this turnaround should clearly show that Noah
+is THE SMALLEST of the three brothers. If generated AFTER Gabriel and
+Elias turnarounds, ensure proportional consistency — Noah is roughly
+65% of Gabriel's height (1.0 GU) and 76% of Elias's height (0.85 GU).
+Head proportionally larger (1:4.5 head-to-body ratio, the proportions
+of a 3-4 year old).
+
+Lighting: even neutral lighting, no dramatic shadows, soft watercolor
+wash on a cream background.
+
+Composition: aspect ratio 16:9 (landscape, very wide), four figures
+side by side, full body each, equal spacing.
+```
+
+---
+
+## 🛠️ Note tecniche per Flux Kontext Pro
+
+- **Tier raccomandato**: `flux-kontext-pro`. Per casi difficili: `flux-kontext-max`.
+- **Aspect ratio**: come specificato (3:4, 4:5, 16:9).
+- **Reference image**: usare `gabriel_turnaround_v1.jpg` o `elias_turnaround_v1.jpg` (se già generati) come reference per allineare lo stile saga e LE PROPORZIONI tra fratelli. Se i fratelli maggiori sono già fatti, usarli prioritariamente per garantire la scala relativa corretta (Noah più piccolo).
+- **Seed**: salvare il seed per riuso. Usare seed simile/uguale tra le 4 immagini.
+- **Iterazione**: 4-6 varianti per immagine.
+- **Coerenza tra le 4 immagini**: stesso bambino, stessa altezza, stessi tratti.
+- **Attenzione speciale alla scala**: Noah è il più piccolo. Se generato in solitaria nel turnaround, le proporzioni 1:4.5 testa-corpo + lo sviluppo di un bambino di 3-4 anni devono essere chiaramente leggibili.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, photographic, oil painting, anime, manga, chibi,
+disney cartoon, pixar, dreamworks, flat vector, comic book, airbrushed,
+glossy, plastic, neon colors, fluorescent, dark gothic, horror, big
+anime eyes, long eyelashes, sparkles, jewelry, necklace, earrings, cap,
+hat, prince outfit, perfectly clean clothes, brand new clothes, torn
+rags, bare feet outdoors, sandals indoors winter, melodramatic crying
+with big tears, wide-open laughing mouth O shape, exaggerated stupor
+expression, pacifier/ciuccio, baby bottle, infant proportions, hero
+pose, sword, weapon, magic effects, glowing aura, sparkle effects,
+cute mascot, kawaii, doll-like proportions, multiple children visible
+(this is a solo reference sheet)
+```
+
+## Negative prompt specifici per Noah
+
+```
+NO black hair, NO blond hair, NO red hair, NO curly hair, NO long
+hair past ears, NO bangs covering eyes, NO blue eyes, NO green eyes,
+NO grey eyes, NO eyes darker than warm chestnut-brown (he is lighter
+than Gabriel, similar warmth to Elias), NO extremely pale skin, NO
+very dark skin, NO infant/toddler proportions younger than 3 (no
+diapers, no baby head, no baby fat). NO older child proportions
+(this is age 3-4, not 6+). NO maliciously naughty expression — his
+trickster mode is innocent. NO heroic pose. NO modern technology
+in scene
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] Bambino umano età 3-4 anni (proporzioni 1:4.5 testa-corpo — testa proporzionalmente più grande)
+- [ ] Capelli corti lisci castani chiari (più chiari di Elias)
+- [ ] Occhi castani caldi vivaci
+- [ ] Pelle chiara di tono caldo, leggermente abbronzata, qualche piccola traccia di terra
+- [ ] Camicia/maglia verde chiaro (foglia primaverile/salvia/water-green)
+- [ ] **Sciarpa/fazzoletto turchese chiaro al collo** (FIRMA VISIVA — controllo critico)
+- [ ] Pantaloni marrone-grigio chiaro / sandy-beige
+- [ ] Scarpe basse di cuoio chiaro ai piedi (mai a piedi nudi)
+- [ ] **Bocca semi-aperta** o comunque mobile (firma espressiva, presente in imm. 1)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: esploratore (mid-step, mano alzata con piccolo oggetto, mobile)
+  - Imm. 2: concentrato (chinato, mani su dettaglio piccolo, bocca chiusa, fermo)
+  - Imm. 3: aggrappato (mano tesa cercando, espressione di sentire-grande, ambient scuro)
+  - Imm. 4: 4 vedute neutre identiche
+- [ ] Coerenza tra le 4 immagini (stesso bambino, stesse proporzioni, stesso colore)
+- [ ] **Statura coerente con anchor 0.65 GU** (il più piccolo dei tre fratelli)
+- [ ] Niente accessori vistosi, niente ciuccio, niente mascotte
+- [ ] Nessun pattern AI bandito (no occhi enormi, no espressione disney baby, no lacrime grosse)
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo + scala 0.65 GU.
+2. **Imm. 1 (fronte esploratore)** — ID card canonica.
+3. **Imm. 2 (concentrato)** — modalità raro-ferma.
+4. **Imm. 3 (aggrappato)** — modalità delicata ambient scuro, l'ultima.
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Flux Kontext Pro
