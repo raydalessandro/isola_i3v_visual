@@ -145,3 +145,97 @@ EXCEPT for the canonical reference images below where he is shown
 solo for character-sheet purposes.
 ```
 
+
+---
+
+## 🖼️ IMMAGINE 1 — Veduta canonica principale (FRONTE, modalità osservatore)
+
+**Filename suggerito**: `gabriel_canonica_v1_fronte.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Gabriel]
+
+SCENE — Canonical full-body front view, observer mode:
+Gabriel stands facing the viewer, slightly turned three-quarters to his
+left, in a relaxed natural standing pose. His left hand is in the pocket
+of his trousers, his right hand hangs relaxed at his side. His posture
+is naturally upright and still — the body of a child who watches before
+he moves. His feet are slightly apart in a stable stance, planted but
+not rigid, leather shoes touching the earth.
+
+His face is calm and attentive. Eyes meet the viewer with steady, alive
+intelligence — dark brown eyes that look at you as if assessing, not
+challenging, not curious in a wide-eyed way. The mouth is closed,
+serene, neither smiling nor frowning. Eyebrows lightly drawn together
+in mild concentration. A few strands of his short dark brown hair are
+lifted slightly by a small breeze.
+
+The deep purple scarf/bandana is clearly visible at his neck, knotted
+once at the side, the loose end falling on his chest. His indigo blue
+shirt is plain, slightly creased at the elbows where the sleeves meet
+his arms. His earth-brown trousers fall just below the knee, the cord
+at the waist visible. His leather shoes are dusty.
+
+Background: a muted, soft outdoor setting evoking the village center
+of the island — cream-ochre packed earth ground, a low stone wall in
+the distance suggested only by warm grey watercolor wash, a hint of
+muted blue sky above with one or two soft clouds. NO specific architecture
+in focus. The background is a gentle painterly suggestion that doesn't
+compete with the figure.
+
+Lighting: soft natural daylight, slightly warm, coming from the upper
+right, creating a gentle shadow on his left side. No harsh contrasts.
+A child standing in mild morning light.
+
+Composition: full body visible, head to feet, centered. Aspect ratio
+3:4 (portrait). Standard reference pose. The figure occupies roughly
+70% of the vertical frame.
+```
+
+---
+
+## 🖼️ IMMAGINE 2 — Modalità "deciso" (3/4, in azione)
+
+**Filename suggerito**: `gabriel_canonica_v1_deciso.jpg`
+
+```
+[STYLESHEET CANONICA SAGA]
+
+[CANONE PERSONAGGIO — Gabriel]
+
+SCENE — Gabriel in decided mode, on a path:
+Gabriel walks forward on a packed earth path, three-quarter view from
+the front-left. His posture is squared, shoulders open, both hands out
+of his pockets — his left hand swings naturally with the stride, his
+right hand holds the strap of a small cloth shoulder bag that hangs at
+his hip. His chin is slightly raised, not arrogant — focused. His feet
+are mid-stride, one heel just lifting, the other planted firmly.
+
+His face is set with quiet determination. Eyes look forward and slightly
+to the right, fixed on something just beyond the frame. His mouth is
+closed but the lips are slightly compressed, as if he has just said a
+short direct phrase or is about to. Eyebrows are drawn together more
+distinctly than in observer mode but not severe. The expression is the
+expression of a child who has decided to do a thing and is now doing it.
+
+The deep purple scarf is visible flowing slightly behind his neck from
+the small breeze of his motion. The cloth shoulder bag, off-white linen,
+hangs below his right hip — perhaps containing a wrapped loaf of bread
+(canonical s12 motif).
+
+Background: a stretch of low rolling island terrain in painterly
+watercolor suggestion — soft sage-green grass on either side of the
+path, a few early-spring or autumn shrubs, a hint of distant low hills
+in pale blue-grey wash. Sky pale blue with diffuse warm light. The
+background DOES NOT include other figures (the brothers are not in this
+canonical reference frame).
+
+Lighting: warm midday or mid-morning natural light, soft shadows under
+his feet and along the path, no dramatic contrast.
+
+Composition: from feet to slightly above head, three-quarter view, the
+figure occupies the center-right of the frame leaving space ahead in
+the direction of his motion. Aspect ratio 4:5 (portrait).
+```
