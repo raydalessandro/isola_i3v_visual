@@ -336,3 +336,86 @@ side by side, full body each, equal spacing. Add small height tick
 marks at the bottom of the ground line if possible (subtle, not
 distracting), to anchor the 1.0 GU scale reference.
 ```
+
+---
+
+## 🛠️ Note tecniche per Flux Kontext Pro
+
+- **Tier raccomandato**: `flux-kontext-pro` (character consistency nativa). Per casi difficili: `flux-kontext-max`.
+- **Aspect ratio**: come specificato in ciascuna immagine (3:4, 4:5, 16:9).
+- **Reference image**: fortemente consigliato passare `fiamma_canonica_v1_fronte.jpg` o `bartolo_canonica_v1_fronte.jpg` come `reference_image` per allineare lo stile saga (acquerello/picture book) ai 2 standard validati. Senza reference, il rischio è derivare verso un look diverso.
+- **Seed**: salvare il seed dopo la prima generazione canonica per riuso futuro in varianti.
+- **Iterazione**: generare 4-6 varianti per ciascuna delle 4 immagini, selezionare la migliore.
+- **Coerenza tra le 4 immagini**: usare lo stesso seed (o seed simili) per garantire che Gabriel esca riconoscibile come stesso personaggio in tutte e 4. Soprattutto: verificare che capelli, occhi, statura e outfit siano identici.
+
+## Negative prompt globale
+
+```
+3D render, photoreal, photographic, oil painting, heavy impasto, anime,
+manga, chibi, disney cartoon, pixar, dreamworks, flat vector, comic book,
+airbrushed, glossy, plastic, neon colors, fluorescent, dark gothic, horror,
+big anime eyes, long eyelashes, sparkles, jewelry, necklace, earrings,
+flashy bracelet, cap, hat, hood-up-covering-face, prince outfit, perfectly
+clean clothes, brand new clothes, torn rags, bare feet outdoors, sandals
+indoors winter, melodramatic crying, visible tears, wide-open laughing
+mouth, exaggerated expression, sage-like grand gaze, heroic chin-lifted
+pose, sunset background dramatic, sword, weapon, magic effects, glowing
+aura, sparkle effects, cute mascot, kawaii, doll-like proportions, huge
+head, exaggerated cute features, multiple children visible (this is a
+solo reference sheet)
+```
+
+## Negative prompt specifici per Gabriel
+
+```
+NO blond hair, NO red hair, NO curly hair, NO long hair past ears, NO
+bangs covering eyes, NO blue eyes, NO green eyes, NO grey eyes, NO
+extremely pale skin, NO very dark skin, NO baby-faced toddler proportions
+(this is age 6-7), NO teenager proportions (this is a child), NO heroic
+pose, NO sword, NO weapon, NO crown, NO royal accessories, NO bare
+chest, NO short shorts, NO modern sneakers, NO baseball cap, NO
+sunglasses, NO smartphone, NO modern technology in scene
+```
+
+---
+
+## ✅ Checklist post-generazione
+
+Prima di salvare le immagini come canoniche in `visual/personaggi/individuali/bambini/gabriel/immagini/`, verificare per ciascuna:
+
+- [ ] Stile painterly picture book (non realistic, non cartoon, non 3D, non anime)
+- [ ] Bambino umano età 6-7 anni (non toddler, non teenager)
+- [ ] Capelli corti lisci castani scuri (non biondi, non ricci, non lunghi)
+- [ ] Occhi castani scuri / marrone profondo (non azzurri, non verdi)
+- [ ] Pelle chiara di tono caldo, leggermente abbronzata
+- [ ] Camicia/maglia indaco blu scuro indossata
+- [ ] Pantaloni marrone-grigio terra
+- [ ] **Sciarpa/bandana viola scuro al collo** (FIRMA VISIVA — controllo critico)
+- [ ] Scarpe basse di cuoio scuro ai piedi (mai a piedi nudi)
+- [ ] Modalità di registro corretta:
+  - Imm. 1: osservatore (mano in tasca, sguardo dritto, postura ferma)
+  - Imm. 2: deciso (mani fuori, mento alzato, in cammino)
+  - Imm. 3: sentire interno (sguardo distolto, mano sul braccio, faccia quieta)
+  - Imm. 4: 4 vedute neutre identiche
+- [ ] Coerenza tra le 4 immagini (stesso bambino, stesse proporzioni, stesso colore)
+- [ ] Statura coerente con anchor 1.0 GU (riferimento per Elias/Noah)
+- [ ] Niente accessori vistosi (no cappellino, no occhiali, no gioielli)
+- [ ] Nessun pattern AI bandito (no occhi enormi, no espressione disney, no pose eroica, no sage child)
+- [ ] Sfondo painterly evocativo, non distrazione
+
+Se 2 o più checkbox falliscono, rigenerare la singola immagine con prompt aggiustato — non procedere con immagini canoniche imperfette.
+
+## Ordine di generazione consigliato
+
+1. **Imm. 4 (turnaround)** per primo — fissa il canone visivo del personaggio in 4 vedute neutre.
+2. **Imm. 1 (fronte osservatore)** — la "ID card" canonica di Gabriel.
+3. **Imm. 2 (deciso)** — modalità azione.
+4. **Imm. 3 (sentire interno)** — modalità delicata, l'ultima da generare perché richiede più cura espressiva.
+
+Usare l'imm. 4 (turnaround) come `reference_image` per le imm. 1-2-3 successive: garantisce coerenza visiva.
+
+---
+
+**Maintainer:** Ray + Claude
+**Versione del prompt:** 1.0 (2026-04-30)
+**Status:** pronto per generazione con Flux Kontext Pro
