@@ -177,4 +177,78 @@ paths:
           s12: "righe d'erba ingiallite, brillano leggermente alla luce del Concerto"
         notes: "Memoria geologica del sentiero. Le righe persistono anche senza passaggi recenti — testimonianza fisica della comunità."
 
-  # Continua nel pezzo 2/2: sentiero_orti_casa_salvia + viottolo_perimetrale_piazza
+  # ============================================================
+  # sentiero_orti_casa_salvia — Tier A · 3 storie · 3 dettagli
+  # Anatomia: Quartiere di Terra. Da una diramazione degli Orti
+  # del Cerchio alla casa di Salvia. Passa accanto a piccoli
+  # appezzamenti privati e a un cespuglio di rosmarino vecchissimo.
+  # ============================================================
+  sentiero_orti_casa_salvia:
+    tier: A
+    anatomy: "Sentiero del Quartiere di Terra. Collega Orti del Cerchio (da una diramazione) alla casa di Salvia. Passa accanto a piccoli appezzamenti privati e a un cespuglio di rosmarino vecchissimo."
+    appears_in_stories: [s04, s06, s09]
+    details:
+      - id: socs_d01_rosmarino_vecchio
+        what: "Il rosmarino vecchio — un cespuglio enorme, alto come un bambino di 5 anni, sul lato nord del sentiero. Salvia ci passa la mano ogni volta che torna a casa, foglie spesso staccate. Profumo che rimane sulle dita per ore."
+        where_along_path: "lato nord, primi due terzi del sentiero"
+        visibility: "visivo + olfattivo. Visibile sempre, profumo intensificato al passaggio o sfregamento."
+        appears_in_stories: [s04]
+        perception_pattern: "s04 prima vista, primavera, fiorito. Salvia ci passa la mano d'istinto."
+        notes: "Oggetto-firma anche di Salvia. Quartiere di Terra/cura. Il gesto di Salvia (mano sul cespuglio) è canone."
+
+      - id: socs_d02_muretto_a_secco_crollato_piuma_memolo
+        what: "Il muretto a secco crollato in un tratto — il muretto che separa due appezzamenti è crollato un anno fa. Nessuno lo ha rimesso in piedi: tre o quattro pietre cadute si sono coperte di muschio. È diventato parte del paesaggio."
+        where_along_path: "tratto centrale del sentiero, separazione due appezzamenti privati"
+        visibility: "visibile sempre, di passaggio. Le pietre coperte di muschio si confondono col fondo."
+        appears_in_stories: [s06]
+        perception_pattern: "s06 i tre fratelli passano (mattina inoltrata). Mèmolo è già passato di qui poco prima — segno: una piuma viola di passero caduta tra le pietre, di quelle che Mèmolo perde sempre dalla sua sciarpa."
+        notes: "Il muretto è dettaglio fisso; la piuma viola è marcatore di passaggio Mèmolo (firma della sua sciarpa storta che perde frammenti). Gli abitanti dell'isola riconoscono Mèmolo dalle sue tracce."
+
+      - id: socs_d03_orto_di_rape_semi_abbandonato
+        what: "L'orto di rape semi-abbandonato — un piccolo orto privato che non sa di chi è. Le rape nascono e nessuno le raccoglie. D'autunno seccano in piedi, le foglie diventano cartone."
+        where_along_path: "lato sud, ultimo terzo prima di casa Salvia"
+        visibility: "visibile sempre, evolve stagionalmente"
+        appears_in_stories: [s09]
+        perception_pattern: "s09 (autunno): Mèmolo ci passa, raccoglie un foglia secca senza pensarci, gli si attacca alla sciarpa."
+        state_by_story:
+          s09: "autunno: rape secche in piedi, foglie cartone"
+        notes: "Idea per arricchire la cornice S09-C2 di Mèmolo. Mistero produttivo (chi non raccoglie?) come microstoria del sentiero."
+
+  # ============================================================
+  # viottolo_perimetrale_piazza — Tier A · 3 storie · 3 dettagli
+  # Anatomia: viottolo che gira intorno alla Piazza, sul perimetro.
+  # Lastricato di pietre piatte con interstizi dove cresce erba.
+  # ============================================================
+  viottolo_perimetrale_piazza:
+    tier: A
+    anatomy: "Viottolo che gira intorno alla Piazza, sul perimetro. Collega le case del centro ai viottoli secondari (verso Mèmolo, verso Nodo). Più stretto delle vie principali, lastricato di pietre piatte con piccoli interstizi dove cresce erba."
+    appears_in_stories: [s08, s10, s11]
+    details:
+      - id: vpp_d01_pietra_che_traballa
+        what: "La pietra che traballa — una pietra del lastricato, sul lato del Pozzo, che si muove leggermente quando ci si appoggia col piede. Tutti del villaggio sanno dov'è. La gente la salta di istinto."
+        where_along_path: "lato del Pozzo, lastricato"
+        visibility: "visibile come tutte le altre pietre. Tradisce l'instabilità solo al peso."
+        appears_in_stories: [s08]
+        perception_pattern: "s08 i fratelli vanno verso il Pozzo per Mèmolo. Gabriel la salta senza pensarci, Noah ci pesta sopra, sente che si muove, non commenta."
+        notes: "Conoscenza tacita del villaggio. La pietra distingue chi è del posto da chi non lo è. Differenza di fratelli (Gabriel anziano la conosce, Noah più piccolo no)."
+
+      - id: vpp_d02_angolo_dove_si_raccoglie_il_vento
+        what: "L'angolo dove si raccoglie il vento — un punto del viottolo, vicino a una casa con muro angolare, dove il Mulinello della sera fa sempre un piccolo vortice di foglie. Anche con vento debole, lì gira un mulinello in miniatura."
+        where_along_path: "vicino a casa con muro angolare, lato nord-est del viottolo"
+        visibility: "visibile attraverso le foglie/polvere quando c'è vento; assente in calma piatta"
+        appears_in_stories: [s10]
+        perception_pattern: "s10 (notte): nessun vento, il punto è solo silenzio. Niente foglie. È l'assenza che si nota."
+        state_by_story:
+          s10: "ASSENTE nella notte senza vento — l'assenza si nota per chi conosce il punto"
+        notes: "Dettaglio evolvente per opposizione (presenza vs assenza). Il punto canonico della microvorticità diventa segno della sospensione notturna."
+
+      - id: vpp_d03_chiodo_arrugginito_a_vista
+        what: "Il chiodo arrugginito a vista in un muretto — un chiodo grosso, piantato male anni fa. Viene usato dai bambini del villaggio per appendere brevemente cose (un cesto, una corda) durante i giochi. Sempre vuoto fuori dai giochi."
+        where_along_path: "muretto basso lungo viottolo, lato verso la piazza"
+        visibility: "visibile sempre. Quasi invisibile finché vuoto, evidente quando ha qualcosa appeso."
+        appears_in_stories: [s11]
+        perception_pattern: "s11 (festa): per la prima volta nella saga il chiodo ha qualcosa appeso — un cestino piccolo lasciato lì da un cucciolo durante il gioco."
+        state_by_story:
+          s11: "ha appeso un cestino piccolo lasciato da un cucciolo durante il gioco — prima volta nella saga"
+        notes: "Storia stratificata (chiodo storico, uso tipico, evento singolare in s11). La festa attiva il chiodo come ha attivato altri elementi sopiti."
+
