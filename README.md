@@ -1,157 +1,199 @@
-# isola_i3v_visual — Cartografia e Visual
+# Integrazione cornice del mondo — istruzioni per l'agente
 
-Repository di lavoro per il progetto **L'Isola dei Tre Venti** (saga di 12 storie illustrate per bambini 4-10 anni, di Ray).
-
-> 🔎 **Visualizzatore catalogo entità (uso interno):** [`catalogo_web/`](./catalogo_web/) — sito statico che mostra tutte le 115 entità della saga (personaggi, luoghi, oggetti, venti, signatures) con sidebar navigabile e gallery immagini. Una volta abilitate le GitHub Pages: `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`. In locale: `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
+> **Per chi legge:** sei l'agente che integra nel grafo e nelle schede del catalogo le decisioni autoriali contenute nei 6 documenti di questo pacchetto. Questo README spiega *cosa fare*, *in che ordine*, e *come risparmiare token leggendo solo lo stretto necessario*.
 >
-> 🗺 **Viewer cartografia (mappa interattiva):** [`cartografia/geo/viewer/index.html`](./cartografia/geo/viewer/index.html) — apri con doppio click. 104 feature, ricerca, filtri, pannello dettaglio.
+> **Lavoro tuo:** scrivere script idempotenti che applicano le modifiche, lanciare audit, attendere approvazione di Ray tra una fase e la successiva.
 >
-> 🔁 **Pipeline operativa (flusso end-to-end per una storia):** [`docs/PIPELINE.md`](./docs/PIPELINE.md) — diagramma + tabella delle 7 tappe (idea autoriale → narrazione fattuale → 10 hook → grafo → audit → prosa → commit). Fissa cosa è automatizzabile e cosa resta umano (~70% auto, by design). Stato attuale: la repo è strutturata ma il flusso non è ancora automatizzato end-to-end — il documento mappa cosa serve per scalare quando le 12 storie saranno completate.
+> **NON sei il tuo lavoro:** non riscrivere narrazioni, non modificare hook visivi, non toccare il core delle storie (premise/problem/threshold/resolution).
 
-Questo repo contiene **due tracce di lavoro** + un input read-only + un workspace di porting completato:
+---
+
+## 1. Stato del progetto in cui entri
+
+Ray ha completato:
+- 12 narrazioni fattuali (`pipeline_narrativa/narrazione_fattuale/s01-s12_*.md`)
+- Hook visivi estesi a 10 per storia, schema 1.3, nel grafo
+- Catalogo schede personaggi/luoghi/oggetti (provvisorio, popolato meccanicamente)
+- Quote tracker attivo nel grafo
+
+**Quello che manca**, e che questo pacchetto consegna come decisioni autoriali:
+1. Una formula-ritornello "che animale è" per identificare i membri anonimi dei gruppi-istituzione
+2. Saluti distinti per i 5 gruppi-istituzione
+3. 24 cornici di sfondo distribuite nelle 12 storie, organizzate in 5 processi del mondo
+4. Aggiunta di sentieri "fantasma" alle `locations_secondary` delle storie
+5. Dettagli stabili dei sentieri Tier A (ed in seguito B, C)
+
+**Tutto questo deve finire nel grafo o nel catalogo.** Niente prosa nuova — solo strutture dati e sezioni di schede.
+
+---
+
+## 2. Lettura raccomandata (ordine + cosa leggere davvero)
+
+I documenti sono lunghi. **Non li leggere tutti per intero.** Per ciascun task, ti basta una porzione precisa.
+
+| Doc | Scope | Cosa leggere DAVVERO | Cosa saltare |
+|---|---|---|---|
+| `DOC_1_formula_ritornello.md` | Formula-ritornello identificazione animali | §1 (formula) + §2 (variante plurale) + §3 (vincoli) + §4.1 (pool esclusi) | §4 lista pool intera (la usi solo se serve scegliere animali nuovi) e §5 esempi |
+| `DOC_2_saluti_gruppi.md` | Saluti dei 5 gruppi | §3 tabella riepilogativa + §4 regole | tutto §2 dettaglio (basta tabella) |
+| `DOC_3_cornici_processi.md` | 24 cornici + 5 processi | §1 (i 5 processi) + §3 (schema dati) + §4 (riepilogo distribuzione) | §2 dettaglio cornice per cornice (è dato, non spiegazione — usa solo quando scrivi nel grafo) |
+| `DOC_4_audit_sentieri.md` | Audit del percorrere | §1 (sintesi numerica) + §3 (tier) + §4 (gap) | §2 mappa per storia (usa solo quando esegui il task di aggiunta `locations_secondary`) |
+| `DOC_5_index_sentieri.md` | Index sentieri navigabile | §1 (indice inverso) + §2 (indice diretto) + §4 (schema slot) | §6 (decisioni aperte, già risolte) |
+| `DOC_6_mercato_idee_tierA.md` | 20 dettagli stabili Tier A | §2-§6 (le 5 sezioni dettagli, già approvate da Ray) + §7 riepilogo | §8 spunti check (già usati) |
+
+**Token-saving rules:**
+- Se devi scrivere lo script per un task, leggi PRIMA il riepilogo del doc, POI scendi nel dettaglio solo della sezione operativa.
+- Non rileggere la Bible, la Carta Voce, il `PATTERN_AI_DA_BANDIRE`. Non ne hai bisogno per questo pacchetto — è puro lavoro di scrittura strutturale nel grafo.
+- Se uno script richiede uno schema, lo schema è in `DOC_3 §3` (cornici) e `DOC_5 §4` (sentieri). Punto.
+
+---
+
+## 3. Mappa operativa: cosa va dove
+
+Tre destinazioni distinte. Tienile separate.
+
+### 3.1 → Grafo (`pipeline_narrativa/story_graph.json`)
+
+| Da quale doc | Cosa | Dove nel grafo |
+|---|---|---|
+| DOC_1 | Formula ritornello | nuovo nodo root: `world_conventions.refrain_animal_identification` |
+| DOC_1 | Tracker animali usati | dentro `quote_tracker`: `refrain_animal_used_per_story` (lista di tuple `[story, group, animal]`) |
+| DOC_3 | 24 cornici | nuovo campo per ogni storia: `stories.<sid>.cornice_dettagli` (lista di oggetti, schema in DOC_3 §3) |
+| DOC_4 | Sentieri "fantasma" | append a `stories.<sid>.locations_secondary` (vedi DOC_4 §4 per la mappa storia → sentieri da aggiungere) |
+| DOC_5 + DOC_6 | Indici sentieri + dettagli | nuovo nodo root: `world_conventions.path_details` (oggetto con `paths: { sentiero_id: { details: [...] } }` — schema in DOC_5 §4) |
+
+### 3.2 → Catalogo schede (`visual/personaggi/collettivi/<gruppo>/scheda.md`)
+
+| Da quale doc | Cosa | Dove |
+|---|---|---|
+| DOC_2 | Saluto del gruppo | nuova sezione `## Saluto del gruppo` in ogni scheda dei 5 gruppi (camminanti, mantenitori, coltivatori_del_cerchio, mercato_del_mezzogiorno, pastori) |
+
+Niente altro va nelle schede catalogo personaggi.
+
+### 3.3 → Catalogo schede sentieri (`visual/luoghi/.../strade/<sentiero>/scheda.md`)
+
+| Da quale doc | Cosa | Dove |
+|---|---|---|
+| DOC_6 | Dettagli stabili | sezione `## Coerenza cross-scena (cose che NON cambiano)` di ogni scheda Tier A elencata in DOC_6. Sostituire `_da popolare dal grafo_` con i dettagli in formato compatto (vedi DOC_5 §4 per schema YAML) |
+
+I sentieri Tier B e Tier C arriveranno in pacchetti successivi (DOC_6_tierB, DOC_6_tierC). Per ora, **solo Tier A**.
+
+---
+
+## 4. Ordine di esecuzione raccomandato
+
+Esegui in ordine. Tra uno step e il successivo, **lancia gli audit** (`audit_*.py`) e **fermati** se qualcosa rompe. Aspetta input di Ray.
+
+### Step 1 — `world_conventions` (root del grafo)
+- Crea il nodo root `world_conventions`
+- Aggiungi `refrain_animal_identification` (DOC_1 §1, §2, §3 in JSON minimale)
+- Aggiungi `path_details` (placeholder vuoto, popolato a Step 5)
+- Modifica `graph_version` a 1.2.0 (additivo, retrocompatibile)
+- Audit: `python audit_2_schema.py`
+
+### Step 2 — `quote_tracker` esteso
+- Aggiungi `refrain_animal_used_per_story` (lista vuota, popolata da Step 4)
+- Audit: `python audit_2_schema.py`
+
+### Step 3 — Saluti nelle schede catalogo gruppi (DOC_2)
+- Per ognuno dei 5 gruppi: aggiungi sezione `## Saluto del gruppo` (testo da DOC_2 §3 + §2)
+- Niente audit grafo qui (è catalogo)
+- Aggiorna `ultima_modifica:` nel frontmatter
+
+### Step 4 — Cornici (DOC_3)
+- Per ognuna delle 12 storie, aggiungi `cornice_dettagli` con le sue cornici (DOC_3 §2)
+- Per ogni cornice che applica formula: append in `quote_tracker.refrain_animal_used_per_story`
+- Audit: `python audit_2_schema.py` + `python audit_4_drift.py`
+
+### Step 5 — Sentieri "fantasma" (DOC_4 §4)
+- Per ognuna delle 12 storie, aggiungi le entry mancanti in `locations_secondary`
+- Mappa testuale completa in DOC_4 §4
+- Audit: `python audit_3_navigability.py`
+
+### Step 6 — Index sentieri (DOC_5 + DOC_6)
+- Popola `world_conventions.path_details.paths` con i 5 sentieri Tier A di DOC_6
+- Per ogni sentiero, lista di oggetti `{id, where_along_path, what, appears_in_stories, state_by_story?}`
+- Schema in DOC_5 §4 (campo `tipo` rimosso — un dettaglio è un dettaglio, libero)
+
+### Step 7 — Schede sentieri Tier A (DOC_6)
+- Per ognuno dei 5 sentieri Tier A, sostituisci la sezione `## Coerenza cross-scena` con i dettagli da DOC_6
+- Ogni dettaglio rimanda al grafo via `path_details.paths.<id>.details[]`
+- Schede da modificare:
+  - `visual/luoghi/quartiere_fuoco/via_dell_alba/scheda.md`
+  - `visual/luoghi/quartiere_terra/sentiero_orti_torrente_foresta/scheda.md`
+  - `visual/luoghi/quartiere_aria/via_che_sale/scheda.md`
+  - `visual/luoghi/quartiere_terra/sentiero_orti_casa_salvia/scheda.md`
+  - `visual/luoghi/quartiere_centro/viottolo_perimetrale_piazza/scheda.md` *(verifica path esatto)*
+
+---
+
+## 5. Stile script
+
+Tutti gli script che scrivi in questa fase devono:
+
+1. **Idempotenti** — eseguibili più volte, senza duplicare entry.
+2. **Dry-run di default** — `--dry-run` mostra cosa cambierebbe; `--apply` applica davvero.
+3. **Backup automatico** — prima di modificare il grafo, salva `story_graph.json.bak.<timestamp>`.
+4. **Validazione schema** — leggi lo schema target dai DOC, valida prima di scrivere.
+5. **Log umano** — output leggibile: *"Aggiunte 5 cornici a s06. Quote tracker aggiornato."*
+
+Modello di riferimento: `scripts/write_hooks_to_graph.py` esistente nella repo.
+
+---
+
+## 6. Cosa NON fare
+
+- NON scrivere prosa.
+- NON modificare hook visivi del grafo.
+- NON modificare la voce dei personaggi (lo farà l'agente prosa successivo).
+- NON inventare dettagli nuovi: usa SOLO ciò che è in DOC_6.
+- NON saltare audit tra Step e Step.
+- NON committare se Ray non ha approvato.
+
+---
+
+## 7. Cosa serve a Ray dopo che hai finito
+
+Quando completi tutti gli step:
+
+1. Riassunto in markdown:
+   - Quante entry aggiunte al grafo (per tipo)
+   - Quante schede catalogo modificate
+   - Quale audit ha fallito (se ne ha)
+2. Diff sintetico delle versioni del grafo
+3. Pronto-da-rifetchare per Ray
+
+Lui rifetcha la repo, controlla, e mi dà il via per costruire il **brieffer per storia** — lo script `build_writing_brief.py` che, dato un sid, produce il dossier completo per l'agente prosa pescando da: grafo, narrazione fattuale, hook, cornici, sentieri, saluti, formula ritornello, catalogo schede.
+
+A quel punto resta un solo passo: **scrivere**.
+
+---
+
+## 8. Files in questo pacchetto
 
 ```
-/
-├── cartografia/           tecnica: GeoJSON, schede luogo, viewer, convenzioni
-├── visual/                descrizioni visive di tutte le entità (personaggi, luoghi, oggetti, venti, signatures) + immagini canoniche
-├── _visual_pipeline/      pipeline operativa per completare il catalogo visual (canone, template, esempi, skill)
-├── catalogo_web/          sito statico interno per consultare visual/ da browser (GitHub Pages)
-├── pipeline_narrativa/    INPUT read-only: grafo storie + corpus canonico narrativo
-│   ├── documenti_progetto/         Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.
-│   ├── narrazione_fattuale/        12 narrazioni fattuali s01..s12 (input fase G, Ray)
-│   ├── hooks_proposals/            input deterministici fase G (YAML per ciclo/storia)
-│   ├── prompts/                    prompt operativi versionati per agenti (es. fase G)
-│   ├── story_graph.json            grafo v1.1.0 schema 1.3 (fase G completata: 120/120 hook)
-│   └── story_graph.v0.10.0.backup.json  backup pre-fase E
-├── _porting_grafo/        ARCHIVIO una-tantum: workspace migrazione grafo v1.1 → v1.2 (fase E completata)
-├── contributi/            proposte aggiunte schede da collaboratori esterni (file datati, mai modifica diretta)
-├── skills/                skill dell'agente IA (cartografo, visual con sotto-skill) + regole comuni
-├── scripts/               tool Python condivisi (idempotenti) tra le skill
-│   ├── build_catalogo_web.py            rigenera catalogo_web da visual/
-│   ├── compile_visual_from_graph.py     travaso meccanico grafo → schede (fase F.1)
-│   ├── split_narrazione_fattuale.py     split sorgente Ciclo*.txt → 12 sNN_*.md
-│   ├── migrate_graph_v1_2_to_v1_3.py    bump schema fase G (one-shot, idempotente)
-│   ├── promote_visual_entities_to_graph.py  promozione catalogo visual → grafo entities
-│   ├── write_hooks_to_graph.py          writer deterministico fase G (input YAML)
-│   └── audit/                           audit grafo (4 script da implementare)
-├── docs/                  documentazione di processo (es. PIPELINE.md)
-├── CLAUDE.md              istruzioni per istanze IA (LEGGI PRIMA DI MODIFICARE)
-├── PROJECT_STATE.md       snapshot operativo
-└── SYNC_LOG.md            log dei cambiamenti da riflettere altrove
+docs/
+├── DOC_1_formula_ritornello.md       # formula "che animale è"
+├── DOC_2_saluti_gruppi.md             # saluti dei 5 gruppi
+├── DOC_3_cornici_processi.md          # 24 cornici + 5 processi del mondo
+├── DOC_4_audit_sentieri.md            # audit del percorrere reale
+├── DOC_5_index_sentieri.md            # index sentieri navigabile
+└── DOC_6_mercato_idee_tierA.md        # 20 dettagli stabili Tier A approvati
+README.md                              # questo file
 ```
 
 ---
 
-## 1. Cartografia
+## 9. Decisioni autoriali già prese (referenze rapide)
 
-Cartografia tecnica canonica dell'Isola. Alimenta la pipeline immagini con coerenza geografica e valida le storie nuove rispetto al canone fisico.
+Ray ha già deciso queste cose. Non chiedere conferma, applica.
 
-- **Stato:** v0.5 — 103 feature, 36 sentieri, viewer Leaflet, backward-compat 100% con grafo v0.6.0.
-- **Punto d'ingresso umano:** `cartografia/geo/viewer/index.html` (doppio click).
-- **Architettura e regole:** `cartografia/README.md`.
-- **Storia versioni:** `cartografia/CHANGELOG.md`.
-
-## 2. Visual
-
-Serbatoio di **descrizioni visive e vincoli per prompt** per tutte le entità della saga (personaggi, luoghi, oggetti, venti, visual signatures). Fonte unica per IA generative, illustrazioni di riferimento, stampa 3D (4 vedute), narrativa, campagne social.
-
-- **Stato:** 115 schede in struttura frattale (23 personaggi + 43 luoghi + 31 strade + 14 oggetti + 3 venti + 1 visual signature). 11 schede già canonizzate via `_visual_pipeline/` (Fiamma, Bartolo, Forno + 7 luoghi + grembiule_fiamma + Gabriel parziale). 8 immagini canoniche generate (4 Fiamma + 4 Bartolo). Le restanti schede da completare seguendo la pipeline.
-- **Esempi validati:** `visual/personaggi/individuali/primari/{fiamma,bartolo}/` (con immagini canoniche v1) e `visual/luoghi/quartiere_fuoco/forno/` (luogo complesso 3 blocchi LOCATION).
-
-## 3. Visual pipeline (`_visual_pipeline/`)
-
-Pacchetto operativo per **completare il catalogo visual** (le 115 schede) con canone chiuso e immagini canoniche generate, in modo coerente, scalabile e riproducibile. Sviluppata da Ray in chat dedicata, validata su 2 specie diversissime (Fiamma + Bartolo) e 1 luogo complesso (Forno).
-
-- **Entry point:** [`_visual_pipeline/README.md`](./_visual_pipeline/README.md)
-- **Flusso 6 fasi:** [`_visual_pipeline/_skill/PIPELINE.md`](./_visual_pipeline/_skill/PIPELINE.md) (Setup → scheda → prompt Grok → descrizione social → immagini → push → canone)
-- **Canone saga (3 doc):** stylesheet, scale (Gabriel = 1.0 GU), palette per quartiere e personaggio
-- **Template (5):** scheda personaggio/oggetto/luogo + prompt grok + descrizione social
-- **Esempi validati:** `_visual_pipeline/_esempi/{fiamma,bartolo,forno,grembiule_fiamma}/`
-- **Versione:** v1.2 (2026-04-29). Pipeline personaggi e pipeline luoghi entrambe considerate robuste.
-
-## 4. Catalogo web (sito interno)
-
-Sito statico HTML+JS in [`catalogo_web/`](./catalogo_web/) per **consultare le entità di `visual/` da browser**. Ad uso interno (Ray + collaboratori senza accesso GitHub).
-
-- **Stack:** HTML + CSS + JS vanilla, no build pipeline. `marked.js` da CDN per rendering MD.
-- **Aggiornamento:** `python3 scripts/build_catalogo_web.py` rilegge `visual/` e rigenera `catalogo_web/data/entities.json`. Idempotente.
-- **Locale:** `python3 -m http.server` dalla radice → `http://localhost:8000/catalogo_web/`.
-- **Deploy:** GitHub Pages (Settings → Pages → Source: main / `/`) → URL `https://raydalessandro.github.io/isola_i3v_visual/catalogo_web/`.
-
-## 5. Pipeline narrativa (read-only per cartografia/visual; modificabile solo da agente di fase dedicato)
-
-Corpus narrativo canonico — Bible, Glossario, ARCHI 12 storie, voce, pattern AI da bandire, EAR, apparato — più il grafo storie aggiornato.
-
-- **Grafo corrente:** `pipeline_narrativa/story_graph.json` **v1.1.0-pre schema 1.3** (S1-S12, fase E completata + schema bump fase G eseguito). Promuove a v1.1.0 stabile alla prima scrittura di hook `extended_v2`. Backup pre-bump: `story_graph.json.pre_v1_3.backup.json`.
-- **Documenti progetto:** `pipeline_narrativa/documenti_progetto/` (Bible, Carta Voce, ARCHI, Glossario, Pattern AI da bandire, ecc.).
-- **Narrazione fattuale:** `pipeline_narrativa/narrazione_fattuale/` — 12 file `s01_*.md` ... `s12_*.md` con cronaca fattuale di ogni storia (input fase G, **completi al 2026-04-29**, derivati meccanicamente dal sorgente unico in `_source/Ciclo_a-b-c-d_*.txt` via `scripts/split_narrazione_fattuale.py`).
-- **Prompt operativi:** `pipeline_narrativa/prompts/` — prompt versionati per agenti dedicati (es. `PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`).
-- **Backup pre-migrazione:** `pipeline_narrativa/story_graph.v0.10.0.backup.json` (snapshot v0.10.0 schema 0.1).
-- **Regola:** mai modificato dalla cartografia o dal visual. Solo agenti di fase dedicati (con prompt specifico) toccano il grafo, e solo le sezioni autorizzate dal prompt.
-
-## 6. Fase G — Estensione hook visivi (completata)
-
-Ampliamento dei `visual_anchors.scene_hooks` di ogni storia da N (2–8 attuali) a esattamente **10**. Bump grafo v1.0.0 → v1.1.0 + schema v1.2 → v1.3 (estensione additiva). **Completata il 2026-04-29: 120/120 hook v1.3 scritti.**
-
-- **Prompt operativo:** `pipeline_narrativa/prompts/PROMPT_AGENTE_HOOK_ESTENSIONE_v1.md`.
-- **Input principale:** `pipeline_narrativa/narrazione_fattuale/s0X_*.md` (12/12).
-- **Tooling:** `scripts/migrate_graph_v1_2_to_v1_3.py`, `scripts/promote_visual_entities_to_graph.py`, `scripts/write_hooks_to_graph.py` (writer deterministico con 16 controlli pre-scrittura).
-- **Workflow validato:** agente sub legge fonti → propone in markdown → review Ray → conversione YAML in `pipeline_narrativa/hooks_proposals/<ciclo>/sNN.yaml` → dry-run → write → commit + merge main. Storia per storia.
-- **Output finale:** 120 hook validati totali (10 × 12). 31 signature (max 3/storia).
-
-Vedi `CLAUDE.md` sezione "Fase G" per dettagli.
-
-## 7. Porting grafo (archivio una-tantum, non pipeline)
-
-`_porting_grafo/` contiene il workspace della **fase E**: migrazione del story_graph dalla schema v1.1 (legacy) alla schema canonica v1.2. Lavoro **una-tantum**, completato il 2026-04-28. Non entra nella pipeline operativa, ma resta nel repo come trail di audit.
-
-Cosa c'è dentro:
-
-```
-_porting_grafo/
-├── dossier_fase_e/
-│   └── dossier/
-│       ├── MIGRATION_PROMPT_FASE_E.md     prompt operativo (11 regole + REGOLA 7), usato dall'agente migrante
-│       ├── story_graph_schema_canonical_v1_2.json   schema target
-│       ├── INPUT_NODES/                   12 nodi v1.1 in input (s01_input.json…)
-│       ├── _provisional_state.json        rolling state P2 (12 entries finali)
-│       ├── _canon_misalignments.json      8 misalignments tracciati (tutti resolved)
-│       └── verify_output_integrity.py     validatore schema v1.2
-├── output/
-│   └── s01..s12/                          per ogni storia: canonical, provisional, migration_notes, catalog_proposals, _p1_mapping
-└── scripts/
-    └── migrate_p1.py                      script P1 (carpentiere meccanico) parametrico per story_id
-```
-
-Stato finale fase E:
-- 12/12 canonical PASS verify schema v1.2
-- 60 no_inference_fields decisi via Q1-Q6 autoriali Ray (entry_point/closure/register/length/pauses)
-- 87 provvisori P2 (22A + 47B + 18C)
-- 8/8 misalignments resolved
-- Catalogo isola_i3v_visual: 114 → **115 entities** (aggiunto `pallone_di_stoffa_cucita` come `oggetto_di_scena_ricorrente`)
-
-L'output canonico finale è promosso in `pipeline_narrativa/story_graph.json` v1.0.0 schema 1.2. Il workspace `_porting_grafo/` resta come riferimento (mapping, trasformazioni applicate, regole patchate, decisioni archiviate).
+- **Formula ritornello:** "Era un/una <gruppo> — quale, oggi? Una/Un <animale>." (singolare) / "Erano i/le <gruppo> — chi, oggi? <animale>, <animale>, <animale>." (plurale)
+- **Animali specie dichiarata** (non suggerita)
+- **Saluti dei 5 gruppi** come da DOC_2 §3 tabella
+- **Schema slot dettaglio sentiero**: campo `tipo` rimosso, slot libero
+- **Tier A approvato** come da DOC_6
+- **Tier B + Tier C**: in arrivo nei prossimi pacchetti, NON eseguire ora
 
 ---
 
-## 8. Istruzioni per agenti IA
-
-Vedi `skills/README.md` (orchestratore) e le skill specifiche:
-- [`skills/cartografo.md`](./skills/cartografo.md) — manutenzione cartografia.
-- [`skills/visual/`](./skills/visual/) — famiglia visual: [`README.md`](./skills/visual/README.md) (skill generale) + sotto-skill specializzate (es. [`compilatore.md`](./skills/visual/compilatore.md) per la compilazione delle schede entità).
-
-In sintesi: l'agente sceglie una skill per task, scrive solo nel proprio scope (`cartografia/` o `visual/`), non tocca mai `pipeline_narrativa/` (eccezione: la migrazione una-tantum di `_porting_grafo/`, ora chiusa), non decide canone narrativo, segnala invece di reinterpretare.
-
-## 9. Stato e contesto
-
-- **Snapshot operativo:** `PROJECT_STATE.md`.
-- **Autore narrativo e proprietario:** Ray.
-- **Manutenzione tecnica:** Ray + agente IA in collaborazione.
-
----
-
-**Ultimo aggiornamento:** 2026-04-29
-**Versione cartografia:** v0.6.2
-**Versione grafo storie:** v1.1.0 schema 1.3 (fase E + fase G completate; 120/120 hook scritti)
-**Versione visual pipeline:** v1.2 (Fiamma + Bartolo + Forno validati come standard; 8 immagini canoniche)
-**Catalogo entità:** 115 (23 personaggi + 43 luoghi + 31 strade + 14 oggetti + 3 venti + 1 visual signature)
+Fine README.
