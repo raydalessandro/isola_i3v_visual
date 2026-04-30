@@ -153,3 +153,95 @@ I tre fratelli sono umani, gli unici umani dell'isola. I genitori non sono mai c
 - **In S11 h07**: postura insolitamente immobile per Elias, mani con i quattro coni, sguardo che riceve il riconoscimento delle Vecchie.
 
 **Mai variabile:** colore base dei capelli, statura relativa rispetto a Gabriel e Noah, outfit canonico, postura bipede.
+
+## Cliché da evitare
+
+Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIRE_v1.md`.
+
+**Specifici per Elias (e per i tre fratelli in generale):**
+- Mai Elias "fratellino di mezzo trascurato" con sguardo malinconico vittimista — la sua paura ("non essere abbastanza") è muta, mai esibita, e si tocca solo a fine S11 con "Va bene.".
+- Mai Elias "infanzia luminosa idilliaca" con sorriso disney perfetto.
+- Mai Elias "fratellanza zuccherosa" con abbracci dimostrativi o pose affettuose teatrali.
+- Mai Elias "bambino-eroe" con posa di sfida.
+- Mai Elias che piange in modo melodrammatico.
+- Mai Elias "carino-mascotte" con proporzioni esagerate (testa grande, occhi enormi).
+- Mai Elias "anime kid" con ciuffo davanti agli occhi, occhi enormi luminosi.
+- Mai Elias disney/pixar con animazione esagerata di volto.
+- Mai Elias scalzo fuori casa (è bambino, va calzato).
+- Mai Elias con accessori vistosi (cappellino, occhiali, gioielli).
+- Mai Elias solo (P6: ogni scena con Elias ha anche Gabriel e Noah o almeno uno).
+- Mai Elias con un "ruolo da capo" visibile.
+- Mai Elias con espressione di rabbia o frustrazione visibile — è il ponte, non il bersaglio.
+- Mai Elias che si distingue come "il bambino normale" tra Gabriel "il profondo" e Noah "lo speciale" — la sua specificità è il ⇄ (connettere), non l'essere medio in senso anonimo.
+
+## Per stampa 3D
+
+- **Scala**: 0.85 GU rispetto a Gabriel (anchor canonico saga). Se scala toy 1:6, Elias misura ~24 cm. Se miniatura 1:24, ~6 cm.
+- **Postura canonica per la veduta principale**: in piedi, leggermente inclinato in avanti come se stesse per chinarsi a fare qualcosa, una mano leggermente in avanti come se stesse per indicare/passare qualcosa, l'altra rilassata. Sguardo dritto avanti calmo, sorriso piccolo laterale tipico. Volto in espressione costruttore (concentrato attento).
+- **4 vedute consigliate**: fronte, retro, profilo dx, profilo sx. La vista frontale è la canonica principale (perché Elias "fa nel mezzo").
+- **Geometria**: corpo bipede di bambino umano, proporzioni 5-6 anni (testa rapportata 1:5 al corpo). Articolazione naturale.
+- **Materiale di stampa consigliato**: PLA o resina. Pelle base color carne calda chiara, capelli marrone medio chiaro, maglia arancione terracotta, pantaloni marrone-grigio, cordino giallo ocra. Post-stampa airbrush per tono pelle/capelli e per le piccole lentiggini sul naso.
+- **Punti critici**: dita delle mani (geometria piccola, e in Elias sono importanti perché "fanno"), lacci scarpe, cordino al collo (può essere pezzo separato o basso rilievo).
+- **Orientamento di stampa**: in piedi sulla base.
+
+_Scala canonica precisa rinviata a definizione saga._
+
+## Per narrativa e social
+
+Vedere `descrizione_narrativa_social.md` nella stessa cartella.
+
+**Registri d'uso testuale:**
+- Voce narrante: "Elias" (mai "il medio" da solo, mai "il bambino" da solo).
+- I fratelli si chiamano per nome tra loro. Mai "fratellino", mai "fratellone".
+- Le sue battute non vanno introdotte da "disse pratico" o "propose con un sorriso furbo" — la sua voce è già funzionale.
+- Mai descrivere Elias con aggettivi morali (pratico, ingegnoso, generoso). Mostra invece le azioni (fa il nodo, passa il cordino, dà il quarto cono a Bru).
+- **Voce tipica**: frasi che aprono ad altri, propongono, citano. *"Possiamo legarli con questo nodo."*, *"E se passassimo dall'altra parte?"*, *"Ha detto Nodo che..."*, *"Va bene."* (frase-soglia s11, due parole).
+
+## Storie / scene di apparizione
+
+- s01: protagonista, azione (incontro con Grunto sulla nebbia, segue la decisione di Gabriel).
+- s02: protagonista, azione (capisce il riflesso, modalità ponte).
+- s03: protagonista, azione (margine Foresta, calmo).
+- s04: protagonista Δ-trickster, modalità costruttore (batte sulla radice TUM-tum-TUM-tum-TUM, parla a Noah a distanza).
+- s05: protagonista, **bloom funzionale**: nodo marinaro insegnato da Nodo, costruisce ponte di rami, attraversa per primo per collaudare.
+- s06: stratega del giro insieme a Gabriel (modalità ponte), passa coni di Stria.
+- s07: passeur silenzioso, lega i tre rametti col nodo marinaro all'alba al guado, allunga il bastoncino per recuperare la zattera.
+- s08: lavora coi Mantenitori sotto le lanterne, esegue il nodo marinaro su corda tesa da Nodo (terza applicazione, prima volta in crisi reale).
+- s09: presente alla cena, dà a Gabriel il cordino nuovo per la sciarpa sfilacciata, vede in silenzio quando Gabriel posa il braccialetto sul tavolo.
+- s10: fratello mediano, accende e vela la lanterna in cucina (oggetto-simbolo s10, gesto canonico inversione speculare di Mèmolo che copre il nido in s08), guida i fratelli col cerchio di luce.
+- s11: protagonista architrave, **culmine**: Stria gli dà quattro coni invece di tre, le Vecchie del Mercato lo indicano in silenzio, lui dice **"Va bene."** (terna strato 3, due parole), dà il quarto cono a Bru al Pozzo.
+- s12: protagonista del trio nel sigillo, dispone in senso comune (siede a sinistra del bordo di Roccia Alta), gomito sul braccio di Gabriel (terna strato 3, gesto silenzioso terza modalità).
+
+## Disallineamenti / domande aperte
+
+> **Decisione autoriale Ray del 2026-04-30 (opzione B):** i tratti fisici sotto NON sono modellati sui figli reali. Sono **tratti coerenti col canone saga (palette §6 Bible "toni caldi" + standard bambino mediterraneo)**, fittizi ma stabili. Sostituibili in futuro senza rotture pipeline.
+
+- **Età narrativa nelle storie**: 5-6 anni (proiezione narrativa rispetto alla data di nascita 8-2-2024 nel grafo). Calibrata su Gabriel = 6-7 anni e Noah = 3-4 anni.
+- **Colore capelli**: castani chiari/castano-mediomelati (derivazione "toni caldi" + standard mediterraneo, leggermente più chiari di Gabriel). ✅ confermato opzione B.
+- **Colore occhi**: castani caldi mediomelati (derivazione "toni caldi"). ✅ confermato opzione B.
+- **Lentiggini sul naso**: derivazione "toni caldi" + tradizione visiva del "bambino di mezzo che ha qualcosa di luminoso". Firma minore, non centrale. Ray può togliere se preferisce.
+- **Casa dei fratelli**: posizione esatta sull'isola non è dichiarata in Bible. Coerente col Villaggio centrale ma non confermato.
+
+## Riferimenti puntuali (citazioni dirette dalle fonti)
+
+**Fonti canoniche dirette:**
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.1 Struttura familiare: "I tre fratelli sono umani, gli unici umani dell'isola... P6 (inseparabilità): ogni storia richiede tutti e tre i fratelli. Nessuno da solo risolve."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.3 Elias — Il Medio: "Nato 8 febbraio 2024. Acquario (aria fissa). Funzione narrativa: il ponte tra gli altri due. Quando litigano trova cosa fare insieme. Risolve con azioni più che con parole. ⇄ incarnato (collega, propone, costruisce). Voce: frasi che aprono ad altri ('Possiamo...', 'E se...'). Cita altri personaggi, ricorda cose dette. Paura nascosta: non essere abbastanza — Gabriel è profondo, Noah è speciale perché piccolo, 'e io? quello in mezzo'. Mai detta. Sviluppo emotivo previsto: storia 11."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §2.5 Dinamiche tra fratelli: "Gabriel ↔ Elias: rispetto reciproco, si completano naturalmente — Elias ↔ Noah: complicità nel fare, Elias segue Noah nelle esplorazioni e poi sistema i guai."
+- `pipeline_narrativa/documenti_progetto/ISOLA_TRE_VENTI_BIBLE_v2.md` §6 PALETTE VISIVA, Fratelli: "Elias: toni caldi (arancione, giallo)."
+- `pipeline_narrativa/story_graph.json#stories.s11.visual_anchors.scene_hooks#s11_h07`: "«Va bene.» Due parole. Non parla a nessuno in particolare. Lo dice e basta. Continua a tenere i quattro coni." — frase-soglia.
+- `pipeline_narrativa/story_graph.json#entities.characters.elias`: `species: umano`, `type: protagonista`, `age_band: medio_dei_tre`, `birth: 2024-02-08`, `attribute_ear: ⇄`, `role_saga: protagonista`.
+- `_canone/02_SAGA_SCALE_v1.md`: Elias = 0.85 GU (referenza).
+
+**Derivazioni autoriali:**
+- *Età narrativa 5-6 anni nelle storie*: derivata da autonomia delle azioni + scala saga + relazione con Gabriel (6-7) e Noah (3-4). Da confermare con Ray.
+- *Capelli castani chiari + occhi castani caldi*: derivata da palette "toni caldi" + standard bambino mediterraneo (più chiaro di Gabriel per contrasto).
+- *Lentiggini sul naso*: derivata da palette "toni caldi" + firma visiva minore di luminosità.
+- *Outfit canonico (camicia arancione caldo + pantaloni marrone-grigio + cordino giallo ocra + scarpette di cuoio chiaro)*: derivata da palette §6 "arancione, giallo" + registro pre-industriale + funzionalità per bambino che fa cose.
+- *Maniche sempre arrotolate*: derivata da modalità "costruttore" — Elias arrotola perché lavora.
+- *Sorriso piccolo laterale come espressione caratteristica*: derivata da §2.3 voce/funzione + ⇄ incarnato (sorriso del "ho un'idea, possiamo...").
+- *Tre modalità visive (costruttore / ponte / fermo-che-ha-capito)*: derivate da §2.3 + ARCHI s11 culmine.
+- *Mani sempre in movimento*: derivata da §2.3 "risolve con azioni più che con parole".
+- *Cordino/bandana invece di sciarpa larga*: derivata da modalità "non intralcio mani".
+
+**Cliché da evitare specifici**: derivati da `PATTERN_AI_DA_BANDIRE_v1.md` applicato al caso bambino-medio-umano + vincoli §2.3.
