@@ -15,7 +15,7 @@
 | # | Veduta | Versione | Status |
 |---|---|---|---|
 | 1 | Esterno (alba) | v2 | ⏳ in iterazione |
-| 2 | Interno (kneading area) | — | da fare |
+| 2 | Interno (alba, kneading area attiva) | v1 | ⏳ in iterazione |
 | 3 | Cortile retro | — | da fare |
 | 4 | (4ª veduta da decidere insieme) | — | da fare |
 
@@ -387,8 +387,489 @@ Derivata da:
 
 Spazi riservati per le prossime vedute, da popolare iterativamente:
 
-### 🎨 Veduta 2 — Interno del Forno (kneading area)
-*da fare — quando Ray porta il prompt, si aggiunge qui come sezione completa con prompt + checklist + variazioni*
+## 🎨 Veduta 2 — Interno del Forno (alba, kneading area attiva) — v1
+
+**Versione:** 1.0 (prima generazione)
+**Tipo:** scena interna, momento canonico della saga ("primo posto dell'isola dove c'è luce calda al mattino")
+**Formato:** verticale 3:4 (es. 1024×1365)
+**Layout testo:** **testo overlay nella metà superiore** dell'immagine (gestito a posteriori via script). L'upper third sarà il soffitto basso con travi a vista — tonalità uniforme legno scuro, basso contrasto, leggibile per overlay.
+
+**Modalità Grok:** text-to-image
+
+**Filename atteso al salvataggio (quando canonica):** `forno_canonica_v1_interno_alba.jpg`
+
+### 🎯 Obiettivo della veduta
+
+Reference canonica dell'**interno del Forno all'alba**: forno acceso (bagliore brace), finestra est che porta la prima luce ambra sul banco da impasto, atmosfera ACCOGLIENTE-LAVORATIVA-VIVA. NESSUN personaggio in scena (la stanza è "appena lasciata o appena aperta", come quando Fiamma è uscita un attimo a prendere legna). Da usare come reference per le scene interne con personaggi (s01 cornice, s06 cornetti, s08 apertura, s09 compleanno, s12 chiusura).
+
+### ⭐ PROMPT (copia-incolla in Grok)
+
+```
+A painterly illustrated interior scene in the style of Beatrix Potter
+and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+palette, hand-drawn children's picture book aesthetic. Vertical 3:4
+composition. NO PEOPLE in the image. NO text, NO writing, NO signs.
+
+Scene: The single-room interior of a small rural stone bakery at dawn,
+on a Mediterranean-style island. The first warm light of the day is
+just entering through the east window, falling on the kneading table.
+The stone oven is lit, embers glow softly from its mouth. The room is
+empty of people but visibly inhabited — the day's work has just begun
+or paused for a moment. Quiet, warm, lived-in.
+
+═══════════════════════════════════════════
+CRITICAL COMPOSITIONAL CONSTRAINT (for text overlay):
+═══════════════════════════════════════════
+
+The IMAGE IS DIVIDED VERTICALLY:
+- The UPPER THIRD of the image (top 33%) shows the LOW CEILING with
+  exposed dark wooden beams — uniform dark warm tone, low contrast,
+  few details. The beams may run horizontally or in slight perspective
+  but stay visually calm. NO chandeliers, NO hanging baskets crowding
+  the upper third, NO bright highlights up there. This space is
+  reserved for text overlay.
+- The LOWER TWO-THIRDS (bottom 67%) contain the room's working
+  elements: oven, kneading table, dining table, shelves, floor.
+
+═══════════════════════════════════════════
+VIEWPOINT (CRITICAL — fixed angle for canonical reference):
+═══════════════════════════════════════════
+
+Three-quarter angle from the NORTH-WEST corner of the room, looking
+toward the SOUTH-EAST corner. With this angle, in a single view we see:
+- the EAST WALL on the right (with the east window and the kneading
+  table beneath it, plus the back door near the oven)
+- the SOUTH-EAST CORNER straight ahead-right (where the stone oven is)
+- the NORTH WALL on the left (with the wooden shelves)
+- a partial glimpse of the WEST WALL / front door area at lower-left
+  foreground (slightly cut off — the dining table edge may be visible
+  in the lower-left foreground for depth)
+- packed earth floor extending across the lower part of the frame
+- exposed dark wooden ceiling beams across the upper part
+
+Camera height: roughly the eye-level of a small standing animal
+character (about 1.2–1.4 meters from the floor) — slightly low,
+intimate, child-perspective.
+
+═══════════════════════════════════════════
+THE ROOM (single rectangular space, ~6×5 meters):
+═══════════════════════════════════════════
+
+WALLS: rough hand-applied OCHRE PLASTER, slightly uneven, warm and
+worn (NOT smooth stucco, NOT painted patterns, NOT wallpaper).
+Texture of hand-applied plaster visible. Walls subtly dusted with
+flour in patches near the kneading table.
+
+CEILING: LOW (~2.5 m), with EXPOSED DARK WOODEN BEAMS running across.
+Beams are plain, structural, slightly weathered wood, dark warm brown.
+NO ornaments, NO carvings, NO hanging chandeliers. A few iron hooks
+may hang from a beam holding strings of dried herbs or a single
+copper pot — minimal, used.
+
+FLOOR: PACKED EARTH, smooth from years of use, slightly dusted with
+FLOUR especially near the kneading table. Color: warm earth-brown,
+slightly variegated. NOT tile, NOT wood, NOT polished.
+
+═══════════════════════════════════════════
+THE STONE OVEN (south-east wall — DOMINANT focal element):
+═══════════════════════════════════════════
+
+Built directly into the SOUTH-EAST WALL, the stone oven is the heart
+of the room. Construction:
+- DOMED MOUTH OPENING about 80 cm wide and 60 cm tall, slightly
+  arched at the top
+- Built of ROUGH FIELDSTONE (irregular pieces, not regular masonry
+  bricks), held together with earth mortar
+- The stone around the mouth is SOOT-DARKENED from years of fires,
+  black-grey gradient outward
+- Inside the oven: WARM ORANGE-BRICK GLOW from embers and a small
+  active fire — the glow spills out from the mouth onto the floor
+  and the nearby wall, casting warm reflected light into the room
+- A SMALL STACK OF SPLIT FIREWOOD on the floor right next to the
+  oven mouth, ready to feed the fire
+- A LONG WOODEN PEEL (bread paddle) leans against the wall beside
+  the oven — flat wooden blade, long handle, weathered wood
+
+The oven occupies a significant portion of the right side of the
+image, well-visible, NOT a tiny background detail.
+
+═══════════════════════════════════════════
+THE KNEADING TABLE (under the east window — second focal element):
+═══════════════════════════════════════════
+
+Positioned UNDER THE EAST WINDOW (the window that brings the first
+dawn light). This is the heart of Fiamma's daily work.
+
+- LONG WOODEN TABLE, weathered light wood with visible grain,
+  rectangular, about 1.5 × 0.8 meters, modest height
+- Surface heavily DUSTED WITH FLOUR — pale ivory color, slightly
+  uneven coverage
+- ON THE TABLE:
+  - a STONEWARE BOWL in terracotta color, about 30 cm diameter,
+    containing a small mound of pale dough being prepared
+  - a WOODEN ROLLING PIN beside the bowl
+  - a folded LINEN CLOTH (cream-white, slightly rumpled) to one side
+  - a SMALL CLAY POT of flour, half-open
+  - a few scattered crumbs/pieces of dough
+- The work is MID-PROCESS: someone has just been here. Not staged,
+  not perfectly arranged. Lived-in.
+
+═══════════════════════════════════════════
+THE EAST WINDOW (the window that brings the first light):
+═══════════════════════════════════════════
+
+The window is on the EAST WALL, directly above the kneading table.
+- Small, square, about 60×60 cm
+- Wooden frame, dark weathered wood, simple construction
+- Wooden shutters OPEN (folded inward against the wall)
+- Through the window: the first DAWN LIGHT — warm rose-gold tones,
+  soft, the eastern sky just beginning. We may glimpse a hint of the
+  rural surroundings outside (a corner of warm earth, perhaps the
+  silhouette of one of the Case del Mattino houses very softly in
+  the distance). NOT a detailed landscape — just enough to suggest
+  morning is breaking outside.
+
+THE LIGHT FROM THIS WINDOW is the PRIMARY LIGHT SOURCE of the scene:
+a SHAFT OF WARM AMBER LIGHT falls diagonally onto the kneading
+table, illuminating the flour, the dough, the wood grain. This is
+the canonical "first warm point of the island in the morning".
+
+═══════════════════════════════════════════
+THE DINING TABLE (west side, partial in foreground):
+═══════════════════════════════════════════
+
+Toward the WEST WALL or just left of center, partially visible at
+the LOWER-LEFT FOREGROUND of the frame (slightly cut off, providing
+depth):
+- SIMPLE RECTANGULAR WOODEN TABLE, weathered light wood, about
+  1.2×0.8 meters, modest, scratched from years of use
+- 2-4 WOODEN CHAIRS or STOOLS visible around it (simple, plain)
+- On the table: a small CLAY CANDLE HOLDER (unlit at this hour),
+  a wooden cup, perhaps a small loaf of bread on a wooden board
+- This is the family-meal area, currently quiet — the day starts at
+  the kneading table, not here
+
+═══════════════════════════════════════════
+THE NORTH WALL SHELVES:
+═══════════════════════════════════════════
+
+On the LEFT SIDE of the image (the NORTH WALL), simple wooden shelves
+at varying heights:
+- WICKER PROOFING BASKETS containing rising dough (rounded shapes,
+  draped with linen)
+- A few STONEWARE JARS in terracotta color (flour, salt, honey),
+  with simple wooden lids
+- A small stack of CLEAN LINEN CLOTHS, folded
+- IRON HOOKS holding wooden ladles, wooden spoons, a small iron pan
+- Everything organized but not perfectly aligned — it's a working
+  kitchen
+
+═══════════════════════════════════════════
+THE BACK DOOR (east wall, near the oven):
+═══════════════════════════════════════════
+
+On the EAST WALL, beside the oven (to its left in our view), a
+SIMPLE WOODEN BACK DOOR — closed, weathered planks, iron hinges. It
+leads to the rear courtyard with stacked firewood (not seen now).
+The door is unobtrusive, just a feature.
+
+═══════════════════════════════════════════
+NEAR THE FRONT DOOR AREA (lower-left edge, partial):
+═══════════════════════════════════════════
+
+At the very lower-left edge of the frame, we may glimpse:
+- A WOODEN COAT HOOK on the wall holding a SPARE TERRACOTTA-RED
+  APRON (Fiamma's signature, hung up — not worn)
+- A LOW WOODEN BENCH against the wall
+- A BROOM leaning against the wall corner
+
+These are partial, atmospheric — they ground the room as a working
+home, not the focus.
+
+═══════════════════════════════════════════
+ATMOSPHERE (CRITICAL):
+═══════════════════════════════════════════
+
+The AIR is slightly HAZY with FINE FLOUR PARTICLES catching the warm
+amber light from the east window — visible as a soft haze in the
+shaft of light, never as bright sparkles. The air is faintly smoky
+near the oven, but not heavy.
+
+The MOOD is QUIET, ALIVE, EXPECTANT. Someone has just been here
+(the dough is mid-knead, the linen cloth is rumpled, the flour is
+freshly dusted) — but the scene is empty of figures right now.
+This is the FIRST WARM POINT OF THE ISLAND IN THE MORNING. Hospitable,
+working, honest. Not solemn, not monumental. Just a baker's house
+that has woken up first.
+
+═══════════════════════════════════════════
+LIGHT (CRITICAL):
+═══════════════════════════════════════════
+
+TWO COEXISTING WARM LIGHT SOURCES:
+1. PRIMARY: the warm amber DAWN LIGHT through the EAST WINDOW,
+   falling diagonally onto the kneading table. This is the sharper,
+   more directional light.
+2. SECONDARY: the soft ORANGE-BRICK GLOW from the OVEN MOUTH,
+   spilling onto the floor and lower wall near it. This is diffuse,
+   warm, slightly flickering in feeling.
+
+The TWO LIGHTS DO NOT COMPETE — they coexist warmly. Where they
+overlap (near the kneading table area), the warmth intensifies.
+
+The CORNERS of the room (especially the upper corners and the
+shadow side of the dining table) are in DEEPER WARM SHADOW — never
+cool, never blue. Always warm earth-tones in the shadows.
+
+NO cool light, NO blue tones, NO white "kitchen lighting". Warmth
+everywhere, contrast between bright lit areas and warm shadows.
+
+═══════════════════════════════════════════
+WHAT MUST NOT APPEAR (CRITICAL):
+═══════════════════════════════════════════
+
+- NO PEOPLE, NO Fiamma, NO foxes, NO animals, NO figures of any
+  kind, NOT EVEN silhouettes or hands entering the frame
+- NO TEXT, NO WRITING, NO SIGNS, NO LETTERS, NO INSCRIPTIONS, NO
+  recipes on chalkboards, NO labels on jars
+- NO MODERN APPLIANCES: no electric oven, no metal stovetop, no
+  refrigerator, no electric lights, no microwaves, no coffee makers
+- NO MODERN COOKWARE: no shiny stainless steel, no aluminum, no
+  silicone, no plastic
+- NO ELECTRIC LIGHT FIXTURES: no chandeliers, no lamps with cords,
+  no light bulbs, no switches
+- NO CLEAN POLISHED SURFACES (everything is weathered, used, with
+  patina)
+- NO DECORATIVE ELEMENTS: no painted tiles, no flowery curtains, no
+  tablecloths with patterns, no doilies, no ornaments, no framed
+  pictures
+- NO WALLPAPER, NO PAINTED PATTERNS on walls
+- NO COMMERCIAL BAKERY ELEMENTS: no display case, no glass
+  storefront, no menu boards, no cash register, no pricing
+- NO MAGICAL ELEMENTS: no glowing dough, no sparkles, no light
+  particles beyond the natural haze, no symbols carved on the oven
+- NO HOBBIT/elf-style architecture: no curved doorways, no round
+  windows, no ornamental woodwork
+- NO Disney/Pixar 3D rendering, NO over-stylized Studio Ghibli
+- NO heavy black ink outlines (use thin warm sepia)
+- NO bright artificial tones, NO neon colors
+- NO PASTRY-SHOP ELEGANCE: no croissants in fan arrangements, no
+  cake stands, no decorative pastries, no piped icing
+- NO French/German/Northern Italian regional stylization — this is
+  a generic pre-industrial Mediterranean rural baker's home
+- NO REGULAR MASONRY BRICKS for the oven (must be rough fieldstone)
+- NO CHEERFUL "GOOD MORNING" POSTCARD VIBE — the mood is quiet and
+  working, not theatrical
+- NO LARGE OPEN ROOM WITH HIGH CEILING — the room is intimate, low,
+  modest
+
+═══════════════════════════════════════════
+STYLE NOTES (CRITICAL):
+═══════════════════════════════════════════
+
+- TECHNIQUE: traditional watercolor and thin sepia ink illustration,
+  hand-drawn quality with slight imperfections
+- INK: warm brown-sepia lines, light touch, never harsh black,
+  organic — the ink defines edges of beams, oven, table, shelves
+  but lets the watercolor breathe
+- WATERCOLOR: soft luminous warm washes, visible texture, slight
+  color bleeds at edges, watercolor pooling on paper. The flour-dusted
+  surfaces should read as soft pale color washes, not hard white
+- PALETTE: warm ochre walls, dark warm brown ceiling beams, light
+  weathered wood (kneading table, dining table), terracotta (oven
+  stone, bowls, jars, hanging apron), ember orange (oven glow),
+  pale ivory (flour dust, linen), amber-gold (warm light from east
+  window), warm earth-brown floor, deep warm shadow in corners.
+  Apron color (if visible): TERRACOTTA RED with a hand-stitched feel.
+- AESTHETIC: tradition of Beatrix Potter, Brian Wildsmith, classic
+  European children's illustration. Think the cozy interiors in
+  "The Tale of Mrs. Tiggy-Winkle" (the laundry kitchen) — humble,
+  alive, dignified, deeply warm, with a sense of work just paused.
+- MOOD: quiet, awake, expectant, hospitable. The first hour of the
+  day. The bread will be ready soon. The day has begun.
+```
+
+### 📋 Variazioni se Grok sbaglia
+
+#### Se mette personaggi:
+> CRITICAL: NO PEOPLE in this image. NO Fiamma, NO baker, NO foxes,
+> NO children, NO figures, NOT EVEN silhouettes or hands entering
+> the frame. The room is EMPTY of figures right now — someone has
+> just been there but has stepped away momentarily. Show only the
+> room, the oven, the work surfaces, the warm light.
+
+#### Se mette scritte (su barattoli, lavagne, etc.):
+> CRITICAL: NO TEXT, NO WRITING, NO SIGNS, NO LETTERS, NO LABELS
+> anywhere. The jars have NO labels. There are NO chalkboards with
+> recipes. NO writing on the walls or shelves. This is a world
+> without writing.
+
+#### Se l'upper third è troppo affollato:
+> CRITICAL: The upper third of the image must show only the LOW
+> CEILING with dark wooden beams in calm uniform tone. NO hanging
+> baskets cluttering the top third, NO bunches of dried herbs in
+> heavy quantity, NO chandeliers, NO bright highlights. Just the
+> dark warm beams running across, low contrast, leggible space for
+> text overlay later. The hanging hooks with herbs/pots can stay
+> minimal or move to a lower beam.
+
+#### Se la luce è troppo "magica" o sparkly:
+> CRITICAL: The light is NATURALISTIC dawn light — warm amber from
+> the east window, warm orange-brick glow from the oven mouth. NO
+> sparkles, NO light particles beyond a soft natural haze of flour
+> dust catching the light. NO glowing dough, NO magical effects.
+> Just two warm coexisting light sources, with deep warm shadows
+> in the corners.
+
+#### Se rende un forno con masonry brick regolare:
+> CORRECTION: The oven is built of ROUGH FIELDSTONE — irregular
+> stones of different sizes, held together with earth mortar, not
+> regular bricks. Soot-darkened around the mouth from years of
+> fires. The shape is a rough dome, not a perfect arch. This is a
+> pre-industrial rural bakery, not a medieval-stylized brick oven.
+
+#### Se mette elementi commerciali / pasticceria elegante:
+> CORRECTION: This is a HUMBLE FAMILY BAKERY interior, not a
+> commercial pastry shop. NO display cases, NO glass storefronts,
+> NO arranged pastry trays, NO piped icing, NO cake stands, NO
+> decorative pastries. The bread on the kneading table is rough
+> dough mid-knead. Everything is simple, working, humble.
+
+#### Se la stanza è troppo grande / soffitto troppo alto:
+> CORRECTION: The room is INTIMATE and LOW — about 6×5 meters
+> with a ceiling of only 2.5 meters. The space feels close, warm,
+> human-scale, not a large open kitchen. The dark wooden beams
+> are LOW overhead, contributing to the cozy warmth.
+
+#### Se la palette è troppo fredda / con tonalità blu:
+> CORRECTION: The entire palette is WARM — ochre, terracotta,
+> ember orange, amber gold, warm earth brown, deep warm shadow.
+> NO blue tones, NO cool white, NO grey-blue shadows. Even the
+> shadows are warm earth-toned. The room is "the first warm
+> point of the island in the morning" — heat in every surface.
+
+#### Se Grok aggiunge una porta arched / hobbit-style:
+> CORRECTION: Doors are SIMPLE WOODEN PLANK doors with iron
+> hinges, rectangular shape, weathered dark wood. NO arched
+> doorways, NO curved frames, NO Hobbit-style ornamental wood.
+> The oven mouth has a rough natural arch (because it's built
+> of stone) but doors are square and plain.
+
+### 🎯 Checklist di approvazione
+
+**Composizione per overlay testo:**
+- [ ] Upper third = soffitto basso con travi a vista in legno scuro warm
+- [ ] Tonalità uniforme/calma nell'upper third (basso contrasto)
+- [ ] NO chandeliers/lampadari/oggetti pendenti che affollano l'upper third
+- [ ] Spazio leggibile per testo overlay
+
+**Punto di vista:**
+- [ ] Vista 3/4 dall'angolo NORD-OVEST verso SUD-EST
+- [ ] Nello stesso shot: forno (sud-est), banco impasto (sotto finestra est), mensole nord (sinistra), tavolo ovest (in primo piano basso parziale)
+- [ ] Camera ad altezza child-perspective (~1.2-1.4m)
+
+**Stanza:**
+- [ ] Pareti ocra grezzo (intonaco hand-applied)
+- [ ] Soffitto LOW con travi a vista warm-dark
+- [ ] Pavimento di terra battuta (NON piastrelle, NON parquet)
+- [ ] Velo di farina sulla zona vicino al banco impasto
+
+**Forno (focal element):**
+- [ ] Sulla parete sud-est, bocca a cupola (~80cm wide)
+- [ ] Pietra grezza a fieldstone (non mattoni regolari)
+- [ ] Bocca annerita di fuliggine
+- [ ] Bagliore arancio-brace dalla bocca
+- [ ] Catasta di legna spaccata accanto sul pavimento
+- [ ] Pala di legno (peel) appoggiata al muro accanto
+
+**Banco da impasto (focal element):**
+- [ ] Sotto la finestra est
+- [ ] Asse infarinata, legno chiaro consumato
+- [ ] Ciotola in terracotta + impasto + mattarello + panno di lino + vasetto farina
+- [ ] Stato mid-process (qualcuno è appena stato qui)
+- [ ] Luce dell'alba dalla finestra est cade direttamente qui
+
+**Finestra est:**
+- [ ] Piccola e quadrata (~60×60cm), legno scuro
+- [ ] Imposte aperte ripiegate verso l'interno
+- [ ] Cielo dell'alba rosa-oro visibile dietro
+- [ ] Hint di esterno minimo (NO paesaggio dettagliato)
+- [ ] PRIMARY LIGHT della scena, shaft ambra diagonale
+
+**Tavolo da pranzo (in primo piano parziale):**
+- [ ] Verso parete ovest, in lower-left foreground
+- [ ] Legno semplice, sgabelli/sedie
+- [ ] Eventuale candela spenta + cup + piccolo pane
+- [ ] Quietness (non è la zona attiva all'alba)
+
+**Mensole nord (sinistra):**
+- [ ] Cesti di vimini con impasto in lievitazione + lino sopra
+- [ ] Vasi in terracotta (farina, sale, miele)
+- [ ] Strofinacci di lino piegati
+- [ ] Ganci di ferro con utensili in legno (mestoli, cucchiai, pentolino)
+
+**Porta retro (parete est, accanto al forno):**
+- [ ] Visibile, semplice tavole in legno, chiusa
+
+**Zona porta principale (lower-left edge, parziale):**
+- [ ] Hook con grembiule terracotta di scorta visibile (firma Fiamma) — opzionale
+- [ ] Panchetta bassa + scopa appoggiata — opzionale
+
+**Atmosfera:**
+- [ ] Aria velata di pulviscolo di farina che cattura la luce
+- [ ] Mood quieto/lavorativo/vivo
+- [ ] Stanza "appena lasciata o appena aperta", NON staged
+
+**Luce:**
+- [ ] Two coexisting warm light sources (finestra est + bocca forno)
+- [ ] Shaft ambra diagonale dalla finestra est sul banco impasto
+- [ ] Bagliore arancio-brace dal forno sul pavimento + parete
+- [ ] Ombre profonde negli angoli, sempre WARM (mai blu/cool)
+- [ ] NO sparkles / NO magical light / NO neon
+
+**Anti-cliché:**
+- [ ] NESSUN personaggio, nemmeno mani/silhouette
+- [ ] NESSUNA scritta (no labels su barattoli, no lavagne, no scritte)
+- [ ] NO modern appliances / cookware (no inox, no plastic, no electric)
+- [ ] NO commercial bakery (no display case, no menu)
+- [ ] NO magical elements (no glowing dough, no sparkles)
+- [ ] NO Hobbit-style (no round windows, no curved doors)
+- [ ] NO postcard cheerfulness — quiet working mood
+- [ ] NO regular masonry bricks (oven = rough fieldstone)
+- [ ] NO arched doorways for non-oven openings
+- [ ] NO cool palette / blue shadows
+- [ ] NO pastry-shop elegance
+
+**Stile:**
+- [ ] Painterly watercolor + sepia ink (Beatrix Potter)
+- [ ] Palette dominante calda (ocra, terracotta, ember, amber, warm earth)
+- [ ] Vista verticale 3:4
+
+Se 30+ check ok → composizione canonica.
+Se 22-29 check ok → iteriamo con prompt correttivo specifico.
+Se <22 check ok → riscriviamo prompt principale.
+
+### 🔧 Note tecniche per l'overlay testo
+
+Stesso schema dell'esterno:
+- Area testo: rettangolo nei top 33% (sopra il soffitto a travi)
+- Margini: ~5% da ogni lato
+- Font suggerito: serif classico (Garamond, Caslon, Bembo)
+- Colore testo: nero o seppia molto scuro (#2a1810)
+- Allineamento: sinistra o giustificato
+- Interlinea: 1.4-1.5x
+
+NB: con soffitto a travi warm-dark uniforme, il contrasto del testo overlay
+si gestisce bene. Se il soffitto risulta troppo scuro, considerare un sotto-banner semitrasparente warm-cream sotto il testo.
+
+### 🔗 Riferimento canonico
+
+Derivata da:
+- `visual/luoghi/quartiere_fuoco/forno/scheda.md` — blocco LOCATION INTERNO + spatial layout canonico
+- Bible §4.4 FIAMMA + §6 palette Quartiere di Fuoco + §8.2 Quartiere di Fuoco
+- ARCHI_12_STORIE S1, S6, S8, S9, S12 (apparizioni interne)
+- Pipeline visual layer A
+- Pattern di luce derivato da "primo posto dell'isola dove c'è luce calda al mattino" (Bible §4.4 + §8.2)
 
 ### 🎨 Veduta 3 — Cortile retro
 *da fare*
