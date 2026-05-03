@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T13:42:58",
+  "generated_at": "2026-05-03T15:52:52",
   "totals": {
     "totale": 116,
     "luogo": 74,
@@ -1245,7 +1245,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "bambini",
                     "status": "canonico",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/bambini/noah"
                   }
                 }
@@ -1349,7 +1349,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/primari/grunto"
                   }
                 },
@@ -1361,7 +1361,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/primari/memolo"
                   }
                 },
@@ -1385,7 +1385,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/primari/stria"
                   }
                 }
@@ -1401,7 +1401,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/secondari/amo"
                   }
                 },
@@ -1413,7 +1413,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/secondari/nodo"
                   }
                 },
@@ -1425,7 +1425,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/secondari/salvia"
                   }
                 },
@@ -1437,7 +1437,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/secondari/zolla"
                   }
                 }
@@ -7629,8 +7629,29 @@
         "bambini",
         "noah"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "noah_canonica_v1_aggrappato.jpg",
+          "path": "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+          "size_kb": 152
+        },
+        {
+          "filename": "noah_canonica_v1_concentrato.jpg",
+          "path": "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+          "size_kb": 166
+        },
+        {
+          "filename": "noah_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+          "size_kb": 188
+        },
+        {
+          "filename": "noah_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg",
+          "size_kb": 119
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "bru",
@@ -8045,8 +8066,29 @@
         "primari",
         "grunto"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "grunto_canonica_v1_cengia.jpg",
+          "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg",
+          "size_kb": 256
+        },
+        {
+          "filename": "grunto_canonica_v1_frammento.jpg",
+          "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg",
+          "size_kb": 181
+        },
+        {
+          "filename": "grunto_canonica_v1_via.jpg",
+          "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
+          "size_kb": 170
+        },
+        {
+          "filename": "grunto_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg",
+          "size_kb": 88
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "memolo",
@@ -8093,8 +8135,29 @@
         "primari",
         "memolo"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "memolo_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_fronte.jpg",
+          "size_kb": 164
+        },
+        {
+          "filename": "memolo_canonica_v1_preciso.jpg",
+          "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_preciso.jpg",
+          "size_kb": 155
+        },
+        {
+          "filename": "memolo_canonica_v1_sciarpa.jpg",
+          "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_sciarpa.jpg",
+          "size_kb": 172
+        },
+        {
+          "filename": "memolo_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_turnaround_v1.jpg",
+          "size_kb": 121
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "rovo",
@@ -8191,8 +8254,29 @@
         "primari",
         "stria"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "stria_canonica_v1_attesa.jpg",
+          "path": "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+          "size_kb": 140
+        },
+        {
+          "filename": "stria_canonica_v1_scuola.jpg",
+          "path": "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+          "size_kb": 156
+        },
+        {
+          "filename": "stria_canonica_v1_volo.jpg",
+          "path": "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+          "size_kb": 184
+        },
+        {
+          "filename": "stria_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg",
+          "size_kb": 154
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "amo",
@@ -8237,8 +8321,29 @@
         "secondari",
         "amo"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "amo_canonica_v1_attesa.jpg",
+          "path": "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+          "size_kb": 153
+        },
+        {
+          "filename": "amo_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+          "size_kb": 208
+        },
+        {
+          "filename": "amo_canonica_v1_tuffo.jpg",
+          "path": "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+          "size_kb": 163
+        },
+        {
+          "filename": "amo_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg",
+          "size_kb": 154
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "nodo",
@@ -8283,8 +8388,29 @@
         "secondari",
         "nodo"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "nodo_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+          "size_kb": 274
+        },
+        {
+          "filename": "nodo_canonica_v1_insegna.jpg",
+          "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+          "size_kb": 219
+        },
+        {
+          "filename": "nodo_canonica_v1_volo.jpg",
+          "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+          "size_kb": 180
+        },
+        {
+          "filename": "nodo_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg",
+          "size_kb": 162
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "salvia",
@@ -8329,8 +8455,29 @@
         "secondari",
         "salvia"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "salvia_canonica_v1_cammino.jpg",
+          "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
+          "size_kb": 174
+        },
+        {
+          "filename": "salvia_canonica_v1_cura.jpg",
+          "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
+          "size_kb": 171
+        },
+        {
+          "filename": "salvia_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+          "size_kb": 157
+        },
+        {
+          "filename": "salvia_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg",
+          "size_kb": 168
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "zolla",
@@ -8375,8 +8522,29 @@
         "secondari",
         "zolla"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "zolla_canonica_v1_cammino.jpg",
+          "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_cammino.jpg",
+          "size_kb": 153
+        },
+        {
+          "filename": "zolla_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg",
+          "size_kb": 206
+        },
+        {
+          "filename": "zolla_canonica_v1_raccolta.jpg",
+          "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_raccolta.jpg",
+          "size_kb": 226
+        },
+        {
+          "filename": "zolla_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg",
+          "size_kb": 99
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "vento_intreccio",
