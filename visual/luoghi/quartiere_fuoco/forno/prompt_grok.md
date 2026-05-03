@@ -1,23 +1,61 @@
-# Forno di Fiamma — Prompt Grok per vedute reference
+# Forno di Fiamma — Atlante vedute canoniche
 
-> **Scopo.** Generare una serie di **3-4 vedute canoniche** del Forno (esterne + interne) con Grok Imagine, da usare come reference visiva per le scene successive con personaggi (s01-s12 dove il Forno appare).
+> **STATO: ✅ SET CANONICO CHIUSO (2026-05-03).** 5 vedute reference + 1 bonus + 1 planimetria selezionate da Ray e salvate in `immagini/`. **NON rigenerare.**
 >
-> **Workflow:** Ray itera prompt + immagine finché la veduta non è canonica → carica in `immagini/` con naming `forno_canonica_v1_<vista>.jpg`. Le immagini canoniche restano intoccabili come reference; le scene con personaggi vengono generate poi assemblando questi reference con i prompt grok dei personaggi.
+> **Workflow scene future:** prendere la veduta canonica come BASE → comporre la scena aggiungendo i personaggi tramite character canon dei rispettivi prompt grok. Stile da replicare: painterly watercolor + ink linework, palette warm earth, tradizione picture book inglese-mediterraneo (Beatrix Potter / Brian Wildsmith).
 >
-> **Pattern saga:** questo workflow vale per i **luoghi ricorrenti** (Forno, Albero Vecchio, Pontile, Pozzo, Casa fratelli, etc. — quelli che appaiono in più storie). I luoghi una-tantum non avranno reference dedicate: si generano direttamente al momento dell'hook.
+> **Pattern saga:** questo set di reference vale per i **luoghi ricorrenti** (Forno = 7 storie). I luoghi una-tantum NON avranno reference dedicate, si generano direttamente al momento dell'hook.
 >
-> **Riferimento canonico:** `visual/luoghi/quartiere_fuoco/forno/scheda.md` (BLOCCO LOCATION) + Bible §8.2 Quartiere di Fuoco + §4.4 FIAMMA.
+> **Riferimento canonico:** `visual/luoghi/quartiere_fuoco/forno/scheda.md` (planimetria a 2 sale + sotto-aree) + Bible §8.2 Quartiere di Fuoco + §4.4 FIAMMA.
+>
+> **Archivio iterazioni prompt:** in fondo al file restano le iterazioni v2 dei prompt per Esterno e Sala Laboratorio — utili come reference di stile e vincoli editoriali quando si generano nuove scene (es. quando serve combinare un'immagine canonica con i character canon dei personaggi).
 
 ---
 
-## Indice vedute
+## ✅ SET CANONICO ATTIVO (5 vedute + 1 bonus + planimetria)
 
-| # | Veduta | Versione | Status |
+| # | Veduta | File reference | Quando usarla |
 |---|---|---|---|
-| 1 | Esterno (alba) | v2 | ⏳ in iterazione |
-| 2 | Interno (alba, kneading area attiva) | v2 | ⏳ in iterazione |
-| 3 | Cortile retro | — | da fare |
-| 4 | (4ª veduta da decidere insieme) | — | da fare |
+| 1 | **Esterno alba** | `immagini/forno_canonica_v1_esterno_alba.jpg` | s01 apertura, s10 cammeo all'alba, qualsiasi scena di Fiamma sulla soglia o vista da fuori |
+| 2 | **Sala Laboratorio panoramica** | `immagini/forno_canonica_v1_laboratorio_panoramica.jpg` | s06 cornetti, s08 apertura, s11 banco dolci, s12 mattino — establishing shot della sala col lavoro pane |
+| 3 | **Sala Laboratorio dettaglio forno** | `immagini/forno_canonica_v1_laboratorio_dettaglio.jpg` | close-up scene di azione con uno dei due forni, impasti, pala, alcove legna (Fiamma all'opera) |
+| 4 | **Sala Dispensa-Pranzo** | `immagini/forno_canonica_v1_dispensa_pranzo.jpg` | s09 compleanno Gabriel, s12 sera (chiusura saga, dolce 4 fette + candela), s8 ritorno fratelli |
+| 5 | **Cortile retro** | `immagini/forno_canonica_v1_cortile_retro.jpg` | cammei rari (Fiamma che prende legna, sfondo per scene di transizione) |
+| 2-bis | **Sala Laboratorio verticale** (bonus) | `immagini/forno_canonica_v1_laboratorio_verticale.jpg` | scene 3:4 con overlay testo (la finestra centrale dà sull'esterno = vista canonica est) |
+| 0 | **Planimetria canonica** (documentazione) | `immagini/forno_planimetria_canonica.jpg` | reference di disposizione delle 2 sale comunicanti — non per generare |
+
+### Mappa scene saga → veduta canonica
+
+Vedi `scheda.md` sezione "✏️ Note d'uso operative" per la mappa completa storia→veduta. Sintesi:
+
+| Storia | Sala/area | Veduta principale |
+|---|---|---|
+| s01 (apertura saga) | Esterno (Fiamma soglia, fratelli partono) | 1 (Esterno alba) |
+| s06 (cornetti, detto popolare) | Sala Laboratorio (Fiamma impastando) | 2 (Lab panoramica) o 3 (Lab dettaglio) |
+| s08 (apertura cornetto + chiusura imposte) | Sala Laboratorio + Sala Dispensa | 2, poi 4 al ritorno |
+| s09 (location primary, compleanno Gabriel) | Sala Dispensa-Pranzo | 4 |
+| s10 (cammeo all'alba) | Esterno | 1 |
+| s11 (cammeo banco dolci festa) | Sala Laboratorio (banco esposto) o Esterno | 2 |
+| s12 mattino (pagnotta a Grunto) | Sala Laboratorio | 2 o 3 |
+| s12 sera (chiusura saga, 4 fette + candela) | Sala Dispensa-Pranzo | 4 |
+
+### Vincoli di stile per scene future composte sopra le canoniche
+
+Quando si genera una scena con personaggi sopra una di queste reference:
+
+1. **Stile**: replicare painterly watercolor + thin sepia ink linework, palette warm earth (ocra, terracotta, ember, beige). Mai cartoon, mai 3D, mai photoreal-iper.
+2. **Coerenza con la veduta**: rispettare disposizione, scale, palette della reference. Se la dispensa ha mensole stipate a sinistra, non spostarle a destra.
+3. **Personaggi**: usare i character canon dai prompt grok in `visual/personaggi/individuali/.../prompt_grok.md`. Mai improvvisare aspetto.
+4. **Niente scritte** (canone saga): no insegne, no etichette, no testi.
+5. **Multi-personaggio funziona**: lo spazio canonico delle sale è ampio, 4-5 personaggi entrano comodi.
+
+---
+
+## 📜 Archivio iterazioni prompt (reference per generazioni future)
+
+> Le sezioni successive sono **archivio storico** dei prompt iterativi che hanno portato al set canonico. Restano utili come reference di stile e vincoli editoriali per generare scene complesse (es. multi-personaggio + cornice cross-storia) o eventualmente nuove vedute extra in futuro.
+>
+> **NON rigenerare le canoniche** dal prompt — il set è chiuso.
 
 ---
 
