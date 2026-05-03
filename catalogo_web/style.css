@@ -312,6 +312,34 @@ a:hover { text-decoration: underline; }
   border-radius: 4px;
 }
 
+/* PROMPT GROK BLOCK */
+.prompt-grok-block {
+  margin-top: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+.prompt-grok-block details summary {
+  cursor: pointer;
+  color: var(--fg-muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-weight: 600;
+}
+.prompt-grok-block details[open] summary {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-soft);
+}
+.prompt-grok-block .entity-body {
+  background: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
 /* FRONTMATTER BLOCK */
 .frontmatter-block {
   background: var(--code-bg);

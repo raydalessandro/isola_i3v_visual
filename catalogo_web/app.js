@@ -297,12 +297,19 @@ function renderEntity(id) {
   // Images
   const galleryHtml = e.images && e.images.length > 0
     ? e.images.map(img =>
-        `<img src="../${img.path}" alt="${img.filename}" title="${img.filename} (${img.size_kb} KB)" loading="lazy">`
+        `<a href="../${img.path}" target="_blank" rel="noopener">` +
+        `<img src="../${img.path}" alt="${img.filename}" title="${img.filename} (${img.size_kb} KB)" loading="lazy">` +
+        `</a>`
       ).join("")
     : `<div class="empty">Nessuna immagine in <code>${e.folder_path}/immagini/</code>.<br>` +
       `Naming consigliato: <code>${e.id}_fronte_v1.png</code>, ` +
       `<code>${e.id}_retro_v1.png</code>, <code>${e.id}_profilo_dx_v1.png</code>, ` +
       `<code>${e.id}_profilo_sx_v1.png</code> (4 vedute per stampa 3D).</div>`;
+
+  // Prompt Grok (se presente)
+  const promptHtml = e.prompt_grok_md
+    ? marked.parse(e.prompt_grok_md, { gfm: true, breaks: false })
+    : null;
 
   c.innerHTML = `
     <div class="entity-header">
@@ -311,6 +318,11 @@ function renderEntity(id) {
         <code>${e.id}</code> · <code>${e.scheda_path}</code>
       </div>
       <div class="entity-meta">${tags}</div>
+    </div>
+
+    <div class="gallery">
+      <h2>Immagini di riferimento (${e.images?.length || 0})</h2>
+      ${e.images?.length ? `<div class="grid">${galleryHtml}</div>` : galleryHtml}
     </div>
 
     <div class="frontmatter-block">
@@ -322,10 +334,14 @@ function renderEntity(id) {
 
     <div class="entity-body">${bodyHtml}</div>
 
-    <div class="gallery">
-      <h2>Immagini di riferimento (${e.images?.length || 0})</h2>
-      ${e.images?.length ? `<div class="grid">${galleryHtml}</div>` : galleryHtml}
+    ${promptHtml ? `
+    <div class="prompt-grok-block">
+      <details>
+        <summary>Prompt Grok (<code>prompt_grok.md</code>)</summary>
+        <div class="entity-body">${promptHtml}</div>
+      </details>
     </div>
+    ` : ""}
   `;
   // scroll a top
   document.getElementById("main").scrollTo({ top: 0, behavior: "instant" });

@@ -66,6 +66,14 @@ def collect_images(folder: Path):
     return out
 
 
+def read_prompt_grok(folder: Path):
+    """Ritorna il contenuto raw di prompt_grok.md se presente, altrimenti None."""
+    p = folder / "prompt_grok.md"
+    if not p.is_file():
+        return None
+    return p.read_text(encoding="utf-8").strip()
+
+
 def scan_visual():
     entities = []
     for scheda in sorted(VISUAL.rglob("scheda.md")):
@@ -74,6 +82,7 @@ def scan_visual():
         rel_scheda = str(scheda.relative_to(ROOT))
         fm, body = parse_scheda(scheda)
         images = collect_images(folder)
+        prompt_grok = read_prompt_grok(folder)
         breadcrumb = list(folder.relative_to(VISUAL).parts)
         entities.append({
             "id": fm.get("id"),
@@ -86,6 +95,8 @@ def scan_visual():
             "frontmatter": fm,
             "body_md": body,
             "body_size_chars": len(body),
+            "prompt_grok_md": prompt_grok,
+            "has_prompt_grok": prompt_grok is not None,
             "folder_path": rel_folder,
             "scheda_path": rel_scheda,
             "breadcrumb": breadcrumb,
