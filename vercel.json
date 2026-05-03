@@ -6,19 +6,25 @@
   ],
   "headers": [
     {
-      "source": "/catalogo_web/data/(.*)",
+      "source": "/catalogo_web/data/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=60, must-revalidate" }
       ]
     },
     {
-      "source": "/visual/(.*)",
+      "source": "/visual/:path*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     },
     {
-      "source": "/catalogo_web/(.*\\.(js|css))",
+      "source": "/catalogo_web/:asset(.+\\.js)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/catalogo_web/:asset(.+\\.css)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
       ]
