@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: building
 quartiere: fuoco
 status: provvisorio
-ultima_modifica: 2026-04-29
+ultima_modifica: 2026-04-30
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.forno", "cartografia/geo/island.geojson#features.id=forno"]
 appare_in_storie: []
 ha_interno: true
@@ -47,13 +47,15 @@ Casa-forno bassa di pietra e legno, col tetto inclinato e il camino che fuma pri
 
 ## Aspetto / forma — geografia generale
 
-Costruzione bassa, di pietra grezza intonacata, tetto a falda con embrici di terracotta scura, una sola stanza interna. La pianta è **rettangolare semplice**, indicativamente 5×6 metri (dimensioni stimate da `cartografia/geo/island.geojson` + scala saga).
+Costruzione bassa ma **ampia per gli standard del villaggio**, di pietra grezza intonacata, tetto a falda con embrici di terracotta scura, una sola grande stanza interna. La pianta è **rettangolare semplice**, indicativamente **9×7 metri** (più grande di una casa privata standard dell'isola). **Soffitto interno relativamente alto (~3.2 metri)** con travi a vista in legno scuro: l'aria deve poter circolare per il calore del forno e per gli accumuli di farina.
+
+**Scala canonica**: il Forno NON è una "panetteria di casa" né un forno domestico. È il **forno comune dell'isola** — Fiamma cuoce pane per tutti gli abitanti, ogni giorno. Riferimento mentale: forno comune di borgo medievale-mediterraneo, dimensioni intermedie tra casa privata e bottega comunitaria. Lo spazio interno deve **trasmettere ariosità**: i tre fratelli + Fiamma (4 personaggi) ci stanno comodamente con margine intorno, mai claustrofobia.
 
 **Tre sotto-aree distinte:**
 
 1. **Esterno**: facciata principale sulla **Via dell'Alba** (orientata a ovest, con la Via dell'Alba che la percorre); il fronte ha la porta principale e una piccola finestra. Sul lato est della casa c'è una **finestra orientata a est**, da cui entra la prima luce dell'alba — fondamentale, perché è il "primo posto dell'isola dove c'è luce calda al mattino". Il **camino** sporge dal tetto, fuma prima dell'alba.
 
-2. **Interno**: stanza singola che combina cucina, panificio e zona pranzo. Pavimento di terra battuta, pareti intonacate ocra grezzo, soffitto basso con travi a vista. **Forno di pietra a cupola** sulla parete sud-est (interno alla stanza ma con la bocca rivolta verso il centro della stanza). **Banco da impasto in legno** sotto la finestra est. **Tavolo da pranzo** al centro o spostato verso la parete ovest. Mensole, ganci, ceste, attrezzi sparsi ma con ordine di chi lavora qui ogni giorno.
+2. **Interno**: stanza unica e ampia che combina panificio comunitario e zona pranzo familiare. Pavimento di terra battuta, pareti intonacate ocra grezzo, soffitto **alto ~3.2 m** con travi a vista in legno scuro. **Grande forno di pietra a cupola** sulla parete sud-est (cupola visibile come elemento architettonico imponente, **bocca ~1.5-1.8 metri di larghezza** — è un forno da borgo, non da casa, e la sua dimensione è la firma del luogo). La bocca del forno è rivolta verso il centro della stanza. **Lungo banco da impasto in legno** (asse generosa, ~2 m) sotto la finestra est, dove arriva la prima luce dell'alba. **Tavolo da pranzo** verso la parete ovest, lasciando una zona centrale aperta tra forno, banco e tavolo. Mensole, ganci, ceste di proofing, attrezzi: organizzati ma vissuti, da panettiere-comunitario. **Spazio centrale di circolazione** ampio: 4 persone si muovono comodamente, vedono tutta la stanza in colpo d'occhio.
 
 3. **Cortile retro**: piccolo cortile sul retro (lato est della casa), senza recinzione, con **legna catastata** in cataste regolari contro la parete del retro. Si raggiunge dalla porta posteriore. Da qui parte un sentiero che scende verso est ma a 30-50 metri si perde nell'erba — il cortile è dove finisce la "casa abitata" e inizia la campagna.
 
@@ -119,14 +121,16 @@ Posizione precisa: **Quartiere di Fuoco a est, lungo la Via dell'Alba, 30 minuti
 - Niente recinzione
 
 **Interno:**
-- Stanza unica
+- Stanza unica AMPIA (~9×7 m), soffitto ALTO ~3.2 m con travi a vista
+- Sensazione di SPAZIO ARIOSO (4 persone si muovono comodamente, mai claustrofobia)
 - Pavimento di terra battuta
 - Pareti intonacate ocra grezzo
-- Soffitto basso con travi a vista
-- **Forno di pietra a cupola** sulla parete sud-est, con bocca rivolta verso il centro stanza
-- **Banco da impasto in legno** sotto la finestra est (asse infarinata, ciotole)
-- Tavolo da pranzo (di legno semplice, 4-6 posti)
-- Mensole con pane proofing, ceste di legna piccola, attrezzi
+- **Grande forno di pietra a cupola** sulla parete sud-est, **bocca ~1.5-1.8 m** (scala forno comune di borgo, non casa privata), bocca rivolta verso il centro stanza
+- **Lungo banco da impasto in legno** (~2 m) sotto la finestra est
+- **Finestra est** che dà sul cortile retro + vista alba con silhouette delle Case del Mattino in controluce
+- Tavolo da pranzo (di legno semplice, 4-6 posti) verso parete ovest
+- **Zona centrale aperta** tra forno, banco impasto e tavolo da pranzo (circolazione)
+- Mensole nord con MOLTE ceste proofing (è forno comunitario), vasi, attrezzi
 - Pavimento e ogni superficie leggermente velata di farina
 - Ganci a parete con strofinacci, padelle, utensili in legno e ferro
 
@@ -179,6 +183,9 @@ Riferimento globale: `pipeline_narrativa/documenti_progetto/PATTERN_AI_DA_BANDIR
 - Mai ombre lunghe drammatiche all'esterno — luce calda diffusa.
 - Mai panificio "tedesco" / "francese" / "italiano del nord" stilizzato — l'isola ha un suo registro pre-industriale generico mediterraneo.
 - Mai forno con pietre regolari da masonry medievale — la pietra è grezza, irregolare.
+- **Mai interno "da casa privata" piccolo e claustrofobico** — è un forno comune di borgo, ampio, ariato, alto. Mai stanza dove 4 personaggi si pestano i piedi.
+- **Mai bocca del forno piccola da forno domestico** (50-80cm) — è grande (1.5-1.8m), da forno comunitario.
+- Mai pochi cesti di proofing (è forno comune che cuoce pane per tutti gli abitanti — le ceste sono molte).
 
 ---
 
@@ -250,47 +257,91 @@ elements.
 
 ```
 LOCATION (INTERIOR) — Forno di Fiamma:
-The interior of a small rural bakery, single rectangular room about 6 by 
-5 meters, with a low ceiling (about 2.5 meters) showing dark wooden 
-exposed beams. The floor is packed earth, smooth from years of use, 
-slightly dusted with flour everywhere. The walls are rough-plastered in 
-warm ochre, showing the texture of hand-applied plaster.
+The interior of a community-scale rural bakery — Fiamma's workplace
+where bread for the WHOLE ISLAND is baked daily. NOT a small private 
+home kitchen. A single large rectangular room about 9 by 7 meters, with 
+a relatively HIGH CEILING (about 3.2 meters) showing dark wooden exposed 
+beams running across. The room must FEEL SPACIOUS — air can circulate 
+around the oven heat, four characters can move around comfortably with 
+margin. Reference: the communal oven of a small medieval-Mediterranean 
+village, intermediate scale between private home and craft workshop.
+
+The floor is packed earth, smooth from years of use, slightly dusted 
+with flour everywhere. The walls are rough-plastered in warm ochre, 
+showing the texture of hand-applied plaster. A generous OPEN CENTRAL 
+AREA between oven, kneading table and dining table — circulation space.
 
 SPATIAL LAYOUT (very specific, do not vary):
 
-- On the SOUTH-EAST WALL: a stone bread oven with a domed mouth opening, 
-  about 80 cm wide. The oven is built directly into the wall, made of 
-  rough fieldstone with a soot-darkened mouth. When lit, embers and 
-  flames inside cast a warm orange-brick glow into the room. A small 
-  stack of split firewood rests on the floor next to the oven mouth.
+- On the SOUTH-EAST WALL: a LARGE STONE BREAD OVEN — community-scale, 
+  not a home oven. The dome is a substantial architectural feature, 
+  rising prominently from the wall. The DOMED MOUTH OPENING is about 
+  1.5 to 1.8 meters wide and ~1 meter tall, slightly arched at the top. 
+  The oven is built of rough fieldstone with earth mortar, soot-darkened 
+  around the mouth. When lit, embers and a small fire inside cast a 
+  warm orange-brick glow into the room — strong enough to read as a 
+  distinct light source. A LONG WOODEN PEEL (bread paddle, ~2 m long) 
+  leans against the wall beside the oven. A stack of split firewood 
+  ready to feed the fire rests on the floor nearby.
 
-- Under the EAST WINDOW (the window that catches the first dawn light): 
-  a long wooden KNEADING TABLE, heavily floured surface, weathered light 
+- Under the EAST WINDOW (the window that brings the first dawn light): 
+  a LONG WOODEN KNEADING TABLE, generous in size — about 2 m long, 
+  0.9 m deep, modest height. Heavily floured surface, weathered light 
   wood with visible grain. On the table: a stoneware bowl (terracotta 
-  color), a small mound of dough, a wooden rolling pin, a linen cloth 
-  folded to one side, a small clay pot of flour. Light from the east 
-  window falls directly on this table — this is where Fiamma works at 
-  dawn.
+  color), a mound of pale dough, a wooden rolling pin, a linen cloth 
+  folded to one side, a small clay pot of flour, perhaps a second 
+  bowl with a different dough preparation. The amber dawn light from 
+  the east window falls directly on this table — this is the canonical 
+  "first warm point of the island in the morning".
 
-- AGAINST THE WEST WALL (or at the center of the room, more toward the 
-  west side): a SIMPLE WOODEN DINING TABLE, rectangular, weathered 
-  light wood, with 4 to 6 wooden chairs/stools around it. The table is 
-  modest, scratched from use, sometimes with a small clay candle holder 
-  and a few cups or a loaf at its center.
+- THE EAST WINDOW (CRITICAL — defines the canonical morning light):
+  Positioned on the EAST WALL, directly above the kneading table. 
+  Medium-sized (~80×80 cm), wooden frame, dark weathered wood, simple 
+  shutters folded open inward. THROUGH THIS WINDOW, the view is:
+  * Foreground: the REAR COURTYARD (forno_cortile) with neat stacks 
+    of split firewood against the back wall, packed earth ground.
+  * Middle distance: low grass and gentle pastureland extending east.
+  * Far distance: SILHOUETTES OF THE CASE DEL MATTINO (Houses of the 
+    Morning — 3-4 small stone cottages further east along the path), 
+    backlit by the rising sun, very soft and atmospheric.
+  * Sky: the dawn, rose-peach-gold gradient, the sun just emerging 
+    behind the silhouetted houses (or about to). This is what makes 
+    the room "the first warm point of the island in the morning".
+  The window may also have a tiny clay water jug on its sill.
 
-- ON THE NORTH WALL: wooden shelves at varying heights, holding wicker 
-  proofing baskets with rising dough, a few stoneware jars (flour, salt, 
-  honey), a small stack of clean linen cloths, kitchen utensils hanging 
-  from iron hooks (ladles, wooden spoons, small pans).
+- AGAINST THE WEST WALL: a WOODEN DINING TABLE, weathered light wood, 
+  rectangular, with 4 to 6 wooden chairs/stools around it. Modest, 
+  scratched from use, with a small clay candle holder and a few cups. 
+  Positioned with enough open space around it for people to sit and 
+  walk past comfortably.
 
-- NEAR THE FRONT DOOR (west wall): a wooden coat hook with a spare apron 
-  and a shawl, a low wooden bench, a broom leaning against the wall.
+- ON THE NORTH WALL: a generous run of wooden shelves at varying 
+  heights, holding many wicker proofing baskets with rising dough 
+  (a community bakery has DOZENS, not a few), stoneware jars (flour, 
+  salt, honey), a stack of clean linen cloths, kitchen utensils hanging 
+  from iron hooks (ladles, wooden spoons, peels of varying sizes, a 
+  few iron pans). The quantity reads "this is a working community 
+  bakery", not a home kitchen.
 
-- THE BACK DOOR is on the EAST WALL (next to the oven), leading out to 
-  the rear courtyard with stacked firewood.
+- NEAR THE FRONT DOOR (west wall, opposite the kneading table area): 
+  a wooden coat hook with a spare TERRACOTTA-RED APRON (Fiamma's 
+  signature) and a shawl, a low wooden bench, a broom leaning against 
+  the wall. The front door itself: simple wooden plank door, dark 
+  weathered wood, iron hinges, currently closed (or ajar depending 
+  on scene).
+
+- THE BACK DOOR is on the EAST WALL (next to the oven, opposite the 
+  kneading table), leading out to the rear courtyard with stacked 
+  firewood. Simple wooden plank door, currently closed.
 
 - The chimney is built into the south-east wall above the oven, rising 
   internally through the back of the room and exiting through the roof.
+
+- CENTRAL FLOOR: a WIDE OPEN AREA in the middle of the room, free of 
+  furniture — the natural circulation space where the baker (and 
+  visiting characters) move between oven, kneading table, dining 
+  table. This emptiness is essential to the scene's feel of breath 
+  and capacity.
 
 ATMOSPHERE:
 The air is slightly hazy with flour particles catching the light, and 
