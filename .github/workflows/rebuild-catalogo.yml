@@ -1,0 +1,55 @@
+name: Rebuild catalogo_web/data/entities.json
+
+# Rigenera automaticamente il JSON del catalogo quando vengono aggiunte/modificate
+# immagini o schede in visual/, oppure quando cambia lo script di build.
+# Il commit auto e' attribuito a github-actions[bot] e finisce sullo stesso branch
+# che ha triggerato il workflow.
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+    paths:
+      - 'visual/**'
+      - 'scripts/build_catalogo_web.py'
+      - '.github/workflows/rebuild-catalogo.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-catalogo-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Rebuild entities.json
+        run: python3 scripts/build_catalogo_web.py
+
+      - name: Commit & push if changed
+        run: |
+          set -e
+          if git diff --quiet -- catalogo_web/data/entities.json; then
+            echo "No changes to catalogo_web/data/entities.json — nothing to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add catalogo_web/data/entities.json
+          git commit -m "auto: rebuild catalogo_web/data/entities.json [skip ci]"
+          git push origin HEAD:${GITHUB_REF#refs/heads/}
