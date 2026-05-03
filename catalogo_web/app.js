@@ -26,8 +26,41 @@ async function init() {
   renderMeta();
   renderTree();
   setupSearch();
+  setupSidebar();
   window.addEventListener("hashchange", route);
   route();
+}
+
+/* ---------- SIDEBAR DRAWER (mobile) ---------- */
+function setupSidebar() {
+  const toggle = document.getElementById("menu-toggle");
+  const backdrop = document.getElementById("sidebar-backdrop");
+  if (!toggle || !backdrop) return;
+
+  const open = () => {
+    document.body.classList.add("sidebar-open");
+    toggle.setAttribute("aria-expanded", "true");
+    backdrop.removeAttribute("hidden");
+  };
+  const close = () => {
+    document.body.classList.remove("sidebar-open");
+    toggle.setAttribute("aria-expanded", "false");
+    backdrop.setAttribute("hidden", "");
+  };
+  const toggleFn = () => {
+    if (document.body.classList.contains("sidebar-open")) close();
+    else open();
+  };
+
+  toggle.addEventListener("click", toggleFn);
+  backdrop.addEventListener("click", close);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("sidebar-open")) close();
+  });
+  // chiudi quando si naviga a una entita' (solo su mobile)
+  window.addEventListener("hashchange", () => {
+    if (window.matchMedia("(max-width: 800px)").matches) close();
+  });
 }
 
 function renderMeta() {
@@ -289,9 +322,9 @@ function renderEntity(id) {
   // Frontmatter pretty (YAML-like display)
   const fmYaml = yamlStringify(e.frontmatter);
 
-  // Body MD -> HTML via marked
+  // Body MD -> HTML via marked, poi sezioni h2 -> details collassabili
   const bodyHtml = e.body_md
-    ? marked.parse(e.body_md, { gfm: true, breaks: false })
+    ? collapsibleBodySections(marked.parse(e.body_md, { gfm: true, breaks: false }))
     : "<p><em>(scheda non ancora compilata)</em></p>";
 
   // Images
@@ -332,6 +365,10 @@ function renderEntity(id) {
       </details>
     </div>
 
+    <div class="body-toolbar">
+      <button type="button" data-action="expand-all">Espandi tutto</button>
+      <button type="button" data-action="collapse-all">Comprimi tutto</button>
+    </div>
     <div class="entity-body">${bodyHtml}</div>
 
     ${promptHtml ? `
@@ -343,8 +380,48 @@ function renderEntity(id) {
     </div>
     ` : ""}
   `;
+  // toolbar espandi/comprimi
+  c.querySelectorAll(".body-toolbar button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const open = btn.dataset.action === "expand-all";
+      c.querySelectorAll(".entity-body details.body-section").forEach(d => {
+        d.open = open;
+      });
+    });
+  });
   // scroll a top
   document.getElementById("main").scrollTo({ top: 0, behavior: "instant" });
+}
+
+/* ---------- BODY SECTIONS COLLAPSIBLE ---------- */
+/* Trasforma il body markdown renderizzato in sezioni <details> per ogni h2.
+   Tutto il contenuto prima del primo h2 resta libero in cima.
+   Le sezioni iniziano chiuse di default; toolbar in cima per espandi/comprimi. */
+function collapsibleBodySections(html) {
+  const tmp = document.createElement("div");
+  tmp.innerHTML = html;
+  const out = document.createElement("div");
+  let currentDetails = null;
+  let currentContent = null;
+
+  Array.from(tmp.childNodes).forEach(node => {
+    if (node.nodeType === 1 && node.tagName === "H2") {
+      currentDetails = document.createElement("details");
+      currentDetails.className = "body-section";
+      const summary = document.createElement("summary");
+      summary.innerHTML = node.innerHTML;
+      currentDetails.appendChild(summary);
+      currentContent = document.createElement("div");
+      currentContent.className = "body-section-content";
+      currentDetails.appendChild(currentContent);
+      out.appendChild(currentDetails);
+    } else if (currentContent) {
+      currentContent.appendChild(node.cloneNode(true));
+    } else {
+      out.appendChild(node.cloneNode(true));
+    }
+  });
+  return out.innerHTML;
 }
 
 /* ---------- STRADE INDEX ---------- */
