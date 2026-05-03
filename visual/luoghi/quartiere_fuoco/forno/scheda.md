@@ -5,7 +5,7 @@ famiglia: luogo
 sottotipo: building
 quartiere: fuoco
 status: provvisorio
-ultima_modifica: 2026-04-30
+ultima_modifica: 2026-05-03
 fonti: ["pipeline_narrativa/story_graph.json#entities.locations.forno", "cartografia/geo/island.geojson#features.id=forno"]
 appare_in_storie: []
 ha_interno: true
@@ -30,36 +30,109 @@ cartografia:
 
 # Forno di Fiamma
 
-> **Stato compilazione:** body provvisorio, completato 2026-04-29 con derivazione autoriale dalle fonti canoniche (Bible §4.4, §6, §8.1, §8.2; ARCHI_12_STORIE §S1, §S6, §S8, §S11, §S12; grafo entities.locations.forno; Glossario §2.3; cartografia island.geojson). Le sezioni in derivazione sono dichiarate in "Riferimenti puntuali".
+> **Stato compilazione:** body provvisorio, completato 2026-04-29 con derivazione autoriale dalle fonti canoniche (Bible §4.4, §6, §8.1, §8.2; ARCHI_12_STORIE §S1, §S6, §S8, §S11, §S12; grafo entities.locations.forno; Glossario §2.3; cartografia island.geojson). Aggiornato 2026-04-30 con scala "forno comune di borgo". Aggiornato 2026-05-03 con **planimetria a 2 sale comunicanti** (laboratorio + dispensa-pranzo) + set di **5 immagini canoniche reference** in `immagini/`.
 >
-> **⚠️ STRATEGIA LUOGHI:** questo luogo NON ha immagine di reference per scene multi-personaggio. Le sezioni "Descrizione visiva canonica per generazione — ESTERNO / INTERNO / CORTILE" sono i **blocchi LOCATION testuali** da incollare nei prompt scena.
+> **⚠️ STRATEGIA LUOGHI RICORRENTI:** il Forno appare in 7 storie (s01, s06, s08, s09, s10, s11, s12). Per questo è uno dei pochi luoghi con un **set canonico di 5 vedute pre-generate** (vedi `immagini/forno_canonica_v1_*.jpg`). Le scene future con personaggi si compongono SOPRA queste reference + prompt grok dei character canon. NON rigenerare le canoniche.
 >
-> **⚠️ LUOGO CON ESTERNO + INTERNO + CORTILE:** scegliere il blocco LOCATION corretto in base a dove si svolge la scena. Mai più di un blocco per scena.
+> **⚠️ LUOGO CON 2 SALE INTERNE + ESTERNO + CORTILE:** scegliere la veduta corretta in base a dove si svolge la scena. Vedi mappa scene → veduta in fondo.
 
 ## Identità visuale (sintesi)
 
-**Tipo:** edificio (casa-forno).
+**Tipo:** edificio (forno comune di borgo).
 **Quadrante:** fuoco_est.
 **Abitante:** fiamma.
 **Ruolo saga:** cornice_s1_s12 (apertura e chiusura saga, simmetria strutturale).
 
-Casa-forno bassa di pietra e legno, col tetto inclinato e il camino che fuma prima dell'alba. Casa di Fiamma e luogo di lavoro insieme — qui si impasta il pane, si cuoce il giorno. **Primo posto dell'isola dove c'è luce calda al mattino**, presenza di calore relazionale ed elementare. Cornice strutturale della saga: apertura S1, chiusura S12. Articolato in tre sotto-aree: **esterno** (la facciata sulla Via dell'Alba), **interno** (un'unica stanza con forno, banco impasto, tavolo, mensole), **cortile retro** (legna catastata, sbocco della porta posteriore).
+**Forno comune dell'isola** — Fiamma cuoce pane per tutti gli abitanti, ogni giorno. NON è una panetteria di casa né un forno domestico: è il forno comunitario, intermediate tra casa privata e bottega. Casa-forno bassa di pietra grezza con tetto inclinato e camino che fuma prima dell'alba. **Primo posto dell'isola dove c'è luce calda al mattino**, presenza di calore relazionale ed elementare. Cornice strutturale della saga: apertura S1, chiusura S12.
+
+**Articolato in 4 sotto-aree** (vedi planimetria canonica `immagini/forno_planimetria_canonica.jpg`):
+1. **Esterno** — facciata ovest sulla Via dell'Alba, camino fumante
+2. **Sala Laboratorio** (sala A, interna) — 2 forni a cupola + tavolone impasto + mensole utensili, sala con tetto a falda alto
+3. **Sala Dispensa-Pranzo** (sala B, interna, comunicante con A) — mensole stipate di cesti+vasi + tavolo+panche, porta sul cortile retro
+4. **Cortile retro** — tettoia con legna catastata, ceppi spaccati, prospettiva sul retro casa
+
+## Planimetria canonica a 2 sale (sintesi schematica)
+
+```
+ESTERNO ovest (facciata, Via dell'Alba)
+      │
+      ▼
+┌──────────────────────────────────────┐
+│   SALA LABORATORIO (sala A)           │
+│   tetto a falda alto, travi a vista   │
+│   - tavolone impasto sulla parete sx │
+│   - 2 forni cupola sulla parete dx   │
+│   - mensole utensili a dx accanto ai │
+│     forni                             │
+│   - finestra est sopra il tavolone    │
+│     (vista alba + Case del Mattino)   │
+└──────────────────────────────────────┘
+            │ porta interna │
+            ▼               ▼
+┌──────────────────────────────────────┐
+│   SALA DISPENSA-PRANZO (sala B)       │
+│   - mensole stipate cesti+vasi sx    │
+│   - tavolo+panche al centro          │
+│   - porta che dà sul cortile retro    │
+└──────────────────────────────────────┘
+      │
+      ▼
+CORTILE RETRO est
+- tettoia con legna catastata
+- ceppi spaccati a terra
+- retro casa visibile
+```
+
+Ogni sala ha **almeno 2 vedute canoniche** generate in `immagini/`.
 
 ## Aspetto / forma — geografia generale
 
-Costruzione bassa ma **ampia per gli standard del villaggio**, di pietra grezza intonacata, tetto a falda con embrici di terracotta scura, una sola grande stanza interna. La pianta è **rettangolare semplice**, indicativamente **9×7 metri** (più grande di una casa privata standard dell'isola). **Soffitto interno relativamente alto (~3.2 metri)** con travi a vista in legno scuro: l'aria deve poter circolare per il calore del forno e per gli accumuli di farina.
+Costruzione di pietra grezza intonacata, tetto a falda con embrici di terracotta scura, **2 sale interne comunicanti via porta interna** (laboratorio + dispensa-pranzo) + cortile retro. La pianta complessiva è **rettangolare allungata** sul piano nord-sud, indicativamente **~9×12 metri** totali (sala laboratorio ~9×7, sala dispensa-pranzo ~6×5, comunicanti). **Soffitto interno alto ~3.2 metri** con travi a vista in legno scuro nella sala laboratorio (struttura a falda visibile dall'interno).
 
-**Scala canonica**: il Forno NON è una "panetteria di casa" né un forno domestico. È il **forno comune dell'isola** — Fiamma cuoce pane per tutti gli abitanti, ogni giorno. Riferimento mentale: forno comune di borgo medievale-mediterraneo, dimensioni intermedie tra casa privata e bottega comunitaria. Lo spazio interno deve **trasmettere ariosità**: i tre fratelli + Fiamma (4 personaggi) ci stanno comodamente con margine intorno, mai claustrofobia.
+**Scala canonica**: il Forno NON è una "panetteria di casa" né un forno domestico. È il **forno comune dell'isola** — Fiamma cuoce pane per tutti gli abitanti, ogni giorno. Riferimento mentale: forno comune di borgo medievale-mediterraneo, intermediate tra casa privata e bottega comunitaria. Spazio interno **arioso**: 4-5 personaggi (Fiamma + 3 fratelli + eventuale ospite) si muovono comodamente con margine, mai claustrofobia.
 
-**Tre sotto-aree distinte:**
+**Quattro sotto-aree distinte** (con vedute canoniche in `immagini/`):
 
-1. **Esterno**: facciata principale sulla **Via dell'Alba** (orientata a ovest, con la Via dell'Alba che la percorre); il fronte ha la porta principale e una piccola finestra. Sul lato est della casa c'è una **finestra orientata a est**, da cui entra la prima luce dell'alba — fondamentale, perché è il "primo posto dell'isola dove c'è luce calda al mattino". Il **camino** sporge dal tetto, fuma prima dell'alba.
+### 1. Esterno (facciata ovest sulla Via dell'Alba)
+Facciata principale sulla **Via dell'Alba**, orientata a ovest verso il villaggio centrale. Porta principale di legno scuro + piccola finestra ovest con imposte. Sul lato est della casa c'è una **finestra orientata a est** da cui entra la prima luce dell'alba (fondamentale, "primo posto dell'isola dove c'è luce calda al mattino"). **Camino** che sporge dal tetto, fuma prima dell'alba.
+→ Reference: `immagini/forno_canonica_v1_esterno_alba.jpg`
 
-2. **Interno**: stanza unica e ampia che combina panificio comunitario e zona pranzo familiare. Pavimento di terra battuta, pareti intonacate ocra grezzo, soffitto **alto ~3.2 m** con travi a vista in legno scuro. **Grande forno di pietra a cupola** sulla parete sud-est (cupola visibile come elemento architettonico imponente, **bocca ~1.5-1.8 metri di larghezza** — è un forno da borgo, non da casa, e la sua dimensione è la firma del luogo). La bocca del forno è rivolta verso il centro della stanza. **Lungo banco da impasto in legno** (asse generosa, ~2 m) sotto la finestra est, dove arriva la prima luce dell'alba. **Tavolo da pranzo** verso la parete ovest, lasciando una zona centrale aperta tra forno, banco e tavolo. Mensole, ganci, ceste di proofing, attrezzi: organizzati ma vissuti, da panettiere-comunitario. **Spazio centrale di circolazione** ampio: 4 persone si muovono comodamente, vedono tutta la stanza in colpo d'occhio.
+### 2. Sala Laboratorio (sala A, interna)
+La sala del lavoro pane. Tetto a falda alto con travi a vista in legno scuro (~3.2 m), pareti intonacate ocra grezzo, pavimento di terra battuta velata di farina.
 
-3. **Cortile retro**: piccolo cortile sul retro (lato est della casa), senza recinzione, con **legna catastata** in cataste regolari contro la parete del retro. Si raggiunge dalla porta posteriore. Da qui parte un sentiero che scende verso est ma a 30-50 metri si perde nell'erba — il cortile è dove finisce la "casa abitata" e inizia la campagna.
+**Layout canonico:**
+- **Parete sinistra (ovest)**: lungo **tavolone da impasto** in legno (~2 m), asse infarinata, ciotole, mattarello, lino. Sotto la finestra principale che porta luce.
+- **Parete destra (est)**: **2 grandi forni a cupola di pietra** affiancati, costruiti in fieldstone, ciascuno con bocca ~1.5-1.8 m di larghezza. Banchetta separatrice tra i due forni. Cappa/canna fumaria centrale che sale al tetto.
+- **Mensole** sulla parete destra accanto ai forni e/o tra i forni: utensili in legno e ferro, pale lunghe, ciotole.
+- **Finestra est** (sopra il tavolone o sulla parete est): porta la prima luce dell'alba sul tavolone. Vista canonica attraverso: cortile retro + erba + silhouette Case del Mattino in controluce + cielo rosa-oro.
+- **Zona centrale** del pavimento aperta (circolazione personaggi).
+- **Porta interna** sul lato sud che porta alla Sala Dispensa-Pranzo.
+- Possibile alcove sotto la base dei forni per legna catastata pronta all'uso.
 
-Posizione: **Quartiere di Fuoco a est**, lungo la **Via dell'Alba**, **30 minuti** a piedi dal Villaggio centrale (Bible §8.1). Vicine ci sono le **Case del Mattino** (fabbro, conceria, essiccatoio per la frutta in autunno) — 3-4 case lungo la via, ma il Forno è la prima e la più importante del quartiere.
+→ Reference principali:
+- `immagini/forno_canonica_v1_laboratorio_panoramica.jpg` (establishing shot frontale, 2 forni)
+- `immagini/forno_canonica_v1_laboratorio_dettaglio.jpg` (close-up uno dei forni acceso + impasti)
+- `immagini/forno_canonica_v1_laboratorio_verticale.jpg` (vista verticale 3:4 con finestra centrale, utile per overlay testo)
+
+### 3. Sala Dispensa-Pranzo (sala B, interna, comunicante con sala A)
+La sala "domestica" dove Fiamma vive e dove avvengono le scene intime (compleanno Gabriel s09, dolce serale s12). Pavimento in pietra (cotto/lastricato) o terra battuta, soffitto più contenuto.
+
+**Layout canonico:**
+- **Parete sinistra (ovest)**: **mensole stipate** floor-to-ceiling di cesti di vimini + vasi terracotta + anfore (provviste della dispensa). Quantità abbondante = "comunità".
+- **Centro stanza**: **tavolo rettangolare in legno** + 2 panche (4-6 posti). Tavolo del pranzo + delle scene intime serali.
+- **Parete sud / dx**: porta che dà sul **cortile retro** (visibile aperta nelle scene diurne).
+- Possibili: piccolo banco aggiuntivo, alcove con anfore, candela sul tavolo di sera.
+
+→ Reference principale: `immagini/forno_canonica_v1_dispensa_pranzo.jpg`
+
+### 4. Cortile retro (esterno, lato est)
+Piccolo cortile sul retro (lato est), senza recinzione, raggiungibile dalla porta posteriore della Sala Dispensa-Pranzo. **Tettoia in legno** che protegge cataste regolari di **legna spaccata** (provviste per il forno). **Ceppi spaccati** a terra, ascia. Retro casa visibile in pietra. Da qui parte un sentiero che si perde nell'erba verso est (in direzione Case del Mattino, Fiume, fascia costiera).
+
+→ Reference: `immagini/forno_canonica_v1_cortile_retro.jpg`
+
+---
+
+**Posizione**: **Quartiere di Fuoco a est**, lungo la **Via dell'Alba**, **30 minuti** a piedi dal Villaggio centrale (Bible §8.1). Vicine ci sono le **Case del Mattino** (fabbro, conceria, essiccatoio per la frutta in autunno) — 3-4 case lungo la via, ma il Forno è la prima e la più importante del quartiere.
 
 ## Espressione / comportamento (dinamica del luogo)
 
@@ -120,19 +193,32 @@ Posizione precisa: **Quartiere di Fuoco a est, lungo la Via dell'Alba, 30 minuti
 - Posizione lungo la Via dell'Alba, primo edificio del Quartiere di Fuoco
 - Niente recinzione
 
-**Interno:**
-- Stanza unica AMPIA (~9×7 m), soffitto ALTO ~3.2 m con travi a vista
+**Sala Laboratorio (sala A):**
+- Sala AMPIA (~9×7 m), soffitto ALTO ~3.2 m con travi a vista
 - Sensazione di SPAZIO ARIOSO (4 persone si muovono comodamente, mai claustrofobia)
-- Pavimento di terra battuta
+- Pavimento di terra battuta velata di farina
 - Pareti intonacate ocra grezzo
-- **Grande forno di pietra a cupola** sulla parete sud-est, **bocca ~1.5-1.8 m** (scala forno comune di borgo, non casa privata), bocca rivolta verso il centro stanza
-- **Lungo banco da impasto in legno** (~2 m) sotto la finestra est
-- **Finestra est** che dà sul cortile retro + vista alba con silhouette delle Case del Mattino in controluce
-- Tavolo da pranzo (di legno semplice, 4-6 posti) verso parete ovest
-- **Zona centrale aperta** tra forno, banco impasto e tavolo da pranzo (circolazione)
-- Mensole nord con MOLTE ceste proofing (è forno comunitario), vasi, attrezzi
+- **2 grandi forni a cupola** affiancati sulla parete EST (forno comune di borgo), ciascuno con bocca ~1.5-1.8 m, fieldstone, banchetta separatrice tra i due
+- **Cappa/canna fumaria centrale** che sale al tetto
+- **Lungo tavolone da impasto** (~2 m) sulla parete OVEST sotto la finestra principale
+- **Finestra est** sopra il tavolone (o sulla parete est) che dà sul cortile retro + vista alba con silhouette delle Case del Mattino in controluce
+- **Mensole** sulla parete EST accanto/tra i forni con utensili, pale lunghe, ciotole
+- **Zona centrale aperta** (circolazione)
 - Pavimento e ogni superficie leggermente velata di farina
-- Ganci a parete con strofinacci, padelle, utensili in legno e ferro
+
+**Sala Dispensa-Pranzo (sala B, comunicante con A via porta interna):**
+- Sala più contenuta (~6×5 m), soffitto un po' più basso
+- **Mensole stipate** floor-to-ceiling sulla parete OVEST (cesti di vimini, vasi terracotta, anfore — quantità abbondante = forno comunitario)
+- **Tavolo rettangolare in legno + 2 panche** al centro stanza (4-6 posti)
+- **Porta** sulla parete sud/est che dà sul **cortile retro** (visibile aperta nelle scene diurne)
+- Pavimento in pietra/cotto o terra battuta
+- Possibili: piccolo banco accessorio, candela sul tavolo nelle scene serali
+
+**Cortile retro:**
+- **Tettoia in legno** che protegge cataste regolari di legna spaccata
+- Ceppi spaccati a terra
+- Retro casa visibile in pietra
+- Niente recinzione, sentiero che si perde nell'erba verso est
 
 **Cortile retro:**
 - Cataste di legna regolari contro la parete posteriore
@@ -426,23 +512,27 @@ recreational furniture. This is a working space.
 
 ### ✏️ Note d'uso operative
 
-**Mappa scene → blocco LOCATION da usare:**
+**Mappa scene → veduta canonica da usare come reference:**
 
-| Scena | Blocco LOCATION |
-|---|---|
-| S1 apertura: Fiamma sulla soglia con i fratelli che partono | ESTERNO |
-| S6 cammeo: Fiamma che parla impastando, cornetti, detto popolare | INTERNO |
-| S8 apertura: i fratelli finiscono cornetto, Fiamma chiude imposte | INTERNO |
-| S8 ritorno: rifugio dei fratelli al Forno | INTERNO |
-| S9 location primary: festa compleanno Gabriel al Forno | INTERNO (e/o esterno se i fratelli arrivano) |
-| S10 cammeo all'alba: Fiamma sulla soglia o vista da fuori | ESTERNO |
-| S11 cammeo banco dolci festa | INTERNO (banco dolci) o ESTERNO (banco esposto fuori per la festa — da decidere D) |
-| S12 mattino: pagnotta a Grunto | INTERNO |
-| S12 sera (chiusura saga): dolce normale, quattro fette, candela | INTERNO |
+| Scena | Veduta canonica | File reference |
+|---|---|---|
+| S1 apertura: Fiamma sulla soglia, fratelli partono, pagnotta | **Esterno alba** (eventualmente "porta aperta" + cenno interno) | `forno_canonica_v1_esterno_alba.jpg` |
+| S6 cammeo: Fiamma che parla impastando, cornetti, detto popolare | **Sala Laboratorio panoramica** o **dettaglio forno** (Fiamma al tavolone) | `forno_canonica_v1_laboratorio_panoramica.jpg` o `_dettaglio.jpg` |
+| S8 apertura: fratelli finiscono cornetto, Fiamma chiude imposte | **Sala Laboratorio panoramica** (Fiamma al banco, fratelli al tavolo dispensa o entrano dalla porta interna) | `forno_canonica_v1_laboratorio_panoramica.jpg` |
+| S8 ritorno: rifugio dei fratelli al Forno | **Sala Dispensa-Pranzo** (intimità) | `forno_canonica_v1_dispensa_pranzo.jpg` |
+| S9 location primary: compleanno Gabriel al Forno | **Sala Dispensa-Pranzo** (tavolo + 4 fratelli + Fiamma) | `forno_canonica_v1_dispensa_pranzo.jpg` |
+| S10 cammeo all'alba al ritorno: Fiamma sulla soglia o vista da fuori | **Esterno alba** | `forno_canonica_v1_esterno_alba.jpg` |
+| S11 cammeo banco dolci festa | **Sala Laboratorio panoramica** (banco dolci esposto) o esterno (festa in piazza, da decidere) | `forno_canonica_v1_laboratorio_panoramica.jpg` |
+| S12 mattino: pagnotta a Grunto | **Sala Laboratorio dettaglio** o panoramica | `forno_canonica_v1_laboratorio_dettaglio.jpg` |
+| S12 sera (chiusura saga): dolce normale, 4 fette, candela | **Sala Dispensa-Pranzo** (tavolo + candela + Fiamma) | `forno_canonica_v1_dispensa_pranzo.jpg` |
 
-**Per scene di transizione** (es. fratelli che arrivano e bussano, o Fiamma sulla soglia che guarda fuori): scegliere il blocco prevalente. Se la scena è "Fiamma sulla soglia che guarda i fratelli arrivare" → ESTERNO con cenno alla porta aperta da cui si intravede l'interno. Se la scena è "i fratelli entrano e Fiamma è dentro al banco" → INTERNO con cenno alla porta aperta.
+**Cammei opzionali al cortile retro** (se mai servisse — Fiamma che prende legna, fratelli che spaccano legna): `forno_canonica_v1_cortile_retro.jpg`.
 
-**Mai mischiare blocchi.** Se serve davvero "vedere" sia interno che esterno (caso raro, tipico di shot panoramici tipo establishing), generare due immagini separate piuttosto che mischiare.
+**Scene su 2 sale insieme** (raro, es. Fiamma alla porta interna che chiama i fratelli dalla sala dispensa): scegliere la sala dove avviene l'azione principale.
+
+**Workflow scene future:** prendere la veduta canonica come BASE → comporre la scena aggiungendo i personaggi tramite character canon dei rispettivi prompt grok. NON rigenerare le canoniche.
+
+**Per stile coerente nelle generazioni:** lo stile del set canonico è painterly watercolor + ink linework, palette warm earth, tradizione picture book inglese-mediterraneo (Beatrix Potter / Brian Wildsmith). Replicare questo stile in tutte le scene.
 
 ## Per stampa 3D / modello
 
@@ -485,11 +575,11 @@ Vedere `descrizione_narrativa_social.md` nella stessa cartella.
 
 ## Disallineamenti / domande aperte
 
-- **Pianta esatta dell'interno**: la Bible indica "casa-forno col tetto basso" e "porta sul retro", "camino che fuma". La disposizione esatta degli elementi (forno parete sud-est, banco sotto finestra est, tavolo ovest) è **derivazione autoriale coerente** — confermare con Ray. Se Ray ha visualizzato una pianta diversa, qui la fissiamo.
-- **Dimensioni 6×5 metri**: stimate dalla scala saga + pratica edifici rurali. Da validare quando la cartografia avrà bbox precisa per il Forno (attualmente `bbox_m_local: [5106, 3500, 5106, 3500]` è un punto).
-- **Numero di finestre**: derivato come 2 (una a ovest sul fronte, una a est che porta la prima luce). Bible non lo specifica.
-- **Banco dolci S11 dentro o fuori**: Bible/ARCHI suggeriscono banco dolci durante la festa in Piazza — quindi possibilmente trasportato in Piazza. Il Forno di per sé può avere banco dolci interno ma per S11 potrebbe non essere quel luogo. Fissare in fase D.
-- **Esistenza cortile retro come spazio scena**: Bible cita "cortile di legna catastata sul retro" ma non viene mai usato come scena nelle 12 storie. Il blocco LOCATION CORTILE è quindi **per completezza** ma probabilmente non sarà mai usato in pipeline scena. Lo lasciamo per atlante.
+- **Pianta interna a 2 sale (RISOLTO 2026-05-03)**: confermata con Ray la planimetria a 2 sale comunicanti (laboratorio + dispensa-pranzo) + cortile retro. 2 forni nella sala laboratorio, mensole stipate nella dispensa. Vedi `immagini/forno_planimetria_canonica.jpg` + sezione "Aspetto / forma — geografia generale".
+- **Dimensioni 9×7 m sala laboratorio + 6×5 m sala dispensa (parz. RISOLTO)**: scala "forno comune di borgo" approvata. La cartografia (`bbox_m_local: [5106, 3500, 5106, 3500]`) resta a punto — non blocca le scene.
+- **Numero forni interni (RISOLTO 2026-05-03)**: 2 forni a cupola affiancati nella sala laboratorio (canone planimetria). Niente forno esterno separato.
+- **Banco dolci S11 dentro o fuori**: ancora aperto. Bible/ARCHI suggeriscono banco dolci durante la festa in Piazza centrale; il Forno potrebbe avere banco dolci interno ma per S11 la scena potrebbe spostarsi al Mercato. Fissare in fase D scrittura.
+- **Cortile retro come spazio scena (parz. RISOLTO)**: ora ha veduta canonica `forno_canonica_v1_cortile_retro.jpg`. Resta da decidere se appare come cammeo in alcuna delle 12 storie (probabile no, ma reference disponibile per scene future di estensione saga).
 
 ## Riferimenti puntuali (citazioni dirette dalle fonti)
 
