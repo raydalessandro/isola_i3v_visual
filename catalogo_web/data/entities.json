@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T15:52:52",
+  "generated_at": "2026-05-04T08:05:23",
   "totals": {
     "totale": 116,
     "luogo": 74,
@@ -1261,7 +1261,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/bru"
                   }
                 },
@@ -1273,7 +1273,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/cardo"
                   }
                 },
@@ -1285,7 +1285,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/liu"
                   }
                 },
@@ -1297,7 +1297,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/pun"
                   }
                 },
@@ -1309,7 +1309,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/toba"
                   }
                 }
@@ -7698,8 +7698,29 @@
         "cuccioli",
         "bru"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "bru_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+          "size_kb": 157
+        },
+        {
+          "filename": "bru_canonica_v1_silenzio_ascolto.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+          "size_kb": 187
+        },
+        {
+          "filename": "bru_canonica_v1_vicino_a_rovo.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+          "size_kb": 187
+        },
+        {
+          "filename": "bru_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg",
+          "size_kb": 108
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "cardo",
@@ -7744,8 +7765,29 @@
         "cuccioli",
         "cardo"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "cardo_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
+          "size_kb": 173
+        },
+        {
+          "filename": "cardo_canonica_v1_lealta_silenziosa.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
+          "size_kb": 143
+        },
+        {
+          "filename": "cardo_canonica_v1_provocazione.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
+          "size_kb": 162
+        },
+        {
+          "filename": "cardo_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg",
+          "size_kb": 130
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "liu",
@@ -7790,8 +7832,29 @@
         "cuccioli",
         "liu"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "liu_canonica_v1_ascolto_foglia.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_ascolto_foglia.jpg",
+          "size_kb": 121
+        },
+        {
+          "filename": "liu_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_fronte.jpg",
+          "size_kb": 131
+        },
+        {
+          "filename": "liu_canonica_v1_stop_in_aria_frrr.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_stop_in_aria_frrr.jpg",
+          "size_kb": 101
+        },
+        {
+          "filename": "liu_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/liu/immagini/liu_turnaround_v1.jpg",
+          "size_kb": 154
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "pun",
@@ -7838,8 +7901,29 @@
         "cuccioli",
         "pun"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "pun_canonica_v1_con_papa.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+          "size_kb": 197
+        },
+        {
+          "filename": "pun_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+          "size_kb": 159
+        },
+        {
+          "filename": "pun_canonica_v1_intuizione.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+          "size_kb": 165
+        },
+        {
+          "filename": "pun_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg",
+          "size_kb": 95
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "toba",
@@ -7886,8 +7970,29 @@
         "cuccioli",
         "toba"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "toba_canonica_v1_barca_padre.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg",
+          "size_kb": 211
+        },
+        {
+          "filename": "toba_canonica_v1_domanda.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg",
+          "size_kb": 188
+        },
+        {
+          "filename": "toba_canonica_v1_fronte.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg",
+          "size_kb": 180
+        },
+        {
+          "filename": "toba_turnaround_v1.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg",
+          "size_kb": 109
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "bartolo",
