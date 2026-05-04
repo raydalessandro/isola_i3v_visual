@@ -351,6 +351,9 @@ function route() {
 
   if (hash === "#/" || hash === "") { renderHome(); return; }
   if (hash === "#/strade") { renderStradeIndex(); return; }
+  if (hash === "#/storie") { renderStorieIndex(); return; }
+  const ms = hash.match(/^#\/storia\/([^\/]+)$/);
+  if (ms) { renderStoriaDetail(decodeURIComponent(ms[1])); return; }
 
   const m = hash.match(/^#\/entity\/([^\/]+)$/);
   if (m) {
@@ -767,6 +770,211 @@ function yamlScalar(x) {
   if (typeof x === "object") return JSON.stringify(x);
   if (/[:#\[\]{}&*!|>%@`,]/.test(x)) return JSON.stringify(x);
   return String(x);
+}
+
+/* ==================================================================
+   STORIE — dashboard hook→prompt→immagine
+   Caricamento lazy da data/storie.json (separato da entities.json).
+   ================================================================== */
+const STORIE_URL = "data/storie.json";
+let _storieData = null;
+
+async function ensureStorieData() {
+  if (_storieData) return _storieData;
+  try {
+    const r = await fetch(STORIE_URL, { cache: "no-cache" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    _storieData = await r.json();
+    return _storieData;
+  } catch (e) {
+    return null;
+  }
+}
+
+async function renderStorieIndex() {
+  const c = document.getElementById("content");
+  c.innerHTML = `<p class="loading">Caricamento storie…</p>`;
+  const data = await ensureStorieData();
+  if (!data) {
+    c.innerHTML = `<p class="loading">storie.json non trovato. Lancia <code>python3 scripts/build_storie_data.py</code>.</p>`;
+    return;
+  }
+  const cards = data.storie.map(s => {
+    const stats = s.stats || {};
+    const totalHooks = stats.hooks_total || 10;
+    const ready = stats.hooks_image_ready || 0;
+    const pct = Math.round((ready / totalHooks) * 100);
+    const charsP = stats.chars_distinct ? Math.round((stats.chars_with_imgs / stats.chars_distinct) * 100) : 0;
+    const locsP = stats.locs_distinct ? Math.round((stats.locs_with_prompt / stats.locs_distinct) * 100) : 0;
+    return `
+      <a class="storia-card" href="#/storia/${s.sid}">
+        <div class="storia-card-head">
+          <span class="storia-sid">${escapeHtml(s.sid.toUpperCase())}</span>
+          <span class="storia-cycle">Ciclo ${escapeHtml(s.cycle || "?")}</span>
+        </div>
+        <h3 class="storia-title">${escapeHtml(s.title)}</h3>
+        <div class="storia-progress">
+          <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+          <span class="progress-label">${ready}/${totalHooks} hook composti</span>
+        </div>
+        <div class="storia-mini-stats">
+          <span title="Personaggi con immagini canoniche">👤 ${stats.chars_with_imgs}/${stats.chars_distinct}</span>
+          <span title="Luoghi con prompt grok">🏛️ ${stats.locs_with_prompt}/${stats.locs_distinct}</span>
+          <span title="Inventario manuale">${s.inventory && s.inventory.exists ? "📋 inv" : "—"}</span>
+        </div>
+      </a>`;
+  }).join("");
+  c.innerHTML = `
+    <div class="page-storie-index">
+      <h1>Storie del libro</h1>
+      <p class="lede">Le 12 storie definitive con stato di avanzamento per la composizione finale (testo + illustrazione).</p>
+      <div class="storie-grid">${cards}</div>
+    </div>`;
+  scrollMainTop();
+}
+
+async function renderStoriaDetail(sid) {
+  const c = document.getElementById("content");
+  c.innerHTML = `<p class="loading">Caricamento ${escapeHtml(sid)}…</p>`;
+  const data = await ensureStorieData();
+  if (!data) {
+    c.innerHTML = `<p class="loading">storie.json non trovato.</p>`;
+    return;
+  }
+  const s = data.storie.find(x => x.sid === sid);
+  if (!s) {
+    c.innerHTML = `<p class="loading">Storia <code>${escapeHtml(sid)}</code> non trovata.</p>`;
+    return;
+  }
+  const aud = s.audited_entities || {};
+
+  // Hook table rows
+  const hookRows = (s.hooks || []).map(h => {
+    const ents = h.entities || {};
+    const charBadges = (ents.personaggi || []).map(cid => {
+      const a = aud.personaggi[cid] || {};
+      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
+      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(cid)}" title="${a.n_images || 0} img">${escapeHtml(cid)}</span>`;
+    }).join("");
+    const locBadges = (ents.luoghi || []).map(lid => {
+      const a = aud.luoghi[lid] || {};
+      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
+      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(lid)}">${escapeHtml(lid)}</span>`;
+    }).join("");
+    const objBadges = (ents.oggetti || []).map(oid => {
+      const a = aud.oggetti[oid] || {};
+      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
+      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(oid)}">${escapeHtml(oid)}</span>`;
+    }).join("");
+    const imgStatus = h.image === "TBD" ? `<span class="img-status tbd">TBD</span>` : `<span class="img-status ready">${escapeHtml(h.image)}</span>`;
+    return `
+      <tr class="hook-row">
+        <td class="col-page"><strong>${h.page}</strong></td>
+        <td class="col-hook"><code>${escapeHtml(h.hook_id)}</code></td>
+        <td class="col-text">${escapeHtml(h.text_preview || "")}</td>
+        <td class="col-chars">${charBadges || "<em>—</em>"}</td>
+        <td class="col-locs">${locBadges || "<em>—</em>"}</td>
+        <td class="col-objs">${objBadges || "<em>—</em>"}</td>
+        <td class="col-img">${imgStatus}</td>
+      </tr>`;
+  }).join("");
+
+  // Audit panels
+  const charPanel = renderEntityAuditPanel("Personaggi", aud.personaggi);
+  const locPanel = renderEntityAuditPanel("Luoghi", aud.luoghi);
+  const objPanel = renderEntityAuditPanel("Oggetti", aud.oggetti);
+
+  // Inventory section
+  const invHtml = (s.inventory && s.inventory.exists)
+    ? `<details class="inventory-block" open>
+         <summary>📋 Inventario operativo (<a href="${escapeAttr(s.inventory.github_url || '#')}" target="_blank" rel="noopener">apri su GitHub</a>)</summary>
+         ${s.inventory.gaps_summary ? `<h3>Gap operativi</h3><div class="md-block">${marked.parse(s.inventory.gaps_summary || "")}</div>` : ""}
+         ${s.inventory.todo_summary ? `<h3>Cosa serve per concludere</h3><div class="md-block">${marked.parse(s.inventory.todo_summary || "")}</div>` : ""}
+         ${s.inventory.additions_summary ? `<h3>Aggiunte da prosa al canone</h3><div class="md-block">${marked.parse(s.inventory.additions_summary || "")}</div>` : ""}
+       </details>`
+    : `<p class="inventory-missing">⚠️ Inventario operativo non ancora creato per questa storia.</p>`;
+
+  const stats = s.stats || {};
+  const totalHooks = stats.hooks_total || 10;
+  const ready = stats.hooks_image_ready || 0;
+  const pct = Math.round((ready / totalHooks) * 100);
+
+  c.innerHTML = `
+    <div class="page-storia-detail">
+      <div class="storia-header">
+        <a class="back-link" href="#/storie">← tutte le storie</a>
+        <h1>${escapeHtml(s.sid.toUpperCase())} — ${escapeHtml(s.title)}</h1>
+        <p class="storia-meta">Ciclo ${escapeHtml(s.cycle)} · ${stats.hooks_total} hook · status ${escapeHtml(s.status)} · <a href="${escapeAttr(s.github_url || '#')}" target="_blank" rel="noopener">testo su GitHub</a></p>
+      </div>
+
+      <div class="storia-overview">
+        <div class="overview-progress">
+          <div class="progress-bar big"><div class="progress-fill" style="width:${pct}%"></div></div>
+          <p class="progress-label-big">${ready}/${totalHooks} hook con immagine composta (${pct}%)</p>
+        </div>
+        <div class="overview-stats">
+          <div class="stats-card"><div class="num">${stats.chars_with_imgs}/${stats.chars_distinct}</div><div class="lab">Personaggi con img</div></div>
+          <div class="stats-card"><div class="num">${stats.locs_with_prompt}/${stats.locs_distinct}</div><div class="lab">Luoghi con prompt</div></div>
+          <div class="stats-card"><div class="num">${stats.locs_with_imgs}/${stats.locs_distinct}</div><div class="lab">Luoghi con img</div></div>
+          <div class="stats-card"><div class="num">${stats.objs_distinct}</div><div class="lab">Oggetti in scena</div></div>
+        </div>
+      </div>
+
+      <h2>Hook visivi (10 pagine)</h2>
+      <div class="hooks-table-wrap">
+        <table class="hooks-table">
+          <thead>
+            <tr>
+              <th>Pag</th>
+              <th>Hook</th>
+              <th>Testo (estratto)</th>
+              <th>Personaggi</th>
+              <th>Luoghi</th>
+              <th>Oggetti</th>
+              <th>Img</th>
+            </tr>
+          </thead>
+          <tbody>${hookRows}</tbody>
+        </table>
+      </div>
+
+      <h2>Audit risorse</h2>
+      <div class="audit-grid">
+        ${charPanel}
+        ${locPanel}
+        ${objPanel}
+      </div>
+
+      ${invHtml}
+    </div>`;
+
+  // Wire entity badges → click va alla scheda dell'entità
+  document.querySelectorAll(".entity-badge[data-id]").forEach(b => {
+    b.addEventListener("click", () => {
+      const id = b.getAttribute("data-id");
+      location.hash = `#/entity/${encodeURIComponent(id)}`;
+    });
+    b.style.cursor = "pointer";
+  });
+
+  scrollMainTop();
+}
+
+function renderEntityAuditPanel(label, entities) {
+  if (!entities || Object.keys(entities).length === 0) {
+    return `<div class="audit-panel"><h3>${escapeHtml(label)}</h3><p class="empty">Nessun ${escapeHtml(label.toLowerCase())} rilevato.</p></div>`;
+  }
+  const rows = Object.entries(entities).map(([id, a]) => {
+    if (!a.found) {
+      return `<li class="audit-row missing"><code>${escapeHtml(id)}</code> · <span class="status">non trovato in repo</span></li>`;
+    }
+    const flags = [];
+    if (a.scheda) flags.push(`<span class="flag ok">scheda</span>`);
+    if (a.prompt_grok) flags.push(`<span class="flag ok">prompt</span>`);
+    flags.push(`<span class="flag ${a.n_images > 0 ? 'ok' : 'warn'}">${a.n_images} img</span>`);
+    return `<li class="audit-row"><code>${escapeHtml(id)}</code> ${flags.join(" ")} <a class="link" href="#/entity/${encodeURIComponent(id)}">→</a></li>`;
+  }).join("");
+  return `<div class="audit-panel"><h3>${escapeHtml(label)} (${Object.keys(entities).length})</h3><ul class="audit-list">${rows}</ul></div>`;
 }
 
 /* GO */

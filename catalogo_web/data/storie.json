@@ -1,0 +1,4132 @@
+{
+  "generated_from": "scripts/build_storie_data.py",
+  "n_storie": 12,
+  "storie": [
+    {
+      "sid": "s01",
+      "title": "La Nebbia delle Montagne Gemelle",
+      "slug": "la_nebbia_delle_montagne_gemelle",
+      "cycle": "A",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
+      "stats": {
+        "chars_distinct": 7,
+        "chars_with_imgs": 5,
+        "locs_distinct": 3,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 2,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s01_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle brac...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "fiamma",
+              "gabriel",
+              "grunto",
+              "noah"
+            ],
+            "luoghi": [
+              "burrone",
+              "montagne_gemelle"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alz...",
+          "entities": {
+            "personaggi": [
+              "gabriel"
+            ],
+            "luoghi": [
+              "via_che_sale"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\nLe G...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\nNoah parlò per primo. «...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in a...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Poi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di non sentirsi più.\n\nI tre fratelli stettero zitti.",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [
+              "burrone"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "E lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fratelli non scapparono. Non si avvicinarono. Restarono in...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "grunto"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Tornarono giù prima che facesse buio.\n\nLe Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.\n\nI Pascoli erano vuoti. Il sentiero adesso ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s01_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.\n\nFuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una p...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "noah"
+            ],
+            "luoghi": [
+              "burrone"
+            ],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "grunto": {
+            "found": true,
+            "id": "grunto",
+            "path": "visual/personaggi/individuali/primari/grunto",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg"
+            ]
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "burrone": {
+            "found": true,
+            "id": "burrone",
+            "path": "visual/luoghi/quartiere_aria/burrone",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "montagne_gemelle": {
+            "found": true,
+            "id": "montagne_gemelle",
+            "path": "visual/luoghi/quartiere_aria/montagne_gemelle",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_che_sale": {
+            "found": true,
+            "id": "via_che_sale",
+            "path": "visual/luoghi/quartiere_aria/via_che_sale",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": true,
+        "path": "pipeline_narrativa/storie_finali/_inventory/s01_inventory.md",
+        "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/_inventory/s01_inventory.md",
+        "additions_summary": "Elementi nuovi introdotti dalla prosa definitiva s01 che vanno integrati nei file canonici del catalogo. Il grafo NON va modificato (read-only); le aggiunte vanno solo nelle schede `visual/`.\n\n### 1. 📝 Vapore alla finestra del Forno (h01)\n**Dove aggiungere:** `visual/luoghi/quartiere_fuoco/forno/scheda.md`, sezione \"Aspetto / forma — geografia generale\" sotto-area \"Esterno\", o \"Sala Laboratorio\" (atmosfera).\n**Cosa aggiungere:** \"Quando Fiamma impasta nelle ore fredde (alba inverno) si vede vapore farsi strada dalle finestre — il calore del forno + l'aria fredda esterna.\"\n**Priorità:** bassa (dettaglio atmosferico, ma utile per illustratore).\n\n### 2. 📝 Cornetto come variante della pagnotta (h10)\n**Dove aggiungere:** `visual/oggetti/pagnotta_forno/scheda.md`, sezione \"Variabilità ammessa\".\n**Cosa aggiungere:** \"Variante 'cornetto': pezzo più piccolo, forma allungata leggermente arcuata, stessa pasta. Fiamma ne fa per i cuccioli, da mangiare in piedi.\"\n**Priorità:** media (riappare in altre storie? verificare s06 e s08).\n\n### 3. 📝 Pietra dei tre passi conferma canonica (h03)\n**Dove aggiungere:** già canonical in `world_conventions.path_details.paths.via_che_sale.details.vcs_d01_pietra_dei_tre_passi`. Nessuna aggiunta necessaria.\n**Verifica:** la prosa definitiva ne legittima l'uso. ✅ Coerente.\n\n---",
+        "gaps_summary": "### Critici (bloccano la composizione di alcuni hook)\n\n1. **Gabriel + Elias: immagini canoniche mancanti** (per h01-h09 di s01 e per molte altre storie).\n   - **Azione:** Ray genera le 8 immagini (4 per Gabriel + 4 per Elias) con i prompt grok già pubblicati.\n\n2. **Via che Sale: prompt grok mancante** (per h03).\n   - **Azione:** generare `visual/luoghi/quartiere_aria/via_che_sale/prompt_grok.md` come fatto per gli altri luoghi.\n\n### Minori (gestibili in post-composizione)\n\n3. **Pascoli Alti — variante \"nebbia\"** (h04, h05): aggiungere come Veduta 2 al prompt esistente.\n4. **Burrone — variante \"vista dal bordo\"** (h06): aggiungere come Veduta 2.\n5. **Cengia in mezzaroccia con lichene** (h07): considerare prompt close-up specifico (può rientrare in burrone o montagne_gemelle).\n6. **Pascoli — variante \"tramonto/golden hour\"** (h09): aggiungere come variante atmosferica nei prompt esistenti.\n7. **Carriola di vimini Camminante** (h02): valutare se serve scheda oggetto + prompt grok dedicato.\n\n---",
+        "todo_summary": "| Item | Tipo | Priorità |\n|---|---|---|\n| Generare 4 img Gabriel | personaggio | 🔴 critica |\n| Generare 4 img Elias | personaggio | 🔴 critica |\n| Creare prompt grok via_che_sale | luogo | 🔴 critica |\n| Aggiungere variante \"nebbia\" pascoli_alti | luogo (scheda) | 🟡 minore |\n| Aggiungere variante \"vista bordo\" burrone | luogo (scheda) | 🟡 minore |\n| Aggiungere variante \"tramonto\" pascoli_alti | luogo (scheda) | 🟡 minore |\n| Aggiungere \"vapore finestra\" forno scheda | catalogo | 🟢 bassa |\n| Aggiungere \"cornetto\" variante pagnotta_forno | catalogo | 🟢 bassa |\n| Generare 1 img canonica Piazza del Villaggio | luogo | 🟡 utile (ricorrente) |\n| Generare 1 img canonica Pascoli Alti (basic) | luogo | 🟡 utile |\n| Generare 1 img canonica Burrone | luogo | 🟡 utile |\n| Generare 1 img canonica Grotta Grunto | luogo | 🟡 utile |\n| Generare 1 img canonica Montagne Gemelle | luogo | 🟢 nice-to-have (sfondo lontano) |\n| Comporre 10 immagini hook s01 (testo overlay + scena) | output finale | da definire dopo |\n\n---"
+      }
+    },
+    {
+      "sid": "s02",
+      "title": "Il Riflesso nella Pozza",
+      "slug": "il_riflesso_nella_pozza",
+      "cycle": "A",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s02_il_riflesso_nella_pozza.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s02_il_riflesso_nella_pozza.md",
+      "stats": {
+        "chars_distinct": 8,
+        "chars_with_imgs": 5,
+        "locs_distinct": 2,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 1,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s02_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\nEra un messaggio per i Pastori. Due frasi, brevi. Lo disse a voce. Poi lo ripeté. Poi lo fece ripetere a Elias, una parola alla ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "pastori",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias disse: «Andiamo.»",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "La Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno dei tre lo nominò. Lo videro e tirarono avanti.\n\nIl Ven...",
+          "entities": {
+            "personaggi": [
+              "cardo"
+            ],
+            "luoghi": [
+              "via_che_sale"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "A metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI tre si chinarono per bere.",
+          "entities": {
+            "personaggi": [
+              "pastori"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "E si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lui, nello specchio dell'acqua, Gabriel e Noah parevano più grandi di quanto erano. E ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [
+              "bocca"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Cominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\nPoi Elias si zittì. Si chinò. Toccò l'acqua col dito. Ritrasse la mano.\n\nDisse, basso: «Voi siete grandi davvero.»\n\nNessuno g...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Noah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secondo, ci furono solo pezzi di nuvole.\n\nUna folata di Vento...",
+          "entities": {
+            "personaggi": [
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Restarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\nIl bastoncino galleggiò qualche secondo. Si inclinò. Sparì sotto.\n\nI tre si rialzarono.",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Salirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\nElias disse il messaggio, le due frasi, esatte come Stria le aveva fatte ripetere. I Pastori ascoltarono. Fecero ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "pastori",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s02_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Tornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\nQuando i tre passarono accanto alla pozza, il sole era già basso. La superficie era di nuovo pia...",
+          "entities": {
+            "personaggi": [
+              "bru"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pastori": {
+            "found": true,
+            "id": "pastori",
+            "path": "visual/personaggi/collettivi/pastori",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "cardo": {
+            "found": true,
+            "id": "cardo",
+            "path": "visual/personaggi/individuali/cuccioli/cardo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg"
+            ]
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "via_che_sale": {
+            "found": true,
+            "id": "via_che_sale",
+            "path": "visual/luoghi/quartiere_aria/via_che_sale",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bocca": {
+            "found": true,
+            "id": "bocca",
+            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s03",
+      "title": "Il Pallone oltre la Foresta",
+      "slug": "il_pallone_oltre_la_foresta",
+      "cycle": "A",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s03_il_pallone_oltre_la_foresta.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s03_il_pallone_oltre_la_foresta.md",
+      "stats": {
+        "chars_distinct": 7,
+        "chars_with_imgs": 4,
+        "locs_distinct": 1,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 1,
+        "objs_distinct": 1,
+        "objs_with_prompt": 1,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s03_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\nI tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime ai...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah",
+              "salvia"
+            ],
+            "luoghi": [
+              "orti_del_cerchio"
+            ],
+            "oggetti": [
+              "pallone_di_stoffa_cucita"
+            ]
+          }
+        },
+        {
+          "hook_id": "s03_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Più in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, p...",
+          "entities": {
+            "personaggi": [
+              "salvia"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Noah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa...",
+          "entities": {
+            "personaggi": [
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole...",
+          "entities": {
+            "personaggi": [
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Allora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, diventa subito un'altra voce. Si fa piccola, come se la Forest...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Poi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca scricchia sotto qualcosa.\n\nI tre fratelli si stringono u...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Esce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\nÈ basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo ten...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "rovo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\nRovo non risponde subito. Fa due passi dentro la Foresta. Si ...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "gabriel",
+              "rovo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s03_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.\n\nIl sole è andato giù del tutto. Sopra i tet...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "salvia": {
+            "found": true,
+            "id": "salvia",
+            "path": "visual/personaggi/individuali/secondari/salvia",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
+            ]
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "rovo": {
+            "found": true,
+            "id": "rovo",
+            "path": "visual/personaggi/individuali/primari/rovo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "luoghi": {
+          "orti_del_cerchio": {
+            "found": true,
+            "id": "orti_del_cerchio",
+            "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {
+          "pallone_di_stoffa_cucita": {
+            "found": true,
+            "id": "pallone_di_stoffa_cucita",
+            "path": "visual/oggetti/pallone_di_stoffa_cucita",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        }
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s04",
+      "title": "Le Radici che Parlano",
+      "slug": "le_radici_che_parlano",
+      "cycle": "B",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s04_le_radici_che_parlano.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s04_le_radici_che_parlano.md",
+      "stats": {
+        "chars_distinct": 8,
+        "chars_with_imgs": 5,
+        "locs_distinct": 1,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 1,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s04_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Era una mattina di quelle che aprono. Il primo tepore vero dopo l'inverno, il sole che teneva caldo senza scaldare ancora.\n\nSalvia bussò alla porta dei fratelli col cesto già al fianco. «Mi accompagnate al margine? Devo prendere ortica.»\n\nAndarono volentieri. Attraversarono gli Orti del Cerchio, le ...",
+          "entities": {
+            "personaggi": [
+              "salvia"
+            ],
+            "luoghi": [
+              "orti_del_cerchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre si sedettero per terra. Gabriel guardava i Coltivatori in lontananza. Elias cercava un sasso tra l'erba.\n\nNoah si voltò verso la Foresta.\n\nUna farfalla. Blu. Uscì da un'ombra tra i tronchi e si posò sulla terra del margine, davanti a lui. Era molto blu.\n\nNoah si alzò.\n\nLa farfalla rialzò il vo...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel non se ne accorse subito.\n\nQuando si voltò, la farfalla non c'era più e Noah non c'era più.\n\n«Noah?»\n\nSi alzò. Elias si alzò con lui.\n\n«Noah!»\n\nGridarono insieme. Due, tre volte. Le mani a coppa, le bocche aperte verso gli alberi.\n\nLa voce uscì e si perse a cinque metri. Sopra di loro l'Intr...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel smise di gridare.\n\nRestò fermo, le mani lungo i fianchi. Elias guardava lui.\n\nPochi secondi.\n\n«Gridiamo no. Pensiamo.»",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Dentro, Noah si era fermato.\n\nGli alberi erano tutti uguali. Non sapeva più da che parte era venuto.\n\nSi sedette tra le radici di un grande albero. Un tronco vecchio, con radici grosse che uscivano dalla terra come nodi di legno duro. Si appoggiò di schiena.\n\nNon pianse. Aspettò.\n\nAveva il palmo des...",
+          "entities": {
+            "personaggi": [
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias si inginocchiò.\n\nDavanti a lui, una radice grossa usciva dalla terra e faceva un arco prima di rientrare. Una di quelle radici che sembrano un ponte basso. Ci appoggiò il palmo.\n\nCominciò a battere.\n\nTUM-tum-TUM-tum-TUM\n\nEra il loro ritmo. Lo avevano inventato loro tre, una sera, qualche tempo...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Noah, sotto la mano, sentì.\n\nNon con le orecchie. Sotto la mano. Una vibrazione bassa.\n\nTUM-tum-TUM-tum-TUM\n\nRiconobbe.\n\nSollevò il palmo. Lo riappoggiò. Poi alzò la mano e la riabbatté sulla terra.\n\nTUM-tum-TUM-tum-TUM\n\nLo stesso ritmo. Di risposta.",
+          "entities": {
+            "personaggi": [
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel camminò.\n\nNon guardava tra gli alberi. Sentiva con i piedi — il battito basso che trafilava dal terreno, dentro i polpacci. Faceva qualche passo, si fermava, ascoltava. Riprendeva.\n\nElias dietro non si mosse. Restò sulla radice. Era l'ancora.\n\nGabriel passò sotto un ramo basso curvato che at...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quando arrivò, Noah stava battendo più piano.\n\nAveva cominciato a battere più piano man mano che sentiva Gabriel avvicinarsi, per non confondergli la direzione. Gabriel non se ne accorse. Si abbassò. Noah lo vide.\n\nSi abbracciarono.\n\nElias arrivò poco dopo, sulle loro tracce. Aveva mollato la radice...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "cardo",
+              "elias",
+              "gabriel",
+              "noah",
+              "rovo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s04_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre camminarono verso il margine. Gabriel davanti, perché aveva sentito la strada all'andata. Noah in mezzo. Elias dietro. Ci misero qualche minuto.\n\nQuando uscirono dalla Foresta, erano nel posto giusto.\n\nSalvia stava uscendo dalla sua. Il cesto era pieno di foglie verde scuro di ortica giovane. ...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah",
+              "salvia"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "salvia": {
+            "found": true,
+            "id": "salvia",
+            "path": "visual/personaggi/individuali/secondari/salvia",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "cardo": {
+            "found": true,
+            "id": "cardo",
+            "path": "visual/personaggi/individuali/cuccioli/cardo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg"
+            ]
+          },
+          "rovo": {
+            "found": true,
+            "id": "rovo",
+            "path": "visual/personaggi/individuali/primari/rovo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "luoghi": {
+          "orti_del_cerchio": {
+            "found": true,
+            "id": "orti_del_cerchio",
+            "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s05",
+      "title": "Il Ponte di Rami",
+      "slug": "il_ponte_di_rami",
+      "cycle": "B",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s05_il_ponte_di_rami.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s05_il_ponte_di_rami.md",
+      "stats": {
+        "chars_distinct": 7,
+        "chars_with_imgs": 5,
+        "locs_distinct": 0,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 0,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s05_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Qualche settimana dopo. La primavera è piena adesso, il sole scalda la pelle quando ci batte addosso.\n\nBru non si volta. Si avvia per primo dentro la Foresta. Sceglie una direzione che da soli non sarebbe venuta in mente.\n\nSi fidano e camminano dietro.\n\nVenti minuti, forse trenta. La Foresta si apre...",
+          "entities": {
+            "personaggi": [
+              "bru"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Arrivano al torrente.\n\nL'acqua corre alta, gonfia di neve sciolta sulle Gemelle. Quattro o cinque metri fino all'altra sponda. Sull'altra sponda un sentiero comincia. Da questa parte, niente.\n\nSulla pietra in riva si vede ancora un cerchio di muschio, dove poggiava il vecchio tronco. La piena lo ha ...",
+          "entities": {
+            "personaggi": [
+              "bru"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Stanno per dire che si torna a casa.\n\nE poi, da qualche parte verso il margine, attraverso le chiome:\n\n**TOK-TOK-TOK.**\n\nPausa.\n\n**TOK-TOK-TOK.**\n\nTre colpi secchi. Un ritmo che riconoscono. L'Intreccio lo porta dritto, senza sbavature.\n\nNessuno dice il nome. Nessuno deve.\n\nCinquanta metri, forse. C...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Nodo è accosciato sulla scaletta dei Coltivatori. La cresta rossa si vede da prima di vederlo intero. Al braccio, la matassa di corda chiara.\n\nSta legando un nodo. Non alza la testa.\n\nI fratelli si fermano a un passo. Aspettano.\n\nNodo finisce il giro. Tira. Verifica. Solo allora alza la testa.\n\n«Cos...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quando Elias finisce, Nodo si toglie un pezzo di corda dalla matassa. Lo misura tra le dita. Lo taglia con un colpo secco di lama.\n\nPorge la corda a Elias.\n\nInsieme alla corda, gli fa vedere il marinaro — una volta sola, lentamente. Il giro intorno alla pertica. Il passaggio sotto. La mezza chiave f...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Tornano al torrente. Cercano pertiche.\n\nBru cammina avanti. Si ferma davanti a un ramo caduto, lo indica col muso. Riparte. Si ferma davanti a un altro. Riparte ancora.\n\nNoah corre, raccoglie. «Questo! E questo!» Solleva un rametto sottile. Lo scuote. «Anche questo è grosso!»\n\nNon lo è. Bru passa ol...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "bru",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quattro pertiche, posate parallele da sponda a sponda.\n\nElias prova il primo nodo. La corda gli si imbroglia. Sbaglia. La scioglie.\n\nRiprova. Sbaglia di nuovo.\n\nAlla terza riesce. Il giro, il passaggio, la mezza chiave. Tira. Tiene.\n\nGabriel tiene ferme le pertiche perché il legno scivola sul muschi...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "elias",
+              "gabriel",
+              "noah",
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quando il ponte è finito, Nodo è ancora cinquanta metri più in là. Il TOK-TOK-TOK continua, regolare.\n\nCamminano fino a lui. Nodo alza la testa, guarda il ponte da lontano per un secondo. Non si muove.\n\n«È vostro. Provatelo voi.»\n\nSi rimette al lavoro.\n\nTornano.\n\nElias passa per primo. Le braccia un...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "elias",
+              "gabriel",
+              "noah",
+              "nodo",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminano cento, centocinquanta metri dentro la Foresta dall'altra parte.\n\nTrovano la radura.\n\nÈ un cerchio d'erba. I pini intorno, alti e dritti. La luce cade verticale tra le chiome, e l'erba sotto è quasi gialla.\n\nBru entra per primo. Si siede al centro.\n\nI fratelli si siedono in cerchio intorno ...",
+          "entities": {
+            "personaggi": [
+              "bru"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s05_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Tornano. Riattraversano il ponte nello stesso ordine.\n\nQuando arrivano sulla sponda di partenza, Nodo se n'è già andato.\n\nDella scaletta dei Coltivatori, niente — l'ha portata via con sé.\n\nIl TOK-TOK-TOK arriva da molto lontano adesso, da un'altra parte della Foresta.\n\nNon è venuto a vedere il colla...",
+          "entities": {
+            "personaggi": [
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "nodo": {
+            "found": true,
+            "id": "nodo",
+            "path": "visual/personaggi/individuali/secondari/nodo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {},
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s06",
+      "title": "Il Dono per Mèmolo",
+      "slug": "il_dono_per_memolo",
+      "cycle": "B",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s06_il_dono_per_memolo.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s06_il_dono_per_memolo.md",
+      "stats": {
+        "chars_distinct": 10,
+        "chars_with_imgs": 7,
+        "locs_distinct": 3,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 1,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s06_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sull'Isola dei Tre Venti, certe tristezze non si dicono. Si vedono dalla sciarpa.\n\nA scuola, Stria scrive numeri. È di spalle. Le orecchie dritte sopra lo scialle.\n\nPun guarda fuori dalla finestra. Non guarda la lavagna.\n\nSi china verso Gabriel. Lo dice piano.\n\n«Papà ha perso una cosa. Non si ricord...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "pun",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Mèmolo è in piazza. Trotterella più piano del solito.\n\nLa sciarpa storta. Si ferma. La sistema. Riparte.\n\nLa sciarpa storta. Si ferma di nuovo. La sistema. Riparte.\n\nLa sciarpa storta.\n\nUna finestra in piazza è accesa. Qualcuno, dentro, vede e non interviene.\n\nSopra, il Vento Taglio passa alto, dove...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Al Forno, Fiamma impasta. Le maniche tirate su, le mani bianche fino al gomito.\n\n«Mèmolo? Sì sì è passato, è passato presto stamattina, ha preso un cornetto, lo ha mangiato qua sulla porta, ha detto qualcosa che non ho capito bene — qualcosa tipo \"la scatoletta\", \"dov'è la scatoletta\", non sapevo di...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminano. Verso ovest.\n\nUna camminante attraversa la piazza con la carriola. Una mano si stacca dal manico, sale, ricade. Gabriel alza la sua. La carriola passa.\n\nEra una camminanti — quale, oggi? Una talpa.\n\nSul sentiero degli Orti, il muretto è crollato in un tratto. Tre o quattro pietre cadute c...",
+          "entities": {
+            "personaggi": [
+              "camminanti",
+              "gabriel",
+              "noah",
+              "toba"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Salvia ha le mani occupate. Foglie d'ortica seccate da una parte, foglie ancora verdi dall'altra.\n\nNon si ferma.\n\n«Mèmolo è passato. Stamattina, dopo il forno, sì. Ha chiesto se avevo visto una cosa piccola — una scatoletta? Un sacchettino? Non sono riuscita a capire. Le mie ortiche maturano oggi, h...",
+          "entities": {
+            "personaggi": [
+              "salvia"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Zolla è seduto sul gradino di casa sua. Mette le ghiande in fila per terra, una accanto all'altra.\n\n«Mèmolo? Sì. È passato da qua poco fa. Stagione delle ghiande: quattordici raccolte stamattina. Ha guardato per terra mentre passava. Cercava qualcosa di piccolo. Non glielo ho chiesto. Quattordici, h...",
+          "entities": {
+            "personaggi": [
+              "noah",
+              "zolla"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "A mezzogiorno la piazza diventa il Mercato.\n\nLe bancarelle sono fuori. Le Vecchie del Mercato sono sedute sulla panca di pietra, in fondo, all'ombra. Sono tre. Di età diverse. Non parlano molto. Non parlano agli estranei.\n\nI fratelli si avvicinano. Si fermano davanti alla panca.\n\n«Avete visto Mèmolo...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [
+              "albero_vecchio",
+              "cespuglio_dietro_albero_vecchio",
+              "panca_di_pietra"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias va verso il cespuglio. Gabriel e Noah lo seguono. Aprono i rami bassi.\n\nPer terra, tra le foglie, una scatoletta di legno scuro. Piccola. Il coperchio si è aperto a metà nella caduta.\n\nElias si abbassa. La apre del tutto.\n\nDentro, un dente da latte. Bianco. Piccolo. Un dente di cucciolo qualun...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il cortile davanti a casa di Mèmolo è un pezzo di terra battuta con un albero piccolo al centro. L'albero ha tre rami in croce e una foglia sola che ancora si tiene dall'inverno.\n\nMèmolo è lì. Sciarpa di sbieco. Sta mormorando.\n\nPun gli mette la scatoletta in mano. Mèmolo la apre. Vede il dente. Rid...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s06_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Pun resta col padre.\n\nI tre fratelli si avviano. Il sole è virato al giallo caldo del pomeriggio. Sui tetti, il primo Mulinello leggero della sera.\n\nSull'isola, certi giri si fanno per cercare una cosa e si chiudono restituendola a qualcun altro. Capita.\n\nNoah si fruga nel taschino. Tira fuori una m...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          },
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "camminanti": {
+            "found": true,
+            "id": "camminanti",
+            "path": "visual/personaggi/collettivi/camminanti",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "toba": {
+            "found": true,
+            "id": "toba",
+            "path": "visual/personaggi/individuali/cuccioli/toba",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg"
+            ]
+          },
+          "salvia": {
+            "found": true,
+            "id": "salvia",
+            "path": "visual/personaggi/individuali/secondari/salvia",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
+            ]
+          },
+          "zolla": {
+            "found": true,
+            "id": "zolla",
+            "path": "visual/personaggi/individuali/secondari/zolla",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_raccolta.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "luoghi": {
+          "albero_vecchio": {
+            "found": true,
+            "id": "albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "cespuglio_dietro_albero_vecchio": {
+            "found": true,
+            "id": "cespuglio_dietro_albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/cespuglio_dietro_albero_vecchio",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "panca_di_pietra": {
+            "found": true,
+            "id": "panca_di_pietra",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/panca_di_pietra",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s07",
+      "title": "La Zattera dei Tre Rametti",
+      "slug": "la_zattera_dei_tre_rametti",
+      "cycle": "C",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s07_la_zattera_dei_tre_rametti.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s07_la_zattera_dei_tre_rametti.md",
+      "stats": {
+        "chars_distinct": 9,
+        "chars_with_imgs": 6,
+        "locs_distinct": 3,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 2,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s07_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quella mattina, al guado di pietre piatte, l'aria stava ferma.\n\nSolo l'acqua sulle pietre. Sotto il sole già caldo, Elias sedeva con le mani in grembo. Tre rametti, presi la sera prima agli Orti. Un filo d'erba lunga tenace, ancora flessibile dalla notte.\n\nTre giri. Sotto. Mezza chiave. Tira.\n\nLe ma...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah",
+              "nodo"
+            ],
+            "luoghi": [
+              "guado_di_pietre_piatte"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias aprì la mano. La zattera stava nel palmo. Larga come una mano, lunga come tre dita.\n\n«Dove andrà?» chiese Gabriel.\n\n«Vediamo,» disse Noah.\n\nI tre allungarono un dito. Tre dita si toccarono sul legno chiaro. Per un attimo nessuno la mosse, perché era piccola, e perché era loro.\n\nPoi Elias la po...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminavano in fila sulla riva ovest. Era l'unico lato che andava verso la Bocca — l'isola fa così, il Fiume gira, e l'acqua porta le cose al mare.\n\nA sinistra la Foresta Intrecciata, scura, vista da fuori. Tra le chiome alte passava l'Intreccio. In basso, niente — solo il sentiero ocra e il rumore ...",
+          "entities": {
+            "personaggi": [
+              "rovo"
+            ],
+            "luoghi": [
+              "bocca",
+              "foresta_intrecciata"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "La Foresta finì. Cominciarono gli Orti.\n\nDall'altra parte del campo si vedevano i Coltivatori — chiazze chiare nella terra ocra, chini sui filari. La cantilena arrivava bassa, da lontano, mezza inghiottita dall'aria. Quando i fratelli passarono, la cantilena scese di un tono per un battito, poi torn...",
+          "entities": {
+            "personaggi": [
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quasi mezzogiorno. Il sole era quasi sopra di loro, e l'ombra dei fratelli sotto i piedi era corta.\n\nDavanti, il letto del Fiume si stringeva. Due grossi sassi affioravano dall'acqua, uno a destra e uno a sinistra. In mezzo, l'acqua si comprimeva. Faceva schiuma alla base.\n\nI tre rallentarono. Non p...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "La zattera si incastrò tra i due sassi. La corrente premeva. L'acqua passava sotto, intorno, sopra.\n\nNoah guardò Elias. Gli passò il bastoncino senza dire niente. Elias lo prese. Si chinò sulla riva, allungò il bastoncino, toccò il rametto incastrato.\n\nL'erba tenace si tirò. Si tirò ancora. Sotto la...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "noah",
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I tre fratelli si fermarono sulla riva.\n\nNoah guardò i due rametti scendere. Non pianse.\n\nElias guardò il bastoncino in mano. Non se stesso. Disse, basso: «I sassi tenevano. Non c'era modo.»\n\nGabriel guardò Noah. Poi guardò l'acqua.\n\n«Andiamo avanti,» disse.\n\nNoah disse, dopo: «Però due rametti vann...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminarono ancora a lungo.\n\nIl verde si fece più chiaro. La terra cominciò a sapere di sale. L'aria cambiò. Davanti a loro, in fondo, qualcosa di azzurro cresceva tra le rive.\n\nLa zattera a due rametti andava avanti, intera, un po' più veloce di prima. Noah era un passo più avanti del solito. Aveva...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Arrivarono al Pontile quando il sole era basso.\n\nIl legno era scuro, consumato dal sale. I pali cigolavano piano, perché il Mulinello cominciava ad alzarsi dalla parte del mare. Bartolo era nella barca, semi-disteso, gli occhi aperti. Toba sedeva sul bordo, vicino al padre, e guardava l'acqua.\n\nSull...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "toba"
+            ],
+            "luoghi": [
+              "bocca"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s07_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il Mulinello entrò nella Bocca dal mare e prese la zattera. La girò un attimo. La spinse fuori, oltre i due promontori.\n\nLontano, sulla scogliera est, un uccello nero stava con le ali aperte al sole basso. Una croce contro il cielo arancio. Era lì per fatti suoi.\n\nToba chiese a Noah, non a suo padre...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "noah",
+              "pun",
+              "toba"
+            ],
+            "luoghi": [
+              "bocca"
+            ],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "nodo": {
+            "found": true,
+            "id": "nodo",
+            "path": "visual/personaggi/individuali/secondari/nodo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "rovo": {
+            "found": true,
+            "id": "rovo",
+            "path": "visual/personaggi/individuali/primari/rovo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bartolo": {
+            "found": true,
+            "id": "bartolo",
+            "path": "visual/personaggi/individuali/primari/bartolo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
+            ]
+          },
+          "toba": {
+            "found": true,
+            "id": "toba",
+            "path": "visual/personaggi/individuali/cuccioli/toba",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg"
+            ]
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "guado_di_pietre_piatte": {
+            "found": true,
+            "id": "guado_di_pietre_piatte",
+            "path": "visual/luoghi/perimetro/fiume_che_gira/guado_di_pietre_piatte",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bocca": {
+            "found": true,
+            "id": "bocca",
+            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "foresta_intrecciata": {
+            "found": true,
+            "id": "foresta_intrecciata",
+            "path": "visual/luoghi/quartiere_terra/foresta_intrecciata",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s08",
+      "title": "L'Albero che Cadde di Sera",
+      "slug": "lalbero_che_cadde_di_sera",
+      "cycle": "C",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s08_lalbero_che_cadde_di_sera.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s08_lalbero_che_cadde_di_sera.md",
+      "stats": {
+        "chars_distinct": 10,
+        "chars_with_imgs": 6,
+        "locs_distinct": 3,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 1,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s08_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Era il pomeriggio più fermo dell'estate. Fuori dalla porta del Forno la luce era bianca, schiacciata, senza vento. Dentro era ocra di farina e brace.\n\nFiamma aveva tirato fuori una sfoglia nuova e l'aveva messa davanti a loro, sul banco. «Assaggiate.»\n\nI tre fratelli stavano finendo il cornetto di p...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "fiamma",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Poi il cielo cambiò colore. Diventò piombo in pochi battiti.\n\nLe imposte cominciarono a sbattere. Una folata aprì la porta di colpo. Liù arrivò dentro la folata, si aggrappò al cornicione del Forno con tutta la forza che aveva — frrr — e parlò veloce, senza posarsi:\n\n«Il vento sale forte stasera. Fo...",
+          "entities": {
+            "personaggi": [
+              "fiamma"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Uscirono.\n\nLa piazza era quasi vuota. Qualcuno correva a chiudere una finestra; un'altra finestra sbatteva e basta. L'Albero Vecchio al centro non si muoveva nello stesso modo dei suoi rami — il tronco grosso era fermo, le punte sopra invece andavano in tutti i versi.\n\nI tre attraversarono piegati i...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [
+              "albero_vecchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sulla via della scuola, dal lato nord, c'era il grande noce. Vecchio. Grosso. Faceva ombra alla mattina sui cuccioli che andavano a lezione.\n\nSi piegò.\n\nSi raddrizzò.\n\nSi piegò ancora, di più. La biforcazione della chioma cigolò sotto la spinta. Sotto, la via era sgombra: i cuccioli erano a casa, er...",
+          "entities": {
+            "personaggi": [
+              "stria"
+            ],
+            "luoghi": [
+              "via_scuola"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "CRACK.\n\nIl noce si spaccò alla biforcazione. Il ramo principale cadde di traverso. Toccò per primo il bordo in pietra del Pozzo — quello alzato, quello che fa muretto. La pietra tenne. Il ramo rimbalzò contro la leva e deviò. La massa intera della chioma, invece di crollare in piazza, scartò di lato...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "mercato_del_mezzogiorno"
+            ],
+            "luoghi": [
+              "panca_di_pietra",
+              "via_scuola"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Mèmolo mormorò: «Aspetta, ero qui. Ero qui poco fa. Ero qui.»\n\nGabriel andò da lui. Ai piedi di Mèmolo c'era un mucchietto di foglie spezzate, finite lì col vento. Le spostò col piede, gentilmente, come si sposterebbero foglie da un tappeto. Poi si sedette sul bordo del Pozzo. Tirò Mèmolo per la man...",
+          "entities": {
+            "personaggi": [
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Nello stesso istante Gabriel alzò gli occhi.\n\nTra le foglie dei rami caduti, dietro il Pozzo, c'era solo un varco — un piccolo spazio fra due rami spezzati. Attraverso il varco passò il verde della maglia di Noah, un movimento, due mani che posavano qualcosa.\n\nNon vide Noah direttamente.\n\nVide tracc...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il crepuscolo cadeva. Cominciarono ad arrivare i mantenitori, con scale a pioli e lanterne. Erano i mantenitori — chi, oggi? Un'arvicola, un ghiro, una faina. TOK, una corda contro un legno: il loro saluto. I tre fratelli annuirono.\n\nNodo arrivò con loro, la matassa al braccio. Vide Elias. Gli fece ...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "mantenitori",
+              "nodo",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I Mantenitori restarono al lavoro fino a notte sotto le lanterne. I rami furono spezzati in pezzi, accatastati sotto la tettoia del Forno per essere lasciati a riposare. I Mantenitori sapevano cosa fare con il legno fresco di noce. Lo facevano e basta.\n\nA un certo punto Fiamma uscì sulla soglia e mi...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "fiamma",
+              "gabriel",
+              "mantenitori",
+              "noah",
+              "nodo",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s08_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "La mattina dopo l'isola riprese.\n\nL'aria era pulita come dopo una lavata. Stria atterrò sul tetto della scuola come ogni mattina, si rimise lo scialle sulle spalle prima di scendere. Dagli Orti, lontana, la cantilena dei Coltivatori era ricominciata.\n\nSotto la tettoia del Forno, il legno del noce st...",
+          "entities": {
+            "personaggi": [
+              "noah",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "mercato_del_mezzogiorno": {
+            "found": true,
+            "id": "mercato_del_mezzogiorno",
+            "path": "visual/personaggi/collettivi/mercato_del_mezzogiorno",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "mantenitori": {
+            "found": true,
+            "id": "mantenitori",
+            "path": "visual/personaggi/collettivi/mantenitori",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "nodo": {
+            "found": true,
+            "id": "nodo",
+            "path": "visual/personaggi/individuali/secondari/nodo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "albero_vecchio": {
+            "found": true,
+            "id": "albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_scuola": {
+            "found": true,
+            "id": "via_scuola",
+            "path": "visual/luoghi/villaggio_centrale/via_scuola",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "panca_di_pietra": {
+            "found": true,
+            "id": "panca_di_pietra",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/panca_di_pietra",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s09",
+      "title": "Quel Pomeriggio di Ottobre",
+      "slug": "quel_pomeriggio_di_ottobre",
+      "cycle": "C",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s09_quel_pomeriggio_di_ottobre.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s09_quel_pomeriggio_di_ottobre.md",
+      "stats": {
+        "chars_distinct": 12,
+        "chars_with_imgs": 10,
+        "locs_distinct": 1,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 0,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s09_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sull'isola non si fanno feste per i compleanni. C'è il dolce di castagne, e basta — Fiamma lo fa con le prime castagne dell'anno, una volta per ogni bambino, il giorno suo.\n\nMèmolo lo sa prima di tutti, sui giorni dei bambini. Sulle altre cose si confonde, su quelli no.\n\nStamattina è arrivato al For...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "zolla"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "«Tu cosa farai oggi che hai un anno in più?»\n\nStria era sulla porta della scuola. Aveva la testa un po' inclinata.\n\n«Boh,» disse Gabriel.\n\nI cuccioli sentirono. Erano già ai banchi — Pun, Toba, Bru, Cardo. Liù tra le travi. Dalla porta aperta entrava un'aria di Taglio leggero, e una foglia secca fin...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "cardo",
+              "fiamma",
+              "gabriel",
+              "pun",
+              "stria",
+              "toba"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "A metà pomeriggio Gabriel passò al Forno da solo.\n\nMèmolo era sui gradini fuori. Quando vide Gabriel si infilò la mano nella tasca della giacca lunga. Cercava qualcosa. Tirò fuori una castagna cruda — di quelle del cesto di Zolla, una che gli era rimasta in tasca dal mattino e che doveva restituire ...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "gabriel",
+              "zolla"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Verso il tardo pomeriggio i tre fratelli erano a casa.\n\nElias diede a Gabriel un cordino nuovo per la sciarpa che si era sfilacciata. «Possiamo metterlo dopo, se vuoi.» Gabriel annuì.\n\nPoi fu il turno di Noah. Aveva le mani dietro la schiena. Le tirò fuori. Un braccialetto. Lo aveva fatto lui — si v...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah",
+              "nodo"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel prese il braccialetto. Lo guardò.\n\n«Grazie.»\n\nSorrise, poi si girò verso il tavolo a prendere una caraffa — una caraffa, un piatto, una scusa qualunque per voltarsi.\n\nPer un attimo non guardò nessuno.\n\nPosò il braccialetto sul tavolo, accanto al suo posto. Lo lasciò lì.\n\nElias vide. Vide Gab...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Verso sera andarono al Forno tutti e tre a prendere il dolce.\n\nFiamma era in modalità chiacchiera. «Oh ma guarda chi è arrivato il festeggiato, è grosso adesso eh, alza la testa che ti vedo male da qua, com'è sta giornata, hai fatto cose o niente, Mèmolo è già passato due volte, una stamattina e una...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "gabriel"
+            ],
+            "luoghi": [
+              "via_dell_alba"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "A casa misero il dolce sul tavolo. Era scuro, lucido di miele, un colore tra il bordeaux e il marrone.\n\nGabriel aveva il coltello in mano. Cominciò a tagliare.\n\nLa prima fetta — piccola. Era per Noah. La seconda — media. Era per Elias. La terza — grande. Era per sé.\n\nLo fece quasi senza pensare. Lo ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel, di riflesso: «Sei il piccolo.»\n\nNoah: «Non sono più piccolo come prima.»\n\nPausa.\n\nGabriel guardò Noah. Guardò la fetta nel piatto. Guardò Elias — Elias aveva lo sguardo basso, ma non al piatto. Era un guardare-non-guardare.\n\nIl Mulinello della sera passò dalla finestra aperta. Le tende si m...",
+          "entities": {
+            "personaggi": [
+              "cardo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel mangiò la sua fetta in silenzio mentre Noah ed Elias parlavano. Mangiò fino in fondo. I piatti restarono sul tavolo, briciole, lanterna appena accesa su un mobile laterale.\n\nNoah rideva di un'altra cosa che aveva detto Elias.\n\nGabriel allungò la mano. Prese il braccialetto che era ancora lì,...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s09_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il Mulinello continuava a passare attraverso le finestre aperte. Le tende si muovevano. Una foglia gialla, già caduta da qualche albero del cortile, era arrivata fin dentro casa col vento e si era posata sul davanzale.\n\nGabriel teneva il braccialetto in mano.\n\nSull'isola, in ottobre, capita che il v...",
+          "entities": {
+            "personaggi": [
+              "gabriel"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "zolla": {
+            "found": true,
+            "id": "zolla",
+            "path": "visual/personaggi/individuali/secondari/zolla",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_raccolta.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "cardo": {
+            "found": true,
+            "id": "cardo",
+            "path": "visual/personaggi/individuali/cuccioli/cardo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          },
+          "toba": {
+            "found": true,
+            "id": "toba",
+            "path": "visual/personaggi/individuali/cuccioli/toba",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "nodo": {
+            "found": true,
+            "id": "nodo",
+            "path": "visual/personaggi/individuali/secondari/nodo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "via_dell_alba": {
+            "found": true,
+            "id": "via_dell_alba",
+            "path": "visual/luoghi/quartiere_fuoco/via_dell_alba",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s10",
+      "title": "La Notte senza Luna",
+      "slug": "la_notte_senza_luna",
+      "cycle": "D",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s10_la_notte_senza_luna.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s10_la_notte_senza_luna.md",
+      "stats": {
+        "chars_distinct": 8,
+        "chars_with_imgs": 6,
+        "locs_distinct": 5,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 3,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s10_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Era notte fonda. La luna era nuova — quelle notti in cui il cielo non manda niente, e dentro le case è buio come sotto una coperta.\n\nNella stanza dei tre fratelli dormivano in due. Gabriel respirava piano. Elias anche. Noah no.\n\nNoah era sdraiato sul fianco. Aveva gli occhi aperti. Sul comodino, vic...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Passò del tempo.\n\nPoi Noah disse, ad alta voce nel buio:\n\n«Ho paura.»\n\nSilenzio.\n\n«Qui è buio.»\n\nCinque parole in tutto. Due frasi. Una pausa nel mezzo.\n\nGabriel, nel letto accanto, era sveglio. Non si sa se si era svegliato adesso o prima. Tese la mano nel buio, nello spazio fra i due letti, e cerc...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias si alzò. Non gliel'aveva chiesto nessuno.\n\nSi mise i sandali. Uscì dalla stanza. Il legno del corridoio fece scric.\n\nIn cucina aprì un cassetto piano. Accese un fiammifero. Accese la lanterna.\n\nPoi prese un panno di lana e lo girò intorno al vetro, in modo che la luce uscisse solo dal basso, i...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Gabriel non lasciò la mano di Noah. Lo aiutò ad alzarsi così, con una mano sola.\n\nSi vestirono sopra il pigiama. Calze. Sandali. Un mantello di lana ognuno.\n\nElias teneva la lanterna. Il cerchio di luce stava sui sandali.\n\nUscirono dalla stanza. Uscirono dalla casa.\n\nErano in tre, e nessuno parlava.",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Fuori era buio pieno. La Piazza non si vedeva — solo le sagome più scure delle case più vicine.\n\nAttraversarono. L'Albero Vecchio era una sagoma più nera del nero. Il Pozzo, una macchia grigia chiara. Mèmolo dormiva da qualche parte.\n\nL'angolo del viottolo dove di sera il Mulinello fa sempre un giro...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [
+              "albero_vecchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Imboccarono la Via del Pontile. La via scendeva. Si camminava in fila: Elias davanti con la lanterna, Gabriel in mezzo che teneva la mano di Noah, Noah dietro.\n\nIl cerchio di luce era piccolo. Illuminava i sassi del sentiero per mezzo metro davanti, e tre paia di scarpe.\n\nNiente alberi. Niente case....",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [
+              "via_del_pontile"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminavano da molto. La via girava, scendeva ancora. L'aria cominciava a sapere di sale.\n\nA un certo punto, alle loro spalle, lontanissimo, dall'alto, si sentì un suono — tot tot tot — di zoccolo su pietra. Durò due secondi e si spense.\n\nVeniva dalle Montagne Gemelle.\n\nNessuno disse niente. Nessuno...",
+          "entities": {
+            "personaggi": [
+              "pun"
+            ],
+            "luoghi": [
+              "montagne_gemelle"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il cielo cominciò a cambiare. Non in fretta. Da nero diventò nero un po' più chiaro. Poi grigio scurissimo. Poi grigio.\n\nLe sagome delle cose tornarono.\n\nSi vedeva il bordo della via. Si vedeva il fiato dei tre fratelli, una nuvoletta corta davanti a ognuno.\n\nLa lanterna di Elias era ancora accesa, ...",
+          "entities": {
+            "personaggi": [
+              "elias"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Quando arrivarono al Pontile, era grigio-rosa. Il sole non era ancora sorto — il cielo era coperto, era una di quelle albe senza stelle e senza sole netto, solo luce che cresce.\n\nL'acqua della Bocca era blu-grigio brumosa.\n\nLa barca di Bartolo era legata. Bartolo era dentro la barca. Aveva la copert...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "bru"
+            ],
+            "luoghi": [
+              "bocca"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s10_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias soffiò sulla lanterna. La spense. Tolse il panno di lana e lo posò sul pontile, ad asciugare.\n\nI tre si sedettero sulla panca, vicino alla barca. Bartolo spostò un poco la testa — fece spazio. Si sedettero in fila: Elias, Noah in mezzo, Gabriel. La mano di Gabriel non lasciò la mano di Noah fi...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "bartolo",
+              "elias",
+              "fiamma",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [
+              "via_dell_alba"
+            ],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "bartolo": {
+            "found": true,
+            "id": "bartolo",
+            "path": "visual/personaggi/individuali/primari/bartolo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "albero_vecchio": {
+            "found": true,
+            "id": "albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_del_pontile": {
+            "found": true,
+            "id": "via_del_pontile",
+            "path": "visual/luoghi/quartiere_acqua/via_del_pontile",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "montagne_gemelle": {
+            "found": true,
+            "id": "montagne_gemelle",
+            "path": "visual/luoghi/quartiere_aria/montagne_gemelle",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bocca": {
+            "found": true,
+            "id": "bocca",
+            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_dell_alba": {
+            "found": true,
+            "id": "via_dell_alba",
+            "path": "visual/luoghi/quartiere_fuoco/via_dell_alba",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s11",
+      "title": "La Festa del Raccolto",
+      "slug": "la_festa_del_raccolto",
+      "cycle": "D",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s11_la_festa_del_raccolto.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s11_la_festa_del_raccolto.md",
+      "stats": {
+        "chars_distinct": 15,
+        "chars_with_imgs": 10,
+        "locs_distinct": 4,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 3,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s11_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "L'autunno era pieno. Le castagne erano cadute tutte. Le ghiande, anche. L'erba alta degli Orti era già stata tagliata e legata.\n\nNegli Orti del Cerchio, all'alba, i Coltivatori chiudevano i sacchi. Avevano il fiato bianco davanti alla bocca. Una fila di sacchi in piedi, sui filari, e il sole basso d...",
+          "entities": {
+            "personaggi": [
+              "pastori",
+              "pun"
+            ],
+            "luoghi": [
+              "bocca",
+              "orti_del_cerchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "A mezzogiorno la piazza era piena.\n\nSotto l'Albero Vecchio, Nodo aveva messo su un banco improvvisato. Lo stava finendo di sistemare. **TOK-TOK-TOK.** Elias gli passava una corda intrecciata da un lato — l'aveva fatta lui, mani svelte, il nodo che Nodo gli aveva insegnato tempo fa. Non disse niente....",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "fiamma",
+              "nodo",
+              "salvia",
+              "stria"
+            ],
+            "luoghi": [
+              "albero_vecchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Stria si fermò davanti ai tre fratelli. Aprì la scatola.\n\nTirò fuori i coni di carta — uno per ogni cucciolo, uno per ogni bambino. Erano dipinti a mano, con strisce, puntini, piccoli motivi. A Pun ne diede uno per Mèmolo. A Cardo uno per sé. A Toba uno per Bartolo. A Bru uno per Rovo.\n\nA Gabriel, u...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "bru",
+              "cardo",
+              "elias",
+              "gabriel",
+              "noah",
+              "pun",
+              "rovo",
+              "stria",
+              "toba"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "In fondo alla piazza i Pastori avevano posato un sacco grosso di castagne. Era una di quelle cose che si facevano alla festa — qualcuno provava a sollevarlo per scherzo. Uno l'aveva alzato fino al ginocchio. Un altro fino alla cintura. Risate.\n\nGabriel passò di lì.\n\n«Forza, prova!»\n\nGabriel rise. Si...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "pastori"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Tra i banchi e le case più fuori, i camminanti facevano avanti e indietro. Erano i camminanti — chi, oggi? Una capinera, un'allodola, una marmotta. Le carriole entravano cariche e uscivano vuote. Una mano si staccava dal manico ogni volta che passavano vicino ai fratelli. I tre alzavano una mano in ...",
+          "entities": {
+            "personaggi": [
+              "camminanti",
+              "cardo",
+              "elias",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Il pomeriggio scendeva. La festa rallentava. I banchi cominciavano a chiudere.\n\nSotto l'Albero Vecchio, sulla Panca di Pietra, le Vecchie del Mercato erano sedute. Tre. Una al centro, due ai lati. Non avevano parlato durante la festa. Non parlavano mai, in realtà.\n\nElias passò accanto alla Panca. Av...",
+          "entities": {
+            "personaggi": [
+              "elias"
+            ],
+            "luoghi": [
+              "albero_vecchio",
+              "panca_di_pietra"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Elias si fermò.\n\nRestò fermo qualche istante. Non sapeva esattamente cosa era successo. Sapeva che era successo qualcosa.\n\nTirò il fiato.\n\n«Va bene.»\n\nLo disse piano. Non a nessuno in particolare. Lo disse e basta.\n\nAveva ancora i quattro coni in mano. Ne contò di nuovo le punte di carta — uno, due,...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "pun"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Andò al banco di Fiamma. Gabriel e Noah erano lì, mangiavano una fetta di dolce di castagne. Fiamma vide Elias arrivare, gli mise in mano un pezzo, gli sistemò una ciocca con la mano infarinata. «Eh, l'anno che raccoglie. Mani che sanno.» Non aspettò risposta. Tornò a infornare.\n\nElias si sedette. P...",
+          "entities": {
+            "personaggi": [
+              "bru",
+              "elias",
+              "fiamma",
+              "gabriel",
+              "noah",
+              "rovo",
+              "stria"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Al banco di Bartolo si avvicinò qualcuna. Era una pescatrice delle case basse — quale, oggi? Una rondine di mare. Bartolo fece il cenno del mento e inclinò il banco. Lei prese un frutto strano e ricambiò il cenno. Andò via senza parole.\n\nBartolo era arrivato a metà pomeriggio dal Pontile. Aveva posa...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "fiamma"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s11_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Cominciò a calare il sole. Il Mulinello passava basso sulla piazza. I banchi si smontavano. Le lanterne ai bordi si accendevano una a una.\n\nI tre fratelli camminavano verso casa. Gabriel davanti, Noah in mezzo, Elias coda. Le loro sagome erano viola contro il cielo arancione.\n\nA casa, la lampada acc...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "pastori": {
+            "found": true,
+            "id": "pastori",
+            "path": "visual/personaggi/collettivi/pastori",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "nodo": {
+            "found": true,
+            "id": "nodo",
+            "path": "visual/personaggi/individuali/secondari/nodo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
+            ]
+          },
+          "salvia": {
+            "found": true,
+            "id": "salvia",
+            "path": "visual/personaggi/individuali/secondari/salvia",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
+            ]
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          },
+          "bartolo": {
+            "found": true,
+            "id": "bartolo",
+            "path": "visual/personaggi/individuali/primari/bartolo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
+            ]
+          },
+          "bru": {
+            "found": true,
+            "id": "bru",
+            "path": "visual/personaggi/individuali/cuccioli/bru",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
+            ]
+          },
+          "cardo": {
+            "found": true,
+            "id": "cardo",
+            "path": "visual/personaggi/individuali/cuccioli/cardo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
+              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "rovo": {
+            "found": true,
+            "id": "rovo",
+            "path": "visual/personaggi/individuali/primari/rovo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "toba": {
+            "found": true,
+            "id": "toba",
+            "path": "visual/personaggi/individuali/cuccioli/toba",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg"
+            ]
+          },
+          "camminanti": {
+            "found": true,
+            "id": "camminanti",
+            "path": "visual/personaggi/collettivi/camminanti",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "luoghi": {
+          "bocca": {
+            "found": true,
+            "id": "bocca",
+            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "orti_del_cerchio": {
+            "found": true,
+            "id": "orti_del_cerchio",
+            "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "albero_vecchio": {
+            "found": true,
+            "id": "albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "panca_di_pietra": {
+            "found": true,
+            "id": "panca_di_pietra",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/panca_di_pietra",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    },
+    {
+      "sid": "s12",
+      "title": "Quando i Tre Venti Suonano Insieme",
+      "slug": "quando_i_tre_venti_suonano_insieme",
+      "cycle": "D",
+      "total_pages": 10,
+      "total_hooks": 10,
+      "status": "definitiva",
+      "ultima_modifica": "2026-05-04",
+      "file_path": "pipeline_narrativa/storie_finali/s12_quando_i_tre_venti_suonano_insieme.md",
+      "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s12_quando_i_tre_venti_suonano_insieme.md",
+      "stats": {
+        "chars_distinct": 11,
+        "chars_with_imgs": 7,
+        "locs_distinct": 12,
+        "locs_with_imgs": 0,
+        "locs_with_prompt": 8,
+        "objs_distinct": 0,
+        "objs_with_prompt": 0,
+        "hooks_image_ready": 0,
+        "hooks_total": 10
+      },
+      "hooks": [
+        {
+          "hook_id": "s12_h01",
+          "page": 1,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Sull'Isola dei Tre Venti, certi giorni si annunciano da soli. Non bisogna chiamarli, e nessuno li sceglie.\n\nEra ancora notte quando Liù arrivò alla finestra. Frrr — ali contro il vetro. La finestra era socchiusa per via del fumo del camino, come tutte le notti.\n\n«Oggi suonano. Andate?»\n\nLo disse una...",
+          "entities": {
+            "personaggi": [
+              "fiamma",
+              "gabriel",
+              "grunto",
+              "noah"
+            ],
+            "luoghi": [
+              "bocca"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h02",
+          "page": 2,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "I fratelli erano già sulla soglia. Elias e Noah un passo fuori.\n\nFiamma, dallo stipite, si fermò. Guardò Gabriel.\n\nLo guardò più del normale.\n\nNon disse niente. Non si sa cosa avrebbe detto se avesse detto.\n\nGabriel non si voltò. Era un passo fuori dalla porta. Uscì.\n\nDietro le spalle di Fiamma, il ...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "fiamma",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h03",
+          "page": 3,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Camminarono fino al Pontile. Era poco dopo l'alba. Sulla baia bassa, l'acqua aveva quel grigio fermo che ha l'inverno quando comincia a venire.\n\nBartolo era nella barca. La coperta marrone sulle ginocchia. Gli occhi aperti, come sempre.\n\nI tre passarono sull'asse. Bartolo alzò la mano.\n\nLa mano rest...",
+          "entities": {
+            "personaggi": [
+              "bartolo"
+            ],
+            "luoghi": [
+              "orti_del_cerchio"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h04",
+          "page": 4,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Risalirono lungo il Fiume. Mangiarono i cornetti camminando, e il fiato si vedeva ancora.\n\nAl guado di pietre piatte, qualcuno stava passando.\n\nEra un camminante — quale, oggi? Un ermellino. Veniva da est, con la carriola.\n\nSi fermò un momento. La mano lasciò il manico, salì, ricadde. Anche i fratel...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [
+              "guado_di_pietre_piatte"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h05",
+          "page": 5,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Salirono ancora. Attraversarono la radura dei pini caduti — quelli che dopo l'inverno scorso erano lì e nessuno aveva portato via, perché i Mantenitori avevano deciso che stavano bene così. I Pascoli Alti erano vuoti. Le pecore erano già scese, i Pastori non c'erano. Solo erba ingiallita e qualche p...",
+          "entities": {
+            "personaggi": [
+              "gabriel",
+              "grunto",
+              "mantenitori",
+              "noah",
+              "pastori"
+            ],
+            "luoghi": [
+              "burrone",
+              "pascoli_alti",
+              "radura_dei_pini"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h06",
+          "page": 6,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Si avviarono per la cengia. Sale ripida. In qualche punto si va con le mani anche.\n\nNessuno la indicò. La sapevano.\n\nSalirono in fila. Gabriel davanti, Elias, Noah ultimo. Mezz'ora di salita. Il fiato si fece corto. Le pietre, sotto le mani, erano calde di sole sopra e fredde sotto. A un certo punto...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "grunto",
+              "noah",
+              "pun"
+            ],
+            "luoghi": [
+              "burrone"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h07",
+          "page": 7,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Roccia Alta.\n\nEra una piattaforma di pietra grigia con ciuffi d'erba secca tra le crepe. Da lassù si vedeva tutto. Era una di quelle viste che non si descrivono mentre le si guarda — si guarda e basta, e dopo, semmai, si dice qualcosa.\n\nA ovest la Foresta Intrecciata, le chiome che si muovevano. A n...",
+          "entities": {
+            "personaggi": [
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [
+              "albero_vecchio",
+              "bocca",
+              "foresta_intrecciata",
+              "montagne_gemelle",
+              "orti_del_cerchio",
+              "roccia_alta"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h08",
+          "page": 8,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Pomeriggio inoltrato. L'aria cambiò.\n\nDa est arrivò il Taglio, basso, secco. Da ovest e dal centro arrivò l'Intreccio, e portava odore di foresta. Da sud arrivò il Mulinello, girava, e portava sale.\n\nSi incontrarono sopra Roccia Alta. Non si annullarono. Stettero insieme.\n\nL'aria si fece piena di tu...",
+          "entities": {
+            "personaggi": [],
+            "luoghi": [
+              "roccia_alta"
+            ],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h09",
+          "page": 9,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Senza pensarci, Gabriel appoggiò il palmo della mano sulla pietra calda accanto a sé.\n\nPochi secondi dopo, Noah — senza accorgersene — appoggiò la sua mano sulla mano di Gabriel.\n\nPochi secondi dopo, Elias — dall'altro lato, senza guardare — appoggiò il gomito sul braccio di Gabriel.\n\nI tre stettero...",
+          "entities": {
+            "personaggi": [
+              "amo",
+              "elias",
+              "gabriel",
+              "noah"
+            ],
+            "luoghi": [],
+            "oggetti": []
+          }
+        },
+        {
+          "hook_id": "s12_h10",
+          "page": 10,
+          "subhooks": "[]",
+          "image": "TBD",
+          "text_preview": "Scesero in silenzio. La cengia, i Pascoli vuoti, la Via che Sale. Quando arrivarono era quasi notte.\n\nLa Piazza era quieta. L'Albero Vecchio era una sagoma scura contro il viola. Vicino alla Panca di Pietra, una ghianda dipinta era caduta — una di quelle di Stria, della festa, e nessuno l'aveva racc...",
+          "entities": {
+            "personaggi": [
+              "bartolo",
+              "elias",
+              "fiamma",
+              "gabriel",
+              "noah",
+              "stria"
+            ],
+            "luoghi": [
+              "albero_vecchio",
+              "panca_di_pietra",
+              "via_che_sale"
+            ],
+            "oggetti": []
+          }
+        }
+      ],
+      "audited_entities": {
+        "personaggi": {
+          "fiamma": {
+            "found": true,
+            "id": "fiamma",
+            "path": "visual/personaggi/individuali/primari/fiamma",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
+            ]
+          },
+          "gabriel": {
+            "found": true,
+            "id": "gabriel",
+            "path": "visual/personaggi/individuali/bambini/gabriel",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "grunto": {
+            "found": true,
+            "id": "grunto",
+            "path": "visual/personaggi/individuali/primari/grunto",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg"
+            ]
+          },
+          "noah": {
+            "found": true,
+            "id": "noah",
+            "path": "visual/personaggi/individuali/bambini/noah",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bartolo": {
+            "found": true,
+            "id": "bartolo",
+            "path": "visual/personaggi/individuali/primari/bartolo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
+            ]
+          },
+          "mantenitori": {
+            "found": true,
+            "id": "mantenitori",
+            "path": "visual/personaggi/collettivi/mantenitori",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pastori": {
+            "found": true,
+            "id": "pastori",
+            "path": "visual/personaggi/collettivi/pastori",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pun": {
+            "found": true,
+            "id": "pun",
+            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+            ]
+          },
+          "amo": {
+            "found": true,
+            "id": "amo",
+            "path": "visual/personaggi/individuali/secondari/amo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
+              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
+            ]
+          },
+          "stria": {
+            "found": true,
+            "id": "stria",
+            "path": "visual/personaggi/individuali/primari/stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
+              "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
+            ]
+          }
+        },
+        "luoghi": {
+          "bocca": {
+            "found": true,
+            "id": "bocca",
+            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "orti_del_cerchio": {
+            "found": true,
+            "id": "orti_del_cerchio",
+            "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "guado_di_pietre_piatte": {
+            "found": true,
+            "id": "guado_di_pietre_piatte",
+            "path": "visual/luoghi/perimetro/fiume_che_gira/guado_di_pietre_piatte",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "burrone": {
+            "found": true,
+            "id": "burrone",
+            "path": "visual/luoghi/quartiere_aria/burrone",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "pascoli_alti": {
+            "found": true,
+            "id": "pascoli_alti",
+            "path": "visual/luoghi/quartiere_aria/pascoli_alti",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "radura_dei_pini": {
+            "found": true,
+            "id": "radura_dei_pini",
+            "path": "visual/luoghi/quartiere_terra/foresta_intrecciata/radura_dei_pini",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "albero_vecchio": {
+            "found": true,
+            "id": "albero_vecchio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "foresta_intrecciata": {
+            "found": true,
+            "id": "foresta_intrecciata",
+            "path": "visual/luoghi/quartiere_terra/foresta_intrecciata",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "montagne_gemelle": {
+            "found": true,
+            "id": "montagne_gemelle",
+            "path": "visual/luoghi/quartiere_aria/montagne_gemelle",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "roccia_alta": {
+            "found": true,
+            "id": "roccia_alta",
+            "path": "visual/luoghi/quartiere_aria/roccia_alta",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "panca_di_pietra": {
+            "found": true,
+            "id": "panca_di_pietra",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/panca_di_pietra",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_che_sale": {
+            "found": true,
+            "id": "via_che_sale",
+            "path": "visual/luoghi/quartiere_aria/via_che_sale",
+            "scheda": true,
+            "prompt_grok": false,
+            "n_images": 0,
+            "image_paths": []
+          }
+        },
+        "oggetti": {}
+      },
+      "inventory": {
+        "exists": false
+      }
+    }
+  ]
+}
