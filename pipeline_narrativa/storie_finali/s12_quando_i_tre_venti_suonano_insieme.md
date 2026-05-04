@@ -1,3 +1,26 @@
+---
+sid: s12
+title: Quando i Tre Venti Suonano Insieme
+slug: quando_i_tre_venti_suonano_insieme
+cycle: D
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s12_*.md
+  - pipeline_narrativa/writing_briefs/s12_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s12
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S12 — Quando i Tre Venti Suonano Insieme
 
 > Storia 12 della saga *L'Isola dei Tre Venti*
@@ -8,6 +31,7 @@
 
 ## Pagina 1
 
+<!-- @hook s12_h01 | @page 1 | @subhooks [] | @image TBD -->
 Sull'Isola dei Tre Venti, certi giorni si annunciano da soli. Non bisogna chiamarli, e nessuno li sceglie.
 
 Era ancora notte quando Liù arrivò alla finestra. Frrr — ali contro il vetro. La finestra era socchiusa per via del fumo del camino, come tutte le notti.
@@ -26,6 +50,7 @@ Al Forno il fuoco era acceso da ore. Fiamma era ferma — pochi gesti, nessuna c
 
 ## Pagina 2
 
+<!-- @hook s12_h02 | @page 2 | @subhooks [] | @image TBD -->
 I fratelli erano già sulla soglia. Elias e Noah un passo fuori.
 
 Fiamma, dallo stipite, si fermò. Guardò Gabriel.
@@ -42,6 +67,7 @@ Dietro le spalle di Fiamma, il Forno era una bocca arancione. Davanti, l'est si 
 
 ## Pagina 3
 
+<!-- @hook s12_h03 | @page 3 | @subhooks [] | @image TBD -->
 Camminarono fino al Pontile. Era poco dopo l'alba. Sulla baia bassa, l'acqua aveva quel grigio fermo che ha l'inverno quando comincia a venire.
 
 Bartolo era nella barca. La coperta marrone sulle ginocchia. Gli occhi aperti, come sempre.
@@ -58,6 +84,7 @@ Sulla riva, la Via del Fiume li prese verso nord. Sull'altra sponda, gli Orti de
 
 ## Pagina 4
 
+<!-- @hook s12_h04 | @page 4 | @subhooks [] | @image TBD -->
 Risalirono lungo il Fiume. Mangiarono i cornetti camminando, e il fiato si vedeva ancora.
 
 Al guado di pietre piatte, qualcuno stava passando.
@@ -76,6 +103,7 @@ Ripresero.
 
 ## Pagina 5
 
+<!-- @hook s12_h05 | @page 5 | @subhooks [] | @image TBD -->
 Salirono ancora. Attraversarono la radura dei pini caduti — quelli che dopo l'inverno scorso erano lì e nessuno aveva portato via, perché i Mantenitori avevano deciso che stavano bene così. I Pascoli Alti erano vuoti. Le pecore erano già scese, i Pastori non c'erano. Solo erba ingiallita e qualche pietra che il sole scaldava da una parte sola.
 
 Mezzogiorno. Il Burrone.
@@ -102,6 +130,7 @@ I fratelli non chiesero. Sull'isola si imparano presto le cose che non si chiedo
 
 ## Pagina 6
 
+<!-- @hook s12_h06 | @page 6 | @subhooks [] | @image TBD -->
 Si avviarono per la cengia. Sale ripida. In qualche punto si va con le mani anche.
 
 Nessuno la indicò. La sapevano.
@@ -114,6 +143,7 @@ Quando si voltarono, una sola volta, il Burrone in basso era vuoto. Grunto era r
 
 ## Pagina 7
 
+<!-- @hook s12_h07 | @page 7 | @subhooks [] | @image TBD -->
 Roccia Alta.
 
 Era una piattaforma di pietra grigia con ciuffi d'erba secca tra le crepe. Da lassù si vedeva tutto. Era una di quelle viste che non si descrivono mentre le si guarda — si guarda e basta, e dopo, semmai, si dice qualcosa.
@@ -128,6 +158,7 @@ Niente parole.
 
 ## Pagina 8
 
+<!-- @hook s12_h08 | @page 8 | @subhooks [] | @image TBD -->
 Pomeriggio inoltrato. L'aria cambiò.
 
 Da est arrivò il Taglio, basso, secco. Da ovest e dal centro arrivò l'Intreccio, e portava odore di foresta. Da sud arrivò il Mulinello, girava, e portava sale.
@@ -144,6 +175,7 @@ Non c'è una parola precisa per come è. È una di quelle cose che gli abitanti 
 
 ## Pagina 9
 
+<!-- @hook s12_h09 | @page 9 | @subhooks [] | @image TBD -->
 Senza pensarci, Gabriel appoggiò il palmo della mano sulla pietra calda accanto a sé.
 
 Pochi secondi dopo, Noah — senza accorgersene — appoggiò la sua mano sulla mano di Gabriel.
@@ -162,6 +194,7 @@ Si alzarono. Cominciarono a scendere.
 
 ## Pagina 10
 
+<!-- @hook s12_h10 | @page 10 | @subhooks [] | @image TBD -->
 Scesero in silenzio. La cengia, i Pascoli vuoti, la Via che Sale. Quando arrivarono era quasi notte.
 
 La Piazza era quieta. L'Albero Vecchio era una sagoma scura contro il viola. Vicino alla Panca di Pietra, una ghianda dipinta era caduta — una di quelle di Stria, della festa, e nessuno l'aveva raccolta. La casetta tonda di Mèmolo aveva una luce incerta dietro le persiane: forse una lampada, forse il cielo sul vetro.

@@ -1,7 +1,31 @@
+---
+sid: s08
+title: L'Albero che Cadde di Sera
+slug: lalbero_che_cadde_di_sera
+cycle: C
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s08_*.md
+  - pipeline_narrativa/writing_briefs/s08_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s08
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S08 — L'Albero che Cadde di Sera
 
 ## Pagina 1
 
+<!-- @hook s08_h01 | @page 1 | @subhooks [] | @image TBD -->
 Era il pomeriggio più fermo dell'estate. Fuori dalla porta del Forno la luce era bianca, schiacciata, senza vento. Dentro era ocra di farina e brace.
 
 Fiamma aveva tirato fuori una sfoglia nuova e l'aveva messa davanti a loro, sul banco. «Assaggiate.»
@@ -12,6 +36,7 @@ Nessuno aveva fretta. Era un pomeriggio così.
 
 ## Pagina 2
 
+<!-- @hook s08_h02 | @page 2 | @subhooks [] | @image TBD -->
 Poi il cielo cambiò colore. Diventò piombo in pochi battiti.
 
 Le imposte cominciarono a sbattere. Una folata aprì la porta di colpo. Liù arrivò dentro la folata, si aggrappò al cornicione del Forno con tutta la forza che aveva — frrr — e parlò veloce, senza posarsi:
@@ -26,6 +51,7 @@ In lontananza, dagli Orti, la cantilena dei Coltivatori si interruppe a metà di
 
 ## Pagina 3
 
+<!-- @hook s08_h03 | @page 3 | @subhooks [] | @image TBD -->
 Uscirono.
 
 La piazza era quasi vuota. Qualcuno correva a chiudere una finestra; un'altra finestra sbatteva e basta. L'Albero Vecchio al centro non si muoveva nello stesso modo dei suoi rami — il tronco grosso era fermo, le punte sopra invece andavano in tutti i versi.
@@ -36,6 +62,7 @@ Gabriel saltò la pietra del lato del Pozzo senza guardarla. Noah ci mise sopra 
 
 ## Pagina 4
 
+<!-- @hook s08_h04 | @page 4 | @subhooks [] | @image TBD -->
 Sulla via della scuola, dal lato nord, c'era il grande noce. Vecchio. Grosso. Faceva ombra alla mattina sui cuccioli che andavano a lezione.
 
 Si piegò.
@@ -48,6 +75,7 @@ I fratelli si fermarono al margine sud della piazza. Restarono fermi.
 
 ## Pagina 5
 
+<!-- @hook s08_h05 | @page 5 | @subhooks [] | @image TBD -->
 CRACK.
 
 Il noce si spaccò alla biforcazione. Il ramo principale cadde di traverso. Toccò per primo il bordo in pietra del Pozzo — quello alzato, quello che fa muretto. La pietra tenne. Il ramo rimbalzò contro la leva e deviò. La massa intera della chioma, invece di crollare in piazza, scartò di lato e si abbatté sulla via della scuola con un tonfo sordo.
@@ -62,6 +90,7 @@ Sul Mercato del Mezzogiorno, lontano, sulla Panca di Pietra, una delle Vecchie a
 
 ## Pagina 6
 
+<!-- @hook s08_h06 | @page 6 | @subhooks [] | @image TBD -->
 Mèmolo mormorò: «Aspetta, ero qui. Ero qui poco fa. Ero qui.»
 
 Gabriel andò da lui. Ai piedi di Mèmolo c'era un mucchietto di foglie spezzate, finite lì col vento. Le spostò col piede, gentilmente, come si sposterebbero foglie da un tappeto. Poi si sedette sul bordo del Pozzo. Tirò Mèmolo per la manica.
@@ -80,6 +109,7 @@ Lo disse e basta. Poi ricominciò a mormorare l'altra cosa.
 
 ## Pagina 7
 
+<!-- @hook s08_h07 | @page 7 | @subhooks [] | @image TBD -->
 Nello stesso istante Gabriel alzò gli occhi.
 
 Tra le foglie dei rami caduti, dietro il Pozzo, c'era solo un varco — un piccolo spazio fra due rami spezzati. Attraverso il varco passò il verde della maglia di Noah, un movimento, due mani che posavano qualcosa.
@@ -94,6 +124,7 @@ Per un secondo Gabriel restò fermo. Sentì quella cosa di prima, la stessa di q
 
 ## Pagina 8
 
+<!-- @hook s08_h08 | @page 8 | @subhooks [] | @image TBD -->
 Il crepuscolo cadeva. Cominciarono ad arrivare i mantenitori, con scale a pioli e lanterne. Erano i mantenitori — chi, oggi? Un'arvicola, un ghiro, una faina. TOK, una corda contro un legno: il loro saluto. I tre fratelli annuirono.
 
 Nodo arrivò con loro, la matassa al braccio. Vide Elias. Gli fece un cenno. Elias andò.
@@ -108,6 +139,7 @@ Elias non disse niente neanche lui.
 
 ## Pagina 9
 
+<!-- @hook s08_h09 | @page 9 | @subhooks [] | @image TBD -->
 I Mantenitori restarono al lavoro fino a notte sotto le lanterne. I rami furono spezzati in pezzi, accatastati sotto la tettoia del Forno per essere lasciati a riposare. I Mantenitori sapevano cosa fare con il legno fresco di noce. Lo facevano e basta.
 
 A un certo punto Fiamma uscì sulla soglia e mise in mano a ognuno dei tre un altro cornetto.
@@ -122,6 +154,7 @@ Ognuno tenne la sua cosa piccola.
 
 ## Pagina 10
 
+<!-- @hook s08_h10 | @page 10 | @subhooks [] | @image TBD -->
 La mattina dopo l'isola riprese.
 
 L'aria era pulita come dopo una lavata. Stria atterrò sul tetto della scuola come ogni mattina, si rimise lo scialle sulle spalle prima di scendere. Dagli Orti, lontana, la cantilena dei Coltivatori era ricominciata.

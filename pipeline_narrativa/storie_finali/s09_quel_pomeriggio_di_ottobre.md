@@ -1,7 +1,33 @@
+---
+sid: s09
+title: Quel Pomeriggio di Ottobre
+slug: quel_pomeriggio_di_ottobre
+cycle: C
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s09_*.md
+  - pipeline_narrativa/writing_briefs/s09_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s09
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S09 — Quel Pomeriggio di Ottobre
 
 ---
 
+## Pagina 1
+
+<!-- @hook s09_h01 | @page 1 | @subhooks [] | @image TBD -->
 Sull'isola non si fanno feste per i compleanni. C'è il dolce di castagne, e basta — Fiamma lo fa con le prime castagne dell'anno, una volta per ogni bambino, il giorno suo.
 
 Mèmolo lo sa prima di tutti, sui giorni dei bambini. Sulle altre cose si confonde, su quelli no.
@@ -12,6 +38,9 @@ Fiamma ha cominciato a impastare.
 
 ---
 
+## Pagina 2
+
+<!-- @hook s09_h02 | @page 2 | @subhooks [] | @image TBD -->
 «Tu cosa farai oggi che hai un anno in più?»
 
 Stria era sulla porta della scuola. Aveva la testa un po' inclinata.
@@ -28,6 +57,9 @@ Nessuno rispose. Toba si voltò verso il banco. Pun disse: «Mèmolo lo ha detto
 
 ---
 
+## Pagina 3
+
+<!-- @hook s09_h03 | @page 3 | @subhooks [] | @image TBD -->
 A metà pomeriggio Gabriel passò al Forno da solo.
 
 Mèmolo era sui gradini fuori. Quando vide Gabriel si infilò la mano nella tasca della giacca lunga. Cercava qualcosa. Tirò fuori una castagna cruda — di quelle del cesto di Zolla, una che gli era rimasta in tasca dal mattino e che doveva restituire a Fiamma. La passò a Gabriel senza dire niente.
@@ -38,6 +70,9 @@ Gabriel restò sui gradini un attimo, la castagna in mano.
 
 ---
 
+## Pagina 4
+
+<!-- @hook s09_h04 | @page 4 | @subhooks [] | @image TBD -->
 Verso il tardo pomeriggio i tre fratelli erano a casa.
 
 Elias diede a Gabriel un cordino nuovo per la sciarpa che si era sfilacciata. «Possiamo metterlo dopo, se vuoi.» Gabriel annuì.
@@ -50,6 +85,9 @@ Noah disse tre parole.
 
 ---
 
+## Pagina 5
+
+<!-- @hook s09_h05 | @page 5 | @subhooks [] | @image TBD -->
 Gabriel prese il braccialetto. Lo guardò.
 
 «Grazie.»
@@ -66,6 +104,9 @@ Fuori l'aria di ottobre era ancora chiara, dorata. Dentro casa cominciava a entr
 
 ---
 
+## Pagina 6
+
+<!-- @hook s09_h06 | @page 6 | @subhooks [] | @image TBD -->
 Verso sera andarono al Forno tutti e tre a prendere il dolce.
 
 Fiamma era in modalità chiacchiera. «Oh ma guarda chi è arrivato il festeggiato, è grosso adesso eh, alza la testa che ti vedo male da qua, com'è sta giornata, hai fatto cose o niente, Mèmolo è già passato due volte, una stamattina e una a metà giornata, dice che il dolce sa di buono ma non lo ha assaggiato perché lo deve assaggiare prima Gabriel...» Continuava a parlare mentre lo avvolgeva. Quando glielo diede in mano, lo guardò solo un secondo.
@@ -78,6 +119,9 @@ Tornarono per la Via dell'Alba. Mentre passavano accanto agli Orti, le cantilene
 
 ---
 
+## Pagina 7
+
+<!-- @hook s09_h07 | @page 7 | @subhooks [] | @image TBD -->
 A casa misero il dolce sul tavolo. Era scuro, lucido di miele, un colore tra il bordeaux e il marrone.
 
 Gabriel aveva il coltello in mano. Cominciò a tagliare.
@@ -92,6 +136,9 @@ Stava per servire. Noah guardava il piatto.
 
 ---
 
+## Pagina 8
+
+<!-- @hook s09_h08 | @page 8 | @subhooks [] | @image TBD -->
 Gabriel, di riflesso: «Sei il piccolo.»
 
 Noah: «Non sono più piccolo come prima.»
@@ -110,6 +157,9 @@ Elias guardò Gabriel un attimo. Poi, come per stemperare: «Le fette uguali sta
 
 ---
 
+## Pagina 9
+
+<!-- @hook s09_h09 | @page 9 | @subhooks [] | @image TBD -->
 Gabriel mangiò la sua fetta in silenzio mentre Noah ed Elias parlavano. Mangiò fino in fondo. I piatti restarono sul tavolo, briciole, lanterna appena accesa su un mobile laterale.
 
 Noah rideva di un'altra cosa che aveva detto Elias.
@@ -122,6 +172,9 @@ Fuori, lontano, un *frrr* veloce passò sopra il villaggio. Era Liù che andava 
 
 ---
 
+## Pagina 10
+
+<!-- @hook s09_h10 | @page 10 | @subhooks [] | @image TBD -->
 Il Mulinello continuava a passare attraverso le finestre aperte. Le tende si muovevano. Una foglia gialla, già caduta da qualche albero del cortile, era arrivata fin dentro casa col vento e si era posata sul davanzale.
 
 Gabriel teneva il braccialetto in mano.

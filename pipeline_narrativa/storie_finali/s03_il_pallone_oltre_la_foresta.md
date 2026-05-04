@@ -1,7 +1,31 @@
+---
+sid: s03
+title: Il Pallone oltre la Foresta
+slug: il_pallone_oltre_la_foresta
+cycle: A
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s03_*.md
+  - pipeline_narrativa/writing_briefs/s03_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s03
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S3 — Il Pallone oltre la Foresta
 
 ## Pagina 1
 
+<!-- @hook s03_h01 | @page 1 | @subhooks [] | @image TBD -->
 Sull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.
 
 I tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta. Hanno il pallone di stoffa cucita — quello fatto da Salvia, che da una parte si scuce sempre, e che non è mai del tutto rotondo.
@@ -12,6 +36,7 @@ Noah corre dietro al pallone come corre dietro a tutto, con le ginocchia che van
 
 ## Pagina 2
 
+<!-- @hook s03_h02 | @page 2 | @subhooks [] | @image TBD -->
 Più in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, poi torna come prima. Loro abbassano la voce un secondo, senza pensarci. Riprendono dopo.
 
 Sull'isola, certe cose si dicono così. Non con le parole.
@@ -24,6 +49,7 @@ Il sole comincia a calare. A gennaio, sull'isola, succede prima di quanto uno se
 
 ## Pagina 3
 
+<!-- @hook s03_h03 | @page 3 | @subhooks [] | @image TBD -->
 Noah tira un calcio mal misurato.
 
 Il pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa.
@@ -36,6 +62,7 @@ Noah resta fermo con la gamba ancora un po' alzata, come se aspettasse che il ca
 
 ## Pagina 4
 
+<!-- @hook s03_h04 | @page 4 | @subhooks [] | @image TBD -->
 I tre fanno qualche passo verso il sasso. Si fermano lì.
 
 Lì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole.
@@ -48,6 +75,7 @@ Vicino al sentiero, per terra, c'è una conchiglia. Una sola. Conica, scura, con
 
 ## Pagina 5
 
+<!-- @hook s03_h05 | @page 5 | @subhooks [] | @image TBD -->
 I tre si fermano sul margine. Non lo decidono. Si fermano e basta.
 
 Nella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della propria madre.
@@ -62,6 +90,7 @@ Elias guarda Noah. Guarda Gabriel. Guarda dentro la Foresta. Là dentro, la luce
 
 ## Pagina 6
 
+<!-- @hook s03_h06 | @page 6 | @subhooks [] | @image TBD -->
 Allora Elias fa una cosa che gli altri due non si aspettano.
 
 Fa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.
@@ -78,6 +107,7 @@ Gabriel e Noah, dietro, restano fermi. Anche loro adesso ascoltano.
 
 ## Pagina 7
 
+<!-- @hook s03_h07 | @page 7 | @subhooks [] | @image TBD -->
 Poi una voce. Brusca, vecchia, che viene da dentro.
 
 «Chi è?»
@@ -90,6 +120,7 @@ I tre fratelli si stringono un po', senza accorgersene. Noah viene un mezzo pass
 
 ## Pagina 8
 
+<!-- @hook s03_h08 | @page 8 | @subhooks [] | @image TBD -->
 Esce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.
 
 È basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo tenesse da un po'. Ha quell'aria di chi brontola anche quando non parla.
@@ -110,6 +141,7 @@ Rovo non si volta a controllare. Lo sa.
 
 ## Pagina 9
 
+<!-- @hook s03_h09 | @page 9 | @subhooks [] | @image TBD -->
 Gabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.
 
 Prima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.
@@ -130,6 +162,7 @@ Bru gli scivola dietro tra le radici e sparisce. Si sente il passo di Rovo per q
 
 ## Pagina 10
 
+<!-- @hook s03_h10 | @page 10 | @subhooks [] | @image TBD -->
 I tre fratelli tornano verso il Villaggio.
 
 Camminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.

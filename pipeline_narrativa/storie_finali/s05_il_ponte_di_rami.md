@@ -1,9 +1,33 @@
+---
+sid: s05
+title: Il Ponte di Rami
+slug: il_ponte_di_rami
+cycle: B
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s05_*.md
+  - pipeline_narrativa/writing_briefs/s05_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s05
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S05 — Il Ponte di Rami
 
 ---
 
 ## Pagina 1
 
+<!-- @hook s05_h01 | @page 1 | @subhooks [] | @image TBD -->
 Qualche settimana dopo. La primavera è piena adesso, il sole scalda la pelle quando ci batte addosso.
 
 Bru non si volta. Si avvia per primo dentro la Foresta. Sceglie una direzione che da soli non sarebbe venuta in mente.
@@ -20,6 +44,7 @@ Poi gira ancora.
 
 ## Pagina 2
 
+<!-- @hook s05_h02 | @page 2 | @subhooks [] | @image TBD -->
 Arrivano al torrente.
 
 L'acqua corre alta, gonfia di neve sciolta sulle Gemelle. Quattro o cinque metri fino all'altra sponda. Sull'altra sponda un sentiero comincia. Da questa parte, niente.
@@ -36,6 +61,7 @@ I fratelli annuirono. Bru proseguì con lo sguardo.
 
 ## Pagina 3
 
+<!-- @hook s05_h03 | @page 3 | @subhooks [] | @image TBD -->
 Stanno per dire che si torna a casa.
 
 E poi, da qualche parte verso il margine, attraverso le chiome:
@@ -56,6 +82,7 @@ Cinquanta metri, forse. Cominciano a camminare.
 
 ## Pagina 4
 
+<!-- @hook s05_h04 | @page 4 | @subhooks [] | @image TBD -->
 Nodo è accosciato sulla scaletta dei Coltivatori. La cresta rossa si vede da prima di vederlo intero. Al braccio, la matassa di corda chiara.
 
 Sta legando un nodo. Non alza la testa.
@@ -74,6 +101,7 @@ Nodo annuisce mentre Elias parla. Non dice niente.
 
 ## Pagina 5
 
+<!-- @hook s05_h05 | @page 5 | @subhooks [] | @image TBD -->
 Quando Elias finisce, Nodo si toglie un pezzo di corda dalla matassa. Lo misura tra le dita. Lo taglia con un colpo secco di lama.
 
 Porge la corda a Elias.
@@ -90,6 +118,7 @@ Torna alla scaletta. Riprende il **TOK-TOK-TOK**.
 
 ## Pagina 6
 
+<!-- @hook s05_h06 | @page 6 | @subhooks [] | @image TBD -->
 Tornano al torrente. Cercano pertiche.
 
 Bru cammina avanti. Si ferma davanti a un ramo caduto, lo indica col muso. Riparte. Si ferma davanti a un altro. Riparte ancora.
@@ -106,6 +135,7 @@ I rami che la Foresta ha lasciato cadere d'inverno. Adesso servono.
 
 ## Pagina 7
 
+<!-- @hook s05_h07 | @page 7 | @subhooks [] | @image TBD -->
 Quattro pertiche, posate parallele da sponda a sponda.
 
 Elias prova il primo nodo. La corda gli si imbroglia. Sbaglia. La scioglie.
@@ -130,6 +160,7 @@ Sopra le chiome, l'Intreccio fa muovere le foglie. Sotto, il torrente resta lisc
 
 ## Pagina 8
 
+<!-- @hook s05_h08 | @page 8 | @subhooks [] | @image TBD -->
 Quando il ponte è finito, Nodo è ancora cinquanta metri più in là. Il TOK-TOK-TOK continua, regolare.
 
 Camminano fino a lui. Nodo alza la testa, guarda il ponte da lontano per un secondo. Non si muove.
@@ -154,6 +185,7 @@ Bru passa per quarto, ultimo. Quattro zampe leggere sul ponte fatto da loro. Una
 
 ## Pagina 9
 
+<!-- @hook s05_h09 | @page 9 | @subhooks [] | @image TBD -->
 Camminano cento, centocinquanta metri dentro la Foresta dall'altra parte.
 
 Trovano la radura.
@@ -168,6 +200,7 @@ I fratelli si siedono in cerchio intorno a lui. Nessuno parla. Restano un po'.
 
 ## Pagina 10
 
+<!-- @hook s05_h10 | @page 10 | @subhooks [] | @image TBD -->
 Tornano. Riattraversano il ponte nello stesso ordine.
 
 Quando arrivano sulla sponda di partenza, Nodo se n'è già andato.

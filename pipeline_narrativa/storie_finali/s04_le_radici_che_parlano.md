@@ -1,3 +1,26 @@
+---
+sid: s04
+title: Le Radici che Parlano
+slug: le_radici_che_parlano
+cycle: B
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s04_*.md
+  - pipeline_narrativa/writing_briefs/s04_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s04
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S04 — Le Radici che Parlano
 
 > Storia 4 della saga *L'Isola dei Tre Venti*
@@ -9,6 +32,7 @@
 
 ## Pagina 1
 
+<!-- @hook s04_h01 | @page 1 | @subhooks [] | @image TBD -->
 Era una mattina di quelle che aprono. Il primo tepore vero dopo l'inverno, il sole che teneva caldo senza scaldare ancora.
 
 Salvia bussò alla porta dei fratelli col cesto già al fianco. «Mi accompagnate al margine? Devo prendere ortica.»
@@ -27,6 +51,7 @@ Entrò col cesto. Per qualche metro si vide ancora la sabbia chiara delle sue za
 
 ## Pagina 2
 
+<!-- @hook s04_h02 | @page 2 | @subhooks [] | @image TBD -->
 I tre si sedettero per terra. Gabriel guardava i Coltivatori in lontananza. Elias cercava un sasso tra l'erba.
 
 Noah si voltò verso la Foresta.
@@ -43,6 +68,7 @@ Un passo dentro la Foresta. Poi due. Poi cinque.
 
 ## Pagina 3
 
+<!-- @hook s04_h03 | @page 3 | @subhooks [] | @image TBD -->
 Gabriel non se ne accorse subito.
 
 Quando si voltò, la farfalla non c'era più e Noah non c'era più.
@@ -61,6 +87,7 @@ La voce uscì e si perse a cinque metri. Sopra di loro l'Intreccio passava alto 
 
 ## Pagina 4
 
+<!-- @hook s04_h04 | @page 4 | @subhooks [] | @image TBD -->
 Gabriel smise di gridare.
 
 Restò fermo, le mani lungo i fianchi. Elias guardava lui.
@@ -73,6 +100,7 @@ Pochi secondi.
 
 ## Pagina 5
 
+<!-- @hook s04_h05 | @page 5 | @subhooks [] | @image TBD -->
 Dentro, Noah si era fermato.
 
 Gli alberi erano tutti uguali. Non sapeva più da che parte era venuto.
@@ -87,6 +115,7 @@ Aveva il palmo destro per terra. Senza ragione — era il modo in cui stava ferm
 
 ## Pagina 6
 
+<!-- @hook s04_h06 | @page 6 | @subhooks [] | @image TBD -->
 Elias si inginocchiò.
 
 Davanti a lui, una radice grossa usciva dalla terra e faceva un arco prima di rientrare. Una di quelle radici che sembrano un ponte basso. Ci appoggiò il palmo.
@@ -107,6 +136,7 @@ Sotto, da radice a radice, il battito viaggiava — non nell'aria, dove l'Intrec
 
 ## Pagina 7
 
+<!-- @hook s04_h07 | @page 7 | @subhooks [] | @image TBD -->
 Noah, sotto la mano, sentì.
 
 Non con le orecchie. Sotto la mano. Una vibrazione bassa.
@@ -125,6 +155,7 @@ Lo stesso ritmo. Di risposta.
 
 ## Pagina 8
 
+<!-- @hook s04_h08 | @page 8 | @subhooks [] | @image TBD -->
 Gabriel camminò.
 
 Non guardava tra gli alberi. Sentiva con i piedi — il battito basso che trafilava dal terreno, dentro i polpacci. Faceva qualche passo, si fermava, ascoltava. Riprendeva.
@@ -139,6 +170,7 @@ Il battito veniva da quella parte. Lui andava da quella parte.
 
 ## Pagina 9
 
+<!-- @hook s04_h09 | @page 9 | @subhooks [] | @image TBD -->
 Quando arrivò, Noah stava battendo più piano.
 
 Aveva cominciato a battere più piano man mano che sentiva Gabriel avvicinarsi, per non confondergli la direzione. Gabriel non se ne accorse. Si abbassò. Noah lo vide.
@@ -163,6 +195,7 @@ Più lontano, oltre il limite degli alberi, Cardo era fermo. Guardò i fratelli 
 
 ## Pagina 10
 
+<!-- @hook s04_h10 | @page 10 | @subhooks [] | @image TBD -->
 I tre camminarono verso il margine. Gabriel davanti, perché aveva sentito la strada all'andata. Noah in mezzo. Elias dietro. Ci misero qualche minuto.
 
 Quando uscirono dalla Foresta, erano nel posto giusto.

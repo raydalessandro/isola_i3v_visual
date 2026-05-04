@@ -1,3 +1,26 @@
+---
+sid: s07
+title: La Zattera dei Tre Rametti
+slug: la_zattera_dei_tre_rametti
+cycle: C
+total_pages: 10
+total_hooks: 10
+status: definitiva
+ultima_modifica: 2026-05-04
+fonti:
+  - pipeline_narrativa/narrazione_fattuale/s07_*.md
+  - pipeline_narrativa/writing_briefs/s07_writing_brief.md
+  - pipeline_narrativa/story_graph.json#stories.s07
+schema_marker: |
+  Ogni '## Pagina N' è seguito da un commento HTML machine-readable:
+  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+  Campi:
+    @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)
+    @page    : numero pagina libro (1..10)
+    @subhooks: lista (vuota per ora) per future scomposizioni della pagina
+    @image   : path immagine composta finale del libro (TBD da popolare)
+---
+
 # S07 — La Zattera dei Tre Rametti
 
 > Saga *L'Isola dei Tre Venti* — Ciclo C · Estate · Vento Intreccio · Cambiare
@@ -6,6 +29,7 @@
 
 ## Pagina 1
 
+<!-- @hook s07_h01 | @page 1 | @subhooks [] | @image TBD -->
 Quella mattina, al guado di pietre piatte, l'aria stava ferma.
 
 Solo l'acqua sulle pietre. Sotto il sole già caldo, Elias sedeva con le mani in grembo. Tre rametti, presi la sera prima agli Orti. Un filo d'erba lunga tenace, ancora flessibile dalla notte.
@@ -20,6 +44,7 @@ Il nodo tenne.
 
 ## Pagina 2
 
+<!-- @hook s07_h02 | @page 2 | @subhooks [] | @image TBD -->
 Elias aprì la mano. La zattera stava nel palmo. Larga come una mano, lunga come tre dita.
 
 «Dove andrà?» chiese Gabriel.
@@ -36,6 +61,7 @@ Loro la seguirono.
 
 ## Pagina 3
 
+<!-- @hook s07_h03 | @page 3 | @subhooks [] | @image TBD -->
 Camminavano in fila sulla riva ovest. Era l'unico lato che andava verso la Bocca — l'isola fa così, il Fiume gira, e l'acqua porta le cose al mare.
 
 A sinistra la Foresta Intrecciata, scura, vista da fuori. Tra le chiome alte passava l'Intreccio. In basso, niente — solo il sentiero ocra e il rumore dell'acqua che andava giù con loro. Il sole si alzava di poco ogni minuto. Le ombre dei tre fratelli si accorciavano sull'erba.
@@ -48,6 +74,7 @@ La zattera scendeva regolare. Mangiarono un cornetto camminando. Le briciole cad
 
 ## Pagina 4
 
+<!-- @hook s07_h04 | @page 4 | @subhooks [] | @image TBD -->
 La Foresta finì. Cominciarono gli Orti.
 
 Dall'altra parte del campo si vedevano i Coltivatori — chiazze chiare nella terra ocra, chini sui filari. La cantilena arrivava bassa, da lontano, mezza inghiottita dall'aria. Quando i fratelli passarono, la cantilena scese di un tono per un battito, poi tornò. Loro abbassarono la voce. Camminarono un po' più piano.
@@ -60,6 +87,7 @@ Il sole saliva.
 
 ## Pagina 5
 
+<!-- @hook s07_h05 | @page 5 | @subhooks [] | @image TBD -->
 Quasi mezzogiorno. Il sole era quasi sopra di loro, e l'ombra dei fratelli sotto i piedi era corta.
 
 Davanti, il letto del Fiume si stringeva. Due grossi sassi affioravano dall'acqua, uno a destra e uno a sinistra. In mezzo, l'acqua si comprimeva. Faceva schiuma alla base.
@@ -74,6 +102,7 @@ I tre si fermarono anche loro, sulla riva.
 
 ## Pagina 6
 
+<!-- @hook s07_h06 | @page 6 | @subhooks [] | @image TBD -->
 La zattera si incastrò tra i due sassi. La corrente premeva. L'acqua passava sotto, intorno, sopra.
 
 Noah guardò Elias. Gli passò il bastoncino senza dire niente. Elias lo prese. Si chinò sulla riva, allungò il bastoncino, toccò il rametto incastrato.
@@ -88,6 +117,7 @@ Il terzo rametto restò tra i sassi. Gli altri due, ancora legati dal nodo, ripr
 
 ## Pagina 7
 
+<!-- @hook s07_h07 | @page 7 | @subhooks [] | @image TBD -->
 I tre fratelli si fermarono sulla riva.
 
 Noah guardò i due rametti scendere. Non pianse.
@@ -106,6 +136,7 @@ Si rimisero in cammino.
 
 ## Pagina 8
 
+<!-- @hook s07_h08 | @page 8 | @subhooks [] | @image TBD -->
 Camminarono ancora a lungo.
 
 Il verde si fece più chiaro. La terra cominciò a sapere di sale. L'aria cambiò. Davanti a loro, in fondo, qualcosa di azzurro cresceva tra le rive.
@@ -120,6 +151,7 @@ Nessuno disse niente per molto tempo.
 
 ## Pagina 9
 
+<!-- @hook s07_h09 | @page 9 | @subhooks [] | @image TBD -->
 Arrivarono al Pontile quando il sole era basso.
 
 Il legno era scuro, consumato dal sale. I pali cigolavano piano, perché il Mulinello cominciava ad alzarsi dalla parte del mare. Bartolo era nella barca, semi-disteso, gli occhi aperti. Toba sedeva sul bordo, vicino al padre, e guardava l'acqua.
@@ -132,6 +164,7 @@ La zattera entrò nell'acqua mista della Bocca. Due rametti, chiari sull'arancio
 
 ## Pagina 10
 
+<!-- @hook s07_h10 | @page 10 | @subhooks [] | @image TBD -->
 Il Mulinello entrò nella Bocca dal mare e prese la zattera. La girò un attimo. La spinse fuori, oltre i due promontori.
 
 Lontano, sulla scogliera est, un uccello nero stava con le ali aperte al sole basso. Una croce contro il cielo arancio. Era lì per fatti suoi.
