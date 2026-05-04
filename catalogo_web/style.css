@@ -477,6 +477,18 @@ body.sidebar-open #menu-toggle .bar:nth-child(3) {
   height: 1px;
   background: var(--border-soft);
 }
+.section-count {
+  background: var(--accent-tint);
+  color: var(--accent-hover);
+  border: 1px solid var(--accent-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.section-label .section-count + ::after,
+.section-label .section-count ~ ::after { /* keep divider after badge */ }
 
 .stats-grid {
   display: grid;

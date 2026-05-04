@@ -400,11 +400,16 @@ function renderHome() {
     `<div class="stats-card"><div class="num">${v}</div><div class="lab">${escapeHtml(k)}</div></div>`
   ).join("");
 
-  // Featured: entita' con immagini, ordinate per n_images desc poi nome.
+  // Featured: tutte le entita' con immagini, ordinate per famiglia poi nome.
+  const famOrder = { personaggio: 0, luogo: 1, oggetto: 2, vento: 3, visual_signature: 4 };
   const featured = (state.data.entities || [])
     .filter(e => (e.n_images || 0) > 0)
-    .sort((a, b) => (b.n_images - a.n_images) || a.name.localeCompare(b.name))
-    .slice(0, 8);
+    .sort((a, b) => {
+      const fa = famOrder[a.famiglia] ?? 99;
+      const fb = famOrder[b.famiglia] ?? 99;
+      if (fa !== fb) return fa - fb;
+      return a.name.localeCompare(b.name);
+    });
 
   const featuredHtml = featured.length
     ? `<div class="featured-grid">${featured.map(e => {
@@ -441,7 +446,7 @@ function renderHome() {
       <div class="stats-grid">${statusCards}</div>
 
       ${featured.length ? `
-      <div class="section-label">Entità con immagini</div>
+      <div class="section-label">Entità con immagini <span class="section-count">${featured.length}</span></div>
       ${featuredHtml}
       ` : ""}
 
