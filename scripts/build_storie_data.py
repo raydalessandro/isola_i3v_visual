@@ -76,17 +76,26 @@ def parse_hooks(content: str) -> list:
         subhooks_raw = m.group(4)
         image = m.group(5)
         text = m.group(6).strip().rstrip("---").strip()
-        # Sub-hook detection inside hook text
+        # Sub-hook detection inside hook text. page_book may be int OR [N, N+1]
+        # for double spread, and an optional @layout field may appear before @image.
         subhooks_inline = []
         for sm in re.finditer(
-            r"<!-- @subhook (\S+) \| @page_book (\d+) \| @image (\S+) -->",
+            r"<!-- @subhook (\S+) \| @page_book (\d+|\[\s*\d+\s*,\s*\d+\s*\])(?: \| @layout (\S+))? \| @image (\S+) -->",
             text,
         ):
-            subhooks_inline.append({
+            pb_raw = sm.group(2)
+            if pb_raw.startswith("["):
+                page_book = [int(x) for x in re.findall(r"\d+", pb_raw)]
+            else:
+                page_book = int(pb_raw)
+            entry = {
                 "id": sm.group(1),
-                "page_book": int(sm.group(2)),
-                "image": sm.group(3),
-            })
+                "page_book": page_book,
+                "image": sm.group(4),
+            }
+            if sm.group(3):
+                entry["layout"] = sm.group(3)
+            subhooks_inline.append(entry)
         text_preview = text[:300] + ("..." if len(text) > 300 else "")
         hooks.append({
             "hook_id": hook_id,
@@ -321,6 +330,7 @@ def process_storia(path: Path, all_entities: dict) -> dict:
         "cycle": fm.get("cycle", ""),
         "total_pages": int(fm.get("total_pages", 10)),
         "total_hooks": int(fm.get("total_hooks", 10)),
+        "book_pages_total": int(fm.get("book_pages_total")) if fm.get("book_pages_total") else None,
         "status": fm.get("status", "definitiva"),
         "ultima_modifica": fm.get("ultima_modifica", ""),
         "file_path": str(path.relative_to(REPO_ROOT)),

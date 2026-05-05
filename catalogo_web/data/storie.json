@@ -10,8 +10,9 @@
       "cycle": "A",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": 17,
       "status": "definitiva",
-      "ultima_modifica": "2026-05-04",
+      "ultima_modifica": "2026-05-05",
       "file_path": "pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
       "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
       "annotations_present": true,
@@ -35,7 +36,7 @@
         },
         {
           "location": "burrone",
-          "note": "Aggiungi variante 'vista dal bordo' (h06) e 'cengia in mezzaroccia' (h07) al prompt burrone",
+          "note": "Aggiungi variante 'vista dal bordo' (h06) e 'cengia in mezzaroccia spread doppia' (h07) al prompt burrone",
           "priority": "medium"
         },
         {
@@ -65,8 +66,8 @@
           "hook_id": "s01_h01",
           "page": 1,
           "image": "TBD",
-          "text_preview": "Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle brac...",
-          "text_full": "Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
+          "text_preview": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva ...",
+          "text_full": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\n<!-- @subhook s01_h01b | @page_book 2 | @image TBD -->\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
           "source": "manual",
           "location": {
             "id": "forno",
@@ -87,16 +88,42 @@
             "Forno acceso da prima dell'alba, vapore alla finestra (atmosfera, da aggiungere a scheda forno)",
             "Frase canonica Fiamma: «Se passate dal Burrone, una per Grunto. Una sola.»"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h01a, s01_h01b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h01a",
+              "page_book": 1,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h01b",
+              "page_book": 2,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h01a",
+              "page_book": 1,
+              "text_split_marker": "Sull'Isola dei Tre Venti",
+              "image_status": "TBD",
+              "note": "Apertura saga + Forno acceso all'alba: Fiamma impasta, fratelli entrano (Gabriel primo, Elias e Noah dietro). Vapore alla finestra, velo di farina."
+            },
+            {
+              "id": "s01_h01b",
+              "page_book": 2,
+              "text_split_marker": "Fiamma li guardò",
+              "image_status": "TBD",
+              "note": "Fiamma consegna la pagnotta + la seconda per Grunto. Frase canonica «Se passate dal Burrone, una per Grunto. Una sola.» Si voltano e escono."
+            }
+          ]
         },
         {
           "hook_id": "s01_h02",
           "page": 2,
           "image": "TBD",
-          "text_preview": "La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alz...",
-          "text_full": "La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.",
+          "text_preview": "<!-- @subhook s01_h02a | @page_book 3 | @image TBD -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Un...",
+          "text_full": "<!-- @subhook s01_h02a | @page_book 3 | @image TBD -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.",
           "source": "manual",
           "location": {
             "id": "piazza_villaggio",
@@ -116,16 +143,30 @@
             "Cornice s01-c2 (Giro A): finestra accesa di una casa, qualcuno impasta",
             "Albero Vecchio + Pozzo + Panca visibili (triade Piazza, sfondo)"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h02a]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h02a",
+              "page_book": 3,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h02a",
+              "page_book": 3,
+              "text_split_marker": "La piazza era vuota",
+              "image_status": "TBD",
+              "note": "Piazza vuota all'alba con cornici Camminante (sagoma + carriola, gesto saluto) e finestra accesa. I tre prendono la Via che Sale."
+            }
+          ]
         },
         {
           "hook_id": "s01_h03",
           "page": 3,
           "image": "TBD",
-          "text_preview": "Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\nLe G...",
-          "text_full": "Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
+          "text_preview": "<!-- @subhook s01_h03a | @page_book 4 | @image TBD -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si ferm...",
+          "text_full": "<!-- @subhook s01_h03a | @page_book 4 | @image TBD -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\n<!-- @subhook s01_h03b | @page_book 5 | @image TBD -->\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
           "source": "manual",
           "location": {
             "id": "via_che_sale",
@@ -143,16 +184,42 @@
             "Montagne Gemelle in fondo all'orizzonte (sfondo lontano)",
             "Frasi-codice fratelli: «Da lassù si vede tutta l'isola» / «E forse anche più in là»"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h03a, s01_h03b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h03a",
+              "page_book": 4,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h03b",
+              "page_book": 5,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h03a",
+              "page_book": 4,
+              "text_split_marker": "Salirono in fila",
+              "image_status": "TBD",
+              "note": "Salita in fila (Noah davanti, Elias mezzo, Gabriel in coda). Pietra dei tre passi (dettaglio Tier A): si fermano d'istinto, ripartono."
+            },
+            {
+              "id": "s01_h03b",
+              "page_book": 5,
+              "text_split_marker": "Le Gemelle erano in fondo",
+              "image_status": "TBD",
+              "note": "Le Gemelle in fondo, due cime tagliate dal cielo. Villaggio piccolo sotto. Frasi-codice fratelli. Noah raccoglie un bastoncino."
+            }
+          ]
         },
         {
           "hook_id": "s01_h04",
           "page": 4,
           "image": "TBD",
-          "text_preview": "Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\nNoah parlò per primo. «...",
-          "text_full": "Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\nNoah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»\n\n«Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»\n\nGabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasca. Stava fermo. Stava fermo da prima ancora di decidere di stare fermo.",
+          "text_preview": "<!-- @subhook s01_h04a | @page_book 6 | @image TBD -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un bracc...",
+          "text_full": "<!-- @subhook s01_h04a | @page_book 6 | @image TBD -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\n<!-- @subhook s01_h04b | @page_book 7 | @image TBD -->\nNoah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»\n\n«Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»\n\nGabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasca. Stava fermo. Stava fermo da prima ancora di decidere di stare fermo.",
           "source": "manual",
           "location": {
             "id": "pascoli_alti",
@@ -172,16 +239,42 @@
             "Frase Noah: «Torniamo. Andiamo via di qui. Andiamo via.»",
             "Frase Elias: «Possiamo tenerci per mano»"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h04a, s01_h04b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h04a",
+              "page_book": 6,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h04b",
+              "page_book": 7,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h04a",
+              "page_book": 6,
+              "text_split_marker": "Sopra i Pascoli, la nebbia salì",
+              "image_status": "TBD",
+              "note": "La nebbia improvvisa sale dai Pascoli. I tre persero la visibilità (sentiero, Gemelle, l'uno l'altro a braccio di distanza). Si fermano."
+            },
+            {
+              "id": "s01_h04b",
+              "page_book": 7,
+              "text_split_marker": "Noah parlò per primo",
+              "image_status": "TBD",
+              "note": "Dialogo nella nebbia: Noah «Torniamo», Elias «Possiamo tenerci per mano». Gabriel non risponde, sta fermo da prima ancora di decidere."
+            }
+          ]
         },
         {
           "hook_id": "s01_h05",
           "page": 5,
           "image": "TBD",
-          "text_preview": "«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in a...",
-          "text_full": "«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.",
+          "text_preview": "<!-- @subhook s01_h05a | @page_book 8 | @image TBD -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\n<!-- @subhook s01_h05b | @p...",
+          "text_full": "<!-- @subhook s01_h05a | @page_book 8 | @image TBD -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\n<!-- @subhook s01_h05b | @page_book 9 | @image TBD -->\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.",
           "source": "manual",
           "location": {
             "id": "pascoli_alti",
@@ -198,18 +291,44 @@
             "Continua scena h04 (stessi Pascoli, stessa nebbia)",
             "I tre seduti per terra sul sentiero",
             "Frase Gabriel canonica: «No. Non muoverci.»",
-            "Sonori implicit (non visivi): pietra che rotola, capra risponde a capra"
+            "Sonori implicit (non visivi): pietra che rotola, capra risponde a capra, vento ancora dormiente"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h05a, s01_h05b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h05a",
+              "page_book": 8,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h05b",
+              "page_book": 9,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h05a",
+              "page_book": 8,
+              "text_split_marker": "«No. Non muoverci.»",
+              "image_status": "TBD",
+              "note": "Decisione Gabriel «No. Non muoverci.» — si siede per terra, Elias accanto, Noah un po' più vicino agli altri due."
+            },
+            {
+              "id": "s01_h05b",
+              "page_book": 9,
+              "text_split_marker": "La nebbia continuò",
+              "image_status": "TBD",
+              "note": "Tempo dilatato nell'attesa: nebbia gira intorno, pietra rotola tre volte in alto, capre rispondono lontano, vento ancora dorme. L'isola continua a vivere mentre i tre stanno fermi."
+            }
+          ]
         },
         {
           "hook_id": "s01_h06",
           "page": 6,
           "image": "TBD",
-          "text_preview": "Poi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di non sentirsi più.\n\nI tre fratelli stettero zitti.",
-          "text_full": "Poi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di non sentirsi più.\n\nI tre fratelli stettero zitti.",
+          "text_preview": "<!-- @subhook s01_h06a | @page_book 10 | @image TBD -->\nPoi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di ...",
+          "text_full": "<!-- @subhook s01_h06a | @page_book 10 | @image TBD -->\nPoi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di non sentirsi più.\n\nI tre fratelli stettero zitti.",
           "source": "manual",
           "location": {
             "id": "burrone",
@@ -227,16 +346,30 @@
             "A due passi dai fratelli si rivela il bordo del Burrone",
             "Pietra cade dal ciglio (sonoro implicito)"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h06a]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h06a",
+              "page_book": 10,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h06a",
+              "page_book": 10,
+              "text_split_marker": "Poi arrivò il vento",
+              "image_status": "TBD",
+              "note": "Il vento apre la nebbia: rivela il bordo del Burrone a due passi davanti. Pietra cade dal ciglio. I tre fratelli zitti."
+            }
+          ]
         },
         {
           "hook_id": "s01_h07",
           "page": 7,
           "image": "TBD",
-          "text_preview": "Il vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra...",
-          "text_full": "Il vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra diventava per un attimo d'oro.",
+          "text_preview": "<!-- @subhook s01_h07a | @page_book [11, 12] | @layout double_spread | @image TBD -->\nIl vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi pare...",
+          "text_full": "<!-- @subhook s01_h07a | @page_book [11, 12] | @layout double_spread | @image TBD -->\nIl vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra diventava per un attimo d'oro.",
           "source": "manual",
           "location": {
             "id": "burrone",
@@ -252,18 +385,41 @@
           "canonical_details": [
             "Variante prompt: cengia stretta in mezzaroccia con lichene verde, sentiero che sale",
             "Sole tocca pietre e diventano oro per un attimo",
-            "Direzione: verso Grunto (la Grotta è lì oltre la cengia)"
+            "Direzione: verso Grunto (la Grotta è lì oltre la cengia)",
+            "DOUBLE SPREAD: 2 pagine libro per 1 sotto-hook (immagine grande che attraversa lo spread, testo solo su una pagina)"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h07a]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h07a",
+              "page_book": [
+                11,
+                12
+              ],
+              "image": "TBD",
+              "layout": "double_spread"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h07a",
+              "page_book": [
+                11,
+                12
+              ],
+              "text_split_marker": "Il vento restava",
+              "image_status": "TBD",
+              "layout": "double_spread",
+              "note": "Spread doppia: la salita lungo la cengia verso Grunto. Lichene verde sulle pareti, sole che fa pietre d'oro. Momento importante della salita."
+            }
+          ]
         },
         {
           "hook_id": "s01_h08",
           "page": 8,
           "image": "TBD",
-          "text_preview": "E lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fratelli non scapparono. Non si avvicinarono. Restarono in...",
-          "text_full": "E lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fratelli non scapparono. Non si avvicinarono. Restarono in piedi a tre o quattro passi.\n\nGrunto continuò a guardarli. Poi smise. Voltò la testa altrove.\n\nGabriel si fece avanti. Posò la pagnotta su una pietra piatta tra loro. Si tirò indietro.\n\nGrunto la annusò. La prese. La masticò.\n\n«Buono.»",
+          "text_preview": "<!-- @subhook s01_h08a | @page_book 13 | @image TBD -->\nE lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fr...",
+          "text_full": "<!-- @subhook s01_h08a | @page_book 13 | @image TBD -->\nE lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fratelli non scapparono. Non si avvicinarono. Restarono in piedi a tre o quattro passi.\n\nGrunto continuò a guardarli. Poi smise. Voltò la testa altrove.\n\n<!-- @subhook s01_h08b | @page_book 14 | @image TBD -->\nGabriel si fece avanti. Posò la pagnotta su una pietra piatta tra loro. Si tirò indietro.\n\nGrunto la annusò. La prese. La masticò.\n\n«Buono.»",
           "source": "manual",
           "location": {
             "id": "grotta_grunto",
@@ -286,16 +442,42 @@
             "Vocalizzazioni canoniche Grunto: *Grunt.* (gesto), *Via.* (zoccolo), «Buono.» (dopo aver mangiato)",
             "Gabriel posa la pagnotta su una pietra piatta tra loro, si tira indietro"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h08a, s01_h08b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h08a",
+              "page_book": 13,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h08b",
+              "page_book": 14,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h08a",
+              "page_book": 13,
+              "text_split_marker": "E lì c'era",
+              "image_status": "TBD",
+              "note": "Apparizione di Grunto: enorme, pelo verde, corna, cicatrice. Vocalizzazioni *Grunt.* + *Via.* (zoccolo). I fratelli a tre o quattro passi non scappano e non si avvicinano. Grunto guarda, poi smette."
+            },
+            {
+              "id": "s01_h08b",
+              "page_book": 14,
+              "text_split_marker": "Gabriel si fece avanti",
+              "image_status": "TBD",
+              "note": "Gabriel posa la pagnotta su una pietra piatta tra loro, si tira indietro. Grunto la annusa, la prende, la mastica. «Buono.» — frase canonica saga."
+            }
+          ]
         },
         {
           "hook_id": "s01_h09",
           "page": 9,
           "image": "TBD",
-          "text_preview": "Tornarono giù prima che facesse buio.\n\nLe Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.\n\nI Pascoli erano vuoti. Il sentiero adesso ...",
-          "text_full": "Tornarono giù prima che facesse buio.\n\nLe Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.\n\nI Pascoli erano vuoti. Il sentiero adesso si vedeva.",
+          "text_preview": "<!-- @subhook s01_h09a | @page_book 15 | @image TBD -->\nTornarono giù prima che facesse buio.\n\nLe Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non d...",
+          "text_full": "<!-- @subhook s01_h09a | @page_book 15 | @image TBD -->\nTornarono giù prima che facesse buio.\n\nLe Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.\n\nI Pascoli erano vuoti. Il sentiero adesso si vedeva.",
           "source": "manual",
           "location": {
             "id": "pascoli_alti",
@@ -313,16 +495,30 @@
             "Pascoli vuoti, sentiero che adesso si vede",
             "Noah lascia cadere il bastoncino (gesto silenzioso, prop temporaneo)"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h09a]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h09a",
+              "page_book": 15,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h09a",
+              "page_book": 15,
+              "text_split_marker": "Tornarono giù",
+              "image_status": "TBD",
+              "note": "Discesa al tramonto. Gemelle alle spalle oro pallido, sole che va via. Noah lascia cadere il bastoncino senza accorgersi, Elias lo vede ma tace. Pascoli vuoti."
+            }
+          ]
         },
         {
           "hook_id": "s01_h10",
           "page": 10,
           "image": "TBD",
-          "text_preview": "Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.\n\nFuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una p...",
-          "text_full": "Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.\n\nFuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una pietra cadde da qualche parte sul Burrone. Nessuno la sentì.",
+          "text_preview": "<!-- @subhook s01_h10a | @page_book 16 | @image TBD -->\nAl Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.\n\n<!-- @subhoo...",
+          "text_full": "<!-- @subhook s01_h10a | @page_book 16 | @image TBD -->\nAl Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.\n\n<!-- @subhook s01_h10b | @page_book 17 | @image TBD -->\nFuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una pietra cadde da qualche parte sul Burrone. Nessuno la sentì.",
           "source": "manual",
           "location": {
             "id": "forno",
@@ -345,9 +541,35 @@
             "Porta del Forno si chiude alle loro spalle (chiusura cornice s1↔s12)",
             "Fuori, vento sulle Gemelle ricomincia (eco)"
           ],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "subhooks_declared_in_marker": "[s01_h10a, s01_h10b]",
+          "subhooks_inline": [
+            {
+              "id": "s01_h10a",
+              "page_book": 16,
+              "image": "TBD"
+            },
+            {
+              "id": "s01_h10b",
+              "page_book": 17,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s01_h10a",
+              "page_book": 16,
+              "text_split_marker": "Al Forno, Fiamma",
+              "image_status": "TBD",
+              "note": "Forno sera. Fiamma sistema il piano per il giorno dopo, non chiede com'era andata, mette in mano a Noah un cornetto. I tre mangiano in piedi al banco. Porta si chiude."
+            },
+            {
+              "id": "s01_h10b",
+              "page_book": 17,
+              "text_split_marker": "Fuori, sopra le Gemelle",
+              "image_status": "TBD",
+              "note": "Eco finale: fuori il vento sulle Gemelle ricomincia, una pietra cade sul Burrone, nessuno la sente. Chiusura della cornice s1↔s12."
+            }
+          ]
         }
       ],
       "audited_entities": {
@@ -531,6 +753,7 @@
       "cycle": "A",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s02_il_riflesso_nella_pozza.md",
@@ -908,6 +1131,7 @@
       "cycle": "A",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s03_il_pallone_oltre_la_foresta.md",
@@ -1276,6 +1500,7 @@
       "cycle": "B",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s04_le_radici_che_parlano.md",
@@ -1649,6 +1874,7 @@
       "cycle": "B",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s05_il_ponte_di_rami.md",
@@ -1996,6 +2222,7 @@
       "cycle": "B",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s06_il_dono_per_memolo.md",
@@ -2389,6 +2616,7 @@
       "cycle": "C",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s07_la_zattera_dei_tre_rametti.md",
@@ -2782,6 +3010,7 @@
       "cycle": "C",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s08_lalbero_che_cadde_di_sera.md",
@@ -3197,6 +3426,7 @@
       "cycle": "C",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s09_quel_pomeriggio_di_ottobre.md",
@@ -3637,6 +3867,7 @@
       "cycle": "D",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s10_la_notte_senza_luna.md",
@@ -4045,6 +4276,7 @@
       "cycle": "D",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s11_la_festa_del_raccolto.md",
@@ -4526,6 +4758,7 @@
       "cycle": "D",
       "total_pages": 10,
       "total_hooks": 10,
+      "book_pages_total": null,
       "status": "definitiva",
       "ultima_modifica": "2026-05-04",
       "file_path": "pipeline_narrativa/storie_finali/s12_quando_i_tre_venti_suonano_insieme.md",

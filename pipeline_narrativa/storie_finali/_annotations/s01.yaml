@@ -8,7 +8,10 @@ note: |
   - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
   - objects_in_scene: oggetti canonici visibili (id da entities.objects)
   - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
-  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: vuoto = 1 pagina)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+
+book_pages_total: 17
 
 hooks:
 
@@ -20,7 +23,17 @@ hooks:
     canonical_details:
       - "Forno acceso da prima dell'alba, vapore alla finestra (atmosfera, da aggiungere a scheda forno)"
       - "Frase canonica Fiamma: «Se passate dal Burrone, una per Grunto. Una sola.»"
-    subhooks: []
+    subhooks:
+      - id: s01_h01a
+        page_book: 1
+        text_split_marker: "Sull'Isola dei Tre Venti"
+        image_status: TBD
+        note: "Apertura saga + Forno acceso all'alba: Fiamma impasta, fratelli entrano (Gabriel primo, Elias e Noah dietro). Vapore alla finestra, velo di farina."
+      - id: s01_h01b
+        page_book: 2
+        text_split_marker: "Fiamma li guardò"
+        image_status: TBD
+        note: "Fiamma consegna la pagnotta + la seconda per Grunto. Frase canonica «Se passate dal Burrone, una per Grunto. Una sola.» Si voltano e escono."
 
   s01_h02:
     location: piazza_villaggio
@@ -31,7 +44,12 @@ hooks:
       - "Cornice s01-c1 (Giro D): Camminante anonimo con carriola di vimini, gesto saluto"
       - "Cornice s01-c2 (Giro A): finestra accesa di una casa, qualcuno impasta"
       - "Albero Vecchio + Pozzo + Panca visibili (triade Piazza, sfondo)"
-    subhooks: []
+    subhooks:
+      - id: s01_h02a
+        page_book: 3
+        text_split_marker: "La piazza era vuota"
+        image_status: TBD
+        note: "Piazza vuota all'alba con cornici Camminante (sagoma + carriola, gesto saluto) e finestra accesa. I tre prendono la Via che Sale."
 
   s01_h03:
     location: via_che_sale
@@ -42,19 +60,39 @@ hooks:
       - "Pietra dei tre passi (vcs_d01_pietra_dei_tre_passi, dettaglio Tier A path_details)"
       - "Montagne Gemelle in fondo all'orizzonte (sfondo lontano)"
       - "Frasi-codice fratelli: «Da lassù si vede tutta l'isola» / «E forse anche più in là»"
-    subhooks: []
+    subhooks:
+      - id: s01_h03a
+        page_book: 4
+        text_split_marker: "Salirono in fila"
+        image_status: TBD
+        note: "Salita in fila (Noah davanti, Elias mezzo, Gabriel in coda). Pietra dei tre passi (dettaglio Tier A): si fermano d'istinto, ripartono."
+      - id: s01_h03b
+        page_book: 5
+        text_split_marker: "Le Gemelle erano in fondo"
+        image_status: TBD
+        note: "Le Gemelle in fondo, due cime tagliate dal cielo. Villaggio piccolo sotto. Frasi-codice fratelli. Noah raccoglie un bastoncino."
 
   s01_h04:
     location: pascoli_alti
     location_variant: nebbia
     characters_in_scene: [gabriel, elias, noah]
     characters_offscreen_or_distant: []
-    objects_in_scene: [pagnotta_forno]  # Gabriel la tiene sotto braccio
+    objects_in_scene: [pagnotta_forno]
     canonical_details:
       - "Variante atmosferica: nebbia improvvisa fredda sopra i Pascoli (da aggiungere come variante prompt pascoli_alti)"
       - "Frase Noah: «Torniamo. Andiamo via di qui. Andiamo via.»"
       - "Frase Elias: «Possiamo tenerci per mano»"
-    subhooks: []
+    subhooks:
+      - id: s01_h04a
+        page_book: 6
+        text_split_marker: "Sopra i Pascoli, la nebbia salì"
+        image_status: TBD
+        note: "La nebbia improvvisa sale dai Pascoli. I tre persero la visibilità (sentiero, Gemelle, l'uno l'altro a braccio di distanza). Si fermano."
+      - id: s01_h04b
+        page_book: 7
+        text_split_marker: "Noah parlò per primo"
+        image_status: TBD
+        note: "Dialogo nella nebbia: Noah «Torniamo», Elias «Possiamo tenerci per mano». Gabriel non risponde, sta fermo da prima ancora di decidere."
 
   s01_h05:
     location: pascoli_alti
@@ -66,8 +104,18 @@ hooks:
       - "Continua scena h04 (stessi Pascoli, stessa nebbia)"
       - "I tre seduti per terra sul sentiero"
       - "Frase Gabriel canonica: «No. Non muoverci.»"
-      - "Sonori implicit (non visivi): pietra che rotola, capra risponde a capra"
-    subhooks: []
+      - "Sonori implicit (non visivi): pietra che rotola, capra risponde a capra, vento ancora dormiente"
+    subhooks:
+      - id: s01_h05a
+        page_book: 8
+        text_split_marker: "«No. Non muoverci.»"
+        image_status: TBD
+        note: "Decisione Gabriel «No. Non muoverci.» — si siede per terra, Elias accanto, Noah un po' più vicino agli altri due."
+      - id: s01_h05b
+        page_book: 9
+        text_split_marker: "La nebbia continuò"
+        image_status: TBD
+        note: "Tempo dilatato nell'attesa: nebbia gira intorno, pietra rotola tre volte in alto, capre rispondono lontano, vento ancora dorme. L'isola continua a vivere mentre i tre stanno fermi."
 
   s01_h06:
     location: burrone
@@ -79,7 +127,12 @@ hooks:
       - "Variante prompt: vista dal ciglio del Burrone, con vento che apre la nebbia"
       - "A due passi dai fratelli si rivela il bordo del Burrone"
       - "Pietra cade dal ciglio (sonoro implicito)"
-    subhooks: []
+    subhooks:
+      - id: s01_h06a
+        page_book: 10
+        text_split_marker: "Poi arrivò il vento"
+        image_status: TBD
+        note: "Il vento apre la nebbia: rivela il bordo del Burrone a due passi davanti. Pietra cade dal ciglio. I tre fratelli zitti."
 
   s01_h07:
     location: burrone
@@ -91,7 +144,14 @@ hooks:
       - "Variante prompt: cengia stretta in mezzaroccia con lichene verde, sentiero che sale"
       - "Sole tocca pietre e diventano oro per un attimo"
       - "Direzione: verso Grunto (la Grotta è lì oltre la cengia)"
-    subhooks: []
+      - "DOUBLE SPREAD: 2 pagine libro per 1 sotto-hook (immagine grande che attraversa lo spread, testo solo su una pagina)"
+    subhooks:
+      - id: s01_h07a
+        page_book: [11, 12]
+        text_split_marker: "Il vento restava"
+        image_status: TBD
+        layout: double_spread
+        note: "Spread doppia: la salita lungo la cengia verso Grunto. Lichene verde sulle pareti, sole che fa pietre d'oro. Momento importante della salita."
 
   s01_h08:
     location: grotta_grunto
@@ -103,7 +163,17 @@ hooks:
       - "Grunto: pelo verde-lichene, corna grandi all'indietro, cicatrice chiara fianco sinistro"
       - "Vocalizzazioni canoniche Grunto: *Grunt.* (gesto), *Via.* (zoccolo), «Buono.» (dopo aver mangiato)"
       - "Gabriel posa la pagnotta su una pietra piatta tra loro, si tira indietro"
-    subhooks: []
+    subhooks:
+      - id: s01_h08a
+        page_book: 13
+        text_split_marker: "E lì c'era"
+        image_status: TBD
+        note: "Apparizione di Grunto: enorme, pelo verde, corna, cicatrice. Vocalizzazioni *Grunt.* + *Via.* (zoccolo). I fratelli a tre o quattro passi non scappano e non si avvicinano. Grunto guarda, poi smette."
+      - id: s01_h08b
+        page_book: 14
+        text_split_marker: "Gabriel si fece avanti"
+        image_status: TBD
+        note: "Gabriel posa la pagnotta su una pietra piatta tra loro, si tira indietro. Grunto la annusa, la prende, la mastica. «Buono.» — frase canonica saga."
 
   s01_h09:
     location: pascoli_alti
@@ -115,21 +185,36 @@ hooks:
       - "Variante atmosferica: tramonto/golden hour, Gemelle alle spalle oro pallido"
       - "Pascoli vuoti, sentiero che adesso si vede"
       - "Noah lascia cadere il bastoncino (gesto silenzioso, prop temporaneo)"
-    subhooks: []
+    subhooks:
+      - id: s01_h09a
+        page_book: 15
+        text_split_marker: "Tornarono giù"
+        image_status: TBD
+        note: "Discesa al tramonto. Gemelle alle spalle oro pallido, sole che va via. Noah lascia cadere il bastoncino senza accorgersi, Elias lo vede ma tace. Pascoli vuoti."
 
   s01_h10:
     location: forno
     location_variant: interno_sera
     characters_in_scene: [fiamma, gabriel, elias, noah]
     characters_offscreen_or_distant: []
-    objects_in_scene: [grembiule_fiamma]  # cornetto: variante pagnotta non ancora a catalogo
+    objects_in_scene: [grembiule_fiamma]
     canonical_details:
       - "Variante prompt forno: interno sera (vs alba canonico) — palette + lampada"
       - "Fiamma sistema il piano per il giorno dopo"
       - "Mette in mano a Noah un cornetto (variante pagnotta da aggiungere a scheda)"
       - "Porta del Forno si chiude alle loro spalle (chiusura cornice s1↔s12)"
       - "Fuori, vento sulle Gemelle ricomincia (eco)"
-    subhooks: []
+    subhooks:
+      - id: s01_h10a
+        page_book: 16
+        text_split_marker: "Al Forno, Fiamma"
+        image_status: TBD
+        note: "Forno sera. Fiamma sistema il piano per il giorno dopo, non chiede com'era andata, mette in mano a Noah un cornetto. I tre mangiano in piedi al banco. Porta si chiude."
+      - id: s01_h10b
+        page_book: 17
+        text_split_marker: "Fuori, sopra le Gemelle"
+        image_status: TBD
+        note: "Eco finale: fuori il vento sulle Gemelle ricomincia, una pietra cade sul Burrone, nessuno la sente. Chiusura della cornice s1↔s12."
 
 # Aggiunte da prosa al canone (todo per Ray):
 canon_additions_todo:
@@ -143,7 +228,7 @@ canon_additions_todo:
     note: "Aggiungi variante 'nebbia improvvisa' al prompt pascoli_alti (per h04, h05)"
     priority: medium
   - location: burrone
-    note: "Aggiungi variante 'vista dal bordo' (h06) e 'cengia in mezzaroccia' (h07) al prompt burrone"
+    note: "Aggiungi variante 'vista dal bordo' (h06) e 'cengia in mezzaroccia spread doppia' (h07) al prompt burrone"
     priority: medium
   - location: pascoli_alti
     note: "Aggiungi variante 'tramonto/golden hour' al prompt pascoli_alti (per h09)"
