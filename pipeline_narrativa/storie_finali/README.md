@@ -85,6 +85,7 @@ Ogni `## Pagina N` corrisponde a **un hook narrativo** (1..10), che a sua volta 
 | `_annotations/` | YAML autoriali Ray (es. `s01.yaml`) — note di scena, decisioni autoriali | `_annotations/sNN.yaml` |
 | `_inventory/` | inventari testuali derivati (per audit/QA prosa) | `_inventory/sNN_*.{md,yaml}` |
 | `_scene/` | **immagini-scena composte** (illustrazione singola pagina libro), referenziate dal marker `@subhook ... @image` | `_scene/sNN/sNN_hMMx.jpg` |
+| `_volumi/` | **cornice editoriale dei 4 volumi** (Soglia / Introduzione / Stato Zero / Presentazione / Porte / Sigilli / Congedo). Marker `## VOLUME N` interni per il compositore libro | `_volumi/<sezione>.md` |
 
 ### `_scene/` — pattern in dettaglio
 

@@ -12,6 +12,30 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-05-05-011 — Cornice editoriale 4 volumi: archiviato pacchetto `isola_4volumi_v2`
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** pipeline_narrativa (additivo, no modifiche grafo / no modifiche storie definitive) + governance
+- **Repo target:** n/a (informativo)
+- **Cambiamento:**
+  1. **Nuova sotto-cartella `pipeline_narrativa/storie_finali/_volumi/`** — cornice editoriale completa dei 4 volumi del libro. Pacchetto consegnato da Ray come zip (`isola_4volumi_v2.zip`).
+  2. **Strategia di archivio: opzione C (per funzione)** — un file consolidato per sezione strutturale, con marker `## VOLUME N` interni per il compositore libro. Pattern coerente con `_scene/` / `_annotations/` / `_inventory/` (underscore prefix).
+  3. **Mappa volumi → cicli grafo:** Vol1=A (s01-s03), Vol2=B (s04-s06), Vol3=C (s07-s09), Vol4=D (s10-s12). 3 storie per volume.
+  4. **Estratti markdown da 2 .docx** via `python-docx`: `CORNICI_Soglia_Congedo.docx` → `soglia.md` + `congedo.md`; `PRESENTAZIONE_isola_completa.docx` → `presentazione_completa.md` (sorgente unica delle 23 doppie). Originali `.docx` NON conservati (decisione Ray).
+  5. **5 markdown finali del pacchetto** copiati con naming snellito: `PIANO_EDITORIALE_4VOLUMI_v1.md` (mantiene nome storico) + `introduzioni_cicli.md` + `stato_zero_e_sigilli.md` + `presentazioni_parziali.md` + `porte.md`.
+  6. **`_elementi_fissi/` (read-only):** `STATO_ZERO_originale.md` + `LE_PORTE_cornice_narrativa_v2.md` (riferimenti per audit).
+  7. **Decisione editoriale Ray (2026-05-05):** simboli `Δ / ⇄ / ⟳ / Integrazione` ancora presenti nei file → da sostituire con `A / B / C / D` in revisione editoriale futura (i simboli sono "troppo EAR-leggibili", e EAR resta invisibile). Nessun edit ora — Ray farà revisione completa prima della composizione libri, modificando direttamente i file qui.
+  8. **README dedicato** in `_volumi/README.md`: mappa volume→ciclo, struttura 7 sezioni, file inventory, pattern compositore libro (split per `## VOLUME N`), vincoli, stato completamento.
+  9. **CLAUDE.md mappa repo** aggiornata con riga `_volumi/`.
+  10. **storie_finali/README.md tabella cartelle gemelle** estesa con riga `_volumi/`.
+- **Lavori pendenti (Ray, prima della composizione libri):**
+  - Revisione "morale" delle 4 introduzioni (segnalata dallo stesso piano editoriale)
+  - Sostituzione etichette `Δ/⇄/⟳/Integrazione` → `A/B/C/D` ovunque
+  - 9 tracce bambini delle Porte sono già scritte (non da-fare nonostante il piano dica "da scrivere" — il piano è stato consegnato in fase intermedia)
+- **File toccati:** `pipeline_narrativa/storie_finali/_volumi/` (NEW directory + 9 file + README + 2 file `_elementi_fissi/`), `pipeline_narrativa/storie_finali/README.md`, `CLAUDE.md`, `SYNC_LOG.md`.
+
+---
+
 ## SYNC-2026-05-05-010 — Pattern `_scene/` per immagini-scena composte + 4 reference visive
 
 - **Stato:** DA_RIFLETTERE

@@ -46,6 +46,7 @@ isola_i3v_visual/
 │   ├── storie_finali/_annotations/   YAML autoriali Ray (sNN.yaml) — note di scena
 │   ├── storie_finali/_inventory/     inventari testuali derivati (audit/QA prosa)
 │   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Naming deterministico, una pagina libro = un file. NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
+│   ├── storie_finali/_volumi/        cornice editoriale 4 volumi (3 storie/volume, 1:1 con cicli A/B/C/D): soglia, introduzioni_cicli, stato_zero_e_sigilli, presentazione_completa, presentazioni_parziali, porte, congedo + _elementi_fissi/ (riferimenti read-only). Marker ## VOLUME N interni per compositore libro
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
 ├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche + prompt_grok.md
