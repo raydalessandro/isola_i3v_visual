@@ -55,7 +55,7 @@
         "chars_with_imgs": 5,
         "locs_distinct": 6,
         "locs_with_imgs": 1,
-        "locs_with_prompt": 5,
+        "locs_with_prompt": 6,
         "objs_distinct": 3,
         "objs_with_prompt": 3,
         "hooks_image_ready": 0,
@@ -635,7 +635,7 @@
             "id": "camminanti",
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },
@@ -685,7 +685,7 @@
             "id": "via_che_sale",
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },
@@ -777,7 +777,7 @@
         "chars_with_imgs": 7,
         "locs_distinct": 2,
         "locs_with_imgs": 0,
-        "locs_with_prompt": 1,
+        "locs_with_prompt": 2,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
         "hooks_image_ready": 0,
@@ -1124,7 +1124,7 @@
             "id": "via_che_sale",
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },
@@ -2591,7 +2591,7 @@
             "id": "camminanti",
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },
@@ -3094,7 +3094,7 @@
         "chars_with_imgs": 8,
         "locs_distinct": 3,
         "locs_with_imgs": 0,
-        "locs_with_prompt": 1,
+        "locs_with_prompt": 2,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
         "hooks_image_ready": 0,
@@ -3488,7 +3488,7 @@
             "id": "panca_di_pietra",
             "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/albero_vecchio/panca_di_pietra",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           }
@@ -4830,7 +4830,7 @@
             "id": "camminanti",
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           }
