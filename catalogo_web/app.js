@@ -820,7 +820,7 @@ async function renderStorieIndex() {
         <div class="storia-mini-stats">
           <span title="Personaggi con immagini canoniche">👤 ${stats.chars_with_imgs}/${stats.chars_distinct}</span>
           <span title="Luoghi con prompt grok">🏛️ ${stats.locs_with_prompt}/${stats.locs_distinct}</span>
-          <span title="Inventario manuale">${s.inventory && s.inventory.exists ? "📋 inv" : "—"}</span>
+          <span title="${s.annotations_present ? 'Annotazioni manuali presenti' : 'Annotazioni mancanti (NER auto)'}">${s.annotations_present ? '✅ ann' : '⚠️ auto'}</span>
         </div>
       </a>`;
   }).join("");
@@ -847,57 +847,46 @@ async function renderStoriaDetail(sid) {
     return;
   }
   const aud = s.audited_entities || {};
-
-  // Hook table rows
-  const hookRows = (s.hooks || []).map(h => {
-    const ents = h.entities || {};
-    const charBadges = (ents.personaggi || []).map(cid => {
-      const a = aud.personaggi[cid] || {};
-      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
-      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(cid)}" title="${a.n_images || 0} img">${escapeHtml(cid)}</span>`;
-    }).join("");
-    const locBadges = (ents.luoghi || []).map(lid => {
-      const a = aud.luoghi[lid] || {};
-      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
-      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(lid)}">${escapeHtml(lid)}</span>`;
-    }).join("");
-    const objBadges = (ents.oggetti || []).map(oid => {
-      const a = aud.oggetti[oid] || {};
-      const status = a.n_images > 0 ? "ok" : (a.prompt_grok ? "warn" : "missing");
-      return `<span class="entity-badge ent-${status}" data-id="${escapeAttr(oid)}">${escapeHtml(oid)}</span>`;
-    }).join("");
-    const imgStatus = h.image === "TBD" ? `<span class="img-status tbd">TBD</span>` : `<span class="img-status ready">${escapeHtml(h.image)}</span>`;
-    return `
-      <tr class="hook-row">
-        <td class="col-page"><strong>${h.page}</strong></td>
-        <td class="col-hook"><code>${escapeHtml(h.hook_id)}</code></td>
-        <td class="col-text">${escapeHtml(h.text_preview || "")}</td>
-        <td class="col-chars">${charBadges || "<em>—</em>"}</td>
-        <td class="col-locs">${locBadges || "<em>—</em>"}</td>
-        <td class="col-objs">${objBadges || "<em>—</em>"}</td>
-        <td class="col-img">${imgStatus}</td>
-      </tr>`;
-  }).join("");
-
-  // Audit panels
-  const charPanel = renderEntityAuditPanel("Personaggi", aud.personaggi);
-  const locPanel = renderEntityAuditPanel("Luoghi", aud.luoghi);
-  const objPanel = renderEntityAuditPanel("Oggetti", aud.oggetti);
-
-  // Inventory section
-  const invHtml = (s.inventory && s.inventory.exists)
-    ? `<details class="inventory-block" open>
-         <summary>📋 Inventario operativo (<a href="${escapeAttr(s.inventory.github_url || '#')}" target="_blank" rel="noopener">apri su GitHub</a>)</summary>
-         ${s.inventory.gaps_summary ? `<h3>Gap operativi</h3><div class="md-block">${marked.parse(s.inventory.gaps_summary || "")}</div>` : ""}
-         ${s.inventory.todo_summary ? `<h3>Cosa serve per concludere</h3><div class="md-block">${marked.parse(s.inventory.todo_summary || "")}</div>` : ""}
-         ${s.inventory.additions_summary ? `<h3>Aggiunte da prosa al canone</h3><div class="md-block">${marked.parse(s.inventory.additions_summary || "")}</div>` : ""}
-       </details>`
-    : `<p class="inventory-missing">⚠️ Inventario operativo non ancora creato per questa storia.</p>`;
-
   const stats = s.stats || {};
   const totalHooks = stats.hooks_total || 10;
   const ready = stats.hooks_image_ready || 0;
   const pct = Math.round((ready / totalHooks) * 100);
+
+  // -------- Saga style reference (copiabile) --------
+  const styleRef = data.saga_style_reference || "";
+  const styleBlock = `
+    <details class="style-ref-block" open>
+      <summary>🎨 <strong>Reference stile saga</strong> — copia questo blocco in chat Grok per coerenza stilistica</summary>
+      <div class="style-ref-inner">
+        <pre id="style-ref-pre">${escapeHtml(styleRef)}</pre>
+        <button class="copy-btn" id="copy-style-btn" type="button">📋 Copia</button>
+      </div>
+    </details>`;
+
+  // -------- Hook accordion --------
+  const hooksHtml = (s.hooks || []).map(h => renderHookAccordionItem(h, aud)).join("");
+
+  // -------- Annotations status banner --------
+  const annHtml = s.annotations_present
+    ? `<div class="ann-status ok">✅ Annotazioni manuali presenti — <a href="${escapeAttr(s.annotations_github_url || '#')}" target="_blank" rel="noopener">${escapeHtml(s.annotations_path || '')}</a></div>`
+    : `<div class="ann-status warn">⚠️ Annotazioni manuali non ancora create — i dati dei hook sono auto-rilevati (NER fuzzy)</div>`;
+
+  // -------- Canon todo --------
+  const todo = s.canon_additions_todo || [];
+  const todoHtml = todo.length ? `
+    <details class="canon-todo-block">
+      <summary>📝 Aggiunte da prosa al canone (${todo.length}) — todo per Ray</summary>
+      <ul class="canon-todo-list">
+        ${todo.map(t => {
+          const target = t.location ? `luogo: <code>${escapeHtml(t.location)}</code>` :
+                         t.object ? `oggetto: <code>${escapeHtml(t.object)}</code>` :
+                         t.character ? `personaggio: <code>${escapeHtml(t.character)}</code>` : "—";
+          const prio = t.priority || "—";
+          const pcls = prio === "high" ? "prio-high" : prio === "medium" ? "prio-med" : "prio-low";
+          return `<li class="canon-todo-item ${pcls}"><span class="prio">${escapeHtml(prio)}</span> <span class="target">${target}</span> <span class="note">${escapeHtml(t.note || "")}</span></li>`;
+        }).join("")}
+      </ul>
+    </details>` : "";
 
   c.innerHTML = `
     <div class="page-storia-detail">
@@ -906,6 +895,8 @@ async function renderStoriaDetail(sid) {
         <h1>${escapeHtml(s.sid.toUpperCase())} — ${escapeHtml(s.title)}</h1>
         <p class="storia-meta">Ciclo ${escapeHtml(s.cycle)} · ${stats.hooks_total} hook · status ${escapeHtml(s.status)} · <a href="${escapeAttr(s.github_url || '#')}" target="_blank" rel="noopener">testo su GitHub</a></p>
       </div>
+
+      ${styleBlock}
 
       <div class="storia-overview">
         <div class="overview-progress">
@@ -920,44 +911,180 @@ async function renderStoriaDetail(sid) {
         </div>
       </div>
 
-      <h2>Hook visivi (10 pagine)</h2>
-      <div class="hooks-table-wrap">
-        <table class="hooks-table">
-          <thead>
-            <tr>
-              <th>Pag</th>
-              <th>Hook</th>
-              <th>Testo (estratto)</th>
-              <th>Personaggi</th>
-              <th>Luoghi</th>
-              <th>Oggetti</th>
-              <th>Img</th>
-            </tr>
-          </thead>
-          <tbody>${hookRows}</tbody>
-        </table>
-      </div>
+      ${annHtml}
 
-      <h2>Audit risorse</h2>
-      <div class="audit-grid">
-        ${charPanel}
-        ${locPanel}
-        ${objPanel}
-      </div>
+      <h2>Hook visivi (${(s.hooks || []).length})</h2>
+      <div class="hooks-accordion">${hooksHtml}</div>
 
-      ${invHtml}
+      ${todoHtml}
     </div>`;
 
-  // Wire entity badges → click va alla scheda dell'entità
-  document.querySelectorAll(".entity-badge[data-id]").forEach(b => {
-    b.addEventListener("click", () => {
+  // Wire entity-link click → vai alla scheda
+  document.querySelectorAll(".entity-link[data-id]").forEach(b => {
+    b.addEventListener("click", (ev) => {
+      ev.preventDefault();
       const id = b.getAttribute("data-id");
       location.hash = `#/entity/${encodeURIComponent(id)}`;
     });
-    b.style.cursor = "pointer";
   });
 
+  // Wire copy-style button
+  const copyBtn = document.getElementById("copy-style-btn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(styleRef);
+        copyBtn.textContent = "✓ Copiato";
+        setTimeout(() => { copyBtn.textContent = "📋 Copia"; }, 2000);
+      } catch (e) {
+        copyBtn.textContent = "✗ Errore";
+      }
+    });
+  }
+
   scrollMainTop();
+}
+
+/* Render singolo hook come <details> accordion */
+function renderHookAccordionItem(h, aud) {
+  const loc = h.location || { id: "", variant: "" };
+  const charsInScene = h.characters_in_scene || [];
+  const charsOff = h.characters_offscreen_or_distant || [];
+  const objsInScene = h.objects_in_scene || [];
+  const details = h.canonical_details || [];
+  const subhooksAnn = h.subhooks_annotated || [];
+
+  // Status overview per il summary
+  const charsCount = charsInScene.length + charsOff.length;
+  const charsReadyCount = charsInScene.filter(cid => (aud.personaggi[cid] || {}).n_images > 0).length;
+  const locReady = loc.id && (aud.luoghi[loc.id] || {}).n_images > 0;
+  const locStatusDot = loc.id
+    ? (locReady ? `<span class="dot dot-ok" title="luogo con immagini canoniche"></span>`
+                : ((aud.luoghi[loc.id] || {}).prompt_grok ? `<span class="dot dot-warn" title="luogo con prompt grok ma senza immagini"></span>`
+                                                          : `<span class="dot dot-missing" title="luogo senza prompt grok"></span>`))
+    : `<span class="dot dot-missing" title="location non specificata"></span>`;
+  const imgStatus = h.image && h.image !== "TBD"
+    ? `<span class="img-status ready">img ✓</span>`
+    : `<span class="img-status tbd">img TBD</span>`;
+  const subBadge = subhooksAnn.length ? `<span class="subhook-count">${subhooksAnn.length} sub</span>` : "";
+  const summaryRight = `
+    ${locStatusDot}
+    <span class="char-count">${charsReadyCount}/${charsCount} 👤</span>
+    ${subBadge}
+    ${imgStatus}`;
+
+  // Sezione Luogo
+  const locPanel = loc.id ? renderEntityRow(loc.id, "luogo", aud.luoghi[loc.id] || {}, loc.variant) : `<p class="missing-meta">⚠️ Location non specificata nelle annotazioni.</p>`;
+
+  // Sezione Personaggi in scena
+  const charsInRows = charsInScene.length
+    ? charsInScene.map(cid => renderEntityRow(cid, "personaggio", aud.personaggi[cid] || {})).join("")
+    : `<p class="missing-meta">— nessun personaggio in scena</p>`;
+
+  // Sezione personaggi offscreen/distant
+  const charsOffRows = charsOff.length
+    ? `<div class="offscreen-block"><h4>Cammei / sagome / sonori</h4>${charsOff.map(cid => renderEntityRow(cid, "personaggio", aud.personaggi[cid] || {}, "", true)).join("")}</div>`
+    : "";
+
+  // Sezione Oggetti
+  const objsRows = objsInScene.length
+    ? objsInScene.map(oid => renderEntityRow(oid, "oggetto", aud.oggetti[oid] || {})).join("")
+    : `<p class="missing-meta">— nessun oggetto canonico in scena</p>`;
+
+  // Canonical details
+  const detailsHtml = details.length
+    ? `<ul class="canonical-details">${details.map(d => `<li>${escapeHtml(d)}</li>`).join("")}</ul>`
+    : "";
+
+  // Sotto-hook
+  const subhooksHtml = subhooksAnn.length
+    ? `<div class="subhooks-block">
+         <h4>Sotto-hook (${subhooksAnn.length}) — pagine libro fisiche</h4>
+         <ul class="subhooks-list">
+           ${subhooksAnn.map(sh => `
+             <li class="subhook-item">
+               <span class="sh-id"><code>${escapeHtml(sh.id || '?')}</code></span>
+               <span class="sh-page">pag. libro ${sh.page_book || '?'}</span>
+               <span class="img-status ${sh.image_status === 'TBD' || !sh.image_status ? 'tbd' : 'ready'}">${escapeHtml(sh.image_status || 'TBD')}</span>
+               ${sh.note ? `<span class="sh-note">${escapeHtml(sh.note)}</span>` : ''}
+             </li>`).join("")}
+         </ul>
+       </div>`
+    : "";
+
+  // Testo preview
+  const textBlock = h.text_preview ? `
+    <div class="hook-text-preview">
+      <h4>Testo (estratto)</h4>
+      <p>${escapeHtml(h.text_preview)}</p>
+    </div>` : "";
+
+  return `
+    <details class="hook-accordion-item">
+      <summary class="hook-summary">
+        <span class="hook-page-num">P${h.page}</span>
+        <span class="hook-id"><code>${escapeHtml(h.hook_id)}</code></span>
+        <span class="hook-loc">${loc.id ? escapeHtml(loc.id) : '<em class="missing">no loc</em>'}${loc.variant ? ` <em>(${escapeHtml(loc.variant)})</em>` : ''}</span>
+        <span class="hook-summary-right">${summaryRight}</span>
+      </summary>
+      <div class="hook-body">
+        <div class="hook-section">
+          <h4>📍 Luogo (dove succede la scena)</h4>
+          ${locPanel}
+        </div>
+
+        <div class="hook-section">
+          <h4>👤 Personaggi in scena (${charsInScene.length})</h4>
+          <div class="entity-rows">${charsInRows}</div>
+          ${charsOffRows}
+        </div>
+
+        ${objsInScene.length ? `<div class="hook-section">
+          <h4>📦 Oggetti in scena (${objsInScene.length})</h4>
+          <div class="entity-rows">${objsRows}</div>
+        </div>` : ""}
+
+        ${details.length ? `<div class="hook-section">
+          <h4>📌 Note canoniche</h4>
+          ${detailsHtml}
+        </div>` : ""}
+
+        ${subhooksHtml}
+
+        ${textBlock}
+      </div>
+    </details>`;
+}
+
+/* Render una riga entità con stato + link a scheda + thumbnails immagini */
+function renderEntityRow(id, kind, audit, variantNote = "", isOffscreen = false) {
+  const dot = audit.n_images > 0 ? "dot-ok"
+            : audit.prompt_grok ? "dot-warn"
+            : "dot-missing";
+  const flagsArr = [];
+  if (audit.scheda) flagsArr.push(`<span class="flag ok">scheda</span>`);
+  if (audit.prompt_grok) flagsArr.push(`<span class="flag ok">prompt</span>`);
+  flagsArr.push(`<span class="flag ${audit.n_images > 0 ? 'ok' : 'warn'}">${audit.n_images || 0} img</span>`);
+  const variantHtml = variantNote ? ` <span class="loc-variant">[variante: ${escapeHtml(variantNote)}]</span>` : "";
+  const offHtml = isOffscreen ? ` <span class="off-tag">offscreen</span>` : "";
+  const link = audit.found
+    ? `<a class="entity-link" href="#/entity/${encodeURIComponent(id)}" data-id="${escapeAttr(id)}">→ scheda</a>`
+    : `<span class="entity-missing">non trovato in repo</span>`;
+  // Thumbnails preview
+  const thumbs = (audit.image_paths || []).slice(0, 4).map(p =>
+    `<img src="../${escapeAttr(p)}" alt="${escapeAttr(id)}" loading="lazy" class="entity-thumb">`).join("");
+  const thumbsHtml = thumbs ? `<div class="entity-thumbs">${thumbs}</div>` : "";
+  return `
+    <div class="entity-row ${audit.found ? '' : 'missing'}">
+      <div class="entity-row-head">
+        <span class="dot ${dot}"></span>
+        <code class="entity-id">${escapeHtml(id)}</code>
+        <span class="entity-kind">${escapeHtml(kind)}</span>${variantHtml}${offHtml}
+        <span class="entity-flags">${flagsArr.join(" ")}</span>
+        ${link}
+      </div>
+      ${thumbsHtml}
+    </div>`;
 }
 
 function renderEntityAuditPanel(label, entities) {

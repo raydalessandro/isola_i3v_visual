@@ -1,0 +1,153 @@
+sid: s01
+title: La Nebbia delle Montagne Gemelle
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: vuoto = 1 pagina)
+
+hooks:
+
+  s01_h01:
+    location: forno
+    characters_in_scene: [fiamma, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pagnotta_forno, grembiule_fiamma]
+    canonical_details:
+      - "Forno acceso da prima dell'alba, vapore alla finestra (atmosfera, da aggiungere a scheda forno)"
+      - "Frase canonica Fiamma: «Se passate dal Burrone, una per Grunto. Una sola.»"
+    subhooks: []
+
+  s01_h02:
+    location: piazza_villaggio
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: [camminanti]
+    objects_in_scene: []
+    canonical_details:
+      - "Cornice s01-c1 (Giro D): Camminante anonimo con carriola di vimini, gesto saluto"
+      - "Cornice s01-c2 (Giro A): finestra accesa di una casa, qualcuno impasta"
+      - "Albero Vecchio + Pozzo + Panca visibili (triade Piazza, sfondo)"
+    subhooks: []
+
+  s01_h03:
+    location: via_che_sale
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Pietra dei tre passi (vcs_d01_pietra_dei_tre_passi, dettaglio Tier A path_details)"
+      - "Montagne Gemelle in fondo all'orizzonte (sfondo lontano)"
+      - "Frasi-codice fratelli: «Da lassù si vede tutta l'isola» / «E forse anche più in là»"
+    subhooks: []
+
+  s01_h04:
+    location: pascoli_alti
+    location_variant: nebbia
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pagnotta_forno]  # Gabriel la tiene sotto braccio
+    canonical_details:
+      - "Variante atmosferica: nebbia improvvisa fredda sopra i Pascoli (da aggiungere come variante prompt pascoli_alti)"
+      - "Frase Noah: «Torniamo. Andiamo via di qui. Andiamo via.»"
+      - "Frase Elias: «Possiamo tenerci per mano»"
+    subhooks: []
+
+  s01_h05:
+    location: pascoli_alti
+    location_variant: nebbia
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Continua scena h04 (stessi Pascoli, stessa nebbia)"
+      - "I tre seduti per terra sul sentiero"
+      - "Frase Gabriel canonica: «No. Non muoverci.»"
+      - "Sonori implicit (non visivi): pietra che rotola, capra risponde a capra"
+    subhooks: []
+
+  s01_h06:
+    location: burrone
+    location_variant: vista_dal_bordo_con_nebbia_che_si_apre
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Variante prompt: vista dal ciglio del Burrone, con vento che apre la nebbia"
+      - "A due passi dai fratelli si rivela il bordo del Burrone"
+      - "Pietra cade dal ciglio (sonoro implicito)"
+    subhooks: []
+
+  s01_h07:
+    location: burrone
+    location_variant: cengia_in_mezzaroccia
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Variante prompt: cengia stretta in mezzaroccia con lichene verde, sentiero che sale"
+      - "Sole tocca pietre e diventano oro per un attimo"
+      - "Direzione: verso Grunto (la Grotta è lì oltre la cengia)"
+    subhooks: []
+
+  s01_h08:
+    location: grotta_grunto
+    characters_in_scene: [gabriel, elias, noah, grunto]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pagnotta_forno, cicatrice_grunto]
+    canonical_details:
+      - "SCENA CHIAVE saga: incontro con Grunto + consegna pagnotta"
+      - "Grunto: pelo verde-lichene, corna grandi all'indietro, cicatrice chiara fianco sinistro"
+      - "Vocalizzazioni canoniche Grunto: *Grunt.* (gesto), *Via.* (zoccolo), «Buono.» (dopo aver mangiato)"
+      - "Gabriel posa la pagnotta su una pietra piatta tra loro, si tira indietro"
+    subhooks: []
+
+  s01_h09:
+    location: pascoli_alti
+    location_variant: tramonto_discesa
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Variante atmosferica: tramonto/golden hour, Gemelle alle spalle oro pallido"
+      - "Pascoli vuoti, sentiero che adesso si vede"
+      - "Noah lascia cadere il bastoncino (gesto silenzioso, prop temporaneo)"
+    subhooks: []
+
+  s01_h10:
+    location: forno
+    location_variant: interno_sera
+    characters_in_scene: [fiamma, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [grembiule_fiamma]  # cornetto: variante pagnotta non ancora a catalogo
+    canonical_details:
+      - "Variante prompt forno: interno sera (vs alba canonico) — palette + lampada"
+      - "Fiamma sistema il piano per il giorno dopo"
+      - "Mette in mano a Noah un cornetto (variante pagnotta da aggiungere a scheda)"
+      - "Porta del Forno si chiude alle loro spalle (chiusura cornice s1↔s12)"
+      - "Fuori, vento sulle Gemelle ricomincia (eco)"
+    subhooks: []
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - location: forno
+    note: "Aggiungi 'vapore alla finestra quando Fiamma impasta nelle ore fredde' a scheda forno (sezione atmosfera esterno alba)"
+    priority: low
+  - object: pagnotta_forno
+    note: "Aggiungi 'cornetto' come variante in pagnotta_forno/scheda.md sezione Variabilità ammessa"
+    priority: medium
+  - location: pascoli_alti
+    note: "Aggiungi variante 'nebbia improvvisa' al prompt pascoli_alti (per h04, h05)"
+    priority: medium
+  - location: burrone
+    note: "Aggiungi variante 'vista dal bordo' (h06) e 'cengia in mezzaroccia' (h07) al prompt burrone"
+    priority: medium
+  - location: pascoli_alti
+    note: "Aggiungi variante 'tramonto/golden hour' al prompt pascoli_alti (per h09)"
+    priority: medium
+  - location: via_che_sale
+    note: "MANCA prompt grok via_che_sale — da creare per h03"
+    priority: high

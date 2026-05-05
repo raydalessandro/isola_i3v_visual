@@ -5,13 +5,18 @@ build_storie_data.py — genera catalogo_web/data/storie.json
 Per ognuna delle 12 storie:
 1. Legge il frontmatter da `pipeline_narrativa/storie_finali/sNN_*.md`
 2. Estrae i 10 hook (marker @hook ... @page ... @subhooks ... @image ...)
-3. Audit filesystem per stato prompt grok + immagini canoniche di personaggi,
+3. Estrae sotto-hook (marker @subhook se presenti nel testo)
+4. Carica annotations YAML manuali da `_annotations/sNN.yaml` se presenti.
+   Le annotations (location + chars + objects + canonical_details + subhooks)
+   sono fonte primaria. Fallback su NER fuzzy se annotations mancano.
+5. Audit filesystem per stato prompt grok + immagini canoniche di personaggi,
    luoghi, oggetti
-4. Se esiste `_inventory/sNN_inventory.md`, arricchisce con dati manuali
-5. Output: catalogo_web/data/storie.json — struttura per dashboard web
+6. Se esiste `_inventory/sNN_inventory.md`, arricchisce con dati manuali
+7. Output: catalogo_web/data/storie.json — struttura per dashboard web
 
 Idempotente. Da rilanciare quando:
 - Cambia un testo definitivo
+- Si aggiungono/modificano annotations YAML
 - Si aggiungono img canoniche a personaggi/luoghi/oggetti
 - Si crea/aggiorna un inventory manuale
 """
@@ -19,11 +24,29 @@ import json
 import re
 from pathlib import Path
 
+try:
+    import yaml
+except ImportError:
+    raise SystemExit("ERROR: PyYAML required. pip install pyyaml")
+
 REPO_ROOT = Path(__file__).resolve().parents[1]
 STORIE_DIR = REPO_ROOT / "pipeline_narrativa" / "storie_finali"
 INVENTORY_DIR = STORIE_DIR / "_inventory"
+ANNOTATIONS_DIR = STORIE_DIR / "_annotations"
 VISUAL_DIR = REPO_ROOT / "visual"
 OUT_PATH = REPO_ROOT / "catalogo_web" / "data" / "storie.json"
+
+# Reference canonica dello stile saga, da copiare in chat Grok per coerenza
+SAGA_STYLE_REFERENCE = (
+    "STYLE: classic European children's picture book illustration, watercolor and "
+    "ink linework, hand-painted texture, warm natural light, gentle painterly "
+    "atmosphere, in the tradition of Beatrix Potter, Brian Wildsmith, Ernest H. "
+    "Shepard. Soft edges, visible brushstrokes, mild paper grain. Storybook "
+    "composition, dignified and tender, never cartoonish. Anthropomorphic animal "
+    "characters with realistic anatomy slightly stylized, expressive but never "
+    "exaggerated. No outlines hard like vector art. No flat digital colors. "
+    "No manga, no anime, no 3D render, no Pixar style."
+)
 
 
 def parse_yaml_frontmatter(content: str) -> dict:
@@ -40,7 +63,8 @@ def parse_yaml_frontmatter(content: str) -> dict:
 
 
 def parse_hooks(content: str) -> list:
-    """Trova tutti i marker @hook nei file storia."""
+    """Trova tutti i marker @hook nei file storia. Estrae anche eventuali
+    sotto-hook (@subhook) trovati nel testo dell'hook."""
     hooks = []
     pattern = re.compile(
         r"^## Pagina (\d+)\s*\n+<!-- @hook (\S+) \| @page (\d+) \| @subhooks (\[.*?\]) \| @image (\S+) -->\s*\n+(.*?)(?=^## Pagina|\Z)",
@@ -52,12 +76,23 @@ def parse_hooks(content: str) -> list:
         subhooks_raw = m.group(4)
         image = m.group(5)
         text = m.group(6).strip().rstrip("---").strip()
-        # Trim text per dashboard preview
+        # Sub-hook detection inside hook text
+        subhooks_inline = []
+        for sm in re.finditer(
+            r"<!-- @subhook (\S+) \| @page_book (\d+) \| @image (\S+) -->",
+            text,
+        ):
+            subhooks_inline.append({
+                "id": sm.group(1),
+                "page_book": int(sm.group(2)),
+                "image": sm.group(3),
+            })
         text_preview = text[:300] + ("..." if len(text) > 300 else "")
         hooks.append({
             "hook_id": hook_id,
             "page": page_num,
-            "subhooks": subhooks_raw,
+            "subhooks_declared": subhooks_raw,
+            "subhooks_inline": subhooks_inline,
             "image": image,
             "text_preview": text_preview,
             "text_full": text,
@@ -168,6 +203,18 @@ def extract_entities_from_text(text: str, all_entities: dict) -> dict:
     return found
 
 
+def load_annotations(sid: str) -> dict:
+    """Carica `_annotations/sNN.yaml` se esiste. Ritorna {} se mancante."""
+    p = ANNOTATIONS_DIR / f"{sid}.yaml"
+    if not p.exists():
+        return {}
+    try:
+        return yaml.safe_load(p.read_text(encoding="utf-8")) or {}
+    except Exception as e:
+        print(f"  [!] error parsing {p.name}: {e}")
+        return {}
+
+
 def load_all_entities() -> dict:
     """Carica gli ID e nomi canonici da entities.json."""
     ent_json = REPO_ROOT / "catalogo_web" / "data" / "entities.json"
@@ -190,35 +237,72 @@ def process_storia(path: Path, all_entities: dict) -> dict:
     content = path.read_text(encoding="utf-8")
     fm = parse_yaml_frontmatter(content)
     hooks_raw = parse_hooks(content)
+    sid = fm.get("sid", "")
 
-    # Per ogni hook: estrai entità menzionate + audit
+    # Carica annotations YAML manuali (fonte primaria)
+    annotations = load_annotations(sid)
+    ann_hooks = annotations.get("hooks", {}) if annotations else {}
+    canon_todo = annotations.get("canon_additions_todo", []) if annotations else []
+
     audited_chars = {}
     audited_locs = {}
     audited_objs = {}
     enriched_hooks = []
+
     for h in hooks_raw:
-        ents = extract_entities_from_text(h["text_full"], all_entities)
-        # Audit (cache per non ripetere)
-        for cid in ents["personaggi"]:
+        hook_id = h["hook_id"]
+        ann = ann_hooks.get(hook_id)
+        if ann:
+            # Fonte primaria: annotations manuali
+            chars_in = ann.get("characters_in_scene") or []
+            chars_off = ann.get("characters_offscreen_or_distant") or []
+            objs_in = ann.get("objects_in_scene") or []
+            location_id = ann.get("location") or ""
+            location_variant = ann.get("location_variant") or ""
+            canonical_details = ann.get("canonical_details") or []
+            ann_subhooks = ann.get("subhooks") or []
+            source = "manual"
+        else:
+            # Fallback: NER fuzzy sul testo
+            ents = extract_entities_from_text(h["text_full"], all_entities)
+            chars_in = ents["personaggi"]
+            chars_off = []
+            objs_in = ents["oggetti"]
+            # Per location: prendiamo il primo trovato (best-effort)
+            location_id = ents["luoghi"][0] if ents["luoghi"] else ""
+            location_variant = ""
+            canonical_details = []
+            ann_subhooks = []
+            source = "auto"
+
+        # Audit cache
+        for cid in chars_in + chars_off:
             if cid not in audited_chars:
                 audited_chars[cid] = audit_visual_entity("personaggi", cid)
-        for lid in ents["luoghi"]:
-            if lid not in audited_locs:
-                audited_locs[lid] = audit_visual_entity("luoghi", lid)
-        for oid in ents["oggetti"]:
+        if location_id and location_id not in audited_locs:
+            audited_locs[location_id] = audit_visual_entity("luoghi", location_id)
+        for oid in objs_in:
             if oid not in audited_objs:
                 audited_objs[oid] = audit_visual_entity("oggetti", oid)
+
         enriched_hooks.append({
-            "hook_id": h["hook_id"],
+            "hook_id": hook_id,
             "page": h["page"],
-            "subhooks": h["subhooks"],
             "image": h["image"],
             "text_preview": h["text_preview"],
-            "entities": {
-                "personaggi": ents["personaggi"],
-                "luoghi": ents["luoghi"],
-                "oggetti": ents["oggetti"],
+            "text_full": h["text_full"],
+            "source": source,
+            "location": {
+                "id": location_id,
+                "variant": location_variant,
             },
+            "characters_in_scene": chars_in,
+            "characters_offscreen_or_distant": chars_off,
+            "objects_in_scene": objs_in,
+            "canonical_details": canonical_details,
+            "subhooks_declared_in_marker": h.get("subhooks_declared", "[]"),
+            "subhooks_inline": h.get("subhooks_inline", []),
+            "subhooks_annotated": ann_subhooks,
         })
 
     # Stats aggregati
@@ -228,7 +312,6 @@ def process_storia(path: Path, all_entities: dict) -> dict:
     objs_with_prompt = sum(1 for v in audited_objs.values() if v.get("prompt_grok"))
     hooks_image_ready = sum(1 for h in enriched_hooks if h["image"] != "TBD")
 
-    sid = fm.get("sid", "")
     inventory = parse_inventory_md(sid) if sid else {"exists": False}
 
     return {
@@ -242,6 +325,10 @@ def process_storia(path: Path, all_entities: dict) -> dict:
         "ultima_modifica": fm.get("ultima_modifica", ""),
         "file_path": str(path.relative_to(REPO_ROOT)),
         "github_url": f"https://github.com/raydalessandro/isola_i3v_visual/blob/main/{path.relative_to(REPO_ROOT)}",
+        "annotations_present": bool(ann_hooks),
+        "annotations_path": f"pipeline_narrativa/storie_finali/_annotations/{sid}.yaml" if ann_hooks else None,
+        "annotations_github_url": f"https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/_annotations/{sid}.yaml" if ann_hooks else None,
+        "canon_additions_todo": canon_todo,
         "stats": {
             "chars_distinct": len(audited_chars),
             "chars_with_imgs": chars_with_imgs,
@@ -280,6 +367,7 @@ def main():
 
     out = {
         "generated_from": "scripts/build_storie_data.py",
+        "saga_style_reference": SAGA_STYLE_REFERENCE,
         "n_storie": len(storie),
         "storie": storie,
     }
