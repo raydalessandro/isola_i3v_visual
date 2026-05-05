@@ -42,28 +42,74 @@ schema_marker: |
 # S01 — La Nebbia delle Montagne Gemelle
 ```
 
-### 3. 10 sezioni pagina con marker machine-readable
+### 3. 10 sezioni hook narrativo con marker machine-readable
 
-Ogni pagina ha:
+Ogni `## Pagina N` corrisponde a **un hook narrativo** (1..10), che a sua volta si scompone in **uno o più subhook = pagine libro fisiche** (1..book_pages_total).
 
 ```markdown
 ## Pagina N
 
-<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
+<!-- @hook sNN_hMM | @page MM | @subhooks [sNN_hMMa, sNN_hMMb] | @image TBD -->
 
-[testo prosa della pagina N, in voce autoriale finale]
+<!-- @subhook sNN_hMMa | @page_book K | @image TBD -->
+[testo prosa della prima pagina libro associata a questo hook]
+
+<!-- @subhook sNN_hMMb | @page_book K+1 | @image pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMb.jpg -->
+[testo prosa della seconda pagina libro associata a questo hook]
 
 ---
 ```
 
-dove:
+**Marker @hook (parent):**
 
 | Campo | Significato | Esempio |
 |---|---|---|
-| `@hook` | id univoco dell'hook visivo della pagina (formato: `sNN_hMM`, MM = 01..10 zero-padded) | `s01_h01` |
-| `@page` | numero pagina libro (1..10) | `1` |
-| `@subhooks` | lista (vuota inizialmente) per future scomposizioni della pagina (es. testo + immagine in più tipi/varianti) | `[]` o `[s01_h01a, s01_h01b]` |
-| `@image` | path dell'immagine **composta finale** del libro (testo + grafica già montati). `TBD` finché non popolato. | `pipeline_narrativa/composizioni/s01_h01.jpg` |
+| `@hook` | id univoco hook narrativo (formato: `sNN_hMM`, MM = 01..10 zero-padded) | `s01_h01` |
+| `@page` | numero hook (1..10) — **non è la pagina libro fisica** | `1` |
+| `@subhooks` | lista sotto-hook (1+ subhook = 1+ pagina libro fisica) | `[s01_h01a, s01_h01b]` |
+| `@image` | (legacy) path immagine composta libro a livello hook. `TBD` da popolare | `TBD` |
+
+**Marker @subhook (figli, uno per pagina libro fisica):**
+
+| Campo | Significato | Esempio |
+|---|---|---|
+| `@subhook` | id sotto-hook (formato: `sNN_hMMx`, x ∈ {a, b, c, ...}) | `s01_h01b` |
+| `@page_book` | numero pagina libro fisica (1..book_pages_total). Per spread doppia: `[N, N+1]` | `2` |
+| `@layout` | (opz.) `double_spread` per immagini che attraversano 2 pagine fisiche | — |
+| `@image` | path immagine-scena composta della pagina (vedi `_scene/` sotto). `TBD` finché non popolato. | `pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg` |
+
+## Cartelle gemelle (parallele ai 12 file storia)
+
+| Cartella | Contenuto | Pattern |
+|---|---|---|
+| `_annotations/` | YAML autoriali Ray (es. `s01.yaml`) — note di scena, decisioni autoriali | `_annotations/sNN.yaml` |
+| `_inventory/` | inventari testuali derivati (per audit/QA prosa) | `_inventory/sNN_*.{md,yaml}` |
+| `_scene/` | **immagini-scena composte** (illustrazione singola pagina libro), referenziate dal marker `@subhook ... @image` | `_scene/sNN/sNN_hMMx.jpg` |
+
+### `_scene/` — pattern in dettaglio
+
+Una pagina libro fisica = un subhook (`sNN_hMMx`) = un'immagine-scena. Quando arriva l'illustrazione composta dal generatore (oggi: Grok Imagine), va in:
+
+```
+pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg
+```
+
+esempi:
+- `_scene/s01/s01_h01b.jpg` — Fiamma consegna pagnotta a Gabriel (s01, hook 1, subhook b, page_book 2)
+- `_scene/s01/s01_h05a.jpg` — (futuro) prima pagina libro associata all'hook 5 di s01
+
+E si aggiorna **solo** il marker `@image` del corrispondente `@subhook` nel testo storia, da `TBD` al path:
+
+```diff
+- <!-- @subhook s01_h01b | @page_book 2 | @image TBD -->
++ <!-- @subhook s01_h01b | @page_book 2 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg -->
+```
+
+Vincoli:
+- Naming **deterministico**: `<sid>_<hook_id><subhook_letter>.jpg`. Mai inventare suffissi.
+- Una scena = una immagine. Per spread doppia: stesso file referenziato da entrambi i subhook con `@layout: double_spread`.
+- Mai modificare gli `@subhook` id (stabili, legati al testo prosa).
+- Le immagini-scena NON sono reference catalogo — quelle stanno in `visual/<categoria>/<id>/immagini/<id>_canonica_v1_<vista>.jpg` (vedi `_visual_pipeline/`). Le `_scene/` sono il **prodotto finale composto** per il libro.
 
 ## Workflow per script futuri
 
@@ -71,72 +117,86 @@ dove:
 
 Lo script che assembla il libro finale può:
 
-1. Leggere il frontmatter per metadati globali (sid, titolo, ciclo, ecc.)
-2. Iterare sulle 10 sezioni `## Pagina N`
-3. Per ogni pagina, parsare il commento `<!-- @hook ... | @image ... -->` per ottenere:
-   - L'id hook → cerca prompt grok corrispondente in `visual/luoghi/.../prompt_grok.md` o equivalente
-   - Il path immagine composta → se `TBD`, fallback su placeholder o segnalazione
-4. Estrarre il testo prosa puro (rimuovendo titolo H1, frontmatter, marker, separator `---`)
-5. Comporre PDF/EPUB/HTML del libro finale
+1. Leggere il frontmatter per metadati globali (sid, titolo, ciclo, `book_pages_total`, ecc.)
+2. Iterare sulle 10 sezioni `## Pagina N` (hook narrativi)
+3. Per ogni hook, iterare sui marker `@subhook` interni (1+ per hook = pagine libro fisiche)
+4. Per ogni subhook parsare `<!-- @subhook ... | @page_book ... | @image ... -->` per ottenere:
+   - L'id subhook → cerca eventuale prompt grok / scena in `_scene/sNN/sNN_hMMx.jpg`
+   - Il path immagine-scena → se `TBD`, fallback su placeholder o segnalazione
+   - Il numero pagina libro fisica (`@page_book`) → posizione nel libro finale
+5. Estrarre il testo prosa puro per ogni subhook (testo tra il marker `@subhook` e il successivo marker o `---`)
+6. Comporre PDF/EPUB/HTML del libro finale rispettando l'ordine `@page_book`
 
 ### Esempio parsing in Python
 
 ```python
 import re
 import yaml
+from pathlib import Path
 
-def parse_storia(path):
+def parse_storia(path: Path):
     content = path.read_text(encoding="utf-8")
 
     # 1. Frontmatter
     fm_match = re.match(r"^---\n(.*?)\n---\n", content, re.S)
     metadata = yaml.safe_load(fm_match.group(1)) if fm_match else {}
 
-    # 2. Pagine
     body = content[fm_match.end():] if fm_match else content
-    pages = []
-    for page_match in re.finditer(
-        r"^## Pagina (\d+)\s*\n+<!-- @hook (\S+) \| @page (\d+) \| @subhooks (\[.*?\]) \| @image (\S+) -->\s*\n+(.*?)(?=^## Pagina|\Z)",
-        body, re.M | re.S
-    ):
-        pages.append({
-            "page_num": int(page_match.group(1)),
-            "hook_id": page_match.group(2),
-            "subhooks": page_match.group(4),
-            "image": page_match.group(5),
-            "text": page_match.group(6).strip().rstrip("---").strip(),
+
+    # 2. Hook narrativi (## Pagina N + @hook)
+    HOOK_RE = re.compile(
+        r"^## Pagina (\d+)\s*\n+"
+        r"<!-- @hook (\S+) \| @page (\d+) \| @subhooks \[(.*?)\] \| @image (\S+) -->",
+        re.M
+    )
+    SUB_RE = re.compile(
+        r"<!-- @subhook (\S+) \| @page_book (\S+)(?: \| @layout (\S+))? \| @image (\S+) -->\s*\n+(.*?)(?=<!-- @subhook|\Z)",
+        re.S
+    )
+
+    hooks = []
+    hook_matches = list(HOOK_RE.finditer(body))
+    for i, m in enumerate(hook_matches):
+        start = m.end()
+        end = hook_matches[i + 1].start() if i + 1 < len(hook_matches) else len(body)
+        hook_body = body[start:end]
+        subhooks = []
+        for s in SUB_RE.finditer(hook_body):
+            subhooks.append({
+                "subhook_id": s.group(1),
+                "page_book": s.group(2),
+                "layout": s.group(3),
+                "image": s.group(4),
+                "text": s.group(5).strip().rstrip("-").strip(),
+            })
+        hooks.append({
+            "page_num": int(m.group(1)),
+            "hook_id": m.group(2),
+            "subhooks_decl": [x.strip() for x in m.group(4).split(",") if x.strip()],
+            "subhooks": subhooks,
         })
 
-    return {"meta": metadata, "pages": pages}
+    return {"meta": metadata, "hooks": hooks}
 ```
 
-### Compositore immagine pagina (futuro)
+### Compositore immagine pagina libro (futuro)
 
-Per generare l'immagine composta finale di una pagina (testo overlay + immagine):
+Per generare l'immagine-scena composta di una pagina libro fisica (subhook):
 
-1. Trova il prompt grok dell'hook (es. `visual/.../prompt_grok.md`) per generare l'immagine se non c'è
-2. Genera o pesca l'immagine canonica della scena
-3. Layouta il testo della pagina come overlay (font, margini, dimensioni concordate)
-4. Salva in `pipeline_narrativa/composizioni/sNN_hMM.jpg`
-5. Aggiorna il marker `@image` da `TBD` al path effettivo
-
-## Sotto-hook (futuro)
-
-Alcune pagine potrebbero avere bisogno di **sotto-hook** (es. doppia spread con due immagini, o variante stagionale). Pattern:
-
-```markdown
-<!-- @hook s01_h05 | @page 5 | @subhooks [s01_h05a, s01_h05b] | @image TBD -->
-```
-
-Quando arrivano i sotto-hook, lo script di splitting/composizione li gestisce in pipeline.
+1. Trova il prompt scena (es. derivabile da hook + brief) per generare l'illustrazione se non c'è
+2. Genera con generatore immagini (oggi: Grok Imagine, Ray) usando reference canoniche da `visual/<categoria>/<id>/immagini/<id>_canonica_v1_*.jpg`
+3. Salva il file con naming deterministico in `pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg`
+4. Aggiorna il marker `@subhook ... @image` da `TBD` al path effettivo
+5. (Futuro) Layout testo overlay + grafica → file finale di stampa
 
 ## Vincoli
 
 - **NON modificare il testo prosa** se non per correzioni autoriali esplicite di Ray.
-- **NON modificare il frontmatter** se non per aggiornare `ultima_modifica` o `status`.
-- **NON modificare gli `@hook` id**: sono stabili e legati ai prompt grok / pipeline composizione.
-- **Il marker `@image`** può essere aggiornato da `TBD` al path reale quando l'immagine composta è pronta.
-- **`@subhooks` vuoti** vanno lasciati `[]` finché non si decide di scomporre.
+- **NON modificare il frontmatter** se non per aggiornare `ultima_modifica` o `status` o `book_pages_total` (se cambia la scomposizione).
+- **NON modificare gli `@hook` né `@subhook` id**: sono stabili, legati a brief / prompt grok / `_scene/` / pipeline composizione.
+- **Il marker `@image`** (sia `@hook` che `@subhook`) può essere aggiornato da `TBD` al path reale quando l'immagine è pronta.
+- **`@subhooks` `[]` vuoti** sono ammessi solo per hook non ancora scomposti in pagine libro.
+- **File `_scene/`** seguono naming deterministico `sNN_hMMx.jpg` — mai inventare suffissi.
 
 ## Storie (12)
 

@@ -42,7 +42,10 @@ isola_i3v_visual/
 │   ├── narrazione_fattuale/sNN_*.md  12/12 file narrazione fattuale derivati dal sorgente _source/
 │   ├── writing_briefs/sNN_writing_brief.md  12 brief autosufficienti per agente prosa (output zero-token brieffer)
 │   ├── writing_briefs/_reference/    s01_writing_brief_FINAL.md (reference Ray, validato)
-│   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker hook machine-readable per script compositore libro futuro (vedi storie_finali/README.md)
+│   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker @hook (narrativo, 1..10) + marker @subhook (pagina libro fisica, 1..book_pages_total) machine-readable per script compositore libro futuro (vedi storie_finali/README.md)
+│   ├── storie_finali/_annotations/   YAML autoriali Ray (sNN.yaml) — note di scena
+│   ├── storie_finali/_inventory/     inventari testuali derivati (audit/QA prosa)
+│   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Naming deterministico, una pagina libro = un file. NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
 ├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche + prompt_grok.md
@@ -311,17 +314,21 @@ Genera brief autosufficienti per agente prosa (oggi: Ray scrive a mano).
 ### Modalità "compositore libro" (futuro, pipeline output)
 Script futuri che assemblano il libro finale (PDF/EPUB/HTML) leggendo i testi definitivi + immagini composte.
 
-- **Input:** `pipeline_narrativa/storie_finali/sNN_<slug>.md` (12 file con frontmatter YAML + 10 marker hook per storia).
-- **Pattern marker hook (machine-readable, sotto ogni `## Pagina N`):**
-  ```
-  <!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->
-  ```
-  - `@hook` = id univoco hook visivo (sNN_hMM, MM = 01..10 zero-padded)
-  - `@page` = numero pagina libro (1..10)
-  - `@subhooks` = lista (vuota all'inizio) per future scomposizioni della pagina
-  - `@image` = path immagine composta finale (testo overlay + grafica). `TBD` finché non popolato.
-- **Documentazione completa:** `pipeline_narrativa/storie_finali/README.md` (include esempio parsing Python).
-- **Vincolo:** mai modificare `@hook` id (stabili, legati ai prompt grok). `@image` aggiornabile da `TBD` al path reale quando immagine pronta. `@subhooks` lasciato `[]` finché non si decide di scomporre.
+- **Input:** `pipeline_narrativa/storie_finali/sNN_<slug>.md` (12 file con frontmatter YAML + 10 marker `@hook` narrativi + N marker `@subhook` pagina libro fisica per storia).
+- **Due livelli di marker (machine-readable):**
+  - **`@hook` (livello narrativo, 10 per storia):**
+    ```
+    <!-- @hook sNN_hMM | @page MM | @subhooks [sNN_hMMa, sNN_hMMb] | @image TBD -->
+    ```
+    `@page` = numero hook (1..10), `@subhooks` = lista figli, `@image` = (legacy) path composto a livello hook.
+  - **`@subhook` (livello pagina libro, 1+ per hook):**
+    ```
+    <!-- @subhook sNN_hMMx | @page_book K | @image pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg -->
+    ```
+    `x ∈ {a,b,c,...}`, `@page_book` = pagina libro fisica (1..book_pages_total, total nel frontmatter), `@layout` (opz.) = `double_spread` per spread doppia, `@image` = path immagine-scena composta.
+- **Pattern `_scene/`:** immagini-scena composte in `pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg`. Naming deterministico, una pagina libro = un file. **NON sono reference catalogo** (quelle stanno in `visual/<categoria>/<id>/immagini/<id>_canonica_v1_<vista>.jpg`). Le `_scene/` sono il prodotto finale composto per il libro.
+- **Documentazione completa:** `pipeline_narrativa/storie_finali/README.md` (include esempio parsing Python a 2 livelli).
+- **Vincoli:** mai modificare `@hook` né `@subhook` id (stabili, legati a brief / prompt grok / `_scene/` / pipeline composizione). `@image` aggiornabile da `TBD` al path reale quando immagine pronta.
 
 ### Modalità "agente prosa" (scrittura collaborativa)
 Scrive il testo finale di una delle 12 storie in chat collaborativa con Ray, una pagina alla volta.

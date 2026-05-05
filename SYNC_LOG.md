@@ -12,6 +12,27 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-05-05-010 — Pattern `_scene/` per immagini-scena composte + 4 reference visive
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** visual + pipeline_narrativa (additivo, no modifiche grafo) + governance
+- **Repo target:** n/a (informativo per agenti IA futuri / collaboratori esterni)
+- **Cambiamento:**
+  1. **Nuovo pattern cartella `pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg`** per immagini-scena composte = una pagina libro fisica = una illustrazione. Parallelo a `_annotations/` e `_inventory/`. Naming deterministico (`sNN_hMMx.jpg`, x ∈ {a,b,c,...}). NON sostituisce `visual/<id>/immagini/<id>_canonica_v1_*.jpg` (reference catalogo) — sono livelli ortogonali: reference catalogo vs prodotto finale composto.
+  2. **Marker `@subhook ... @image`** nel testo storia popolabile dal path `_scene/`. Prima entry attiva: `s01_h01b` → `_scene/s01/s01_h01b.jpg` (Fiamma consegna pagnotta a Gabriel).
+  3. **4 nuove reference visuali aggiunte/sostituite:**
+     - `visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg` (NEW)
+     - `visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg` (NEW)
+     - `visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_esterno_alba.jpg` (sostituita)
+     - `visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_verticale.jpg` (sostituita)
+  4. **Documentazione aggiornata:**
+     - `pipeline_narrativa/storie_finali/README.md` — sezione `_scene/` aggiunta + tabella cartelle gemelle + esempio parsing Python a 2 livelli (@hook + @subhook)
+     - `CLAUDE.md` — mappa repo + sezione "Modalità compositore libro" aggiornate con pattern subhook + `_scene/`
+- **File toccati:** `CLAUDE.md`, `SYNC_LOG.md`, `pipeline_narrativa/storie_finali/README.md`, `pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md` (1 marker @image popolato), `pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg` (NEW), 3 file in `visual/luoghi/.../immagini/`, `catalogo_web/data/{entities,storie}.json` (rigenerati).
+- **Trail:** 2 commit in `claude/project-setup-tZsHS` → ff merge su main (`6e66dd3` Forno esterno + `4cffa77` 4 immagini).
+
+---
+
 ## SYNC-2026-04-30-009 — Fase F.2 visual prompt grok (28 prompt) + Fase Cornice del Mondo (7 step) + Brieffer install (12 brief)
 
 - **Stato:** DA_RIFLETTERE
