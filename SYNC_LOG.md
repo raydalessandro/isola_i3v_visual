@@ -12,6 +12,30 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-05-05-012 — Mappa illustrata isola: nuova route `#/mappa-isola` nel catalogo_web
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** catalogo_web (additivo, no modifiche grafo / no modifiche storie / no modifiche schede) + governance
+- **Repo target:** Vercel deploy (target primario) + GitHub Pages (fallback compatibile)
+- **Cambiamento:**
+  1. **Nuova route `#/mappa-isola`** sul `catalogo_web/` — mostra mappa illustrata navigabile dell'isola (acquerello vista dall'alto) con 30 slot interattivi posizionati dai centroidi del geojson. Click slot → naviga a `#/entity/<id>`.
+  2. **Asset 3D progressivi (Travian-style):** ogni slot mostra placeholder finché non c'è il PNG corrispondente in `cartografia/assets_mappa/<id>.png`. Workflow Grok Imagine lato Ray, specs in `cartografia/assets_mappa/README.md`.
+  3. **File modificati / creati:**
+     - `catalogo_web/index.html` — MOD (3 righe: link CSS + link sidebar + script tag)
+     - `catalogo_web/app.js` — MOD (9 righe: blocco router `#/mappa-isola` + variant `?debug`)
+     - `catalogo_web/mappa_isola.js` — NEW (~280 righe, modulo isolato `window.renderMappaIsola()`)
+     - `catalogo_web/mappa_isola.css` — NEW (~140 righe, stili dedicati no-interferenza con `style.css`)
+     - `cartografia/assets_mappa/README.md` — NEW (specs Grok per asset 3D)
+     - `cartografia/assets_mappa/_base/isola_base_v1.jpg` — NEW (illustrazione master, 1120×912, ~150 KB)
+     - `vercel.json` — MERGED (settings `cleanUrls: true` + `trailingSlash: false` dal pacchetto + headers nuovi geojson/assets_mappa + headers esistenti data/visual/js/css)
+  4. **Smoke test passati:** vercel.json valido, JS syntax OK (`node --check`), tutti i path rispondono 200 su server locale, 30 slot estratti dal geojson (8 tipi: building/burrow/cave/pier/landmark/water_pool/tree/square).
+  5. **Anomalie attese al primo deploy** (non bloccanti, dichiarate nel pacchetto): cluster villaggio sovrapposto + Case Basse/Capanna Bartolo/Casa Amo che cadono nel mare a sud. Risolvibili spostando coordinate nel geojson o introducendo zoom-villaggio in V2. Visibili con `?debug` (griglia rossa).
+  6. **Pacchetto archiviato** in `_pacchetti_consegnati/mappa_isola_v1/` con `INTEGRATION.md` originale + `preview_calibrazione_v1.jpg` + `README.md` riassunto. Zip originale eliminato (file binari ridondanti, la repo contiene già tutti i file finali).
+  7. **Pulito main:** rimossi `INTEGRATION.md` e `pacchetto_mappa_isola_v1.zip` dalla root.
+- **File toccati:** 7 file in `catalogo_web/` + `cartografia/assets_mappa/`, `vercel.json`, `_pacchetti_consegnati/{README.md,mappa_isola_v1/}`, `SYNC_LOG.md`. Eliminati: `INTEGRATION.md`, `pacchetto_mappa_isola_v1.zip` da root.
+
+---
+
 ## SYNC-2026-05-05-011 — Cornice editoriale 4 volumi: archiviato pacchetto `isola_4volumi_v2`
 
 - **Stato:** DA_RIFLETTERE

@@ -1,9 +1,30 @@
 {
-  "trailingSlash": true,
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/", "destination": "/catalogo_web/", "permanent": false }
   ],
   "headers": [
+    {
+      "source": "/cartografia/geo/(.*).geojson",
+      "headers": [
+        { "key": "Content-Type", "value": "application/geo+json; charset=utf-8" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/cartografia/assets_mappa/(.*).png",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/cartografia/assets_mappa/_base/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
     {
       "source": "/catalogo_web/data/:path*",
       "headers": [

@@ -13,6 +13,7 @@
 | Pacchetto | Periodo | Stato | README |
 |---|---|---|---|
 | `cornice_mondo/` | 2026-04-30 | ✅ integrato (7 step) | [`cornice_mondo/README.md`](./cornice_mondo/README.md) |
+| `mappa_isola_v1/` | 2026-05-05 | ✅ integrato (route `#/mappa-isola` su catalogo_web + 30 slot dal geojson + asset 3D progressivi) | [`mappa_isola_v1/README.md`](./mappa_isola_v1/README.md) |
 
 ---
 

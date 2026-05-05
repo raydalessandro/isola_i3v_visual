@@ -352,6 +352,15 @@ function route() {
   if (hash === "#/" || hash === "") { renderHome(); return; }
   if (hash === "#/strade") { renderStradeIndex(); return; }
   if (hash === "#/storie") { renderStorieIndex(); return; }
+  if (hash === "#/mappa-isola" || hash.startsWith("#/mappa-isola?")) {
+    if (typeof window.renderMappaIsola === "function") {
+      window.renderMappaIsola();
+    } else {
+      document.getElementById("content").innerHTML =
+        `<p class="loading">Modulo mappa non caricato. Verifica che <code>mappa_isola.js</code> sia incluso in <code>index.html</code>.</p>`;
+    }
+    return;
+  }
   const ms = hash.match(/^#\/storia\/([^\/]+)$/);
   if (ms) { renderStoriaDetail(decodeURIComponent(ms[1])); return; }
 

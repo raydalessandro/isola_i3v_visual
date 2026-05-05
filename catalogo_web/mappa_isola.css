@@ -1,0 +1,180 @@
+/* ===========================================================================
+   mappa_isola.css — Stili dedicati alla pagina #/mappa-isola
+   =========================================================================== */
+
+.mappa-loading,
+.mappa-error {
+  padding: 2rem;
+  font-style: italic;
+  color: #6b6555;
+}
+
+.mappa-error h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #a04040;
+  font-style: normal;
+}
+
+.mappa-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1.5rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mappa-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-bottom: 1px solid #e0d8c4;
+  padding-bottom: 0.75rem;
+}
+
+.mappa-header h1 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #2a2418;
+  letter-spacing: 0.01em;
+}
+
+.mappa-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7a6f5a;
+}
+
+.mappa-hint {
+  font-style: italic;
+  color: #9a8e75;
+}
+
+/* ----- stage SVG ----- */
+.mappa-stage {
+  position: relative;
+  background: #f0e8d4;       /* fallback se l'immagine non carica */
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mappa-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+/* ----- slot generici ----- */
+.mappa-slot {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.mappa-slot:hover,
+.mappa-slot.hover,
+.mappa-slot:focus {
+  outline: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+.mappa-slot:hover .mappa-label,
+.mappa-slot.hover .mappa-label,
+.mappa-slot:focus .mappa-label {
+  font-weight: 600;
+  fill: #1a1408;
+}
+
+/* ----- slot con asset 3D ----- */
+.mappa-slot--asset image {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+  transition: transform 0.15s ease;
+}
+
+.mappa-slot--asset:hover image,
+.mappa-slot--asset.hover image {
+  transform: scale(1.06);
+  transform-origin: center bottom;
+  transform-box: fill-box;
+}
+
+/* ----- placeholder (slot vuoti) ----- */
+.mappa-slot--placeholder circle {
+  transition: r 0.15s ease, fill 0.15s ease;
+}
+
+.mappa-slot--placeholder:hover circle:first-of-type,
+.mappa-slot--placeholder.hover circle:first-of-type {
+  fill: rgba(255, 240, 200, 0.85);
+}
+
+/* ----- label di testo ----- */
+.mappa-label {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 13px;
+  font-weight: 500;
+  fill: #3a2f1c;
+  paint-order: stroke fill;
+  stroke: rgba(255, 248, 230, 0.85);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ----- footer (legenda) ----- */
+.mappa-footer {
+  font-size: 0.88rem;
+  color: #5a5040;
+}
+
+.mappa-footer details {
+  background: #f7f1e4;
+  border: 1px solid #e0d8c4;
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+}
+
+.mappa-footer summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a4030;
+  user-select: none;
+  list-style-position: inside;
+}
+
+.mappa-footer ul {
+  margin: 0.6rem 0 0.2rem 0;
+  padding-left: 1.2rem;
+}
+
+.mappa-footer li {
+  margin-bottom: 0.4rem;
+  line-height: 1.5;
+}
+
+.mappa-footer code {
+  background: #ece2cc;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+/* ----- debug overlay (?debug) ----- */
+.mappa-debug {
+  pointer-events: none;
+}
+
+/* ----- responsive ----- */
+@media (max-width: 700px) {
+  .mappa-page { padding: 0.5rem; }
+  .mappa-header h1 { font-size: 1.4rem; }
+  .mappa-label { font-size: 18px; }     /* piu' grande per dito su mobile */
+  .mappa-label { stroke-width: 4px; }
+}
