@@ -500,10 +500,13 @@ function renderEntity(id) {
 
   const galleryHtml = (e.images && e.images.length)
     ? `<div class="grid">${e.images.map((img, i) =>
-        `<button type="button" class="thumb" data-lb-index="${i}" aria-label="Apri ${escapeAttr(img.filename)} a tutto schermo">
-          <img src="../${escapeAttr(img.path)}" alt="${escapeAttr(img.filename)}" loading="lazy" decoding="async">
-          <span class="caption">${escapeHtml(img.filename)}</span>
-        </button>`
+        `<div class="thumb-wrap">
+          <button type="button" class="thumb" data-lb-index="${i}" aria-label="Apri ${escapeAttr(img.filename)} a tutto schermo">
+            <img src="../${escapeAttr(img.path)}" alt="${escapeAttr(img.filename)}" loading="lazy" decoding="async">
+            <span class="caption">${escapeHtml(img.filename)}</span>
+          </button>
+          <a class="dl-btn dl-btn-lg" href="../${escapeAttr(img.path)}" download="${escapeAttr(img.filename)}" title="Scarica ${escapeAttr(img.filename)}" aria-label="Scarica ${escapeAttr(img.filename)}">&darr;</a>
+        </div>`
       ).join("")}</div>`
     : `<div class="empty">Nessuna immagine in <code>${escapeHtml(e.folder_path)}/immagini/</code>.<br>
        Naming consigliato: <code>${escapeHtml(e.id)}_canonica_v1_fronte.jpg</code>,
@@ -677,6 +680,7 @@ function renderLightboxImage() {
   const fn = document.querySelector("#lightbox .lb-filename");
   const sz = document.querySelector("#lightbox .lb-size");
   const ct = document.querySelector("#lightbox .lb-counter");
+  const dl = document.querySelector("#lightbox .lb-download");
   const cur = state.lbImages[state.lbIndex];
   if (!cur) return;
   img.src = "../" + cur.path;
@@ -686,6 +690,11 @@ function renderLightboxImage() {
   ct.textContent = state.lbImages.length > 1
     ? `${state.lbIndex + 1} / ${state.lbImages.length}`
     : "";
+  if (dl) {
+    dl.href = "../" + cur.path;
+    dl.setAttribute("download", cur.filename);
+    dl.title = "Scarica " + cur.filename;
+  }
 }
 
 /* ==================================================================
@@ -1070,9 +1079,14 @@ function renderEntityRow(id, kind, audit, variantNote = "", isOffscreen = false)
   const link = audit.found
     ? `<a class="entity-link" href="#/entity/${encodeURIComponent(id)}" data-id="${escapeAttr(id)}">→ scheda</a>`
     : `<span class="entity-missing">non trovato in repo</span>`;
-  // Thumbnails preview
-  const thumbs = (audit.image_paths || []).slice(0, 4).map(p =>
-    `<img src="../${escapeAttr(p)}" alt="${escapeAttr(id)}" loading="lazy" class="entity-thumb">`).join("");
+  // Thumbnails preview con download overlay
+  const thumbs = (audit.image_paths || []).slice(0, 4).map(p => {
+    const fn = p.split("/").pop();
+    return `<div class="thumb-wrap">
+      <img src="../${escapeAttr(p)}" alt="${escapeAttr(id)}" loading="lazy" class="entity-thumb">
+      <a class="dl-btn" href="../${escapeAttr(p)}" download="${escapeAttr(fn)}" title="Scarica ${escapeAttr(fn)}" aria-label="Scarica ${escapeAttr(fn)}">&darr;</a>
+    </div>`;
+  }).join("");
   const thumbsHtml = thumbs ? `<div class="entity-thumbs">${thumbs}</div>` : "";
   return `
     <div class="entity-row ${audit.found ? '' : 'missing'}">
