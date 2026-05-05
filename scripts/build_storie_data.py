@@ -36,16 +36,30 @@ ANNOTATIONS_DIR = STORIE_DIR / "_annotations"
 VISUAL_DIR = REPO_ROOT / "visual"
 OUT_PATH = REPO_ROOT / "catalogo_web" / "data" / "storie.json"
 
-# Reference canonica dello stile saga, da copiare in chat Grok per coerenza
+# Reference canonica dello stile saga, da copiare in chat Grok per coerenza.
+# Uso: STYLE-ONLY PASS — Ray ripassa immagini gia' generate per omogeneizzare
+# lo stile saga senza alterare contenuto/soggetti/posa.
 SAGA_STYLE_REFERENCE = (
-    "STYLE: classic European children's picture book illustration, watercolor and "
-    "ink linework, hand-painted texture, warm natural light, gentle painterly "
-    "atmosphere, in the tradition of Beatrix Potter, Brian Wildsmith, Ernest H. "
-    "Shepard. Soft edges, visible brushstrokes, mild paper grain. Storybook "
-    "composition, dignified and tender, never cartoonish. Anthropomorphic animal "
-    "characters with realistic anatomy slightly stylized, expressive but never "
-    "exaggerated. No outlines hard like vector art. No flat digital colors. "
-    "No manga, no anime, no 3D render, no Pixar style."
+    "STYLE-ONLY PASS — preserve every subject, pose, framing, composition, "
+    "clothing, accessories, hair color, skin tone, body proportions, props, "
+    "and background elements EXACTLY as in the input image. Only refine "
+    "artistic style, texture, light, palette. Do not add, remove, or replace "
+    "any subject or detail.\n\n"
+    "STYLE: classic European children's picture book illustration, watercolor "
+    "and ink linework, hand-painted texture, warm natural light, gentle "
+    "painterly atmosphere, in the tradition of Beatrix Potter, Brian "
+    "Wildsmith, Ernest H. Shepard. Soft edges, visible brushstrokes, mild "
+    "paper grain. Storybook composition, dignified and tender, never "
+    "cartoonish.\n\n"
+    "CHARACTERS: human children remain fully human — keep human anatomy, "
+    "human face, human skin, human hair. NEVER transform humans into animals, "
+    "anthropomorphic creatures, or hybrids. When non-human animal characters "
+    "are already present in the image, keep them as they are: realistic "
+    "anatomy slightly stylized, expressive but never exaggerated, lightly "
+    "anthropomorphic only if already so in the input.\n\n"
+    "DO NOT: alter subjects, poses, scene, layout, or canonical colors. No "
+    "outlines hard like vector art. No flat digital colors. No manga, no "
+    "anime, no 3D render, no Pixar style."
 )
 
 

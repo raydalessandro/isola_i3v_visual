@@ -865,7 +865,7 @@ async function renderStoriaDetail(sid) {
   const styleRef = data.saga_style_reference || "";
   const styleBlock = `
     <details class="style-ref-block" open>
-      <summary>🎨 <strong>Reference stile saga</strong> — copia questo blocco in chat Grok per coerenza stilistica</summary>
+      <summary>🎨 <strong>Reference stile saga</strong> — style-only pass: copia in Grok per ripassare immagini gia' generate senza alterare soggetti/posa</summary>
       <div class="style-ref-inner">
         <pre id="style-ref-pre">${escapeHtml(styleRef)}</pre>
         <button class="copy-btn" id="copy-style-btn" type="button">📋 Copia</button>
