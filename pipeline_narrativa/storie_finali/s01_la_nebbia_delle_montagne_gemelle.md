@@ -43,7 +43,7 @@ Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna ave
 
 Il forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.
 
-<!-- @subhook s01_h01b | @page_book 2 | @image TBD -->
+<!-- @subhook s01_h01b | @page_book 2 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg -->
 Fiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.
 
 «Se passate dal Burrone, una per Grunto. Una sola.»

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T15:10:44",
+  "generated_at": "2026-05-05T15:13:23",
   "totals": {
     "totale": 116,
     "luogo": 74,
@@ -504,7 +504,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "path",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_aria/via_che_sale"
               }
             }
@@ -875,7 +875,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "square",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/villaggio_centrale/piazza_villaggio"
               }
             },
@@ -4211,8 +4211,14 @@
         "quartiere_aria",
         "via_che_sale"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "via_che_sale_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg",
+          "size_kb": 264
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "case_del_mattino",
@@ -4367,7 +4373,7 @@
         {
           "filename": "forno_canonica_v1_laboratorio_verticale.jpg",
           "path": "visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_verticale.jpg",
-          "size_kb": 369
+          "size_kb": 346
         },
         {
           "filename": "forno_planimetria_canonica.jpg",
@@ -6241,8 +6247,14 @@
         "villaggio_centrale",
         "piazza_villaggio"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "piazza_villaggio_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg",
+          "size_kb": 270
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "scuola_stria",

@@ -54,7 +54,7 @@
         "chars_distinct": 6,
         "chars_with_imgs": 5,
         "locs_distinct": 6,
-        "locs_with_imgs": 1,
+        "locs_with_imgs": 3,
         "locs_with_prompt": 6,
         "objs_distinct": 3,
         "objs_with_prompt": 3,
@@ -67,7 +67,7 @@
           "page": 1,
           "image": "TBD",
           "text_preview": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva ...",
-          "text_full": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\n<!-- @subhook s01_h01b | @page_book 2 | @image TBD -->\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
+          "text_full": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\n<!-- @subhook s01_h01b | @page_book 2 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg -->\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
           "source": "manual",
           "location": {
             "id": "forno",
@@ -98,7 +98,7 @@
             {
               "id": "s01_h01b",
               "page_book": 2,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg"
             }
           ],
           "subhooks_annotated": [
@@ -677,8 +677,10 @@
             "path": "visual/luoghi/villaggio_centrale/piazza_villaggio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg"
+            ]
           },
           "via_che_sale": {
             "found": true,
@@ -686,8 +688,10 @@
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"
+            ]
           },
           "pascoli_alti": {
             "found": true,
@@ -776,7 +780,7 @@
         "chars_distinct": 8,
         "chars_with_imgs": 7,
         "locs_distinct": 2,
-        "locs_with_imgs": 0,
+        "locs_with_imgs": 1,
         "locs_with_prompt": 2,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
@@ -1125,8 +1129,10 @@
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"
+            ]
           },
           "bocca": {
             "found": true,
