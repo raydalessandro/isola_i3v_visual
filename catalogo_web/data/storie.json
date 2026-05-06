@@ -52,7 +52,7 @@
       ],
       "stats": {
         "chars_distinct": 6,
-        "chars_with_imgs": 5,
+        "chars_with_imgs": 6,
         "locs_distinct": 6,
         "locs_with_imgs": 3,
         "locs_with_prompt": 6,
@@ -636,8 +636,11 @@
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 2,
+            "image_paths": [
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_in_cammino.jpg",
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_saluto.jpg"
+            ]
           },
           "grunto": {
             "found": true,
@@ -2289,7 +2292,7 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 10,
-        "chars_with_imgs": 9,
+        "chars_with_imgs": 10,
         "locs_distinct": 1,
         "locs_with_imgs": 0,
         "locs_with_prompt": 1,
@@ -2598,8 +2601,11 @@
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 2,
+            "image_paths": [
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_in_cammino.jpg",
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_saluto.jpg"
+            ]
           },
           "toba": {
             "found": true,
@@ -4393,7 +4399,7 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 15,
-        "chars_with_imgs": 12,
+        "chars_with_imgs": 13,
         "locs_distinct": 2,
         "locs_with_imgs": 0,
         "locs_with_prompt": 2,
@@ -4837,8 +4843,11 @@
             "path": "visual/personaggi/collettivi/camminanti",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 2,
+            "image_paths": [
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_in_cammino.jpg",
+              "visual/personaggi/collettivi/camminanti/immagini/camminanti_canonica_v1_saluto.jpg"
+            ]
           }
         },
         "luoghi": {
