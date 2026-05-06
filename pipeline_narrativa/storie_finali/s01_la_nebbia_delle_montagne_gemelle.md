@@ -113,12 +113,12 @@ Gabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasc
 
 <!-- @hook s01_h05 | @page 5 | @subhooks [s01_h05a, s01_h05b] | @image TBD -->
 
-<!-- @subhook s01_h05a | @page_book 8 | @image TBD -->
+<!-- @subhook s01_h05a | @page_book 8 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h05a.jpg -->
 «No. Non muoverci.»
 
 Gabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.
 
-<!-- @subhook s01_h05b | @page_book 9 | @image TBD -->
+<!-- @subhook s01_h05b | @page_book 9 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h05b.jpg -->
 La nebbia continuò a girare intorno. Passò qualche minuto.
 
 Da qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.

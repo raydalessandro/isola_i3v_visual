@@ -273,8 +273,8 @@
           "hook_id": "s01_h05",
           "page": 5,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h05a | @page_book 8 | @image TBD -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\n<!-- @subhook s01_h05b | @p...",
-          "text_full": "<!-- @subhook s01_h05a | @page_book 8 | @image TBD -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\n<!-- @subhook s01_h05b | @page_book 9 | @image TBD -->\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.",
+          "text_preview": "<!-- @subhook s01_h05a | @page_book 8 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h05a.jpg -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' pi...",
+          "text_full": "<!-- @subhook s01_h05a | @page_book 8 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h05a.jpg -->\n«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due.\n\n<!-- @subhook s01_h05b | @page_book 9 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h05b.jpg -->\nLa nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.",
           "source": "manual",
           "location": {
             "id": "pascoli_alti",
@@ -298,12 +298,12 @@
             {
               "id": "s01_h05a",
               "page_book": 8,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h05a.jpg"
             },
             {
               "id": "s01_h05b",
               "page_book": 9,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h05b.jpg"
             }
           ],
           "subhooks_annotated": [
