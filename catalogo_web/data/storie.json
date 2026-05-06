@@ -123,7 +123,7 @@
           "page": 2,
           "image": "TBD",
           "text_preview": "<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con u...",
-          "text_full": "<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\n<!-- @subhook s01_h02b | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02b.jpg -->\nI tre presero la Via che Sale.",
+          "text_full": "<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.",
           "source": "manual",
           "location": {
             "id": "piazza_villaggio",
@@ -143,17 +143,12 @@
             "Cornice s01-c2 (Giro A): finestra accesa di una casa, qualcuno impasta",
             "Albero Vecchio + Pozzo + Panca visibili (triade Piazza, sfondo)"
           ],
-          "subhooks_declared_in_marker": "[s01_h02a, s01_h02b]",
+          "subhooks_declared_in_marker": "[s01_h02a]",
           "subhooks_inline": [
             {
               "id": "s01_h02a",
               "page_book": 3,
               "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg"
-            },
-            {
-              "id": "s01_h02b",
-              "page_book": 4,
-              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h02b.jpg"
             }
           ],
           "subhooks_annotated": [
@@ -170,8 +165,8 @@
           "hook_id": "s01_h03",
           "page": 3,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h03a | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il ...",
-          "text_full": "<!-- @subhook s01_h03a | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
+          "text_preview": "<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il ...",
+          "text_full": "<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\n<!-- @subhook s01_h03b | @page_book 5 | @image TBD -->\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
           "source": "manual",
           "location": {
             "id": "via_che_sale",
@@ -189,12 +184,17 @@
             "Montagne Gemelle in fondo all'orizzonte (sfondo lontano)",
             "Frasi-codice fratelli: «Da lassù si vede tutta l'isola» / «E forse anche più in là»"
           ],
-          "subhooks_declared_in_marker": "[s01_h03a]",
+          "subhooks_declared_in_marker": "[s01_h03a, s01_h03b]",
           "subhooks_inline": [
             {
               "id": "s01_h03a",
-              "page_book": 5,
+              "page_book": 4,
               "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg"
+            },
+            {
+              "id": "s01_h03b",
+              "page_book": 5,
+              "image": "TBD"
             }
           ],
           "subhooks_annotated": [
