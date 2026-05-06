@@ -12,7 +12,7 @@
       "total_hooks": 10,
       "book_pages_total": 17,
       "status": "definitiva",
-      "ultima_modifica": "2026-05-05",
+      "ultima_modifica": "2026-05-06",
       "file_path": "pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
       "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s01_la_nebbia_delle_montagne_gemelle.md",
       "annotations_present": true,
@@ -66,8 +66,8 @@
           "hook_id": "s01_h01",
           "page": 1,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva ...",
-          "text_full": "<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\n<!-- @subhook s01_h01b | @page_book 2 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg -->\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
+          "text_preview": "<!-- @subhook s01_h01a | @page_book 1 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01a.jpg -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso...",
+          "text_full": "<!-- @subhook s01_h01a | @page_book 1 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01a.jpg -->\nSull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.\n\n<!-- @subhook s01_h01b | @page_book 2 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg -->\nFiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.",
           "source": "manual",
           "location": {
             "id": "forno",
@@ -93,7 +93,7 @@
             {
               "id": "s01_h01a",
               "page_book": 1,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h01a.jpg"
             },
             {
               "id": "s01_h01b",
@@ -122,8 +122,8 @@
           "hook_id": "s01_h02",
           "page": 2,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h02a | @page_book 3 | @image TBD -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Un...",
-          "text_full": "<!-- @subhook s01_h02a | @page_book 3 | @image TBD -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.",
+          "text_preview": "<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con u...",
+          "text_full": "<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->\nLa piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.",
           "source": "manual",
           "location": {
             "id": "piazza_villaggio",
@@ -148,7 +148,7 @@
             {
               "id": "s01_h02a",
               "page_book": 3,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg"
             }
           ],
           "subhooks_annotated": [
@@ -165,8 +165,8 @@
           "hook_id": "s01_h03",
           "page": 3,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h03a | @page_book 4 | @image TBD -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si ferm...",
-          "text_full": "<!-- @subhook s01_h03a | @page_book 4 | @image TBD -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\n<!-- @subhook s01_h03b | @page_book 5 | @image TBD -->\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
+          "text_preview": "<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il ...",
+          "text_full": "<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->\nSalirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.\n\n<!-- @subhook s01_h03b | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg -->\nLe Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.",
           "source": "manual",
           "location": {
             "id": "via_che_sale",
@@ -189,12 +189,12 @@
             {
               "id": "s01_h03a",
               "page_book": 4,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg"
             },
             {
               "id": "s01_h03b",
               "page_book": 5,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg"
             }
           ],
           "subhooks_annotated": [
@@ -218,8 +218,8 @@
           "hook_id": "s01_h04",
           "page": 4,
           "image": "TBD",
-          "text_preview": "<!-- @subhook s01_h04a | @page_book 6 | @image TBD -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un bracc...",
-          "text_full": "<!-- @subhook s01_h04a | @page_book 6 | @image TBD -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\n<!-- @subhook s01_h04b | @page_book 7 | @image TBD -->\nNoah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»\n\n«Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»\n\nGabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasca. Stava fermo. Stava fermo da prima ancora di decidere di stare fermo.",
+          "text_preview": "<!-- @subhook s01_h04a | @page_book 6 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h04a.jpg -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più ...",
+          "text_full": "<!-- @subhook s01_h04a | @page_book 6 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h04a.jpg -->\nSopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono.\n\n<!-- @subhook s01_h04b | @page_book 7 | @image TBD -->\nNoah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»\n\n«Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»\n\nGabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasca. Stava fermo. Stava fermo da prima ancora di decidere di stare fermo.",
           "source": "manual",
           "location": {
             "id": "pascoli_alti",
@@ -244,7 +244,7 @@
             {
               "id": "s01_h04a",
               "page_book": 6,
-              "image": "TBD"
+              "image": "pipeline_narrativa/storie_finali/_scene/s01/s01_h04a.jpg"
             },
             {
               "id": "s01_h04b",

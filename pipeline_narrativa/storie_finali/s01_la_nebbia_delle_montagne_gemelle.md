@@ -7,7 +7,7 @@ total_pages: 10
 total_hooks: 10
 book_pages_total: 17
 status: definitiva
-ultima_modifica: 2026-05-05
+ultima_modifica: 2026-05-06
 fonti:
   - pipeline_narrativa/narrazione_fattuale/s01_*.md
   - pipeline_narrativa/writing_briefs/s01_writing_brief.md
@@ -38,7 +38,7 @@ schema_marker: |
 
 <!-- @hook s01_h01 | @page 1 | @subhooks [s01_h01a, s01_h01b] | @image TBD -->
 
-<!-- @subhook s01_h01a | @page_book 1 | @image TBD -->
+<!-- @subhook s01_h01a | @page_book 1 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h01a.jpg -->
 Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.
 
 Il forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro.
@@ -60,7 +60,7 @@ Loro uscirono.
 
 <!-- @hook s01_h02 | @page 2 | @subhooks [s01_h02a] | @image TBD -->
 
-<!-- @subhook s01_h02a | @page_book 3 | @image TBD -->
+<!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->
 La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.
 
 Una finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.
@@ -75,12 +75,12 @@ I tre presero la Via che Sale.
 
 <!-- @hook s01_h03 | @page 3 | @subhooks [s01_h03a, s01_h03b] | @image TBD -->
 
-<!-- @subhook s01_h03a | @page_book 4 | @image TBD -->
+<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->
 Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.
 
 A un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.
 
-<!-- @subhook s01_h03b | @page_book 5 | @image TBD -->
+<!-- @subhook s01_h03b | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg -->
 Le Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.
 
 «Da lassù si vede tutta l'isola» disse Gabriel.
@@ -95,7 +95,7 @@ Noah non disse niente. Raccolse un bastoncino e lo portò avanti.
 
 <!-- @hook s01_h04 | @page 4 | @subhooks [s01_h04a, s01_h04b] | @image TBD -->
 
-<!-- @subhook s01_h04a | @page_book 6 | @image TBD -->
+<!-- @subhook s01_h04a | @page_book 6 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h04a.jpg -->
 Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.
 
 Si fermarono.
