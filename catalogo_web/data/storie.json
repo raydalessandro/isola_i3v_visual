@@ -54,7 +54,7 @@
         "chars_distinct": 6,
         "chars_with_imgs": 6,
         "locs_distinct": 6,
-        "locs_with_imgs": 3,
+        "locs_with_imgs": 4,
         "locs_with_prompt": 6,
         "objs_distinct": 3,
         "objs_with_prompt": 3,
@@ -711,8 +711,10 @@
             "path": "visual/luoghi/quartiere_aria/burrone",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_aria/burrone/immagini/burrone_canonica_v1_panoramica.jpg"
+            ]
           },
           "grotta_grunto": {
             "found": true,
@@ -4896,7 +4898,7 @@
         "chars_distinct": 11,
         "chars_with_imgs": 9,
         "locs_distinct": 6,
-        "locs_with_imgs": 0,
+        "locs_with_imgs": 1,
         "locs_with_prompt": 5,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
@@ -5316,8 +5318,10 @@
             "path": "visual/luoghi/quartiere_aria/burrone",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_aria/burrone/immagini/burrone_canonica_v1_panoramica.jpg"
+            ]
           },
           "albero_vecchio": {
             "found": true,

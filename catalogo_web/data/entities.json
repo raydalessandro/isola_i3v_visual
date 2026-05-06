@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T08:54:55",
+  "generated_at": "2026-05-06T13:24:14",
   "totals": {
     "totale": 116,
     "luogo": 74,
@@ -379,7 +379,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "valley",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_aria/burrone"
               }
             },
@@ -3513,8 +3513,14 @@
         "quartiere_aria",
         "burrone"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "burrone_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_aria/burrone/immagini/burrone_canonica_v1_panoramica.jpg",
+          "size_kb": 173
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "montagne_gemelle",
