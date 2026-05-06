@@ -80,7 +80,7 @@ Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. 
 
 A un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.
 
-<!-- @subhook s01_h03b | @page_book 5 | @image TBD -->
+<!-- @subhook s01_h03b | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg -->
 Le Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.
 
 «Da lassù si vede tutta l'isola» disse Gabriel.
