@@ -58,7 +58,7 @@ Loro uscirono.
 
 ## Pagina 2
 
-<!-- @hook s01_h02 | @page 2 | @subhooks [s01_h02a] | @image TBD -->
+<!-- @hook s01_h02 | @page 2 | @subhooks [s01_h02a, s01_h02b] | @image TBD -->
 
 <!-- @subhook s01_h02a | @page_book 3 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg -->
 La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.
@@ -67,20 +67,20 @@ Una finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di f
 
 Una sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.
 
+<!-- @subhook s01_h02b | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h02b.jpg -->
 I tre presero la Via che Sale.
 
 ---
 
 ## Pagina 3
 
-<!-- @hook s01_h03 | @page 3 | @subhooks [s01_h03a, s01_h03b] | @image TBD -->
+<!-- @hook s01_h03 | @page 3 | @subhooks [s01_h03a] | @image TBD -->
 
-<!-- @subhook s01_h03a | @page_book 4 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->
+<!-- @subhook s01_h03a | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg -->
 Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.
 
 A un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono.
 
-<!-- @subhook s01_h03b | @page_book 5 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg -->
 Le Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.
 
 «Da lassù si vede tutta l'isola» disse Gabriel.
@@ -100,7 +100,7 @@ Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'a
 
 Si fermarono.
 
-<!-- @subhook s01_h04b | @page_book 7 | @image TBD -->
+<!-- @subhook s01_h04b | @page_book 7 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h04b.jpg -->
 Noah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»
 
 «Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»
