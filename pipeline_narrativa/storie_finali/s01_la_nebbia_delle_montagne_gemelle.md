@@ -129,7 +129,7 @@ Da qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fer
 
 <!-- @hook s01_h06 | @page 6 | @subhooks [s01_h06a] | @image TBD -->
 
-<!-- @subhook s01_h06a | @page_book 10 | @image TBD -->
+<!-- @subhook s01_h06a | @page_book 10 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h06a.jpg -->
 Poi arrivò il vento.
 
 Una folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.
