@@ -157,7 +157,7 @@ Ripresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, u
 
 <!-- @hook s01_h08 | @page 8 | @subhooks [s01_h08a, s01_h08b] | @image TBD -->
 
-<!-- @subhook s01_h08a | @page_book 12 | @image TBD -->
+<!-- @subhook s01_h08a | @page_book 12 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h08a.jpg -->
 E lì c'era.
 
 Era enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.
@@ -170,7 +170,7 @@ I fratelli non scapparono. Non si avvicinarono. Restarono in piedi a tre o quatt
 
 Grunto continuò a guardarli. Poi smise. Voltò la testa altrove.
 
-<!-- @subhook s01_h08b | @page_book 13 | @image TBD -->
+<!-- @subhook s01_h08b | @page_book 13 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h08b.jpg -->
 Gabriel si fece avanti. Posò la pagnotta su una pietra piatta tra loro. Si tirò indietro.
 
 Grunto la annusò. La prese. La masticò.
