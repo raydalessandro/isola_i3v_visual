@@ -5,7 +5,7 @@ slug: la_nebbia_delle_montagne_gemelle
 cycle: A
 total_pages: 10
 total_hooks: 10
-book_pages_total: 16
+book_pages_total: 17
 status: definitiva
 ultima_modifica: 2026-05-07
 fonti:
@@ -181,11 +181,12 @@ Grunto la annusò. La prese. La masticò.
 
 ## Pagina 9
 
-<!-- @hook s01_h09 | @page 9 | @subhooks [s01_h09a] | @image TBD -->
+<!-- @hook s01_h09 | @page 9 | @subhooks [s01_h09a, s01_h09b] | @image TBD -->
 
-<!-- @subhook s01_h09a | @page_book 14 | @image TBD -->
+<!-- @subhook s01_h09a | @page_book 14 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h09a.jpg -->
 Tornarono giù prima che facesse buio.
 
+<!-- @subhook s01_h09b | @page_book 15 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h09b.jpg -->
 Le Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.
 
 Noah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.
@@ -198,12 +199,12 @@ I Pascoli erano vuoti. Il sentiero adesso si vedeva.
 
 <!-- @hook s01_h10 | @page 10 | @subhooks [s01_h10a, s01_h10b] | @image TBD -->
 
-<!-- @subhook s01_h10a | @page_book 15 | @image TBD -->
+<!-- @subhook s01_h10a | @page_book 16 | @image TBD -->
 Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.
 
 Mise in mano a Noah un cornetto.
 
 Loro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.
 
-<!-- @subhook s01_h10b | @page_book 16 | @image TBD -->
+<!-- @subhook s01_h10b | @page_book 17 | @image TBD -->
 Fuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una pietra cadde da qualche parte sul Burrone. Nessuno la sentì.
