@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-06T13:24:14",
+  "generated_at": "2026-05-07T07:11:59",
   "totals": {
     "totale": 116,
     "luogo": 74,
@@ -368,7 +368,7 @@
                     "famiglia": "luogo",
                     "sottotipo": "cave",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 3,
                     "folder_path": "visual/luoghi/quartiere_aria/burrone/grotta_grunto"
                   }
                 }
@@ -3451,8 +3451,24 @@
         "burrone",
         "grotta_grunto"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "grotta_grunto_canonica_v1_cengia_con_grotta.jpg",
+          "path": "visual/luoghi/quartiere_aria/burrone/grotta_grunto/immagini/grotta_grunto_canonica_v1_cengia_con_grotta.jpg",
+          "size_kb": 228
+        },
+        {
+          "filename": "grotta_grunto_canonica_v1_cengia_senza_grotta.jpg",
+          "path": "visual/luoghi/quartiere_aria/burrone/grotta_grunto/immagini/grotta_grunto_canonica_v1_cengia_senza_grotta.jpg",
+          "size_kb": 215
+        },
+        {
+          "filename": "grotta_grunto_canonica_v1_ingresso_frontale.jpg",
+          "path": "visual/luoghi/quartiere_aria/burrone/grotta_grunto/immagini/grotta_grunto_canonica_v1_ingresso_frontale.jpg",
+          "size_kb": 262
+        }
+      ],
+      "n_images": 3
     },
     {
       "id": "burrone",
