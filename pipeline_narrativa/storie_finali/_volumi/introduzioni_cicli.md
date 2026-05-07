@@ -17,7 +17,7 @@ Lette in sequenza, le 4 introduzioni raccontano un anno intero.
 
 ---
 
-## VOLUME 1 — Ciclo Δ
+## VOLUME 1 — Ciclo A
 *Inverno che cede alla primavera. Vento Taglio.*
 
 ---
@@ -40,7 +40,7 @@ Gabriel, Elias e Noah sono ancora all'inizio. L'isola è intera davanti a loro, 
 
 ---
 
-## VOLUME 2 — Ciclo ⇄
+## VOLUME 2 — Ciclo B
 *Primavera piena. Vento Intreccio.*
 
 ---
@@ -63,7 +63,7 @@ L'isola respira. Gabriel, Elias e Noah imparano che ogni cosa è vicina a qualco
 
 ---
 
-## VOLUME 3 — Ciclo ⟳
+## VOLUME 3 — Ciclo C
 *Estate che comincia a cedere. Vento Mulinello.*
 
 ---
@@ -86,7 +86,7 @@ Gabriel, Elias e Noah imparano che alcune cose devono girarsi, come si girano i 
 
 ---
 
-## VOLUME 4 — Ciclo Integrazione
+## VOLUME 4 — Ciclo D
 *Autunno. Tutti e tre i venti.*
 
 ---

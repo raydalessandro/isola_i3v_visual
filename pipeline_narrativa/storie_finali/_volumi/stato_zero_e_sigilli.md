@@ -20,7 +20,7 @@ I Volumi 2-3-4 hanno versioni proprie per stagione e vento.
 
 ---
 
-## VOLUME 1 — Ciclo Δ
+## VOLUME 1 — Ciclo A
 *Notte di tardo inverno, poco prima dell'alba. Vento Taglio fermo.*
 *Prima storia: S01 — La Nebbia delle Montagne Gemelle*
 
@@ -62,7 +62,7 @@ Poi giriamo la pagina insieme.
 
 ---
 
-## VOLUME 2 — Ciclo ⇄
+## VOLUME 2 — Ciclo B
 *Prima mattina di primavera, alba già passata. Vento Intreccio appena sveglio.*
 *Prima storia: S04*
 
@@ -96,7 +96,7 @@ Possiamo cominciare.
 
 ---
 
-## VOLUME 3 — Ciclo ⟳
+## VOLUME 3 — Ciclo C
 *Pomeriggio di fine estate. Vento Mulinello che comincia a girare.*
 *Prima storia: S07*
 
@@ -130,7 +130,7 @@ Poi si vede com'è andata.
 
 ---
 
-## VOLUME 4 — Ciclo Integrazione
+## VOLUME 4 — Ciclo D
 *Mattina di autunno inoltrato. Tutti e tre i venti presenti.*
 *Prima storia: S10*
 

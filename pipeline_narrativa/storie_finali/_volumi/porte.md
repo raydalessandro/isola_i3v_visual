@@ -23,9 +23,9 @@ Cornice narrativa: sull'isola sono passati molti bambini prima dei tre fratelli.
 
 ---
 
-# VOLUME 1 — Δ — Distinguere
+# VOLUME 1 — A — Distinguere
 
-*Sezione Le Porte per il Volume 1 — Ciclo Δ*
+*Sezione Le Porte per il Volume 1 — Ciclo A*
 *Libri: Il Piccolo Principe / La saggezza della vita*
 
 ---
@@ -79,9 +79,9 @@ I libri di questa lista non gridano. Da quelli, se vuoi, si arriva ovunque. Un l
 
 ---
 
-# VOLUME 2 — ⇄ — Connettere
+# VOLUME 2 — B — Connettere
 
-*Sezione Le Porte per il Volume 2 — Ciclo ⇄*
+*Sezione Le Porte per il Volume 2 — Ciclo B*
 *Libri: Metamorfosi — Ovidio*
 
 ---
@@ -123,9 +123,9 @@ I libri di questa lista non gridano. Da quelli, se vuoi, si arriva ovunque. Un l
 
 ---
 
-# VOLUME 3 — ⟳ — Cambiare
+# VOLUME 3 — C — Cambiare
 
-*Sezione Le Porte per il Volume 3 — Ciclo ⟳*
+*Sezione Le Porte per il Volume 3 — Ciclo C*
 *Libri: Il Processo — Kafka / Affinità Elettive — Goethe*
 
 ---
@@ -179,9 +179,9 @@ I libri di questa lista non gridano. Da quelli, se vuoi, si arriva ovunque. Un l
 
 ---
 
-# VOLUME 4 — Integrazione
+# VOLUME 4 — D
 
-*Sezione Le Porte per il Volume 4 — Ciclo Integrazione*
+*Sezione Le Porte per il Volume 4 — Ciclo D*
 *Libri: Bambino egizio (senza libro) / Timeo — Platone / Il codice segreto di Gann — Migliorino*
 
 ---

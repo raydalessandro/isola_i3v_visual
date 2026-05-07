@@ -7,7 +7,7 @@
 
 ## VISIONE GENERALE
 
-La saga di 12 storie viene divisa in 4 volumi da 3 storie ciascuno, corrispondenti ai 4 cicli EAR (Δ / ⇄ / ⟳ / Integrazione). Ogni volume è autonomo ma collezionabile. Pubblicazione su KU + carta.
+La saga di 12 storie viene divisa in 4 volumi da 3 storie ciascuno, corrispondenti ai 4 cicli (A / B / C / D). Ogni volume è autonomo ma collezionabile. Pubblicazione su KU + carta.
 
 **Principio guida:** il framework EAR è sempre invisibile. Non nominato mai. Emerge dalla struttura, dalla stagione, dal vento, dalla selezione dei libri nelle Porte.
 
@@ -50,10 +50,10 @@ Lette in sequenza raccontano un anno intero e tre modi di crescere.
 
 | Volume | Ciclo | Stagione | Vento | Attributo implicito |
 |--------|-------|----------|-------|---------------------|
-| 1 | Δ | Inverno → Primavera | Vento Taglio | Distinguere / vedere i confini |
-| 2 | ⇄ | Primavera → Estate | Vento Intreccio | Connettere / fare ponti |
-| 3 | ⟳ | Estate → Autunno | Vento Mulinello | Cambiare / lasciare andare |
-| 4 | Integrazione | Autunno → Inverno | Tutti e tre | Tenere insieme |
+| 1 | A | Inverno → Primavera | Vento Taglio | Distinguere / vedere i confini |
+| 2 | B | Primavera → Estate | Vento Intreccio | Connettere / fare ponti |
+| 3 | C | Estate → Autunno | Vento Mulinello | Cambiare / lasciare andare |
+| 4 | D | Autunno → Inverno | Tutti e tre | Tenere insieme |
 
 **Stato:** ⬜ da scrivere
 
@@ -90,24 +90,24 @@ Chi colleziona tutti e 4 i volumi assembla la presentazione completa.
 
 La cornice narrativa è già scritta nella v2. Vanno scritte le tracce dei singoli bambini.
 
-#### Volume 1 — Δ — Distinguere
+#### Volume 1 — A — Distinguere
 | Bambino | Libro | Traccia sull'isola |
 |---------|-------|---------------------|
 | *nome da trovare* | Il Piccolo Principe — Saint-Exupéry | ⬜ da scrivere |
 | *nome da trovare* | La saggezza della vita — Schopenhauer | ⬜ da scrivere |
 
-#### Volume 2 — ⇄ — Connettere
+#### Volume 2 — B — Connettere
 | Bambino | Libro | Traccia sull'isola |
 |---------|-------|---------------------|
 | *nome da trovare* | Metamorfosi — Ovidio | ⬜ da scrivere |
 
-#### Volume 3 — ⟳ — Cambiare
+#### Volume 3 — C — Cambiare
 | Bambino | Libro | Traccia sull'isola |
 |---------|-------|---------------------|
 | *nome da trovare* | La metamorfosi — Kafka | ⬜ da scrivere |
 | *nome da trovare* | Affinità elettive — Goethe | ⬜ da scrivere |
 
-#### Volume 4 — Integrazione
+#### Volume 4 — D
 | Bambino | Libro | Traccia sull'isola |
 |---------|-------|---------------------|
 | Bambino egizio senza nome | *nessun libro citato* | ⬜ da scrivere |

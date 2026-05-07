@@ -13,7 +13,7 @@ Le storie definitive vivono accanto a questa cartella, in `pipeline_narrativa/st
 | Volume 3 | C | Cambiare | estate → autunno | Mulinello | s07, s08, s09 |
 | Volume 4 | D | Integrazione | autunno → inverno | tutti e tre | s10, s11, s12 |
 
-¹ Il pacchetto v1 originale usava simboli `Δ / ⇄ / ⟳ / Integrazione`. **Decisione 2026-05-05 (Ray): si sostituiscono con A / B / C / D in editing futuro** (i simboli sono troppo "EAR-leggibili", e EAR resta invisibile). I file di questa cartella conservano ancora i simboli originali — verranno aggiornati alla revisione editoriale che precede la composizione libri.
+¹ Il pacchetto v1 originale usava simboli `Δ / ⇄ / ⟳ / Integrazione`. **Decisione 2026-05-05 (Ray): sostituiti con A / B / C / D** (i simboli sono troppo "EAR-leggibili", e EAR resta invisibile). **Sostituzione applicata 2026-05-07** ai 5 file di questa cartella (`introduzioni_cicli.md`, `porte.md`, `stato_zero_e_sigilli.md`, `presentazioni_parziali.md`, `PIANO_EDITORIALE_4VOLUMI_v1.md`). Il resto della repo (`documenti_progetto/`, `story_graph.json`, `writing_briefs/`, `visual/`) conserva ancora i simboli originali perché lì hanno funzione canonica/diagnostica e non finiscono nei libri pubblicati.
 
 ## Struttura di ogni volume (7 sezioni)
 
@@ -93,7 +93,7 @@ Per `stato_zero_e_sigilli.md` il compositore distingue ulteriormente:
 | Le Porte — sezioni (4) | ✅ scritte (apertura + avvertenza identiche; tracce bambini per ciclo) |
 | Le Porte — tracce bambini (9 + 1 egizio) | ✅ scritte |
 | Revisione editoriale finale | ⬜ da fare prima della composizione libri |
-| Sostituzione etichette `Δ/⇄/⟳/Integrazione` → `A/B/C/D` | ⬜ da fare in revisione |
+| Sostituzione etichette `Δ/⇄/⟳/Integrazione` → `A/B/C/D` | ✅ fatto 2026-05-07 (5 file: introduzioni_cicli, porte, stato_zero_e_sigilli, presentazioni_parziali, PIANO_EDITORIALE_4VOLUMI_v1) |
 
 ## Origine
 

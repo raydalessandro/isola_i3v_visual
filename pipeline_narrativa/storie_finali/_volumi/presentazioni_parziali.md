@@ -18,7 +18,7 @@ I brief illustrativi seguono la stessa logica della Presentazione completa.
 
 ---
 
-# VOLUME 1 — Ciclo Δ (S01–S03)
+# VOLUME 1 — Ciclo A (S01–S03)
 *Personaggi presenti: Fiamma, Grunto, Rovo, Stria, Mèmolo (+ Pun)*
 *Luoghi presenti: Burrone, Foresta Intrecciata, Montagne Gemelle, Pascoli Alti, Forno, Villaggio, Piazza*
 
@@ -190,7 +190,7 @@ Sull'isola, i bambini sono otto. Tre umani — i tre fratelli, Gabriel, Elias e 
 
 ---
 
-# VOLUME 2 — Ciclo ⇄ (S04–S06)
+# VOLUME 2 — Ciclo B (S04–S06)
 *Personaggi presenti: Fiamma, Rovo, Stria, Mèmolo, Pun, Nodo, Liù, Salvia, Zolla*
 *Luoghi presenti: Foresta Intrecciata, Pontile, Mercato del Mezzogiorno, Forno, Albero Vecchio*
 
@@ -338,7 +338,7 @@ Tutti i giorni a mezzogiorno, sulla Piazza del Villaggio, c'è il Mercato. Arriv
 
 ---
 
-# VOLUME 3 — Ciclo ⟳ (S07–S09)
+# VOLUME 3 — Ciclo C (S07–S09)
 *Personaggi presenti: Fiamma, Bartolo, Rovo, Stria, Mèmolo, Pun, Nodo, Liù, Zolla*
 *Luoghi presenti: Foresta, Pontile, Mercato, Forno, Fiume che Gira, Albero Vecchio, Case Basse*
 
@@ -436,7 +436,7 @@ Bartolo è una tartaruga di mare, ed è molto vecchio. Vive sul Pontile, dentro 
 
 ---
 
-# VOLUME 4 — Integrazione (S10–S12)
+# VOLUME 4 — Ciclo D (S10–S12)
 *Personaggi presenti: Fiamma, Bartolo, Grunto, Rovo, Stria, Mèmolo, Pun, Nodo, Liù, Salvia*
 *Luoghi presenti: Burrone, Foresta, Montagne Gemelle, Pascoli, Pontile, Mercato, Forno, Villaggio, Fiume, Albero Vecchio, Piazza*
 
