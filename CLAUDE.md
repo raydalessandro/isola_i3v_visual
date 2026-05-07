@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-04-30 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer installato).
+Versione: 2026-05-07 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer installato + starter_kit annunciato).
 
 ---
 
@@ -12,9 +12,10 @@ Versione: 2026-04-30 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer 
 2. **Tre tracce di lavoro attive**: `cartografia/` (mappa), `visual/` (descrizioni entità), `pipeline_narrativa/` (grafo + Bible — **read-only**).
 3. **Una traccia archiviata**: `_porting_grafo/` (migrazione una-tantum del grafo, completata, NON toccare).
 4. **Una traccia per contributi esterni**: `contributi/` (proposte di aggiunta schede — solo create file nuovi datati, mai modificare esistenti).
-5. **Mai modificare** `pipeline_narrativa/` (grafo + Bible) senza autorizzazione esplicita.
-6. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
-7. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
+5. **Una traccia di starter kit (template di sistema)**: `_starter_kit/` (scheletro riusabile del framework per chi vuole farsi la propria "isola" — directory dedicata, **mai contaminare** con contenuto narrativo specifico della saga).
+6. **Mai modificare** `pipeline_narrativa/` (grafo + Bible) senza autorizzazione esplicita.
+7. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
+8. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
 
 ## Pipeline operativa (per nuova storia)
 
@@ -87,6 +88,9 @@ isola_i3v_visual/
 ├── contributi/                ✅ scrittura per collaboratori esterni (proposte/aggiunte)
 │   └── (file .md datati, vedi sezione 5)
 │
+├── _starter_kit/              ✅ template di sistema riusabile (scheletro, NO contenuto saga)
+│   └── README.md                     entry point (setup nuova "isola" da zero)
+│
 ├── scripts/                   ✅ tool Python condivisi (idempotenti)
 │   ├── build_catalogo_web.py            rigenera catalogo_web/data/entities.json da visual/
 │   ├── build_visual_skeleton.py         ricrea schede stub da grafo (non usare in fase F)
@@ -137,6 +141,8 @@ isola_i3v_visual/
 - ❌ **Mai `git push --force`, mai `git reset --hard`, mai `git checkout -- <file>` su file modificati senza chiedere.**
 - ❌ **Mai committare con `--no-verify` o `--amend` su commit altrui.**
 - ❌ **Mai sostituire il `story_graph.json` corrente.** Se serve una nuova migrazione, segui un processo come fase E (workspace separato + audit trail).
+- ❌ **Mai contaminare `_starter_kit/` con contenuto specifico de "L'Isola dei Tre Venti".** Niente prosa della saga, niente schede di personaggi/luoghi/oggetti reali, niente prompt grok del canone, niente snippet del grafo, niente immagini canoniche. Lo starter kit deve restare **scheletro generico riusabile** (template vuoti, script idempotenti, skill agente IA, README di setup). Se devi mostrare un esempio, usa nomi placeholder (`<personaggio_esempio>`, `<luogo_esempio>`, ecc.).
+- ❌ **Mai lavorare in `_starter_kit/` e fuori contemporaneamente.** Una sessione = uno scope. Se sei in modalità starter kit, non modificare `pipeline_narrativa/`, `visual/`, `cartografia/`, `catalogo_web/`. Se sei in modalità saga, non modificare `_starter_kit/`.
 
 ### ALWAYS
 
@@ -341,6 +347,17 @@ Scrive il testo finale di una delle 12 storie in chat collaborativa con Ray, una
 - **Vincoli forti:** frasi-codice dei personaggi inalterabili, formula ritornello solo dove brief la indica, pattern AI da bandire integrale, una pagina = un hook visivo, mai 2 pagine in fila senza pausa Ray.
 - **Modalità ortogonale alle altre:** non tocca grafo, non tocca catalogo, non tocca cartografia. Lavora solo nella chat.
 
+### Modalità "starter kit" (template di sistema riusabile)
+Costruzione e manutenzione del template scaricabile in `_starter_kit/`. Concetto: chi scarica quella directory deve poter avviare il proprio progetto narrativo tipo-isola (saga, libro illustrato, mondo di fantasia) senza alcun residuo del contenuto specifico de "L'Isola dei Tre Venti". Punto d'ingresso: `_starter_kit/README.md`.
+
+- **Scope di scrittura:** SOLO `_starter_kit/`. Tutto il resto della repo (`pipeline_narrativa/`, `visual/`, `cartografia/`, `catalogo_web/`, `_visual_pipeline/`, `_porting_grafo/`, `_pacchetti_consegnati/`, `contributi/`, `scripts/`, `skills/`, `docs/`) è **read-only**. Si può **leggere** per capire pattern (es. struttura di un brief, stile di uno script idempotente con `--dry-run`, naming convention dei marker `@hook`/`@subhook`), si può **scrivere solo** dentro `_starter_kit/`.
+- **Cosa va dentro:** scheletro cartelle (`pipeline_narrativa/`, `visual/`, `cartografia/`, `catalogo_web/`, `scripts/`, `skills/` vuoti o con `.gitkeep`), template di scheda (personaggio/luogo/oggetto), template di brief writing, prompt operativi generici, script idempotenti adattati (con placeholder per nomi progetto), skill agente IA (`SKILL.md` per ogni modalità riusabile), README di setup passo-passo.
+- **Cosa NON va dentro:** prosa della saga, schede di personaggi/luoghi/oggetti reali (Gabriel, Fiamma, Forno, ecc.), prompt grok del canone, snippet di `story_graph.json`, immagini canoniche di entità reali, contenuto di `pipeline_narrativa/documenti_progetto/` (Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire). Se serve un esempio concreto, usa nomi placeholder (`<personaggio_esempio>`, `<luogo_esempio>`, `<id_oggetto>`).
+- **Pattern script:** idempotenti, `--dry-run` di default, `--apply` per scrivere, backup automatico, log umano (vedi `scripts/cornice_mondo/step*.py` per riferimento di stile).
+- **Vincoli:** mai modificare `CLAUDE.md`, `README.md`, `PROJECT_STATE.md`, `SYNC_LOG.md` in root della repo (sono file di stato della saga, non parte del template). La directory `_starter_kit/` ha un proprio README interno autosufficiente.
+- **Branch:** branch dedicato `claude/starter-kit-<scope>` con merge fast-forward su `main`.
+- **Commit prefix:** `starter_kit:` per riconoscibilità (es. `starter_kit: scheletro cartelle iniziale`).
+
 ---
 
 ## 5. Regole per collaboratori esterni che aggiungono dettagli alle schede
@@ -487,4 +504,4 @@ python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/
 
 **Autore narrativo e proprietario**: Ray.
 **Manutenzione tecnica**: Ray + agenti IA in collaborazione (Claude Sonnet/Opus tipicamente).
-**Ultimo aggiornamento istruzioni**: 2026-04-30 (post-cornice-del-mondo + brieffer install).
+**Ultimo aggiornamento istruzioni**: 2026-05-07 (annunciato `_starter_kit/` come template di sistema riusabile).

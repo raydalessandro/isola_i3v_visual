@@ -130,3 +130,11 @@ Per i tooling permanenti correlati (script idempotenti rilanciabili), vedi `scri
 ## Contributi esterni
 
 Collaboratori esterni che vogliono proporre dettagli alle schede `visual/` lavorano in `contributi/` (file datati). Vedi `CLAUDE.md` §5 per le regole.
+
+---
+
+## Starter kit (per nuovi progetti tipo-isola)
+
+Chi vuole usare questo framework per realizzare un proprio progetto narrativo (saga, libro illustrato, mondo di fantasia con grafo + canone visivo + cartografia) trova in [`_starter_kit/`](./_starter_kit/) il template scaricabile dello scheletro: struttura cartelle, template di scheda, prompt operativi, script idempotenti, skill agente IA. Punto d'ingresso: [`_starter_kit/README.md`](./_starter_kit/README.md).
+
+> Il **contenuto narrativo specifico** de "L'Isola dei Tre Venti" (`pipeline_narrativa/`, `visual/`, `cartografia/`, `catalogo_web/`) **non fa parte dello starter kit** — è il prodotto autoriale di Ray, non riusabile. Lo starter kit contiene solo lo scheletro generico riusabile.
