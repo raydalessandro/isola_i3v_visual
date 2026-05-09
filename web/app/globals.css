@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Saga palette (HSL channels, used as `hsl(var(--token))`) */
+    --paper: 39 53% 93%;
+    --paper-soft: 37 62% 96%;
+    --ink: 30 38% 16%;
+    --ink-soft: 23 12% 43%;
+    --ink-faint: 20 12% 61%;
+    --rule: 30 22% 75%;
+    --rule-soft: 33 31% 86%;
+    --accent: 12 49% 32%;
+    --accent-foreground: 37 62% 96%;
+    --accent-warm: 31 65% 48%;
+
+    /* shadcn/ui tokens — mapped onto saga palette */
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: var(--paper-soft);
+    --card-foreground: var(--ink);
+    --popover: var(--paper-soft);
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--paper);
+    --secondary: var(--rule-soft);
+    --secondary-foreground: var(--ink);
+    --muted: var(--rule-soft);
+    --muted-foreground: var(--ink-soft);
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 98%;
+    --border: var(--rule);
+    --input: var(--rule);
+    --ring: var(--accent);
+
+    --radius: 0.5rem;
+  }
+
+  /* Dark mode — placeholder, mirrors light for now (will be tuned later) */
+  .dark {
+    --paper: 30 15% 12%;
+    --paper-soft: 30 15% 16%;
+    --ink: 39 53% 93%;
+    --ink-soft: 33 31% 75%;
+    --ink-faint: 30 22% 60%;
+    --rule: 23 12% 30%;
+    --rule-soft: 23 12% 22%;
+    --accent: 31 65% 55%;
+    --accent-foreground: 30 38% 12%;
+    --accent-warm: 31 65% 55%;
+
+    --background: var(--paper);
+    --foreground: var(--ink);
+    --card: var(--paper-soft);
+    --card-foreground: var(--ink);
+    --popover: var(--paper-soft);
+    --popover-foreground: var(--ink);
+    --primary: var(--ink);
+    --primary-foreground: var(--paper);
+    --secondary: var(--rule-soft);
+    --secondary-foreground: var(--ink);
+    --muted: var(--rule-soft);
+    --muted-foreground: var(--ink-soft);
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: var(--rule);
+    --input: var(--rule);
+    --ring: var(--accent);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-paper text-ink font-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
