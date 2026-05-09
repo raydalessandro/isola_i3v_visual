@@ -199,12 +199,12 @@ I Pascoli erano vuoti. Il sentiero adesso si vedeva.
 
 <!-- @hook s01_h10 | @page 10 | @subhooks [s01_h10a, s01_h10b] | @image TBD -->
 
-<!-- @subhook s01_h10a | @page_book 16 | @image TBD -->
+<!-- @subhook s01_h10a | @page_book 16 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h10a.jpg -->
 Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.
 
 Mise in mano a Noah un cornetto.
 
 Loro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle.
 
-<!-- @subhook s01_h10b | @page_book 17 | @image TBD -->
+<!-- @subhook s01_h10b | @page_book 17 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h10b.jpg -->
 Fuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una pietra cadde da qualche parte sul Burrone. Nessuno la sentì.
