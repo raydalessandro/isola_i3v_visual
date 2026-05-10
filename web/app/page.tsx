@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight, Compass, ImageIcon } from "lucide-react";
+import { ArrowRight, Compass, ImageIcon } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const BUILD_DATE = "2026-05-09";
-const APP_VERSION = "0.1.0";
+const BUILD_DATE = "2026-05-10";
+const APP_VERSION = "0.2.0";
 
 export default function HomePage() {
   return (
-    <div className="space-y-12">
+    <main className="max-w-6xl mx-auto px-6 py-10 space-y-12">
       <header className="space-y-3 border-b border-rule-soft pb-8">
         <h1 className="font-serif font-semibold text-5xl tracking-tight text-ink">
           L&apos;Isola dei Tre Venti
@@ -42,20 +42,20 @@ export default function HomePage() {
           </CardHeader>
           <CardContent className="text-ink-soft">
             <p>
-              Il catalogo statico esistente resta servito su Vercel finché la
-              migrazione non avrà completato il cutover. Per ora il link rimanda
-              al deploy attuale.
+              Catalogo entità nativo Next.js: tree gerarchico, gallerie con
+              lightbox, body editoriale collassabile, prompt grok per
+              personaggi e oggetti.
             </p>
           </CardContent>
           <CardFooter>
-            <Button asChild variant="outline">
-              <a
-                href="/catalogo_web/"
+            <Button asChild variant="default">
+              <Link
+                href="/catalogo"
                 className="inline-flex items-center gap-2"
               >
                 Apri catalogo
-                <ArrowUpRight className="h-4 w-4" aria-hidden />
-              </a>
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
             </Button>
           </CardFooter>
         </Card>
@@ -90,9 +90,9 @@ export default function HomePage() {
           <span>
             v{APP_VERSION} · build {BUILD_DATE}
           </span>
-          <span>Step 1/N — skeleton</span>
+          <span>Step 2/N — catalogo entità</span>
         </div>
       </footer>
-    </div>
+    </main>
   );
 }

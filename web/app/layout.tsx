@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${fraunces.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-paper text-ink font-serif antialiased">
-        <main className="max-w-6xl mx-auto px-6 py-10">{children}</main>
+        {children}
       </body>
     </html>
   );
