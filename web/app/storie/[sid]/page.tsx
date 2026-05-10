@@ -161,7 +161,11 @@ export default async function StoriaDashboardPage({ params }: PageProps) {
         <h2 className="font-serif text-2xl font-semibold text-ink">
           Hook visivi ({story.hooks.length})
         </h2>
-        <HookAccordion hooks={story.hooks} audited={story.audited_entities} />
+        <HookAccordion
+          hooks={story.hooks}
+          audited={story.audited_entities}
+          sagaStyle={sagaStyle}
+        />
       </section>
 
       {/* Canon todo */}

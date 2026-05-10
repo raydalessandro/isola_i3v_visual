@@ -11,9 +11,15 @@ import { HookItem } from "@/components/storie-dashboard/hook-item";
 interface HookAccordionProps {
   hooks: DashboardHook[];
   audited: AuditedEntities;
+  /** Reference stile saga: passato a ogni HookItem per costruire il prompt. */
+  sagaStyle: string;
 }
 
-export function HookAccordion({ hooks, audited }: HookAccordionProps) {
+export function HookAccordion({
+  hooks,
+  audited,
+  sagaStyle,
+}: HookAccordionProps) {
   if (hooks.length === 0) {
     return (
       <p className="font-serif italic text-ink-faint">
@@ -24,7 +30,12 @@ export function HookAccordion({ hooks, audited }: HookAccordionProps) {
   return (
     <div className="space-y-2">
       {hooks.map((h) => (
-        <HookItem key={h.hook_id} hook={h} audited={audited} />
+        <HookItem
+          key={h.hook_id}
+          hook={h}
+          audited={audited}
+          sagaStyle={sagaStyle}
+        />
       ))}
     </div>
   );
