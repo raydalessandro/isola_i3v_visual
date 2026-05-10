@@ -36,3 +36,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# package-lock.json: temporaneamente ignorato perche' il proxy git
+# locale lo rifiuta sistematicamente con HTTP 403. Vercel lo rigenera
+# al deploy via `npm install`. Da committare quando il proxy si sblocca
+# (per riproducibilita' build sub-deps minori).
+package-lock.json
