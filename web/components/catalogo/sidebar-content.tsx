@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Map, BookOpen } from "lucide-react";
+import { Map as MapIcon, BookOpen, Compass } from "lucide-react";
 
 import type { Tree } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
@@ -41,11 +41,12 @@ export function SidebarContent({ tree, totalEntities }: SidebarContentProps) {
 
       <div className="border-t border-rule-soft p-4 space-y-2">
         <p className="font-mono text-[10px] uppercase tracking-wider text-ink-faint">
-          In arrivo (Step 3)
+          Altre viste
         </p>
         <div className="space-y-1">
-          <DisabledLink icon={Map} label="Indice strade" />
-          <DisabledLink icon={BookOpen} label="Storie del libro" />
+          <SideLink href="/storie" icon={BookOpen} label="Storie del libro" />
+          <SideLink href="/strade" icon={MapIcon} label="Indice strade" />
+          <SideLink href="/mappa" icon={Compass} label="Mappa isola" />
         </div>
         <Separator className="my-2" />
         <Link
@@ -59,24 +60,22 @@ export function SidebarContent({ tree, totalEntities }: SidebarContentProps) {
   );
 }
 
-function DisabledLink({
+function SideLink({
+  href,
   icon: Icon,
   label,
 }: {
+  href: string;
   icon: React.ComponentType<{ className?: string }>;
   label: string;
 }) {
   return (
-    <div
-      aria-disabled="true"
-      className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-ink-faint cursor-not-allowed"
-      title="Disponibile in Step 3"
+    <Link
+      href={href}
+      className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-ink-soft hover:bg-rule-soft/40 hover:text-ink"
     >
       <Icon className="h-4 w-4 shrink-0" />
       <span className="truncate">{label}</span>
-      <span className="ml-auto font-mono text-[9px] uppercase tracking-wider opacity-70">
-        soon
-      </span>
-    </div>
+    </Link>
   );
 }
