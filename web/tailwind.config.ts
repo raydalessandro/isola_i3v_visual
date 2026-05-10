@@ -16,6 +16,11 @@ const config: Config = {
       },
     },
     extend: {
+      screens: {
+        // Breakpoint custom per il catalogo: sidebar fissa desktop ≥800px,
+        // topbar/drawer mobile <800px. Usato come prefisso `catalogo-sidebar-desktop:`.
+        "catalogo-sidebar-desktop": "800px",
+      },
       colors: {
         // Saga design tokens (paper + ink + accents)
         paper: "hsl(var(--paper))",
