@@ -20,6 +20,16 @@ const FILES = [
     to: resolve(WEB_ROOT, "public/data/entities.json"),
     required: true,
   },
+  {
+    // Dashboard di lavoro illustrazioni: stats, audit entità, hook accordion,
+    // canon todo, saga style reference. Generato da
+    // `scripts/build_storie_data.py` nel catalogo statico (~291 KB).
+    // NB: distinto da `public/data/storie.json` (vista pagine libro,
+    // generato da `scripts/build-storie.mjs` di Next).
+    from: resolve(REPO_ROOT, "catalogo_web/data/storie.json"),
+    to: resolve(WEB_ROOT, "public/data/storie-dashboard.json"),
+    required: true,
+  },
 ];
 
 let failed = false;

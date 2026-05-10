@@ -1,39 +1,50 @@
+// Index dashboard "Storie del libro" — cards per ciclo con progress bar
+// hooks_image_ready/hooks_total + mini-stats inline.
+// Server Component, dati da `lib/storie-dashboard.ts`.
+
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, BookOpen } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  CheckCircle2,
+  AlertTriangle,
+  LayoutDashboard,
+} from "lucide-react";
 
-import { getAllStorie } from "@/lib/storie";
+import { getAllStorieDashboard } from "@/lib/storie-dashboard";
 import { CYCLE_LABEL } from "@/lib/types-storie";
 import { Badge } from "@/components/ui/badge";
+import { ProgressBar } from "@/components/storie-dashboard/progress-bar";
 
 export const metadata: Metadata = {
-  title: "Storie del libro — L'Isola dei Tre Venti",
+  title: "Storie del libro — dashboard illustrazioni",
   description:
-    "Le 12 storie illustrate della saga: prosa definitiva + immagini-scena pagina per pagina.",
+    "Stato di avanzamento delle 12 storie illustrate: hook composti, personaggi e luoghi con immagini canoniche, annotazioni manuali.",
 };
 
-function asStr(v: unknown): string | null {
-  return typeof v === "string" && v.trim() ? v : null;
-}
-
 export default async function StorieIndexPage() {
-  const storie = await getAllStorie();
+  const storie = await getAllStorieDashboard();
 
   // Raggruppa per ciclo (A/B/C/D), conservando ordine sNN.
   const byCycle = new Map<string, typeof storie>();
   for (const s of storie) {
-    const cycle = asStr(s.frontmatter.cycle) ?? "?";
+    const cycle = s.cycle || "?";
     if (!byCycle.has(cycle)) byCycle.set(cycle, []);
     byCycle.get(cycle)!.push(s);
   }
   const cycleOrder = ["A", "B", "C", "D"].filter((c) => byCycle.has(c));
-  // eventuali cicli ignoti li accodiamo
   for (const c of byCycle.keys()) if (!cycleOrder.includes(c)) cycleOrder.push(c);
 
-  const totalPages = storie.reduce((acc, s) => acc + s.pages.length, 0);
+  // Aggregato saga.
+  const totHooks = storie.reduce((acc, s) => acc + (s.stats?.hooks_total ?? 0), 0);
+  const totReady = storie.reduce(
+    (acc, s) => acc + (s.stats?.hooks_image_ready ?? 0),
+    0,
+  );
 
   return (
-    <main className="mx-auto max-w-5xl px-6 py-10 space-y-10">
+    <main className="mx-auto max-w-6xl px-6 py-10 space-y-10">
       <header className="space-y-3 border-b border-rule-soft pb-6">
         <Link
           href="/"
@@ -43,18 +54,26 @@ export default async function StorieIndexPage() {
           Home cruscotto
         </Link>
         <div className="flex items-center gap-2 text-accent-warm">
-          <BookOpen className="h-5 w-5" aria-hidden />
+          <LayoutDashboard className="h-5 w-5" aria-hidden />
           <span className="font-mono text-xs uppercase tracking-wider">
-            Storie del libro
+            Storie del libro · dashboard illustrazioni
           </span>
         </div>
         <h1 className="font-serif text-4xl font-semibold tracking-tight text-ink">
           Le 12 storie della saga
         </h1>
-        <p className="font-serif text-lg italic text-ink-soft max-w-2xl">
-          Prosa definitiva, suddivisa per pagina libro fisica. {storie.length}{" "}
-          storie · {totalPages} pagine totali.
+        <p className="max-w-2xl font-serif text-lg italic text-ink-soft">
+          Stato di avanzamento per la composizione finale (testo + illustrazione).
+          {storie.length} storie · {totReady}/{totHooks} hook con immagine
+          composta.
         </p>
+        <ProgressBar
+          current={totReady}
+          total={totHooks}
+          label="hook saga composti"
+          size="lg"
+          className="max-w-xl pt-1"
+        />
       </header>
 
       {cycleOrder.map((cycle) => (
@@ -64,10 +83,9 @@ export default async function StorieIndexPage() {
           </h2>
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {byCycle.get(cycle)!.map((s) => {
-              const status = asStr(s.frontmatter.status);
-              const season = asStr(s.frontmatter.season);
-              const wind = asStr(s.frontmatter.wind);
-              const block = asStr(s.frontmatter.block);
+              const stats = s.stats;
+              const ready = stats.hooks_image_ready ?? 0;
+              const total = stats.hooks_total ?? 10;
               return (
                 <li key={s.sid}>
                   <Link
@@ -79,33 +97,69 @@ export default async function StorieIndexPage() {
                         {s.sid.toUpperCase()}
                       </span>
                       <Badge variant="secondary" className="font-mono">
-                        Ciclo {cycle}
+                        Ciclo {s.cycle || "?"}
                       </Badge>
                     </div>
-                    <h3 className="mt-2 font-serif text-lg font-semibold text-ink leading-snug group-hover:text-accent">
+                    <h3 className="mt-2 font-serif text-lg font-semibold leading-snug text-ink group-hover:text-accent">
                       {s.title}
                     </h3>
-                    <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                      {status && (
-                        <Badge
-                          variant={status === "definitiva" ? "canonico" : "provvisorio"}
-                        >
-                          {status}
-                        </Badge>
-                      )}
-                      {season && (
-                        <Badge variant="warm">{season}</Badge>
-                      )}
-                      {wind && (
-                        <Badge variant="accent">{wind}</Badge>
-                      )}
-                      {block && (
-                        <Badge variant="outline">{block}</Badge>
-                      )}
+                    <div className="mt-3">
+                      <ProgressBar
+                        current={ready}
+                        total={total}
+                        label={`${ready}/${total} hook composti`}
+                        size="sm"
+                      />
                     </div>
-                    <div className="mt-3 flex items-center justify-between font-mono text-[11px] text-ink-faint">
-                      <span>{s.hooks.length} hook narrativi</span>
-                      <span>{s.pages.length} pagine libro</span>
+                    <dl className="mt-3 grid grid-cols-3 gap-2 text-center font-mono text-[11px] text-ink-soft">
+                      <div
+                        title="Personaggi con immagini canoniche"
+                        className="rounded-md bg-paper px-1 py-1.5"
+                      >
+                        <dt className="text-ink-faint">char img</dt>
+                        <dd>
+                          {stats.chars_with_imgs}/{stats.chars_distinct}
+                        </dd>
+                      </div>
+                      <div
+                        title="Luoghi con prompt grok"
+                        className="rounded-md bg-paper px-1 py-1.5"
+                      >
+                        <dt className="text-ink-faint">loc prompt</dt>
+                        <dd>
+                          {stats.locs_with_prompt}/{stats.locs_distinct}
+                        </dd>
+                      </div>
+                      <div
+                        title={
+                          s.annotations_present
+                            ? "Annotazioni manuali presenti"
+                            : "Annotazioni mancanti (NER auto)"
+                        }
+                        className="flex items-center justify-center gap-1 rounded-md bg-paper px-1 py-1.5"
+                      >
+                        {s.annotations_present ? (
+                          <>
+                            <CheckCircle2
+                              className="h-3.5 w-3.5 text-accent"
+                              aria-hidden
+                            />
+                            <span className="text-accent">ann</span>
+                          </>
+                        ) : (
+                          <>
+                            <AlertTriangle
+                              className="h-3.5 w-3.5 text-accent-warm"
+                              aria-hidden
+                            />
+                            <span className="text-accent-warm">auto</span>
+                          </>
+                        )}
+                      </div>
+                    </dl>
+                    <div className="mt-3 inline-flex items-center gap-1 font-mono text-[11px] text-ink-faint group-hover:text-accent">
+                      apri dashboard{" "}
+                      <ArrowRight className="h-3 w-3" aria-hidden />
                     </div>
                   </Link>
                 </li>
