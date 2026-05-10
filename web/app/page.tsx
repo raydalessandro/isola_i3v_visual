@@ -11,7 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 const BUILD_DATE = "2026-05-10";
-const APP_VERSION = "0.3.0";
+const APP_VERSION = "0.4.0";
 
 export default function HomePage() {
   return (
@@ -49,10 +49,7 @@ export default function HomePage() {
           </CardContent>
           <CardFooter>
             <Button asChild variant="default">
-              <Link
-                href="/catalogo"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="/catalogo" className="inline-flex items-center gap-2">
                 Apri catalogo
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
@@ -82,10 +79,7 @@ export default function HomePage() {
           </CardContent>
           <CardFooter>
             <Button asChild variant="default">
-              <Link
-                href="/storie"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="/storie" className="inline-flex items-center gap-2">
                 Apri storie
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
@@ -115,19 +109,13 @@ export default function HomePage() {
           </CardContent>
           <CardFooter className="flex flex-wrap gap-2">
             <Button asChild variant="default">
-              <Link
-                href="/strade"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="/strade" className="inline-flex items-center gap-2">
                 Indice strade
                 <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </Button>
             <Button asChild variant="ghost">
-              <Link
-                href="/mappa"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="/mappa" className="inline-flex items-center gap-2">
                 <Compass className="h-4 w-4" aria-hidden />
                 Mappa isola
               </Link>
@@ -137,7 +125,7 @@ export default function HomePage() {
 
         <Card>
           <CardHeader>
-            <div className="flex items-center gap-2 text-ink-faint">
+            <div className="flex items-center gap-2 text-accent-warm">
               <Compass className="h-5 w-5" aria-hidden />
               <span className="font-mono text-xs uppercase tracking-wider">
                 Orchestra
@@ -145,16 +133,22 @@ export default function HomePage() {
             </div>
             <CardTitle>Atlante saga</CardTitle>
             <CardDescription>
-              Vista narrativa cross-storia: archi, cornici del mondo, sentieri,
-              quote tracker.
+              Vista narrativa cross-storia: 12 storie sull&apos;asse temporale,
+              archi dei semi, presenze personaggi e luoghi.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-ink-soft">
-            <p className="font-mono text-sm">Coming soon (Step 4)</p>
+            <p>
+              Atlante a tre tracce con archi seed (planted → bloomed),
+              side-panel per il dettaglio di ogni nodo, deep linking via hash.
+            </p>
           </CardContent>
           <CardFooter>
-            <Button disabled variant="ghost">
-              In arrivo
+            <Button asChild variant="default">
+              <Link href="/orchestra" className="inline-flex items-center gap-2">
+                Apri atlante
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
             </Button>
           </CardFooter>
         </Card>
@@ -162,10 +156,8 @@ export default function HomePage() {
 
       <footer className="border-t border-rule-soft pt-6 font-mono text-xs text-ink-faint">
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span>
-            v{APP_VERSION} · build {BUILD_DATE}
-          </span>
-          <span>Step 3/N — storie + strade + mappa</span>
+          <span>v{APP_VERSION} · build {BUILD_DATE}</span>
+          <span>Step 4.1/N — atlante saga</span>
         </div>
       </footer>
     </main>

@@ -15,7 +15,6 @@ interface SidebarContentProps {
   totalEntities: number;
 }
 
-/** Contenuto interno della sidebar (riutilizzato sia in desktop che in drawer). */
 export function SidebarContent({ tree, totalEntities }: SidebarContentProps) {
   const [query, setQuery] = React.useState("");
   return (
@@ -44,6 +43,7 @@ export function SidebarContent({ tree, totalEntities }: SidebarContentProps) {
           Altre viste
         </p>
         <div className="space-y-1">
+          <SideLink href="/orchestra" icon={Compass} label="Atlante saga" />
           <SideLink href="/storie" icon={BookOpen} label="Storie del libro" />
           <SideLink href="/strade" icon={MapIcon} label="Indice strade" />
           <SideLink href="/mappa" icon={Compass} label="Mappa isola" />

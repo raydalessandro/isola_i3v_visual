@@ -6,14 +6,15 @@
     "node": ">=20"
   },
   "scripts": {
-    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs",
+    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs",
+    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "copy-data": "node scripts/copy-data.mjs",
-    "build-storie": "node scripts/build-storie.mjs"
+    "build-storie": "node scripts/build-storie.mjs",
+    "build-orchestra-data": "node scripts/build-orchestra-data.mjs"
   },
   "dependencies": {
     "@radix-ui/react-collapsible": "^1.1.2",
