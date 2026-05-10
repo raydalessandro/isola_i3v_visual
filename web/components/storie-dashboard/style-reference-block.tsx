@@ -38,7 +38,7 @@ export function StyleReferenceBlock({ text }: StyleReferenceBlockProps) {
           comprimi
         </span>
       </summary>
-      <div classГ="" className="space-y-3 border-t border-rule-soft px-4 py-3">
+      <div className="space-y-3 border-t border-rule-soft px-4 py-3">
         <pre className="max-h-72 overflow-auto whitespace-pre-wrap rounded-md border border-rule-soft bg-paper p-3 font-mono text-[11px] leading-relaxed text-ink-soft">
           {text}
         </pre>
