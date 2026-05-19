@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-05-07 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer installato + starter_kit annunciato).
+Versione: 2026-05-19 (standard immagini HD per stampa introdotto: subdir `_hd/` + skill illustratore + 28 file HD applicati a s01 e intro Vol 1).
 
 ---
 
@@ -13,9 +13,10 @@ Versione: 2026-05-07 (post-cornice-del-mondo grafo v1.2.0 schema 1.4 + brieffer 
 3. **Una traccia archiviata**: `_porting_grafo/` (migrazione una-tantum del grafo, completata, NON toccare).
 4. **Una traccia per contributi esterni**: `contributi/` (proposte di aggiunta schede — solo create file nuovi datati, mai modificare esistenti).
 5. **Una traccia di starter kit (template di sistema)**: `_starter_kit/` (scheletro riusabile del framework per chi vuole farsi la propria "isola" — directory dedicata, **mai contaminare** con contenuto narrativo specifico della saga).
-6. **Mai modificare** `pipeline_narrativa/` (grafo + Bible) senza autorizzazione esplicita.
-7. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
-8. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
+6. **Una traccia di illustratore esterno** (caricamento immagini HD per stampa): branch dedicate `claude/hd-*` con subdir `_hd/`. Vedi sezione 9 + `skills/illustratore/SKILL.md`.
+7. **Mai modificare** `pipeline_narrativa/` (grafo + Bible) senza autorizzazione esplicita.
+8. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
+9. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
 
 ## Pipeline operativa (per nuova storia)
 
@@ -46,8 +47,8 @@ isola_i3v_visual/
 │   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker @hook (narrativo, 1..10) + marker @subhook (pagina libro fisica, 1..book_pages_total) machine-readable per script compositore libro futuro (vedi storie_finali/README.md)
 │   ├── storie_finali/_annotations/   YAML autoriali Ray (sNN.yaml) — note di scena
 │   ├── storie_finali/_inventory/     inventari testuali derivati (audit/QA prosa)
-│   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Naming deterministico, una pagina libro = un file. NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
-│   ├── storie_finali/_volumi/        cornice editoriale 4 volumi (3 storie/volume, 1:1 con cicli A/B/C/D): soglia, introduzioni_cicli, stato_zero_e_sigilli, presentazione_completa, presentazioni_parziali, porte, congedo + _elementi_fissi/ (riferimenti read-only). Marker ## VOLUME N interni per compositore libro
+│   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg low-res, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Subdir `_hd/sNN_hMMx_hd.jpg` per versione HD stampa (JPG q95, ≥1664×2496 px). NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
+│   ├── storie_finali/_volumi/        cornice editoriale 4 volumi (3 storie/volume, 1:1 con cicli A/B/C/D): soglia, introduzioni_cicli, stato_zero_e_sigilli, presentazione_completa, presentazioni_parziali, porte, congedo + _elementi_fissi/ (riferimenti read-only) + v0N/_hd/v0N_intro_<slug>_hd.jpg per illustrazioni HD intro volume. Marker ## VOLUME N interni per compositore libro
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
 ├── visual/                    ✅ scrittura su scheda.md per arricchimento (con cautela) + immagini canoniche + prompt_grok.md
@@ -116,6 +117,8 @@ isola_i3v_visual/
 │   │   └── SKILL.md
 │   ├── prosa/                        ⭐ NEW (2026-04-30) agente prosa: scrive il testo finale delle storie
 │   │   └── SKILL.md                  da incollare in chat Claude.ai per attivare modalita scrittura
+│   ├── illustratore/                 ⭐ NEW (2026-05-19) agente illustratore: workflow upload HD per stampa
+│   │   └── SKILL.md                  pattern branch + naming + commit per immagini HD pronte al merge
 │   └── visual/
 │       ├── README.md                 skill visual generale
 │       └── compilatore.md            sotto-skill compilazione schede
@@ -493,7 +496,65 @@ python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/
 
 ---
 
-## 8. Quando in dubbio
+## 9. Standard immagini HD per stampa (Fase Illustratore — 2026-05-19)
+
+Le immagini per **stampa del libro** convivono con i reference digitali low-res in una struttura **`_hd/`** dedicata, per non sostituire i low-res e mantenere ortogonalità (browsing veloce vs file pesanti).
+
+### Convivenza low-res + HD
+
+```
+<cartella canonica>/<id>.jpg          ← LOW-RES reference digitale (browsing, catalogo web)
+<cartella canonica>/_hd/<id>_hd.jpg   ← HD per stampa (JPG q95, ≥1664×2496 px)
+```
+
+I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositore libro (futuro) cerca prima `_hd/<id>_hd.jpg`, fallback su low-res.
+
+### I 3 contesti di destinazione
+
+| Contesto | Path HD |
+|---|---|
+| **Hook di storia** | `pipeline_narrativa/storie_finali/_scene/sNN/_hd/sNN_hMMx_hd.jpg` |
+| **Intro volume** | `pipeline_narrativa/storie_finali/_volumi/v0N/_hd/v0N_intro_<slug>_hd.jpg` |
+| **Catalogo reference canoniche** | `visual/<categoria>/<id>/immagini/_hd/<id>_canonica_v1_<vista>_hd.jpg` |
+
+### Specifiche file HD (obbligatorie)
+
+- **Formato:** JPEG (estensione `.jpg`), qualità 95
+- **Profilo colore:** RGB sRGB (la conversione CMYK è dello stampatore)
+- **Risoluzione minima:** 1664×2496 px verticale (ideale 2000×3000 px)
+- **Peso file:** 300-700 KB tipico, fino a ~1 MB
+- **Naming:** lowercase, snake_case, suffisso obbligatorio `_hd`, mai `.jpeg`/`.JPG`/spazi/maiuscole
+
+### Workflow upload (per illustratore — IA o umano)
+
+1. **Branch dedicata** `claude/hd-<scope>` (es. `claude/hd-storia-s02`, `claude/hd-intro-v02`, `claude/hd-catalogo-primari`)
+2. **Crea `_hd/`** nel contesto giusto e copia i file con suffisso `_hd.jpg`
+3. **Un solo commit** per branch, messaggio standard (vedi `skills/illustratore/SKILL.md`)
+4. **Push + PR** verso main, NON mergiare in autonomia
+5. **Review** (Ray o agente review) verifica path/naming/formato/diff pulito prima del merge
+
+### Vincoli
+
+- ❌ Mai **sostituire** i low-res esistenti con la HD (HD va in `_hd/`, low-res resta dov'era)
+- ❌ Mai mischiare HD + codice app web + modifiche `.md` nella stessa branch (uno scope = una branch)
+- ❌ Mai 34 commit atomici "Aggiunge X / Rimuove Y" (un commit per branch)
+- ❌ Mai cambiare estensione dei marker `@image` nei `.md` (restano puntati al low-res)
+- ❌ Mai PNG (5-10 MB cad.) — solo JPEG q95 (300-700 KB cad.)
+- ❌ Mai push diretto su `main`
+
+### Skill di riferimento
+
+**Sempre** `skills/illustratore/SKILL.md` per il workflow completo (passo-passo + esempi + checklist).
+
+### Stato applicato (2026-05-19)
+
+- `_scene/s01/_hd/` — 17 file HD storia 1 (Ciclo A, prima storia) ✅
+- `_volumi/v01/_hd/` — 11 file HD intro Volume 1 (Ciclo A apre il libro) ✅
+- Da fare: 11 storie restanti, 3 volumi restanti, catalogo completo HD
+
+---
+
+## 10. Quando in dubbio
 
 1. Leggi `README.md` per la panoramica.
 2. Leggi `PROJECT_STATE.md` per stato operativo.
