@@ -10,6 +10,7 @@ Questo è il **punto d'ingresso** per un agente IA che opera su questo repo. Con
      - [`visual/compilatore.md`](./visual/compilatore.md) — sotto-skill: compilazione body schede entità da fonti canoniche, con principio "completa, non rimuovere".
    - [`brieffer/SKILL.md`](./brieffer/SKILL.md) — generazione e aggiornamento dei `writing_brief` per le 12 storie (operatore di estrazione, lancia `scripts/build_writing_brief.py`).
    - [`prosa/SKILL.md`](./prosa/SKILL.md) — agente prosa: scrive il testo finale di una storia in chat collaborativa con Ray, una pagina alla volta. Da incollare all'inizio di una chat Claude.ai per attivare la modalità scrittura.
+   - [`illustratore/SKILL.md`](./illustratore/SKILL.md) — agente illustratore: workflow upload immagini HD per stampa libro (branch dedicate `claude/hd-*`, subdir `_hd/`, JPG q95, 1 commit per branch pronto al merge).
 
 **Convenzione di lavoro:** quando inizi una sessione, Ray (o tu stesso, leggendo il task) **identifichi la skill** e ti attieni al suo scope. Non è un vincolo tecnico — è disciplina. Ray ti chiede esplicitamente di "stare nel tuo" quando hai un ruolo chiaro: leggi solo la skill che serve, non mescolarle, non scrivere fuori dal tuo scope se la skill non lo prevede.
 

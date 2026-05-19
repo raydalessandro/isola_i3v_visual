@@ -5,7 +5,8 @@ Cartella sorella di `_annotations/` e `_inventory/`. Contiene le **illustrazioni
 ## Naming deterministico
 
 ```
-_scene/sNN/sNN_hMMx.jpg
+_scene/sNN/sNN_hMMx.jpg          ← LOW-RES reference (browsing digitale)
+_scene/sNN/_hd/sNN_hMMx_hd.jpg   ← HD per stampa (JPG q95, ~1664×2496 px)
 ```
 
 | Token | Significato | Range |
@@ -13,10 +14,14 @@ _scene/sNN/sNN_hMMx.jpg
 | `sNN` | id storia | `s01`..`s12` |
 | `hMM` | id hook narrativo (1..10 zero-padded) | `h01`..`h10` |
 | `x` | suffisso subhook = pagina libro fisica all'interno dell'hook | `a`, `b`, `c`, ... |
+| `_hd` | suffisso versione HD stampa (presente SOLO nella subdir `_hd/`) | — |
 
 Esempi:
-- `s01/s01_h01b.jpg` — s01, hook 1, pagina libro 2 (subhook b dentro hook 1)
-- `s07/s07_h05a.jpg` — s07, hook 5, prima pagina libro associata all'hook 5
+- `s01/s01_h01b.jpg` — low-res reference, s01, hook 1, pagina libro 2
+- `s01/_hd/s01_h01b_hd.jpg` — HD stampa stessa scena, JPG q95
+- `s07/s07_h05a.jpg` + `s07/_hd/s07_h05a_hd.jpg` — coppia low-res + HD di s07 hook 5 subhook a
+
+**Le due versioni convivono.** Il marker `@image` nel testo storia punta SEMPRE alla low-res (`_scene/sNN/sNN_hMMx.jpg`); lo script compositore libro (futuro) cerca prima `_hd/sNN_hMMx_hd.jpg` per la stampa, fallback su low-res se assente.
 
 ## Relazione con il marker `@subhook`
 
@@ -45,6 +50,8 @@ Le `_scene/` sono il **prodotto finale composto** della scena nel libro. Pattern
 - Una pagina libro = un file. Per **spread doppia**: stesso file referenziato da entrambi i subhook con `@layout: double_spread`.
 - Mai modificare i `@subhook` id (stabili, legati al testo prosa + brief + prompt grok).
 - Mai rinominare i file `_scene/` esistenti senza aggiornare il marker `@image` corrispondente.
+- **Le HD vanno SEMPRE in `_hd/`, mai nella cartella padre.** Mai sostituire un low-res con la sua versione HD.
+- **Formato HD:** JPEG qualità 95, RGB profilo sRGB, risoluzione minima 1664×2496 px (formato verticale).
 
 ## Stato (2026-05-05)
 
