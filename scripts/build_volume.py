@@ -463,10 +463,7 @@ def get_sigillo(volume: int) -> str:
 
 def get_presentazione_parziale(volume: int) -> list[tuple[str, str]]:
     """Ritorna lista di (titolo, testo) — senza immagini (risolte separatamente)."""
-    raw   = (VOLUMI_DIR / "presentazioni_parziali.md").read_text(encoding="utf-8")
-    block = _extract_volume_block(VOLUMI_DIR / "presentazioni_parziali.md", volume) \
-            if volume > 1 else raw
-    block = re.sub(r"^#[^\n]+\n", "", block, count=3, flags=re.MULTILINE)
+    block = _extract_volume_block(VOLUMI_DIR / "presentazioni_parziali.md", volume)
     block = re.sub(r"^## NOTE TECNICHE.*?(?=^##|\Z)", "", block, flags=re.DOTALL | re.MULTILINE)
     entries = re.findall(
         r"#### \*([^*\n]+)\*\s*\n(.*?)(?=^---\s*$|\Z)", block, re.DOTALL | re.MULTILINE
