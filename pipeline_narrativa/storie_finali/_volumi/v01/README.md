@@ -35,6 +35,7 @@ NON sostituiscono le reference catalogo (che restano in `visual/personaggi/indiv
 
 | File | Soggetto |
 |---|---|
+| `v01_intro_bambini_hd.jpg` | i 3 fratelli (Gabriel, Elias, Noah) insieme |
 | `v01_intro_bartolo_toba_hd.jpg` | coppia umano-cucciolo: Bartolo (fornaio) + Toba |
 | `v01_intro_bru_hd.jpg` | cucciolo Bru (compagno di Rovo) |
 | `v01_intro_fiamma_hd.jpg` | Fiamma (panettiera) |
