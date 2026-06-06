@@ -21,8 +21,7 @@ schema_marker: |
     @image   : path immagine composta finale del libro (TBD da popolare)
 ---
 
-# L'Isola dei Tre Venti — S10
-## La Notte senza Luna
+# S10 — La Notte senza Luna
 
 ---
 
