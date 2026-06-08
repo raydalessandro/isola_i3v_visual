@@ -12,6 +12,28 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-08-013 — Editorial build: script definitivo impaginazione volumi KDP installato
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** pipeline_output / governance (nuova pipeline build PDF stampa; nessuna modifica a contenuti narrativi, grafo, schede, cartografia)
+- **Repo target:** n/a (uso interno per produzione stampa Amazon KDP)
+- **Cambiamento:**
+  1. **`scripts/build_volume.py` v2** — sostituita la versione abbozzata (1204 righe) con la versione definitiva (1801 righe). Compositore Amazon KDP: A5 (148×210mm), 300 DPI, bleed 3.175mm, **pagine sempre pari** (requisito KDP), doppio PDF (libro sfogliabile + stampa singole), front matter editoriale, indice a due passate auto-numerato, atlante personaggi (nome 450 + glifo + ritratto in cornice + capolettera + firma con separatore camuno), **cornice colorata per QUARTIERE d'appartenenza** (mappa cromatica fuoco/acqua/aria/terra/centro/perimetro), camuni nei margini, controllo qualità immagini con banner + report `LAYOUT_WARNINGS.md`.
+  2. **`scripts/design_system.py`** NEW (864 righe) — modulo identità visiva collana: palette tre venti + 6 quartieri, logo spirale, font helper, ornamenti, motivi-ambiente, rosa dei tre venti, isola-atlantino, glifi-vento Δ/⇄/⟳, repertorio camuno (orante/capanna/cervo/sole/rosa camuna), `scatter_camuni`, `nasce_dalla_pagina`, 4 cornici (`doppio_filetto/angoli_vento/festone/grappolo`), `separatore_camuno`.
+  3. **`assets/fonts/`** NEW (7 TTF, ~1.9 MB, SIL OFL 1.1): Fraunces (display+corpo storia), Fraunces-Italic, Nunito (eyebrow/metadati), Nunito-Italic, Fredoka (marchio collana), Lora-Variable (fallback serif), Lora-Italic-Variable + README con attribuzioni. Lo script ha fallback al sistema con warning se mancanti — i .ttf in repo garantiscono build riproducibili.
+  4. **`tests/`** NEW — 60 test (~4s veloci): struttura/costanti, robustezza input difficili, decori (camuni/cornici/glifi), coerenza front-matter/occhielli/indice sui 4 volumi, determinismo byte-identico. + `test_integration.py` (marker `slow`, ~60s): build PDF reale del Vol1+s01, verifica A5 esatto, 300 DPI, pagine pari, doppio PDF prodotto. README `tests/README.md` con istruzioni.
+  5. **`pytest.ini`** NEW — config marker `slow`.
+  6. **`.gitignore`** aggiornato — aggiunto `_output/` (i PDF prodotti sono rigenerabili e non vanno committati).
+  7. **Output script (in `_output/`, ignorato da git):** `vol{N}_libro.pdf` + `vol{N}_stampa.pdf` + `vol{N}_LAYOUT_WARNINGS.md`. Mappatura volumi: V1=Ciclo A (s01-s03), V2=B (s04-s06), V3=C (s07-s09), V4=D (s10-s12).
+  8. **Test passati pre-commit:** 54 passed, 1 skipped in 2.07s (veloci). Test `slow` (richiede `pymupdf`): da eseguire da Ray in locale.
+- **TODO aperti dichiarati dall'autore script (MODIFICHE.md):**
+  - 2 modifiche puntuali alle fonti dei contenuti (a cura di Ray)
+  - Estendere `ENTITA_QUARTIERE` per abitanti vol 2-4 quando arrivano le HD intro
+  - Sostituire immagini sotto spec (`s01_h04b_hd.jpg` 1024×1536 < 1664×2496 atteso) con HD vero
+- **File toccati:** `scripts/build_volume.py` (sostituito), `scripts/design_system.py` NEW, `assets/fonts/{7 TTF + README.md}` NEW, `tests/{test_build_volume.py, test_integration.py, README.md}` NEW, `pytest.ini` NEW, `.gitignore` MOD, `CLAUDE.md` MOD (mappa repo + sezione modalità compositore libro + quick reference + versione), `PROJECT_STATE.md` MOD (nuova sessione 2026-06-08), `SYNC_LOG.md` MOD (questa entry).
+
+---
+
 ## SYNC-2026-05-05-012 — Mappa illustrata isola: nuova route `#/mappa-isola` nel catalogo_web
 
 - **Stato:** DA_RIFLETTERE

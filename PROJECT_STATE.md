@@ -1,6 +1,62 @@
-# PROJECT_STATE — Snapshot al 2026-04-30
+# PROJECT_STATE — Snapshot al 2026-06-08
 
-> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → fase G → cornice del mondo) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → fase G → cornice del mondo → editorial build) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-06-08 — Editorial build: script definitivo impaginazione volumi KDP
+
+Installato pacchetto consegnato da Ray con lo **script definitivo** di impaginazione per la stampa Amazon KDP. Sostituisce la versione abbozzata precedente.
+
+### File aggiunti / sostituiti
+
+| Percorso | Stato | Descrizione |
+|---|---|---|
+| `scripts/build_volume.py` | sostituito (1204→1801 righe) | compositore A5 300 DPI bleed KDP, doppio PDF (libro + stampa), pagine sempre pari, atlante personaggi con cornice quartiere cromatica |
+| `scripts/design_system.py` | NEW (864 righe) | identità visiva collana: palette tre venti + 6 quartieri, logo spirale, font helper, ornamenti, glifi-vento Δ/⇄/⟳, repertorio camuno, 4 cornici, separatore camuno |
+| `assets/fonts/` | NEW (7 TTF, ~1.9 MB, OFL) | Fraunces (display+corpo), Fraunces-Italic, Nunito (eyebrow), Nunito-Italic, Fredoka (marchio), Lora-Variable (fallback), Lora-Italic-Variable + README di attribuzione |
+| `tests/` | NEW (60 test) | `test_build_volume.py` (54 test struttura/robustezza/decori/coerenza 4 volumi/determinismo, ~4s) + `test_integration.py` (build PDF reale + invarianti KDP, marker `slow`, ~60s) + README |
+| `pytest.ini` | NEW | marker `slow` per integration test |
+| `.gitignore` | aggiornato | `_output/` (PDF rigenerabili) |
+
+### Comandi tipici
+
+```bash
+pip install Pillow reportlab --break-system-packages
+python3 scripts/build_volume.py --volume 1               # tutto Vol 1
+python3 scripts/build_volume.py --volume 1 --storie s01  # solo s01
+
+pip install pytest pymupdf --break-system-packages
+python3 -m pytest tests/ -v -m "not slow"                # veloci ~4s
+python3 -m pytest tests/ -v                              # tutto ~60s
+```
+
+### Output (in `_output/`, ignorato da git)
+
+- `vol{N}_libro.pdf` — spread affiancati (sfogliabile a video)
+- `vol{N}_stampa.pdf` — pagine singole A5 (file da caricare su KDP)
+- `vol{N}_LAYOUT_WARNINGS.md` — testi troncati o immagini sotto spec da correggere
+
+### Verifica pre-merge
+
+- ✅ Sintassi Python OK su entrambi gli script
+- ✅ Import `design_system` OK
+- ✅ 54/54 test veloci passati + 1 skipped (in 2.07s)
+- ⏳ Test `slow` (build PDF reale): da eseguire localmente con `pymupdf` installato
+
+### Aperti dichiarati dall'autore dello script (MODIFICHE.md)
+
+- 2 modifiche puntuali alle fonti dei contenuti (a cura di Ray)
+- Estendere `ENTITA_QUARTIERE` per gli abitanti dei volumi 2-4 quando arrivano le HD
+- Sostituire immagini sotto spec (luoghi, `s01_h04b` 1024×1536) con HD vero
+
+### Branch / commit
+
+- Branch: `claude/project-setup-tZsHS`
+- Commit: `ce523d8` "editorial build: script definitivo impaginazione volumi + design system + test"
+- Doc update (questo commit): `CLAUDE.md` + `PROJECT_STATE.md` + `SYNC_LOG.md`
+
+---
+
+
 
 ## Sessione 2026-04-30 — Visual prompt grok + Cornice del Mondo + Brieffer
 

@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-05-19 (standard immagini HD per stampa introdotto: subdir `_hd/` + skill illustratore + 28 file HD applicati a s01 e intro Vol 1).
+Versione: 2026-06-08 (script definitivo impaginazione volumi KDP: `scripts/build_volume.py` v2 + `scripts/design_system.py` + `assets/fonts/` + `tests/`).
 
 ---
 
@@ -101,6 +101,8 @@ isola_i3v_visual/
 │   ├── promote_visual_entities_to_graph.py  promozione catalogo visual → grafo entities
 │   ├── write_hooks_to_graph.py          writer deterministico fase G (input YAML hooks_proposals/)
 │   ├── build_writing_brief.py           ⭐ NEW (2026-04-30) generatore zero-token brief writing per agente prosa
+│   ├── build_volume.py                  ⭐ NEW (2026-06-08, v2) compositore libro stampa KDP (A5 300 DPI bleed) — output PDF in _output/
+│   ├── design_system.py                 ⭐ NEW (2026-06-08) identita visiva collana (palette tre venti + 6 quartieri, font, ornamenti, glifi, cornici, camuni)
 │   ├── cornice_mondo/                   ⭐ NEW (2026-04-30) pacchetto 7 step "cornice del mondo"
 │   │   ├── step1_world_conventions.py   crea nodo radice world_conventions + extends quote_tracker
 │   │   ├── step4_cornici.py             scrive 24 cornice_dettagli + 8 formule + 2 cantilene
@@ -109,6 +111,16 @@ isola_i3v_visual/
 │   │   ├── _data/                       4 YAML deterministici (refrain, cornici_24, sentieri_fantasma, path_details_tierA)
 │   │   └── _audit/                      riservata audit successivi
 │   └── audit/                           audit grafo (4 script da implementare)
+│
+├── assets/                    ⭐ NEW (2026-06-08) asset condivisi per build (font collana)
+│   └── fonts/                        7 TTF OFL: Fraunces, Nunito, Fredoka, Lora — usati da build_volume.py + design_system.py
+│
+├── tests/                     ⭐ NEW (2026-06-08) suite test impaginazione (60 test, ~4s)
+│   ├── test_build_volume.py          struttura/robustezza/decori/coerenza 4 volumi/determinismo
+│   ├── test_integration.py           build PDF reale + invarianti KDP (slow, ~60s)
+│   └── README.md                     come eseguire i test
+│
+├── pytest.ini                 ⭐ NEW (2026-06-08) config pytest (marker `slow` per integration)
 │
 ├── skills/                    ✅ skill agente IA
 │   ├── README.md                     orchestratore
@@ -321,9 +333,21 @@ Genera brief autosufficienti per agente prosa (oggi: Ray scrive a mano).
 - **Skill:** `skills/brieffer/SKILL.md` (procedura standard).
 - **Quando rilanciare:** dopo modifiche a grafo / schede catalogo / prompt grok / narrazione fattuale. Idempotente.
 
-### Modalità "compositore libro" (futuro, pipeline output)
-Script futuri che assemblano il libro finale (PDF/EPUB/HTML) leggendo i testi definitivi + immagini composte.
+### Modalità "compositore libro" (script attivo dal 2026-06-08)
+Lo script `scripts/build_volume.py` + modulo `scripts/design_system.py` assemblano i PDF per stampa Amazon KDP (A5, 300 DPI, bleed 3.175 mm, pagine sempre pari) leggendo i testi definitivi e le immagini composte.
 
+- **Output (in `_output/`, ignorato da git):**
+  - `vol{N}_libro.pdf` — spread affiancati (sfogliabile a video)
+  - `vol{N}_stampa.pdf` — pagine singole A5 (file di stampa KDP)
+  - `vol{N}_LAYOUT_WARNINGS.md` — testi troncati o immagini sotto spec da correggere
+- **Mappatura volumi:** Vol1=Ciclo A (s01-s03), Vol2=B (s04-s06), Vol3=C (s07-s09), Vol4=D (s10-s12). 3 storie per volume.
+- **Asset richiesti:**
+  - Font in `assets/fonts/` (Fraunces, Nunito, Fredoka, Lora — OFL, già in repo)
+  - Immagini scena: usa `_hd/sNN_hMMx_hd.jpg` se esiste, altrimenti fallback low-res `sNN_hMMx.jpg`
+  - Immagini intro volume: `pipeline_narrativa/storie_finali/_volumi/v0N/_hd/v0N_intro_<slug>_hd.jpg`
+  - Reference catalogo: `visual/<categoria>/<id>/immagini/<id>_canonica_v1_*.jpg` con `_hd/` opzionale
+- **Esecuzione:** `pip install Pillow reportlab --break-system-packages` poi `python3 scripts/build_volume.py --volume 1` (vedi sezione 7).
+- **Test:** suite `tests/` (60 test, ~4s veloci + ~60s integration). Eseguire `python3 -m pytest tests/ -m "not slow"` prima di ogni release/modifica allo script. Vedi `tests/README.md`.
 - **Input:** `pipeline_narrativa/storie_finali/sNN_<slug>.md` (12 file con frontmatter YAML + 10 marker `@hook` narrativi + N marker `@subhook` pagina libro fisica per storia).
 - **Due livelli di marker (machine-readable):**
   - **`@hook` (livello narrativo, 10 per storia):**
@@ -487,6 +511,17 @@ python3 scripts/cornice_mondo/step6_path_details.py --apply
 python3 scripts/build_writing_brief.py --story s01    # un brief
 python3 scripts/build_writing_brief.py --all          # tutti i 12 brief
 
+# Compositore libro (KDP, A5 300 DPI bleed) — output in _output/
+pip install Pillow reportlab --break-system-packages
+python3 scripts/build_volume.py --volume 1 --storie s01      # singola storia
+python3 scripts/build_volume.py --volume 1                    # tutto il volume
+python3 scripts/build_volume.py --volume 1 --presentazione dopo   # presentazione personaggi DOPO la storia
+
+# Test suite impaginazione
+pip install pytest pymupdf --break-system-packages
+python3 -m pytest tests/ -v -m "not slow"     # veloci (~4s)
+python3 -m pytest tests/ -v                    # tutto inclusa integrazione (~60s)
+
 # Avvia catalogo web in locale
 python3 -m http.server  # poi browser → http://localhost:8000/catalogo_web/
 
@@ -565,4 +600,4 @@ I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositor
 
 **Autore narrativo e proprietario**: Ray.
 **Manutenzione tecnica**: Ray + agenti IA in collaborazione (Claude Sonnet/Opus tipicamente).
-**Ultimo aggiornamento istruzioni**: 2026-05-07 (annunciato `_starter_kit/` come template di sistema riusabile).
+**Ultimo aggiornamento istruzioni**: 2026-06-08 (script definitivo impaginazione volumi KDP installato — `scripts/build_volume.py` v2, `scripts/design_system.py`, `assets/fonts/`, `tests/`).
