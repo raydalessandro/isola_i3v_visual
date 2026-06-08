@@ -49,12 +49,16 @@ logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.WARNING)
 log = logging.getLogger("build_volume")
 
 try:
-    from PIL import Image, ImageDraw, ImageFont, ImageFilter
+    from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageStat
     from reportlab.pdfgen import canvas as rl_canvas
     from reportlab.lib.units import mm
     from reportlab.lib.utils import ImageReader
 except ImportError as exc:
     sys.exit(f"Dipendenza mancante: {exc}\nEsegui: pip install Pillow reportlab")
+
+# Modulo identità visiva (palette, font, logo, ornamenti, componenti)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import design_system as DS
 
 # ═══════════════════════════════════════════════════════════════════════════
 # PERCORSI REPO
@@ -93,24 +97,45 @@ FONT_REG = _find_font("Lora-Variable.ttf")
 FONT_ITA = _find_font("Lora-Italic-Variable.ttf")
 
 def fnt(size: int, italic: bool = False) -> ImageFont.FreeTypeFont:
+    """Font corpo del testo (Lora). Per display/sans usare DS.font()."""
     path = FONT_ITA if italic else FONT_REG
     if path and path.exists():
         return ImageFont.truetype(str(path), size)
     return ImageFont.load_default()
 
 # ═══════════════════════════════════════════════════════════════════════════
-# DIMENSIONI E SCALA
+# DIMENSIONI E SCALA — stampa Amazon KDP
 # ═══════════════════════════════════════════════════════════════════════════
-# Pagine testo: A5 @ 150 DPI
-TX_W, TX_H    = 874, 1240
-# Immagini storia: il low-res è 832×1248; lo upscaliamo 2× per stampa HQ
-# Le HD in _hd/ sono già ≥1664×2496 e si usano direttamente (no upscale)
-IMG_W0, IMG_H0 = 832, 1248   # dimensione canonica per il layout
-SCALE          = 2            # fattore upscale del low-res
-IMG_W, IMG_H   = IMG_W0 * SCALE, IMG_H0 * SCALE   # 1664×2496
-# PDF
-PAGE_W_PT  = 148 * mm
-PAGE_H_PT  = 210 * mm
+# Specifiche KDP (verificate maggio 2026):
+#   - 300 DPI minimo (sotto = warning/rifiuto)
+#   - dimensione pagina = trim size esatto
+#   - bleed 0.125" (3.175mm) per lato sulle pagine al vivo
+#   - font incorporati, colore sRGB
+#
+# Trim: A5 = 148×210mm. A 300 DPI:
+DPI = 300
+MM  = 1 / 25.4
+TRIM_W_MM, TRIM_H_MM = 148, 210
+BLEED_MM = 3.175                          # 0.125"
+
+# Pagine testo: tutta la pagina al trim, a 300 DPI
+TX_W = round(TRIM_W_MM * MM * DPI)        # 1748
+TX_H = round(TRIM_H_MM * MM * DPI)        # 2480
+
+# Bleed in px (per le pagine illustrate che vanno al vivo)
+BLEED_PX = round(BLEED_MM * MM * DPI)     # 38
+
+# Pagine illustrate (storia/presentazione): trim + bleed su ogni lato
+IMG_W = TX_W + 2 * BLEED_PX               # 1824
+IMG_H = TX_H + 2 * BLEED_PX               # 2556
+
+# Compatibilità con codice esistente
+IMG_W0, IMG_H0 = TX_W, TX_H
+SCALE = 1
+
+# PDF: il trim (le pagine al vivo includono il bleed nel PDF se richiesto)
+PAGE_W_PT  = TRIM_W_MM * mm
+PAGE_H_PT  = TRIM_H_MM * mm
 SPREAD_W_PT = PAGE_W_PT * 2
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -127,15 +152,16 @@ STORY_INK   = (45,  28,  14)
 STORY_HALO  = (250, 246, 236)
 
 # ═══════════════════════════════════════════════════════════════════════════
-# TIPOGRAFIA (pagine testo)
+# TIPOGRAFIA (pagine testo) — scalata per 300 DPI
 # ═══════════════════════════════════════════════════════════════════════════
-MX, MY_TOP, MY_BOT = 78, 88, 78
+# A 300 DPI la pagina è ~2× quella a 150, quindi tutta la scala raddoppia.
+MX, MY_TOP, MY_BOT = 156, 176, 156
 TW       = TX_W - 2 * MX
-FS_TITLE = 34;  LH_TITLE = int(FS_TITLE * 1.45)
-FS_BODY  = 27;  LH_BODY  = int(FS_BODY  * 1.78)
-FS_SMALL = 21;  LH_SMALL = int(FS_SMALL * 1.65)
-FS_NUM   = 16
-PG       = int(FS_BODY * 0.72)   # gap paragrafo
+FS_TITLE = 68;  LH_TITLE = int(FS_TITLE * 1.45)
+FS_BODY  = 50;  LH_BODY  = int(FS_BODY  * 1.62)
+FS_SMALL = 40;  LH_SMALL = int(FS_SMALL * 1.55)
+FS_NUM   = 32
+PG       = int(FS_BODY * 0.62)   # gap paragrafo
 
 # ═══════════════════════════════════════════════════════════════════════════
 # MAPPATURA VOLUMI
@@ -294,9 +320,16 @@ def build_presentazione_image_map(volume: int) -> dict[str, Path | None]:
 
     # Mapping esplicito per Volume 1.
     # Struttura (vol 2-4): aggiungere i casi volume > 1 quando le HD arrivano.
+    # Mappa per volume — allineata alla struttura di presentazioni_parziali.md
+    # dove le voci sono distribuite sui 4 volumi (aggiornata 2026-05-19):
+    #   Vol.1: isola, villaggio, quartieri fuoco/aria, Fiamma, Grunto, Rovo+Bru, Stria, Mèmolo+Pun, bambini
+    #   Vol.2: quartieri terra/acqua, Nodo, Salvia, Zolla, Mercato
+    #   Vol.3: Bartolo+Toba, altri
+    #   Vol.4: I Pastori, altri
+
     if volume == 1:
         return {
-            # ── Luoghi ────────────────────────────────────────────────────
+            # Luoghi vol.1
             "Questa è l'isola":
                 M,
             "Il Villaggio":
@@ -305,48 +338,42 @@ def build_presentazione_image_map(volume: int) -> dict[str, Path | None]:
                 cat("visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_esterno_alba.jpg"),
             "Il Quartiere d'Aria":
                 cat("visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"),
-            "Il Quartiere di Terra":
-                M,
-            "Il Quartiere d'Acqua":
-                M,
-            "Il Mercato del Mezzogiorno":
-                M,
-            # ── Personaggi primari — HD intro v01 ─────────────────────────
-            "Fiamma":
-                hd("fiamma"),
-            "Grunto":
-                hd("grunto"),
-            "Rovo e Bru":
-                hd("rovo_bru"),
-            "Stria":
-                hd("stria"),
-            "Mèmolo e Pun":
-                hd("memolo_pun"),
-            "Bartolo e Toba":
-                hd("bartolo_toba"),
-            # ── Personaggi secondari — HD intro v01 ───────────────────────
-            "Nodo":
-                hd("nodo"),
-            "Salvia":
-                hd("salvia"),
-            "Zolla":
-                hd("zolla"),
-            # ── Collettivi / bambini ───────────────────────────────────────
-            # "I bambini dell'isola": i tre fratelli insieme.
-            # Non esiste ancora un'immagine HD dedicata → usiamo gabriel fronte
-            # (low-res) come placeholder; quando arriva l'HD aggiungi hd("bambini").
+            # Personaggi primari vol.1 — HD intro v01
+            "Fiamma":           hd("fiamma"),
+            "Grunto":           hd("grunto"),
+            "Rovo e Bru":       hd("rovo_bru"),
+            "Stria":            hd("stria"),
+            "Mèmolo e Pun":     hd("memolo_pun"),
+            # Bambini — HD dedicata v01_intro_bambini_hd.jpg
             "I bambini dell'isola":
                 hd("bambini") or
                 cat("visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg"),
-            # "I Pastori": la voce descrive i pastori dell'isola (non i cuccioli
-            # camminanti usati prima per errore). Non esiste immagine specifica
-            # → mappa come placeholder finché non arriva l'HD.
-            "I Pastori":
-                hd("pastori") or M,
         }
 
-    # Per volumi futuri: stesso schema, diversi slug
-    # (costruire il mapping quando arrivano le HD)
+    if volume == 2:
+        return {
+            # Luoghi vol.2
+            "Il Quartiere di Terra":       M,
+            "Il Quartiere d'Acqua":        M,
+            "Il Mercato del Mezzogiorno":   M,
+            # Personaggi secondari vol.2 — HD intro v02 (quando disponibili)
+            "Nodo":    hd("nodo")   or cat("visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg"),
+            "Salvia":  hd("salvia") or cat("visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg"),
+            "Zolla":   hd("zolla")  or cat("visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg"),
+        }
+
+    if volume == 3:
+        return {
+            # Personaggi vol.3 — HD intro v03 (quando disponibili)
+            "Bartolo e Toba": hd("bartolo_toba") or cat("visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg"),
+        }
+
+    if volume == 4:
+        return {
+            # Collettivi vol.4 — HD intro v04 (quando disponibili)
+            "I Pastori": hd("pastori") or M,
+        }
+
     return {}
 
 
@@ -487,17 +514,20 @@ def get_congedo() -> str:
 # RENDERING — PAGINE TESTO
 # ═══════════════════════════════════════════════════════════════════════════
 
-def make_text_pages(text: str, title: str = "", dark: bool = False) -> list[Image.Image]:
-    """Genera 1+ pagine avorio con tipografia gerarchica. Paginazione automatica."""
-    bg   = BG_DARK  if dark else BG_WARM
-    fg   = TEXT_LIGHT if dark else TEXT_DARK
-    mid  = (160, 130, 90) if dark else TEXT_MID
-    acc  = (200, 165, 110) if dark else TEXT_ACCENT
-    rule = (90, 70, 42)   if dark else TEXT_RULE
+def make_text_pages(text: str, title: str = "", dark: bool = False,
+                    camuni_seed: int | None = None) -> list[Image.Image]:
+    """
+    Genera 1+ pagine di testo con tipografia editoriale.
+    Titolo in Fraunces, corpo in Lora, filetto-vento sotto il titolo.
+    Pagine chiare: petroglifi camuni tenui nei margini (alleggerimento).
+    """
+    bg   = DS.INK if dark else DS.PAPER
+    fg   = DS.PAPER if dark else DS.INK
+    acc  = DS.tint_color(DS.ACCENT, 0.3) if dark else DS.ACCENT
+    rule = DS.tint_color(DS.INK, 0.6) if dark else DS.RULE
 
-    f_title = fnt(FS_TITLE, italic=True)
+    f_title = DS.font_weighted("display", FS_TITLE, 600)
     f_body  = fnt(FS_BODY)
-    f_small = fnt(FS_SMALL, italic=True)
 
     dummy = Image.new("RGB", (TX_W, TX_H), bg)
     d0    = ImageDraw.Draw(dummy)
@@ -505,35 +535,34 @@ def make_text_pages(text: str, title: str = "", dark: bool = False) -> list[Imag
     segs: list[tuple] = []
     if title:
         for tl in word_wrap(title, f_title, TW, d0):
-            segs.append(("title", tl, f_title, acc, LH_TITLE))
-        segs.append(("rule", "", None, rule, 30))
+            segs.append(("title", tl, f_title, DS.INK if not dark else fg, LH_TITLE))
+        segs.append(("rule", "", None, rule, int(FS_TITLE*0.7)))
 
     for para in text.split("\n"):
         if not para.strip():
-            segs.append(("gap", "", None, None, PG))
-            continue
-        is_attr = para.strip().startswith("—") or bool(re.match(r"^\*[^*]+\*$", para.strip()))
-        f  = f_small if is_attr else f_body
-        lh = LH_SMALL if is_attr else LH_BODY
-        tw = TW - 40  if is_attr else TW
-        c  = mid      if is_attr else fg
-        for ln in word_wrap(para, f, tw, d0):
-            segs.append(("body", ln, f, c, lh))
+            segs.append(("gap", "", None, None, PG)); continue
+        for ln in word_wrap(para, f_body, TW, d0):
+            segs.append(("body", ln, f_body, fg, LH_BODY))
         segs.append(("gap", "", None, None, PG))
 
     pages: list[Image.Image] = []
     max_y = TX_H - MY_BOT
+    page_idx = [0]
 
     def new_canvas():
         img = Image.new("RGB", (TX_W, TX_H), bg)
-        return img, ImageDraw.Draw(img), MY_TOP
+        dr = ImageDraw.Draw(img)
+        # camuni nei margini solo su pagine chiare
+        if not dark:
+            seed = (camuni_seed if camuni_seed is not None else hash(title) & 0xffff) + page_idx[0]
+            DS.scatter_camuni(dr, TX_W, TX_H, seed=seed)
+        page_idx[0] += 1
+        return img, dr, MY_TOP
 
     img, draw, y = new_canvas()
 
     for kind, text_s, font_s, color_s, height in segs:
         if kind in ("body", "title") and y + height > max_y:
-            draw.line([(MX, TX_H - MY_BOT + 12), (TX_W - MX, TX_H - MY_BOT + 12)],
-                      fill=rule, width=1)
             pages.append(img)
             img, draw, y = new_canvas()
 
@@ -541,17 +570,15 @@ def make_text_pages(text: str, title: str = "", dark: bool = False) -> list[Imag
             draw.text((MX, y), text_s, font=font_s, fill=color_s)
             y += height
         elif kind == "rule":
-            y += 8
-            draw.line([(MX, y), (TX_W - MX, y)], fill=color_s, width=1)
-            y += 22
+            DS.draw_wind_rule(draw, MX, MX + int(TX_W*0.085), y + int(FS_TITLE*0.2),
+                              acc, max(2, TX_W//560))
+            y += height
         elif kind == "body":
             draw.text((MX, y), text_s, font=font_s, fill=color_s)
             y += height
-        else:  # gap
+        else:
             y += height
 
-    draw.line([(MX, TX_H - MY_BOT + 12), (TX_W - MX, TX_H - MY_BOT + 12)],
-              fill=rule, width=1)
     pages.append(img)
     return pages
 
@@ -559,104 +586,218 @@ def make_text_pages(text: str, title: str = "", dark: bool = False) -> list[Imag
 # RENDERING — PAGINA PRESENTAZIONE (immagine + testo)
 # ═══════════════════════════════════════════════════════════════════════════
 
+# Quartiere d'appartenenza di ogni voce dell'atlante (slug → quartiere).
+# Ricavato dai luoghi delle entità nel catalogo visual.
+ENTITA_QUARTIERE = {
+    # personaggi primari/secondari
+    "fiamma": "fuoco",
+    "grunto": "aria",
+    "rovo_bru": "terra", "rovo": "terra", "bru": "terra",
+    "salvia": "terra", "zolla": "terra",
+    "amo": "acqua",
+    "stria": "centro", "memolo_pun": "centro", "memolo": "centro",
+    "nodo": "centro", "bartolo": "centro", "bartolo_toba": "centro",
+    "bambini": "centro",
+    # luoghi
+    "questa_e_l_isola": "centro", "il_villaggio": "centro",
+    "il_quartiere_di_fuoco": "fuoco", "il_quartiere_d_aria": "aria",
+    "il_quartiere_di_terra": "terra", "il_quartiere_d_acqua": "acqua",
+}
+
+
+def _quartiere_color_for(title: str):
+    """Colore della cornice in base al quartiere d'appartenenza della voce.
+    Se il quartiere non è noto, usa l'accento neutro."""
+    slug = _title_to_slug(title)
+    q = ENTITA_QUARTIERE.get(slug)
+    if q:
+        return DS.QUARTIERE_COLOR.get(q, DS.DEFAULT_QUARTIERE_COLOR)
+    return DS.DEFAULT_QUARTIERE_COLOR
+
+
+def _vento_color_for(volume: int, title: str):
+    """Colore-accento di una voce: il colore del suo quartiere."""
+    return _quartiere_color_for(title)
+
+
 def make_presentazione_page(
     title: str,
     text: str,
     img_path: Path | None,
+    volume: int = 1,
+    kind: str = "personaggio",
     layout_warnings: list | None = None,
 ) -> Image.Image:
     """
-    Layout A5: illustrazione in alto (42% pagina) + separatore + titolo + testo.
-    Le immagini HD del catalogo v01/_hd/ vengono usate in piena qualità.
-    Tronca all'ultima frase completa se il testo eccede; registra avviso.
-    Non modifica mai i .md sorgente.
+    Pagina-atlante (galleria abitanti) — comune a tutti i volumi.
+    Layout mix A+C:
+      - nome grande in alto a sinistra (ingresso dinamico) + glifo-vento
+      - ritratto in cornice-grappolo a destra, fuso nella carta
+      - testo in colonna a sinistra con capolettera nel colore-vento
+      - firma in basso: oggetto del personaggio + glifo + separatore camuno
+    Velo tenue del colore-vento su tutta la pagina (lega gli elementi).
+    Niente linee dritte: separatori sempre in stile camuno.
     """
-    canvas = Image.new("RGB", (TX_W, TX_H), BG_WARM)
-    draw   = ImageDraw.Draw(canvas)
+    vento = _vento_color_for(volume, title)
+    slug  = _title_to_slug(title)
+    motifs = DS.MOTIF_MAP.get(slug, DS.DEFAULT_MOTIFS)
+    glifo_fn = DS.GLIFO_VENTO.get(VOLUME_CONFIG[volume]["ciclo"], DS.glifo_mulinello)
 
-    ILLUS_H = int(TX_H * 0.42)
-    SEP_Y   = ILLUS_H + 12
-    TEXT_Y  = SEP_Y + 22
+    # base con velo tenue del vento
+    canvas = Image.blend(Image.new("RGB", (TX_W, TX_H), DS.PAPER),
+                         Image.new("RGB", (TX_W, TX_H), vento), 0.03)
+    draw = ImageDraw.Draw(canvas)
+    MX2 = int(TX_W * 0.10)
 
-    f_title = fnt(FS_TITLE, italic=True)
-    f_body  = fnt(FS_BODY)
-    f_small = fnt(FS_SMALL, italic=True)
+    # ── Nome in alto a sinistra (da C) — peso 450, piu' caldo ─────────────
+    y = int(TX_H * 0.075)
+    f_eye = DS.font_weighted("sans", int(FS_SMALL*0.82), 700)
+    eyebrow = "UN ABITANTE DELL'ISOLA" if kind == "personaggio" else "UN LUOGO DELL'ISOLA"
+    ex = MX2
+    for ch in eyebrow:
+        draw.text((ex, y), ch, font=f_eye, fill=vento)
+        ex += draw.textlength(ch, font=f_eye) + 4
+    y += int(TX_H * 0.030)
 
-    # Illustrazione — con controllo qualità e banner se sotto spec
+    f_name = DS.font_weighted("display", int(TX_W*0.072), 450)
+    draw.text((MX2, y), title, font=f_name, fill=DS.INK)
+    name_w = draw.textlength(title, font=f_name)
+    # glifo-vento accanto al nome
+    glifo_fn(draw, int(MX2 + name_w + TX_W*0.045), int(y + TX_W*0.032),
+             int(TX_W*0.020), vento, max(2, TX_W//500))
+    name_top = y
+    y += int(TX_H * 0.072)
+
+    # ── Ritratto in cornice-grappolo a destra (da A) ──────────────────────
+    bw = int(TX_W * 0.44)
+    bh = int(TX_H * 0.36)
+    img_box = (TX_W - MX2 - bw, y, TX_W - MX2, y + bh)
+    placed = None
     resolved = Path(str(img_path)) if img_path else None
     if resolved and resolved.exists():
         try:
             illus = Image.open(resolved).convert("RGB")
-            # Controllo qualità
             ok, quality_desc = check_image_quality(resolved)
             if not ok:
                 illus = add_quality_banner(illus, resolved, quality_desc)
                 log.warning("Immagine sotto spec per '%s': %s", title, quality_desc)
                 if layout_warnings is not None:
                     layout_warnings.append({
-                        "entry":         f"[IMMAGINE SOTTO SPEC] {title}",
-                        "troncato_dopo": "",
-                        "testo_tagliato": "",
-                        "suggerimento":  (
+                        "entry": f"[IMMAGINE SOTTO SPEC] {title}",
+                        "troncato_dopo": "", "testo_tagliato": "",
+                        "suggerimento": (
                             f'Sostituire immagine per "{title}" con versione HD '
                             f'(min {PRES_MIN_W}×{PRES_MIN_H}px). '
                             f'File attuale: {resolved.relative_to(REPO)} ({quality_desc})'
                         ),
                     })
-            iw, ih = illus.size
-            ratio  = min(TX_W / iw, ILLUS_H / ih)
-            nw, nh = int(iw * ratio), int(ih * ratio)
-            illus  = illus.resize((nw, nh), Image.LANCZOS)
-            canvas.paste(illus, ((TX_W - nw) // 2, max(0, ILLUS_H - nh)))
+            placed = DS.paste_soft(canvas, illus, img_box,
+                                   feather=int(TX_W*0.016), paper=DS.PAPER)
         except (FileNotFoundError, OSError, IOError) as exc:
             log.warning("Immagine non caricata '%s': %s", resolved, exc)
     elif resolved:
         log.warning("Immagine non trovata: %s", resolved)
 
-    draw.line([(MX, SEP_Y), (TX_W - MX, SEP_Y)], fill=TEXT_RULE, width=1)
+    draw = ImageDraw.Draw(canvas)
+    if placed:
+        pad = int(TX_W * 0.018)
+        frame = (placed[0]-pad, placed[1]-pad, placed[2]+pad, placed[3]+pad)
+        DS.cornice_grappolo(draw, frame, vento, max(3, TX_W//460), int(TX_W*0.020))
 
-    y = TEXT_Y
-    draw.text((MX, y), title, font=f_title, fill=TEXT_ACCENT)
-    y += LH_TITLE + 12
+    # ── Testo: colonna stretta accanto all'immagine, poi piena sotto ──────
+    f_body = fnt(FS_BODY)
+    LH = LH_BODY
+    f_drop = DS.font_weighted("display", int(TX_W*0.060), 500)
+    ty = y
+    full_w = TX_W - 2 * MX2                              # piena larghezza
+    # bordo reale della cornice (placed puo' differire dal box teorico:
+    # l'immagine verticale viene contenuta e centrata, quindi piu' stretta)
+    if placed:
+        pad = int(TX_W * 0.018)
+        frame_left   = placed[0] - pad
+        # le spiraline d'angolo della cornice grappolo sporgono oltre il
+        # rettangolo: includiamo il loro ingombro (unit) nel bordo basso
+        frame_bottom = placed[3] + pad + int(TX_W*0.020)
+    else:
+        frame_left   = TX_W - MX2 - bw
+        frame_bottom = y + bh
+    # la colonna stretta si ferma al bordo SINISTRO reale della cornice,
+    # con un margine extra perche' le spiraline d'angolo sporgono all'interno
+    col_w = frame_left - MX2 - int(TX_W*0.055)
+    img_bottom = frame_bottom
+    max_y = TX_H - int(TX_H * 0.14)   # spazio per la firma
 
-    # Overflow detection + truncation a frase completa
-    dummy     = ImageDraw.Draw(Image.new("RGB", (TX_W, TX_H)))
-    all_lines = word_wrap(text, f_body, TW, dummy)
-    max_y     = TX_H - MY_BOT
-    y_sim     = y
+    # capolettera nel colore-vento
+    first, rest = text[0], text[1:]
+    draw.text((MX2, ty - int(TX_W*0.004)), first, font=f_drop, fill=vento)
+    dw = draw.textlength(first, font=f_drop)
+    indent = int(dw + TX_W*0.010)
 
-    for idx, line in enumerate(all_lines):
-        inc = PG if line == "" else LH_BODY
-        if line != "" and y_sim + inc > max_y:
-            rendered  = " ".join(l for l in all_lines[:idx] if l).strip()
-            m         = re.search(r"(.*[.!?»])", rendered, re.DOTALL)
-            truncated = m.group(1).strip() if m else rendered
-            remainder = " ".join(l for l in all_lines[idx:] if l).strip()
-            if remainder and layout_warnings is not None:
-                layout_warnings.append({
-                    "entry":          title,
-                    "troncato_dopo":  truncated[-80:],
-                    "testo_tagliato": remainder,
-                    "suggerimento":   (
-                        f'Accorciare "{title}" di ~{len(remainder.split())} parole '
-                        f"in presentazioni_parziali.md"
-                    ),
-                })
-            all_lines = word_wrap(truncated, f_body, TW, dummy)
-            break
-        y_sim += inc
+    dummy = ImageDraw.Draw(Image.new("RGB", (TX_W, TX_H)))
 
-    for line in all_lines:
-        if line == "": y += PG; continue
-        if y + LH_BODY > max_y: break
-        is_attr = line.startswith("—")
-        draw.text((MX, y), line,
-                  font=f_small if is_attr else f_body,
-                  fill=TEXT_MID if is_attr else TEXT_DARK)
-        y += LH_SMALL if is_attr else LH_BODY
+    # Costruisce le righe rispettando la larghezza CORRENTE (cambia quando
+    # scendiamo sotto l'immagine): prima passata stima riga per riga.
+    words = rest.strip().split()
+    lines = []          # (testo, x_offset, larghezza_usata)
+    cur = ""
+    yy = ty
+    line_no = 0
+    i = 0
+    def avail_width(y_pos, line_no, crossed):
+        # accanto all'immagine: colonna stretta; sotto: piena larghezza
+        if not crossed:
+            xoff = indent if line_no < 2 else 0
+            return col_w - xoff, (MX2 + xoff)
+        else:
+            return full_w, MX2
 
-    draw.line([(MX, TX_H - MY_BOT + 12), (TX_W - MX, TX_H - MY_BOT + 12)],
-              fill=TEXT_RULE, width=1)
+    crossed = False
+    while i < len(words) and yy + LH <= max_y:
+        # se la riga corrente cadrebbe a cavallo del bordo immagine, salta
+        # sotto la cornice con un piccolo respiro (una sola volta)
+        if not crossed and yy + LH > img_bottom:
+            yy = img_bottom + int(TX_H*0.030)
+            crossed = True
+        w_av, x_at = avail_width(yy, line_no, crossed)
+        cur = ""
+        while i < len(words):
+            t = (cur + " " + words[i]).strip()
+            if dummy.textlength(t, font=f_body) <= w_av:
+                cur = t; i += 1
+            else:
+                break
+        if not cur:
+            cur = words[i]; i += 1
+        lines.append((cur, x_at, yy)); yy += LH; line_no += 1
+
+    # overflow → warning
+    if i < len(words) and layout_warnings is not None:
+        remainder = " ".join(words[i:]).strip()
+        if remainder:
+            layout_warnings.append({
+                "entry": title,
+                "troncato_dopo": (lines[-1][0][-60:] if lines else ""),
+                "testo_tagliato": remainder,
+                "suggerimento": (
+                    f'Accorciare "{title}" di ~{len(remainder.split())} parole '
+                    f"in presentazioni_parziali.md"
+                ),
+            })
+
+    for ln, x_at, ly in lines:
+        draw.text((x_at, ly), ln, font=f_body, fill=DS.INK)
+
+    # ── Firma in basso (da A): oggetto + glifo + separatore camuno ────────
+    fy = int(TX_H * 0.90)
+    obj_motif = motifs[-1] if motifs else None
+    if obj_motif:
+        obj_motif(draw, int(TX_W*0.42), fy, int(TX_W*0.026), vento)
+    glifo_fn(draw, int(TX_W*0.58), fy, int(TX_W*0.020), vento, max(2, TX_W//500))
+    # separatore camuno al posto del filetto dritto
+    DS.separatore_camuno(draw, TX_W//2 - int(TX_W*0.14), TX_W//2 + int(TX_W*0.14),
+                         fy + int(TX_H*0.030), DS.tint_color(vento, 0.35),
+                         max(2, TX_W//560))
+
     return canvas
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -671,13 +812,11 @@ def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
     - Se manca, crea un placeholder avorio con il nome file
     Sovrappone il testo con halo leggero per leggibilità.
     """
-    FS  = 26 * SCALE    # font size sul canvas 1664×2496
-    LH  = int(FS * 1.80)
-    PGS = int(FS * 0.65)
-    MX2 = 68 * SCALE
-    MT  = 44 * SCALE
-    HS  = 2 * SCALE
-    HB  = 2.5 * SCALE
+    FS  = 50            # font size sul canvas a 300 DPI
+    LH  = int(FS * 1.62)
+    PGS = int(FS * 0.62)
+    MX2 = 136
+    MT  = 100
 
     # Risolve: se il path punta a low-res, cerca la HD
     if img_path and img_path.exists():
@@ -711,36 +850,64 @@ def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
         log.error("Impossibile aprire '%s': %s", resolved, exc)
         img = Image.new("RGBA", (IMG_W, IMG_H), (245, 241, 233))
 
-    # Controllo qualità: le scene devono essere HD (≥1664×2496)
-    # Le immagini low-res vengono upscalate ma ricevono il banner
+    # Controllo qualità: le scene devono essere HD (≥ trim+bleed)
     ok, quality_desc = check_image_quality(resolved)
 
-    # Normalizza a IMG_W×IMG_H (1664×2496)
+    # Normalizza a IMG_W×IMG_H (trim + bleed, 300 DPI)
     if img.size != (IMG_W, IMG_H):
         img = img.resize((IMG_W, IMG_H), Image.LANCZOS)
+    img = img.convert("RGB")
 
-    # Testo + halo
-    d0    = ImageDraw.Draw(img)
+    # ── Testo ADATTIVO: dentro l'illustrazione, con schiarita dolce ───────
+    # Ancora: alto (default). Se la fascia alta è occupata da un soggetto
+    # importante o troppo scura, lo script sposta in basso e/o schiarisce.
     f     = fnt(FS)
+    d0    = ImageDraw.Draw(img)
     lines = word_wrap(text, f, IMG_W - 2*MX2, d0)
+    n_lines = len([l for l in lines if l])
+    block_h = n_lines * LH + MT + int(FS * 0.8)
 
-    halo = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    hd   = ImageDraw.Draw(halo)
-    y    = MT
-    for ln in lines:
-        if ln == "": y += PGS; continue
-        for dx in range(-HS, HS+1):
-            for dy in range(-HS, HS+1):
-                hd.text((MX2+dx, y+dy), ln, font=f, fill=(*STORY_HALO, 55))
-        y += LH
-    halo = halo.filter(ImageFilter.GaussianBlur(radius=HB))
-    img  = Image.alpha_composite(img, halo)
+    def zone_metrics(y0, y1):
+        z = img.crop((0, max(0,y0), IMG_W, min(IMG_H,y1))).convert("L")
+        brightness = ImageStat.Stat(z).mean[0] / 255.0
+        movement = ImageStat.Stat(z.filter(ImageFilter.FIND_EDGES)).mean[0] / 255.0
+        return brightness, movement
+
+    # valuta zona alta e bassa
+    top_zone    = (0, block_h)
+    bottom_zone = (IMG_H - block_h, IMG_H)
+    b_top, m_top = zone_metrics(*top_zone)
+    b_bot, m_bot = zone_metrics(*bottom_zone)
+
+    # scegli ancora: preferisci alto; se alto molto movimentato e basso più
+    # calmo, vai in basso (il soggetto comanda)
+    if m_top > 0.16 and m_bot < m_top - 0.04:
+        zone = "bottom"; y0z = IMG_H - block_h
+        bright, move = b_bot, m_bot
+    else:
+        zone = "top"; y0z = 0
+        bright, move = b_top, m_top
+
+    # decidi trattamento: INSIDE se calmo+chiaro, altrimenti DODGE
+    treatment = "INSIDE" if (bright > 0.60 and move < 0.11) else "DODGE"
+
+    if treatment == "DODGE":
+        # schiarita dolce, sfumata, niente box
+        mask = Image.new("L", (IMG_W, IMG_H), 0)
+        md = ImageDraw.Draw(mask)
+        md.rectangle([0, y0z, IMG_W, y0z + block_h], fill=255)
+        mask = mask.filter(ImageFilter.GaussianBlur(int(IMG_W*0.04)))
+        paper = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
+        lightened = Image.blend(img, paper, 0.72)
+        img = Image.composite(lightened, img, mask)
 
     draw = ImageDraw.Draw(img)
-    y    = MT
+    y = MT if zone == "top" else (y0z + MT)
     for ln in lines:
-        if ln == "": y += PGS; continue
-        draw.text((MX2, y), ln, font=f, fill=STORY_INK); y += LH
+        if ln == "":
+            y += PGS; continue
+        draw.text((MX2, y), ln, font=f, fill=STORY_INK)
+        y += LH
 
     # Applica banner qualità sulle storie sotto spec
     if not ok:
@@ -833,18 +1000,18 @@ def make_blank() -> Image.Image:
 
 
 def make_dedica(text: str) -> Image.Image:
-    """Dedica: corsivo, allineato a destra, posizione centro-basso."""
-    img  = Image.new("RGB", (TX_W, TX_H), BG_WARM)
+    """Dedica: corsivo Fraunces centrato, ornamento a puntini."""
+    img  = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
     draw = ImageDraw.Draw(img)
-    f    = fnt(FS_SMALL + 3, italic=True)
-    lh   = int((FS_SMALL + 3) * 1.70)
-    y    = int(TX_H * 0.42)
+    f    = DS.font("display_i", int(TX_W * 0.031))
+    lh   = int(TX_W * 0.05)
+    y    = int(TX_H * 0.40)
     for line in text.split("\n"):
         w = draw.textlength(line, font=f)
-        draw.text((TX_W - MX - 20 - w, y), line, font=f, fill=TEXT_MID)
+        draw.text((TX_W/2 - w/2, y), line, font=f, fill=DS.INK_SOFT)
         y += lh
-    draw.line([(MX, TX_H - MY_TOP + 12), (TX_W - MX, TX_H - MY_TOP + 12)],
-              fill=TEXT_RULE, width=1)
+    DS.draw_dot_ornament(draw, TX_W//2, y + int(TX_W*0.03), DS.RULE,
+                         spread=int(TX_W*0.025))
     return img
 
 
@@ -891,6 +1058,387 @@ def ensure_recto(pages: list) -> list:
     if len(pages) % 2 == 1:
         return pages + [("single", make_blank())]
     return pages
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# FRONT MATTER EDITORIALE — frontespizio, colophon, indice
+# ═══════════════════════════════════════════════════════════════════════════
+VOLUME_NOMI = {1: "VOLUME PRIMO", 2: "VOLUME SECONDO",
+               3: "VOLUME TERZO", 4: "VOLUME QUARTO"}
+CICLO_SOTTOTITOLO = {
+    "Δ": "Il vento che taglia",
+    "⇄": "Il vento che intreccia",
+    "⟳": "Il vento che fa girare",
+    "Integrazione": "I tre venti insieme",
+}
+
+
+def _center(draw, text, font, y, color, w=TX_W):
+    tw = draw.textlength(text, font=font)
+    draw.text((w/2 - tw/2, y), text, font=font, fill=color)
+
+
+def _tracked_center(draw, text, font, y, color, tracking, w=TX_W):
+    total = sum(draw.textlength(c, font=font) + tracking for c in text) - tracking
+    x = w/2 - total/2
+    for c in text:
+        draw.text((x, y), c, font=font, fill=color)
+        x += draw.textlength(c, font=font) + tracking
+
+
+def make_frontespizio(volume: int) -> Image.Image:
+    """Frontespizio: logo spirale + titolo collana + volume + ciclo + editore."""
+    cfg = VOLUME_CONFIG[volume]
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+    vento = DS.CICLO_COLOR.get(cfg["ciclo"], DS.ACCENT)
+
+    logo = DS.make_logo_image(int(TX_W*0.13), DS.SPIRALE)
+    img.paste(logo, (TX_W//2 - logo.width//2, int(TX_H*0.14)), logo)
+
+    f_title = DS.font("mark", int(TX_W*0.066))
+    _center(d, "L'Isola", f_title, int(TX_H*0.265), DS.INK)
+    _center(d, "dei Tre Venti", f_title, int(TX_H*0.322), DS.INK)
+
+    DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.14), TX_W//2 + int(TX_W*0.14),
+                      int(TX_H*0.40), DS.RULE, max(2, TX_W//560))
+
+    f_vol = DS.font_weighted("sans", int(TX_W*0.025), 700)
+    _tracked_center(d, VOLUME_NOMI[volume], f_vol, int(TX_H*0.425), DS.SPIRALE, 5)
+
+    f_sub = DS.font("display_i", int(TX_W*0.032))
+    _center(d, CICLO_SOTTOTITOLO.get(cfg["ciclo"], ""), f_sub, int(TX_H*0.465), DS.INK_SOFT)
+
+    f_auth = DS.font("sans", int(TX_W*0.024))
+    _center(d, "Ray D'Alessandro", f_auth, int(TX_H*0.85), DS.INK)
+    f_ed = DS.font_weighted("sans", int(TX_W*0.019), 600)
+    _tracked_center(d, "SPIRALE EDITRICE", f_ed, int(TX_H*0.88), DS.INK_FAINT, 4)
+    return img
+
+
+def make_colophon(volume: int) -> Image.Image:
+    """Colophon: copyright, dati edizione, disclaimer AI, lockup."""
+    cfg = VOLUME_CONFIG[volume]
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+    MXc = int(TX_W * 0.10)
+    y = int(TX_H * 0.12)
+
+    d.text((MXc, y), "© 2026 RAY D'ALESSANDRO",
+           font=DS.font_weighted("sans", int(TX_W*0.023), 800), fill=DS.INK)
+    y += int(TX_H * 0.045)
+
+    f  = DS.font("serif", int(TX_W*0.021))
+    fi = DS.font("serif_i", int(TX_W*0.021))
+    LH = int(TX_W * 0.036)
+
+    def wrap_c(text, font, maxw):
+        out=[]; cur=""
+        for word in text.split():
+            t=(cur+" "+word).strip()
+            if d.textlength(t, font=font) <= maxw: cur=t
+            else: out.append(cur); cur=word
+        if cur: out.append(cur)
+        return out
+
+    sub = f"L'Isola dei Tre Venti — {VOLUME_NOMI[volume].title()}: {CICLO_SOTTOTITOLO.get(cfg['ciclo'],'')}"
+    d.text((MXc, y), sub, font=fi, fill=DS.INK_SOFT); y += int(LH*1.5)
+
+    blocks = [
+        "Prima edizione, 2026. Pubblicato da Spirale Editrice.",
+        "",
+        "ISBN paperback: [da inserire dopo registrazione su KDP]",
+        "ISBN eBook: [da inserire dopo registrazione su KDP]",
+        "",
+    ]
+    for b in blocks:
+        if b: d.text((MXc, y), b, font=f, fill=DS.INK_SOFT)
+        y += LH
+
+    paras = [
+        ("Tutti i diritti riservati. Nessuna parte di questo libro può essere "
+         "riprodotta o trasmessa in qualsiasi forma senza il permesso scritto "
+         "dell'autore, eccetto per brevi citazioni in recensioni critiche."),
+        ("Questo libro è stato prodotto con l'assistenza di sistemi di intelligenza "
+         "artificiale, sotto la direzione e responsabilità editoriale dell'autore. "
+         "Ogni scelta narrativa è frutto di pensiero umano."),
+        ("I marchi e i nomi citati appartengono ai rispettivi proprietari e sono "
+         "usati a scopo descrittivo."),
+    ]
+    for p in paras:
+        y += int(LH*0.4)
+        for ln in wrap_c(p, f, TX_W - 2*MXc):
+            d.text((MXc, y), ln, font=f, fill=DS.INK_SOFT); y += LH
+
+    logo = DS.make_logo_image(int(TX_W*0.06), DS.INK_FAINT)
+    ly = TX_H - int(TX_H*0.12)
+    img.paste(logo, (MXc, ly), logo)
+    d.text((MXc + logo.width + 14, ly + logo.height//3),
+           "EAR LAB · SPIRALE EDITRICE",
+           font=DS.font_weighted("sans", int(TX_W*0.018), 700), fill=DS.INK_FAINT)
+    return img
+
+
+def make_indice(volume: int, voci: list[tuple]) -> Image.Image:
+    """
+    Indice completo: storie E sezioni comuni, nell'ordine reale del libro.
+    voci: lista di (numero|None, titolo, sottotitolo|None, tipo) dove
+    tipo ∈ {'storia','sezione'}.
+    """
+    cfg = VOLUME_CONFIG[volume]
+    vento = DS.CICLO_COLOR.get(cfg["ciclo"], DS.ACCENT)
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+    MXi = int(TX_W * 0.10)
+    y = int(TX_H * 0.12)
+
+    d.text((MXi, y), "Indice", font=DS.font_weighted("mark", int(TX_W*0.058), 600),
+           fill=DS.INK)
+    y += int(TX_H * 0.058)
+    f_eye = DS.font_weighted("sans", int(TX_W*0.019), 700)
+    ex = MXi
+    label = f"L'ISOLA DEI TRE VENTI · {VOLUME_NOMI[volume]}"
+    for c in label:
+        d.text((ex, y), c, font=f_eye, fill=DS.SPIRALE)
+        ex += d.textlength(c, font=f_eye) + 2
+    y += int(TX_H * 0.055)
+
+    f_num = DS.font_weighted("mark", int(TX_W*0.042), 600)
+    f_tit = DS.font_weighted("display", int(TX_W*0.027), 600)
+    f_sec = DS.font("display_i", int(TX_W*0.026))
+    f_pg  = DS.font("sans", int(TX_W*0.021))
+
+    def leader_and_page(tx, tit_w, y_text, pagenum, baseline_off):
+        """Disegna i puntini-guida e il numero di pagina a destra."""
+        if pagenum is None:
+            return
+        pg_s = str(pagenum)
+        pg_w = d.textlength(pg_s, font=f_pg)
+        dot_start = tx + tit_w + int(TX_W*0.014)
+        dot_end   = TX_W - MXi - pg_w - int(TX_W*0.014)
+        dx = dot_start
+        dy = y_text + baseline_off
+        while dx < dot_end:
+            d.ellipse([dx, dy, dx+3, dy+3], fill=DS.INK_FAINT)
+            dx += int(TX_W*0.011)
+        d.text((TX_W - MXi - pg_w, y_text), pg_s, font=f_pg, fill=DS.INK_SOFT)
+
+    for num, titolo, pagenum, tipo in voci:
+        if tipo == "storia":
+            d.text((MXi, y), str(num), font=f_num, fill=vento)
+            tx = MXi + int(TX_W*0.075)
+            ty = y + int(TX_W*0.006)
+            d.text((tx, ty), titolo, font=f_tit, fill=DS.INK)
+            tit_w = d.textlength(titolo, font=f_tit)
+            leader_and_page(tx, tit_w, ty, pagenum, int(TX_W*0.016))
+            row_h = int(TX_W * 0.060)
+        else:
+            tx = MXi
+            d.text((tx, y), titolo, font=f_sec, fill=DS.INK_SOFT)
+            tit_w = d.textlength(titolo, font=f_sec)
+            leader_and_page(tx, tit_w, y, pagenum, int(TX_W*0.013))
+            row_h = int(TX_W * 0.050)
+        y += row_h
+
+    # filetto-vento di chiusura
+    DS.draw_wind_rule(d, MXi, TX_W - MXi, TX_H - int(TX_H*0.10), DS.RULE,
+                      max(2, TX_W//560))
+    return img
+
+
+def build_indice_voci(volume: int, storie: list[str],
+                      posizione_pres: str) -> list[tuple]:
+    """Costruisce l'elenco voci dell'indice nell'ordine reale del libro."""
+    voci = []
+    voci.append((None, "Prima di leggere", None, "sezione"))
+    voci.append((None, "L'isola dorme", None, "sezione"))
+    if posizione_pres == "prima":
+        voci.append((None, "Gli abitanti dell'isola", None, "sezione"))
+    for i, sid in enumerate(storie, 1):
+        t = get_story_title(sid)
+        voci.append((i, t, None, "storia"))
+    if posizione_pres == "dopo":
+        voci.append((None, "Gli abitanti dell'isola", None, "sezione"))
+    voci.append((None, "Le porte", None, "sezione"))
+    voci.append((None, "Il sigillo" if volume != 4 else "A te che torni",
+                 None, "sezione"))
+    return voci
+
+
+def build_indice_voci_numerate(volume: int, storie: list[str],
+                               posizione_pres: str, marks: dict) -> list[tuple]:
+    """Come build_indice_voci ma con i numeri di pagina reali dai marks.
+    Il numero mostrato è 1-based (pagina fisica del libro)."""
+    def pg(key):
+        idx = marks.get(key)
+        return (idx + 1) if idx is not None else None
+
+    voci = []
+    voci.append((None, "Prima di leggere", pg("prima_di_leggere"), "sezione"))
+    voci.append((None, "L'isola dorme", pg("isola_dorme"), "sezione"))
+    if posizione_pres == "prima":
+        voci.append((None, "Gli abitanti dell'isola", pg("abitanti"), "sezione"))
+    for i, sid in enumerate(storie, 1):
+        voci.append((i, get_story_title(sid), pg(f"storia_{i}"), "storia"))
+    if posizione_pres == "dopo":
+        voci.append((None, "Gli abitanti dell'isola", pg("abitanti"), "sezione"))
+    voci.append((None, "Le porte", pg("porte"), "sezione"))
+    if volume == 4:
+        voci.append((None, "A te che torni", pg("congedo"), "sezione"))
+    else:
+        voci.append((None, "Il sigillo", pg("sigillo"), "sezione"))
+    return voci
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# PAGINE-OCCHIELLO — aperture di sezione illustrate
+# ═══════════════════════════════════════════════════════════════════════════
+
+def _occhiello_base(eyebrow: str, titolo: str, sottotitolo: str,
+                    disegno_fn, vento) -> Image.Image:
+    """Schema comune: eyebrow + disegno + titolo + filetto + frasetta-guida."""
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+
+    # eyebrow tracciato
+    f_eye = DS.font_weighted("sans", int(TX_W*0.020), 700)
+    tot = sum(d.textlength(c, font=f_eye) + 5 for c in eyebrow) - 5
+    ex = TX_W/2 - tot/2
+    for c in eyebrow:
+        d.text((ex, int(TX_H*0.14)), c, font=f_eye, fill=DS.SPIRALE)
+        ex += d.textlength(c, font=f_eye) + 5
+
+    # disegno centrale
+    if disegno_fn:
+        disegno_fn(d, TX_W//2, int(TX_H*0.37))
+
+    # titolo (può andare su più righe, centrato)
+    f_t = DS.font_weighted("display", int(TX_W*0.058), 600)
+    lines = []
+    cur = ""
+    for w in titolo.split():
+        t = (cur + " " + w).strip()
+        if d.textlength(t, font=f_t) <= TX_W*0.78: cur = t
+        else: lines.append(cur); cur = w
+    if cur: lines.append(cur)
+    y = int(TX_H*0.55)
+    for ln in lines:
+        tw = d.textlength(ln, font=f_t)
+        d.text((TX_W/2 - tw/2, y), ln, font=f_t, fill=DS.INK)
+        y += int(TX_W*0.062)
+
+    # filetto-vento
+    DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.13), TX_W//2 + int(TX_W*0.13),
+                      y + int(TX_H*0.01), DS.RULE, max(2, TX_W//560))
+    y += int(TX_H*0.035)
+
+    # frasetta-guida in corsivo
+    if sottotitolo:
+        f_s = DS.font("display_i", int(TX_W*0.030))
+        for ln in sottotitolo.split("\n"):
+            tw = d.textlength(ln, font=f_s)
+            d.text((TX_W/2 - tw/2, y), ln, font=f_s, fill=DS.INK_SOFT)
+            y += int(TX_W*0.040)
+    return img
+
+
+def make_occhiello_prima_di_leggere() -> Image.Image:
+    return _occhiello_base(
+        "L'ATLANTE DELL'ISOLA", "Prima di leggere",
+        "Tutto quello che serve sapere\nprima di salpare per l'isola.",
+        lambda d, cx, cy: DS.isola_stilizzata(d, cx, cy, int(TX_W*0.22), DS.INK_SOFT),
+        DS.ACCENT)
+
+
+def make_occhiello_abitanti() -> Image.Image:
+    return _occhiello_base(
+        "LA GALLERIA", "Gli abitanti dell'isola",
+        "Chi incontrerai, e dove vive.",
+        lambda d, cx, cy: DS.rosa_tre_venti(d, cx, cy, int(TX_W*0.13), max(3, TX_W//280)),
+        DS.SPIRALE)
+
+
+def make_occhiello_porte(volume: int) -> Image.Image:
+    vento = DS.CICLO_COLOR.get(VOLUME_CONFIG[volume]["ciclo"], DS.ACCENT)
+    return _occhiello_base(
+        "DOPO LE STORIE", "Le porte",
+        "Domande e giochi\nper restare ancora un po' sull'isola.",
+        lambda d, cx, cy: DS.camuno_rosa(d, cx, cy, int(TX_W*0.10), vento, max(3, TX_W//300)),
+        vento)
+
+
+def make_occhiello_storia(num: int, titolo: str, volume: int) -> Image.Image:
+    """Apertura storia: glifo-vento del ciclo + numero + titolo."""
+    cfg = VOLUME_CONFIG[volume]
+    vento = DS.CICLO_COLOR.get(cfg["ciclo"], DS.ACCENT)
+    glifo_fn = DS.GLIFO_VENTO.get(cfg["ciclo"])
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+
+    # glifo-vento del ciclo
+    if glifo_fn:
+        glifo_fn(d, TX_W//2, int(TX_H*0.34), int(TX_W*0.085), vento, max(4, TX_W//360))
+
+    # eyebrow "STORIA N"
+    f_eye = DS.font_weighted("sans", int(TX_W*0.020), 700)
+    eb = f"STORIA {num}"
+    tot = sum(d.textlength(c, font=f_eye) + 6 for c in eb) - 6
+    ex = TX_W/2 - tot/2
+    for c in eb:
+        d.text((ex, int(TX_H*0.46)), c, font=f_eye, fill=vento)
+        ex += d.textlength(c, font=f_eye) + 6
+
+    # titolo
+    f_t = DS.font_weighted("display", int(TX_W*0.050), 600)
+    lines = []; cur = ""
+    for w in titolo.split():
+        t = (cur + " " + w).strip()
+        if d.textlength(t, font=f_t) <= TX_W*0.80: cur = t
+        else: lines.append(cur); cur = w
+    if cur: lines.append(cur)
+    y = int(TX_H*0.50)
+    for ln in lines:
+        tw = d.textlength(ln, font=f_t)
+        d.text((TX_W/2 - tw/2, y), ln, font=f_t, fill=DS.INK)
+        y += int(TX_W*0.058)
+    DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.10), TX_W//2 + int(TX_W*0.10),
+                      y + int(TX_H*0.008), vento, max(2, TX_W//560))
+    return img
+
+
+# Immagine d'ingresso per la soglia (establishing shot dei tre fratelli)
+SOGLIA_IMG = REPO / "pipeline_narrativa/storie_finali/_scene/s01/_hd/s01_h01a_hd.jpg"
+
+
+def make_soglia_ingresso(titolo_sezione: str = "L'isola dorme") -> Image.Image:
+    """
+    Pagina-soglia 'Qui entri nell'isola': l'immagine d'ingresso affiora dalla
+    carta (nessuno stacco) e introduce la sezione che segue.
+    Stacco editoriale tra 'Prima di leggere' e 'L'isola dorme'.
+    """
+    if SOGLIA_IMG.exists():
+        illus = Image.open(SOGLIA_IMG).convert("RGB")
+        box = (0, int(TX_H*0.10), TX_W, int(TX_H*0.72))
+        img = DS.nasce_dalla_pagina(illus, TX_W, TX_H, box, DS.PAPER,
+                                    fade=0.42, edge_softness=0.52, seed=3)
+    else:
+        img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+
+    f_eye = DS.font_weighted("sans", int(TX_W*0.020), 700)
+    eb = "QUI ENTRI NELL'ISOLA"
+    tot = sum(d.textlength(c, font=f_eye) + 5 for c in eb) - 5
+    ex = TX_W/2 - tot/2
+    for c in eb:
+        d.text((ex, int(TX_H*0.76)), c, font=f_eye, fill=DS.SPIRALE)
+        ex += d.textlength(c, font=f_eye) + 5
+
+    f_t = DS.font_weighted("display", int(TX_W*0.052), 600)
+    tw = d.textlength(titolo_sezione, font=f_t)
+    d.text((TX_W/2 - tw/2, int(TX_H*0.80)), titolo_sezione, font=f_t, fill=DS.INK)
+    DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.10), TX_W//2 + int(TX_W*0.10),
+                      int(TX_H*0.87), DS.RULE, max(2, TX_W//560))
+    return img
 
 # ═══════════════════════════════════════════════════════════════════════════
 # COSTRUZIONE PAGINE STORIA
@@ -939,6 +1487,14 @@ def build_volume_pages(
 
     image_map = build_presentazione_image_map(volume)
 
+    # Tracking posizioni per l'indice a due passate.
+    # Registriamo (chiave → indice di pagina 0-based) quando una sezione inizia.
+    toc_marks: dict[str, int] = {}
+    indice_page_idx = [None]   # dove sta la pagina indice (da rigenerare)
+
+    def mark(key: str) -> None:
+        toc_marks[key] = len(pages)
+
     def add(imgs: list[Image.Image]) -> None:
         for p in imgs: pages.append(("single", p))
 
@@ -946,39 +1502,66 @@ def build_volume_pages(
         add(make_text_pages(text, title=title, dark=dark))
 
     def build_pres_pages() -> None:
+        pages_recto()
+        mark("abitanti")
+        pages.append(("single", make_occhiello_abitanti()))
         entries = get_presentazione_parziale(volume)
         print(f"  → Presentazione: {len(entries)} voci")
+        luoghi = {"questa è l'isola", "il villaggio", "il quartiere di fuoco",
+                  "il quartiere d'aria", "il quartiere di terra",
+                  "il quartiere d'acqua", "il mercato del mezzogiorno"}
         for t, body in entries:
             img = find_presentazione_image(t, image_map)
+            kind = "luogo" if t.lower() in luoghi else "personaggio"
             pages.append(("single", make_presentazione_page(
-                t, body, img, layout_warnings=layout_warnings)))
+                t, body, img, volume=volume, kind=kind,
+                layout_warnings=layout_warnings)))
 
-    # ── Front matter ──────────────────────────────────────────────────────
+    def pages_recto():
+        nonlocal pages
+        if con_front_matter and not solo_storie:
+            pages = ensure_recto(pages)
+
+    # ── Front matter editoriale ───────────────────────────────────────────
     if con_front_matter and not solo_storie:
+        print("  → Front matter (frontespizio, colophon, dedica, indice)")
+        voci_indice = build_indice_voci(volume, storie, posizione_pres)
         pages.extend([
-            ("single", make_blank()),
+            ("single", make_frontespizio(volume)),
+            ("single", make_colophon(volume)),
             ("single", make_dedica(dedica)),
             ("single", make_blank()),
         ])
+        indice_page_idx[0] = len(pages)
+        pages.append(("single", make_indice(volume, voci_indice)))  # placeholder
+        pages = ensure_recto(pages)
 
     if not solo_storie:
         print("  → Soglia")
-        txt(get_soglia(), title="Prima di leggere")
+        pages_recto()
+        mark("prima_di_leggere")
+        pages.append(("single", make_occhiello_prima_di_leggere()))
+        txt(get_soglia())
         print(f"  → Introduzione ciclo {volume}")
         txt(get_introduzione_ciclo(volume))
+        print(f"  → Qui entri nell'isola (soglia)")
+        pages_recto()
+        mark("isola_dorme")
+        pages.append(("single", make_soglia_ingresso("L'isola dorme")))
         print(f"  → Stato Zero vol.{volume}")
-        txt(get_stato_zero(volume), title="L'isola dorme")
+        txt(get_stato_zero(volume))
 
         if posizione_pres == "prima":
             build_pres_pages()
 
     # ── Storie ────────────────────────────────────────────────────────────
-    for sid in storie:
+    for i, sid in enumerate(storie, 1):
         title = get_story_title(sid)
         print(f"  → Storia {sid}: {title}")
         if con_front_matter and not solo_storie:
-            pages = ensure_recto(pages)
-            pages.append(("single", make_title_map_page(title, sid, map_path)))
+            pages_recto()
+            mark(f"storia_{i}")
+            pages.append(("single", make_occhiello_storia(i, title, volume)))
             pages = ensure_recto(pages)
         else:
             add(make_text_pages("", title=title))
@@ -990,16 +1573,30 @@ def build_volume_pages(
             build_pres_pages()
 
         print(f"  → Le Porte vol.{volume}")
-        txt(get_porte(volume), title="Le porte")
+        pages_recto()
+        mark("porte")
+        pages.append(("single", make_occhiello_porte(volume)))
+        txt(get_porte(volume))
 
         if volume == 4:
             print("  → Congedo")
+            mark("congedo")
             txt(get_congedo(), title="A te che torni")
         else:
             sig = get_sigillo(volume)
             if sig:
                 print(f"  → Sigillo vol.{volume}")
+                mark("sigillo")
                 txt(sig, dark=True)
+
+    # ── Seconda passata: rigenera l'indice con i numeri di pagina reali ───
+    if indice_page_idx[0] is not None:
+        voci_num = build_indice_voci_numerate(volume, storie, posizione_pres, toc_marks)
+        pages[indice_page_idx[0]] = ("single", make_indice(volume, voci_num))
+
+    # ── Garanzia KDP: numero di pagine pari ───────────────────────────────
+    if len(pages) % 2 == 1:
+        pages.append(("single", make_blank()))
 
     print(f"  Totale pagine: {len(pages)}")
     return pages, layout_warnings

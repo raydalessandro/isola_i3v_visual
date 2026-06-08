@@ -35,6 +35,9 @@ desktop.ini
 /output/
 /tmp/
 
+# Output build volumi (PDF/PNG rigenerabili da scripts/build_volume.py)
+_output/
+
 # File aggregati/snapshot temporanei
 snapshot_*.json
 diff_*.json
