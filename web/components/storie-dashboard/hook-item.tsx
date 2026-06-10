@@ -2,8 +2,16 @@
 // Server component: <details>/<summary> nativi gestiscono lo stato senza JS.
 // Summary: P{n} · hook_id · location.id · status badges (loc dot, X/Y chars,
 //   N sub, img ✓/TBD).
-// Body: luogo, personaggi in scena, cammei offscreen, oggetti, note canoniche,
-//   sotto-hook (con bottone copia prompt scena), testo (estratto).
+//
+// Body (riordinato 2026-06-10 per workflow illustratore Manus):
+//   1. Sotto-hook con prompt copiabile pronto (PRIMA — il fulcro: l'illustratore
+//      copia da qui per generare la scena)
+//   2. Prompt hook narrativo copiabile (livello padre, sempre visibile)
+//   3. Luogo (reference immagini gia' mostrate, contesto)
+//   4. Personaggi in scena + cammei (reference)
+//   5. Oggetti in scena (reference)
+//   6. Note canoniche
+//   7. Testo (estratto)
 
 import { ChevronRight } from "lucide-react";
 
@@ -109,8 +117,71 @@ export function HookItem({ hook, audited, sagaStyle }: HookItemProps) {
       </summary>
 
       <div className="space-y-4 border-t border-rule-soft px-4 py-4">
+        {/* ═══════════════════════════════════════════════════════════════
+            FULCRO ILLUSTRATORE — sotto-hook + prompt copiabili PRONTI.
+            È da qui che l'illustratore (Manus) lavora: copia il prompt,
+            apre Grok, incolla, genera. Le reference (cast/luogo/oggetti)
+            sono mostrate sotto come contesto da consultare al volo.
+            ═══════════════════════════════════════════════════════════════ */}
+
+        {/* Sotto-hook con prompt copiabile (priorità #1: pagina libro fisica) */}
+        {subhooksAnn.length > 0 && (
+          <Section
+            title={`Sotto-hook (${subhooksAnn.length}) — pagine libro fisiche · prompt scena copiabili`}
+            emoji="🎨"
+          >
+            <ul className="space-y-3">
+              {subhooksAnn.map((sh) => (
+                <SubhookCard
+                  key={sh.id}
+                  sub={sh}
+                  hookId={hook.hook_id}
+                  location={loc}
+                  charsInScene={charsInScene}
+                  charsOff={charsOff}
+                  objsInScene={objsInScene}
+                  canonicalDetails={details}
+                  sagaStyle={sagaStyle}
+                />
+              ))}
+            </ul>
+          </Section>
+        )}
+
+        {/* Prompt-livello hook narrativo: SEMPRE visibile.
+            Padre dei subhook — utile quando l'illustratore vuole il prompt
+            del hook intero senza scomposizione pagina libro. */}
+        <Section title="Prompt scena (livello hook narrativo)" emoji="🎨">
+          {loc.id || charsInScene.length > 0 || details.length > 0 ? (
+            <div className="space-y-2 rounded-md border border-rule-soft bg-paper px-3 py-3">
+              <pre className="max-h-60 overflow-auto whitespace-pre-wrap rounded bg-paper-soft p-2 font-mono text-[11px] leading-relaxed text-ink-soft">
+                {hookLevelPrompt}
+              </pre>
+              <div className="flex justify-end">
+                <CopyButton
+                  text={hookLevelPrompt}
+                  label="Copia prompt hook"
+                />
+              </div>
+            </div>
+          ) : (
+            <Empty>
+              Annotazioni mancanti per questo hook. Aggiungi
+              location/personaggi/dettagli in{" "}
+              <code className="text-ink">_annotations/sNN.yaml</code> per
+              generare il prompt.
+            </Empty>
+          )}
+        </Section>
+
+        {/* ═══════════════════════════════════════════════════════════════
+            REFERENCE — cast, luogo, oggetti, note. Il contesto canonico
+            mostrato come riferimento visivo. L'illustratore lo consulta
+            ma non lo copia direttamente (è già dentro al prompt sopra).
+            ═══════════════════════════════════════════════════════════════ */}
+
         {/* Luogo */}
-        <Section title="Luogo (dove succede la scena)" emoji="📍">
+        <Section title="Luogo (reference)" emoji="📍">
           {loc.id ? (
             <EntityRow
               id={loc.id}
@@ -125,7 +196,7 @@ export function HookItem({ hook, audited, sagaStyle }: HookItemProps) {
 
         {/* Personaggi in scena */}
         <Section
-          title={`Personaggi in scena (${charsInScene.length})`}
+          title={`Personaggi in scena (${charsInScene.length}) — reference`}
           emoji="👤"
         >
           {charsInScene.length > 0 ? (
@@ -166,7 +237,7 @@ export function HookItem({ hook, audited, sagaStyle }: HookItemProps) {
         {/* Oggetti */}
         {objsInScene.length > 0 && (
           <Section
-            title={`Oggetti in scena (${objsInScene.length})`}
+            title={`Oggetti in scena (${objsInScene.length}) — reference`}
             emoji="📦"
           >
             <div className="space-y-2">
@@ -192,56 +263,6 @@ export function HookItem({ hook, audited, sagaStyle }: HookItemProps) {
             </ul>
           </Section>
         )}
-
-        {/* Sotto-hook con prompt copiabile */}
-        {subhooksAnn.length > 0 && (
-          <Section
-            title={`Sotto-hook (${subhooksAnn.length}) — pagine libro fisiche · prompt scena copiabili`}
-            emoji="🎨"
-          >
-            <ul className="space-y-3">
-              {subhooksAnn.map((sh) => (
-                <SubhookCard
-                  key={sh.id}
-                  sub={sh}
-                  hookId={hook.hook_id}
-                  location={loc}
-                  charsInScene={charsInScene}
-                  charsOff={charsOff}
-                  objsInScene={objsInScene}
-                  canonicalDetails={details}
-                  sagaStyle={sagaStyle}
-                />
-              ))}
-            </ul>
-          </Section>
-        )}
-
-        {/* Prompt-livello hook narrativo: SEMPRE visibile (era nascosto se
-            esistevano subhook, ma serve all'illustratore anche quando ci
-            sono subhook — il prompt-hook è il "padre" del subhook prompt). */}
-        <Section title="Prompt scena (livello hook narrativo)" emoji="🎨">
-          {loc.id || charsInScene.length > 0 || details.length > 0 ? (
-            <div className="space-y-2 rounded-md border border-rule-soft bg-paper px-3 py-3">
-              <pre className="max-h-60 overflow-auto whitespace-pre-wrap rounded bg-paper-soft p-2 font-mono text-[11px] leading-relaxed text-ink-soft">
-                {hookLevelPrompt}
-              </pre>
-              <div className="flex justify-end">
-                <CopyButton
-                  text={hookLevelPrompt}
-                  label="Copia prompt hook"
-                />
-              </div>
-            </div>
-          ) : (
-            <Empty>
-              Annotazioni mancanti per questo hook. Aggiungi
-              location/personaggi/dettagli in{" "}
-              <code className="text-ink">_annotations/sNN.yaml</code> per
-              generare il prompt.
-            </Empty>
-          )}
-        </Section>
 
         {/* Testo */}
         {text && (
@@ -300,8 +321,8 @@ function SubhookCard({
   });
 
   return (
-    <li className="rounded-md border border-rule-soft bg-paper">
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-rule-soft px-3 py-2">
+    <li className="rounded-md border border-accent/30 bg-paper">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-rule-soft bg-paper-soft px-3 py-2">
         <code className="font-mono text-xs text-ink">{sub.id}</code>
         <span className="font-mono text-[11px] text-ink-faint">
           pag. libro {String(sub.page_book)}
@@ -311,29 +332,25 @@ function SubhookCard({
           <CopyButton text={prompt} label="Copia prompt scena" />
         </span>
       </div>
-      {hasNote ? (
-        <div className="space-y-2 px-3 py-3">
+      <div className="space-y-2 px-3 py-3">
+        {hasNote && (
           <p className="font-serif text-sm italic text-ink-soft">
             <span className="mr-1 font-mono text-[10px] uppercase tracking-wider text-ink-faint">
               scena:
             </span>
             {note}
           </p>
-          <details className="rounded border border-rule-soft bg-paper-soft">
-            <summary className="cursor-pointer px-2 py-1.5 font-mono text-[10px] uppercase tracking-wider text-ink-faint hover:text-accent">
-              Anteprima prompt completo
-            </summary>
-            <pre className="max-h-60 overflow-auto whitespace-pre-wrap border-t border-rule-soft bg-paper-soft px-2 py-2 font-mono text-[11px] leading-relaxed text-ink-soft">
-              {prompt}
-            </pre>
-          </details>
-        </div>
-      ) : (
-        <p className="px-3 py-3 font-serif text-sm italic text-ink-faint">
-          Nota scena ancora non scritta nelle annotazioni. Il prompt copiabile
-          contiene comunque cast/location/canonical_details + style saga.
-        </p>
-      )}
+        )}
+        {!hasNote && (
+          <p className="font-serif text-xs italic text-ink-faint">
+            Nota scena ancora non scritta nelle annotazioni. Il prompt copiabile
+            contiene comunque cast/location/canonical_details + style saga.
+          </p>
+        )}
+        <pre className="max-h-60 overflow-auto whitespace-pre-wrap rounded border border-rule-soft bg-paper-soft px-2 py-2 font-mono text-[11px] leading-relaxed text-ink-soft">
+          {prompt}
+        </pre>
+      </div>
     </li>
   );
 }
