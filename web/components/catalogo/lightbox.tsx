@@ -1,11 +1,11 @@
 "use client";
 
 import * as React from "react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, X } from "lucide-react";
 import { createPortal } from "react-dom";
 
 import type { EntityImage } from "@/lib/types";
-import { imageUrl } from "@/lib/image-url";
+import { imageUrl, imageDownloadUrl, imageBasename } from "@/lib/image-url";
 
 interface LightboxProps {
   images: EntityImage[];
@@ -139,11 +139,22 @@ export function Lightbox({
         onClick={(e) => e.stopPropagation()}
       >
         <span className="font-mono text-xs truncate">{current.filename}</span>
-        {current.size_kb != null && (
-          <span className="font-mono text-xs text-paper/70 shrink-0">
-            {current.size_kb.toFixed(0)} KB
-          </span>
-        )}
+        <div className="flex items-center gap-3 shrink-0">
+          {current.size_kb != null && (
+            <span className="font-mono text-xs text-paper/70">
+              {current.size_kb.toFixed(0)} KB
+            </span>
+          )}
+          <a
+            href={imageDownloadUrl(current.path)}
+            download={imageBasename(current.path)}
+            className="inline-flex items-center gap-1.5 rounded-md border border-paper/30 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-paper hover:border-paper hover:bg-paper/10"
+            aria-label="Scarica immagine"
+          >
+            <Download className="h-3.5 w-3.5" aria-hidden />
+            Scarica
+          </a>
+        </div>
       </div>
     </div>,
     document.body,
