@@ -98,6 +98,24 @@ export interface StoryInventory {
 }
 
 /** Storia completa nella vista dashboard. */
+export interface NarrativeChronology {
+  /** Semi piantati qui (set up futuri). Lista di id stringhe. */
+  seeds_planted?: string[];
+  /** Semi raccolti qui (originati da storie precedenti). */
+  seeds_picked_up?: string[];
+  /** Semi che maturano qui (passaggio intermedio). */
+  seeds_maturing_here?: string[];
+  /** Semi che fioriscono qui (chiusura/payoff). */
+  seeds_bloomed_here?: string[];
+  /** Callback espliciti fatti a storie precedenti. */
+  callbacks_made?: Array<{ from_story?: string; type?: string; summary?: string } | string>;
+  /** Sintesi prosa del posizionamento callback. */
+  callback_summary?: string;
+  /** Debts: pattern grafo Bachelard (raramente popolato). */
+  debts_opened?: string[];
+  debts_closed?: string[];
+}
+
 export interface DashboardStory {
   sid: string;
   title: string;
@@ -118,6 +136,8 @@ export interface DashboardStory {
   audited_entities: AuditedEntities;
   hooks: DashboardHook[];
   inventory?: StoryInventory;
+  /** Cronologia narrativa dal grafo (semi + callback). */
+  narrative_chronology?: NarrativeChronology;
 }
 
 /** Top-level del JSON dashboard. */

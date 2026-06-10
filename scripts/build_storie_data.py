@@ -260,7 +260,32 @@ def load_all_entities() -> dict:
     return out
 
 
-def process_storia(path: Path, all_entities: dict) -> dict:
+def load_graph_chronology() -> dict:
+    """Carica dal grafo i campi narrativi cronologici per ogni storia:
+    seeds_planted/picked_up/maturing_here/bloomed_here + callbacks_made +
+    callback_summary + debts_opened/closed. Ritorna dict[sid] -> dict.
+    Tollerante: se il grafo manca o è invalido, ritorna dict vuoto."""
+    g_path = REPO_ROOT / "pipeline_narrativa" / "story_graph.json"
+    try:
+        g = json.loads(g_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out = {}
+    for sid, s in g.get("stories", {}).items():
+        out[sid] = {
+            "seeds_planted": s.get("seeds_planted") or [],
+            "seeds_picked_up": s.get("seeds_picked_up") or [],
+            "seeds_maturing_here": s.get("seeds_maturing_here") or [],
+            "seeds_bloomed_here": s.get("seeds_bloomed_here") or [],
+            "callbacks_made": s.get("callbacks_made") or [],
+            "callback_summary": s.get("callback_summary") or "",
+            "debts_opened": s.get("debts_opened") or [],
+            "debts_closed": s.get("debts_closed") or [],
+        }
+    return out
+
+
+def process_storia(path: Path, all_entities: dict, graph_chronology: dict) -> dict:
     content = path.read_text(encoding="utf-8")
     fm = parse_yaml_frontmatter(content)
     hooks_raw = parse_hooks(content)
@@ -375,6 +400,10 @@ def process_storia(path: Path, all_entities: dict) -> dict:
             "oggetti": audited_objs,
         },
         "inventory": inventory,
+        # Cronologia narrativa dal grafo: semi piantati/raccolti/maturati/sbocciati
+        # + callback fatti. Usata dal widget <NarrativeChronology> nella dashboard
+        # storia per mostrare la posizione narrativa della storia nel grande arco.
+        "narrative_chronology": graph_chronology.get(sid, {}),
     }
 
 
@@ -384,6 +413,8 @@ def main():
     all_entities = load_all_entities()
     print(f"[load] entities.json: {len(all_entities['personaggi'])} personaggi, "
           f"{len(all_entities['luoghi'])} luoghi, {len(all_entities['oggetti'])} oggetti")
+    graph_chrono = load_graph_chronology()
+    print(f"[load] grafo: cronologia per {len(graph_chrono)} storie")
 
     storie_files = sorted(STORIE_DIR.glob("s*_*.md"))
     storie = []
@@ -391,7 +422,7 @@ def main():
         if f.name.startswith("_"):
             continue
         print(f"  [+] {f.name}")
-        storie.append(process_storia(f, all_entities))
+        storie.append(process_storia(f, all_entities, graph_chrono))
 
     out = {
         "generated_from": "scripts/build_storie_data.py",

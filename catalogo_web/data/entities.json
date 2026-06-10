@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-10T15:21:57",
+  "generated_at": "2026-06-10T15:28:26",
   "meta": {
-    "generated_at": "2026-06-10T15:21:57",
+    "generated_at": "2026-06-10T15:28:26",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -282,7 +282,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "beach",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_acqua/spiaggia_conchiglie"
               }
             },
@@ -693,7 +693,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "fields",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_terra/orti_del_cerchio"
               }
             },
@@ -895,7 +895,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "square",
                 "status": "provvisorio",
-                "n_images": 1,
+                "n_images": 3,
                 "folder_path": "visual/luoghi/villaggio_centrale/piazza_villaggio"
               }
             },
@@ -2879,8 +2879,14 @@
         "quartiere_acqua",
         "spiaggia_conchiglie"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "spiaggia_conchiglie_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_acqua/spiaggia_conchiglie/immagini/spiaggia_conchiglie_canonica_v1_panoramica.jpg",
+          "size_kb": 224
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "sentiero_case_basse_bocca",
@@ -5156,8 +5162,14 @@
         "quartiere_terra",
         "orti_del_cerchio"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "orti_del_cerchio_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg",
+          "size_kb": 387
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "sentiero_casa_salvia_casa_zolla",
@@ -6307,12 +6319,22 @@
       ],
       "images": [
         {
+          "filename": "piazza_villaggio_canonica_v1_albero_centrale.jpg",
+          "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_albero_centrale.jpg",
+          "size_kb": 233
+        },
+        {
+          "filename": "piazza_villaggio_canonica_v1_mercato_mezzogiorno.jpg",
+          "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_mercato_mezzogiorno.jpg",
+          "size_kb": 279
+        },
+        {
           "filename": "piazza_villaggio_canonica_v1_panoramica.jpg",
           "path": "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg",
           "size_kb": 270
         }
       ],
-      "n_images": 1
+      "n_images": 3
     },
     {
       "id": "scuola_stria",

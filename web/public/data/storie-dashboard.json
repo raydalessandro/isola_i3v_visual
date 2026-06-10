@@ -54,7 +54,7 @@
         "chars_distinct": 6,
         "chars_with_imgs": 6,
         "locs_distinct": 6,
-        "locs_with_imgs": 5,
+        "locs_with_imgs": 6,
         "locs_with_prompt": 6,
         "objs_distinct": 3,
         "objs_with_prompt": 3,
@@ -581,11 +581,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -595,8 +596,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -649,10 +651,11 @@
             "path": "visual/personaggi/individuali/primari/grunto",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg"
             ]
@@ -665,7 +668,7 @@
             "path": "visual/luoghi/quartiere_fuoco/forno",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 7,
+            "n_images": 8,
             "image_paths": [
               "visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_cortile_retro.jpg",
               "visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_dispensa_pranzo.jpg",
@@ -681,8 +684,10 @@
             "path": "visual/luoghi/villaggio_centrale/piazza_villaggio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 1,
+            "n_images": 3,
             "image_paths": [
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_albero_centrale.jpg",
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_mercato_mezzogiorno.jpg",
               "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg"
             ]
           },
@@ -692,9 +697,10 @@
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 1,
+            "n_images": 2,
             "image_paths": [
-              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg",
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_vista_alta.jpg"
             ]
           },
           "pascoli_alti": {
@@ -703,8 +709,10 @@
             "path": "visual/luoghi/quartiere_aria/pascoli_alti",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_aria/pascoli_alti/immagini/pascoli_alti_canonica_v1_panoramica.jpg"
+            ]
           },
           "burrone": {
             "found": true,
@@ -768,6 +776,25 @@
         "additions_summary": "Elementi nuovi introdotti dalla prosa definitiva s01 che vanno integrati nei file canonici del catalogo. Il grafo NON va modificato (read-only); le aggiunte vanno solo nelle schede `visual/`.\n\n### 1. 📝 Vapore alla finestra del Forno (h01)\n**Dove aggiungere:** `visual/luoghi/quartiere_fuoco/forno/scheda.md`, sezione \"Aspetto / forma — geografia generale\" sotto-area \"Esterno\", o \"Sala Laboratorio\" (atmosfera).\n**Cosa aggiungere:** \"Quando Fiamma impasta nelle ore fredde (alba inverno) si vede vapore farsi strada dalle finestre — il calore del forno + l'aria fredda esterna.\"\n**Priorità:** bassa (dettaglio atmosferico, ma utile per illustratore).\n\n### 2. 📝 Cornetto come variante della pagnotta (h10)\n**Dove aggiungere:** `visual/oggetti/pagnotta_forno/scheda.md`, sezione \"Variabilità ammessa\".\n**Cosa aggiungere:** \"Variante 'cornetto': pezzo più piccolo, forma allungata leggermente arcuata, stessa pasta. Fiamma ne fa per i cuccioli, da mangiare in piedi.\"\n**Priorità:** media (riappare in altre storie? verificare s06 e s08).\n\n### 3. 📝 Pietra dei tre passi conferma canonica (h03)\n**Dove aggiungere:** già canonical in `world_conventions.path_details.paths.via_che_sale.details.vcs_d01_pietra_dei_tre_passi`. Nessuna aggiunta necessaria.\n**Verifica:** la prosa definitiva ne legittima l'uso. ✅ Coerente.\n\n---",
         "gaps_summary": "### Critici (bloccano la composizione di alcuni hook)\n\n1. **Gabriel + Elias: immagini canoniche mancanti** (per h01-h09 di s01 e per molte altre storie).\n   - **Azione:** Ray genera le 8 immagini (4 per Gabriel + 4 per Elias) con i prompt grok già pubblicati.\n\n2. **Via che Sale: prompt grok mancante** (per h03).\n   - **Azione:** generare `visual/luoghi/quartiere_aria/via_che_sale/prompt_grok.md` come fatto per gli altri luoghi.\n\n### Minori (gestibili in post-composizione)\n\n3. **Pascoli Alti — variante \"nebbia\"** (h04, h05): aggiungere come Veduta 2 al prompt esistente.\n4. **Burrone — variante \"vista dal bordo\"** (h06): aggiungere come Veduta 2.\n5. **Cengia in mezzaroccia con lichene** (h07): considerare prompt close-up specifico (può rientrare in burrone o montagne_gemelle).\n6. **Pascoli — variante \"tramonto/golden hour\"** (h09): aggiungere come variante atmosferica nei prompt esistenti.\n7. **Carriola di vimini Camminante** (h02): valutare se serve scheda oggetto + prompt grok dedicato.\n\n---",
         "todo_summary": "| Item | Tipo | Priorità |\n|---|---|---|\n| Generare 4 img Gabriel | personaggio | 🔴 critica |\n| Generare 4 img Elias | personaggio | 🔴 critica |\n| Creare prompt grok via_che_sale | luogo | 🔴 critica |\n| Aggiungere variante \"nebbia\" pascoli_alti | luogo (scheda) | 🟡 minore |\n| Aggiungere variante \"vista bordo\" burrone | luogo (scheda) | 🟡 minore |\n| Aggiungere variante \"tramonto\" pascoli_alti | luogo (scheda) | 🟡 minore |\n| Aggiungere \"vapore finestra\" forno scheda | catalogo | 🟢 bassa |\n| Aggiungere \"cornetto\" variante pagnotta_forno | catalogo | 🟢 bassa |\n| Generare 1 img canonica Piazza del Villaggio | luogo | 🟡 utile (ricorrente) |\n| Generare 1 img canonica Pascoli Alti (basic) | luogo | 🟡 utile |\n| Generare 1 img canonica Burrone | luogo | 🟡 utile |\n| Generare 1 img canonica Grotta Grunto | luogo | 🟡 utile |\n| Generare 1 img canonica Montagne Gemelle | luogo | 🟢 nice-to-have (sfondo lontano) |\n| Comporre 10 immagini hook s01 (testo overlay + scena) | output finale | da definire dopo |\n\n---"
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_s01_bastoncino_noah",
+          "seed_noah_raccoglie_oggetti",
+          "seed_pagnotta_grunto_rito",
+          "seed_grunto_prima_apparizione",
+          "seed_due_passi_dal_burrone",
+          "seed_gabriel_sa_la_strada_senza_vedere",
+          "seed_paura_noah_buio",
+          "seed_fermarsi_come_gesto_attivo"
+        ],
+        "seeds_picked_up": [],
+        "seeds_maturing_here": [],
+        "seeds_bloomed_here": [],
+        "callbacks_made": [],
+        "callback_summary": "Nessun callback (è la prima storia).",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -1081,8 +1108,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -1123,9 +1151,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -1139,9 +1168,10 @@
             "path": "visual/luoghi/quartiere_aria/via_che_sale",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 1,
+            "n_images": 2,
             "image_paths": [
-              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg",
+              "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_vista_alta.jpg"
             ]
           },
           "bocca": {
@@ -1158,6 +1188,42 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_paura_elias_piccolo",
+          "seed_stria_vede_prima",
+          "seed_oggetto_fantasma_congelato"
+        ],
+        "seeds_picked_up": [
+          "seed_s01_bastoncino_noah",
+          "seed_noah_raccoglie_oggetti"
+        ],
+        "seeds_maturing_here": [],
+        "seeds_bloomed_here": [
+          "seed_s01_bastoncino_noah"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s02_001",
+            "from_story": "s01",
+            "element": "bastoncino_noah",
+            "type": "oggetto",
+            "note": "Il bastoncino raccolto da Noah in cammino sui Pascoli (S1) cade nella pozza qui.",
+            "to_story": "s02"
+          },
+          {
+            "callback_id": "cb_s02_002",
+            "from_story": "s01",
+            "element": "gesto_firma_noah_raccoglie",
+            "type": "gesto",
+            "note": "Il gesto-firma di Noah (raccoglie in cammino) si conferma: stavolta l'oggetto raccolto ha un ruolo narrativo.",
+            "to_story": "s02"
+          }
+        ],
+        "callback_summary": "Bastoncino di Noah da S1 (oggetto → oggetto-fantasma). Gesto-firma di Noah che raccoglie (S1 → conferma qui).",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -1178,9 +1244,9 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 7,
-        "chars_with_imgs": 6,
+        "chars_with_imgs": 7,
         "locs_distinct": 1,
-        "locs_with_imgs": 0,
+        "locs_with_imgs": 1,
         "locs_with_prompt": 1,
         "objs_distinct": 1,
         "objs_with_prompt": 1,
@@ -1438,8 +1504,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -1466,11 +1533,12 @@
             "path": "visual/personaggi/individuali/secondari/salvia",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
             ]
           },
@@ -1480,11 +1548,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -1494,9 +1563,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -1508,8 +1578,10 @@
             "path": "visual/personaggi/individuali/primari/rovo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
+            ]
           }
         },
         "luoghi": {
@@ -1519,8 +1591,10 @@
             "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg"
+            ]
           }
         },
         "oggetti": {
@@ -1537,6 +1611,36 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_rovo_resistenza_che_protegge",
+          "seed_bru_presenza_che_custodisce",
+          "seed_pallone_stoffa_cucita",
+          "seed_foresta_tempi_modi_propri"
+        ],
+        "seeds_picked_up": [
+          "seed_fermarsi_come_gesto_attivo",
+          "seed_paura_noah_buio"
+        ],
+        "seeds_maturing_here": [
+          "seed_fermarsi_come_gesto_attivo",
+          "seed_paura_noah_buio"
+        ],
+        "seeds_bloomed_here": [],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s03_001",
+            "from_story": "s01",
+            "element": "fermarsi_come_gesto_attivo",
+            "type": "strutturale_tematico",
+            "note": "Eco strutturale: il fermarsi prima del buio Foresta è eco del fermarsi nella nebbia (S1). Chiusura del ciclo Δ per accumulo silenzioso. Non dichiarato nel testo, tracciato solo a livello di grafo e di note voce.",
+            "to_story": "s03"
+          }
+        ],
+        "callback_summary": "Eco strutturale S1 (fermarsi come gesto attivo maturing). Paura Noah S1 buio → S3 buio Foresta sera (maturing, variante geografica).",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -1557,9 +1661,9 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 8,
-        "chars_with_imgs": 7,
+        "chars_with_imgs": 8,
         "locs_distinct": 1,
-        "locs_with_imgs": 0,
+        "locs_with_imgs": 1,
         "locs_with_prompt": 1,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
@@ -1804,11 +1908,12 @@
             "path": "visual/personaggi/individuali/secondari/salvia",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
             ]
           },
@@ -1832,8 +1937,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -1874,9 +1980,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -1902,8 +2009,10 @@
             "path": "visual/personaggi/individuali/primari/rovo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
+            ]
           }
         },
         "luoghi": {
@@ -1913,14 +2022,88 @@
             "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg"
+            ]
           }
         },
         "oggetti": {}
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_tum_tum_tum_codice_fratelli",
+          "seed_rovo_abitante_foresta",
+          "seed_farfalla_blu_seguire_fuori_soglia",
+          "seed_gesto_della_terra_palmo"
+        ],
+        "seeds_picked_up": [
+          "seed_fermarsi_come_gesto_attivo",
+          "seed_paura_noah_buio",
+          "seed_rovo_resistenza_che_protegge",
+          "seed_bru_presenza_che_custodisce",
+          "seed_foresta_tempi_modi_propri",
+          "seed_paura_elias_piccolo",
+          "seed_gabriel_sa_la_strada_senza_vedere"
+        ],
+        "seeds_maturing_here": [
+          "seed_paura_elias_piccolo",
+          "seed_bru_presenza_che_custodisce",
+          "seed_rovo_resistenza_che_protegge"
+        ],
+        "seeds_bloomed_here": [
+          "seed_fermarsi_come_gesto_attivo",
+          "seed_gabriel_sa_la_strada_senza_vedere",
+          "seed_foresta_tempi_modi_propri"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s04_001",
+            "from_story": "s01",
+            "element": "fermarsi_come_gesto_attivo",
+            "type": "gesto_trasferito_tra_fratelli",
+            "note": "Il gesto del fermarsi istituito da Gabriel nella nebbia (S1) ora in Noah: si siede tra le radici, non piange, si ferma da solo. Pattern che circola tra fratelli.",
+            "to_story": "s04"
+          },
+          {
+            "callback_id": "cb_s04_002",
+            "from_story": "s01",
+            "element": "aspettiamo_di_gabriel_diventa_pensiamo",
+            "type": "frase_eco_diretta",
+            "note": "'Gridiamo no. Pensiamo.' di Gabriel in S4 e' eco diretta dell''Aspettiamo' di S1. Stesso fratello, stessa struttura di decisione contraria all'istinto, problema diverso.",
+            "to_story": "s04"
+          },
+          {
+            "callback_id": "cb_s04_003",
+            "from_story": "s03",
+            "element": "cantilena_coltivatori",
+            "type": "bloom_sonoro",
+            "note": "La cantilena sommessa dei Coltivatori in S3 diventa cantilena piena della semina in S4. Passaggio stagionale sonoro (inverno->primavera piena).",
+            "to_story": "s04"
+          },
+          {
+            "callback_id": "cb_s04_004",
+            "from_story": "s03",
+            "element": "rovo_registro_diverso",
+            "type": "personaggio_secondo_registro",
+            "note": "Rovo in S4 e' abitante della Foresta (gia' dentro quando tutto comincia), non guardiano del confine come in S3. I due registri coesistono.",
+            "to_story": "s04"
+          },
+          {
+            "callback_id": "cb_s04_005",
+            "from_story": "s03",
+            "element": "bru_da_intravisto_a_presenza_concreta",
+            "type": "personaggio_sviluppo_presenza",
+            "note": "Bru in S3 intravisto dietro Rovo con occhi che brillano; in S4 presenza concreta appoggiata a un tronco, che ha sentito la vibrazione dalle unghie nella terra.",
+            "to_story": "s04"
+          }
+        ],
+        "callback_summary": "Callback a S1: fermarsi come gesto attivo bloomato (trasferito da Gabriel a Noah); 'Gridiamo no. Pensiamo.' eco diretta di 'Aspettiamo'; Gabriel sa la strada senza vedere bloomato (cammina nella direzione del battito). Callback a S3: Rovo (secondo registro, abitante-Foresta), Bru (da intravisto a presenza concreta), cantilena Coltivatori (sommessa -> piena), 'la Foresta ha i suoi modi' bloom del 'loro orario'.",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -2181,9 +2364,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -2209,10 +2393,11 @@
             "path": "visual/personaggi/individuali/secondari/nodo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
             ]
@@ -2251,8 +2436,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -2265,11 +2451,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           }
@@ -2279,6 +2466,56 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_radura_coi_pini_luogo_silenzioso",
+          "seed_bru_sa_indicare_luoghi_che_altri_non_vedono",
+          "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto",
+          "seed_pattern_a_rami_caduti_diventano_materia"
+        ],
+        "seeds_picked_up": [
+          "seed_foresta_tempi_modi_propri",
+          "seed_bru_presenza_che_custodisce",
+          "seed_paura_elias_piccolo"
+        ],
+        "seeds_maturing_here": [
+          "seed_foresta_tempi_modi_propri",
+          "seed_paura_elias_piccolo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_bru_presenza_che_custodisce"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s05_001",
+            "from_story": "s04",
+            "element": "bru_indica_col_mento_direzione_radura",
+            "type": "gesto_richiamo",
+            "note": "Bru in S4 (fine, mentre tornavano con Salvia) aveva indicato col mento una direzione. In S5 quel gesto diventa motivo del viaggio: i fratelli chiamano Bru e lo seguono verso la radura che lui aveva indicato.",
+            "to_story": "s05"
+          },
+          {
+            "callback_id": "cb_s05_002",
+            "from_story": "s04",
+            "element": "foresta_che_ha_suoi_modi",
+            "type": "principio_fisico_esteso",
+            "note": "In S4 la Foresta come tessuto vivo che porta vibrazioni. In S5 la Foresta estende: ha suoi modi anche di nascondere radure che si raggiungono solo se costruisci. Stesso principio, declinato in chiave costruttiva/spaziale.",
+            "to_story": "s05"
+          },
+          {
+            "callback_id": "cb_s05_003",
+            "from_story": "s04",
+            "element": "bru_presenza_che_custodisce",
+            "type": "personaggio_sviluppo_agency",
+            "note": "Bru da presenza concreta silenziosa (S4) a compagno attivo con agency narrativa (S5). Bloom del seed.",
+            "to_story": "s05"
+          }
+        ],
+        "callback_summary": "Callback a S4: Bru che indica col mento la direzione della radura (richiamo gesto di fine S4). Foresta come tessuto che ha suoi modi (da canale vibrazione di S4 a accessibilita' costruttiva di S5 — principio fisico che si estende). Fermarsi come gesto attivo non rilevante qui ma ereditato. Callback a S3: Rovo/Bru contesto Foresta ma in modalita' diversa (S5 costruttiva non margine).",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -2538,8 +2775,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -2552,11 +2790,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -2580,11 +2819,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -2634,11 +2874,12 @@
             "path": "visual/personaggi/individuali/secondari/salvia",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
             ]
           },
@@ -2648,11 +2889,12 @@
             "path": "visual/personaggi/individuali/secondari/zolla",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_raccolta.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg"
             ]
           },
@@ -2686,6 +2928,65 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_vecchie_indicare_in_silenzio",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "seeds_picked_up": [
+          "seed_noah_raccoglie_oggetti",
+          "seed_stria_vede_prima"
+        ],
+        "seeds_maturing_here": [
+          "seed_paura_elias_piccolo"
+        ],
+        "seeds_bloomed_here": [],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s06_001",
+            "from_story": "s05",
+            "element": "bru_menzione_offscreen_noah_intasca_cornetto",
+            "type": "economia_personaggi_menzione",
+            "note": "Bru (pienamente in scena in S3, S4, S5) qui resta offscreen. Noah al Forno intasca un cornetto per Bru 'se lo vede'. Bru non si vede durante il giro. Il cornetto diventa briciole (vedi seed_cornetto_briciole_pattern_a_rinforzo). Callback leggero che mantiene Bru presente come presenza del mondo senza sovraccaricarlo di apparizioni.",
+            "to_story": "s06"
+          },
+          {
+            "callback_id": "cb_s06_002",
+            "from_story": "s04",
+            "element": "salvia_cornice_pianta_nominata_diversa",
+            "type": "ambiente_calendario_stagionale",
+            "note": "Salvia è cornice in S4, qui cammeo in casa sua con pianta diversa — tiglio invece di ortica. Calendario proprio di Salvia attivo (tiglio = fine primavera/inizio estate). Coerenza stagionale Bible §9.2.",
+            "to_story": "s06"
+          },
+          {
+            "callback_id": "cb_s06_003",
+            "from_story": "s01",
+            "element": "fiamma_modalita_chiacchiera_detto_popolare",
+            "type": "voce_ricorrente",
+            "note": "Fiamma in modalità chiacchiera con detto popolare — stessa modalità dell'apertura saga S1. Secondo detto popolare, generico sul carattere di Mèmolo, non anticipazione trama. Eco di apertura ma applicazione diversa.",
+            "to_story": "s06"
+          },
+          {
+            "callback_id": "cb_s06_004",
+            "from_story": "s02",
+            "element": "stria_archetipo_rilancia_non_risponde",
+            "type": "gesto_ricorrente_personaggio",
+            "note": "Stria dalla cattedra sente Pun e rilancia con una sola frase ('E quale cosa?') senza risolvere. Archetipo istituito in S2. Qui conferma in modalità scuola. Prepara il terreno per la modalità S9 e S11.",
+            "to_story": "s06"
+          },
+          {
+            "callback_id": "cb_s06_005",
+            "from_story": "s02",
+            "element": "messaggio_pastori_consegna_offscreen_risolta",
+            "type": "nota_strutturale_chiusa_offscreen",
+            "note": "Il messaggio per i Pastori dato da Stria in S2 era rimasto aperto come decisione. Qui si chiude implicitamente: Gabriel nel tracciare il giro per Mèmolo esclude subito i Pascoli ('troppo lontano per Mèmolo'). Il fatto che i fratelli conoscano i Pascoli e le distanze è coerente con una consegna avvenuta nel frattempo (off-screen, tra S2 e S6). Non serve menzionarla. Il seme S2 si chiude come nota strutturale.",
+            "to_story": "s06"
+          }
+        ],
+        "callback_summary": "S6 chiude blocco B con sei callback distribuiti. Bru offscreen (S5). Salvia con pianta diversa (S4, calendario stagionale). Fiamma modalita chiacchiera detto popolare (eco S1). Stria rilancia non risponde (S2). Messaggio Pastori S2 chiuso implicitamente. Seed Noah raccoglie primo uso canonico (pickup). Pattern A rinforzato da S5 verso S7. Seed Elias piccolo in maturing leggero verso bloom S11. Due semi nuovi piantati. Due debts opened, due debts closed.",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -2706,7 +3007,7 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 9,
-        "chars_with_imgs": 8,
+        "chars_with_imgs": 9,
         "locs_distinct": 2,
         "locs_with_imgs": 0,
         "locs_with_prompt": 1,
@@ -2964,8 +3265,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -2992,10 +3294,11 @@
             "path": "visual/personaggi/individuali/secondari/nodo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
             ]
@@ -3020,8 +3323,10 @@
             "path": "visual/personaggi/individuali/primari/rovo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
+            ]
           },
           "bartolo": {
             "found": true,
@@ -3029,9 +3334,10 @@
             "path": "visual/personaggi/individuali/primari/bartolo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
@@ -3057,11 +3363,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           }
@@ -3090,6 +3397,70 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_bartolo_vede_e_basta",
+          "seed_gabriel_micro_occhiata_noah_cresciuto"
+        ],
+        "seeds_picked_up": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_cornetto_briciole_pattern_a_rinforzo",
+          "seed_noah_raccoglie_oggetti"
+        ],
+        "seeds_maturing_here": [
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_nodo_marinaro_capacita_elias"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s07_001",
+            "from_story": "s05",
+            "element": "nodo_marinaro_insegnato_da_nodo_e_praticato_nella_radura_coi_pini",
+            "type": "capacita_tecnica_applicata",
+            "note": "Il nodo marinaro di Elias — insegnato da Nodo sulla Spiaggia tra S4-S5 e praticato nella radura coi pini per legare il ponte in S5 — trova qui la prima applicazione funzionale reale fuori dalla radura di insegnamento. La mattina al guado di pietre piatte Elias lega i tre rametti della zattera. Il nodo tiene durante il cammino lungo il Fiume e durante lo STRAPP al punto dei due massi. Visibile nei fatti — nessuno lo dice.",
+            "to_story": "s07"
+          },
+          {
+            "callback_id": "cb_s07_002",
+            "from_story": "s05",
+            "element": "pertiche_cadute_diventano_ponte_pattern_a_seminato",
+            "type": "pattern_a_famiglia_immagini_trasversale",
+            "note": "Le pertiche cadute della radura coi pini che diventano ponte (Pattern A seminato in S5) trovano qui la variante piu' piccola e piu' fragile: tre rametti raccolti agli Orti la sera prima diventano zattera, e dopo STRAPP due rametti arrivano alla Bocca comunque. Stessa famiglia di immagini del Pattern A. Variante: pertiche cadute -> ponte che tiene; rametti raccolti -> zattera che si rompe e arriva lo stesso. Il principio e' identico — cose cadute/raccolte diventano materia che porta. Mai nominato. Prima transizione del Pattern A da seminato ad attivo in saga.",
+            "to_story": "s07"
+          },
+          {
+            "callback_id": "cb_s07_003",
+            "from_story": "s06",
+            "element": "cornetto_noah_per_bru_diventa_briciole_pattern_a_rinforzo",
+            "type": "pattern_a_famiglia_immagini_trasversale",
+            "note": "Il cornetto intascato da Noah al Forno in S6 che diventa briciole nel taschino a sera (seed_cornetto_briciole_pattern_a_rinforzo seminato in S6) fa eco di rinforzo qui: seconda immagine della famiglia Pattern A. La zattera rotta che arriva lo stesso alla Bocca e al mare e' cugina del cornetto diventato briciole. Due immagini Pattern A consecutive che si rinforzano senza dichiararsi. Mai nominato.",
+            "to_story": "s07"
+          },
+          {
+            "callback_id": "cb_s07_004",
+            "from_story": "s04",
+            "element": "fermarsi_come_gesto_attivo_pattern_trasferito_tra_fratelli",
+            "type": "gesto_ricorrente_invertito",
+            "note": "Il pattern fermarsi come gesto attivo istituito da Gabriel nella nebbia in S1 e trasferito a Noah tra le radici in S4 (bloomed S4) viene invertito in S7: 'andiamo avanti' diventa la postura dei tre fratelli al punto dei due massi dopo lo STRAPP. Gabriel dice andiamo avanti (inversione netta), Noah dice pero' due rametti vanno avanti (constatazione-continuazione), Elias constata i sassi tenevano non c'era modo (continuazione tecnica). Tre forme del continuare come postura dei fratelli al momento-soglia. Apertura del ciclo cambiare: il fermarsi del blocco A (Delta) si inverte in continuare del blocco C. Bloom_target_stories del seed includeva s07 dall'origine — evento pianificato. Il grafo aggiorna bloom_notes del seed_fermarsi con paragrafo su S7 (inversione pattern).",
+            "to_story": "s07"
+          },
+          {
+            "callback_id": "cb_s07_005",
+            "from_story": "s06",
+            "element": "noah_cresciuto_continuita_evolutiva_non_piange",
+            "type": "personaggio_sviluppo_caratteriale",
+            "note": "Continuita' evolutiva del personaggio Noah: in S6 consegnava il dono a Memolo senza piangere nel cortile, qui non piange allo STRAPP. Micro-callback caratteriale che conferma la crescita del personaggio iniziata in S3 (non torna a casa), confermata in S4 (si ferma solo tra le radici), S6 (consegna). S7 e' la prima prova dove Noah e' motore dell'idea (zattera) e regge il colpo dello STRAPP senza cedere. Pattern a dinamica lunga — non dichiarato nel testo.",
+            "to_story": "s07"
+          }
+        ],
+        "callback_summary": "S7 apre blocco C con cinque callback distribuiti. Nodo marinaro insegnato da Nodo in S4-S5 e praticato nella radura (S5) trova prima applicazione funzionale reale fuori dalla radura di insegnamento — Elias lega i tre rametti al guado, il nodo tiene, sono i sassi a strappare l'erba. Pattern A: pertiche cadute che diventarono ponte in S5 (prima semina formale) trovano variante piu' piccola e fragile nei tre rametti della zattera che diventano zattera e dopo STRAPP arrivano lo stesso al mare — prima scena ATTIVA del Pattern A in saga. Cornetto di Noah per Bru in S6 che diventa briciole fa eco di rinforzo: seconda immagine famiglia Pattern A. Pattern fermarsi come gesto attivo (S1 Gabriel, S4 Noah) viene invertito come previsto da origine: andiamo avanti diventa postura tre fratelli al momento-soglia, apertura ciclo cambiare. Noah cresciuto: continuita' evolutiva dal non-tornare-a-casa di S3, al fermarsi-tra-radici di S4, al consegnare-senza-piangere di S6, al non-piangere-allo-STRAPP di S7 — prima storia dove Noah e' motore dell'idea. Due semi nuovi piantati (seed_bartolo_vede_e_basta, seed_gabriel_micro_occhiata_noah_cresciuto). Quattro debts opened, uno debts closed (nodo_marinaro bloom funzionale). Bartolo Toba Amo prima apparizione canonica come characters_in_scene.",
+        "debts_opened": [],
+        "debts_closed": []
       }
     },
     {
@@ -3372,11 +3743,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -3386,8 +3758,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -3414,11 +3787,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -3474,10 +3848,11 @@
             "path": "visual/personaggi/individuali/secondari/nodo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
             ]
@@ -3516,6 +3891,153 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_nido_vuoto_curato_da_noah",
+          "seed_memolo_sul_pozzo_con_gabriel"
+        ],
+        "seeds_picked_up": [
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_noah_raccoglie_oggetti"
+        ],
+        "seeds_maturing_here": [
+          "seed_gabriel_micro_occhiata_noah_cresciuto",
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto",
+          "seed_vecchie_indicare_in_silenzio"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s08_001",
+            "from_story": "s05",
+            "to_story": "s08",
+            "type": "capacita_tecnica_applicata_in_crisi_reale",
+            "description": "Elias usa il nodo marinaro (insegnato da Nodo in S5, prima applicazione S7 zattera) in crisi reale accanto a Nodo mantenitore. Terza applicazione funzionale, capacita' installata definitivamente. Cenno di testa di Nodo dopo quarto nodo come riconoscimento tecnico muto.",
+            "registered_in_story": "s08"
+          },
+          {
+            "callback_id": "cb_s08_002",
+            "from_story": "s06",
+            "to_story": "s08",
+            "type": "pattern_a_famiglia_immagini_trasversale",
+            "description": "Nido vuoto curato da Noah come variante piccola della famiglia Pattern A (rami caduti → zattera S7, cornetto → briciole S6, nido vuoto → cura S8). Cataste legna noce → legna Forno come eco strutturale macro cerchio annuale verso S12. Seconda scena attiva promossa a bloom pieno.",
+            "registered_in_story": "s08"
+          },
+          {
+            "callback_id": "cb_s08_003",
+            "from_story": "s06",
+            "to_story": "s08",
+            "type": "personaggio_modalita_vocale_ricorrente",
+            "description": "Memolo pronuncia la frase precisa (una a storia — vincolo Bible §4.7). Seconda occorrenza saga dopo 'le cose che si perdono non si perdono' S6. Quota rispettata. Frase: 'l'albero ha aspettato che nessuno fosse sotto'.",
+            "registered_in_story": "s08"
+          },
+          {
+            "callback_id": "cb_s08_004",
+            "from_story": "s06",
+            "to_story": "s08",
+            "type": "gesto_ricorrente_gruppo_cornice_silenziosa",
+            "description": "Vecchie del Mercato alzano una mano un attimo quando il noce cade. Primo bloom cammeo del gesto-firma istituito in S6. Secondo bloom pieno pianificato S11. Vincolo Bible §4.19 mai individuate rispettato.",
+            "registered_in_story": "s08"
+          },
+          {
+            "callback_id": "cb_s08_005",
+            "from_story": "s06",
+            "to_story": "s08",
+            "type": "personaggio_cammeo_ricorrente_e_lore_hook_prima_menzione",
+            "description": "Liu passa con frrr modalita coerente con prima apparizione S6. Porta annuncio fenomeno raro 'forse l'acqua trema' come ipotesi (non certezza). Prima menzione saga — 1 di 2 in saga. Sicurezza aerea: arrivo fase cielo piombo pre-picco.",
+            "registered_in_story": "s08"
+          },
+          {
+            "callback_id": "cb_s08_006",
+            "from_story": "s05",
+            "to_story": "s08",
+            "type": "onomatopea_firma_personaggio_ricorrente",
+            "description": "TOK-TOK-TOK di Nodo presente nel lavoro Mantenitori. Seconda apparizione attiva saga dopo S5 (la menzione contrastiva in voice_note S7 non conta come apparizione attiva). Dentro quota ≤4-5 saga.",
+            "registered_in_story": "s08"
+          }
+        ],
+        "callback_summary": "S8 e' la seconda scena attiva del Pattern A dopo S7, promossa a bloom pieno dell'intera architettura silente: dopo il noce caduto Noah cura un nido vuoto incastrato in biforcazione secondaria (le cose abbandonate arrivano lo stesso come gesto di cura) e i Mantenitori catastano la legna sotto la tettoia del Forno a riposare per gli anni a venire (le cose cadute diventano materia, nel tempo proprio). Elias ripete il nodo marinaro di Nodo per la terza volta saga, ora in crisi reale non in costruzione programmata — S5 imparato, S7 applicato alla zattera, S8 applicato all'emergenza. Memolo pronuncia la seconda frase precisa saga dopo S6 rispettando la quota una-a-storia. Le Vecchie del Mercato fanno il primo bloom cammeo del loro gesto-firma istituito in S6 — una alza la mano un attimo quando il noce cade, le altre annuiscono, zero parole. Liu torna col suo frrr di S6 portando questa volta un annuncio del fenomeno raro 'quando l'acqua trema' come ipotesi non certezza — prima menzione saga del fenomeno, 1 di 2. Il TOK-TOK-TOK di Nodo entra nel lavoro dei Mantenitori per la seconda apparizione attiva dopo S5. Sotto-traccia invisibile al bambino di 4 anni: Gabriel registra la sua seconda micro-occhiata verso Noah — questa volta attraverso un varco tra foglie, vedendo solo tracce del fratello, precursore silente della paura che nascera' come seed autonomo in S9. Cornice di apertura e chiusura al Forno di Fiamma, eco strutturale non dichiarata verso S1 (cornice che ha aperto blocco A) e S12 (cornice che chiudera' saga).",
+        "debts_opened": [
+          {
+            "debt_id": "debt_s08_to_s10_nido_vuoto_bloom_notte",
+            "origin_story": "s08",
+            "target_story": "s10",
+            "rilievo": "alto",
+            "note": "Il nido vuoto curato da Noah in S8 deve riapparire o funzionare come principio in S10 (notte senza luna). 'Il buio era pieno' — Noah porta con se' il principio 'i posti che sembrano vuoti non lo sono'."
+          },
+          {
+            "debt_id": "debt_s08_to_s09_seed_paura_gabriel_semina",
+            "origin_story": "s08",
+            "target_story": "s09",
+            "rilievo": "alto",
+            "note": "ALTISSIMO retrofittato a 'alto' (enum schema). Dopo seconda micro-occhiata S8, prossimo passo e' semina paura autonoma in S9 come seed type=paura brother=gabriel resolution_mode=tenere (seed_paura_gabriel_fratelli_crescono_diversi, forward-reference). S8 rinforza debt verso S9. Architrave strato 3 terna dire/accettare/tenere."
+          },
+          {
+            "debt_id": "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco",
+            "origin_story": "s08",
+            "target_story": "s09",
+            "rilievo": "medio",
+            "note": "Seed relazionale Gabriel-Memolo piantato S8 ha bloom target S9 (compleanno Gabriel — Memolo potrebbe riapparire con gesto tenero corrispondente) e S12 (cornice chiusura saga). target multi-storia: s09 primario, s12 secondario."
+          },
+          {
+            "debt_id": "debt_s08_to_s11_vecchie_indicare_bloom_pieno",
+            "origin_story": "s08",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "note": "MEDIO_ALTO retrofittato a 'alto'. Dopo primo bloom cammeo S8, secondo bloom pieno pianificato S11 come riconoscimento muto a Elias alla festa."
+          },
+          {
+            "debt_id": "debt_s08_to_s10_pattern_a_variante_notturna",
+            "origin_story": "s08",
+            "target_story": "s10",
+            "rilievo": "alto",
+            "note": "Dopo bloom pieno Pattern A in S8, variante notturna (ARCHI 'S10 il buio era pieno') come manifestazione ulteriore del seme gia' bloomed."
+          },
+          {
+            "debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura",
+            "origin_story": "s08",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "note": "Pattern A in variante collettiva (S11 festa che non si vince) e chiusura saga (S12 anno chiude fratelli diversi ancora insieme). Cerchio annuale legna noce simbolico non letterale. target multi-storia: s11 primario, s12 secondario."
+          }
+        ],
+        "debts_closed": [
+          {
+            "debt_id": "debt_s07_to_s08_gabriel_micro_occhiata_noah_maturing_cresciuto",
+            "origin_story": "s07",
+            "target_story": "s08",
+            "rilievo": "alto",
+            "close_mode": "seconda_micro_occhiata_via_varco_tra_foglie_dietro_pozzo_status_seed_active_to_maturing_maturing_in_stories_entry_popolata"
+          },
+          {
+            "debt_id": "debt_s05_to_s08_nodo_marinaro_secondo_bloom",
+            "origin_story": "s05",
+            "target_story": "s08",
+            "rilievo": "alto",
+            "close_mode": "terza_applicazione_funzionale_reale_crisi_bloom_notes_esteso_seed_resta_bloomed",
+            "note": "Retrofittato: id originale 'debt_s08_secondo_bloom_nodo_marinaro' non matchava pattern schema (mancava _to_sNN). Origine s05 (semina nodo marinaro)."
+          },
+          {
+            "debt_id": "debt_s06_to_s08_vecchie_indicare_in_silenzio_primo_bloom_cammeo",
+            "origin_story": "s06",
+            "target_story": "s08",
+            "rilievo": "medio",
+            "close_mode": "status_seminato_to_bloomed_pattern_nodo_marinaro_bloom_target_stories_resta_s08_s11",
+            "note": "Retrofittato: id originale 'debt_s08_seed_vecchie_indicare_in_silenzio_primo_bloom_cammeo' non matchava pattern. Origine s06 (semina firma gestuale vecchie)."
+          },
+          {
+            "debt_id": "debt_s05_to_s08_pattern_a_continuazione_parte",
+            "origin_story": "s05",
+            "target_story": "s08",
+            "rilievo": "alto",
+            "close_mode": "chiusura_parziale_bloom_pieno_s08_parti_s10_s11_s12_restano_aperte_come_originariamente_formulato_multi_target",
+            "note": "Retrofittato: id originale 'debt_s08_pattern_a_continuazione_parte_s08' non matchava pattern. Origine s05 (prima semina formale Pattern A rami caduti)."
+          }
+        ]
       }
     },
     {
@@ -3789,11 +4311,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -3803,11 +4326,12 @@
             "path": "visual/personaggi/individuali/secondari/zolla",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_raccolta.jpg",
+              "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg"
             ]
           },
@@ -3817,9 +4341,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -3845,8 +4370,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -3859,11 +4385,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -3943,10 +4470,11 @@
             "path": "visual/personaggi/individuali/secondari/nodo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
             ]
@@ -3967,6 +4495,141 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_paura_gabriel_fratelli_crescono_diversi",
+          "seed_braccialetto_di_noah_a_gabriel",
+          "seed_fette_uguali",
+          "seed_noah_annoda_da_solo",
+          "seed_compleanno_come_rito_non_rito",
+          "seed_cardo_prima_voce_individuata"
+        ],
+        "seeds_picked_up": [
+          "seed_stria_vede_prima"
+        ],
+        "seeds_maturing_here": [
+          "seed_paura_elias_piccolo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_gabriel_micro_occhiata_noah_cresciuto",
+          "seed_memolo_sul_pozzo_con_gabriel"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s09_001",
+            "from_story": "s02",
+            "to_story": "s09",
+            "type": "archetipo_relazionale_frase_rilancio",
+            "description": "Stria sulla porta della scuola, mattino S9, rilancia a Gabriel 'Tu cosa farai oggi che hai un anno in piu'?' — archetipo S2 ('Tu cosa pensi?') + cornice S6 ('E quale cosa?'). Sa che Gabriel attraversera' qualcosa oggi? Non dichiarato. Preparazione lontana bloom S11 (quattro coni a Elias intenzionali).",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_002",
+            "from_story": "s01",
+            "to_story": "s09",
+            "type": "fiamma_modalita_chiacchiera_detto_popolare_generico",
+            "description": "Fiamma al Forno, sera S9, mentre toglie il dolce di castagne dal forno, chiacchiera col fratello festeggiato. Detto popolare generico: 'Eh ma si sa, anno che gira non e' anno che torna. Ne fa un altro, diverso.' 1 detto, dentro quota. Callback a S1 (apertura saga) e S6 (Memolo generico). Ruolo madre-calore variante per Gabriel (non default madre fratelli).",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_003",
+            "from_story": "s05",
+            "to_story": "s09",
+            "type": "capacita_trasmessa_tra_fratelli_evoluzione_sapere_nodi",
+            "description": "Il sapere dei nodi viaggia da Elias (appreso in S5, applicato S7/S8) a Noah off-screen dopo S8 (variante semplice Marinaro, mani piccole). Prima manifestazione Noah: braccialetto fatto da solo. 'Te l'ho fatto io. Da solo.' tre parole. Eco silenziosa di TUM-tum-TUM S4 (codice dei tre — ora anche il sapere dei nodi e' codice dei tre).",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_004",
+            "from_story": "s06",
+            "to_story": "s09",
+            "type": "gruppo_cuccioli_da_collettivo_a_individuato",
+            "description": "I cuccioli in S6 erano gruppo collettivo (scuola di Stria, cornice). In S9 si individuano: Pun (memoria pratica), Toba (domanda che apre), Bru ('si'), Cardo (prima voce saga — provocazione), Liu' (vola via). Evoluzione cast cuccioli verso distribuzione S11. Cardo prima voce individuata.",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_005",
+            "from_story": "s07",
+            "to_story": "s09",
+            "type": "gesto_precursore_si_stacca_in_paura_autonoma",
+            "description": "Le micro-occhiate Gabriel→Noah S7 (post-STRAPP 'pero' due rametti vanno avanti') e S8 (via varco foglie dopo frase Memolo) qui fioriscono staccandosi: Gabriel non guarda piu' Noah da fuori, agisce in risposta a Noah che dice 'non sono piu' piccolo come prima' — ri-taglia le fette. Il gesto e' il bloom del seed-precursore + la semina della paura autonoma.",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_006",
+            "from_story": "s08",
+            "to_story": "s09",
+            "type": "inversione_ruoli_tenerezza_muta_strato_3",
+            "description": "S8: Gabriel fa sedere Memolo confuso sul Pozzo, gli tiene la mano. S9: Memolo passa una castagna cruda dal cesto di Zolla nella mano di Gabriel al Forno, pomeriggio, senza parole. Inversione speculare senza dichiarazione. Chi ha ricevuto cura presagisce la soglia di chi ha dato cura. Primo bloom parziale del seed_memolo_sul_pozzo_con_gabriel (bloom pieno S12).",
+            "registered_in_story": "s09"
+          },
+          {
+            "callback_id": "cb_s09_007",
+            "from_story": "s06",
+            "to_story": "s09",
+            "type": "calendario_stagionale_zolla_raccolto_castagne_partenza",
+            "description": "Castagne prime dell'anno — calendario Zolla Bible §9.2. In S6 Zolla attivo pieno primavera. S8 attivo estate piena. S9 prime castagne = raccolto autunno che parte. Ponte strutturale verso S11 festa raccolto (Zolla attivo pieno).",
+            "registered_in_story": "s09"
+          }
+        ],
+        "callback_summary": "S9 chiude il blocco C con sette callback distribuiti sulla giornata-soglia di Gabriel. Stria al mattino scuola rilancia con una frase senza rispondere — archetipo installato in S2 ('Tu cosa pensi?') e confermato in S6 ('E quale cosa?'), qui 'Tu cosa farai oggi che hai un anno in piu'?'. I cuccioli di S6 collettivo si individuano in S9 con voci distinte: Pun con memoria pratica, Toba con la domanda che apre, Bru con 'si', Cardo con la provocazione che nessuno riprende (prima voce in saga — passaggio da sfondo a individuato, installazione progressiva del cast verso S11), Liu' che vola verso il Forno prima dei fratelli (canonico, chiude ipotesi D ARCHI §8 — fonte della notizia che i cuccioli sanno). Fiamma al Forno in modalita' chiacchiera tardomattina — eredita S1 e S6, qui ruolo madre-calore variante distribuita per Gabriel (non default madre dei fratelli, Bible §4.1), con un detto popolare generico sul tempo che passa dentro quota saga. Il sapere dei nodi (Elias S5/S7/S8) si trasmette off-screen a Noah dopo S8 (variante semplice Marinaro per mani piccole); prima manifestazione di Noah: il braccialetto fatto da solo, tre parole 'Te l'ho fatto io. Da solo.' — eco silenziosa di TUM-tum-TUM S4. Le micro-occhiate di Gabriel a Noah S7 e S8 fioriscono staccandosi: Gabriel non guarda piu' Noah da fuori, agisce in risposta — ri-taglia le fette uguali dopo 'Non sono piu' piccolo come prima'. Il gesto e' il bloom del seed-precursore e la semina della paura autonoma di Gabriel (architrave strato 3, bloom target S12). Inversione dei ruoli con Memolo da S8: la' Gabriel faceva sedere Memolo confuso sul bordo del Pozzo tenendogli la mano, qui Memolo posa una castagna cruda dal cesto di Zolla nella mano di Gabriel al Forno pomeriggio — primo bloom parziale del seed, secondo bloom pieno S12. Calendario Zolla (Bible §9.2) attivato: prime castagne dell'anno, raccolto autunno che parte — ponte strutturale verso S11 festa raccolto dove Zolla sara' attivo pieno. L'isola respira in continuita': nessun personaggio si e' rinnovato a S9, tutti stanno facendo quello che fanno sempre, e proprio per questo il cambiamento dentro Gabriel risuona piu' forte.",
+        "debts_opened": [
+          {
+            "debt_id": "debt_s09_to_s12_braccialetto_al_polso_gabriel",
+            "origin_story": "s09",
+            "target_story": "s12",
+            "type": "oggetto_piantato_bloom_target_s12_al_polso_mai_descritto_solo_visibile",
+            "note": "[seed_ref: seed_braccialetto_di_noah_a_gabriel] ALTISSIMO — braccialetto brutto-tenero al polso di Gabriel nella scena finale saga S12 e' callback architrave silenzioso. Bambino di 4 vede, rilettore collega, adulto si commuove. Mai descritto come oggetto importante. Materialita' invecchiata stagionalmente (castagna rugata). Deferred_decision Fase E illustrazioni."
+          },
+          {
+            "debt_id": "debt_s09_to_s12_fette_uguali_eco_silenziosa",
+            "origin_story": "s09",
+            "target_story": "s12",
+            "type": "gesto_piantato_bloom_target_s12_eco_silenziosa_quattro_fette_fiamma",
+            "note": "[seed_ref: seed_fette_uguali] ALTO — ARCHI §3.S12 callback tabella rig. 989. Eco silenziosa nel gesto di Fiamma che taglia quattro fette del dolce finale. Numero fette S12 ancora da decidere Fase D."
+          },
+          {
+            "debt_id": "debt_s09_to_s12_paura_gabriel_accolta_non_risolta",
+            "origin_story": "s09",
+            "target_story": "s12",
+            "type": "paura_architrave_resolution_mode_tenere_bloom_s12",
+            "note": "[seed_ref: seed_paura_gabriel_fratelli_crescono_diversi] ALTISSIMO — architrave strato 3 terna dire/accettare/tenere. Gabriel tiene in S12, paura accolta non risolta. Bloom da eseguire con gesti suoi (mani sulla terra Roccia Alta, briciole, braccialetto al polso), mai da personaggio esterno. ARCHI §4 nota architetturale (1)."
+          },
+          {
+            "debt_id": "debt_s09_to_s11_noah_annoda_manifestazione_rituale",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "type": "capacita_nuova_da_collaudare_in_contesto_collettivo",
+            "note": "[seed_ref: seed_noah_annoda_da_solo] MEDIO — Noah annoda qualcosa en passant in S11 festa raccolto (legaccio pacco, nastro banco Fiamma, o altro — decisione Fase D). Senza enfasi, registrazione muta della capacita' installata. Non obbligatorio scena, sufficiente apparizione."
+          },
+          {
+            "debt_id": "debt_s09_to_s11_compleanno_come_rito_non_rito_bloom_collettivo",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "type": "frame_bloom_scalato_a_collettivo",
+            "note": "[seed_ref: seed_compleanno_come_rito_non_rito] ALTO — istituito in S9 come modo-di-fare-feste dell'isola. S11 festa raccolto e' il bloom collettivo: la festa e' lo stesso tipo di rito-non-rito, non si organizza, succede. Pattern A parente (ARCHI §0.5 variante collettiva S11)."
+          },
+          {
+            "debt_id": "debt_s09_to_s11_cardo_seconda_voce_individuata",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "type": "personaggio_installazione_progressiva_due_apparizioni",
+            "note": "[seed_ref: seed_cardo_prima_voce_individuata] MEDIO — Cardo deve avere seconda apparizione individuata in S11 festa raccolto per confermare passaggio da sfondo a individuato. Coerente con ARCHI §0.2 quota saga (cammeo S9 + S11 = 2 totali). Non arco caratteriale di Cardo, installazione progressiva del cast cuccioli."
+          }
+        ],
+        "debts_closed": [
+          {
+            "debt_id": "debt_s08_to_s09_seed_paura_gabriel_semina",
+            "close_mode": "semina_autonoma_paura_gabriel_come_architrave_strato_3",
+            "note": "Semina eseguita tramite nuovo seed seed_paura_gabriel_fratelli_crescono_diversi (status=seminato, bloom_target=[s12]). Il debt era architrave terna strato 3 dire/accettare/tenere. Gabriel tiene in S12 — la paura si semina qui con peso visibile (gesto fette diseguali → uguali dopo frase Noah, sorriso commosso non spiegato, braccialetto tenuto in mano)."
+          },
+          {
+            "debt_id": "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco",
+            "close_mode": "chiusura_parziale_primo_bloom_s09_secondo_bloom_pieno_s12_resta_aperto",
+            "note": "Primo bloom parziale eseguito in S9: cammeo tenero di Memolo al Forno, micro-azione fisica (passare castagna cruda nella mano di Gabriel), nessuna parola. Inversione ruoli S8 (la' Gabriel accudiva Memolo confuso, qui Memolo presagisce la soglia di Gabriel). Seed seed_memolo_sul_pozzo_con_gabriel passa da seminato a bloomed (bloomed_in_story=s09, bloom_type=primo_bloom_parziale_cammeo_tenero_inversione_ruoli). Bloom pieno in S12 resta pianificato come manifestazione ulteriore del seme gia' bloomed (bloom_target_stories conserva [s09, s12])."
+          }
+        ]
       }
     },
     {
@@ -4242,8 +4905,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -4284,11 +4948,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -4298,9 +4963,10 @@
             "path": "visual/personaggi/individuali/primari/bartolo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
@@ -4312,9 +4978,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -4326,11 +4993,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           }
@@ -4386,6 +5054,106 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [],
+        "seeds_picked_up": [
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_gabriel_micro_occhiata_noah_cresciuto",
+          "seed_paura_gabriel_fratelli_crescono_diversi"
+        ],
+        "seeds_maturing_here": [
+          "seed_cornetto_briciole_pattern_a_rinforzo",
+          "seed_paura_elias_piccolo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_paura_noah_buio",
+          "seed_nido_vuoto_curato_da_noah",
+          "seed_bartolo_vede_e_basta"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s10_001",
+            "from_story": "s01",
+            "to_story": "s10",
+            "type": "bloom_paura_architrave_strato_3_ciclo_completo_saga",
+            "description": "Prima apparizione saga della paura del buio di Noah (S1, gesto del raccogliere bastoncino nel freddo bianco) si chiude qui in S10. Ciclo completo: seminato S1, maturato S3 (foresta di sera, due passi e si ferma), bloomed S10 (notte senza luna risolta con 'dire'). Architrave strato 3 chiude — Noah DICE, prima parola della terna dire/accettare/tenere.",
+            "registered_in_story": "s10"
+          },
+          {
+            "callback_id": "cb_s10_002",
+            "from_story": "s03",
+            "to_story": "s10",
+            "type": "evoluzione_dal_silenzio_al_dire_variante_geografica_buio_puro",
+            "description": "Noah fece due passi nella Foresta di sera in S3, si fermò, tornò indietro senza dire. S10 è la variante geografica del buio puro che esplode: stavolta Noah entra nel buio con parole ('Ho paura. Qui è buio.'). Evoluzione dal silenzio-trattenuto al dire-ad-alta-voce. Stesso bambino, stessa paura, altra modalità.",
+            "registered_in_story": "s10"
+          },
+          {
+            "callback_id": "cb_s10_003",
+            "from_story": "s07",
+            "to_story": "s10",
+            "type": "cornice_silenziosa_pontile_seconda_apparizione_bartolo_vede_e_basta",
+            "description": "Bartolo era sul Pontile in S7 quando la zattera dei tre rametti usciva verso la Bocca. È di nuovo sul Pontile in S10 quando i fratelli arrivano dentro la paura. Stesso gesto, stesso spazio, stessa modalità: vede e basta. Strato 2 rilettore coglie la simmetria. Prima cornice silenziosa della terna blocco D.",
+            "registered_in_story": "s10"
+          },
+          {
+            "callback_id": "cb_s10_004",
+            "from_story": "s08",
+            "to_story": "s10",
+            "type": "continuita_pokemon_oggetto_curato_riappare_cura_diventa_presenza",
+            "description": "Il nido vuoto curato da Noah dietro il Pozzo (S8) riappare sul comodino della stanza in S10. Cura diurna di maggio diventa presenza notturna di autunno. Pattern A variante notturna-interna. Continuità Pokémon: oggetti toccati non scompaiono, accumulano significato.",
+            "registered_in_story": "s10"
+          },
+          {
+            "callback_id": "cb_s10_005",
+            "from_story": "s04",
+            "to_story": "s10",
+            "type": "eco_silenziosa_codice_dei_tre_tum_tum_tum_mani_che_si_cercano_al_buio",
+            "description": "Nel TUM-tum-TUM di S4 (battito dei tre) è già implicito il codice dei fratelli che si cercano col gesto. In S10 il codice si ripete silenzioso: mano di Noah cerca mano di Gabriel al buio, Elias si alza e trova la lanterna senza chiedere. Nessun TUM-tum-TUM esplicito nel testo — eco silenziosa. Preparazione verso S12 (mani sulla terra, Roccia Alta).",
+            "registered_in_story": "s10"
+          }
+        ],
+        "callback_summary": "La Notte senza Luna raccoglie con peso tutti i fili lasciati dalla saga sul buio e sulla paura di Noah. La paura del buio, seminata nel primo gesto di Noah in S1 (raccogliere il bastoncino nel freddo bianco) e maturata tra le soglie della Foresta di sera in S3, si scioglie qui nel modo più semplice possibile — dicendola. L'eco del TUM-tum-TUM di S4, codice dei fratelli, torna nel gesto silenzioso delle mani che si cercano al buio — nessun battito esplicito, solo due palmi che si trovano. Il nido vuoto che Noah curò dietro il Pozzo in S8, parte della prima scena attiva del Pattern A, è ora sul comodino della stanza: cura-di-giorno diventata presenza-di-notte. Il buio era pieno — manifestazione notturna del Pattern A già bloomed in S8, senza mai nominarlo. Bartolo sul Pontile all'alba è lo stesso Bartolo di S7 quando la zattera dei tre rametti usciva verso la Bocca — stesso spazio, stesso occhio, stessa modalità di 'vedere e basta'. Prima cornice silenziosa della terna blocco D. I fratelli camminano soli con una lanterna velata e arrivano dove il buio finisce. La paura non sparisce, viene detta, e dire è dove comincia il crescere. Noah DICE — prima parola della terna dire/accettare/tenere che si asciugherà fino al gesto silenzioso di S12.",
+        "debts_opened": [
+          {
+            "debt_id": "debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "note": "Amo è stato messaggero diurno in S10 e cammeo-pescatore all'alba. In S11 (festa raccolto) Amo deve essere cornice silenziosa — seconda della terna blocco D (Bartolo S10, Amo S11, Grunto S12 frammento). Architrave terna cornici silenziose: il mondo dell'isola è cornice, mai risolutore delle paure dei fratelli."
+          }
+        ],
+        "debts_closed": [
+          {
+            "debt_id": "debt_s01_to_s10_paura_noah_buio_emerge_pienamente",
+            "close_mode": "bloom_pieno_architrave_strato_3_noah_dice",
+            "note": "Seed_paura_noah_buio passa da maturing (S1 origin, S3 maturing) a bloomed in S10. Noah dice 'Ho paura. Qui è buio.' — due frasi 5 parole totali (2+3) separate da silenzio tipografico nel buio pieno della stanza. Poi cammino coi fratelli sotto lanterna velata di Elias, arrivo al Pontile all'alba. Bartolo fa spazio, zero parole. La paura non sparisce — viene detta e attraversata. Architrave terna strato 3: Noah DICE, prima parola della terna dire/accettare/tenere."
+          },
+          {
+            "debt_id": "debt_s04_to_s10_paura_noah_buio_bloom_pieno_risolta_dire",
+            "close_mode": "chiusura_coincidente_debt_s01_stesso_bloom",
+            "note": "Stesso bloom di debt_s01_to_s10 — il debt aperto in S4 era anticipazione della risoluzione modale 'dire'. Chiusura coincidente, nessuna doppia azione. Resolution_mode 'dire' confermato come canonico per Noah."
+          },
+          {
+            "debt_id": "debt_s07_to_s10_bartolo_vede_e_basta_bloom_notte_noah_cornice_silenziosa",
+            "close_mode": "bloom_pieno_prima_cornice_silenziosa_blocco_d",
+            "note": "Seed_bartolo_vede_e_basta passa da seminato (S7) a bloomed in S10. Bartolo sta sul Pontile all'alba, vede i fratelli arrivare, fa spazio sulla panca, un occhio anziano che si chiude lento e si riapre lento. Zero parole, zero gesti attivi. Prima cornice silenziosa della terna blocco D (Bartolo-Amo-Grunto). Architrave strato 2: rilettore coglie che Bartolo era lì anche in S7 quando la zattera usciva. Mondo dell'isola come cornice, mai come risolutore."
+          },
+          {
+            "debt_id": "debt_s08_to_s10_nido_vuoto_bloom_notte",
+            "close_mode": "bloom_pieno_proto_gesto_cura_nel_buio",
+            "note": "Seed_nido_vuoto_curato_da_noah passa da seminato (S8, dietro il Pozzo) a bloomed in S10 (sul comodino della stanza). Quando Noah si sveglia al buio e ha paura, il nido è lì — presenza silenziosa non commentata. Cura diurna di maggio diventa presenza notturna di autunno. Il buio era pieno."
+          },
+          {
+            "debt_id": "debt_s08_to_s10_pattern_a_variante_notturna",
+            "close_mode": "manifestazione_ulteriore_seme_gia_bloomed_variante_notturna_interna",
+            "note": "Seed_pattern_a_rami_caduti_diventano_materia resta bloomed (bloom pieno S8). Manifestazione ulteriore in S10: il buio della stanza è pieno (fiato dei fratelli, nido sul comodino, calore residuo coperte). Pattern A in variante notturna-interna invece di diurna-esterna come S8. Mai dichiarato nel testo. Accumulo post-bloom coerente col pattern saga."
+          },
+          {
+            "debt_id": "debt_s05_s07_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga",
+            "close_mode": "chiusura_parziale_multi_target_s10_manifesta_s11_s12_restano_aperte",
+            "note": "Debt multi-target aperto S5 (e ripetuto S7). La parte S10 è chiusa con manifestazione notturna. Le parti S11 (variante collettiva festa raccolto) e S12 (chiusura saga) restano aperte come originariamente formulate. Coerente pattern di chiusura parziale multi-target adottato in S8 e S9."
+          }
+        ]
       }
     },
     {
@@ -4406,7 +5174,7 @@
       "canon_additions_todo": [],
       "stats": {
         "chars_distinct": 15,
-        "chars_with_imgs": 13,
+        "chars_with_imgs": 14,
         "locs_distinct": 2,
         "locs_with_imgs": 0,
         "locs_with_prompt": 2,
@@ -4673,11 +5441,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -4701,11 +5470,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -4715,10 +5485,11 @@
             "path": "visual/personaggi/individuali/secondari/nodo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_insegna.jpg",
+              "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/secondari/nodo/immagini/nodo_turnaround_v1.jpg"
             ]
@@ -4729,11 +5500,12 @@
             "path": "visual/personaggi/individuali/secondari/salvia",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
             ]
           },
@@ -4757,9 +5529,10 @@
             "path": "visual/personaggi/individuali/primari/bartolo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
@@ -4771,9 +5544,10 @@
             "path": "visual/personaggi/individuali/cuccioli/bru",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
@@ -4799,8 +5573,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -4827,8 +5602,10 @@
             "path": "visual/personaggi/individuali/primari/rovo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
+            ]
           },
           "toba": {
             "found": true,
@@ -4881,6 +5658,210 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_coni_stria_ghiande_dipinte_gesto_annuale"
+        ],
+        "seeds_picked_up": [
+          "seed_noah_annoda_da_solo",
+          "seed_cardo_prima_voce_individuata",
+          "seed_paura_gabriel_fratelli_crescono_diversi",
+          "seed_pallone_stoffa_cucita",
+          "seed_bru_presenza_che_custodisce",
+          "seed_nodo_marinaro_capacita_elias",
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_vecchie_indicare_in_silenzio"
+        ],
+        "seeds_maturing_here": [
+          "seed_cornetto_briciole_pattern_a_rinforzo"
+        ],
+        "seeds_bloomed_here": [
+          "seed_paura_elias_piccolo",
+          "seed_stria_vede_prima",
+          "seed_compleanno_come_rito_non_rito"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s11_001_vecchie_stria_bloom_architrave_elias_accettare",
+            "from_story": "s02",
+            "to_story": "s11",
+            "type": "bloom_architrave_riconoscimento_muto_pre_linguistico_stria_vede_prima_vecchie_vedono_dopo_come_comunita",
+            "description": "Doppio bloom architrave accorpato: (1) seed_stria_vede_prima — dopo S2 ('Tu cosa pensi?'), S6 (sente Pun), S9 ('Tu cosa farai oggi che hai un anno in più?') → S11 Stria dà quattro coni a Elias invece di tre, sguardo mezzo secondo più lungo, zero commento, sa che Elias darà via uno; (2) seed_vecchie_indicare_in_silenzio — firma-gruppo istituita S6, manifestata S8, culmine S11: una vecchia alza la mano, indica Elias, lo guarda una volta, annuisce, torna a guardare avanti. Stria vede prima, le Vecchie vedono dopo come comunità — stesso riconoscimento muto a due distanze temporali. Riconoscimento pre-linguistico che permette a Elias di accettare.",
+            "registered_in_story": "s11"
+          },
+          {
+            "callback_id": "cb_s11_002_nodo_marinaro_manifestazione_festa",
+            "from_story": "s05",
+            "to_story": "s11",
+            "type": "capacita_installata_nodo_marinaro_manifestazione_festa_corda_intrecciata",
+            "description": "Il nodo Marinaro insegnato da Nodo a Elias in S5 (dopo il ponte di rami), usato per la zattera in S7 e per legare l'albero caduto in S8, in S11 si manifesta come gesto festivo: Elias lavora corda intrecciata al banco che Nodo ripara (TOK-TOK-TOK, quarta occorrenza saga). Capacità installata ormai parte del modo di essere utile di Elias — 'quello che sa fare un nodo'.",
+            "registered_in_story": "s11"
+          },
+          {
+            "callback_id": "cb_s11_003_rito_non_rito_bloom_collettivo",
+            "from_story": "s09",
+            "to_story": "s11",
+            "type": "bloom_collettivo_rito_non_rito_festa_raccolto_scala_isola",
+            "description": "Il compleanno di Gabriel in S9 (modo di fare feste dell'isola: nessuno capo, fette uguali, non si premia nessuno) trova il bloom collettivo in S11: la Festa del Raccolto è lo stesso tipo di rito a scala di tutta l'isola. 'Non si premia nessuno. Non c'è capo. Si fa.' Piccoli giochi collettivi non gare. Ognuno porta qualcosa. Il modello compleanno-familiare si espande in modello festa-isola. Continuità strutturale.",
+            "registered_in_story": "s11"
+          },
+          {
+            "callback_id": "cb_s11_004_pattern_a_variante_collettiva",
+            "from_story": "s05",
+            "to_story": "s11",
+            "type": "pattern_a_variante_collettiva_festa_raccolto_terza_scena_attiva_blocco_d",
+            "description": "Pattern A — cose rotte/mancanti che arrivano lo stesso — si manifesta in S11 in variante collettiva: festa che non si vince, cono dato a Bru (dare ciò che hai in più a chi non aveva), frutti da fuori di Bartolo (cose che arrivano in più), sgabello rotto dei cuccioli che rotola col pomo (rotto → ride → festa continua). Mai dichiarato. Terza scena attiva blocco D (dopo S10 notturna-interna). Origine semina S5 (rami caduti → ponte), prima scena attiva S7 (zattera rotta), bloom pieno S8 (albero caduto). S11 variante collettiva. S12 ultima manifestazione saga (chiusura).",
+            "registered_in_story": "s11"
+          },
+          {
+            "callback_id": "cb_s11_005_bartolo_modo_canonico_frutti_da_fuori",
+            "from_story": "s07",
+            "to_story": "s11",
+            "type": "bartolo_modo_canonico_fa_zero_parole_cammeo_porta_frutti_da_fuori_porta_oltre_il_mare_fase_f",
+            "description": "Bartolo modo canonico 'vede e fa, zero parole' confermato (S7 zattera dei tre rametti, S10 notte Pontile alba, S11 festa): arriva dal Pontile nel pomeriggio col cesto di frutti da fuori (non crescono sull'isola), posa al banco di Fiamma. Non dice da dove. Mano alzata che ricade (gesto canonico). Porta aperta Fase F — 'cosa c'è oltre il mare?'. Debt aperto s11→s12 per chiusura parziale S12 (presenza implicita nella barca) e resto Fase F.",
+            "registered_in_story": "s11"
+          }
+        ],
+        "callback_summary": "La Festa del Raccolto è la prima volta che l'isola intera si attiva collettivamente in saga — callback strutturale al giro completo di S6 (prima attraversata mandala), eco preparatoria verso S12 (ultima attraversata contemplativa dall'alto). I cuccioli ricompaiono tutti insieme dopo la distribuzione frammentata blocco C (S6 collettivo, S9 Cardo prima voce) — Cardo ha seconda voce individuata, chiude debt S9 su seconda apparizione. La firma-gesto delle Vecchie del Mercato raggiunge il culmine saga dopo la semina S6 (indica un cespuglio dietro l'Albero Vecchio) e la manifestazione S8 (cammeo). In S11 indica Elias — bloom pieno della firma come riconoscimento pre-linguistico che salva il fratello di mezzo senza spiegarlo. Stria porta a compimento il suo filone 'vedere prima': dopo S2 (seme 'Tu cosa pensi?'), S9 (accumulo), in S11 dà quattro coni a Elias intenzionalmente (bloom). Stria vede prima, le Vecchie vedono dopo come comunità — stesso riconoscimento muto a due distanze temporali. Il nodo Marinaro di Elias (S5 insegnato, S7 zattera, S8 legare albero) si manifesta festivo sulla corda intrecciata al banco. Il Pattern A si manifesta in variante collettiva (terza scena attiva blocco D, quarta saga): festa che non si vince, cono a Bru, frutti da fuori di Bartolo, pomo che rotola. Chiude parzialmente i debt multi-target S5/S6/S7/S8 sul Pattern A — resta aperta la parte S12 per chiusura saga. Bartolo conferma modo canonico 'vede e fa, zero parole' (S7 zattera, S10 notte, S11 frutti) — chiave della porta socchiusa verso oltre il mare (Fase F). Bru è riconosciuto da Elias come 'quello-solo', chiude l'arco di presenza minimale che custodisce (S3 intravisto, S4 Foresta, S5 ponte) — e segna la cura a distanza di Rovo, mai nominata nel villaggio ma sempre implicita. Compleanno di Gabriel (S9) come rito-non-rito familiare si espande in festa-isola come rito-non-rito collettivo — stesso principio ('non si premia nessuno, non c'è capo, si fa') a scala diversa. Bloom collettivo. Amo seconda cornice silenziosa della terna blocco D (Bartolo S10, Amo S11, Grunto S12 frammento). Il mondo dell'isola è cornice, mai risolutore delle paure dei fratelli. Paura di Gabriel (seminata S9, prima micro-pressione S10) riceve seconda micro-pressione S11: Gabriel vede Elias visto dalle Vecchie, sente senza capire che il fratello di mezzo è in un territorio suo. Prepara bloom S12, modo tenere, zero parole.",
+        "debts_opened": [
+          {
+            "debt_id": "debt_s11_to_s12_frutti_da_fuori_bartolo_porta_oltre_il_mare_fase_f",
+            "origin_story": "s11",
+            "target_story": "s12",
+            "rilievo": "alto",
+            "note": "Bartolo arriva al Pontile pomeriggio s11 con cesto di frutti da fuori (non crescono sull'isola). Strato 3 aperto 'oltre il mare'. Bloom in S12."
+          },
+          {
+            "debt_id": "debt_s11_to_s12_coni_stria_gesto_annuale_eco_anno_chiuso",
+            "origin_story": "s11",
+            "target_story": "s12",
+            "rilievo": "medio",
+            "note": "Coni di Stria con ghiande dipinte come gesto annuale: eco silenziosa per chiusura saga in s12."
+          }
+        ],
+        "debts_closed": [
+          {
+            "debt_id": "debt_s02_to_s11_paura_elias_bloom_accettazione_via_vecchie",
+            "origin_story": "s02",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "bloom_pieno_architrave_strato_3_elias_accetta",
+            "note": "Seed_paura_elias_piccolo da maturing (S2-S9) a bloomed in S11. Riconoscimento muto Vecchie + quattro coni Stria. 'Va bene.' (2 parole)."
+          },
+          {
+            "debt_id": "debt_s02_to_s11_stria_vede_prima_bloom_quattro_coni_a_elias",
+            "origin_story": "s02",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "bloom_pieno_quattro_coni_a_elias_riconoscimento_chi_cresce_dentro"
+          },
+          {
+            "debt_id": "debt_s03_to_s11_bru_bloom_riconosciuto_da_elias",
+            "origin_story": "s03",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "bloom_pieno_bru_riconosciuto_da_elias_quarto_cono_distribuito"
+          },
+          {
+            "debt_id": "debt_s03_to_s11_pallone_ricomparsa_giochi_cuccioli_tentativo",
+            "origin_story": "s03",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "ricomparsa_pallone_di_stoffa_giochi_cuccioli_eco_silenziosa"
+          },
+          {
+            "debt_id": "debt_s04_to_s11_paura_elias_bloom_accettazione_vecchie_micro_sguardi_continuano_s5_s6_s9",
+            "origin_story": "s04",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "bloom_architrave_chiusura_micro_sguardi_storti_s5_s6_s9_culminano_qui"
+          },
+          {
+            "debt_id": "debt_s05_to_s11_nodo_marinaro_bloom_festa_corda_intrecciata",
+            "origin_story": "s05",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "bloom_collettivo_corda_intrecciata_alla_festa_capacita_installata_in_uso_sociale"
+          },
+          {
+            "debt_id": "debt_s05_to_s11_paura_elias_bloom_accettazione_vecchie_continua_maturing_s6",
+            "origin_story": "s05",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "continuita_traiettoria_paura_elias_da_fare_senza_avere_a_va_bene"
+          },
+          {
+            "debt_id": "debt_s06_to_s08_s11_vecchie_indicare_in_silenzio_bloom_gesto_riconoscimento_cresce_fino_a_s11_elias",
+            "origin_story": "s06",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "culmine_architrave_gesto_vecchie_da_indicazione_a_riconoscimento_muto_a_elias"
+          },
+          {
+            "debt_id": "debt_s08_to_s11_vecchie_indicare_bloom_pieno",
+            "origin_story": "s08",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "bloom_pieno_vecchie_indicare_riconoscimento_a_elias_strato_3_chiuso"
+          },
+          {
+            "debt_id": "debt_s09_to_s11_noah_annoda_manifestazione_rituale",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "noah_annoda_legaccio_pacco_o_nastro_banco_fiamma_en_passant"
+          },
+          {
+            "debt_id": "debt_s09_to_s11_compleanno_come_rito_non_rito_bloom_collettivo",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "festa_raccolto_come_rito_non_rito_bloom_collettivo_modo_di_fare_feste_dell_isola"
+          },
+          {
+            "debt_id": "debt_s09_to_s11_cardo_seconda_voce_individuata",
+            "origin_story": "s09",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "cardo_seconda_apparizione_individuata_alla_festa_quota_2_2_chiusa"
+          },
+          {
+            "debt_id": "debt_s10_to_s11_amo_cornice_silenziosa_terna_blocco_d",
+            "origin_story": "s10",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "amo_cornice_silenziosa_terna_blocco_d_dalla_riva_o_pontile"
+          },
+          {
+            "debt_id": "debt_s05_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga",
+            "origin_story": "s05",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_succede"
+          },
+          {
+            "debt_id": "debt_s06_to_s07_s08_s10_s11_s12_cornetto_briciole_pattern_a_rinforzo_immagini_trasversali",
+            "origin_story": "s06",
+            "target_story": "s11",
+            "rilievo": "medio",
+            "close_mode": "cornetto_briciole_eco_silenziosa_alla_festa_immagine_pattern_a_rinforzo"
+          },
+          {
+            "debt_id": "debt_s07_to_s08_s10_s11_s12_pattern_a_continuazione_attivazioni_trasversali",
+            "origin_story": "s07",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "pattern_a_continuazione_attivazione_collettiva_festa_pieno_funzionamento"
+          },
+          {
+            "debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura",
+            "origin_story": "s08",
+            "target_story": "s11",
+            "rilievo": "alto",
+            "close_mode": "pattern_a_variante_collettiva_festa_che_non_si_vince_s12_resta_aperto_per_chiusura_saga"
+          }
+        ]
       }
     },
     {
@@ -4903,7 +5884,7 @@
         "chars_distinct": 11,
         "chars_with_imgs": 9,
         "locs_distinct": 6,
-        "locs_with_imgs": 1,
+        "locs_with_imgs": 2,
         "locs_with_prompt": 5,
         "objs_distinct": 0,
         "objs_with_prompt": 0,
@@ -5150,11 +6131,12 @@
             "path": "visual/personaggi/individuali/primari/fiamma",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg",
+              "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg"
             ]
           },
@@ -5164,8 +6146,9 @@
             "path": "visual/personaggi/individuali/bambini/gabriel",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
+              "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
@@ -5178,10 +6161,11 @@
             "path": "visual/personaggi/individuali/primari/grunto",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg",
+              "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
               "visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg"
             ]
@@ -5220,9 +6204,10 @@
             "path": "visual/personaggi/individuali/primari/bartolo",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg",
+              "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg"
@@ -5252,11 +6237,12 @@
             "path": "visual/personaggi/individuali/cuccioli/pun",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 4,
+            "n_images": 5,
             "image_paths": [
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
+              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
               "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
             ]
           },
@@ -5305,8 +6291,10 @@
             "path": "visual/luoghi/quartiere_terra/orti_del_cerchio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 0,
-            "image_paths": []
+            "n_images": 1,
+            "image_paths": [
+              "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg"
+            ]
           },
           "guado_di_pietre_piatte": {
             "found": true,
@@ -5351,6 +6339,184 @@
       },
       "inventory": {
         "exists": false
+      },
+      "narrative_chronology": {
+        "seeds_planted": [
+          "seed_fiamma_sguardo_lungo_gabriel_uscita_mattino_fase_f",
+          "seed_concerto_tre_venti_fenomeno_raro_allineamento",
+          "seed_frutti_da_fuori_bartolo_oltre_il_mare_fase_f"
+        ],
+        "seeds_picked_up": [
+          "seed_pagnotta_grunto_rito",
+          "seed_grunto_prima_apparizione",
+          "seed_due_passi_dal_burrone",
+          "seed_tum_tum_tum_codice_fratelli",
+          "seed_gesto_della_terra_palmo",
+          "seed_radura_coi_pini_luogo_silenzioso",
+          "seed_paura_gabriel_fratelli_crescono_diversi",
+          "seed_braccialetto_di_noah_a_gabriel",
+          "seed_fette_uguali",
+          "seed_cornetto_briciole_pattern_a_rinforzo",
+          "seed_pattern_a_rami_caduti_diventano_materia",
+          "seed_memolo_sul_pozzo_con_gabriel",
+          "seed_coni_stria_ghiande_dipinte_gesto_annuale"
+        ],
+        "seeds_maturing_here": [],
+        "seeds_bloomed_here": [
+          "seed_paura_gabriel_fratelli_crescono_diversi",
+          "seed_braccialetto_di_noah_a_gabriel",
+          "seed_fette_uguali",
+          "seed_cornetto_briciole_pattern_a_rinforzo",
+          "seed_pagnotta_grunto_rito",
+          "seed_grunto_prima_apparizione",
+          "seed_due_passi_dal_burrone",
+          "seed_radura_coi_pini_luogo_silenzioso",
+          "seed_tum_tum_tum_codice_fratelli",
+          "seed_gesto_della_terra_palmo"
+        ],
+        "callbacks_made": [
+          {
+            "callback_id": "cb_s12_001_cornice_forno_simmetria_s1_s12_pagnotta_grunto_buono",
+            "from_story": "s01",
+            "to_story": "s12",
+            "type": "cornice_simmetrica_apertura_chiusura_saga_pagnotta_a_grunto_rito_bloom_totale_scambio_buono_eco_rovesciato"
+          },
+          {
+            "callback_id": "cb_s12_002_cengia_due_passi_dal_burrone_fratelli_cresciuti_sanno_isola",
+            "from_story": "s01",
+            "to_story": "s12",
+            "type": "spatial_echo_bloom_fratelli_salgono_cengia_senza_indicazione_sapere_installato_isola_come_corpo"
+          },
+          {
+            "callback_id": "cb_s12_003_bloom_architrave_paura_gabriel_tenere_terna_strato_3_completa_braccialetto",
+            "from_story": "s09",
+            "to_story": "s12",
+            "type": "bloom_architrave_terza_parola_terna_strato_3_tenere_0_parole_gesto_palmo_sulla_terra_braccialetto_al_polso_curva_numerica_5_2_0_completata"
+          },
+          {
+            "callback_id": "cb_s12_004_codice_fratelli_variante_finale_mani_sulla_terra_gesto_palmo_roccia_alta",
+            "from_story": "s04",
+            "to_story": "s12",
+            "type": "co_bloom_codice_fratelli_variante_muta_finale_TUM_tum_TUM_diventa_appoggio_muto_gesto_palmo_veicolante_risoluzione_architrave"
+          },
+          {
+            "callback_id": "cb_s12_005_fette_uguali_cornetto_briciole_fiamma_taglia_quattro_bloom_pattern_a_rinforzo",
+            "from_story": "s09",
+            "to_story": "s12",
+            "type": "bloom_doppio_fette_uguali_eco_silenziosa_fiamma_quattro_fette_dolce_normale_e_bloom_cornetto_briciole_gabriel_prende_dal_piatto_noah_gesto_antico_di_sempre_pattern_a_rinforzo_chiusura_deferred_20"
+          },
+          {
+            "callback_id": "cb_s12_006_pattern_a_chiusura_trasversale_saga_ultima_manifestazione_famiglia_immagini",
+            "from_story": "s05",
+            "to_story": "s12",
+            "type": "pattern_a_chiusura_silente_trasversale_saga_ultima_manifestazione_famiglia_immagini_cose_rotte_arrivano_lo_stesso_convergenza_5_immagini_simultanee"
+          },
+          {
+            "callback_id": "cb_s12_007_radura_pini_passaggio_autunnale_when_water_trembles_2_di_2_quota_chiusa",
+            "from_story": "s05",
+            "to_story": "s12",
+            "type": "bloom_luogo_radura_silenziosa_passaggio_autunnale_senza_sosta_when_water_trembles_guado_nord_2_di_2_saga_quota_chiusa_flag_quote_tracker"
+          },
+          {
+            "callback_id": "cb_s12_008_liu_mestiere_informale_apertura_concerto_oggi_suonano_nome_installato",
+            "from_story": "s06",
+            "to_story": "s12",
+            "type": "liu_mestiere_informale_portatrice_notizie_prima_a_chiamarlo_suonano_installa_nome_concerto_fenomeno_gia_noto_abitanti"
+          },
+          {
+            "callback_id": "cb_s12_009_bartolo_modo_canonico_cammeo_pontile_mattino_presenza_implicita_barca_sigillo",
+            "from_story": "s07",
+            "to_story": "s12",
+            "type": "bartolo_modo_canonico_fa_zero_parole_doppia_presenza_cammeo_mattino_visibile_presenza_implicita_sigillo_finale_barca_dormiente_porta_fase_f_oltre_il_mare_socchiusa"
+          }
+        ],
+        "callback_summary": "Quando i Tre Venti Suonano Insieme e la storia che chiude la cornice\naperta a S1: la pagnotta a Grunto con cui Fiamma ha aperto la saga\nritorna come cornice mattutina (Fiamma mette una pagnotta nella\nsacca di Gabriel, dice una e per Grunto), e al Burrone Gabriel tira\nfuori la pagnotta, la posa sulla pietra, Grunto annusa, dice 'Buono.'\n— una parola sola, identica a S1 dove era Grunto a dirla per primo.\nNoah ora dice 'Buono?' (eco rovesciato: in S1 Grunto dice Buono, in\nS12 e Noah a chiederlo per primo, il piccolo che non e piu piccolo\ncome prima prende il peso del rito). Subito prima della pagnotta,\nGrunto ha detto il frammento pre-Vento unico saga — guardando\nlontano, 'una volta era visto, adesso si respira' — e i fratelli\nnon reagiscono, forse Noah sposta un piede, massimo. Strato 3\narchitrave della saga piantato proprio qui.\n\nDal Burrone i fratelli salgono alla cengia verso Roccia Alta e la\nsanno senza che nessuno la indichi: sono cresciuti, conoscono l'isola\ncome corpo. Bloom di 'due passi dal Burrone' (S1 locuzione rituale)\ne 'Gabriel sa la strada senza vedere' (S4 capacita) che si estende\nai tre.\n\nSulla Roccia Alta il Concerto. Per la prima volta in saga i Tre\nVenti soffiano insieme — Liu lo aveva chiamato suonano all'alba,\nimplicando un nome che gli abitanti conoscono, fenomeno installato\ncome dato di mondo. Nel momento-soglia Gabriel appoggia il palmo\nsulla terra: bloom finale del gesto-palmo S4 e variante finale muta\ndel codice TUM-tum-TUM S4 (l'appoggio sostituisce il colpo, il\ncodice matura senza suono). Noah e Elias chiudono il triangolo\nsenza guardare. Gabriel tiene la paura — terza parola terna strato\n3 dopo Noah S10 (dire, 5 parole) ed Elias S11 (accettare, 2 parole),\ncurva numerica completata con 0 parole.\n\nAl ritorno passano per la Piazza del Villaggio: una ghianda dipinta\ncaduta vicino alla Panca di Pietra chiude il debt S11 coni-Stria-\ngesto-annuale (cosa minima che resta dopo il ritmo annuale); la\ncasetta tonda di Memolo ha una luce ambigua dietro le persiane\n(potrebbe essere lampadina, potrebbe essere riflesso di cielo sul\nvetro) — eco silenziosa di Memolo del pozzo S8/S9, Memolo\noff-screen, tutti dentro.\n\nAl Forno sera Fiamma taglia quattro fette uguali di un dolce normale\n(eco silenziosa delle fette uguali di Gabriel S9 — ora Fiamma fa al\nsuo posto, il modo-di-tagliare-uguali e della famiglia); siede con\nloro per la prima volta in saga; Gabriel prende una briciola dal\npiatto di Noah col dito, Noah sposta il piatto verso Gabriel —\nbloom finale del seed cornetto-briciole Pattern A rinforzo, le cose\nminime che stanno e riempiono, gesto antico dei due fratelli che\nsopravvive alla crescita di Noah. Il braccialetto di Noah S9 e al\npolso di Gabriel, visibile, non descritto come oggetto importante.\nFiamma dice una sola frase — 'Domani brina.' — mentre versa\nqualcosa di caldo nelle tazze. Bartolo non si vede ma e implicito\nnella barca, porta Fase F socchiusa verso oltre il mare.\n\nNel cammino sono toccati anche: Bartolo mano alzata che ricade al\nPontile mattino (quarto cammeo saga tratto canonico S7->S10->S11->\nS12), la radura dei pini (bloom luogo-silenzioso S5, passaggio\nautunnale senza sosta), il guado di pietre piatte nord dove\nl'acqua trema piano (2a e ultima manifestazione saga del fenomeno,\nquota chiusa, Pattern A in miniatura — l'increspatura controcorrente\nnon rompe il flusso). Pattern A chiude il suo ciclo saga con\nconvergenza di piu immagini simultanee. Mai nominato, mai\ndichiarato.",
+        "debts_opened": [],
+        "debts_closed": [
+          {
+            "debt_id": "debt_s01_to_s12_pagnotta_grunto_cornice_chiusura_saga_al_forno",
+            "origin_story": "s01",
+            "close_mode": "bloom_pieno_seed_pagnotta_grunto_rito_bloom_totale_cornice_apertura_chiusura_saga"
+          },
+          {
+            "debt_id": "debt_s01_to_s12_cengia_burrone_spatial_echo_cresciuti_lo_sapranno_senza_vederlo",
+            "origin_story": "s01",
+            "close_mode": "bloom_pieno_seed_due_passi_dal_burrone_fratelli_salgono_cengia_senza_indicazione"
+          },
+          {
+            "debt_id": "debt_s01_to_s12_grunto_frammento_pre_vento_unico_saga",
+            "origin_story": "s01",
+            "close_mode": "bloom_pieno_seed_grunto_prima_apparizione_frammento_una_volta_era_visto_adesso_si_respira"
+          },
+          {
+            "debt_id": "debt_s04_to_s12_tum_tum_tum_eco_silenziosa_mani_sulla_terra_forno",
+            "origin_story": "s04",
+            "close_mode": "bloom_pieno_seed_tum_tum_tum_codice_fratelli_variante_finale_muta_roccia_alta_correzione_posizione_non_forno_deferred_27"
+          },
+          {
+            "debt_id": "debt_s04_to_s12_gesto_palmo_sulla_terra_bloom_finale_saga",
+            "origin_story": "s04",
+            "close_mode": "bloom_pieno_seed_gesto_della_terra_palmo_co_veicolato_con_tum_tum_tum"
+          },
+          {
+            "debt_id": "debt_s05_to_s12_radura_coi_pini_bloom_passaggio_autunnale_verso_roccia_alta",
+            "origin_story": "s05",
+            "close_mode": "bloom_pieno_seed_radura_coi_pini_luogo_silenzioso_passaggio_autunnale_senza_sosta"
+          },
+          {
+            "debt_id": "debt_s05_to_s12_pattern_a_bloom_trasversale_saga",
+            "origin_story": "s05",
+            "close_mode": "chiusura_parziale_multi_target_parte_s12_pattern_a_chiusura_trasversale_ultima_manifestazione_saga_convergenza_5_immagini",
+            "note": "[multi_target_legacy: s05_to_s06_s07_s08_s10_s11_s12_pattern_a_bloom_trasversale_saga]"
+          },
+          {
+            "debt_id": "debt_s06_to_s12_cornetto_briciole_pattern_a_rinforzo_immagini_trasversali",
+            "origin_story": "s06",
+            "close_mode": "chiusura_parziale_multi_target_parte_s12_bloom_pieno_seed_cornetto_briciole_pattern_a_rinforzo_briciole_gabriel_noah_al_forno_deferred_20_chiuso",
+            "note": "[multi_target_legacy: s06_to_s07_s08_s10_s11_s12_cornetto_briciole_pattern_a_rinforzo_immagini_trasversali]"
+          },
+          {
+            "debt_id": "debt_s07_to_s12_pattern_a_continuazione_attivazioni_trasversali",
+            "origin_story": "s07",
+            "close_mode": "chiusura_parziale_multi_target_parte_s12_pattern_a_chiusura_trasversale_saga",
+            "note": "[multi_target_legacy: s07_to_s08_s10_s11_s12_pattern_a_continuazione_attivazioni_trasversali]"
+          },
+          {
+            "debt_id": "debt_s08_to_s11_s12_pattern_a_collettiva_chiusura",
+            "origin_story": "s08",
+            "close_mode": "chiusura_parziale_multi_target_parte_s12_pattern_a_chiusura_trasversale_saga"
+          },
+          {
+            "debt_id": "debt_s08_to_s09_s12_memolo_pozzo_gabriel_eco",
+            "origin_story": "s08",
+            "close_mode": "chiusura_parziale_multi_target_parte_s12_eco_silenziosa_serale_casetta_tonda_memolo_piazza_luce_ambigua_memolo_off_screen"
+          },
+          {
+            "debt_id": "debt_s09_to_s12_braccialetto_al_polso_gabriel",
+            "origin_story": "s09",
+            "close_mode": "bloom_pieno_seed_braccialetto_di_noah_a_gabriel_al_polso_visibile_mai_descritto_come_oggetto_importante_sigillo_finale"
+          },
+          {
+            "debt_id": "debt_s09_to_s12_fette_uguali_eco_silenziosa",
+            "origin_story": "s09",
+            "close_mode": "bloom_pieno_seed_fette_uguali_veicolo_1_fiamma_taglia_quattro_fette_uguali_dolce_normale_sera_eco_silenziosa_s9"
+          },
+          {
+            "debt_id": "debt_s09_to_s12_paura_gabriel_fratelli_crescono_diversi_bloom_accolta",
+            "origin_story": "s09",
+            "close_mode": "bloom_pieno_architrave_seed_paura_gabriel_fratelli_crescono_diversi_tenere_0_parole_gesto_palmo_sulla_terra_curva_5_2_0_completata"
+          },
+          {
+            "debt_id": "debt_s11_to_s12_frutti_da_fuori_bartolo_porta_oltre_il_mare_fase_f",
+            "origin_story": "s11",
+            "close_mode": "chiusura_parziale_saga_cammeo_bartolo_pontile_mattino_e_presenza_implicita_sigillo_onora_debt_porta_fase_f_tracciata_come_nuovo_seed_frutti_da_fuori_bartolo_oltre_il_mare_fase_f_piantato_s12"
+          },
+          {
+            "debt_id": "debt_s11_to_s12_coni_stria_gesto_annuale_eco_anno_chiuso",
+            "origin_story": "s11",
+            "close_mode": "bloom_eco_visiva_scene_hook_ghianda_dipinta_caduta_accanto_panca_di_pietra_piazza_serale_festa_s11_conclusa_da_mesi_pattern_a_in_miniatura_nessuno_la_raccoglie"
+          }
+        ]
       }
     }
   ]
