@@ -1,6 +1,58 @@
-# PROJECT_STATE — Snapshot al 2026-06-10
+# PROJECT_STATE — Snapshot al 2026-06-10 (sera)
 
-> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura → catalogo v2) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura → catalogo v2 → cutover Vercel) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-06-10 sera — Cutover Vercel + correzioni doc
+
+Dopo il merge della PR #7 (catalogo v2), il deploy Vercel ha dato 404
+perché lo statico era stato archiviato ma il `vercel.json` era ancora
+puntato a `/catalogo_web/`. Ripristinato lo statico, preparato il
+cutover deploy in modo controllato.
+
+### A. Restore production (PR #8 — `140b31f`)
+
+Ripristinati i 5 file di `catalogo_web/_archive/` alla root.
+Production OK.
+
+### B. Cutover Vercel pronto (PR #9 — `ab7c622`)
+
+Mergiata su `main` per chiudere la fase. La app Next.js in `web/` è ora
+**deployabile su Vercel come secondo project** (Root Directory = `web/`):
+- mirror `web/public/data/*.json` committato (~2.2 MB, 5 file)
+- script Python scrivono il mirror automaticamente
+- script Node tolleranti al fallback (mirror committato se sorgente esterna manca)
+
+**TODO Ray (azione manuale dashboard Vercel):**
+1. Add New Project → stessa repo, Root Directory = `web`
+2. Auto-rilevato Next.js → deploy
+3. Verifica preview URL: catalogo, copy prompt, download, ⌘K, `/stato`, deep link
+4. Se OK: puntare dominio principale al nuovo deploy + spegnere project statico
+5. Se regressioni: aprire branch dedicata di fix
+
+### C. Doc corretti (eliminati TODO obsoleti su compositore libro)
+
+- `CLAUDE.md` riga 48: rimosso "compositore libro **futuro**" → "consumati da scripts/build_volume.py (attivo dal 2026-06-08)"
+- `CLAUDE.md` riga 558: rimosso "(futuro)" → "(attivo dal 2026-06-08, in attivo affinamento)"
+- La sezione "Modalità compositore libro" (riga 349) già dice "script attivo dal 2026-06-08" — corretta dal 2026-06-08.
+
+### D. Stato finale repo
+
+| Componente | Stato |
+|---|---|
+| Production catalogo (statico Vercel) | ✅ OK (servito dal `vercel.json` root) |
+| Catalogo v2 in `web/` | ✅ pronto al cutover (preview manuale Ray) |
+| Compositore libro `scripts/build_volume.py` | ✅ attivo dal 2026-06-08, in affinamento |
+| Audit + CI cancello | ✅ 4/4 PASS + 78 pytest |
+| Grafo (post step8 canonical refs) | ✅ schema 1.4, graph 1.2.0, baseline `known_issues.yaml` vuota |
+
+### E. Possibili regressioni catalogo v2 (da verificare quando Ray prova il preview)
+
+- **"Copy prompt hook"** segnalato da Ray: il CopyButton sui sotto-hook in `web/components/storie-dashboard/hook-item.tsx` (righe 229 + 311) **esiste ancora**, sia per "Copia prompt scena" su subhook sia per il prompt hook completo. Probabile equivoco o view diversa da quella attesa. Da verificare al primo deploy preview.
+- Altre regressioni: emerse durante il preview vanno aperte come branch dedicate.
+
+---
+
+
 
 ## Sessione 2026-06-10 pomeriggio — Catalogo v2 (Next.js): 8 WI + deprecazione statico
 
