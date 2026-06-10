@@ -29,6 +29,10 @@ ROOT = Path(__file__).resolve().parent.parent
 VISUAL = ROOT / "visual"
 OUT_DIR = ROOT / "catalogo_web" / "data"
 OUT_FILE = OUT_DIR / "entities.json"
+# Mirror dispatch per il deploy Next.js (Vercel Root=web/, no access a ../).
+# Vedi web/.gitignore + docs/SPEC_CATALOGO_V2.md
+WEB_PUBLIC_DATA = ROOT / "web" / "public" / "data"
+WEB_OUT_FILE = WEB_PUBLIC_DATA / "entities.json"
 STRADE_INDEX = VISUAL / "luoghi" / "_strade_index.md"
 CATALOGO = VISUAL / "catalogo.md"
 GRAPH_FILE = ROOT / "pipeline_narrativa" / "story_graph.json"
@@ -213,6 +217,17 @@ def main():
     tmp.write_text(payload, encoding="utf-8")
     os.replace(tmp, OUT_FILE)
     size_kb = OUT_FILE.stat().st_size // 1024
+
+    # Mirror dispatch (cutover Vercel 2026-06-10): scrive la stessa copia
+    # in web/public/data/entities.json così Vercel (Root=web/) puo' leggerla
+    # senza accedere a ../catalogo_web/. La copia in web/ e' tracciata da git
+    # (vedi web/.gitignore).
+    if WEB_PUBLIC_DATA.exists() or WEB_PUBLIC_DATA.parent.exists():
+        WEB_PUBLIC_DATA.mkdir(parents=True, exist_ok=True)
+        tmp2 = WEB_OUT_FILE.with_name(WEB_OUT_FILE.name + ".tmp")
+        tmp2.write_text(payload, encoding="utf-8")
+        os.replace(tmp2, WEB_OUT_FILE)
+        print(f"  Mirror Vercel: {WEB_OUT_FILE.relative_to(ROOT)} ({size_kb} KB)")
 
     print(f"Catalogo web generato: {OUT_FILE} ({size_kb} KB)")
     print(f"  Entita' totali: {len(entities)}")

@@ -1,0 +1,1962 @@
+{
+  "generated_at": "2026-06-10T10:06:47.420Z",
+  "stories": [
+    {
+      "sid": "s01",
+      "title": "La Nebbia delle Montagne Gemelle",
+      "slug": "la_nebbia_delle_montagne_gemelle",
+      "frontmatter": {
+        "sid": "s01",
+        "title": "La Nebbia delle Montagne Gemelle",
+        "slug": "la_nebbia_delle_montagne_gemelle",
+        "cycle": "A",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "book_pages_total": 17,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-07T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s01_*.md",
+          "pipeline_narrativa/writing_briefs/s01_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s01",
+          "pipeline_narrativa/storie_finali/_annotations/s01.yaml"
+        ],
+        "schema_marker": "Ogni '## Pagina N' (N = numero hook narrativo, 1..10) è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [sNN_hMMa, sNN_hMMb, ...] | @image TBD -->\nCampi @hook:\n  @hook    : id univoco hook narrativo (sNN_hMM, MM = 01..10)\n  @page    : numero hook (1..10) — non è la pagina libro fisica\n  @subhooks: lista sotto-hook (1+ subhook = 1+ pagina libro fisica)\n  @image   : path immagine composta del libro (TBD da popolare)\nSotto a ogni @hook, uno o più marker subhook precedono il blocco di prosa corrispondente:\n<!-- @subhook sNN_hMMa | @page_book N | @image TBD -->\nCampi @subhook:\n  @subhook   : id sotto-hook (sNN_hMMa, b, c, ...)\n  @page_book : numero pagina libro fisica (1..book_pages_total). Per spread doppia: [N, N+1].\n  @layout    : (opz.) double_spread per immagini che attraversano 2 pagine fisiche\n  @image     : path immagine finale (TBD da popolare)\n"
+      },
+      "totalPages": 17,
+      "hooks": [
+        {
+          "id": "s01_h01",
+          "page": 1,
+          "subhookIds": [
+            "s01_h01a",
+            "s01_h01b"
+          ]
+        },
+        {
+          "id": "s01_h02",
+          "page": 2,
+          "subhookIds": [
+            "s01_h02a"
+          ]
+        },
+        {
+          "id": "s01_h03",
+          "page": 3,
+          "subhookIds": [
+            "s01_h03a",
+            "s01_h03b"
+          ]
+        },
+        {
+          "id": "s01_h04",
+          "page": 4,
+          "subhookIds": [
+            "s01_h04a",
+            "s01_h04b"
+          ]
+        },
+        {
+          "id": "s01_h05",
+          "page": 5,
+          "subhookIds": [
+            "s01_h05a",
+            "s01_h05b"
+          ]
+        },
+        {
+          "id": "s01_h06",
+          "page": 6,
+          "subhookIds": [
+            "s01_h06a"
+          ]
+        },
+        {
+          "id": "s01_h07",
+          "page": 7,
+          "subhookIds": [
+            "s01_h07a"
+          ]
+        },
+        {
+          "id": "s01_h08",
+          "page": 8,
+          "subhookIds": [
+            "s01_h08a",
+            "s01_h08b"
+          ]
+        },
+        {
+          "id": "s01_h09",
+          "page": 9,
+          "subhookIds": [
+            "s01_h09a",
+            "s01_h09b"
+          ]
+        },
+        {
+          "id": "s01_h10",
+          "page": 10,
+          "subhookIds": [
+            "s01_h10a",
+            "s01_h10b"
+          ]
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": "s01_h01a",
+          "hookId": "s01_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h01a.jpg",
+          "prosaMd": "Sull'Isola dei Tre Venti, certe mattine si parte per vedere cose, e si torna avendo visto un'altra cosa. Quel mattino i tre fratelli partirono per le Montagne Gemelle.\n\nIl forno era già acceso. Fiamma impastava da prima dell'alba — lo si vedeva dal vapore alla finestra, dal velo di farina sulle braccia. Gabriel entrò per primo. Elias e Noah dietro."
+        },
+        {
+          "subhookId": "s01_h01b",
+          "hookId": "s01_h01",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h01b.jpg",
+          "prosaMd": "Fiamma li guardò come si guardano le cose mentre si fa altro. Allungò una pagnotta. Poi si fermò. Ne prese una seconda. Gliela mise in mano a Gabriel senza guardarlo.\n\n«Se passate dal Burrone, una per Grunto. Una sola.»\n\nSi voltò di nuovo all'impasto.\n\n«Più di una se la mangia per dispetto. E poi non torna giù per giorni.»\n\nLoro uscirono.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": "s01_h02a",
+          "hookId": "s01_h02",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h02a.jpg",
+          "prosaMd": "La piazza era vuota. Solo le ombre lunghe dei tetti che il primo sole tirava per terra.\n\nUna finestra in piazza era già accesa. Qualcuno, dentro, lavorava qualcosa di farina.\n\nUna sagoma con una carriola di vimini attraversava da est a ovest. Una mano si staccò dal manico, salì, ricadde. Gabriel alzò la sua. La carriola passò.\n\nI tre presero la Via che Sale.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": "s01_h03a",
+          "hookId": "s01_h03",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h03a.jpg",
+          "prosaMd": "Salirono in fila. Noah davanti, troppo veloce per le sue gambe. Elias in mezzo. Gabriel in coda.\n\nA un certo punto del sentiero c'era una pietra piatta, posata di traverso. Tre passi prima il sentiero si stendeva. Tre passi dopo, ancora. Si fermarono lì senza dirselo, un attimo, e ripartirono."
+        },
+        {
+          "subhookId": "s01_h03b",
+          "hookId": "s01_h03",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h03b.jpg",
+          "prosaMd": "Le Gemelle erano in fondo, due cime tagliate dal cielo. L'aria sapeva di pietra fredda. Il villaggio sotto si era fatto piccolo piccolo.\n\n«Da lassù si vede tutta l'isola» disse Gabriel.\n\n«E forse anche più in là» disse Elias.\n\nNoah non disse niente. Raccolse un bastoncino e lo portò avanti.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": "s01_h04a",
+          "hookId": "s01_h04",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h04a.jpg",
+          "prosaMd": "Sopra i Pascoli, la nebbia salì in pochi minuti. Fredda, dal fondo, come fa l'aria d'inverno quando incontra una pietra calda. In poco tempo non si vedeva più il sentiero. Non si vedevano più le Gemelle. Si vedevano l'uno l'altro solo a un braccio di distanza.\n\nSi fermarono."
+        },
+        {
+          "subhookId": "s01_h04b",
+          "hookId": "s01_h04",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h04b.jpg",
+          "prosaMd": "Noah parlò per primo. «Torniamo. Andiamo via di qui. Andiamo via.»\n\n«Possiamo tenerci per mano» disse Elias. «Andiamo piano e camminiamo lo stesso.»\n\nGabriel non rispose. Aveva la pagnotta sotto il braccio e la mano libera in tasca. Stava fermo. Stava fermo da prima ancora di decidere di stare fermo.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": "s01_h05a",
+          "hookId": "s01_h05",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h05a.jpg",
+          "prosaMd": "«No. Non muoverci.»\n\nGabriel lo disse come se lo stesse dicendo a sé stesso un secondo dopo averlo già deciso. Si sedette per terra sul sentiero. Elias si sedette accanto. Noah dopo, un po' più vicino agli altri due."
+        },
+        {
+          "subhookId": "s01_h05b",
+          "hookId": "s01_h05",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h05b.jpg",
+          "prosaMd": "La nebbia continuò a girare intorno. Passò qualche minuto.\n\nDa qualche parte, in alto, una pietra si staccò e rotolò tre volte. Poi si fermò. Più giù, sotto la nebbia, una capra rispose a un'altra capra. Il vento, dietro la collina, stava ancora dormendo.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": "s01_h06a",
+          "hookId": "s01_h06",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h06a.jpg",
+          "prosaMd": "Poi arrivò il vento.\n\nUna folata netta, dall'alto, e il bianco si aprì da una parte, si chiuse dall'altra, si aprì di nuovo.\n\nA due passi davanti a loro c'era il bordo del Burrone.\n\nUna pietra cadde dal ciglio. Si sentì cadere a lungo prima di non sentirsi più.\n\nI tre fratelli stettero zitti.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": "s01_h07a",
+          "hookId": "s01_h07",
+          "pageBook": 11,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h07a.jpg",
+          "prosaMd": "Il vento restava. La nebbia adesso si consumava da sola.\n\nRipresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra diventava per un attimo d'oro.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": "s01_h08a",
+          "hookId": "s01_h08",
+          "pageBook": 12,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h08a.jpg",
+          "prosaMd": "E lì c'era.\n\nEra enorme. Pelo verde che si confondeva col lichene, corna grandi piegate all'indietro, una cicatrice chiara sul fianco sinistro come una striscia che il pelo non ricopriva più.\n\n*Grunt.*\n\nBatté uno zoccolo sul sasso. *Via.*\n\nI fratelli non scapparono. Non si avvicinarono. Restarono in piedi a tre o quattro passi.\n\nGrunto continuò a guardarli. Poi smise. Voltò la testa altrove."
+        },
+        {
+          "subhookId": "s01_h08b",
+          "hookId": "s01_h08",
+          "pageBook": 13,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h08b.jpg",
+          "prosaMd": "Gabriel si fece avanti. Posò la pagnotta su una pietra piatta tra loro. Si tirò indietro.\n\nGrunto la annusò. La prese. La masticò.\n\n«Buono.»\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": "s01_h09a",
+          "hookId": "s01_h09",
+          "pageBook": 14,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h09a.jpg",
+          "prosaMd": "Tornarono giù prima che facesse buio."
+        },
+        {
+          "subhookId": "s01_h09b",
+          "hookId": "s01_h09",
+          "pageBook": 15,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h09b.jpg",
+          "prosaMd": "Le Gemelle alle loro spalle si erano fatte oro pallido. Il sole stava già andando via.\n\nNoah aveva ancora il bastoncino in mano. A un certo punto lo lasciò cadere. Non se ne accorse. Elias lo vide ma non disse niente.\n\nI Pascoli erano vuoti. Il sentiero adesso si vedeva.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": "s01_h10a",
+          "hookId": "s01_h10",
+          "pageBook": 16,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h10a.jpg",
+          "prosaMd": "Al Forno, Fiamma stava sistemando il piano per il giorno dopo. Li vide entrare. Non chiese com'era andata.\n\nMise in mano a Noah un cornetto.\n\nLoro mangiarono in piedi vicino al banco. La porta del Forno si chiuse alle loro spalle."
+        },
+        {
+          "subhookId": "s01_h10b",
+          "hookId": "s01_h10",
+          "pageBook": 17,
+          "layout": null,
+          "imagePath": "pipeline_narrativa/storie_finali/_scene/s01/s01_h10b.jpg",
+          "prosaMd": "Fuori, sopra le Gemelle, il vento aveva ricominciato a tirare. Una pietra cadde da qualche parte sul Burrone. Nessuno la sentì."
+        }
+      ]
+    },
+    {
+      "sid": "s02",
+      "title": "Il Riflesso nella Pozza",
+      "slug": "il_riflesso_nella_pozza",
+      "frontmatter": {
+        "sid": "s02",
+        "title": "Il Riflesso nella Pozza",
+        "slug": "il_riflesso_nella_pozza",
+        "cycle": "A",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s02_*.md",
+          "pipeline_narrativa/writing_briefs/s02_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s02"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s02_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s02_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s02_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\nEra un messaggio per i Pastori. Due frasi, brevi. Lo disse a voce. Poi lo ripeté. Poi lo fece ripetere a Elias, una parola alla volta, finché Elias non lo disse tutto in un soffio solo.\n\nMentre parlava, dalla parte della casetta tonda passò Mèmolo, sciarpa di sbieco. Le fece un cenno breve. Stria rispose con la testa, senza interrompere.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias disse: «Andiamo.»\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "La Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno dei tre lo nominò. Lo videro e tirarono avanti.\n\nIl Vento Taglio passava alto, sopra di loro. Al Villaggio non si sentiva. Qui, sì.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "A metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI tre si chinarono per bere.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "E si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lui, nello specchio dell'acqua, Gabriel e Noah parevano più grandi di quanto erano. E Elias finiva in mezzo, schiacciato fra due.\n\nNoah si vide fermo. Lui non era mai fermo. Eppure il bambino nella pozza aveva le braccia lungo i fianchi, gli occhi spalancati.\n\nI riflessi erano un filo più scuri dei loro volti. Più rigidi.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Cominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\nPoi Elias si zittì. Si chinò. Toccò l'acqua col dito. Ritrasse la mano.\n\nDisse, basso: «Voi siete grandi davvero.»\n\nNessuno gli rispose.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Noah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secondo, ci furono solo pezzi di nuvole.\n\nUna folata di Vento Taglio passò bassa. La pozza si coprì di pieghe piccole.\n\nI riflessi non tornarono subito.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Restarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\nIl bastoncino galleggiò qualche secondo. Si inclinò. Sparì sotto.\n\nI tre si rialzarono.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Salirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\nElias disse il messaggio, le due frasi, esatte come Stria le aveva fatte ripetere. I Pastori ascoltarono. Fecero un cenno.\n\nEra fatto.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s02_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Tornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\nQuando i tre passarono accanto alla pozza, il sole era già basso. La superficie era di nuovo piatta, dura.\n\nNon guardarono dentro."
+        }
+      ]
+    },
+    {
+      "sid": "s03",
+      "title": "Il Pallone oltre la Foresta",
+      "slug": "il_pallone_oltre_la_foresta",
+      "frontmatter": {
+        "sid": "s03",
+        "title": "Il Pallone oltre la Foresta",
+        "slug": "il_pallone_oltre_la_foresta",
+        "cycle": "A",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s03_*.md",
+          "pipeline_narrativa/writing_briefs/s03_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s03"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s03_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s03_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s03_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Sull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\nI tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta. Hanno il pallone di stoffa cucita — quello fatto da Salvia, che da una parte si scuce sempre, e che non è mai del tutto rotondo.\n\nNoah corre dietro al pallone come corre dietro a tutto, con le ginocchia che vanno una di qua e una di là, e ride per niente. Elias para. Gabriel passa. Il pallone fa un suono morbido sull'erba bassa, e ogni tanto si scuce un altro pezzo, e nessuno se ne accorge.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Più in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, poi torna come prima. Loro abbassano la voce un secondo, senza pensarci. Riprendono dopo.\n\nSull'isola, certe cose si dicono così. Non con le parole.\n\nAncora più in là, davanti a una casa col cortile basso, Salvia separa l'ortica vecchia da quella ancora verde. Le mani si muovono da sole. Lei non alza gli occhi.\n\nIl sole comincia a calare. A gennaio, sull'isola, succede prima di quanto uno se lo aspetti.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Noah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa.\n\nIl pallone non si ferma al sasso. Lo supera, va avanti ancora un poco, e si infila tra i primi tronchi della Foresta. Si vede ancora, biancastro, per qualche metro. Poi gli alberi se lo prendono.\n\nNoah resta fermo con la gamba ancora un po' alzata, come se aspettasse che il calcio tornasse indietro insieme al pallone.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole.\n\nTra le radici, un po' più in là, il pallone è già lontano. È l'unica cosa chiara, là dentro.\n\nVicino al sentiero, per terra, c'è una conchiglia. Una sola. Conica, scura, con la punta verso l'alto. Le conchiglie sono al mare. Nessuno la nomina. Nessuno la raccoglie.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della propria madre.\n\nNoah dice che basta un passo. Dice che il pallone è lì, vicinissimo, che lo prende lui e torna. Lo dice tre volte, con la voce che si fa ogni volta un po' più piccola.\n\nGabriel dice di no. Lo dice una sola volta, e basta così.\n\nElias guarda Noah. Guarda Gabriel. Guarda dentro la Foresta. Là dentro, la luce è già quasi finita.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Allora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, diventa subito un'altra voce. Si fa piccola, come se la Foresta se la prendesse un pezzo per volta.\n\nPer qualche secondo, niente. Solo il rumore della Foresta che si prepara alla sera. Un fruscio basso di foglie morte. Un battito d'ali alto, lontano. Poi più niente, di nuovo.\n\nGabriel e Noah, dietro, restano fermi. Anche loro adesso ascoltano.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Poi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca scricchia sotto qualcosa.\n\nI tre fratelli si stringono un po', senza accorgersene. Noah viene un mezzo passo dietro a Gabriel.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Esce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\nÈ basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo tenesse da un po'. Ha quell'aria di chi brontola anche quando non parla.\n\nSi chiama Rovo. I fratelli non lo sanno ancora — lo sapranno dopo, a casa, quando lo racconteranno.\n\nSi avvicina al margine, ma non lo passa. Si ferma proprio sulla linea. Posa il pallone per terra dalla parte degli Orti. Non lo lancia. Lo posa. A un passo dal margine, esatto.\n\nPoi guarda i tre. Non in faccia: di sbieco, come guarda lui.\n\n«Cosa fate qua a quest'ora? È buio. Andate.»\n\nMentre parla, dietro di lui, un'ombra più piccola si affaccia per un istante. Due occhi neri che brillano contro il buio dei tronchi. È Bru. Non avanza. Sta fermo lì, a guardarli, dentro un quadrato di buio tra due radici. Poi si ritira, senza un rumore.\n\nRovo non si volta a controllare. Lo sa.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\nRovo non risponde subito. Fa due passi dentro la Foresta. Si ferma. Resta di spalle. Guarda davanti a sé, in mezzo ai tronchi, in qualcosa che i fratelli non vedono — qualcosa che forse non c'è, o che c'è solo per lui.\n\nPoi, senza voltarsi del tutto, dice:\n\n«Le cose della Foresta hanno il loro orario.»\n\nLo dice come si dice una cosa vera che non si vuole spiegare. E rientra.\n\nBru gli scivola dietro tra le radici e sparisce. Si sente il passo di Rovo per qualche secondo ancora, sempre più lontano. Poi non si sente più niente — solo la Foresta che continua a fare la Foresta, per conto suo.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s03_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.\n\nIl sole è andato giù del tutto. Sopra i tetti del Villaggio, basso, comincia adesso il Mulinello della sera — quel vento piccolo che gira intorno ai comignoli e fa muovere le ultime foglie rimaste sui rami.\n\nDomani, forse, sarà già un'altra stagione. Stasera no.\n\nStasera è ancora questa."
+        }
+      ]
+    },
+    {
+      "sid": "s04",
+      "title": "Le Radici che Parlano",
+      "slug": "le_radici_che_parlano",
+      "frontmatter": {
+        "sid": "s04",
+        "title": "Le Radici che Parlano",
+        "slug": "le_radici_che_parlano",
+        "cycle": "B",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s04_*.md",
+          "pipeline_narrativa/writing_briefs/s04_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s04"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s04_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s04_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s04_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Era una mattina di quelle che aprono. Il primo tepore vero dopo l'inverno, il sole che teneva caldo senza scaldare ancora.\n\nSalvia bussò alla porta dei fratelli col cesto già al fianco. «Mi accompagnate al margine? Devo prendere ortica.»\n\nAndarono volentieri. Attraversarono gli Orti del Cerchio, le file di terra appena smossa, i germogli minuti che bucavano l'ocra. Più in là, ai campi interni, i Coltivatori erano al lavoro pieno della stagione. La cantilena correva lunga oggi. Quando i fratelli passarono dietro la fila, scese di un tono per un battito, poi tornò. Tutti e tre rallentarono il passo.\n\nTUM-tum, TUM-tum, dicevano le zappe in lontananza.\n\nSopra gli orti passò Liù — un *frrr* breve, una piega d'aria. Salvia non alzò la testa. Le sue mani continuarono.\n\nAl margine della Foresta Salvia si fermò. Indicò la zampata di terra fuori. «Voi qua. Torno presto.»\n\nEntrò col cesto. Per qualche metro si vide ancora la sabbia chiara delle sue zampe di lepre tra le radici. Poi sparì.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre si sedettero per terra. Gabriel guardava i Coltivatori in lontananza. Elias cercava un sasso tra l'erba.\n\nNoah si voltò verso la Foresta.\n\nUna farfalla. Blu. Uscì da un'ombra tra i tronchi e si posò sulla terra del margine, davanti a lui. Era molto blu.\n\nNoah si alzò.\n\nLa farfalla rialzò il volo, fece due metri, si posò di nuovo. Noah le andò dietro.\n\nUn passo dentro la Foresta. Poi due. Poi cinque.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel non se ne accorse subito.\n\nQuando si voltò, la farfalla non c'era più e Noah non c'era più.\n\n«Noah?»\n\nSi alzò. Elias si alzò con lui.\n\n«Noah!»\n\nGridarono insieme. Due, tre volte. Le mani a coppa, le bocche aperte verso gli alberi.\n\nLa voce uscì e si perse a cinque metri. Sopra di loro l'Intreccio passava alto tra le chiome, prendeva le voci e le scompigliava nel fruscio. Le voci dei bambini sono corte. Non viaggiano.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel smise di gridare.\n\nRestò fermo, le mani lungo i fianchi. Elias guardava lui.\n\nPochi secondi.\n\n«Gridiamo no. Pensiamo.»\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Dentro, Noah si era fermato.\n\nGli alberi erano tutti uguali. Non sapeva più da che parte era venuto.\n\nSi sedette tra le radici di un grande albero. Un tronco vecchio, con radici grosse che uscivano dalla terra come nodi di legno duro. Si appoggiò di schiena.\n\nNon pianse. Aspettò.\n\nAveva il palmo destro per terra. Senza ragione — era il modo in cui stava fermo.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias si inginocchiò.\n\nDavanti a lui, una radice grossa usciva dalla terra e faceva un arco prima di rientrare. Una di quelle radici che sembrano un ponte basso. Ci appoggiò il palmo.\n\nCominciò a battere.\n\nTUM-tum-TUM-tum-TUM\n\nEra il loro ritmo. Lo avevano inventato loro tre, una sera, qualche tempo fa. Lo riconoscevano solo loro.\n\nElias restò lì, in ginocchio, e batté. Non si mosse. Continuò a battere lo stesso ritmo.\n\nGabriel gli mise una mano sul tronco dell'albero e aspettò.\n\nSotto, da radice a radice, il battito viaggiava — non nell'aria, dove l'Intreccio l'avrebbe scompigliato. Viaggiava nel legno vivo. La Foresta sentiva.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Noah, sotto la mano, sentì.\n\nNon con le orecchie. Sotto la mano. Una vibrazione bassa.\n\nTUM-tum-TUM-tum-TUM\n\nRiconobbe.\n\nSollevò il palmo. Lo riappoggiò. Poi alzò la mano e la riabbatté sulla terra.\n\nTUM-tum-TUM-tum-TUM\n\nLo stesso ritmo. Di risposta.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel camminò.\n\nNon guardava tra gli alberi. Sentiva con i piedi — il battito basso che trafilava dal terreno, dentro i polpacci. Faceva qualche passo, si fermava, ascoltava. Riprendeva.\n\nElias dietro non si mosse. Restò sulla radice. Era l'ancora.\n\nGabriel passò sotto un ramo basso curvato che attraversava il sentiero. Non lo notò — i bambini ci passavano sotto naturalmente. Era il sentiero a ricordarsi di essere per piccoli.\n\nIl battito veniva da quella parte. Lui andava da quella parte.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quando arrivò, Noah stava battendo più piano.\n\nAveva cominciato a battere più piano man mano che sentiva Gabriel avvicinarsi, per non confondergli la direzione. Gabriel non se ne accorse. Si abbassò. Noah lo vide.\n\nSi abbracciarono.\n\nElias arrivò poco dopo, sulle loro tracce. Aveva mollato la radice solo quando aveva sentito che Gabriel aveva smesso di seguirla. Si abbracciarono in tre.\n\nPer un paio di minuti, niente.\n\nTre o quattro metri più in là, appoggiato a un tronco, c'era Bru. Le unghie affondate nell'humus. Gli occhi neri li guardavano. Non sembrava sorpreso. Aveva sentito anche lui, dalla sua parte di Foresta. Non si mosse.\n\nPoi un passo pesante tra le radici. Rovo arrivò da un'altra direzione, brontolando, la bandana scura sulla fronte.\n\n«Battete come capre. Tutta la Foresta l'ha sentito.»\n\nNon aiutò. Non aveva aiutato. Era già nella Foresta da prima, per fatti suoi. Era venuto a vedere chi disturbava casa sua. Si guardò intorno, vide Bru, fece un cenno breve. Bru lo seguì. Risparirono tra i tronchi nella direzione opposta a quella da cui erano venuti i fratelli.\n\nPiù lontano, oltre il limite degli alberi, Cardo era fermo. Guardò i fratelli per un secondo. Poi si voltò e sparì tra le radici.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s04_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre camminarono verso il margine. Gabriel davanti, perché aveva sentito la strada all'andata. Noah in mezzo. Elias dietro. Ci misero qualche minuto.\n\nQuando uscirono dalla Foresta, erano nel posto giusto.\n\nSalvia stava uscendo dalla sua. Il cesto era pieno di foglie verde scuro di ortica giovane. Si era fatta del tempo dentro perché ce n'era tanta. Le sue zampe di lepre avevano lasciato tracce sulla sabbia chiara del margine.\n\nNon si era accorta di niente.\n\n«Pronti? Andiamo.»\n\nI tre si guardarono. Camminarono accanto a Salvia verso casa. Passarono lungo il sentiero degli Orti, e Salvia, senza pensarci, allungò la mano sul rosmarino vecchio. Le foglie si staccarono. Le dita le rimasero profumate per ore.\n\nNessuno disse niente di Noah, della farfalla, del battito sulla radice.\n\nSull'isola, certe cose si tengono così. Senza dirle."
+        }
+      ]
+    },
+    {
+      "sid": "s05",
+      "title": "Il Ponte di Rami",
+      "slug": "il_ponte_di_rami",
+      "frontmatter": {
+        "sid": "s05",
+        "title": "Il Ponte di Rami",
+        "slug": "il_ponte_di_rami",
+        "cycle": "B",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s05_*.md",
+          "pipeline_narrativa/writing_briefs/s05_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s05"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s05_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s05_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s05_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Qualche settimana dopo. La primavera è piena adesso, il sole scalda la pelle quando ci batte addosso.\n\nBru non si volta. Si avvia per primo dentro la Foresta. Sceglie una direzione che da soli non sarebbe venuta in mente.\n\nSi fidano e camminano dietro.\n\nVenti minuti, forse trenta. La Foresta si apre e si richiude. L'Intreccio passa sopra le chiome — in basso, quasi non si sente.\n\nA destra, dopo il sasso di soglia, c'è il mucchio di pigne ammassato. Bru ci passa accanto come si passa accanto a una casa conosciuta.\n\nPoi gira ancora.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Arrivano al torrente.\n\nL'acqua corre alta, gonfia di neve sciolta sulle Gemelle. Quattro o cinque metri fino all'altra sponda. Sull'altra sponda un sentiero comincia. Da questa parte, niente.\n\nSulla pietra in riva si vede ancora un cerchio di muschio, dove poggiava il vecchio tronco. La piena lo ha portato via.\n\nI fratelli si fermano. Bru si ferma un passo indietro.\n\nPiù a monte, su un'ansa, c'era una scaletta a pioli appoggiata a un tronco. Una mantenitrice — quale, oggi? Una donnola. Stava riparando una passerella. Da lontano arrivò un TOK breve, di corda contro legno.\n\nI fratelli annuirono. Bru proseguì con lo sguardo.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Stanno per dire che si torna a casa.\n\nE poi, da qualche parte verso il margine, attraverso le chiome:\n\n**TOK-TOK-TOK.**\n\nPausa.\n\n**TOK-TOK-TOK.**\n\nTre colpi secchi. Un ritmo che riconoscono. L'Intreccio lo porta dritto, senza sbavature.\n\nNessuno dice il nome. Nessuno deve.\n\nCinquanta metri, forse. Cominciano a camminare.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Nodo è accosciato sulla scaletta dei Coltivatori. La cresta rossa si vede da prima di vederlo intero. Al braccio, la matassa di corda chiara.\n\nSta legando un nodo. Non alza la testa.\n\nI fratelli si fermano a un passo. Aspettano.\n\nNodo finisce il giro. Tira. Verifica. Solo allora alza la testa.\n\n«Cosa vi serve.»\n\nElias spiega. Il torrente. Il tronco non c'è più. Devono passare. Hanno pensato a un'idea — pertiche di rami grossi, di quelli che la Foresta lascia cadere, lunghi abbastanza da coprire la luce con un margine.\n\nNodo annuisce mentre Elias parla. Non dice niente.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quando Elias finisce, Nodo si toglie un pezzo di corda dalla matassa. Lo misura tra le dita. Lo taglia con un colpo secco di lama.\n\nPorge la corda a Elias.\n\nInsieme alla corda, gli fa vedere il marinaro — una volta sola, lentamente. Il giro intorno alla pertica. Il passaggio sotto. La mezza chiave finale.\n\nLo fa una volta.\n\n«Adesso fai tu.»\n\nTorna alla scaletta. Riprende il **TOK-TOK-TOK**.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Tornano al torrente. Cercano pertiche.\n\nBru cammina avanti. Si ferma davanti a un ramo caduto, lo indica col muso. Riparte. Si ferma davanti a un altro. Riparte ancora.\n\nNoah corre, raccoglie. «Questo! E questo!» Solleva un rametto sottile. Lo scuote. «Anche questo è grosso!»\n\nNon lo è. Bru passa oltre senza guardarlo, va a un altro ramo, lo indica col muso.\n\nNoah lascia cadere il rametto. Riprende quello che ha indicato Bru.\n\nI rami che la Foresta ha lasciato cadere d'inverno. Adesso servono.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quattro pertiche, posate parallele da sponda a sponda.\n\nElias prova il primo nodo. La corda gli si imbroglia. Sbaglia. La scioglie.\n\nRiprova. Sbaglia di nuovo.\n\nAlla terza riesce. Il giro, il passaggio, la mezza chiave. Tira. Tiene.\n\nGabriel tiene ferme le pertiche perché il legno scivola sul muschio.\n\n«Tienile più strette.»\n\n«Le tengo.»\n\nNoah va a prendere la corda nuova quando finisce. La riporta.\n\nBru è seduto poco lontano. Una volta solleva il muso, va a recuperare un pezzo di corda finito in acqua, lo riporta. Poi torna a sedersi.\n\nSopra le chiome, l'Intreccio fa muovere le foglie. Sotto, il torrente resta liscio.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quando il ponte è finito, Nodo è ancora cinquanta metri più in là. Il TOK-TOK-TOK continua, regolare.\n\nCamminano fino a lui. Nodo alza la testa, guarda il ponte da lontano per un secondo. Non si muove.\n\n«È vostro. Provatelo voi.»\n\nSi rimette al lavoro.\n\nTornano.\n\nElias passa per primo. Le braccia un po' aperte. Le pertiche vibrano sotto i piedi. Reggono. Arriva dall'altra parte. Si volta.\n\nDavanti al Forno, intanto, Pun stava sistemando la sciarpa di Mèmolo, che gli era andata storta. Mèmolo lo lasciava fare. Il riccino tirava un capo, poi l'altro. Mèmolo gli toccò la testa con la zampa.\n\nNoah passa per secondo. Più leggero. Reggono.\n\nGabriel passa per terzo. Le pertiche cigolano al centro. Reggono.\n\nBru passa per quarto, ultimo. Quattro zampe leggere sul ponte fatto da loro. Una specie di cortesia.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminano cento, centocinquanta metri dentro la Foresta dall'altra parte.\n\nTrovano la radura.\n\nÈ un cerchio d'erba. I pini intorno, alti e dritti. La luce cade verticale tra le chiome, e l'erba sotto è quasi gialla.\n\nBru entra per primo. Si siede al centro.\n\nI fratelli si siedono in cerchio intorno a lui. Nessuno parla. Restano un po'.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s05_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Tornano. Riattraversano il ponte nello stesso ordine.\n\nQuando arrivano sulla sponda di partenza, Nodo se n'è già andato.\n\nDella scaletta dei Coltivatori, niente — l'ha portata via con sé.\n\nIl TOK-TOK-TOK arriva da molto lontano adesso, da un'altra parte della Foresta.\n\nNon è venuto a vedere il collaudo finale.\n\nNon gli serviva.\n\nIl ponte è ancora lì."
+        }
+      ]
+    },
+    {
+      "sid": "s06",
+      "title": "Il Dono per Mèmolo",
+      "slug": "il_dono_per_memolo",
+      "frontmatter": {
+        "sid": "s06",
+        "title": "Il Dono per Mèmolo",
+        "slug": "il_dono_per_memolo",
+        "cycle": "B",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s06_*.md",
+          "pipeline_narrativa/writing_briefs/s06_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s06"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s06_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s06_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s06_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Sull'Isola dei Tre Venti, certe tristezze non si dicono. Si vedono dalla sciarpa.\n\nA scuola, Stria scrive numeri. È di spalle. Le orecchie dritte sopra lo scialle.\n\nPun guarda fuori dalla finestra. Non guarda la lavagna.\n\nSi china verso Gabriel. Lo dice piano.\n\n«Papà ha perso una cosa. Non si ricorda dove.»\n\nStria non si volta. Continua a scrivere. Solo la voce, dalla cattedra:\n\n«E quale cosa?»\n\n«Non lo sa. Ma è una cosa importante.»\n\nStria torna ai numeri. La lezione va avanti. I tre fratelli si guardano.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Mèmolo è in piazza. Trotterella più piano del solito.\n\nLa sciarpa storta. Si ferma. La sistema. Riparte.\n\nLa sciarpa storta. Si ferma di nuovo. La sistema. Riparte.\n\nLa sciarpa storta.\n\nUna finestra in piazza è accesa. Qualcuno, dentro, vede e non interviene.\n\nSopra, il Vento Taglio passa alto, dove non lo prende.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Al Forno, Fiamma impasta. Le maniche tirate su, le mani bianche fino al gomito.\n\n«Mèmolo? Sì sì è passato, è passato presto stamattina, ha preso un cornetto, lo ha mangiato qua sulla porta, ha detto qualcosa che non ho capito bene — qualcosa tipo \"la scatoletta\", \"dov'è la scatoletta\", non sapevo di cosa parlasse io, poi se n'è andato verso gli Orti. Una pagnotta vi serve per strada? No? Va bene. Andate.»\n\nNoah si infila mezzo cornetto nel taschino. Nessuno lo vede.\n\nFuori, sul gradino, sale il vapore del pane.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminano. Verso ovest.\n\nUna camminante attraversa la piazza con la carriola. Una mano si stacca dal manico, sale, ricade. Gabriel alza la sua. La carriola passa.\n\nEra una camminanti — quale, oggi? Una talpa.\n\nSul sentiero degli Orti, il muretto è crollato in un tratto. Tre o quattro pietre cadute coperte di muschio. Tra le pietre, una piuma viola.\n\nNoah si abbassa senza fermare il passo. Raccoglie un bastoncino. Lo tiene in mano.\n\nIn fondo, oltre i tetti, si vede il Pontile. Sul bordo, una piccola figura. Toba, che guarda l'acqua.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Salvia ha le mani occupate. Foglie d'ortica seccate da una parte, foglie ancora verdi dall'altra.\n\nNon si ferma.\n\n«Mèmolo è passato. Stamattina, dopo il forno, sì. Ha chiesto se avevo visto una cosa piccola — una scatoletta? Un sacchettino? Non sono riuscita a capire. Le mie ortiche maturano oggi, ho da fare.»\n\nLe foglie cadono nelle ceste. Verde scuro a destra, verde tenero a sinistra.\n\nLoro vanno.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Zolla è seduto sul gradino di casa sua. Mette le ghiande in fila per terra, una accanto all'altra.\n\n«Mèmolo? Sì. È passato da qua poco fa. Stagione delle ghiande: quattordici raccolte stamattina. Ha guardato per terra mentre passava. Cercava qualcosa di piccolo. Non glielo ho chiesto. Quattordici, ho detto. Quindici se conto questa.»\n\nIndica una ghianda davanti a sé. Loro guardano per cortesia.\n\nVerso il centro, di nuovo. Il sole adesso è caldo. Noah trova un secondo bastoncino e lo raccoglie. Adesso ne ha due.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "A mezzogiorno la piazza diventa il Mercato.\n\nLe bancarelle sono fuori. Le Vecchie del Mercato sono sedute sulla panca di pietra, in fondo, all'ombra. Sono tre. Di età diverse. Non parlano molto. Non parlano agli estranei.\n\nI fratelli si avvicinano. Si fermano davanti alla panca.\n\n«Avete visto Mèmolo, oggi?»\n\nLe Vecchie non rispondono.\n\nQuella in mezzo solleva lentamente un braccio. Indica un cespuglio dietro l'Albero Vecchio, in fondo alla piazza. Non dice niente. Riabbassa il braccio.\n\nLe altre due non guardano.\n\nIn aria, vicino alle teste, un *frrr* piccolissimo. Liù sta su una foglia un attimo, poi parte di corsa nell'altra direzione.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias va verso il cespuglio. Gabriel e Noah lo seguono. Aprono i rami bassi.\n\nPer terra, tra le foglie, una scatoletta di legno scuro. Piccola. Il coperchio si è aperto a metà nella caduta.\n\nElias si abbassa. La apre del tutto.\n\nDentro, un dente da latte. Bianco. Piccolo. Un dente di cucciolo qualunque.\n\nPun arriva di corsa. Si abbassa accanto a Elias. Guarda dentro la scatoletta. Lo dice piano.\n\n«È mio. L'avevo perso anni fa.»\n\nElias lo guarda. Non parla. Chiude la scatoletta. La rimette in mano a Pun. Si tira indietro di un passo.\n\nGabriel non chiede niente.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il cortile davanti a casa di Mèmolo è un pezzo di terra battuta con un albero piccolo al centro. L'albero ha tre rami in croce e una foglia sola che ancora si tiene dall'inverno.\n\nMèmolo è lì. Sciarpa di sbieco. Sta mormorando.\n\nPun gli mette la scatoletta in mano. Mèmolo la apre. Vede il dente. Ride — un riso piccolo, di quelli che durano un attimo solo. Pun resta fermo.\n\n«Aspetta dove l'avevo messa, l'avevo messa da... no. Sì. No.»\n\nSi interrompe. Infila la scatoletta in tasca senza guardarla.\n\nPoi dice, una volta sola:\n\n«Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.»\n\nLo dice e poi torna confuso. Sistema una spina di Pun sulla testa con un gesto distratto.\n\nGabriel non chiede a Elias. Elias non spiega.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s06_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Pun resta col padre.\n\nI tre fratelli si avviano. Il sole è virato al giallo caldo del pomeriggio. Sui tetti, il primo Mulinello leggero della sera.\n\nSull'isola, certi giri si fanno per cercare una cosa e si chiudono restituendola a qualcun altro. Capita.\n\nNoah si fruga nel taschino. Tira fuori una manciata di briciole dorate. Le tiene un attimo aperte sul palmo.\n\nIn fondo alla piazza, la camminante torna verso est con la carriola vuota. Una mano si stacca dal manico, sale, ricade. Gabriel risponde appena.\n\nNoah cammina. Un bastoncino gli scivola dalla mano e cade. Lui non se ne accorge.\n\nL'isola, dall'alto, sarebbe una rete di passi.\n\n---\n\n*Fine.*"
+        }
+      ]
+    },
+    {
+      "sid": "s07",
+      "title": "La Zattera dei Tre Rametti",
+      "slug": "la_zattera_dei_tre_rametti",
+      "frontmatter": {
+        "sid": "s07",
+        "title": "La Zattera dei Tre Rametti",
+        "slug": "la_zattera_dei_tre_rametti",
+        "cycle": "C",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s07_*.md",
+          "pipeline_narrativa/writing_briefs/s07_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s07"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s07_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s07_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s07_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quella mattina, al guado di pietre piatte, l'aria stava ferma.\n\nSolo l'acqua sulle pietre. Sotto il sole già caldo, Elias sedeva con le mani in grembo. Tre rametti, presi la sera prima agli Orti. Un filo d'erba lunga tenace, ancora flessibile dalla notte.\n\nTre giri. Sotto. Mezza chiave. Tira.\n\nLe mani di Elias andavano da sole. Aveva imparato così, in primavera, e non lo diceva. Gabriel guardava le mani. Noah guardava le mani. L'acqua scendeva piano, perché qui scende piano.\n\nIl nodo tenne.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias aprì la mano. La zattera stava nel palmo. Larga come una mano, lunga come tre dita.\n\n«Dove andrà?» chiese Gabriel.\n\n«Vediamo,» disse Noah.\n\nI tre allungarono un dito. Tre dita si toccarono sul legno chiaro. Per un attimo nessuno la mosse, perché era piccola, e perché era loro.\n\nPoi Elias la posò sull'acqua, vicino alla sponda. La corrente la prese. La zattera scese.\n\nLoro la seguirono.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminavano in fila sulla riva ovest. Era l'unico lato che andava verso la Bocca — l'isola fa così, il Fiume gira, e l'acqua porta le cose al mare.\n\nA sinistra la Foresta Intrecciata, scura, vista da fuori. Tra le chiome alte passava l'Intreccio. In basso, niente — solo il sentiero ocra e il rumore dell'acqua che andava giù con loro. Il sole si alzava di poco ogni minuto. Le ombre dei tre fratelli si accorciavano sull'erba.\n\nQuando passarono accanto al margine, Rovo era in piedi tra due tronchi, bandana scura sui capelli. Non si mosse. Non disse niente. I fratelli non si fermarono.\n\nLa zattera scendeva regolare. Mangiarono un cornetto camminando. Le briciole caddero per terra e nessuno le raccolse — sull'isola le briciole sono per le formiche.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "La Foresta finì. Cominciarono gli Orti.\n\nDall'altra parte del campo si vedevano i Coltivatori — chiazze chiare nella terra ocra, chini sui filari. La cantilena arrivava bassa, da lontano, mezza inghiottita dall'aria. Quando i fratelli passarono, la cantilena scese di un tono per un battito, poi tornò. Loro abbassarono la voce. Camminarono un po' più piano.\n\nIl Fiume si allargava qui, e andava più veloce. Gabriel dovette correre due passi per stare alla zattera. La raggiunse. Continuò.\n\nIl sole saliva.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quasi mezzogiorno. Il sole era quasi sopra di loro, e l'ombra dei fratelli sotto i piedi era corta.\n\nDavanti, il letto del Fiume si stringeva. Due grossi sassi affioravano dall'acqua, uno a destra e uno a sinistra. In mezzo, l'acqua si comprimeva. Faceva schiuma alla base.\n\nI tre rallentarono. Non per paura — per guardare. Anche la zattera rallentò un attimo, prima di entrare nella strettoia. Poi entrò.\n\nIl rumore dell'acqua, qui, si faceva più alto. Un rumore continuo, basso, che riempiva l'aria intorno ai sassi. Le rive del Fiume erano spente — ocra senza ombra, niente vento sull'erba. A mezzogiorno, l'isola si ferma per qualche minuto.\n\nI tre si fermarono anche loro, sulla riva.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "La zattera si incastrò tra i due sassi. La corrente premeva. L'acqua passava sotto, intorno, sopra.\n\nNoah guardò Elias. Gli passò il bastoncino senza dire niente. Elias lo prese. Si chinò sulla riva, allungò il bastoncino, toccò il rametto incastrato.\n\nL'erba tenace si tirò. Si tirò ancora. Sotto la torsione, le fibre si aprirono.\n\n**STRAPP.**\n\nIl terzo rametto restò tra i sassi. Gli altri due, ancora legati dal nodo, ripresero la corsa.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I tre fratelli si fermarono sulla riva.\n\nNoah guardò i due rametti scendere. Non pianse.\n\nElias guardò il bastoncino in mano. Non se stesso. Disse, basso: «I sassi tenevano. Non c'era modo.»\n\nGabriel guardò Noah. Poi guardò l'acqua.\n\n«Andiamo avanti,» disse.\n\nNoah disse, dopo: «Però due rametti vanno avanti.»\n\nSi rimisero in cammino.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminarono ancora a lungo.\n\nIl verde si fece più chiaro. La terra cominciò a sapere di sale. L'aria cambiò. Davanti a loro, in fondo, qualcosa di azzurro cresceva tra le rive.\n\nLa zattera a due rametti andava avanti, intera, un po' più veloce di prima. Noah era un passo più avanti del solito. Aveva il bastoncino in mano, e ogni tanto lo passava nell'erba alta della riva, di fianco, come si fa quando si cammina e non si vuole pensare.\n\nGabriel ed Elias erano dietro. Il sole scendeva di traverso adesso, e tirava le ombre lunghe sull'acqua. Una garza bianca si alzò da un canneto sull'altra riva, fece un giro lungo e si rimise giù più lontano.\n\nNessuno disse niente per molto tempo.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Arrivarono al Pontile quando il sole era basso.\n\nIl legno era scuro, consumato dal sale. I pali cigolavano piano, perché il Mulinello cominciava ad alzarsi dalla parte del mare. Bartolo era nella barca, semi-disteso, gli occhi aperti. Toba sedeva sul bordo, vicino al padre, e guardava l'acqua.\n\nSulla riva delle Case Basse, una pescatrice tirava una rete sulle pietre. Era una pescatrice delle Case Basse — quale, oggi? Una rana di palude. La mano toccò la rete, salì un istante, ricadde. I tre fratelli annuirono. La rete continuò a uscire dall'acqua.\n\nLa zattera entrò nell'acqua mista della Bocca. Due rametti, chiari sull'arancio.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s07_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il Mulinello entrò nella Bocca dal mare e prese la zattera. La girò un attimo. La spinse fuori, oltre i due promontori.\n\nLontano, sulla scogliera est, un uccello nero stava con le ali aperte al sole basso. Una croce contro il cielo arancio. Era lì per fatti suoi.\n\nToba chiese a Noah, non a suo padre: «E poi?»\n\nNoah disse: «È arrivata.»\n\nBartolo non parlò. Un occhio si chiuse lento. Si riaprì lento.\n\nI due rametti diventarono un puntino sull'acqua aperta.\n\nHai visto? Anche quando una cosa si rompe, l'altra parte arriva lo stesso.\n\nI tre fratelli restarono ancora un momento sul Pontile. Poi si voltarono. Il Mulinello adesso tirava forte sui pali. Il sole, dietro di loro, andava giù.\n\nTornarono a casa tagliando dentro, attraverso gli Orti. Il Fiume non si risale."
+        }
+      ]
+    },
+    {
+      "sid": "s08",
+      "title": "L'Albero che Cadde di Sera",
+      "slug": "lalbero_che_cadde_di_sera",
+      "frontmatter": {
+        "sid": "s08",
+        "title": "L'Albero che Cadde di Sera",
+        "slug": "lalbero_che_cadde_di_sera",
+        "cycle": "C",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s08_*.md",
+          "pipeline_narrativa/writing_briefs/s08_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s08"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s08_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s08_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s08_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Era il pomeriggio più fermo dell'estate. Fuori dalla porta del Forno la luce era bianca, schiacciata, senza vento. Dentro era ocra di farina e brace.\n\nFiamma aveva tirato fuori una sfoglia nuova e l'aveva messa davanti a loro, sul banco. «Assaggiate.»\n\nI tre fratelli stavano finendo il cornetto di prima. Noah teneva il suo stretto in tutte e due le mani. Gabriel ed Elias l'avevano appoggiato. Fuori, dalla porta aperta, la luce non si muoveva.\n\nNessuno aveva fretta. Era un pomeriggio così.\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Poi il cielo cambiò colore. Diventò piombo in pochi battiti.\n\nLe imposte cominciarono a sbattere. Una folata aprì la porta di colpo. Liù arrivò dentro la folata, si aggrappò al cornicione del Forno con tutta la forza che aveva — frrr — e parlò veloce, senza posarsi:\n\n«Il vento sale forte stasera. Forse l'acqua trema.»\n\nRiprese la corrente e sparì.\n\nFiamma chiuse le imposte una a una, dall'interno. «A casa veloci.»\n\nIn lontananza, dagli Orti, la cantilena dei Coltivatori si interruppe a metà di un battito. Restò sospesa. Poi non riprese.\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Uscirono.\n\nLa piazza era quasi vuota. Qualcuno correva a chiudere una finestra; un'altra finestra sbatteva e basta. L'Albero Vecchio al centro non si muoveva nello stesso modo dei suoi rami — il tronco grosso era fermo, le punte sopra invece andavano in tutti i versi.\n\nI tre attraversarono piegati in avanti. Il Mulinello faceva muro. Bisognava spingere col petto contro l'aria.\n\nGabriel saltò la pietra del lato del Pozzo senza guardarla. Noah ci mise sopra il piede. La sentì muovere. Non disse niente.\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Sulla via della scuola, dal lato nord, c'era il grande noce. Vecchio. Grosso. Faceva ombra alla mattina sui cuccioli che andavano a lezione.\n\nSi piegò.\n\nSi raddrizzò.\n\nSi piegò ancora, di più. La biforcazione della chioma cigolò sotto la spinta. Sotto, la via era sgombra: i cuccioli erano a casa, era ora di cena, Stria era già rientrata.\n\nI fratelli si fermarono al margine sud della piazza. Restarono fermi.\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "CRACK.\n\nIl noce si spaccò alla biforcazione. Il ramo principale cadde di traverso. Toccò per primo il bordo in pietra del Pozzo — quello alzato, quello che fa muretto. La pietra tenne. Il ramo rimbalzò contro la leva e deviò. La massa intera della chioma, invece di crollare in piazza, scartò di lato e si abbatté sulla via della scuola con un tonfo sordo.\n\nPolvere. Foglie che continuavano a cadere per qualche secondo. Un cigolio del legno spezzato che si assestava.\n\nNessuno era sotto.\n\nMèmolo era a tre passi dal Pozzo, fermo, sciarpa di sbieco. Era uscito dalla casetta tonda poco prima. Era fuori dalla traiettoria di mezzo metro.\n\nSul Mercato del Mezzogiorno, lontano, sulla Panca di Pietra, una delle Vecchie alzò una mano un attimo. Le altre annuirono. Nessuna parlò.\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Mèmolo mormorò: «Aspetta, ero qui. Ero qui poco fa. Ero qui.»\n\nGabriel andò da lui. Ai piedi di Mèmolo c'era un mucchietto di foglie spezzate, finite lì col vento. Le spostò col piede, gentilmente, come si sposterebbero foglie da un tappeto. Poi si sedette sul bordo del Pozzo. Tirò Mèmolo per la manica.\n\n«Vieni qui, siediti.»\n\nMèmolo si sedette. Gabriel gli prese la mano.\n\n«Stai qui. Sei qui.»\n\nMèmolo per un istante smise di confondersi. Mise la mano libera nella sciarpa storta — cercava qualcosa che non c'era, una tasca interna, un pezzo di stoffa. Non trovò. Disse piano, quasi tra sé:\n\n«L'albero ha aspettato che nessuno fosse sotto.»\n\nLo disse e basta. Poi ricominciò a mormorare l'altra cosa.\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Nello stesso istante Gabriel alzò gli occhi.\n\nTra le foglie dei rami caduti, dietro il Pozzo, c'era solo un varco — un piccolo spazio fra due rami spezzati. Attraverso il varco passò il verde della maglia di Noah, un movimento, due mani che posavano qualcosa.\n\nNon vide Noah direttamente.\n\nVide tracce di Noah.\n\nDietro il Pozzo, all'ombra, su un punto piano del selciato, Noah aveva posato un nido. Vecchio, secco, di una stagione passata. L'aveva preso con le due mani a coppa — si sentiva che era secco. Ci aveva messo sopra una foglia grossa.\n\nPer un secondo Gabriel restò fermo. Sentì quella cosa di prima, la stessa di quando i due massi al Promontorio si erano staccati: ma più chiara. Non disse niente. Riabbassò lo sguardo su Mèmolo.\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il crepuscolo cadeva. Cominciarono ad arrivare i mantenitori, con scale a pioli e lanterne. Erano i mantenitori — chi, oggi? Un'arvicola, un ghiro, una faina. TOK, una corda contro un legno: il loro saluto. I tre fratelli annuirono.\n\nNodo arrivò con loro, la matassa al braccio. Vide Elias. Gli fece un cenno. Elias andò.\n\nSi misero a lavorare. Nodo teneva un ramo grosso in tensione — il ramo andava legato a un punto fisso prima di poter essere tagliato in pezzi più piccoli, altrimenti si muoveva troppo. Elias eseguiva il nodo sulla corda. Quattro nodi, nei punti che Nodo gli indicava col muso. TOK-TOK-TOK del becco di Nodo contro un altro ramo, intanto, mentre pensava al gesto dopo.\n\nDopo il quarto nodo, Nodo lo guardò. Una volta sola. Fece un cenno con la testa.\n\nZero parole.\n\nElias non disse niente neanche lui.\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I Mantenitori restarono al lavoro fino a notte sotto le lanterne. I rami furono spezzati in pezzi, accatastati sotto la tettoia del Forno per essere lasciati a riposare. I Mantenitori sapevano cosa fare con il legno fresco di noce. Lo facevano e basta.\n\nA un certo punto Fiamma uscì sulla soglia e mise in mano a ognuno dei tre un altro cornetto.\n\n«A casa adesso.»\n\nI tre tornarono in fila lungo il sentiero del Quartiere di Fuoco. Il Mulinello si esauriva in lontananza, aria che scemava da sola. Quando arrivarono a casa l'aria era ferma. L'afa era passata. L'aria era pulita.\n\nPrima di dormire, nessuno disse niente. Noah non disse niente del nido. Gabriel non disse niente di quello che aveva sentito guardando attraverso il varco. Elias non disse niente del cenno di Nodo dopo il quarto nodo.\n\nOgnuno tenne la sua cosa piccola.\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s08_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "La mattina dopo l'isola riprese.\n\nL'aria era pulita come dopo una lavata. Stria atterrò sul tetto della scuola come ogni mattina, si rimise lo scialle sulle spalle prima di scendere. Dagli Orti, lontana, la cantilena dei Coltivatori era ricominciata.\n\nSotto la tettoia del Forno, il legno del noce stava catastato in pile ordinate, per dimensione.\n\nMèmolo passò davanti al Pozzo. Si fermò. Guardò il legno catastato. Si toccò la sciarpa storta. Andò via.\n\nNoah, prima di andare a scuola, fece un giro dietro il Pozzo. Il nido era ancora lì. La foglia era ancora sopra.\n\nNon lo spostò."
+        }
+      ]
+    },
+    {
+      "sid": "s09",
+      "title": "Quel Pomeriggio di Ottobre",
+      "slug": "quel_pomeriggio_di_ottobre",
+      "frontmatter": {
+        "sid": "s09",
+        "title": "Quel Pomeriggio di Ottobre",
+        "slug": "quel_pomeriggio_di_ottobre",
+        "cycle": "C",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s09_*.md",
+          "pipeline_narrativa/writing_briefs/s09_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s09"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s09_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s09_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s09_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Sull'isola non si fanno feste per i compleanni. C'è il dolce di castagne, e basta — Fiamma lo fa con le prime castagne dell'anno, una volta per ogni bambino, il giorno suo.\n\nMèmolo lo sa prima di tutti, sui giorni dei bambini. Sulle altre cose si confonde, su quelli no.\n\nStamattina è arrivato al Forno che c'era ancora buio. Fiamma non aveva ancora acceso il fuoco. Lui ha detto solo una cosa, dalla soglia, e poi si è girato a uscire — la sciarpa storta, come sempre. Sul banco c'era già il cesto di Zolla con le prime castagne dell'anno.\n\nFiamma ha cominciato a impastare.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "«Tu cosa farai oggi che hai un anno in più?»\n\nStria era sulla porta della scuola. Aveva la testa un po' inclinata.\n\n«Boh,» disse Gabriel.\n\nI cuccioli sentirono. Erano già ai banchi — Pun, Toba, Bru, Cardo. Liù tra le travi. Dalla porta aperta entrava un'aria di Taglio leggero, e una foglia secca finita sul pavimento.\n\nCardo, che fino a quel giorno a scuola non aveva mai detto niente in saga, alzò la testa.\n\n«Boh non è una risposta.»\n\nNessuno rispose. Toba si voltò verso il banco. Pun disse: «Mèmolo lo ha detto a Fiamma stamattina.» Liù si alzò dalla trave e uscì dalla finestra socchiusa. Andava al Forno.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "A metà pomeriggio Gabriel passò al Forno da solo.\n\nMèmolo era sui gradini fuori. Quando vide Gabriel si infilò la mano nella tasca della giacca lunga. Cercava qualcosa. Tirò fuori una castagna cruda — di quelle del cesto di Zolla, una che gli era rimasta in tasca dal mattino e che doveva restituire a Fiamma. La passò a Gabriel senza dire niente.\n\nGabriel la prese. Era fresca, lucida. Una buccia liscia che fa freddo nel palmo. Dentro il Forno si sentiva il dolce — un odore caldo, dolce-amaro, di castagne che cuociono nel miele. Fiamma stava togliendo un ciocco dal fuoco e non si voltò. Mèmolo annuì piano, e ripartì nella sua trotterellata corta che si confonde nei propri passi.\n\nGabriel restò sui gradini un attimo, la castagna in mano.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Verso il tardo pomeriggio i tre fratelli erano a casa.\n\nElias diede a Gabriel un cordino nuovo per la sciarpa che si era sfilacciata. «Possiamo metterlo dopo, se vuoi.» Gabriel annuì.\n\nPoi fu il turno di Noah. Aveva le mani dietro la schiena. Le tirò fuori. Un braccialetto. Lo aveva fatto lui — si vedeva che lo aveva fatto lui. Cordino di canapa sottile, due ramoscelli verdi di salice o nocciolo (Noah non era ancora sicuro di quale dei due), una castagna cruda forata come una perlina che pendeva. Il nodo che chiudeva il cerchio era un nodo marinaro piccolo — la versione che Elias gli aveva insegnato in quei giorni, una variante per mani di quasi cinque anni.\n\nNoah disse tre parole.\n\n«Te l'ho fatto io. Da solo.»\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel prese il braccialetto. Lo guardò.\n\n«Grazie.»\n\nSorrise, poi si girò verso il tavolo a prendere una caraffa — una caraffa, un piatto, una scusa qualunque per voltarsi.\n\nPer un attimo non guardò nessuno.\n\nPosò il braccialetto sul tavolo, accanto al suo posto. Lo lasciò lì.\n\nElias vide. Vide Gabriel voltarsi, vide il braccialetto restare sul tavolo. Non disse niente. Si girò verso Noah e gli chiese una cosa qualunque sulla scuola del mattino.\n\nFuori l'aria di ottobre era ancora chiara, dorata. Dentro casa cominciava a entrare un filo di sera.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Verso sera andarono al Forno tutti e tre a prendere il dolce.\n\nFiamma era in modalità chiacchiera. «Oh ma guarda chi è arrivato il festeggiato, è grosso adesso eh, alza la testa che ti vedo male da qua, com'è sta giornata, hai fatto cose o niente, Mèmolo è già passato due volte, una stamattina e una a metà giornata, dice che il dolce sa di buono ma non lo ha assaggiato perché lo deve assaggiare prima Gabriel...» Continuava a parlare mentre lo avvolgeva. Quando glielo diede in mano, lo guardò solo un secondo.\n\n«Anno che gira non è anno che torna. Ne fa un altro, diverso.»\n\nLo disse dentro la frase, e poi continuò a chiacchierare di altro.\n\nTornarono per la Via dell'Alba. Mentre passavano accanto agli Orti, le cantilene del Cerchio batterono un tono diverso per un battito. I tre rallentarono il passo senza accorgersene.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "A casa misero il dolce sul tavolo. Era scuro, lucido di miele, un colore tra il bordeaux e il marrone.\n\nGabriel aveva il coltello in mano. Cominciò a tagliare.\n\nLa prima fetta — piccola. Era per Noah. La seconda — media. Era per Elias. La terza — grande. Era per sé.\n\nLo fece quasi senza pensare. Lo aveva sempre fatto così, da quando Noah era piccolissimo e mangiava poco.\n\nStava per servire. Noah guardava il piatto.\n\n«Perché il mio è piccolo?»\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel, di riflesso: «Sei il piccolo.»\n\nNoah: «Non sono più piccolo come prima.»\n\nPausa.\n\nGabriel guardò Noah. Guardò la fetta nel piatto. Guardò Elias — Elias aveva lo sguardo basso, ma non al piatto. Era un guardare-non-guardare.\n\nIl Mulinello della sera passò dalla finestra aperta. Le tende si mossero.\n\nGabriel sorrise. Era un sorriso un po' commosso. Non spiegò. Riprese il coltello. Spostò un pezzo dalla sua fetta a quella di Noah, un altro pezzo a quella di Elias. Tre fette uguali.\n\n«Hai ragione.»\n\nElias guardò Gabriel un attimo. Poi, come per stemperare: «Le fette uguali stanno meglio nel piatto.» Si girò verso Noah e gli chiese qualcosa di Cardo a scuola, una cosa che era uscita male. Noah rise.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel mangiò la sua fetta in silenzio mentre Noah ed Elias parlavano. Mangiò fino in fondo. I piatti restarono sul tavolo, briciole, lanterna appena accesa su un mobile laterale.\n\nNoah rideva di un'altra cosa che aveva detto Elias.\n\nGabriel allungò la mano. Prese il braccialetto che era ancora lì, vicino al suo piatto. Lo tenne tra le dita. La castagna-perlina era ancora liscia, fresca. Verde dei ramoscelli ancora vivo.\n\nLo guardò.\n\nFuori, lontano, un *frrr* veloce passò sopra il villaggio. Era Liù che andava verso la casetta tonda. Aveva qualcosa da dire.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s09_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il Mulinello continuava a passare attraverso le finestre aperte. Le tende si muovevano. Una foglia gialla, già caduta da qualche albero del cortile, era arrivata fin dentro casa col vento e si era posata sul davanzale.\n\nGabriel teneva il braccialetto in mano.\n\nSull'isola, in ottobre, capita che il vento di sera porti dentro casa qualcosa che fuori è già caduto.\n\nNon si dice se Gabriel lo mette o no."
+        }
+      ]
+    },
+    {
+      "sid": "s10",
+      "title": "La Notte senza Luna",
+      "slug": "la_notte_senza_luna",
+      "frontmatter": {
+        "sid": "s10",
+        "title": "La Notte senza Luna",
+        "slug": "la_notte_senza_luna",
+        "cycle": "D",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s10_*.md",
+          "pipeline_narrativa/writing_briefs/s10_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s10"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s10_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s10_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s10_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Era notte fonda. La luna era nuova — quelle notti in cui il cielo non manda niente, e dentro le case è buio come sotto una coperta.\n\nNella stanza dei tre fratelli dormivano in due. Gabriel respirava piano. Elias anche. Noah no.\n\nNoah era sdraiato sul fianco. Aveva gli occhi aperti. Sul comodino, vicino alla testa, c'era il nido che aveva preso dietro al Pozzo l'estate prima e portato a casa. Adesso non lo vedeva. Sapeva che era lì.\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Passò del tempo.\n\nPoi Noah disse, ad alta voce nel buio:\n\n«Ho paura.»\n\nSilenzio.\n\n«Qui è buio.»\n\nCinque parole in tutto. Due frasi. Una pausa nel mezzo.\n\nGabriel, nel letto accanto, era sveglio. Non si sa se si era svegliato adesso o prima. Tese la mano nel buio, nello spazio fra i due letti, e cercò.\n\nLa mano di Noah la trovò.\n\nSi tennero.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias si alzò. Non gliel'aveva chiesto nessuno.\n\nSi mise i sandali. Uscì dalla stanza. Il legno del corridoio fece scric.\n\nIn cucina aprì un cassetto piano. Accese un fiammifero. Accese la lanterna.\n\nPoi prese un panno di lana e lo girò intorno al vetro, in modo che la luce uscisse solo dal basso, in un cerchio piccolo per terra.\n\nTornò nella stanza con la lanterna velata in una mano.\n\nDisse piano: «Andiamo.»\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Gabriel non lasciò la mano di Noah. Lo aiutò ad alzarsi così, con una mano sola.\n\nSi vestirono sopra il pigiama. Calze. Sandali. Un mantello di lana ognuno.\n\nElias teneva la lanterna. Il cerchio di luce stava sui sandali.\n\nUscirono dalla stanza. Uscirono dalla casa.\n\nErano in tre, e nessuno parlava.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Fuori era buio pieno. La Piazza non si vedeva — solo le sagome più scure delle case più vicine.\n\nAttraversarono. L'Albero Vecchio era una sagoma più nera del nero. Il Pozzo, una macchia grigia chiara. Mèmolo dormiva da qualche parte.\n\nL'angolo del viottolo dove di sera il Mulinello fa sempre un giro di foglie, stanotte era fermo. Niente foglie. Solo silenzio.\n\nAlla curva della piazza incontrarono qualcuno. Era un mantenitore — quale, oggi? Un fringuello. Stava aprendo la porta di casa con la scopa in mano. La scopa toccò il selciato — TOK.\n\nI tre annuirono. Lui annuì.\n\nLa giornata cominciò di lì.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Imboccarono la Via del Pontile. La via scendeva. Si camminava in fila: Elias davanti con la lanterna, Gabriel in mezzo che teneva la mano di Noah, Noah dietro.\n\nIl cerchio di luce era piccolo. Illuminava i sassi del sentiero per mezzo metro davanti, e tre paia di scarpe.\n\nNiente alberi. Niente case. Niente cielo.\n\nSolo il cerchio, e dentro il cerchio i piedi.\n\nCamminavano. Una foglia secca passava nella luce e poi spariva nel buio. L'aria era umida — quella umida d'autunno avanzato, che dopo qualche minuto bagna la lana dei mantelli.\n\nSi sentivano solo i passi.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminavano da molto. La via girava, scendeva ancora. L'aria cominciava a sapere di sale.\n\nA un certo punto, alle loro spalle, lontanissimo, dall'alto, si sentì un suono — tot tot tot — di zoccolo su pietra. Durò due secondi e si spense.\n\nVeniva dalle Montagne Gemelle.\n\nNessuno disse niente. Nessuno si voltò. Continuarono.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il cielo cominciò a cambiare. Non in fretta. Da nero diventò nero un po' più chiaro. Poi grigio scurissimo. Poi grigio.\n\nLe sagome delle cose tornarono.\n\nSi vedeva il bordo della via. Si vedeva il fiato dei tre fratelli, una nuvoletta corta davanti a ognuno.\n\nLa lanterna di Elias era ancora accesa, ma la luce dentro al panno era diventata pallida — quasi un giallino sciocco contro il grigio del giorno che arrivava.\n\nCamminavano ancora.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Quando arrivarono al Pontile, era grigio-rosa. Il sole non era ancora sorto — il cielo era coperto, era una di quelle albe senza stelle e senza sole netto, solo luce che cresce.\n\nL'acqua della Bocca era blu-grigio brumosa.\n\nLa barca di Bartolo era legata. Bartolo era dentro la barca. Aveva la coperta marrone tirata su, la testa fuori, e il guscio dietro come schienale. Gli occhi erano aperti. Aveva sentito i tre arrivare da molto lontano.\n\nNon disse niente.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s10_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias soffiò sulla lanterna. La spense. Tolse il panno di lana e lo posò sul pontile, ad asciugare.\n\nI tre si sedettero sulla panca, vicino alla barca. Bartolo spostò un poco la testa — fece spazio. Si sedettero in fila: Elias, Noah in mezzo, Gabriel. La mano di Gabriel non lasciò la mano di Noah finché Noah non si appoggiò alla sua spalla.\n\nLontano sull'acqua si vide una sagoma. Si tuffò una volta — splash — e riemerse. Era Amo. La pesca dell'alba era cominciata.\n\nPochi minuti dopo, dalla Via dell'Alba arrivò Fiamma. Il suo mantello rosso si vedeva da molto lontano contro il grigio. Aveva un cesto piccolo. Posò sulla panca, accanto a loro, una pagnotta tiepida. La pagnotta fumava appena.\n\n«Mangiate.»\n\nLo disse e basta. Andò avanti, verso la barca, mise qualcosa in mano a Bartolo, e tornò indietro. Il rosso del mantello si vide ancora un po' lungo la curva, poi sparì.\n\nI fratelli spezzarono la pagnotta in tre. Il giorno cresceva.\n\nNessuno disse altro."
+        }
+      ]
+    },
+    {
+      "sid": "s11",
+      "title": "La Festa del Raccolto",
+      "slug": "la_festa_del_raccolto",
+      "frontmatter": {
+        "sid": "s11",
+        "title": "La Festa del Raccolto",
+        "slug": "la_festa_del_raccolto",
+        "cycle": "D",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s11_*.md",
+          "pipeline_narrativa/writing_briefs/s11_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s11"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s11_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s11_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s11_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "L'autunno era pieno. Le castagne erano cadute tutte. Le ghiande, anche. L'erba alta degli Orti era già stata tagliata e legata.\n\nNegli Orti del Cerchio, all'alba, i Coltivatori chiudevano i sacchi. Avevano il fiato bianco davanti alla bocca. Una fila di sacchi in piedi, sui filari, e il sole basso da est che li tagliava di lato. Più in alto, sul versante, scendevano i Pastori — piccoli puntini grigi che venivano giù coi mantelli e gli zaini. Una volta all'anno succedeva così. Tutti scendevano in piazza. Nessuno doveva chiamarli.\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "A mezzogiorno la piazza era piena.\n\nSotto l'Albero Vecchio, Nodo aveva messo su un banco improvvisato. Lo stava finendo di sistemare. **TOK-TOK-TOK.** Elias gli passava una corda intrecciata da un lato — l'aveva fatta lui, mani svelte, il nodo che Nodo gli aveva insegnato tempo fa. Non disse niente. Nodo prese la corda, la strinse, fece un altro giro. **TOK.**\n\nSalvia attraversò la piazza col cesto a tracolla. Dentro c'era una mazza di rosmarino fresco. Andò dritta al banco di Fiamma, lo posò, e già era uscita.\n\nStria arrivò dalla scuola. Aveva una scatola sotto il braccio.\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Stria si fermò davanti ai tre fratelli. Aprì la scatola.\n\nTirò fuori i coni di carta — uno per ogni cucciolo, uno per ogni bambino. Erano dipinti a mano, con strisce, puntini, piccoli motivi. A Pun ne diede uno per Mèmolo. A Cardo uno per sé. A Toba uno per Bartolo. A Bru uno per Rovo.\n\nA Gabriel, uno. A Noah, uno. A Elias mise in mano *quattro* coni invece di tre. Lo fece veloce. Non spiegò. Lo guardò un mezzo secondo più del solito. Si girò, continuò a distribuire.\n\nElias contò. Quattro. Si guardò la mano. Pensò di chiamarla. Non la chiamò.\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "In fondo alla piazza i Pastori avevano posato un sacco grosso di castagne. Era una di quelle cose che si facevano alla festa — qualcuno provava a sollevarlo per scherzo. Uno l'aveva alzato fino al ginocchio. Un altro fino alla cintura. Risate.\n\nGabriel passò di lì.\n\n«Forza, prova!»\n\nGabriel rise. Si abbassò. Sollevò fino al ginocchio. Continuò. Fino alla spalla. Continuò. Fino sopra la testa.\n\nApplausi. Uno dei Pastori disse forte: «Il maggiore dei tre, eh!»\n\nGabriel posò il sacco, rise ancora, andò via.\n\nDue banchi più in là, Elias sentì. Si voltò a sistemare delle corde sul tavolo. Continuò a fare nodi.\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Tra i banchi e le case più fuori, i camminanti facevano avanti e indietro. Erano i camminanti — chi, oggi? Una capinera, un'allodola, una marmotta. Le carriole entravano cariche e uscivano vuote. Una mano si staccava dal manico ogni volta che passavano vicino ai fratelli. I tre alzavano una mano in cambio.\n\nPiù in là, lo sgabello con sopra le mele si rovesciò. I cuccioli stavano giocando. Un pomo rotolò sul selciato — rosso, lucido — andò dritto fino ai piedi delle Vecchie del Mercato. Una di loro abbassò la mano e fermò il pomo col palmo. Lo tenne.\n\nNoah rise forte. Cardo lo afferrò per il braccio: «Vai vai vai!» Lo trascinò via in un altro gioco.\n\nElias guardò un momento. Poi si voltò a sistemare il banco.\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Il pomeriggio scendeva. La festa rallentava. I banchi cominciavano a chiudere.\n\nSotto l'Albero Vecchio, sulla Panca di Pietra, le Vecchie del Mercato erano sedute. Tre. Una al centro, due ai lati. Non avevano parlato durante la festa. Non parlavano mai, in realtà.\n\nElias passò accanto alla Panca. Aveva i quattro coni in una mano e qualche corda nell'altra. Non si ricordava bene dove stesse andando.\n\nLa Vecchia al centro alzò il braccio. Indicò Elias. Solo lui. Lo guardò negli occhi una volta — un secondo, non di più. Annuì piano. Riabbassò il braccio.\n\nLe altre due non si voltarono. Continuarono a guardare avanti.\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Elias si fermò.\n\nRestò fermo qualche istante. Non sapeva esattamente cosa era successo. Sapeva che era successo qualcosa.\n\nTirò il fiato.\n\n«Va bene.»\n\nLo disse piano. Non a nessuno in particolare. Lo disse e basta.\n\nAveva ancora i quattro coni in mano. Ne contò di nuovo le punte di carta — uno, due, tre, quattro.\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Andò al banco di Fiamma. Gabriel e Noah erano lì, mangiavano una fetta di dolce di castagne. Fiamma vide Elias arrivare, gli mise in mano un pezzo, gli sistemò una ciocca con la mano infarinata. «Eh, l'anno che raccoglie. Mani che sanno.» Non aspettò risposta. Tornò a infornare.\n\nElias si sedette. Posò i quattro coni sul tavolo.\n\nUno a Gabriel. Uno a Noah. Uno per sé.\n\nIl quarto restò in mano.\n\nLo guardò un secondo. Si alzò.\n\nAndò al Pozzo. Bru era seduto da solo lì, a fianco. Aveva già il cono di Stria — quello per Rovo — accanto. Elias si abbassò. Mise il quarto cono in mano a Bru. Bru lo prese. Lo guardò. Annuì, una volta, piccolissimo.\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Al banco di Bartolo si avvicinò qualcuna. Era una pescatrice delle case basse — quale, oggi? Una rondine di mare. Bartolo fece il cenno del mento e inclinò il banco. Lei prese un frutto strano e ricambiò il cenno. Andò via senza parole.\n\nBartolo era arrivato a metà pomeriggio dal Pontile. Aveva posato un cesto al banco di Fiamma. Dentro c'erano frutti che sull'isola non crescevano — colori non visti, sospesi tra rosa, viola, giallo. Non disse da dove. Alzò la mano in saluto. La riabbassò.\n\nSi sedette su uno sgabello accanto alla parete del Forno. Guardò la piazza. Il collo si allungò lento verso il rumore dei cuccioli, poi si fermò.\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s11_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Cominciò a calare il sole. Il Mulinello passava basso sulla piazza. I banchi si smontavano. Le lanterne ai bordi si accendevano una a una.\n\nI tre fratelli camminavano verso casa. Gabriel davanti, Noah in mezzo, Elias coda. Le loro sagome erano viola contro il cielo arancione.\n\nA casa, la lampada accesa sul tavolo. Noah era dall'altra parte della stanza, sul pavimento, a giocare con qualcosa che ormai non guardava più.\n\nGabriel ed Elias erano al tavolo.\n\nElias disse: «Oggi mi ha indicato una vecchia.»\n\nGabriel: «Quale?»\n\nElias: «Una.»\n\nGabriel non chiese altro. Elias non spiegò. Fuori, il vento della sera passava ancora basso sui tetti, e le lanterne dei banchi rimasti continuavano ad accendersi, una alla volta."
+        }
+      ]
+    },
+    {
+      "sid": "s12",
+      "title": "Quando i Tre Venti Suonano Insieme",
+      "slug": "quando_i_tre_venti_suonano_insieme",
+      "frontmatter": {
+        "sid": "s12",
+        "title": "Quando i Tre Venti Suonano Insieme",
+        "slug": "quando_i_tre_venti_suonano_insieme",
+        "cycle": "D",
+        "total_pages": 10,
+        "total_hooks": 10,
+        "status": "definitiva",
+        "ultima_modifica": "2026-05-04T00:00:00.000Z",
+        "fonti": [
+          "pipeline_narrativa/narrazione_fattuale/s12_*.md",
+          "pipeline_narrativa/writing_briefs/s12_writing_brief.md",
+          "pipeline_narrativa/story_graph.json#stories.s12"
+        ],
+        "schema_marker": "Ogni '## Pagina N' è seguito da un commento HTML machine-readable:\n<!-- @hook sNN_hMM | @page MM | @subhooks [] | @image TBD -->\nCampi:\n  @hook    : id univoco hook visivo della pagina (sNN_hMM, MM = 01..10)\n  @page    : numero pagina libro (1..10)\n  @subhooks: lista (vuota per ora) per future scomposizioni della pagina\n  @image   : path immagine composta finale del libro (TBD da popolare)\n"
+      },
+      "totalPages": 10,
+      "hooks": [
+        {
+          "id": "s12_h01",
+          "page": 1,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h02",
+          "page": 2,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h03",
+          "page": 3,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h04",
+          "page": 4,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h05",
+          "page": 5,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h06",
+          "page": 6,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h07",
+          "page": 7,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h08",
+          "page": 8,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h09",
+          "page": 9,
+          "subhookIds": []
+        },
+        {
+          "id": "s12_h10",
+          "page": 10,
+          "subhookIds": []
+        }
+      ],
+      "pages": [
+        {
+          "subhookId": null,
+          "hookId": "s12_h01",
+          "pageBook": 1,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Sull'Isola dei Tre Venti, certi giorni si annunciano da soli. Non bisogna chiamarli, e nessuno li sceglie.\n\nEra ancora notte quando Liù arrivò alla finestra. Frrr — ali contro il vetro. La finestra era socchiusa per via del fumo del camino, come tutte le notti.\n\n«Oggi suonano. Andate?»\n\nLo disse una volta sola. Riprese il volo subito — doveva dirlo a tutti prima che cominciasse il giorno.\n\nI tre si vestirono in silenzio. Fuori, sul selciato, era già caduta la prima brina dell'anno. Il fiato bianco si fermava un attimo davanti alla bocca prima di andarsene.\n\nAl Forno il fuoco era acceso da ore. Fiamma era ferma — pochi gesti, nessuna chiacchiera, di quella ferma che le viene certi giorni e che basta vederla per saperlo. Mise in mano a Noah due cornetti caldi. Mise in mano a Gabriel una sacca di tela.\n\n«Andate. Una è per Grunto.»\n\n---\n\n## Pagina 2"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h02",
+          "pageBook": 2,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "I fratelli erano già sulla soglia. Elias e Noah un passo fuori.\n\nFiamma, dallo stipite, si fermò. Guardò Gabriel.\n\nLo guardò più del normale.\n\nNon disse niente. Non si sa cosa avrebbe detto se avesse detto.\n\nGabriel non si voltò. Era un passo fuori dalla porta. Uscì.\n\nDietro le spalle di Fiamma, il Forno era una bocca arancione. Davanti, l'est si apriva piano.\n\n---\n\n## Pagina 3"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h03",
+          "pageBook": 3,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Camminarono fino al Pontile. Era poco dopo l'alba. Sulla baia bassa, l'acqua aveva quel grigio fermo che ha l'inverno quando comincia a venire.\n\nBartolo era nella barca. La coperta marrone sulle ginocchia. Gli occhi aperti, come sempre.\n\nI tre passarono sull'asse. Bartolo alzò la mano.\n\nLa mano restò a metà. Ricadde.\n\nI fratelli salutarono col cenno. Non si fermarono.\n\nSulla riva, la Via del Fiume li prese verso nord. Sull'altra sponda, gli Orti del Cerchio erano quasi spogli — zolle nere di pioggia, l'ultimo lavoro fatto da chi lavora prima dell'inverno. Una foglia gialla galleggiava vicino al palo del Pontile, e girava piano. Continuò a girare anche dopo che i fratelli erano passati.\n\n---\n\n## Pagina 4"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h04",
+          "pageBook": 4,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Risalirono lungo il Fiume. Mangiarono i cornetti camminando, e il fiato si vedeva ancora.\n\nAl guado di pietre piatte, qualcuno stava passando.\n\nEra un camminante — quale, oggi? Un ermellino. Veniva da est, con la carriola.\n\nSi fermò un momento. La mano lasciò il manico, salì, ricadde. Anche i fratelli si fermarono. La carriola passò. Ognuno riprese verso la sua direzione.\n\nI fratelli restarono ancora un secondo sulle pietre. Sull'acqua, una piccola piega andava contro la corrente. Non rompeva il flusso. Era dentro.\n\nLa videro. Non la nominarono. Sull'isola, certe cose si vedono e si lasciano lì.\n\nRipresero.\n\n---\n\n## Pagina 5"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h05",
+          "pageBook": 5,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Salirono ancora. Attraversarono la radura dei pini caduti — quelli che dopo l'inverno scorso erano lì e nessuno aveva portato via, perché i Mantenitori avevano deciso che stavano bene così. I Pascoli Alti erano vuoti. Le pecore erano già scese, i Pastori non c'erano. Solo erba ingiallita e qualche pietra che il sole scaldava da una parte sola.\n\nMezzogiorno. Il Burrone.\n\nGrunto era sulla cengia, dove sempre. La cicatrice chiara sulla spalla si vedeva bene oggi. Guardò i tre arrivare. Non si mosse.\n\nGabriel posò la pagnotta sulla pietra piatta. Si tirò indietro.\n\nGrunto annusò. Masticò.\n\n«Buono?» disse Noah.\n\n«Buono.»\n\nPoi Grunto alzò il muso. Guardò lontano. Non a loro — a se stesso, o a chi non c'era più:\n\n«Una volta era diverso. Suonavano in tre, erano tre persone.»\n\nSi interruppe. Riabbassò la testa. Masticò ancora.\n\nI fratelli non chiesero. Sull'isola si imparano presto le cose che non si chiedono.\n\n---\n\n## Pagina 6"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h06",
+          "pageBook": 6,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Si avviarono per la cengia. Sale ripida. In qualche punto si va con le mani anche.\n\nNessuno la indicò. La sapevano.\n\nSalirono in fila. Gabriel davanti, Elias, Noah ultimo. Mezz'ora di salita. Il fiato si fece corto. Le pietre, sotto le mani, erano calde di sole sopra e fredde sotto. A un certo punto, dietro di loro, sentirono un piccolo rumore — di zoccolo che si sposta una volta e basta.\n\nQuando si voltarono, una sola volta, il Burrone in basso era vuoto. Grunto era rientrato.\n\n---\n\n## Pagina 7"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h07",
+          "pageBook": 7,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Roccia Alta.\n\nEra una piattaforma di pietra grigia con ciuffi d'erba secca tra le crepe. Da lassù si vedeva tutto. Era una di quelle viste che non si descrivono mentre le si guarda — si guarda e basta, e dopo, semmai, si dice qualcosa.\n\nA ovest la Foresta Intrecciata, le chiome che si muovevano. A nord-ovest gli Orti del Cerchio, quadrati gialli e marroni, già fermi per la stagione. Al centro il Villaggio — la piazza, l'Albero Vecchio piccolissimo, il fumo del Forno che saliva sottile e dritto. A sud il Pontile, e oltre, la Bocca dove il Fiume incontra il mare. Mare aperto su tre lati. Alle spalle, vicinissime, le Montagne Gemelle.\n\nI tre si sedettero sul bordo. I piedi ciondolavano nel vuoto. Elias a sinistra, Noah al centro, Gabriel a destra.\n\nNiente parole.\n\n---\n\n## Pagina 8"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h08",
+          "pageBook": 8,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Pomeriggio inoltrato. L'aria cambiò.\n\nDa est arrivò il Taglio, basso, secco. Da ovest e dal centro arrivò l'Intreccio, e portava odore di foresta. Da sud arrivò il Mulinello, girava, e portava sale.\n\nSi incontrarono sopra Roccia Alta. Non si annullarono. Stettero insieme.\n\nL'aria si fece piena di tutta l'isola in una volta.\n\nI capelli dei fratelli si mossero in tre direzioni un poco diverse. Il sole era basso, dorato, di quel dorato di fine autunno che non scalda più. Per qualche minuto, là sopra, l'isola fu un corpo solo.\n\nNon c'è una parola precisa per come è. È una di quelle cose che gli abitanti dell'isola sanno e non dicono — la dicono solo a volte, ai bambini, e quando la dicono la chiamano *suonano*.\n\n---\n\n## Pagina 9"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h09",
+          "pageBook": 9,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Senza pensarci, Gabriel appoggiò il palmo della mano sulla pietra calda accanto a sé.\n\nPochi secondi dopo, Noah — senza accorgersene — appoggiò la sua mano sulla mano di Gabriel.\n\nPochi secondi dopo, Elias — dall'altro lato, senza guardare — appoggiò il gomito sul braccio di Gabriel.\n\nI tre stettero così. Pochi secondi.\n\nNiente.\n\nIl Concerto continuò ancora un po'. Restarono fino al tramonto. Quando il sole calò, i venti si separarono, ognuno tornò nel suo. Restò solo Mulinello, basso. L'isola tornò alla sua sera.\n\nSi alzarono. Cominciarono a scendere.\n\n---\n\n## Pagina 10"
+        },
+        {
+          "subhookId": null,
+          "hookId": "s12_h10",
+          "pageBook": 10,
+          "layout": null,
+          "imagePath": null,
+          "prosaMd": "Scesero in silenzio. La cengia, i Pascoli vuoti, la Via che Sale. Quando arrivarono era quasi notte.\n\nLa Piazza era quieta. L'Albero Vecchio era una sagoma scura contro il viola. Vicino alla Panca di Pietra, una ghianda dipinta era caduta — una di quelle di Stria, della festa, e nessuno l'aveva raccolta. La casetta tonda di Mèmolo aveva una luce incerta dietro le persiane: forse una lampada, forse il cielo sul vetro.\n\nIn fondo alla via, un TOK. Una luce in meno. Poi un'altra. Un mantenitore di sera, l'ultimo della stagione, spegneva le lanterne della piazza una a una.\n\nAl Forno, una lampada accesa. Andarono.\n\nFiamma stava rimettendo a posto la cucina prima della notte. Li vide entrare. Li guardò. Sapeva.\n\n«Sedete.»\n\nAprì il forno. Tirò fuori un dolce — uno di quelli normali, di quelli che fa qualche volta dopo cena. Lo posò sul tavolo. Prese il coltello. Tagliò in quattro fette uguali. Una per ciascuno dei fratelli. La quarta per sé. Si sedette.\n\nVersò qualcosa di caldo nelle tazze. Senza guardare nessuno:\n\n«Domani brina.»\n\nMangiarono in silenzio. Noah aveva le gambe che dondolavano dalla sedia — era ancora il piccolo, anche se era cresciuto. Elias masticava piano. Gabriel, al polso destro, aveva il braccialetto di Noah — la castagna, ora, era rugata. Si vedeva appena nella luce della candela.\n\nSenza pensarci, Gabriel allungò la mano e prese una briciola dal piatto di Noah col dito. Noah, per abitudine, spostò il piatto un po' verso Gabriel. Prendi, se vuoi.\n\nFuori, oltre la finestra, la Piazza dormiva. Il Mulinello scemava. Più lontano, al Pontile, c'era la barca di Bartolo che dormiva sull'acqua — non si vedeva da qui, ma c'era.\n\nCosì, lettore, finisce un anno sull'Isola dei Tre Venti: con una brina che arriva domani, una paura che si tiene, una porta socchiusa verso il mare, e tre fratelli cresciuti diversi che mangiano un dolce in silenzio, vicini, attorno a una candela accesa.\n\nL'isola, fuori, continua. È sempre stata così."
+        }
+      ]
+    }
+  ]
+}

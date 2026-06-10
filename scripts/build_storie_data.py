@@ -35,6 +35,10 @@ INVENTORY_DIR = STORIE_DIR / "_inventory"
 ANNOTATIONS_DIR = STORIE_DIR / "_annotations"
 VISUAL_DIR = REPO_ROOT / "visual"
 OUT_PATH = REPO_ROOT / "catalogo_web" / "data" / "storie.json"
+# Mirror Vercel (cutover 2026-06-10): la app Next legge dal mirror in
+# web/public/data/storie-dashboard.json (naming distinto da storie.json
+# di web/scripts/build-storie.mjs, che e' la vista pagine libro).
+WEB_OUT_PATH = REPO_ROOT / "web" / "public" / "data" / "storie-dashboard.json"
 
 # Reference canonica dello stile saga, da copiare in chat Grok per coerenza.
 # Uso: STYLE-ONLY PASS — Ray ripassa immagini gia' generate per omogeneizzare
@@ -396,8 +400,15 @@ def main():
         "storie": storie,
     }
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUT_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    payload = json.dumps(out, ensure_ascii=False, indent=2)
+    OUT_PATH.write_text(payload, encoding="utf-8")
     print(f"\n[done] {OUT_PATH.relative_to(REPO_ROOT)} ({OUT_PATH.stat().st_size} bytes)")
+
+    # Mirror Vercel: stessa copia in web/public/data/storie-dashboard.json
+    if WEB_OUT_PATH.parent.exists() or WEB_OUT_PATH.parent.parent.exists():
+        WEB_OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        WEB_OUT_PATH.write_text(payload, encoding="utf-8")
+        print(f"[done] mirror Vercel: {WEB_OUT_PATH.relative_to(REPO_ROOT)}")
 
 
 if __name__ == "__main__":

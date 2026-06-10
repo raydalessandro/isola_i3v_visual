@@ -30,8 +30,12 @@ yarn-error.log*
 # vercel
 .vercel
 
-# build-time copia dati dal catalogo (vedi scripts/copy-data.mjs)
-/public/data/
+# build-time copia dati dal catalogo: TRACCIATI dal 2026-06-10 (cutover Vercel).
+# I .json di public/data/ sono il "mirror dispatch" per il deploy Next.js
+# quando Vercel ha Root Directory = web/ (non puo' leggere ../catalogo_web/).
+# Aggiornarli con: `npm run copy-data` (dal vivo locale) o lo script Python
+# scripts/build_catalogo_web.py (genera entrambe le copie).
+# public/data/  --  ora tracciato, niente regola .gitignore qui
 
 # typescript
 *.tsbuildinfo
