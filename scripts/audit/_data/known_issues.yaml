@@ -1,0 +1,17 @@
+# known_issues.yaml — Incoerenze referenziali NOTE del grafo, in attesa di
+# decisione autoriale Ray.
+#
+# Meccanismo a cricchetto (audit_3_navigability.py):
+#   - le voci elencate qui vengono declassate da ERRORE a "[known]"
+#   - qualunque incoerenza NUOVA resta un errore e blocca la CI
+#   - quando il grafo viene corretto, l'audit segnala la voce come stantia:
+#     rimuoverla da questo file. Obiettivo: file vuoto.
+#
+# Match: (kind, where, ref) — devono coincidere con l'output dell'audit.
+#
+# STATO 2026-06-10: file svuotato. Le 7 voci rilevate il 2026-06-09 sono
+# state risolte da scripts/cornice_mondo/step8_fix_canonical_refs.py
+# (autorizzazione Ray 2026-06-10). Vedi migration_log entry
+# "cornice_mondo_step8" nel grafo.
+
+issues: []

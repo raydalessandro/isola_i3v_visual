@@ -56,7 +56,7 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 │  TAPPA 5  — AUDIT GRAFO                                             │
 │  Input:   grafo modificato                                          │
 │  Output:  PASS / FAIL                                               │
-│  Auto:    100%  (4 script Python, da implementare)                  │
+│  Auto:    100%  (4 script Python — implementati, `make audit`)      │
 │  Script:  scripts/audit/audit_1_integrity.py                        │
 │           scripts/audit/audit_2_schema.py                           │
 │           scripts/audit/audit_3_navigability.py                     │

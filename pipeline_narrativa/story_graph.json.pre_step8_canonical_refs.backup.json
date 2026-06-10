@@ -1,7 +1,7 @@
 {
   "schema_version": 1.4,
   "graph_version": "1.2.0",
-  "last_updated": "2026-06-10",
+  "last_updated": "2026-04-30",
   "phase": "fase_g_in_corso_2026-04-29",
   "description": "Story graph isola_i3v finale v1.0.0. 12 storie migrate a schema v1.2 (fase E). 60 no_inference_fields decisi via 5-6 domande pattern fase C/D autoriale. Provvisori P2 narrativi promossi al canonical post-pulizia (season_passage, key_phrase_indicative, key_phrase_attributed_to). 8 misalignments: 8 resolved (mis_001..mis_007 + mis_008). Entities slim (attribute_ear delta->distinguere/connettere_sottile->connettere). Stato: nessuna ambiguità residua sui campi narrativi.",
   "entities": {
@@ -2983,7 +2983,7 @@
             "species_assigned": null
           },
           "where": {
-            "location_id": "foresta_intrecciata",
+            "location_id": "margine_foresta_intrecciata",
             "qualifier": "ritorno_pascoli_visto_di_passaggio"
           },
           "what": "Bru fermo sul bordo della Foresta, occhi neri verso i fratelli, non si avvicina, non si allontana.",
@@ -3505,7 +3505,7 @@
             "species_assigned": null
           },
           "where": {
-            "location_id": "foresta_intrecciata",
+            "location_id": "margine_foresta_intrecciata",
             "qualifier": "zona_gioco_fratelli"
           },
           "what": "Una conchiglia conica scura per terra, vicino al margine. Le conchiglie sono al mare. Non si spiega. Forse Liù, forse un cucciolo che è passato.",
@@ -4156,7 +4156,7 @@
             "species_assigned": null
           },
           "where": {
-            "location_id": "foresta_intrecciata",
+            "location_id": "margine_foresta_intrecciata",
             "qualifier": "lontano_oltre_alberi"
           },
           "what": "Cardo lontano, lo sguardo si posa sui fratelli per un attimo e si stacca. Pre-installa la sua presenza per s09 e s11.",
@@ -4776,13 +4776,9 @@
           "process": "C",
           "type": "cameo_ravvicinato",
           "who": {
-            "kind": "nominati",
-            "ref": null,
-            "species_assigned": null,
-            "refs": [
-              "pun",
-              "memolo"
-            ]
+            "kind": "nominato",
+            "ref": "pun_e_memolo",
+            "species_assigned": null
           },
           "where": {
             "location_id": "forno",
@@ -4816,7 +4812,7 @@
       "night_scene_notes": null,
       "when_water_trembles": false,
       "location_primary": {
-        "id": "villaggio_centrale",
+        "id": "centro_villaggio",
         "note": "FIX_RAY_REVIEW: id grafo originale 'tutta_isola_quattro_quartieri_attraversati' (semantico, non in catalogo) sostituito con 'centro_villaggio' (apertura aula scuola_stria + chiusura cortile_memolo, entrambi quartiere centro). Info giro completo 4 quartieri preservata sotto. | specific_points: ['scuola_stria_apertura', 'rotta_scuola_al_forno_primo_bastoncino_noah', 'forno_di_fiamma_tappa_est', 'casa_salvia_tappa_ovest', 'casa_zolla_tappa_ovest', 'rotta_orti_al_mercato_secondo_bastoncino_noah', 'mercato_del_mezzogiorno_panca_di_pietra_vecchie', 'cespuglio_dietro_albero_vecchio_scoperta', 'casa_memolo_cortile_chiusura']"
       },
       "locations_secondary": [
@@ -5536,7 +5532,7 @@
             "species_assigned": null
           },
           "where": {
-            "location_id": "pontile_bocca",
+            "location_id": "pontile",
             "qualifier": "vista_da_lontano_dalla_piazza_oltre_tetti"
           },
           "what": "Toba seduta sul Pontile in lontananza, una piccola sagoma. Pre-installa lei e il quartiere acqua per s07.",
@@ -6251,7 +6247,7 @@
             "species_assigned": null
           },
           "where": {
-            "location_id": "foresta_intrecciata",
+            "location_id": "margine_foresta_intrecciata",
             "qualifier": "visto_passando_da_orti"
           },
           "what": "Rovo fermo sul margine, bandana scura. Non si avvicina, non scompare subito. È lì.",
@@ -11069,12 +11065,6 @@
         "viottolo_perimetrale_piazza"
       ],
       "additive_only": true
-    },
-    {
-      "date": "2026-06-10",
-      "script": "scripts/cornice_mondo/step8_fix_canonical_refs.py",
-      "phase": "cornice_mondo_step8",
-      "summary": "7 riferimenti canonici uniformati: foresta_intrecciata x4, pontile_bocca, villaggio_centrale, who.refs plurale per s05_c2 (autorizzazione Ray 2026-06-10, risolve known_issues baseline)."
     }
   ],
   "world_conventions": {

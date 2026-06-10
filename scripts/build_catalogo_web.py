@@ -19,6 +19,7 @@ Scrive in: `catalogo_web/data/`.
 """
 
 import json
+import os
 from datetime import datetime, date
 from pathlib import Path
 
@@ -172,10 +173,12 @@ def main():
             return o.isoformat()
         raise TypeError(f"Object of type {o.__class__.__name__} not serializable")
 
-    OUT_FILE.write_text(
-        json.dumps(out, ensure_ascii=False, indent=2, default=_default),
-        encoding="utf-8",
-    )
+    # Scrittura ATOMICA (blindatura 2026-06): tmp + os.replace, così un run
+    # interrotto (CI cancellata, Ctrl-C) non lascia entities.json troncato.
+    payload = json.dumps(out, ensure_ascii=False, indent=2, default=_default)
+    tmp = OUT_FILE.with_name(OUT_FILE.name + ".tmp")
+    tmp.write_text(payload, encoding="utf-8")
+    os.replace(tmp, OUT_FILE)
     size_kb = OUT_FILE.stat().st_size // 1024
 
     print(f"Catalogo web generato: {OUT_FILE} ({size_kb} KB)")

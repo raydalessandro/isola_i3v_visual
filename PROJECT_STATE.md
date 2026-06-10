@@ -1,6 +1,73 @@
-# PROJECT_STATE — Snapshot al 2026-06-08
+# PROJECT_STATE — Snapshot al 2026-06-10
 
-> Per le sessioni precedenti (bootstrap 2026-04-25 → fase E → fase G → cornice del mondo → editorial build) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-06-10 — Blindatura completa: 4 audit + cancello CI + 7 incoerenze del canone risolte
+
+Integrato il pacchetto blindatura consegnato da Ray (2026-06-09) **e** applicate in autonomia le 7 correzioni del canone (autorizzazione esplicita Ray 2026-06-10).
+
+### A. Pacchetto blindatura installato
+
+| Percorso | Stato | Descrizione |
+|---|---|---|
+| `scripts/audit/audit_{1,2,3,4}_*.py` | NEW | 4 audit (integrità, schema a riposo, navigabilità referenziale con baseline a cricchetto, drift lessicale prosa + marker @hook/@subhook) |
+| `scripts/audit/run_all_audits.py` | NEW | runner (`--fast` salta drift prosa) |
+| `scripts/audit/_data/backup_manifest.sha256` | NEW | SHA-256 congelati 8 backup grafo |
+| `scripts/audit/_data/known_issues.yaml` | NEW | baseline a cricchetto (oggi vuota dopo step8) |
+| `scripts/audit/README.md` | MOD | stato passato a "implementato" |
+| `.github/workflows/ci.yml` | NEW | cancello CI: test + audit ad ogni push/PR; integration su PR |
+| `.github/workflows/rebuild-catalogo.yml` | MOD | fix `pip install PyYAML` mancante + push con retry+rebase |
+| `scripts/write_hooks_to_graph.py` | MOD | `save_graph()` atomico (tmp+`os.replace`) + docstring focal_action 25→30 (regola operante) |
+| `scripts/build_catalogo_web.py` | MOD | scrittura atomica `entities.json` |
+| `tests/test_audits.py` | NEW (24 test) | smoke + 13 corruzioni sintetiche per ogni audit |
+| `requirements.txt` + `requirements-dev.txt` | NEW | prima inesistenti |
+| `web/package-lock.json` | NEW | lockfile riproducibile (452 pacchetti) |
+| `Makefile` | NEW | `make check` = test + audit |
+| `docs/PIPELINE.md` | MOD | tappa 5 audit da "da implementare" a operativa |
+| `docs/BLINDATURA_2026-06-09.md` | NEW | report completo dal pacchetto |
+
+### B. Step 8 cornice_mondo — uniformazione id canonici (autorizzazione Ray)
+
+`scripts/cornice_mondo/step8_fix_canonical_refs.py` — script idempotente (dry-run/--apply, backup automatico). Applicato 2026-06-10.
+
+| # | Fix | Da | A |
+|---|---|---|---|
+| 1-4 | foreste (s02_c2, s03_c2, s04_c2, s07_c2): `where.location_id` | `margine_foresta_intrecciata` | `foresta_intrecciata` (qualifier invariato) |
+| 5 | pontile s06_c2: `where.location_id` | `pontile` | `pontile_bocca` |
+| 6 | s06 `location_primary.id` | `centro_villaggio` | `villaggio_centrale` |
+| 7 | s05_c2.who (Pun + Mèmolo) | `kind: nominato, ref: "pun_e_memolo"` | `kind: nominati, refs: ["pun","memolo"]` |
+
+**Estensione schema additiva:** introdotto `who.kind = "nominati"` + `who.refs: [...]` per coppie/triplette nominate insieme nella stessa cornice statica. Audit_2 (schema a riposo) e audit_3 (navigabilità) aggiornati per riconoscerlo. Lo schema esistente con `kind = "nominato"` + `ref` singolo resta valido per i 23 casi rimanenti.
+
+**Decisione editoriale focal_action ≤ 30 parole:** confermato 30 (regola operante storica). 59/120 hook esistenti già conformi.
+
+### C. Stato finale verificato
+
+```
+pytest -m "not slow"      78 passed, 1 skipped in 2.66s
+run_all_audits.py         4/4 PASS — 0 incoerenze in baseline
+known_issues.yaml         issues: [] (file svuotato)
+build_catalogo_web.py     116 entità, 83 immagini — invariato
+git status                clean su branch claude/blindatura-audit
+```
+
+### D. Backup chain aggiornata
+
+- `story_graph.json.pre_step8_canonical_refs.backup.json` (SHA registrato nel manifest)
+- 8 backup totali verificati contro manifest
+
+### E. CI cancello alzato
+
+Dal merge in poi, qualsiasi push/PR esegue:
+- `test` (78 test ~3s)
+- `audit` (1..4 ~2s)
+- `integration` (build PDF reale, solo PR verso main, ~60s)
+
+Una nuova incoerenza referenziale, un drift lessicale, una manomissione backup, un bump schema non autorizzato → blocca il merge.
+
+---
+
+
 
 ## Sessione 2026-06-08 — Editorial build: script definitivo impaginazione volumi KDP
 

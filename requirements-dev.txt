@@ -1,0 +1,6 @@
+# requirements-dev.txt — dipendenze per test e QA locali/CI.
+#   pip install -r requirements.txt -r requirements-dev.txt
+
+-r requirements.txt
+pytest>=8.0
+PyMuPDF>=1.24        # tests/test_integration.py (verifica invarianti PDF KDP)
