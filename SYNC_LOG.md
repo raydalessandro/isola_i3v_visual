@@ -12,6 +12,47 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-10-018 — Canonizzazione personaggi + chiusura branch illustratore + fix sito storia
+
+- **Stato:** DA_RIFLETTERE (TODO debug Vercel domani — il sito mostra ancora il deploy delle 16:23 UTC, le PR successive non sono visibili)
+- **Tipo:** visual + catalogo_web (catalogo v2 Next.js) + governance
+- **Repo target:** Vercel (deploy app Next — investigare configurazione domani)
+- **Cambiamento (4 PR consecutive merge in main):**
+
+  **PR #13** (`1cfcffd`) — Canonizzazione status:
+  - 11 schede personaggi `provvisorio` → `canonico` (primari: fiamma/grunto/stria/memolo/bartolo; secondari: nodo/salvia/zolla; cuccioli: pun/bru/toba). Totale canonici 4 → 15.
+  - 3 luoghi promossi dalla branch `immagini-nuove`: forno (panoramica), pascoli_alti (era vuoto), via_che_sale (vista_alta).
+
+  **PR #14** (`207f5e9`) — Luoghi ambigui + cronologia semi + fix copy hook:
+  - 4 luoghi ambigui collocati con mappa Ray: `il_villaggio` + `il_mercato_del_mezzogiorno` → `piazza_villaggio/`; `il_quartiere_di_terra` → `orti_del_cerchio/`; `il_quartiere_di_acqua` → `spiaggia_conchiglie/`.
+  - **Cronologia semi ricomparsa**: `<NarrativeChronologyBlock>` Server Component letto dal grafo (seeds_planted/picked_up/maturing_here/bloomed_here + callbacks_made + callback_summary). `scripts/build_storie_data.py` esteso con `load_graph_chronology()`. Nuovo campo `narrative_chronology` in storie-dashboard.json.
+  - **Fix copy prompt hook narrativo**: era nascosto da `{!subhooksAnn.length && ...}`. Rimosso il guard.
+
+  **PR #15** (`c685917`) — Riordino layout hook per workflow Manus:
+  - Sotto-hook + prompt copy SPOSTATI IN CIMA al body dell'hook (era in fondo)
+  - Prompt scena dei subhook SEMPRE VISIBILE (era in `<details>` chiuso)
+  - Subhook card con bordo `accent/30` per evidenza
+  - Sezioni Luogo/Personaggi/Oggetti/Note ETICHETTATE "(reference)" per chiarire intento
+
+  **Commit trigger** (`b3a6ef4`) — push di cache-bust:
+  - Vercel non ha buildato dopo 16:23 UTC nonostante PR #12-#15 mergiate. Pushato commit con timestamp rigenerato (`generated_at: 2026-06-10T18:22:33`) su `main` + `claude/cutover-deploy-preview` per forzare trigger build e dare a Ray un marker visibile (footer sidebar) per verificare se Vercel ribuilda.
+
+- **TODO Ray domani:**
+  1. Debug project Vercel: branch deploy, auto-deploy, build error, vercel.json route. Identificare perché il deploy si è fermato a 16:23.
+  2. Integrare 2 branch di miglioria qualità codice (preparate, da pushare).
+  3. Cancellare branch illustratore obsolete: `Modifiche-Hook-storia`, `Personaggi-modificati`, `immagini-nuove`, `claude/show-uploaded-images-1rEQ1` (tutte recuperate).
+
+- **File toccati (cumulativo PR #13-#15 + trigger):**
+  - `visual/personaggi/individuali/<...>/scheda.md` × 11 (status canonico)
+  - `visual/luoghi/{quartiere_fuoco/forno, quartiere_aria/{pascoli_alti, via_che_sale}, quartiere_terra/orti_del_cerchio, quartiere_acqua/spiaggia_conchiglie, villaggio_centrale/piazza_villaggio}/immagini/{_hd/, <id>.jpg}` × 7 NEW
+  - `web/components/storie-dashboard/{hook-item.tsx, narrative-chronology-block.tsx (NEW)}`
+  - `web/app/storie/[sid]/page.tsx` (mount NarrativeChronologyBlock)
+  - `web/lib/types-storie-dashboard.ts` (NarrativeChronology type)
+  - `scripts/build_storie_data.py` (load_graph_chronology, process_storia signature)
+  - `catalogo_web/data/{entities,storie}.json` rigenerati + mirror Vercel `web/public/data/`
+
+---
+
 ## SYNC-2026-06-10-017 — Promozione 11 reference dal volume al catalogo + fix processo illustratore
 
 - **Stato:** DA_RIFLETTERE
