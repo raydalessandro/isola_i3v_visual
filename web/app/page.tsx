@@ -1,165 +1,295 @@
+// Home — workbench operativo (WI-6 catalogo v2).
+//
+// Sostituisce le card editoriali della v0.4.0 con un cruscotto orientato al
+// lavoro: stato versione grafo, contatori canonico/provvisorio per categoria,
+// quick links alle viste, ultime entità con immagini. I dati arrivano dal
+// blocco `meta` di entities.json (WI-8).
+
 import Link from "next/link";
-import { ArrowRight, BookOpen, Compass, ImageIcon, Map as MapIcon } from "lucide-react";
+import Image from "next/image";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+  ArrowRight,
+  BookOpen,
+  Compass,
+  Layers,
+  Map as MapIcon,
+  Search,
+  Activity,
+} from "lucide-react";
 
-const BUILD_DATE = "2026-05-10";
-const APP_VERSION = "0.4.0";
+import { getEntitiesData } from "@/lib/data";
+import { imageUrl } from "@/lib/image-url";
+import { FAMIGLIA_ORDER } from "@/lib/types";
 
-export default function HomePage() {
+export const dynamic = "force-static";
+
+function formatDate(iso: string): string {
+  if (!iso) return "—";
+  return iso.slice(0, 10);
+}
+
+export default async function HomePage() {
+  const data = await getEntitiesData();
+  const meta = data.meta;
+  const totals = data.totals;
+  const byStatus = data.by_status;
+
+  const perFamiglia = FAMIGLIA_ORDER.map((fam) => {
+    const list = data.entities.filter((e) => e.famiglia === fam);
+    const canonico = list.filter((e) => e.status === "canonico").length;
+    const provvisorio = list.filter((e) => e.status === "provvisorio").length;
+    const conImmagini = list.filter((e) => (e.n_images || 0) > 0).length;
+    const conPrompt = list.filter((e) => e.has_prompt_grok).length;
+    return {
+      fam,
+      totale: list.length,
+      canonico,
+      provvisorio,
+      conImmagini,
+      conPrompt,
+    };
+  }).filter((r) => r.totale > 0);
+
+  const conImmagini = data.entities
+    .filter((e) => (e.n_images || 0) > 0)
+    .slice()
+    .sort((a, b) => (b.n_images || 0) - (a.n_images || 0))
+    .slice(0, 8);
+
   return (
-    <main className="max-w-6xl mx-auto px-6 py-10 space-y-12">
-      <header className="space-y-3 border-b border-rule-soft pb-8">
-        <h1 className="font-serif font-semibold text-5xl tracking-tight text-ink">
+    <main className="mx-auto max-w-6xl space-y-10 px-6 py-10">
+      <header className="space-y-3 border-b border-rule-soft pb-6">
+        <h1 className="font-serif text-4xl font-semibold tracking-tight text-ink md:text-5xl">
           L&apos;Isola dei Tre Venti
         </h1>
-        <p className="font-serif italic text-xl text-ink-soft">
-          Cruscotto editoriale — migrazione in corso
+        <p className="font-serif italic text-lg text-ink-soft">
+          Cruscotto editoriale
         </p>
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-1 font-mono text-xs text-ink-faint">
+          {meta && (
+            <>
+              <span>
+                Grafo{" "}
+                <strong className="text-ink-soft">v{meta.graph_version}</strong>
+                {" · schema "}
+                <strong className="text-ink-soft">{meta.schema_version}</strong>
+              </span>
+              <span>
+                Aggiornato:{" "}
+                <strong className="text-ink-soft">
+                  {formatDate(meta.graph_last_updated)}
+                </strong>
+              </span>
+              <span>
+                Build:{" "}
+                <strong className="text-ink-soft">
+                  {formatDate(meta.generated_at)}
+                </strong>
+              </span>
+            </>
+          )}
+          <span className="ml-auto inline-flex items-center gap-1 text-ink-faint">
+            <kbd className="rounded border border-rule px-1.5 py-0.5">⌘K</kbd>
+            <span>per cercare ovunque</span>
+          </span>
+        </div>
       </header>
 
-      <section className="grid gap-6 md:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-accent-warm">
-              <ImageIcon className="h-5 w-5" aria-hidden />
-              <span className="font-mono text-xs uppercase tracking-wider">
-                Catalogo
-              </span>
-            </div>
-            <CardTitle>Catalogo immagini</CardTitle>
-            <CardDescription>
-              Versione statica vivente — schede personaggi, oggetti, luoghi,
-              venti.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-ink-soft">
-            <p>
-              Catalogo entità nativo Next.js: tree gerarchico, gallerie con
-              lightbox, body editoriale collassabile, prompt grok per
-              personaggi e oggetti.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Button asChild variant="default">
-              <Link href="/catalogo" className="inline-flex items-center gap-2">
-                Apri catalogo
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-accent-warm">
-              <BookOpen className="h-5 w-5" aria-hidden />
-              <span className="font-mono text-xs uppercase tracking-wider">
-                Storie
-              </span>
-            </div>
-            <CardTitle>Storie del libro</CardTitle>
-            <CardDescription>
-              Le 12 storie illustrate — prosa definitiva + immagini-scena per
-              pagina libro fisica.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-ink-soft">
-            <p>
-              Indice 12 storie raggruppate per ciclo (A/B/C/D), con dettaglio
-              pagina-per-pagina e link alle tappe narrative.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Button asChild variant="default">
-              <Link href="/storie" className="inline-flex items-center gap-2">
-                Apri storie
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-accent">
-              <MapIcon className="h-5 w-5" aria-hidden />
-              <span className="font-mono text-xs uppercase tracking-wider">
-                Strade &amp; mappa
-              </span>
-            </div>
-            <CardTitle>Indice &amp; mappa isola</CardTitle>
-            <CardDescription>
-              Le strade secondarie per quartiere, e la mappa illustrata
-              navigabile.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-ink-soft space-y-2">
-            <p>
-              L&apos;indice strade dà accesso a vicoli, sentieri, viottoli con
-              link alle schede catalogo.
-            </p>
-          </CardContent>
-          <CardFooter className="flex flex-wrap gap-2">
-            <Button asChild variant="default">
-              <Link href="/strade" className="inline-flex items-center gap-2">
-                Indice strade
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </Button>
-            <Button asChild variant="ghost">
-              <Link href="/mappa" className="inline-flex items-center gap-2">
-                <Compass className="h-4 w-4" aria-hidden />
-                Mappa isola
-              </Link>
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card>
-          <CardHeader>
-            <div className="flex items-center gap-2 text-accent-warm">
-              <Compass className="h-5 w-5" aria-hidden />
-              <span className="font-mono text-xs uppercase tracking-wider">
-                Orchestra
-              </span>
-            </div>
-            <CardTitle>Atlante saga</CardTitle>
-            <CardDescription>
-              Vista narrativa cross-storia: 12 storie sull&apos;asse temporale,
-              archi dei semi, presenze personaggi e luoghi.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-ink-soft">
-            <p>
-              Atlante a tre tracce con archi seed (planted → bloomed),
-              side-panel per il dettaglio di ogni nodo, deep linking via hash.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Button asChild variant="default">
-              <Link href="/orchestra" className="inline-flex items-center gap-2">
-                Apri atlante
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-            </Button>
-          </CardFooter>
-        </Card>
+      <section aria-label="Sezioni" className="grid gap-3 md:grid-cols-3">
+        <QuickLink
+          href="/catalogo"
+          icon={<Layers className="h-4 w-4" aria-hidden />}
+          title="Catalogo"
+          desc={`${totals.totale} entità · ${byStatus.canonico} canoniche · ${byStatus.provvisorio} in lavorazione`}
+        />
+        <QuickLink
+          href="/storie"
+          icon={<BookOpen className="h-4 w-4" aria-hidden />}
+          title="Storie"
+          desc="12 storie · 4 cicli · dashboard hook"
+        />
+        <QuickLink
+          href="/mappa"
+          icon={<MapIcon className="h-4 w-4" aria-hidden />}
+          title="Mappa"
+          desc="atlante illustrato dell'isola"
+        />
+        <QuickLink
+          href="/orchestra"
+          icon={<Compass className="h-4 w-4" aria-hidden />}
+          title="Orchestra"
+          desc="atlante narrativo a quadranti"
+        />
+        <QuickLink
+          href="/strade"
+          icon={<MapIcon className="h-4 w-4" aria-hidden />}
+          title="Strade"
+          desc="indice 5 sentieri Tier A"
+        />
+        <QuickLink
+          href="/stato"
+          icon={<Activity className="h-4 w-4" aria-hidden />}
+          title="Stato F.2"
+          desc="board canonizzazione per gruppo"
+        />
       </section>
 
-      <footer className="border-t border-rule-soft pt-6 font-mono text-xs text-ink-faint">
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span>v{APP_VERSION} · build {BUILD_DATE}</span>
-          <span>Step 4.1/N — atlante saga</span>
+      <section aria-label="Workbench canonizzazione" className="space-y-3">
+        <header className="flex items-end justify-between border-b border-rule-soft pb-2">
+          <h2 className="font-serif text-2xl font-semibold text-ink">
+            Lavorazione catalogo
+          </h2>
+          <Link
+            href="/stato"
+            className="inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider text-ink-faint hover:text-accent"
+          >
+            Board completa
+            <ArrowRight className="h-3 w-3" aria-hidden />
+          </Link>
+        </header>
+        <div className="grid gap-3 md:grid-cols-2">
+          {perFamiglia.map((r) => {
+            const pct = r.totale
+              ? Math.round((r.canonico / r.totale) * 100)
+              : 0;
+            return (
+              <div
+                key={r.fam}
+                className="rounded-md border border-rule-soft bg-paper-soft p-4"
+              >
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <span className="font-serif text-lg font-medium capitalize text-ink">
+                    {r.fam}
+                  </span>
+                  <span className="font-mono text-xs text-ink-faint">
+                    {r.canonico}/{r.totale} canoniche
+                  </span>
+                </div>
+                <div className="h-1.5 overflow-hidden rounded bg-rule-soft">
+                  <div
+                    className="h-full bg-accent transition-all"
+                    style={{ width: `${pct}%` }}
+                    aria-hidden
+                  />
+                </div>
+                <dl className="mt-3 grid grid-cols-3 gap-2 font-mono text-[11px] text-ink-faint">
+                  <Stat label="con prompt" value={r.conPrompt} max={r.totale} />
+                  <Stat label="con img" value={r.conImmagini} max={r.totale} />
+                  <Stat
+                    label="provvisorie"
+                    value={r.provvisorio}
+                    max={r.totale}
+                  />
+                </dl>
+              </div>
+            );
+          })}
         </div>
+      </section>
+
+      {conImmagini.length > 0 && (
+        <section aria-label="Entità con immagini" className="space-y-3">
+          <header className="flex items-end justify-between border-b border-rule-soft pb-2">
+            <h2 className="font-serif text-2xl font-semibold text-ink">
+              Con immagini canoniche
+            </h2>
+            <span className="font-mono text-xs text-ink-faint">
+              top {conImmagini.length}
+            </span>
+          </header>
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
+            {conImmagini.map((e) => {
+              const first = e.images?.[0];
+              return (
+                <li key={e.id}>
+                  <Link
+                    href={`/catalogo/${e.id}`}
+                    className="block space-y-1.5 rounded-md border border-rule-soft p-2 transition-colors hover:border-accent/40"
+                  >
+                    {first && (
+                      <div className="relative aspect-square w-full overflow-hidden rounded bg-rule-soft/30">
+                        <Image
+                          src={imageUrl(first.path)}
+                          alt={e.name}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 12vw"
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </div>
+                    )}
+                    <p className="truncate text-xs font-medium text-ink">
+                      {e.name}
+                    </p>
+                    <p className="font-mono text-[10px] text-ink-faint">
+                      {e.n_images} img · {e.status}
+                    </p>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
+
+      <footer className="border-t border-rule-soft pt-6 font-mono text-[11px] text-ink-faint">
+        <span className="inline-flex items-center gap-1.5">
+          <Search className="h-3 w-3" aria-hidden />
+          Premi ⌘K (Ctrl+K) ovunque per cercare tra entità, storie e sezioni.
+        </span>
       </footer>
     </main>
+  );
+}
+
+function QuickLink({
+  href,
+  icon,
+  title,
+  desc,
+}: {
+  href: string;
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group flex items-start gap-3 rounded-md border border-rule-soft bg-paper p-4 transition-colors hover:border-accent/40 hover:bg-paper-soft"
+    >
+      <span className="mt-0.5 rounded bg-rule-soft/50 p-2 text-ink-soft group-hover:text-accent">
+        {icon}
+      </span>
+      <span className="flex-1">
+        <span className="block font-serif text-lg font-medium text-ink">
+          {title}
+        </span>
+        <span className="block text-xs text-ink-soft">{desc}</span>
+      </span>
+      <ArrowRight
+        className="h-4 w-4 shrink-0 text-ink-faint transition-transform group-hover:translate-x-0.5 group-hover:text-accent"
+        aria-hidden
+      />
+    </Link>
+  );
+}
+
+function Stat({
+  label,
+  value,
+  max,
+}: {
+  label: string;
+  value: number;
+  max: number;
+}) {
+  return (
+    <div>
+      <dt>{label}</dt>
+      <dd className="text-ink-soft">
+        {value}/{max}
+      </dd>
+    </div>
   );
 }

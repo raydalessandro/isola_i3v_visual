@@ -94,8 +94,22 @@ export interface AuxData {
   catalogo_md?: string;
 }
 
+export interface EntitiesMeta {
+  generated_at: string;
+  graph_version: string;
+  schema_version: string | number;
+  graph_last_updated: string;
+  counts: {
+    totals: Totals;
+    by_status: ByStatus;
+  };
+}
+
 export interface EntitiesData {
   generated_at: string;
+  /** Blocco meta esposto dal build_catalogo_web.py — WI-8 catalogo v2.
+   *  Opzionale per retrocompat con dump statici legacy. */
+  meta?: EntitiesMeta;
   totals: Totals;
   by_status: ByStatus;
   tree: Tree;
