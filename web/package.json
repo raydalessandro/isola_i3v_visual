@@ -6,9 +6,9 @@
     "node": ">=20"
   },
   "scripts": {
-    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
+    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
+    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

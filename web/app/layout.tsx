@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { CommandPalette } from "@/components/command-palette";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="it" className={`${fraunces.variable} ${jetbrainsMono.variable}`}>
       <body className="bg-paper text-ink font-serif antialiased">
         {children}
+        <CommandPalette />
       </body>
     </html>
   );
