@@ -6,8 +6,8 @@ sottotipo: primari
 specie: tartaruga_di_mare_anziana
 tipo_grafo: abitante_maggiore
 ruolo_saga: dilatazione_del_tempo
-status: provvisorio
-ultima_modifica: 2026-04-29
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.bartolo"]
 appare_in_storie: []
 relazioni:

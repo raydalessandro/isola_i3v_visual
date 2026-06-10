@@ -6,8 +6,8 @@ sottotipo: primari
 specie: airone_cenerino
 tipo_grafo: abitante_maggiore
 ruolo_saga: autorita_calma_scambio_asimmetrico
-status: provvisorio
-ultima_modifica: 2026-04-28
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.stria"]
 appare_in_storie: []
 relazioni:

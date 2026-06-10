@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-10T14:52:44",
+  "generated_at": "2026-06-10T15:19:28",
   "meta": {
-    "generated_at": "2026-06-10T14:52:44",
+    "generated_at": "2026-06-10T15:19:28",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -15,8 +15,8 @@
         "visual_signature": 1
       },
       "by_status": {
-        "provvisorio": 112,
-        "canonico": 4
+        "provvisorio": 101,
+        "canonico": 15
       }
     }
   },
@@ -29,8 +29,8 @@
     "visual_signature": 1
   },
   "by_status": {
-    "provvisorio": 112,
-    "canonico": 4
+    "provvisorio": 101,
+    "canonico": 15
   },
   "tree": {
     "luoghi": {
@@ -436,7 +436,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "fields",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_aria/pascoli_alti"
               }
             },
@@ -524,7 +524,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "path",
                 "status": "provvisorio",
-                "n_images": 1,
+                "n_images": 2,
                 "folder_path": "visual/luoghi/quartiere_aria/via_che_sale"
               }
             }
@@ -552,7 +552,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "building",
                 "status": "provvisorio",
-                "n_images": 7,
+                "n_images": 8,
                 "folder_path": "visual/luoghi/quartiere_fuoco/forno"
               }
             },
@@ -1280,7 +1280,7 @@
                     "name": "Bru",
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/cuccioli/bru"
                   }
@@ -1316,7 +1316,7 @@
                     "name": "Pun",
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/cuccioli/pun"
                   }
@@ -1328,7 +1328,7 @@
                     "name": "Toba",
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/cuccioli/toba"
                   }
@@ -1344,7 +1344,7 @@
                     "name": "Bartolo",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/bartolo"
                   }
@@ -1356,7 +1356,7 @@
                     "name": "Fiamma",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/fiamma"
                   }
@@ -1368,7 +1368,7 @@
                     "name": "Grunto",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/grunto"
                   }
@@ -1380,7 +1380,7 @@
                     "name": "Memolo",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/memolo"
                   }
@@ -1404,7 +1404,7 @@
                     "name": "Stria",
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 4,
                     "folder_path": "visual/personaggi/individuali/primari/stria"
                   }
@@ -1432,7 +1432,7 @@
                     "name": "Nodo",
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/nodo"
                   }
@@ -1444,7 +1444,7 @@
                     "name": "Salvia",
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/salvia"
                   }
@@ -1456,7 +1456,7 @@
                     "name": "Zolla",
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
-                    "status": "provvisorio",
+                    "status": "canonico",
                     "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/zolla"
                   }
@@ -3742,8 +3742,14 @@
         "quartiere_aria",
         "pascoli_alti"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "pascoli_alti_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_aria/pascoli_alti/immagini/pascoli_alti_canonica_v1_panoramica.jpg",
+          "size_kb": 217
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "roccia_alta",
@@ -4258,9 +4264,14 @@
           "filename": "via_che_sale_canonica_v1_panoramica.jpg",
           "path": "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg",
           "size_kb": 264
+        },
+        {
+          "filename": "via_che_sale_canonica_v1_vista_alta.jpg",
+          "path": "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_vista_alta.jpg",
+          "size_kb": 198
         }
       ],
-      "n_images": 1
+      "n_images": 2
     },
     {
       "id": "case_del_mattino",
@@ -4418,12 +4429,17 @@
           "size_kb": 346
         },
         {
+          "filename": "forno_canonica_v1_panoramica.jpg",
+          "path": "visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_panoramica.jpg",
+          "size_kb": 163
+        },
+        {
           "filename": "forno_planimetria_canonica.jpg",
           "path": "visual/luoghi/quartiere_fuoco/forno/immagini/forno_planimetria_canonica.jpg",
           "size_kb": 246
         }
       ],
-      "n_images": 7
+      "n_images": 8
     },
     {
       "id": "sentiero_forno_case_mattino",
@@ -7770,7 +7786,7 @@
       "name": "Bru",
       "famiglia": "personaggio",
       "sottotipo": "cuccioli",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7781,8 +7797,8 @@
         "specie": "tassino",
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "presenza_silenziosa_che_custodisce",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.bru"
         ],
@@ -7978,7 +7994,7 @@
       "name": "Pun",
       "famiglia": "personaggio",
       "sottotipo": "cuccioli",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -7989,8 +8005,8 @@
         "specie": "riccino",
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "memoria_pratica_intuizione_laterale",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.pun"
         ],
@@ -8052,7 +8068,7 @@
       "name": "Toba",
       "famiglia": "personaggio",
       "sottotipo": "cuccioli",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8063,8 +8079,8 @@
         "specie": "tartarughina",
         "tipo_grafo": "cucciolo_scuola",
         "ruolo_saga": "domanda_che_apre",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.toba"
         ],
@@ -8121,7 +8137,7 @@
       "name": "Bartolo",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8132,8 +8148,8 @@
         "specie": "tartaruga_di_mare_anziana",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "dilatazione_del_tempo",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-29",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.bartolo"
         ],
@@ -8193,7 +8209,7 @@
       "name": "Fiamma",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8204,8 +8220,8 @@
         "specie": "volpe_rossa",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cammeo_ricorrente_cornice_s1_s12",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-29",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.fiamma"
         ],
@@ -8265,7 +8281,7 @@
       "name": "Grunto",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8276,8 +8292,8 @@
         "specie": "stambecco_verde_vecchio",
         "tipo_grafo": "testimone_unico_pre_vento",
         "ruolo_saga": "architrave_strato_3",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.grunto"
         ],
@@ -8337,7 +8353,7 @@
       "name": "Memolo",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8348,8 +8364,8 @@
         "specie": "riccio",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "cambio_di_registro_colpo_di_coda",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.memolo"
         ],
@@ -8469,7 +8485,7 @@
       "name": "Stria",
       "famiglia": "personaggio",
       "sottotipo": "primari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8480,8 +8496,8 @@
         "specie": "airone_cenerino",
         "tipo_grafo": "abitante_maggiore",
         "ruolo_saga": "autorita_calma_scambio_asimmetrico",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.stria"
         ],
@@ -8603,7 +8619,7 @@
       "name": "Nodo",
       "famiglia": "personaggio",
       "sottotipo": "secondari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8614,8 +8630,8 @@
         "specie": "picchio",
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "mano_che_fa",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.nodo"
         ],
@@ -8675,7 +8691,7 @@
       "name": "Salvia",
       "famiglia": "personaggio",
       "sottotipo": "secondari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8686,8 +8702,8 @@
         "specie": "lepre",
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "cura_concreta_che_educa",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.salvia"
         ],
@@ -8747,7 +8763,7 @@
       "name": "Zolla",
       "famiglia": "personaggio",
       "sottotipo": "secondari",
-      "status": "provvisorio",
+      "status": "canonico",
       "quartiere": null,
       "categoria_strada": null,
       "frontmatter": {
@@ -8758,8 +8774,8 @@
         "specie": "scoiattolo_grigio_anziano",
         "tipo_grafo": "abitante_minore_mestiere",
         "ruolo_saga": "stagione_e_parsimonia",
-        "status": "provvisorio",
-        "ultima_modifica": "2026-04-28",
+        "status": "canonico",
+        "ultima_modifica": "2026-06-10",
         "fonti": [
           "pipeline_narrativa/story_graph.json#entities.characters.zolla"
         ],
