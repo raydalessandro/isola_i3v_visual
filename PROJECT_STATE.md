@@ -1,6 +1,68 @@
-# PROJECT_STATE — Snapshot al 2026-06-10 (sera)
+# PROJECT_STATE — Snapshot al 2026-06-10 (notte)
 
-> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura → catalogo v2 → cutover Vercel) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti vedi sezioni cronologiche sotto.
+
+## Sessione 2026-06-10 notte — Promozione reference dal volume al catalogo + fix SKILL illustratore
+
+### A. Diagnosi disallineamento
+
+Le branch dell'illustratore (`Personaggi-modificati`, `immagini-nuove`) avevano caricato ritratti di personaggi con naming creativo in cartelle sbagliate. Nel recovery (PR #4 2026-05-19) i 9 ritratti del Vol 1 erano stati messi in `_volumi/v01/_hd/` come "intro volume" — decisione sbagliata: erano **reference saga riusabili**, non illustrazioni specifiche del volume. Risultato: doppio canone non sincronizzato, sito che mostrava arte vecchia (poi risolto con sync low-res dalle HD, PR #11).
+
+### B. Promozione 11 reference dal volume al catalogo
+
+11 file HD spostati da `_volumi/v01/_hd/v01_intro_<slug>_hd.jpg` a `visual/personaggi/individuali/<cat>/<id>/immagini/_hd/<id>_canonica_v1_<vista>_hd.jpg` (+ low-res derivate via downscale 832×1248 q85):
+
+| Slug | Categoria | Vista | Note |
+|---|---|---|---|
+| fiamma | primari | ritratto | singolo |
+| grunto | primari | ritratto | singolo |
+| nodo | secondari | ritratto | singolo |
+| salvia | secondari | ritratto | singolo |
+| zolla | secondari | ritratto | singolo |
+| pun | cuccioli | ritratto | singolo |
+| bru | cuccioli | ritratto | singolo |
+| memolo | primari | con_pun | coppia |
+| rovo | primari | con_bru | coppia (riempie gap Rovo, prima 0 canoniche) |
+| bartolo | primari | con_toba | coppia |
+| gabriel | bambini | con_fratelli | 3 fratelli insieme (sotto il maggiore) |
+
+**Eccezione HOLD**: `v01_intro_stria_hd.jpg` resta in `_volumi/v01/_hd/` — la HD attuale è in volo, Ray vuole una versione non-volante prima della promozione.
+
+### C. Adattamento `scripts/build_volume.py`
+
+- `build_presentazione_image_map` per Vol 1/2/3: i path puntano al catalogo (`cat(...)`), non più a `hd(...)`. Stria resta su `hd("stria")` come fallback HOLD.
+- Aggiunto `resolve_scene_image(img)` anche sulla path di presentazione: lo script ora preferisce automaticamente la HD da `_hd/` quando esiste (era già il comportamento per le scene storia, ora unificato per la presentazione).
+- Risultato: 6 warning "immagine sotto spec" per personaggi SPARITI (usa le HD vere ~2000×3000 px), restano solo i warning per luoghi (gap noto).
+
+### D. Aggiornamento `skills/illustratore/SKILL.md` v1.1
+
+Aggiunta sezione §0 "Decisione PRIMA DI TUTTO" con albero decisionale + tabella errori storici + regola operativa: **i ritratti vanno SEMPRE al catalogo, anche se prodotti durante la lavorazione di un volume**. `_volumi/v0N/_hd/` riservato a illustrazioni narrative non-ritratto specifiche del volume. Aggiornata anche la sezione 5 "review" con classificazione contesto come check #1 obbligatorio.
+
+### E. Stato verificato
+
+```
+pytest -m "not slow"      78 passed in 3.25s
+pytest -m slow            6 passed in 32.57s (build PDF Vol1 s01 reale)
+audit (3/3 fast)          PASS
+build_volume.py Vol1 s01  PDF libro 44MB + stampa 45.6MB OK
+build_catalogo_web.py     116 entità, 94 immagini (era 83 → +11)
+mirror Vercel             aggiornato (web/public/data/entities.json)
+```
+
+### F. Stato canone visual
+
+- **Immagini totali catalogate:** 94 (da 83)
+- **Personaggi con set canoniche complete** (≥4 viste): Fiamma, Grunto, Stria, Nodo, Salvia, Zolla, Memolo, Pun, Rovo (era a zero), Bru, Bartolo, Toba, Gabriel, Elias, Noah → **15 personaggi**
+- **Status `canonico` nel grafo:** ancora 4 (Fiamma, Bartolo, Forno, grembiule_fiamma). **TODO autoriale Ray**: valutare promozione `status: canonico` per i 15 personaggi con set completo.
+- **Stria gap**: HD attuale in volo → manca versione non-volante per ritratto canonico
+
+### G. File rimanenti in `_volumi/v01/_hd/`
+
+Solo `v01_intro_stria_hd.jpg` (HOLD). Quando arriverà la versione non-volante, si promuove come `stria_canonica_v1_ritratto.jpg` e questo file si elimina.
+
+---
+
+
 
 ## Sessione 2026-06-10 sera — Cutover Vercel + correzioni doc
 

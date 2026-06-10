@@ -2,18 +2,59 @@
 
 > Per **istanze IA** o **collaboratori umani** che si connettono alla repo `isola_i3v_visual` per **caricare immagini HD** (illustrazioni di scena, ritratti, intro volume) generate via Grok Imagine o altro tool.
 >
-> Versione: 1.0 — 2026-05-19
+> Versione: 1.1 — 2026-06-10 (aggiunto §0 "Decisione PRIMA di tutto: dove va il file?" — i ritratti vanno SEMPRE al catalogo, mai al volume)
 
 ---
 
 ## TL;DR (in 60 secondi)
 
-1. **Formato:** JPEG qualità 95, RGB profilo sRGB, min 1664×2496 px (verticale).
-2. **Dove:** SEMPRE in una subdir `_hd/`, MAI nella cartella padre. **MAI sostituire i low-res esistenti.**
-3. **Branch:** una branch per scope coerente (es. `claude/hd-storia-s02`, `claude/hd-intro-v02`, `claude/hd-catalogo-primari`). Mai pushare su `main`.
-4. **Commit:** **un solo commit** per branch, messaggio descrittivo. NO 34 commit atomici "Aggiunge X / Rimuove Y".
-5. **NO contaminazioni:** la branch immagini contiene SOLO immagini. NO codice app web, NO modifiche a `.md`, NO altro.
-6. **PR + attesa OK Ray:** apri PR verso `main`, NON mergiare in autonomia.
+1. **§0 PRIMA DI TUTTO**: classifica ogni file in uno dei 3 contesti (sotto). Sbagliare contesto = rilavorazione + disallineamento canone.
+2. **Formato:** JPEG qualità 95, RGB profilo sRGB, min 1664×2496 px (verticale).
+3. **Dove:** SEMPRE in una subdir `_hd/`, MAI nella cartella padre. **MAI sostituire i low-res esistenti.**
+4. **Branch:** una branch per scope coerente (es. `claude/hd-storia-s02`, `claude/hd-intro-v02`, `claude/hd-catalogo-primari`). Mai pushare su `main`.
+5. **Commit:** **un solo commit** per branch, messaggio descrittivo. NO 34 commit atomici "Aggiunge X / Rimuove Y".
+6. **NO contaminazioni:** la branch immagini contiene SOLO immagini. NO codice app web, NO modifiche a `.md`, NO altro.
+7. **PR + attesa OK Ray:** apri PR verso `main`, NON mergiare in autonomia.
+
+---
+
+## 0. Decisione PRIMA DI TUTTO: dove va il file?
+
+> ⚠️ Errore storico (2026-05-19 → 2026-06-10): branch dell'illustratore che caricavano **ritratti di personaggi** dentro `_volumi/v0N/_hd/` come "intro volume", quando erano in realtà **reference saga riusabili** che dovevano stare nel catalogo. Risultato: doppio canone non sincronizzato, sito che mostrava arte vecchia, recovery manuale. Da non ripetere.
+
+**Albero decisionale** — applicare per OGNI file PRIMA di scegliere path e nome:
+
+```
+1. Il soggetto è un personaggio/oggetto/luogo del catalogo (visual/<categoria>/<id>/) ?
+
+   ├── SÌ ─→ è un RITRATTO/VISTA del soggetto (singolo, coppia, gruppo) ?
+   │        ├── SÌ ─→ contesto 1c (CATALOGO) — sempre, anche se prodotto durante
+   │        │         la lavorazione di un volume specifico.
+   │        │         I ritratti sono reference saga riusabili.
+   │        │
+   │        └── NO → è una scena specifica (azione, contesto narrativo,
+   │                  illustrazione di pagina libro) ?
+   │                  ├── pagina libro fisica di una storia ─→ contesto 1a (_scene/sNN/)
+   │                  └── illustrazione decorativa per un volume (sigillo,
+   │                       composizione narrativa intro non-ritratto, ecc.) ─→ contesto 1b (_volumi/v0N/)
+   │
+   └── NO ─→ è un'illustrazione narrativa specifica del libro ?
+            ├── pagina hook storia ─→ contesto 1a
+            ├── decoro/sigillo/intro del volume ─→ contesto 1b
+            └── altro ─→ chiedi a Ray prima di pushare
+```
+
+**Casi tipici in cui ci si è sbagliati in passato:**
+
+| Soggetto | Contesto sbagliato (storico) | Contesto giusto |
+|---|---|---|
+| Fiamma di fronte (ritratto) | `_volumi/v01/_hd/v01_intro_fiamma_hd.jpg` | `visual/personaggi/individuali/primari/fiamma/immagini/_hd/fiamma_canonica_v1_ritratto_hd.jpg` |
+| Mèmolo che tiene Pun (coppia) | `_volumi/v01/_hd/v01_intro_memolo_pun_hd.jpg` | `visual/personaggi/individuali/primari/memolo/immagini/_hd/memolo_canonica_v1_con_pun_hd.jpg` |
+| I 3 fratelli insieme | `_volumi/v01/_hd/v01_intro_bambini_hd.jpg` | `visual/personaggi/individuali/bambini/gabriel/immagini/_hd/gabriel_canonica_v1_con_fratelli_hd.jpg` (sotto il maggiore) |
+| Pagina 3 di s01 (scena) | OK | `_scene/s01/_hd/s01_h02a_hd.jpg` |
+| Sigillo narrativo Vol 1 (decoro) | OK | `_volumi/v01/_hd/v01_sigillo_hd.jpg` (futuro) |
+
+**Regola operativa:** `_volumi/v0N/_hd/` contiene SOLO illustrazioni *prodotte per* il volume e non riusabili come reference. **Tutti i ritratti, anche se realizzati durante la lavorazione di un volume, vanno al catalogo.**
 
 ---
 
@@ -181,13 +222,15 @@ Apri PR verso `main`. Titolo identico al messaggio commit. Corpo: 1-2 righe desc
 
 Prima del merge in `main`, verifica:
 
-1. **Path corretto** — file in `_hd/` del contesto giusto
-2. **Naming corretto** — `<id>_hd.jpg` lowercase snake_case
-3. **Formato corretto** — JPEG q95, RGB sRGB, ≥1664×2496 px
-4. **Diff pulito** — solo file aggiunti, nessuna modifica accidentale a low-res o `.md`
-5. **Commit pulito** — un solo commit con messaggio standard
-6. **Nessuna contaminazione** — niente codice app web, niente file fuori scope
-7. **Branch up-to-date con main** — niente conflitti
+1. **§0 Classificazione contesto** — per OGNI file: è un ritratto? → catalogo (1c). È una scena? → _scene/ (1a). È un decoro specifico volume? → _volumi/ (1b). Se hai dubbio anche solo per UN file → chiedi a Ray prima del merge. **Sbagliare il contesto è il bug più comune e crea disallineamento canone difficile da recuperare.**
+2. **Path corretto** — file in `_hd/` del contesto giusto
+3. **Naming corretto** — `<id>_hd.jpg` lowercase snake_case
+4. **Formato corretto** — JPEG q95, RGB sRGB, ≥1664×2496 px
+5. **Diff pulito** — solo file aggiunti, nessuna modifica accidentale a low-res o `.md`
+6. **Commit pulito** — un solo commit con messaggio standard
+7. **Nessuna contaminazione** — niente codice app web, niente file fuori scope
+8. **Branch up-to-date con main** — niente conflitti
+9. **CI verde** — test + audit + build (il cancello impedisce automaticamente regressioni nel canone navigabilità grafo↔immagini)
 
 Se anche solo uno di questi fallisce, la review chiede modifiche o chiude la PR.
 
@@ -206,15 +249,17 @@ File:
   + ... (17 file totali)
 ```
 
-### Esempio intro v02 (volume 2)
+### Esempio intro v02 (volume 2) — CASO RARO
+
+> ⚠️ Aggiornato 2026-06-10: **i ritratti dei personaggi del Ciclo B NON vanno qui**, vanno al catalogo (vedi §0). `_volumi/v02/_hd/` contiene SOLO illustrazioni prodotte appositamente per il volume e non riusabili come reference saga (es. composizioni narrative dell'intro non-ritratto, sigilli, decori). Se la tua branch v02 contiene ritratti, riclassifica i file prima di pushare.
 
 ```
 Branch:  claude/hd-intro-v02
-Commit:  "volume 2 intro: aggiunte 11 JPG HD q95 in _volumi/v02/_hd/"
+Commit:  "volume 2 intro: aggiunte composizioni narrative HD q95"
 File:
-  + pipeline_narrativa/storie_finali/_volumi/v02/_hd/v02_intro_amo_hd.jpg
-  + pipeline_narrativa/storie_finali/_volumi/v02/_hd/v02_intro_cardo_hd.jpg
-  + ... (11 file totali)
+  + pipeline_narrativa/storie_finali/_volumi/v02/_hd/v02_sigillo_b_hd.jpg
+  + pipeline_narrativa/storie_finali/_volumi/v02/_hd/v02_porta_intreccio_hd.jpg
+  + ... (solo file specifici del volume)
 ```
 
 ### Esempio catalogo primari (blocco logico)
@@ -243,13 +288,14 @@ Meglio una domanda in più che una PR da chiudere.
 
 ---
 
-## 8. Stato corrente (2026-05-19)
+## 8. Stato corrente (2026-06-10)
 
-- Standard `_hd/` introdotto con questa skill
-- Prime applicazioni:
-  - `_scene/s01/_hd/` — 17 file HD storia 1 (✅)
-  - `_volumi/v01/_hd/` — 11 file HD intro Volume 1 (✅)
+- Standard `_hd/` introdotto 2026-05-19, regola §0 "Decisione PRIMA DI TUTTO" aggiunta 2026-06-10 dopo il recovery che ha spostato i ritratti dal `_volumi/` al catalogo.
+- Applicazioni in repo:
+  - `_scene/s01/_hd/` — 17 file HD storia 1 (✅), low-res sincronizzati 2026-06-10
+  - `_volumi/v01/_hd/` — 1 file (Stria HOLD, attesa versione non-volante)
+  - `visual/personaggi/individuali/*/immagini/_hd/` — 11 reference promossi da `_volumi/v01/` (Fiamma, Grunto, Nodo, Salvia, Zolla, Pun, Bru + 3 coppie + 3 fratelli sotto Gabriel)
 - Da fare:
-  - 11 storie restanti (s02..s12) — una branch per storia
-  - 3 volumi restanti (v02..v04) — una branch per volume
-  - Catalogo completo HD — branch per blocco logico
+  - 11 storie restanti (s02..s12) — una branch per storia, naming `_scene/sNN/_hd/`
+  - Reference catalogo restanti (luoghi, oggetti, signatures) — branch per blocco logico
+  - Volumi v02..v04 — solo per illustrazioni NON-ritratto specifiche del volume

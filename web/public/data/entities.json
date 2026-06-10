@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-10T10:06:46",
+  "generated_at": "2026-06-10T14:42:33",
   "meta": {
-    "generated_at": "2026-06-10T10:06:46",
+    "generated_at": "2026-06-10T14:42:33",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -1253,7 +1253,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "bambini",
                     "status": "canonico",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/bambini/gabriel"
                   }
                 },
@@ -1281,7 +1281,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/cuccioli/bru"
                   }
                 },
@@ -1317,7 +1317,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "cuccioli",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/cuccioli/pun"
                   }
                 },
@@ -1345,7 +1345,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/bartolo"
                   }
                 },
@@ -1357,7 +1357,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/fiamma"
                   }
                 },
@@ -1369,7 +1369,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/grunto"
                   }
                 },
@@ -1381,7 +1381,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/primari/memolo"
                   }
                 },
@@ -1393,7 +1393,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "primari",
                     "status": "canonico",
-                    "n_images": 0,
+                    "n_images": 1,
                     "folder_path": "visual/personaggi/individuali/primari/rovo"
                   }
                 },
@@ -1433,7 +1433,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/nodo"
                   }
                 },
@@ -1445,7 +1445,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/salvia"
                   }
                 },
@@ -1457,7 +1457,7 @@
                     "famiglia": "personaggio",
                     "sottotipo": "secondari",
                     "status": "provvisorio",
-                    "n_images": 4,
+                    "n_images": 5,
                     "folder_path": "visual/personaggi/individuali/secondari/zolla"
                   }
                 }
@@ -7668,6 +7668,11 @@
       ],
       "images": [
         {
+          "filename": "gabriel_canonica_v1_con_fratelli.jpg",
+          "path": "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg",
+          "size_kb": 82
+        },
+        {
           "filename": "gabriel_canonica_v1_fronte.jpg",
           "path": "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg",
           "size_kb": 164
@@ -7688,7 +7693,7 @@
           "size_kb": 123
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "noah",
@@ -7812,6 +7817,11 @@
           "size_kb": 157
         },
         {
+          "filename": "bru_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg",
+          "size_kb": 138
+        },
+        {
           "filename": "bru_canonica_v1_silenzio_ascolto.jpg",
           "path": "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg",
           "size_kb": 187
@@ -7827,7 +7837,7 @@
           "size_kb": 108
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "cardo",
@@ -8025,12 +8035,17 @@
           "size_kb": 165
         },
         {
+          "filename": "pun_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
+          "size_kb": 164
+        },
+        {
           "filename": "pun_turnaround_v1.jpg",
           "path": "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg",
           "size_kb": 95
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "toba",
@@ -8151,6 +8166,11 @@
           "size_kb": 151
         },
         {
+          "filename": "bartolo_canonica_v1_con_toba.jpg",
+          "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg",
+          "size_kb": 191
+        },
+        {
           "filename": "bartolo_canonica_v1_fronte.jpg",
           "path": "visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg",
           "size_kb": 175
@@ -8166,7 +8186,7 @@
           "size_kb": 154
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "fiamma",
@@ -8228,12 +8248,17 @@
           "size_kb": 161
         },
         {
+          "filename": "fiamma_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg",
+          "size_kb": 202
+        },
+        {
           "filename": "fiamma_turnaround_v1.jpg",
           "path": "visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg",
           "size_kb": 109
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "grunto",
@@ -8290,6 +8315,11 @@
           "size_kb": 181
         },
         {
+          "filename": "grunto_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg",
+          "size_kb": 298
+        },
+        {
           "filename": "grunto_canonica_v1_via.jpg",
           "path": "visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg",
           "size_kb": 170
@@ -8300,7 +8330,7 @@
           "size_kb": 88
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "memolo",
@@ -8349,6 +8379,11 @@
       ],
       "images": [
         {
+          "filename": "memolo_canonica_v1_con_pun.jpg",
+          "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_con_pun.jpg",
+          "size_kb": 218
+        },
+        {
           "filename": "memolo_canonica_v1_fronte.jpg",
           "path": "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_fronte.jpg",
           "size_kb": 164
@@ -8369,7 +8404,7 @@
           "size_kb": 121
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "rovo",
@@ -8420,8 +8455,14 @@
         "primari",
         "rovo"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "rovo_canonica_v1_con_bru.jpg",
+          "path": "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg",
+          "size_kb": 205
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "stria",
@@ -8612,6 +8653,11 @@
           "size_kb": 219
         },
         {
+          "filename": "nodo_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg",
+          "size_kb": 310
+        },
+        {
           "filename": "nodo_canonica_v1_volo.jpg",
           "path": "visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_volo.jpg",
           "size_kb": 180
@@ -8622,7 +8668,7 @@
           "size_kb": 162
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "salvia",
@@ -8684,12 +8730,17 @@
           "size_kb": 157
         },
         {
+          "filename": "salvia_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg",
+          "size_kb": 156
+        },
+        {
           "filename": "salvia_turnaround_v1.jpg",
           "path": "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg",
           "size_kb": 168
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "zolla",
@@ -8751,12 +8802,17 @@
           "size_kb": 226
         },
         {
+          "filename": "zolla_canonica_v1_ritratto.jpg",
+          "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_ritratto.jpg",
+          "size_kb": 221
+        },
+        {
           "filename": "zolla_turnaround_v1.jpg",
           "path": "visual/personaggi/individuali/secondari/zolla/immagini/zolla_turnaround_v1.jpg",
           "size_kb": 99
         }
       ],
-      "n_images": 4
+      "n_images": 5
     },
     {
       "id": "vento_intreccio",

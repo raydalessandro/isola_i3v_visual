@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-06-10 (catalogo v2: 8 WI mergiati su `web/` Next.js — prompt copiabili a granularita' vista, proxy immagini, download, deep link, ⌘K palette, home workbench, /stato board, modalita' dev:live + statico `catalogo_web/{index.html,*.js,*.css}` archiviato in `_archive/`). Versione precedente: 2026-06-10 mattina (blindatura completa, 7 incoerenze canone risolte, cancello CI alzato). 2026-06-09 (pacchetto blindatura). 2026-06-08 (impaginazione volumi KDP).
+Versione: 2026-06-10 notte (promozione 11 reference da `_volumi/v01/_hd/` al catalogo personaggi + fix SKILL illustratore con regola "ritratti SEMPRE al catalogo"; 94 immagini catalogate da 83). Versione precedente: 2026-06-10 (catalogo v2 Next.js + cutover Vercel mirror dati). Mattina: blindatura completa (7 incoerenze canone risolte, cancello CI alzato). 2026-06-09: pacchetto blindatura. 2026-06-08: impaginazione volumi KDP.
 
 ---
 

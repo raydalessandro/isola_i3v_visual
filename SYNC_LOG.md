@@ -12,6 +12,33 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-10-017 — Promozione 11 reference dal volume al catalogo + fix processo illustratore
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** visual + governance (correzione processuale illustratore)
+- **Repo target:** n/a (uso interno; il deploy Vercel preview punta già al catalogo aggiornato via mirror)
+- **Cambiamento:**
+  1. **11 reference HD promossi** da `_volumi/v01/_hd/v01_intro_<slug>_hd.jpg` a `visual/personaggi/individuali/<cat>/<id>/immagini/_hd/<id>_canonica_v1_<vista>_hd.jpg` (+ low-res 832×1248 q85 derivate per downscale): fiamma, grunto, nodo, salvia, zolla, pun, bru (`ritratto`); memolo (`con_pun`), rovo (`con_bru`, riempie gap), bartolo (`con_toba`); gabriel (`con_fratelli` — i 3 fratelli sotto il maggiore). HOLD: `v01_intro_stria_hd.jpg` (in volo, attesa versione non-volante).
+  2. **`scripts/build_volume.py`**: `build_presentazione_image_map` per Vol 1/2/3 ripuntato al catalogo via `cat(...)` invece di `hd(...)`. Aggiunto `resolve_scene_image()` anche sulla path di presentazione → lo script ora preferisce automaticamente la HD da `_hd/` quando esiste. 6 warning "immagine sotto spec" personaggi spariti.
+  3. **`skills/illustratore/SKILL.md` v1.1**: aggiunta sezione §0 "Decisione PRIMA DI TUTTO" con albero decisionale + tabella errori storici + regola operativa: **i ritratti vanno SEMPRE al catalogo, anche se prodotti durante la lavorazione di un volume**. `_volumi/v0N/_hd/` riservato a illustrazioni narrative non-ritratto specifiche del volume. Aggiornata sezione 5 "review" con classificazione contesto come check #1 obbligatorio.
+  4. **README aggiornati:** `_volumi/v01/README.md` con regola operativa + indice ridotto (solo Stria HOLD); `_volumi/v01/_hd/` indirettamente ridimensionato (12 → 1 file).
+  5. **Catalogo rigenerato:** 116 entità, **94 immagini** (era 83, +11 nuove reference). Mirror Vercel `web/public/data/entities.json` sincronizzato automaticamente dalle modifiche allo script Python.
+  6. **Verifica:** 78/78 pytest fast + 6/6 pytest slow (build PDF reale Vol1 s01) + 3/3 audit fast + audit_4 drift (atteso PASS dopo CI).
+- **Gap rimanenti dichiarati (non bloccanti):**
+  - Stria: versione HD non-volante da produrre (Ray)
+  - Luoghi: nessuna HD nel catalogo, warning continui in build_volume per i 4 luoghi presentati. Da indirizzare in branch dedicata illustratore.
+  - 15 personaggi hanno set canoniche completo nel catalogo (≥4 viste): **TODO autoriale Ray** valutare promozione `status: canonico` nel grafo (oggi solo 4).
+- **File toccati:**
+  - `visual/personaggi/individuali/<...>/immagini/{_hd/<id>_canonica_v1_<vista>_hd.jpg,<id>_canonica_v1_<vista>.jpg}` × 11 entità NEW (22 file totali)
+  - `pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_intro_*.jpg` (10 eliminati, 1 in HOLD — solo Stria)
+  - `pipeline_narrativa/storie_finali/_volumi/v01/README.md` riscritto
+  - `scripts/build_volume.py`: `build_presentazione_image_map` + chiamata a `resolve_scene_image()` su path presentazione
+  - `skills/illustratore/SKILL.md` v1.1 (sezione §0 NEW, §6 esempio v02 aggiornato, §5 review check #1, §8 stato corrente)
+  - `catalogo_web/data/entities.json` rigenerato + mirror `web/public/data/entities.json`
+  - `CLAUDE.md`, `PROJECT_STATE.md`, `SYNC_LOG.md` (questa entry)
+
+---
+
 ## SYNC-2026-06-10-016 — Cutover Vercel: mirror dati committato + restore statico
 
 - **Stato:** DA_RIFLETTERE (azione manuale Ray pendente sul dashboard Vercel)
