@@ -45,7 +45,7 @@ isola_i3v_visual/
 │   ├── narrazione_fattuale/sNN_*.md  12/12 file narrazione fattuale derivati dal sorgente _source/
 │   ├── writing_briefs/sNN_writing_brief.md  12 brief autosufficienti per agente prosa (output zero-token brieffer)
 │   ├── writing_briefs/_reference/    s01_writing_brief_FINAL.md (reference Ray, validato)
-│   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker @hook (narrativo, 1..10) + marker @subhook (pagina libro fisica, 1..book_pages_total) machine-readable per script compositore libro futuro (vedi storie_finali/README.md)
+│   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker @hook (narrativo, 1..10) + marker @subhook (pagina libro fisica, 1..book_pages_total) machine-readable, consumati da scripts/build_volume.py (compositore PDF KDP, attivo dal 2026-06-08; vedi storie_finali/README.md)
 │   ├── storie_finali/_annotations/   YAML autoriali Ray (sNN.yaml) — note di scena
 │   ├── storie_finali/_inventory/     inventari testuali derivati (audit/QA prosa)
 │   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg low-res, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Subdir `_hd/sNN_hMMx_hd.jpg` per versione HD stampa (JPG q95, ≥1664×2496 px). NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
@@ -555,7 +555,7 @@ Le immagini per **stampa del libro** convivono con i reference digitali low-res 
 <cartella canonica>/_hd/<id>_hd.jpg   ← HD per stampa (JPG q95, ≥1664×2496 px)
 ```
 
-I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositore libro (futuro) cerca prima `_hd/<id>_hd.jpg`, fallback su low-res.
+I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositore libro `scripts/build_volume.py` (attivo dal 2026-06-08, in attivo affinamento) cerca prima `_hd/<id>_hd.jpg`, fallback su low-res.
 
 ### I 3 contesti di destinazione
 

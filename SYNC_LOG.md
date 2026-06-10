@@ -12,6 +12,33 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-10-016 — Cutover Vercel: mirror dati committato + restore statico
+
+- **Stato:** DA_RIFLETTERE (azione manuale Ray pendente sul dashboard Vercel)
+- **Tipo:** catalogo_web + governance (deploy)
+- **Repo target:** Vercel (nuovo project con Root Directory=`web/`)
+- **Cambiamento:**
+  1. **Production 404 risolto:** PR #8 (`140b31f`) ha riportato i 5 file dello statico da `catalogo_web/_archive/` alla root (`index.html`, `app.js`, `style.css`, `mappa_isola.{js,css}`). La PR #7 (catalogo v2) li aveva archiviati ma il deploy Vercel era ancora puntato a `/catalogo_web/` → 404. Lo statico è di nuovo servito in production.
+  2. **PR #9 (`ab7c622`) — preparazione cutover Next.js:**
+     - `web/.gitignore` aggiornato: tracciato `public/data/` (mirror committato ~2.2 MB)
+     - `scripts/build_catalogo_web.py` + `scripts/build_storie_data.py`: scrivono **mirror automatico** in `web/public/data/{entities,storie-dashboard}.json` ad ogni rigenerazione locale
+     - `web/scripts/{copy-data,build-storie,build-orchestra-data}.mjs`: fallback al mirror committato quando i sorgenti esterni (`../catalogo_web/`, `../pipeline_narrativa/`) non sono accessibili (scenario Vercel Root=`web/`)
+     - Test scenario Vercel verificato in `/tmp/web_test/`: build verde 118 SSG paths + 1 dynamic
+     - **Production statico invariato:** `vercel.json` root non toccato
+  3. **Decisione operativa Ray (2026-06-10 pomeriggio):** mergiare il cutover anche con possibili regressioni minori del catalogo v2 (priorità bassa). Le regressioni verranno indirizzate quando Ray testerà il preview Vercel.
+- **TODO Ray cutover deploy (sul dashboard Vercel):**
+  1. Add New Project → repo `raydalessandro/isola_i3v_visual` → Root Directory = `web` → framework auto = Next.js → deploy `main`
+  2. Verifica il preview URL generato (catalogo, copy prompt, download immagini, ⌘K palette, `/stato`, deep link sezioni)
+  3. Se OK: puntare il dominio principale al nuovo deploy; spegnere/disconnettere il project Vercel statico
+  4. Se regressioni dichiarate da Ray ("copy prompt hook non c'è più"): aprire issue/branch dedicata per fixare
+- **Mantenimento futuro (sync mirror):**
+  - `python3 scripts/build_catalogo_web.py` → aggiorna entities.json (catalogo_web + web/public/data) automaticamente
+  - `python3 scripts/build_storie_data.py` → aggiorna storie-dashboard.json (idem)
+  - `npm run dev:live` (WI-7) tiene tutto in sync nel loop di lavoro
+- **File toccati:** `web/.gitignore`, `web/scripts/{copy-data,build-storie,build-orchestra-data}.mjs`, `web/public/data/{entities,storie,storie-dashboard,orchestra,search-index}.json` NEW (mirror committato), `scripts/build_catalogo_web.py`, `scripts/build_storie_data.py`, `catalogo_web/{index.html,app.js,style.css,mappa_isola.{js,css}}` ripristinati, `CLAUDE.md` (rimosso "futuro" sul compositore libro).
+
+---
+
 ## SYNC-2026-06-10-015 — Catalogo v2 in `web/`: 8 WI mergiati, statico archiviato
 
 - **Stato:** DA_RIFLETTERE
