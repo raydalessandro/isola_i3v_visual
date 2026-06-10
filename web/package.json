@@ -8,6 +8,7 @@
   "scripts": {
     "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "dev": "next dev",
+    "dev:live": "node scripts/dev-watch.mjs",
     "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "build": "next build",
     "start": "next start",
