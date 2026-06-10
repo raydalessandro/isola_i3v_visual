@@ -6,8 +6,8 @@ sottotipo: primari
 specie: riccio
 tipo_grafo: abitante_maggiore
 ruolo_saga: cambio_di_registro_colpo_di_coda
-status: provvisorio
-ultima_modifica: 2026-04-28
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.memolo"]
 appare_in_storie: []
 relazioni:

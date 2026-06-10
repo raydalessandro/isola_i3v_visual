@@ -6,8 +6,8 @@ sottotipo: cuccioli
 specie: tartarughina
 tipo_grafo: cucciolo_scuola
 ruolo_saga: domanda_che_apre
-status: provvisorio
-ultima_modifica: 2026-04-28
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.toba"]
 appare_in_storie: []
 relazioni:

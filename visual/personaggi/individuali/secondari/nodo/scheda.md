@@ -6,8 +6,8 @@ sottotipo: secondari
 specie: picchio
 tipo_grafo: abitante_minore_mestiere
 ruolo_saga: mano_che_fa
-status: provvisorio
-ultima_modifica: 2026-04-28
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.nodo"]
 appare_in_storie: []
 relazioni:

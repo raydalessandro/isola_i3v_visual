@@ -6,8 +6,8 @@ sottotipo: cuccioli
 specie: riccino
 tipo_grafo: cucciolo_scuola
 ruolo_saga: memoria_pratica_intuizione_laterale
-status: provvisorio
-ultima_modifica: 2026-04-28
+status: canonico
+ultima_modifica: 2026-06-10
 fonti: ["pipeline_narrativa/story_graph.json#entities.characters.pun"]
 appare_in_storie: []
 relazioni:
