@@ -12,6 +12,38 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-10-015 — Catalogo v2 in `web/`: 8 WI mergiati, statico archiviato
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** catalogo_web + governance (decisione D1: catalogo v2 = Next.js; statico deprecato; `entities.json` resta contratto dati con blocco `meta` additivo)
+- **Repo target:** Vercel deploy `catalogo` (cutover dopo merge — vedi TODO)
+- **Cambiamento:**
+  1. **8 work items completati** in `web/` Next.js secondo `docs/SPEC_CATALOGO_V2.md`:
+     - **WI-1** prompt copiabili per vista (parser `web/lib/prompt-grok.ts` + 13 test, refactor `prompt-grok-block.tsx`)
+     - **WI-3** proxy immagini same-origin `app/api/img/[...path]/route.ts` (whitelist `visual/` + estensioni + cache immutable)
+     - **WI-2** download singolo (lightbox) + sequenziale "Scarica tutte" (zero deps, no jszip)
+     - **WI-4** deep link sezioni `entity-body.tsx` (hashchange + smooth scroll + permalink hover)
+     - **WI-5** ⌘K command palette `components/command-palette.tsx` + `scripts/build-search-index.mjs` (128 entries: 116 entità + 12 storie + titoli sezione)
+     - **WI-6** home workbench riscritta + `/stato` board F.2 (15 gruppi, breakdown canonizzazione)
+     - **WI-7** `npm run dev:live` (watcher + next dev parallelo, zero deps)
+     - **WI-8** blocco `meta` in `entities.json` (graph_version, schema_version, last_updated, counts)
+  2. **Statico deprecato:** `catalogo_web/{index.html, app.js, style.css, mappa_isola.js, mappa_isola.css}` spostati in `catalogo_web/_archive/` con README esplicativo. **`catalogo_web/data/` resta**: contratto dati condiviso col Next via `web/scripts/copy-data.mjs`.
+  3. **Build script Python `scripts/build_catalogo_web.py`** esteso con `read_graph_meta()` + nodo root `meta` (additivo, lo statico legacy lo ignorava).
+  4. **Verifica:** `npm run lint` no warnings, `npm run build` verde (118 SSG paths + 1 dynamic `/api/img`), `npm run test` 13/13 PASS, `python3 scripts/audit/run_all_audits.py` 4/4 PASS, `pytest -m "not slow"` 78 PASS.
+- **TODO cutover deploy (Ray):**
+  - Aggiornare `vercel.json` root: rimuovere redirect `/` → `/catalogo_web/`.
+  - Puntare il dominio del catalogo alla app `web/`.
+  - (Opzionale) cancellare `catalogo_web/_archive/` quando il deploy è stabile.
+- **TODO follow-up dichiarati dalla spec (fuori PR):**
+  - Estrazione **starter kit v2**: `web/` + `scripts/` + audit + CI con `saga_config.yaml` come identità saga machine-readable.
+  - Repo Rocco/Idvara istanziata dal kit, fase seme con `dev:live` acceso.
+- **File toccati:**
+  - NEW: `web/lib/prompt-grok.ts`, `web/lib/__tests__/prompt-grok.test.ts`, `web/components/command-palette.tsx`, `web/app/api/img/[...path]/route.ts`, `web/app/stato/page.tsx`, `web/scripts/build-search-index.mjs`, `web/scripts/dev-watch.mjs`, `catalogo_web/_archive/README.md`, `docs/SPEC_CATALOGO_V2.md`.
+  - MOD: `web/components/catalogo/prompt-grok-block.tsx` (riscritto), `web/components/catalogo/entity-body.tsx`, `web/components/catalogo/entity-gallery.tsx`, `web/components/catalogo/lightbox.tsx`, `web/lib/image-url.ts`, `web/lib/types.ts`, `web/app/page.tsx` (riscritta), `web/app/layout.tsx`, `web/package.json` (scripts test + dev:live + prebuild esteso), `scripts/build_catalogo_web.py`, `catalogo_web/data/entities.json` rigenerato.
+  - MOVED: `catalogo_web/{index.html,app.js,style.css,mappa_isola.{js,css}}` → `catalogo_web/_archive/`.
+
+---
+
 ## SYNC-2026-06-10-014 — Blindatura completa: 4 audit operativi + CI cancello + 7 incoerenze canone risolte
 
 - **Stato:** DA_RIFLETTERE

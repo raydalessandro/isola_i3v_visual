@@ -1,5 +1,25 @@
 {
-  "generated_at": "2026-06-10T08:07:07",
+  "generated_at": "2026-06-10T09:37:52",
+  "meta": {
+    "generated_at": "2026-06-10T09:37:52",
+    "graph_version": "1.2.0",
+    "schema_version": 1.4,
+    "graph_last_updated": "2026-06-10",
+    "counts": {
+      "totals": {
+        "totale": 116,
+        "luogo": 74,
+        "oggetto": 14,
+        "personaggio": 24,
+        "vento": 3,
+        "visual_signature": 1
+      },
+      "by_status": {
+        "provvisorio": 112,
+        "canonico": 4
+      }
+    }
+  },
   "totals": {
     "totale": 116,
     "luogo": 74,

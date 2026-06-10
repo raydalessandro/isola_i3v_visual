@@ -6,12 +6,14 @@
     "node": ">=20"
   },
   "scripts": {
-    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
+    "predev": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "dev": "next dev",
-    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs",
+    "dev:live": "node scripts/dev-watch.mjs",
+    "prebuild": "node scripts/copy-data.mjs && node scripts/build-storie.mjs && node scripts/build-orchestra-data.mjs && node scripts/build-search-index.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "node --test --experimental-strip-types lib/__tests__/*.test.ts",
     "copy-data": "node scripts/copy-data.mjs",
     "build-storie": "node scripts/build-storie.mjs",
     "build-orchestra-data": "node scripts/build-orchestra-data.mjs"

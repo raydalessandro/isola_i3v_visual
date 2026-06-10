@@ -2,9 +2,10 @@
 
 import * as React from "react";
 import Image from "next/image";
+import { Download } from "lucide-react";
 
 import type { EntityImage } from "@/lib/types";
-import { imageUrl } from "@/lib/image-url";
+import { imageUrl, imageDownloadUrl, imageBasename } from "@/lib/image-url";
 import { Lightbox } from "@/components/catalogo/lightbox";
 
 interface EntityGalleryProps {
@@ -15,10 +16,41 @@ interface EntityGalleryProps {
 export function EntityGallery({ images, altPrefix }: EntityGalleryProps) {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null);
 
+  // WI-2: download sequenziale per evitare jszip come dipendenza.
+  // Il browser scarica un file alla volta; il proxy /api/img force
+  // l'attachment lato server (WI-3) anche per origini cross.
+  const downloadAll = React.useCallback(() => {
+    images.forEach((img, i) => {
+      setTimeout(() => {
+        const a = document.createElement("a");
+        a.href = imageDownloadUrl(img.path);
+        a.download = imageBasename(img.path);
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }, i * 350); // sfasamento per non sommergere il browser
+    });
+  }, [images]);
+
   if (images.length === 0) return null;
 
   return (
     <section aria-label="Galleria immagini" className="space-y-3">
+      <header className="flex items-center justify-between gap-3">
+        <p className="font-mono text-xs uppercase tracking-wider text-ink-soft">
+          {images.length} {images.length === 1 ? "immagine" : "immagini"}
+        </p>
+        {images.length > 1 && (
+          <button
+            type="button"
+            onClick={downloadAll}
+            className="inline-flex items-center gap-1.5 rounded-md border border-rule px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-ink-soft hover:border-accent/40 hover:text-accent"
+          >
+            <Download className="h-3.5 w-3.5" aria-hidden />
+            Scarica tutte
+          </button>
+        )}
+      </header>
       <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
         {images.map((img, i) => (
           <li key={img.path}>

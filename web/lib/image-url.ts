@@ -18,3 +18,22 @@ export function imageUrl(relPath: string): string {
   const normalized = relPath.startsWith("/") ? relPath : "/" + relPath;
   return base + normalized;
 }
+
+/**
+ * URL per il download da `<a download>`: passa per il route handler
+ * same-origin `/api/img/<path>?download=1`, che inoltra l'attributo
+ * Content-Disposition (l'attributo HTML `download` non funziona
+ * cross-origin — vedi WI-3 catalogo v2).
+ *
+ * Il path è quello relativo alla repo (es. `visual/.../immagini/file.jpg`).
+ */
+export function imageDownloadUrl(relPath: string): string {
+  const normalized = relPath.replace(/^\/+/, "");
+  return `/api/img/${normalized}?download=1`;
+}
+
+/** Estrae il basename canonico dal path (per il filename del download). */
+export function imageBasename(relPath: string): string {
+  const parts = relPath.split("/");
+  return parts[parts.length - 1] || relPath;
+}

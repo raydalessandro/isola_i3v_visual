@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-06-10 (blindatura completa: 7 incoerenze del canone risolte via `scripts/cornice_mondo/step8_fix_canonical_refs.py`, baseline `known_issues.yaml` svuotata, cancello CI alzato). Versione precedente: 2026-06-09 (pacchetto blindatura: 4 audit + manifest + baseline + CI + scritture atomiche + Makefile). 2026-06-08 (script definitivo impaginazione volumi KDP).
+Versione: 2026-06-10 (catalogo v2: 8 WI mergiati su `web/` Next.js — prompt copiabili a granularita' vista, proxy immagini, download, deep link, ⌘K palette, home workbench, /stato board, modalita' dev:live + statico `catalogo_web/{index.html,*.js,*.css}` archiviato in `_archive/`). Versione precedente: 2026-06-10 mattina (blindatura completa, 7 incoerenze canone risolte, cancello CI alzato). 2026-06-09 (pacchetto blindatura). 2026-06-08 (impaginazione volumi KDP).
 
 ---
 
@@ -75,8 +75,19 @@ isola_i3v_visual/
 │   ├── geo/viewer/                   viewer Leaflet
 │   └── README.md                     architettura cartografica
 │
-├── catalogo_web/              ✅ output rigenerabile (NON modificare a mano)
-│   └── data/entities.json            generato da `scripts/build_catalogo_web.py`
+├── catalogo_web/              ⚠️  legacy: solo `data/` (contratto JSON), UI archiviata 2026-06-10
+│   ├── data/entities.json            generato da `scripts/build_catalogo_web.py` (con blocco `meta` da WI-8)
+│   ├── data/storie.json              storie dashboard
+│   └── _archive/                     UI vanilla deprecata (catalogo v2 vive in `web/`)
+│
+├── web/                       ✅ catalogo v2 — app Next.js 15 (App Router, TS strict)
+│   ├── app/                          home workbench, /catalogo, /storie, /mappa, /orchestra, /stato, /strade
+│   ├── app/api/img/[...path]/        proxy immagini same-origin (WI-3, abilita download)
+│   ├── components/catalogo/          entity-body (deep link sezioni), prompt-grok-block (copy per vista), gallery, lightbox
+│   ├── components/command-palette.tsx  ⌘K navigazione veloce (WI-5)
+│   ├── lib/prompt-grok.ts            parser markdown prompt grok (WI-1) + test (13/13 pass)
+│   ├── scripts/build-search-index.mjs  indice cmd-K (build-time)
+│   └── scripts/dev-watch.mjs         modalita' live: `npm run dev:live` (WI-7)
 │
 ├── _porting_grafo/            🗄️  ARCHIVIO una-tantum (fase E completata 2026-04-28)
 │   ├── dossier_fase_e/               kit migrazione + MIGRATION_PROMPT + schema v1.2 + INPUT_NODES (12 nodi v1.1)

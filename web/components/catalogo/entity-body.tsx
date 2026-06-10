@@ -1,7 +1,13 @@
 "use client";
 
 import * as React from "react";
-import { ChevronDown, ChevronsDownUp, ChevronsUpDown } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronsDownUp,
+  ChevronsUpDown,
+  Check,
+  Link as LinkIcon,
+} from "lucide-react";
 
 import type { MarkdownSection } from "@/lib/markdown";
 import { Button } from "@/components/ui/button";
@@ -15,6 +21,11 @@ interface EntityBodyProps {
 /**
  * Body markdown: preambolo aperto + sezioni `##` collassabili (default chiuse).
  * Toolbar in cima con Espandi tutto / Comprimi tutto.
+ *
+ * WI-4 catalogo v2:
+ *   - su mount, se `location.hash` matcha una sezione → la apre + scrolla;
+ *   - hover su ogni titolo mostra icona "link" che copia il permalink
+ *     `/catalogo/<id>#<sezione>` negli appunti.
  */
 export function EntityBody({ preambleHtml, sections }: EntityBodyProps) {
   const [openMap, setOpenMap] = React.useState<Record<string, boolean>>({});
@@ -23,6 +34,27 @@ export function EntityBody({ preambleHtml, sections }: EntityBodyProps) {
     sections.length > 0 && sections.every((s) => openMap[s.id] === true);
   const allClosed =
     sections.length > 0 && sections.every((s) => !openMap[s.id]);
+
+  // Apri + scrolla alla sezione indicata dal hash. Esegue una volta sul mount
+  // e su ogni cambio di hash (back/forward del browser).
+  React.useEffect(() => {
+    function openFromHash() {
+      const raw = window.location.hash.replace(/^#/, "");
+      if (!raw) return;
+      const target = sections.find((s) => s.id === raw);
+      if (!target) return;
+      setOpenMap((m) => ({ ...m, [target.id]: true }));
+      // Attendi il prossimo frame: la sezione deve essere espansa prima di
+      // poter scrollare correttamente.
+      requestAnimationFrame(() => {
+        const el = document.getElementById(`section-${target.id}`);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+    openFromHash();
+    window.addEventListener("hashchange", openFromHash);
+    return () => window.removeEventListener("hashchange", openFromHash);
+  }, [sections]);
 
   function expandAll() {
     const next: Record<string, boolean> = {};
@@ -105,25 +137,31 @@ function SectionCollapsible({
   onToggle,
 }: SectionCollapsibleProps) {
   return (
-    <div className="rounded-md border border-rule-soft bg-paper-soft">
-      <button
-        type="button"
-        onClick={onToggle}
-        aria-expanded={open}
-        aria-controls={`section-body-${section.id}`}
-        className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left hover:bg-rule-soft/30 rounded-md"
-      >
-        <h2 className="font-serif text-lg font-semibold text-ink truncate">
-          {section.title}
-        </h2>
-        <ChevronDown
-          aria-hidden
-          className={cn(
-            "h-4 w-4 shrink-0 transition-transform",
-            open && "rotate-180",
-          )}
-        />
-      </button>
+    <div
+      id={`section-${section.id}`}
+      className="rounded-md border border-rule-soft bg-paper-soft scroll-mt-20"
+    >
+      <div className="group flex items-center gap-1 px-4 py-3 hover:bg-rule-soft/30 rounded-md">
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={open}
+          aria-controls={`section-body-${section.id}`}
+          className="flex flex-1 items-center justify-between gap-3 text-left"
+        >
+          <h2 className="font-serif text-lg font-semibold text-ink truncate">
+            {section.title}
+          </h2>
+          <ChevronDown
+            aria-hidden
+            className={cn(
+              "h-4 w-4 shrink-0 transition-transform",
+              open && "rotate-180",
+            )}
+          />
+        </button>
+        <PermalinkButton sectionId={section.id} />
+      </div>
       {open && (
         <div
           id={`section-body-${section.id}`}
@@ -132,5 +170,44 @@ function SectionCollapsible({
         />
       )}
     </div>
+  );
+}
+
+function PermalinkButton({ sectionId }: { sectionId: string }) {
+  const [copied, setCopied] = React.useState(false);
+
+  const onClick = React.useCallback(
+    async (e: React.MouseEvent) => {
+      e.stopPropagation();
+      try {
+        const url = `${window.location.origin}${window.location.pathname}#${sectionId}`;
+        await navigator.clipboard.writeText(url);
+        // aggiorna anche l'URL nella barra senza ricaricare
+        history.replaceState(null, "", `#${sectionId}`);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      } catch {
+        // clipboard non disponibile: ignora silenziosamente
+      }
+    },
+    [sectionId],
+  );
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={copied ? "Permalink copiato" : "Copia permalink sezione"}
+      className={cn(
+        "shrink-0 rounded p-1 opacity-0 transition-opacity group-hover:opacity-100 focus:opacity-100",
+        copied ? "text-accent" : "text-ink-faint hover:text-accent",
+      )}
+    >
+      {copied ? (
+        <Check className="h-3.5 w-3.5" />
+      ) : (
+        <LinkIcon className="h-3.5 w-3.5" />
+      )}
+    </button>
   );
 }
