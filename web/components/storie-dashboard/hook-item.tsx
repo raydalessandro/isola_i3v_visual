@@ -217,31 +217,31 @@ export function HookItem({ hook, audited, sagaStyle }: HookItemProps) {
           </Section>
         )}
 
-        {/* Prompt-livello hook (solo se NON ci sono subhook annotati) */}
-        {!subhooksAnn.length && (
-          <Section title="Prompt scena (livello hook)" emoji="🎨">
-            {loc.id || charsInScene.length > 0 || details.length > 0 ? (
-              <div className="space-y-2 rounded-md border border-rule-soft bg-paper px-3 py-3">
-                <pre className="max-h-60 overflow-auto whitespace-pre-wrap rounded bg-paper-soft p-2 font-mono text-[11px] leading-relaxed text-ink-soft">
-                  {hookLevelPrompt}
-                </pre>
-                <div className="flex justify-end">
-                  <CopyButton
-                    text={hookLevelPrompt}
-                    label="Copia prompt scena"
-                  />
-                </div>
+        {/* Prompt-livello hook narrativo: SEMPRE visibile (era nascosto se
+            esistevano subhook, ma serve all'illustratore anche quando ci
+            sono subhook — il prompt-hook è il "padre" del subhook prompt). */}
+        <Section title="Prompt scena (livello hook narrativo)" emoji="🎨">
+          {loc.id || charsInScene.length > 0 || details.length > 0 ? (
+            <div className="space-y-2 rounded-md border border-rule-soft bg-paper px-3 py-3">
+              <pre className="max-h-60 overflow-auto whitespace-pre-wrap rounded bg-paper-soft p-2 font-mono text-[11px] leading-relaxed text-ink-soft">
+                {hookLevelPrompt}
+              </pre>
+              <div className="flex justify-end">
+                <CopyButton
+                  text={hookLevelPrompt}
+                  label="Copia prompt hook"
+                />
               </div>
-            ) : (
-              <Empty>
-                Annotazioni mancanti per questo hook. Aggiungi
-                location/personaggi/dettagli in{" "}
-                <code className="text-ink">_annotations/sNN.yaml</code> per
-                generare il prompt.
-              </Empty>
-            )}
-          </Section>
-        )}
+            </div>
+          ) : (
+            <Empty>
+              Annotazioni mancanti per questo hook. Aggiungi
+              location/personaggi/dettagli in{" "}
+              <code className="text-ink">_annotations/sNN.yaml</code> per
+              generare il prompt.
+            </Empty>
+          )}
+        </Section>
 
         {/* Testo */}
         {text && (

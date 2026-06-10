@@ -19,6 +19,7 @@ import { StyleReferenceBlock } from "@/components/storie-dashboard/style-referen
 import { AnnotationsBanner } from "@/components/storie-dashboard/annotations-banner";
 import { HookAccordion } from "@/components/storie-dashboard/hook-accordion";
 import { CanonTodoBlock } from "@/components/storie-dashboard/canon-todo-block";
+import { NarrativeChronologyBlock } from "@/components/storie-dashboard/narrative-chronology-block";
 
 interface PageProps {
   params: Promise<{ sid: string }>;
@@ -155,6 +156,9 @@ export default async function StoriaDashboardPage({ params }: PageProps) {
         path={story.annotations_path}
         githubUrl={story.annotations_github_url}
       />
+
+      {/* Cronologia narrativa (semi + callback dal grafo) */}
+      <NarrativeChronologyBlock chronology={story.narrative_chronology} />
 
       {/* Hook accordion */}
       <section aria-label="Hook visivi" className="space-y-3">
