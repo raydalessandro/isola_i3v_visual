@@ -328,6 +328,12 @@ def build_presentazione_image_map(volume: int) -> dict[str, Path | None]:
     #   Vol.4: I Pastori, altri
 
     if volume == 1:
+        # Le reference personaggio (singole, coppie, collettivi) sono state
+        # PROMOSSE dal volume al catalogo il 2026-06-10: vivono in
+        # visual/<categoria>/<id>/immagini/. _volumi/ ora contiene solo
+        # illustrazioni *prodotte per* il volume (es. intro narrative
+        # non-reference). Stria HOLD: HD attuale in volo, Ray cerca versione
+        # non-volante prima di promuoverla.
         return {
             # Luoghi vol.1
             "Questa è l'isola":
@@ -338,16 +344,20 @@ def build_presentazione_image_map(volume: int) -> dict[str, Path | None]:
                 cat("visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_esterno_alba.jpg"),
             "Il Quartiere d'Aria":
                 cat("visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_panoramica.jpg"),
-            # Personaggi primari vol.1 — HD intro v01
-            "Fiamma":           hd("fiamma"),
-            "Grunto":           hd("grunto"),
-            "Rovo e Bru":       hd("rovo_bru"),
-            "Stria":            hd("stria"),
-            "Mèmolo e Pun":     hd("memolo_pun"),
-            # Bambini — HD dedicata v01_intro_bambini_hd.jpg
+            # Personaggi (lo script preferisce automaticamente la HD in _hd/
+            # via resolve_scene_image — pattern condiviso col catalogo)
+            "Fiamma":
+                cat("visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg"),
+            "Grunto":
+                cat("visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg"),
+            "Rovo e Bru":
+                cat("visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"),
+            "Stria":
+                hd("stria"),  # HOLD: HD in volo, da sostituire con non-volante
+            "Mèmolo e Pun":
+                cat("visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_con_pun.jpg"),
             "I bambini dell'isola":
-                hd("bambini") or
-                cat("visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg"),
+                cat("visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg"),
         }
 
     if volume == 2:
@@ -356,16 +366,20 @@ def build_presentazione_image_map(volume: int) -> dict[str, Path | None]:
             "Il Quartiere di Terra":       M,
             "Il Quartiere d'Acqua":        M,
             "Il Mercato del Mezzogiorno":   M,
-            # Personaggi secondari vol.2 — HD intro v02 (quando disponibili)
-            "Nodo":    hd("nodo")   or cat("visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_fronte.jpg"),
-            "Salvia":  hd("salvia") or cat("visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg"),
-            "Zolla":   hd("zolla")  or cat("visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_fronte.jpg"),
+            # Personaggi secondari (HD già in catalogo dopo promozione 2026-06-10)
+            "Nodo":
+                cat("visual/personaggi/individuali/secondari/nodo/immagini/nodo_canonica_v1_ritratto.jpg"),
+            "Salvia":
+                cat("visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg"),
+            "Zolla":
+                cat("visual/personaggi/individuali/secondari/zolla/immagini/zolla_canonica_v1_ritratto.jpg"),
         }
 
     if volume == 3:
         return {
-            # Personaggi vol.3 — HD intro v03 (quando disponibili)
-            "Bartolo e Toba": hd("bartolo_toba") or cat("visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg"),
+            # Personaggi vol.3 — Bartolo+Toba promossi a catalogo 2026-06-10
+            "Bartolo e Toba":
+                cat("visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg"),
         }
 
     if volume == 4:
@@ -1512,6 +1526,12 @@ def build_volume_pages(
                   "il quartiere d'acqua", "il mercato del mezzogiorno"}
         for t, body in entries:
             img = find_presentazione_image(t, image_map)
+            # Promozione HD: se è un path low-res nel catalogo, prendi la HD
+            # da _hd/<stem>_hd.jpg quando disponibile. Stesso pattern degli
+            # hook scena (vedi resolve_scene_image). Preserva il filename
+            # nei warning di qualità (basta la low-res come riferimento).
+            if img is not None:
+                img = resolve_scene_image(img)
             kind = "luogo" if t.lower() in luoghi else "personaggio"
             pages.append(("single", make_presentazione_page(
                 t, body, img, volume=volume, kind=kind,
