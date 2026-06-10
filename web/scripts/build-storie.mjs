@@ -211,6 +211,15 @@ function parseStoria(filePath) {
 
 function main() {
   if (!existsSync(STORIE_DIR)) {
+    // Vercel scenario (Root Directory = web/): la sorgente esterna non
+    // e' raggiungibile, ma il mirror committato in public/data/storie.json
+    // (rigenerato in locale prima del push) e' valido.
+    if (existsSync(OUT_FILE)) {
+      console.log(
+        `[build-storie] sorgente assente, uso mirror committato: ${OUT_FILE}`,
+      );
+      return;
+    }
     console.error(`[build-storie] dir non trovata: ${STORIE_DIR}`);
     process.exit(1);
   }

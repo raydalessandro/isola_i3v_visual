@@ -108,6 +108,14 @@ function normalizeFear(f) {
 
 function build() {
   if (!existsSync(GRAPH_PATH)) {
+    // Vercel scenario (Root Directory = web/): grafo fuori root,
+    // ma orchestra.json committato e' valido.
+    if (existsSync(OUT_FILE)) {
+      console.log(
+        `[build-orchestra] sorgente assente, uso mirror committato: ${OUT_FILE}`,
+      );
+      return;
+    }
     console.error(`[build-orchestra] grafo non trovato: ${GRAPH_PATH}`);
     process.exit(1);
   }
