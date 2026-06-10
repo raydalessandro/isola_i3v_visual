@@ -31,7 +31,24 @@ OUT_DIR = ROOT / "catalogo_web" / "data"
 OUT_FILE = OUT_DIR / "entities.json"
 STRADE_INDEX = VISUAL / "luoghi" / "_strade_index.md"
 CATALOGO = VISUAL / "catalogo.md"
+GRAPH_FILE = ROOT / "pipeline_narrativa" / "story_graph.json"
 IMG_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif", ".svg"}
+
+
+def read_graph_meta() -> dict:
+    """Estrae graph_version + schema_version dal grafo in sola lettura.
+    Tollera assenza/errore: ritorna stringhe vuote (catalogo non si rompe).
+    Usato da `meta` per WI-6/WI-7 (home + live).
+    """
+    try:
+        g = json.loads(GRAPH_FILE.read_text(encoding="utf-8"))
+        return {
+            "graph_version": g.get("graph_version", ""),
+            "schema_version": g.get("schema_version", ""),
+            "graph_last_updated": g.get("last_updated", ""),
+        }
+    except (OSError, json.JSONDecodeError):
+        return {"graph_version": "", "schema_version": "", "graph_last_updated": ""}
 
 
 def parse_scheda(scheda_path: Path):
@@ -159,8 +176,24 @@ def main():
     if CATALOGO.is_file():
         aux["catalogo_md"] = CATALOGO.read_text(encoding="utf-8")
 
-    out = {
+    # WI-8 (catalogo v2): blocco `meta` esposto al frontend Next.js per
+    # home workbench (versioni grafo, contatori) e modalità live (timestamp).
+    # Aggiuntivo: lo statico legacy lo ignora.
+    graph_meta = read_graph_meta()
+    meta = {
         "generated_at": datetime.now().isoformat(timespec="seconds"),
+        "graph_version": graph_meta["graph_version"],
+        "schema_version": graph_meta["schema_version"],
+        "graph_last_updated": graph_meta["graph_last_updated"],
+        "counts": {
+            "totals": totals,
+            "by_status": by_status,
+        },
+    }
+
+    out = {
+        "generated_at": meta["generated_at"],   # mantenuto per retrocompat
+        "meta": meta,
         "totals": totals,
         "by_status": by_status,
         "tree": build_tree(entities),
