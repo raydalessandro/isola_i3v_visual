@@ -1,0 +1,76 @@
+name: CI — test + audit grafo
+
+# Blindatura 2026-06. Due job indipendenti:
+#
+#   test   — suite pytest veloce (54 test, ~3s): struttura/robustezza/decori
+#            del compositore volumi + (nuovo) test degli audit stessi.
+#   audit  — audit 1..4 sul grafo e sulla prosa: integrità, schema a riposo,
+#            integrità referenziale (con baseline known_issues a cricchetto),
+#            drift lessicale + marker prosa↔grafo.
+#
+# Il job `integration` (build PDF reale, ~60s) gira solo quando cambia il
+# compositore o i suoi input, per non pagare 60s su ogni push.
+#
+# Filosofia: la CI è il cancello. Qualunque incoerenza NUOVA nel canone
+# blocca il merge; le incoerenze note stanno in
+# scripts/audit/_data/known_issues.yaml e possono solo diminuire.
+
+on:
+  push:
+    branches:
+      - main
+      - 'claude/**'
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install deps
+        run: python3 -m pip install --quiet -r requirements.txt -r requirements-dev.txt
+      - name: Pytest (fast)
+        run: python3 -m pytest tests/ -m "not slow" -q
+
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install deps
+        run: python3 -m pip install --quiet -r requirements.txt
+      - name: Audit grafo + prosa (1..4)
+        run: python3 scripts/audit/run_all_audits.py
+
+  integration:
+    # Build PDF reale (volume 1, s01) — solo quando cambia il compositore
+    # o i suoi input. Su PR verso main gira sempre (cancello di merge).
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install deps
+        run: python3 -m pip install --quiet -r requirements.txt -r requirements-dev.txt
+      - name: Pytest (slow — build PDF reale + invarianti KDP)
+        run: python3 -m pytest tests/ -m "slow" -q

@@ -1,0 +1,11 @@
+# backup_manifest.sha256 — hash congelati dei backup del grafo.
+# I backup sono immutabili: MAI sostituire un hash esistente.
+# Nuovi backup: python3 scripts/audit/audit_1_integrity.py --update-manifest
+2e67ab2d14c35fb262813daeb0c6b5465fe192ce378ffc53d1062f79ea02b73e  story_graph.json.pre_cornice_mondo.backup.json
+cb37782a70c8a2ecb00531020b18ec219df348b198fe3f2be343e2205584c155  story_graph.json.pre_fase_g.backup.json
+47d1bcbb5690643e0aa09167810d0e57551528ae850f7fe733051ba30fa284e2  story_graph.json.pre_step4_cornici.backup.json
+8efb8c073b32bb02c4a7ae661b164d737200bc027f99a9821a1b5757e9446fe7  story_graph.json.pre_step5_sentieri.backup.json
+4328f950d12c79390227f261dd309588708e832d18de9ed0ab2723526fa5d7a9  story_graph.json.pre_step6_path_details.backup.json
+93c951c221f18953ca04092b4c344253fe91b5a5cf0ec6c71f415d4cfd1008cb  story_graph.json.pre_v1_3.backup.json
+8f96a29f427331bea2b46ee9cb5ed089082a137a2468fcbf6eacd67728f23bdd  story_graph.v0.10.0.backup.json
+c50d80e0b25c3a6491480bebcbd8f02fe088956badc7ae5018c6420d8e89e366  story_graph.json.pre_step8_canonical_refs.backup.json

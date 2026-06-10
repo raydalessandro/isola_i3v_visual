@@ -12,6 +12,30 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 ---
 
+## SYNC-2026-06-10-014 — Blindatura completa: 4 audit operativi + CI cancello + 7 incoerenze canone risolte
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** governance + pipeline_narrativa (autorizzazione Ray esplicita 2026-06-10 per la patch al grafo) + CI
+- **Repo target:** n/a (uso interno)
+- **Cambiamento:**
+  1. **Pacchetto blindatura 2026-06-09 installato** (vedi `docs/BLINDATURA_2026-06-09.md` per report completo): 4 audit operativi (`scripts/audit/audit_{1,2,3,4}_*.py` + `run_all_audits.py`), manifest SHA-256 dei 8 backup grafo, baseline a cricchetto `known_issues.yaml`, CI `ci.yml` (test+audit su push/PR, integration su PR), fix `rebuild-catalogo.yml` (`pip install PyYAML` mancante + retry+rebase push), scritture atomiche su `write_hooks_to_graph.py` e `build_catalogo_web.py`, 24 test degli audit, `requirements{,-dev}.txt`, `web/package-lock.json` (452 pacchetti), `Makefile`.
+  2. **Step 8 cornice_mondo applicato** — `scripts/cornice_mondo/step8_fix_canonical_refs.py` (idempotente, dry-run/--apply, backup auto). Uniforma 7 ref agli id canonici del catalogo:
+     - 4× cornici foresta (s02_c2/s03_c2/s04_c2/s07_c2): `margine_foresta_intrecciata` → `foresta_intrecciata`
+     - s06_c2: `pontile` → `pontile_bocca`
+     - s06.location_primary.id: `centro_villaggio` → `villaggio_centrale`
+     - s05_c2.who: `{kind:"nominato", ref:"pun_e_memolo"}` → `{kind:"nominati", refs:["pun","memolo"]}` (estensione schema additiva)
+  3. **Schema cornici esteso (additivo):** `who.kind = "nominati"` + `who.refs: [...]` introdotto per coppie/triplette nominate insieme. `audit_2_schema.py` e `audit_3_navigability.py` aggiornati per riconoscerlo. I 23 casi `kind: nominato` + `ref` singolo restano invariati.
+  4. **Decisione focal_action 25 vs 30 parole:** confermato **30** (regola operante storica del writer). Allineata docstring `write_hooks_to_graph.py` + audit + README.
+  5. **Cancello CI alzato:** dal merge in poi, ogni nuova incoerenza referenziale/drift/manomissione backup/bump schema non autorizzato blocca il merge.
+  6. **Backup grafo aggiunto:** `story_graph.json.pre_step8_canonical_refs.backup.json` (SHA registrato nel manifest).
+  7. **Stato verificato:** 78 test PASS (2.66s), 4/4 audit PASS, known_issues vuota, build catalogo invariato 116 entità.
+- **TODO aperti (non bloccanti, decisi da Ray):**
+  - Sito web: prossima fase Ray rimuove statico, lascia solo `web/` Next.js + spec per migliorarlo. Catalogo web non tocca pipeline → no rischio per il cancello.
+  - 3 warning informativi su `locations.villaggio_centrale.contains` (alias legacy `piazza_centrale`, `casa_memolo`, `bottega_nodo`): campo descrittivo, nessuno script lo consuma. Lasciato in dote a sessione futura.
+- **File toccati:** `scripts/audit/` (nuova directory operativa + 5 file), `scripts/cornice_mondo/step8_fix_canonical_refs.py` NEW, `scripts/audit/_data/{backup_manifest.sha256, known_issues.yaml}` (svuotata), `scripts/audit/audit_2_schema.py` + `audit_3_navigability.py` patch schema `nominati`, `scripts/write_hooks_to_graph.py` + `scripts/build_catalogo_web.py` MOD (atomico), `.github/workflows/ci.yml` NEW, `.github/workflows/rebuild-catalogo.yml` MOD, `tests/test_audits.py` NEW, `requirements.txt` + `requirements-dev.txt` NEW, `web/package-lock.json` NEW, `Makefile` NEW, `docs/PIPELINE.md` MOD, `docs/BLINDATURA_2026-06-09.md` NEW, `pipeline_narrativa/story_graph.json` MOD (7 fix step8), `pipeline_narrativa/story_graph.json.pre_step8_canonical_refs.backup.json` NEW, `CLAUDE.md` + `PROJECT_STATE.md` + `SYNC_LOG.md` MOD, `catalogo_web/data/entities.json` rigenerato.
+
+---
+
 ## SYNC-2026-06-08-013 — Editorial build: script definitivo impaginazione volumi KDP installato
 
 - **Stato:** DA_RIFLETTERE

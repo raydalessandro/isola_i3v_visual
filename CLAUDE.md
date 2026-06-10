@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-06-08 (script definitivo impaginazione volumi KDP: `scripts/build_volume.py` v2 + `scripts/design_system.py` + `assets/fonts/` + `tests/`).
+Versione: 2026-06-10 (blindatura completa: 7 incoerenze del canone risolte via `scripts/cornice_mondo/step8_fix_canonical_refs.py`, baseline `known_issues.yaml` svuotata, cancello CI alzato). Versione precedente: 2026-06-09 (pacchetto blindatura: 4 audit + manifest + baseline + CI + scritture atomiche + Makefile). 2026-06-08 (script definitivo impaginazione volumi KDP).
 
 ---
 
@@ -40,6 +40,7 @@ isola_i3v_visual/
 │   ├── story_graph.json.pre_step4_cornici.backup.json  backup pre-Step 4 (2026-04-30)
 │   ├── story_graph.json.pre_step5_sentieri.backup.json backup pre-Step 5 (2026-04-30)
 │   ├── story_graph.json.pre_step6_path_details.backup.json backup pre-Step 6 (2026-04-30)
+│   ├── story_graph.json.pre_step8_canonical_refs.backup.json backup pre-Step 8 (2026-06-10)
 │   ├── hooks_proposals/<ciclo>/sNN.yaml  input deterministici per write_hooks_to_graph.py
 │   ├── narrazione_fattuale/sNN_*.md  12/12 file narrazione fattuale derivati dal sorgente _source/
 │   ├── writing_briefs/sNN_writing_brief.md  12 brief autosufficienti per agente prosa (output zero-token brieffer)
@@ -108,9 +109,10 @@ isola_i3v_visual/
 │   │   ├── step4_cornici.py             scrive 24 cornice_dettagli + 8 formule + 2 cantilene
 │   │   ├── step5_sentieri_fantasma.py   appende 36 sentieri a locations_secondary
 │   │   ├── step6_path_details.py        popola path_details.paths con 5 sentieri Tier A
+│   │   ├── step8_fix_canonical_refs.py  ⭐ NEW (2026-06-10) uniforma 7 ref ad id canonici (foresta, pontile, villaggio, who.refs)
 │   │   ├── _data/                       4 YAML deterministici (refrain, cornici_24, sentieri_fantasma, path_details_tierA)
 │   │   └── _audit/                      riservata audit successivi
-│   └── audit/                           audit grafo (4 script da implementare)
+│   └── audit/                           ⭐ NEW (2026-06-09) audit grafo+prosa IMPLEMENTATI (4 script + runner + manifest backup + baseline known_issues). `python3 scripts/audit/run_all_audits.py`
 │
 ├── assets/                    ⭐ NEW (2026-06-08) asset condivisi per build (font collana)
 │   └── fonts/                        7 TTF OFL: Fraunces, Nunito, Fredoka, Lora — usati da build_volume.py + design_system.py
@@ -225,7 +227,7 @@ Estensione hook visivi: ogni storia da N (2–8 attuali) a esattamente **10** `v
   5. scrittura: `python3 scripts/write_hooks_to_graph.py --story sNN` oppure `--cycle <A|B|C|D>` per batch
   6. il writer fa backup automatico (one-shot), bumpa graph_version a 1.1.0 stabile, appende migration_log
 - **Tipologie hook** (campo `type`): `panorama|azione|introspettivo|atmosferico|transizione|interno|dettaglio` (rinominato da `interno_caldo` il 2026-04-29).
-- **Audit grafo posteriore** (separato dal writer): `scripts/audit/audit_1..4.py` (da implementare; alcuni controlli già coperti dal writer).
+- **Audit grafo posteriore** (separato dal writer): `scripts/audit/audit_1..4.py` — **implementati 2026-06-09** (vedi `scripts/audit/README.md`). Girano in CI su ogni push/PR; in locale: `make audit`. NB regola operativa: focal_action ≤ **30** parole (il writer ha sempre applicato 30; le docstring storiche dicevano 25).
 - **Modalità**: una storia alla volta, con approvazione Ray tra storia e storia.
 - **Output finale atteso**: `pipeline_narrativa/story_graph.json` con 120 hook totali (10 × 12 storie), tutti validati.
 

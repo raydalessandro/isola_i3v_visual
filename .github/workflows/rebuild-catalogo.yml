@@ -4,6 +4,11 @@ name: Rebuild catalogo_web/data/entities.json
 # immagini o schede in visual/, oppure quando cambia lo script di build.
 # Il commit auto e' attribuito a github-actions[bot] e finisce sullo stesso branch
 # che ha triggerato il workflow.
+#
+# Blindatura 2026-06:
+#   - pip install esplicito (PyYAML NON e' preinstallato nel Python di
+#     actions/setup-python: senza questo step il run fallisce su runner pulito)
+#   - push con retry + rebase per evitare race se il branch avanza durante il run
 
 on:
   push:
@@ -37,6 +42,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: python3 -m pip install --quiet PyYAML
 
       - name: Rebuild entities.json
         run: python3 scripts/build_catalogo_web.py
@@ -52,4 +61,15 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add catalogo_web/data/entities.json
           git commit -m "auto: rebuild catalogo_web/data/entities.json [skip ci]"
-          git push origin HEAD:${GITHUB_REF#refs/heads/}
+          # push con retry: se il branch e' avanzato durante il run, rebase e ritenta
+          BRANCH="${GITHUB_REF#refs/heads/}"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${BRANCH}"; then
+              exit 0
+            fi
+            echo "push fallito (tentativo ${attempt}), rebase su origin/${BRANCH}..."
+            git fetch origin "${BRANCH}"
+            git rebase "origin/${BRANCH}"
+          done
+          echo "push fallito dopo 3 tentativi" >&2
+          exit 1

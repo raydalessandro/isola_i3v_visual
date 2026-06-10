@@ -1,0 +1,7 @@
+# requirements.txt — dipendenze runtime del tooling Python della repo.
+#   pip install -r requirements.txt
+# Versioni minime testate (CI: ubuntu-latest, Python 3.11).
+
+PyYAML>=6.0          # build_catalogo_web, write_hooks_to_graph, step cornice_mondo, audit_3
+Pillow>=10.0         # build_volume (composizione pagine), design_system
+reportlab>=4.0       # build_volume (PDF KDP)

@@ -43,7 +43,7 @@ VALIDAZIONE PRE-SCRITTURA (in ordine, fallisce subito al primo errore):
   9. ogni focal_object (se non null) in entities.objects
  10. ogni character in entities.characters
  11. ogni wind_visible (se non null) in entities.winds
- 12. focal_action <= 25 parole
+ 12. focal_action <= 30 parole
  13. ogni hook quadrant matcha entities.locations[location.id].quadrant
  14. almeno 4 type diversi
  15. mai piu' di 3 hook consecutivi stesso type
@@ -63,6 +63,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -110,10 +111,14 @@ def load_graph() -> dict:
 
 
 def save_graph(g: dict) -> None:
-    GRAPH.write_text(
-        json.dumps(g, ensure_ascii=False, indent=2) + '\n',
-        encoding='utf-8',
-    )
+    # Scrittura ATOMICA (blindatura 2026-06): mai scrivere direttamente sul
+    # grafo canonico. Si scrive su .tmp nella stessa directory e si fa
+    # os.replace (atomico su POSIX): un'interruzione a meta' scrittura non
+    # puo' lasciare il grafo corrotto/troncato.
+    payload = json.dumps(g, ensure_ascii=False, indent=2) + '\n'
+    tmp = GRAPH.with_name(GRAPH.name + '.tmp')
+    tmp.write_text(payload, encoding='utf-8')
+    os.replace(tmp, GRAPH)
 
 
 def find_proposal(story_id: str) -> Path:
