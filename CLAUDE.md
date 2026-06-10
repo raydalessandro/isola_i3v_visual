@@ -2,7 +2,7 @@
 
 Questo file spiega come funziona la repo `isola_i3v_visual` e cosa devi (e non devi) fare quando ci lavori. **Leggilo sempre per primo.**
 
-Versione: 2026-06-10 notte (promozione 11 reference da `_volumi/v01/_hd/` al catalogo personaggi + fix SKILL illustratore con regola "ritratti SEMPRE al catalogo"; 94 immagini catalogate da 83). Versione precedente: 2026-06-10 (catalogo v2 Next.js + cutover Vercel mirror dati). Mattina: blindatura completa (7 incoerenze canone risolte, cancello CI alzato). 2026-06-09: pacchetto blindatura. 2026-06-08: impaginazione volumi KDP.
+Versione: 2026-06-10 notte tarda (4 PR consecutive: canonizzazione 11 personaggi `status: canonico`, 7 luoghi promossi al catalogo dalla branch illustratore, cronologia semi ricomparsa nel sito storia, riordino layout hook per workflow Manus; 101 immagini catalogate, 15 canonici. TODO domani: debug Vercel deploy fermo alle 16:23 UTC). Versioni precedenti: 2026-06-10 sera (promozione 11 reference dal volume al catalogo + fix SKILL); 2026-06-10 pomeriggio (catalogo v2 Next.js + cutover Vercel mirror dati); 2026-06-10 mattina (blindatura completa, 7 incoerenze canone risolte, cancello CI alzato); 2026-06-09 (pacchetto blindatura); 2026-06-08 (impaginazione volumi KDP).
 
 ---
 
