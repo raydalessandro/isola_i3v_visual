@@ -1,6 +1,64 @@
 # PROJECT_STATE — Snapshot al 2026-06-10
 
-> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura) vedi sezioni cronologiche sotto.
+> Per le sessioni precedenti (bootstrap → fase E → fase G → cornice del mondo → editorial build → blindatura → catalogo v2) vedi sezioni cronologiche sotto.
+
+## Sessione 2026-06-10 pomeriggio — Catalogo v2 (Next.js): 8 WI + deprecazione statico
+
+Integrata la spec `docs/SPEC_CATALOGO_V2.md`. Il catalogo passa da
+"vetrina" a "strumento di lavoro" per la fase seme + consultazione
+operativa di chi genera le immagini.
+
+### A. 8 work items completati
+
+| WI | Cosa | File chiave |
+|---|---|---|
+| WI-1 | **Killer feature**: prompt copiabili a granularità di vista | `web/lib/prompt-grok.ts` (parser 138 righe) + `lib/__tests__/prompt-grok.test.ts` (13 test) + `prompt-grok-block.tsx` riscritto |
+| WI-3 | Proxy immagini same-origin (sblocca download cross-origin) | `web/app/api/img/[...path]/route.ts` |
+| WI-2 | Download immagini (singola + "Scarica tutte" sequenziale, zero deps) | `lightbox.tsx`, `entity-gallery.tsx`, `lib/image-url.ts` |
+| WI-4 | Deep link sezioni + permalink hover | `entity-body.tsx` (hashchange + scroll, copy permalink) |
+| WI-5 | Cmd+K command palette (entity + storie + sezioni) | `web/components/command-palette.tsx` + `scripts/build-search-index.mjs` |
+| WI-6 | Home workbench + `/stato` board F.2 | `app/page.tsx` riscritta + `app/stato/page.tsx` NEW |
+| WI-7 | `npm run dev:live` (watcher + next dev parallelo) | `web/scripts/dev-watch.mjs` |
+| WI-8 | Blocco `meta` in entities.json (graph_version, generated_at, counts) | `scripts/build_catalogo_web.py` MOD |
+
+### B. Architettura confermata (decisioni spec)
+
+- **D1**: catalogo v2 = `web/` Next.js. Statico congelato e archiviato.
+- **D2**: `entities.json` resta il contratto dati (atomico, auditato).
+- **D3**: niente backend. Tutto SSG + un solo route handler (proxy img).
+
+### C. Statico deprecato
+
+`catalogo_web/{index.html, app.js, style.css, mappa_isola.{js,css}}` spostati in `catalogo_web/_archive/` con README esplicativo. **`catalogo_web/data/` resta** (contratto dati con la app Next via `web/scripts/copy-data.mjs`).
+
+### D. Cutover deploy (TODO Ray, fuori scope PR)
+
+1. Aggiornare `vercel.json` root: rimuovere il redirect `/` → `/catalogo_web/`.
+2. Puntare il dominio principale alla app Next (`web/`).
+3. (Opzionale) eliminare `catalogo_web/_archive/` quando il cutover è stabile.
+
+### E. Stato verificato
+
+```
+web/ build         verde (118 paths SSG + /api/img dynamic)
+web/ lint          no warnings
+web/ npm run test  13/13 prompt-grok parser
+search-index       128 entries (116 entità + 12 storie)
+audit grafo        4/4 PASS (invariato)
+pytest "not slow"  78 PASS (invariato)
+```
+
+### F. Cose dichiaratamente fuori scope v2
+
+Full-text search del body; editing schede da UI; auth; hot-reload push senza F5; rifacimento `/mappa` e `/orchestra` (restano com'erano); zip download (sequenziale zero-dep adottato).
+
+### G. Prossimo passo dichiarato dalla spec
+
+Estrazione **starter kit v2**: `web/` + `scripts/` + audit + CI con `saga_config.yaml` come unico punto di identità saga. Da lì: repo Rocco e Idvara istanziata dal kit, fase seme con `dev:live` acceso.
+
+---
+
+## Sessione 2026-06-10 mattina — Blindatura completa: 4 audit + cancello CI + 7 incoerenze del canone risolte
 
 ## Sessione 2026-06-10 — Blindatura completa: 4 audit + cancello CI + 7 incoerenze del canone risolte
 
