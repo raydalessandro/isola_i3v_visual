@@ -14,6 +14,7 @@ Versione: 2026-06-10 notte tarda (4 PR consecutive: canonizzazione 11 personaggi
 4. **Una traccia per contributi esterni**: `contributi/` (proposte di aggiunta schede — solo create file nuovi datati, mai modificare esistenti).
 5. **Una traccia di starter kit (template di sistema)**: `_starter_kit/` (scheletro riusabile del framework per chi vuole farsi la propria "isola" — directory dedicata, **mai contaminare** con contenuto narrativo specifico della saga).
 6. **Una traccia di illustratore esterno** (caricamento immagini HD per stampa): branch dedicate `claude/hd-*` con subdir `_hd/`. Vedi sezione 9 + `skills/illustratore/SKILL.md`.
+6-bis. **Generazione immagini di scena** (una per subhook/pagina libro, es. via Manus): metodo formalizzato in `skills/scenografo/SKILL.md` — assemblaggio prompt a 5 blocchi da fonti repo (stylesheet + annotations + schede + prompt_grok + reference). La fonte scena è `pipeline_narrativa/storie_finali/_annotations/sNN.yaml`. La consegna segue la skill illustratore.
 7. **Mai modificare** `pipeline_narrativa/` (grafo + Bible) senza autorizzazione esplicita.
 8. **Mai inventare contenuto narrativo**. Riporta solo dati esistenti nelle fonti canoniche o segnala se mancano.
 9. **Sempre fare commit chiari** sul branch corrente, **mai push --force**, **mai modificare commit altrui**.
