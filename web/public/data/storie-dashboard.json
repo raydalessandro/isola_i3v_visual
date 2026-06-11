@@ -804,23 +804,54 @@
       "cycle": "A",
       "total_pages": 10,
       "total_hooks": 10,
-      "book_pages_total": null,
+      "book_pages_total": 18,
       "status": "definitiva",
-      "ultima_modifica": "2026-05-04",
+      "ultima_modifica": "2026-06-11",
       "file_path": "pipeline_narrativa/storie_finali/s02_il_riflesso_nella_pozza.md",
       "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s02_il_riflesso_nella_pozza.md",
-      "annotations_present": false,
-      "annotations_path": null,
-      "annotations_github_url": null,
-      "canon_additions_todo": [],
+      "annotations_present": true,
+      "annotations_path": "pipeline_narrativa/storie_finali/_annotations/s02.yaml",
+      "annotations_github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/_annotations/s02.yaml",
+      "canon_additions_todo": [
+        {
+          "location": "pozza_abbeveratoio_pastori",
+          "note": "MANCA prompt_grok.md — da creare. La pozza è location di 6 hook su 10 in s02. Servono 4 stati di superficie: specchio fermo (h04-h05), increspata da Taglio (h07b), calma ricomposta (h08), piatta e dura al sole basso (h10b)",
+          "priority": "high"
+        },
+        {
+          "location": "radura_dei_pini",
+          "note": "MANCA prompt_grok.md — da creare per h09 (margine radura alta, incontro Pastori)",
+          "priority": "high"
+        },
+        {
+          "character": "pastori",
+          "note": "Scheda collettivo provvisoria senza indicazioni visive — per h09 servono indicazioni minime per sagome collettive mai individuate (specie miste, bastoni)",
+          "priority": "high"
+        },
+        {
+          "location": "via_che_sale",
+          "note": "Aggiungi variante 'asciutta inverno terso' (contrasto con nebbia s01) e verifica che il cardo isolato (ciglio est, tratto medio, secco dorato) sia nel prompt_grok come dettaglio fisso — è l'orologio del sentiero, torna in 3 storie",
+          "priority": "medium"
+        },
+        {
+          "location": "piazza_villaggio",
+          "note": "Aggiungi variante 'mattino inverno, cielo basso' (h01-h02)",
+          "priority": "low"
+        },
+        {
+          "object": "scialle_stria",
+          "note": "Scheda stub — definire lana cenere (gioco col piumaggio dell'airone cenerino) per coerenza h01-h02",
+          "priority": "medium"
+        }
+      ],
       "stats": {
-        "chars_distinct": 8,
-        "chars_with_imgs": 7,
-        "locs_distinct": 2,
-        "locs_with_imgs": 1,
-        "locs_with_prompt": 2,
-        "objs_distinct": 0,
-        "objs_with_prompt": 0,
+        "chars_distinct": 7,
+        "chars_with_imgs": 6,
+        "locs_distinct": 4,
+        "locs_with_imgs": 2,
+        "locs_with_prompt": 4,
+        "objs_distinct": 1,
+        "objs_with_prompt": 1,
         "hooks_image_ready": 0,
         "hooks_total": 10
       },
@@ -829,251 +860,533 @@
           "hook_id": "s02_h01",
           "page": 1,
           "image": "TBD",
-          "text_preview": "Quel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\nEra un messaggio per i Pastori. Due frasi, brevi. Lo disse a voce. Poi lo ripeté. Poi lo fece ripetere a Elias, una parola alla ...",
-          "text_full": "Quel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\nEra un messaggio per i Pastori. Due frasi, brevi. Lo disse a voce. Poi lo ripeté. Poi lo fece ripetere a Elias, una parola alla volta, finché Elias non lo disse tutto in un soffio solo.\n\nMentre parlava, dalla parte della casetta tonda passò Mèmolo, sciarpa di sbieco. Le fece un cenno breve. Stria rispose con la testa, senza interrompere.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h01a | @page_book 1 | @image TBD -->\nQuel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\n<!-- @subhook s02_h01b | @page_book 2 | @image TBD -->\nEra un messaggio p...",
+          "text_full": "<!-- @subhook s02_h01a | @page_book 1 | @image TBD -->\nQuel mattino Stria scese a scuola prima del solito. Aveva uno scialle di lana cenere sulle spalle. Vide i fratelli passare per la piazza e si fermò.\n\n«Mi serve una cosa.»\n\n<!-- @subhook s02_h01b | @page_book 2 | @image TBD -->\nEra un messaggio per i Pastori. Due frasi, brevi. Lo disse a voce. Poi lo ripeté. Poi lo fece ripetere a Elias, una parola alla volta, finché Elias non lo disse tutto in un soffio solo.\n\nMentre parlava, dalla parte della casetta tonda passò Mèmolo, sciarpa di sbieco. Le fece un cenno breve. Stria rispose con la testa, senza interrompere.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "piazza_villaggio",
+            "variant": "davanti_scuola_mattino_inverno"
           },
           "characters_in_scene": [
+            "stria",
+            "gabriel",
             "elias",
-            "pastori",
-            "stria"
+            "noah",
+            "memolo"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "scialle_stria"
+          ],
+          "canonical_details": [
+            "Stria = airone cenerino, scialle di lana cenere sulle spalle (oggetto canonico scialle_stria)",
+            "Frase canonica Stria: «Mi serve una cosa.»",
+            "Il messaggio: due frasi brevi, dette a voce, ripetute, poi fatte ripetere a Elias parola per parola",
+            "Cornice s02_c1 (cameo ravvicinato): Mèmolo attraversa con sciarpa di sbieco, cenno breve a Stria, lei risponde con la testa senza interrompere — pre-installa Mèmolo prima di s06",
+            "Mèmolo appare SOLO nel subhook b (passaggio sullo sfondo, non si ferma)",
+            "Stagione: inverno, mattino presto, luce fredda"
+          ],
+          "subhooks_declared_in_marker": "[s02_h01a, s02_h01b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h01a",
+              "page_book": 1,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h01b",
+              "page_book": 2,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h01a",
+              "page_book": 1,
+              "text_split_marker": "Quel mattino Stria",
+              "image_status": "TBD",
+              "note": "Apertura: piazza d'inverno al mattino presto, davanti alla scuola. Stria con lo scialle cenere scende e si ferma vedendo i tre fratelli passare. Momento dell'aggancio: lei davanti, i tre che si arrestano. «Mi serve una cosa.» Inquadratura ampia che reintroduce la piazza (triade Albero Vecchio + Pozzo + Panca sullo sfondo, come s01_h02)."
+            },
+            {
+              "id": "s02_h01b",
+              "page_book": 2,
+              "text_split_marker": "Era un messaggio",
+              "image_status": "TBD",
+              "note": "Il rito della ripetizione: Stria china verso Elias che ripete il messaggio una parola alla volta, concentrato. Gabriel e Noah ai lati che guardano. Sullo sfondo Mèmolo (riccio, sciarpa di sbieco) attraversa la piazza dalla parte della casetta tonda e fa un cenno breve; Stria risponde con la testa senza interrompere. Due azioni simultanee in una scena: il bambino può scoprire Mèmolo da solo."
+            }
+          ]
         },
         {
           "hook_id": "s02_h02",
           "page": 2,
           "image": "TBD",
-          "text_preview": "Gabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias disse: «Andiamo.»",
-          "text_full": "Gabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias disse: «Andiamo.»",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h02a | @page_book 3 | @image TBD -->\nGabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias...",
+          "text_full": "<!-- @subhook s02_h02a | @page_book 3 | @image TBD -->\nGabriel le chiese: «Tu dove vai?»\n\nStria lo guardò. «Tu cosa pensi?»\n\nAspettò un secondo. Non aspettò la risposta. Alzò le braccia, e volò via.\n\nRestarono a guardare il cielo basso d'inverno, quella sagoma scura che si faceva piccola.\n\nPoi Elias disse: «Andiamo.»",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "piazza_villaggio",
+            "variant": "cielo_basso_inverno"
           },
           "characters_in_scene": [
-            "amo",
-            "elias",
+            "stria",
             "gabriel",
-            "stria"
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "scialle_stria"
+          ],
+          "canonical_details": [
+            "Frase-seme della storia — Gabriel: «Tu dove vai?» / Stria: «Tu cosa pensi?» (non aspetta la risposta)",
+            "Stria alza le braccia e vola via: sagoma scura che si fa piccola nel cielo basso d'inverno",
+            "Reference volo esistente: stria_canonica_v1_volo.jpg",
+            "Chiusura beat — Elias: «Andiamo.»"
+          ],
+          "subhooks_declared_in_marker": "[s02_h02a]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h02a",
+              "page_book": 3,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h02a",
+              "page_book": 3,
+              "text_split_marker": "Gabriel le chiese",
+              "image_status": "TBD",
+              "note": "Il volo. I tre fratelli di spalle / tre quarti col naso in su, fermi in piazza; la sagoma scura di Stria in volo che si fa piccola nel cielo basso e chiaro d'inverno. Tanto cielo, terra in basso: la composizione lascia respiro in alto. Il distacco tra chi resta a terra e chi vola."
+            }
+          ]
         },
         {
           "hook_id": "s02_h03",
           "page": 3,
           "image": "TBD",
-          "text_preview": "La Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno dei tre lo nominò. Lo videro e tirarono avanti.\n\nIl Ven...",
-          "text_full": "La Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno dei tre lo nominò. Lo videro e tirarono avanti.\n\nIl Vento Taglio passava alto, sopra di loro. Al Villaggio non si sentiva. Qui, sì.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h03a | @page_book 4 | @image TBD -->\nLa Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno ...",
+          "text_full": "<!-- @subhook s02_h03a | @page_book 4 | @image TBD -->\nLa Via che Sale era asciutta, oggi. Niente nebbia. Si vedeva in fondo dove finiva il sentiero, e oltre.\n\nA metà salita, sul ciglio est, c'era ancora il cardo. Lo stesso di sempre. Secco, dorato, una pianta sola in una crepa della terra. Nessuno dei tre lo nominò. Lo videro e tirarono avanti.\n\n<!-- @subhook s02_h03b | @page_book 5 | @image TBD -->\nIl Vento Taglio passava alto, sopra di loro. Al Villaggio non si sentiva. Qui, sì.",
+          "source": "manual",
           "location": {
             "id": "via_che_sale",
-            "variant": ""
+            "variant": "asciutta_inverno_terso"
           },
           "characters_in_scene": [
-            "cardo"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "Contrasto deliberato con s01: stessa via, oggi asciutta, niente nebbia, si vede dove finisce il sentiero e oltre",
+            "Cardo isolato (path_detail via_che_sale, 'orologio del sentiero'): ciglio est, tratto medio, cresce solo da una crepa nella terra, secco e dorato. Nessuno dei tre lo nomina: lo vedono e tirano avanti",
+            "Vento Taglio attivo (wind_active s02): passa alto, al Villaggio non si sente, qui sì",
+            "Il cardo torna in 3 storie con stati stagionali diversi: continuità visiva da preservare"
+          ],
+          "subhooks_declared_in_marker": "[s02_h03a, s02_h03b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h03a",
+              "page_book": 4,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h03b",
+              "page_book": 5,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h03a",
+              "page_book": 4,
+              "text_split_marker": "La Via che Sale era asciutta",
+              "image_status": "TBD",
+              "note": "La salita tersa: i tre in fila sulla via asciutta, visibilità lunga fino in fondo al sentiero (eco e contrasto con s01_h03a, stessa via nella nebbia). In primo piano sul ciglio est il cardo secco e dorato che spunta dalla crepa: dettaglio-uovo-di-pasqua che il bambino impara a riconoscere, i tre non lo guardano."
+            },
+            {
+              "id": "s02_h03b",
+              "page_book": 5,
+              "text_split_marker": "Il Vento Taglio passava alto",
+              "image_status": "TBD",
+              "note": "Pagina respiro, quasi-muta: il Vento Taglio reso visibile in alto (erba dei cigli piegata, nuvole stirate, linee d'aria nella parte alta della composizione), i tre piccoli in basso che salgono. Prima apparizione attiva di Taglio nella storia: semina la folata che a h07 incresperà la pozza."
+            }
+          ]
         },
         {
           "hook_id": "s02_h04",
           "page": 4,
           "image": "TBD",
-          "text_preview": "A metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI tre si chinarono per bere.",
-          "text_full": "A metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI tre si chinarono per bere.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h04a | @page_book 6 | @image TBD -->\nA metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI ...",
+          "text_full": "<!-- @subhook s02_h04a | @page_book 6 | @image TBD -->\nA metà cammino, dentro una conca riparata, videro la pozza. Quella che d'estate era abbeveratoio dei Pastori, ora di solito coperta di ghiaccio e di foglie marce.\n\nOggi il ghiaccio era andato via durante la notte.\n\nL'acqua era ferma. Lucida.\n\nI tre si chinarono per bere.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "inverno_ghiaccio_appena_sgelato"
           },
           "characters_in_scene": [
-            "pastori"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "La pozza: conca riparata a metà cammino, d'estate abbeveratoio delle capre dei Pastori, d'inverno coperta di ghiaccio e foglie marce. Oggi il ghiaccio è andato via durante la notte: acqua ferma, lucida",
+            "VINCOLO PAGE-TURN: in questa pagina i riflessi dei tre NON si vedono. L'acqua può riflettere solo cielo/nulla da questa angolazione. La rivelazione è alla pagina dopo (spread h05)",
+            "I tre si chinano per bere: il gesto resta sospeso a fine pagina"
+          ],
+          "subhooks_declared_in_marker": "[s02_h04a]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h04a",
+              "page_book": 6,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h04a",
+              "page_book": 6,
+              "text_split_marker": "A metà cammino",
+              "image_status": "TBD",
+              "note": "La scoperta: vista dal sentiero sulla conca riparata, la pozza in fondo che brilla ferma e lucida, sgombra di ghiaccio. I tre che scendono / si avvicinano e si chinano per bere, visti di lato o di tre quarti da dietro. NIENTE riflessi visibili: la pagina termina sul gesto del chinarsi — il page-turn fa la rivelazione."
+            }
+          ]
         },
         {
           "hook_id": "s02_h05",
           "page": 5,
           "image": "TBD",
-          "text_preview": "E si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lui, nello specchio dell'acqua, Gabriel e Noah parevano più grandi di quanto erano. E ...",
-          "text_full": "E si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lui, nello specchio dell'acqua, Gabriel e Noah parevano più grandi di quanto erano. E Elias finiva in mezzo, schiacciato fra due.\n\nNoah si vide fermo. Lui non era mai fermo. Eppure il bambino nella pozza aveva le braccia lungo i fianchi, gli occhi spalancati.\n\nI riflessi erano un filo più scuri dei loro volti. Più rigidi.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h05a | @page_book [7, 8] | @layout double_spread | @image TBD -->\nE si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lu...",
+          "text_full": "<!-- @subhook s02_h05a | @page_book [7, 8] | @layout double_spread | @image TBD -->\nE si videro.\n\nNon come si vedono di solito.\n\nGabriel si vide con la bocca tirata. Una bocca dura, da qualcuno più grande. Si strinse lo stomaco senza sapere perché.\n\nElias si vide piccolo. Molto piccolo. Accanto a lui, nello specchio dell'acqua, Gabriel e Noah parevano più grandi di quanto erano. E Elias finiva in mezzo, schiacciato fra due.\n\nNoah si vide fermo. Lui non era mai fermo. Eppure il bambino nella pozza aveva le braccia lungo i fianchi, gli occhi spalancati.\n\nI riflessi erano un filo più scuri dei loro volti. Più rigidi.",
+          "source": "manual",
           "location": {
-            "id": "bocca",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "bordo_mezzogiorno_specchio"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "SCENA CHIAVE della storia: i tre si vedono nella pozza, ma non come si vedono di solito",
+            "Riflesso Gabriel: bocca tirata, dura, da qualcuno più grande",
+            "Riflesso Elias: piccolissimo, schiacciato in mezzo, Gabriel e Noah nel riflesso paiono più grandi di quanto sono",
+            "Riflesso Noah: fermo (lui non è mai fermo), braccia lungo i fianchi, occhi spalancati",
+            "I riflessi sono un filo più scuri dei volti veri. Più rigidi",
+            "DOUBLE SPREAD: 1 sotto-hook su 2 pagine libro (immagine che attraversa lo spread)"
+          ],
+          "subhooks_declared_in_marker": "[s02_h05a]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h05a",
+              "page_book": [
+                7,
+                8
+              ],
+              "image": "TBD",
+              "layout": "double_spread"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h05a",
+              "page_book": [
+                7,
+                8
+              ],
+              "text_split_marker": "E si videro",
+              "image_status": "TBD",
+              "layout": "double_spread",
+              "note": "SPREAD. Vista obliqua dall'alto sulla pozza che attraversa le due pagine. Sopra: i tre chinati fianco a fianco sul bordo, veri. Sotto, nell'acqua: i tre riflessi SBAGLIATI — Gabriel con bocca dura da adulto, Elias minuscolo schiacciato tra due figure più grandi del vero, Noah immobile a braccia lungo i fianchi e occhi spalancati. Riflessi un filo più scuri e più rigidi dei corpi veri. Immagine-confronto: il bambino legge le differenze sopra/sotto da solo, senza adulto."
+            }
+          ]
         },
         {
           "hook_id": "s02_h06",
           "page": 6,
           "image": "TBD",
-          "text_preview": "Cominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\nPoi Elias si zittì. Si chinò. Toccò l'acqua col dito. Ritrasse la mano.\n\nDisse, basso: «Voi siete grandi davvero.»\n\nNessuno g...",
-          "text_full": "Cominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\nPoi Elias si zittì. Si chinò. Toccò l'acqua col dito. Ritrasse la mano.\n\nDisse, basso: «Voi siete grandi davvero.»\n\nNessuno gli rispose.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h06a | @page_book 9 | @image TBD -->\nCominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\n<!-- @subhook s02_h06b | @page_book 10 | @image TBD -->\nPoi Elias si z...",
+          "text_full": "<!-- @subhook s02_h06a | @page_book 9 | @image TBD -->\nCominciarono a litigare.\n\nNoah disse una cosa. Gabriel rispose male. Elias disse «smettete», ma nessuno lo sentì.\n\nLitigarono per un minuto, due. Voci alte. Gesti scomposti.\n\n<!-- @subhook s02_h06b | @page_book 10 | @image TBD -->\nPoi Elias si zittì. Si chinò. Toccò l'acqua col dito. Ritrasse la mano.\n\nDisse, basso: «Voi siete grandi davvero.»\n\nNessuno gli rispose.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "bordo_mezzogiorno"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "La lite: Noah dice una cosa, Gabriel risponde male, Elias dice «smettete» ma nessuno lo sente. Voci alte, gesti scomposti, un minuto, due",
+            "Poi il silenzio: Elias si china, tocca l'acqua col dito, ritrae la mano",
+            "Frase canonica Elias (detta basso): «Voi siete grandi davvero.» Nessuno gli risponde",
+            "Contrasto emotivo voluto tra i due subhook: caos → quiete"
+          ],
+          "subhooks_declared_in_marker": "[s02_h06a, s02_h06b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h06a",
+              "page_book": 9,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h06b",
+              "page_book": 10,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h06a",
+              "page_book": 9,
+              "text_split_marker": "Cominciarono a litigare",
+              "image_status": "TBD",
+              "note": "La lite sopra l'acqua: bocche aperte, gesti scomposti, corpi che si fronteggiano sul bordo. Possibile doppio livello: i riflessi distorti sotto che litigano anche loro (un filo più esagerati dei corpi veri). Energia e disordine — la pagina più mossa della storia."
+            },
+            {
+              "id": "s02_h06b",
+              "page_book": 10,
+              "text_split_marker": "Poi Elias si zittì",
+              "image_status": "TBD",
+              "note": "Il silenzio dopo il caos: Elias accovacciato al bordo, il dito che tocca l'acqua (o appena ritratto, primo cerchio minimo sulla superficie), Gabriel e Noah dietro, zitti, ancora irrigiditi dalla lite. Intimità e quiete: «Voi siete grandi davvero.» La composizione stringe su Elias."
+            }
+          ]
         },
         {
           "hook_id": "s02_h07",
           "page": 7,
           "image": "TBD",
-          "text_preview": "Noah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secondo, ci furono solo pezzi di nuvole.\n\nUna folata di Vento...",
-          "text_full": "Noah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secondo, ci furono solo pezzi di nuvole.\n\nUna folata di Vento Taglio passò bassa. La pozza si coprì di pieghe piccole.\n\nI riflessi non tornarono subito.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h07a | @page_book 11 | @image TBD -->\nNoah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secon...",
+          "text_full": "<!-- @subhook s02_h07a | @page_book 11 | @image TBD -->\nNoah aveva ancora il bastoncino in mano. Quello dei Pascoli.\n\nSenza pensare, durante la lite, lo lasciò cadere.\n\nNon lo lanciò: lo lasciò cadere.\n\nToccò l'acqua. L'acqua si aprì in cerchi argentei. I cerchi si allargarono e dentro, per un secondo, ci furono solo pezzi di nuvole.\n\n<!-- @subhook s02_h07b | @page_book 12 | @image TBD -->\nUna folata di Vento Taglio passò bassa. La pozza si coprì di pieghe piccole.\n\nI riflessi non tornarono subito.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "superficie_cerchi"
           },
           "characters_in_scene": [
             "noah"
           ],
-          "characters_offscreen_or_distant": [],
+          "characters_offscreen_or_distant": [
+            "gabriel",
+            "elias"
+          ],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "CALLBACK cb_s02_001 (da s01): il bastoncino raccolto da Noah in cammino sui Pascoli cade qui nella pozza. Continuità visiva: stesso tipo di legnetto visto in s01",
+            "Gesto-firma di Noah: «Non lo lanciò: lo lasciò cadere»",
+            "I cerchi argentei si allargano e dentro, per un secondo, ci sono solo pezzi di nuvole",
+            "Folata bassa di Vento Taglio: la pozza si copre di pieghe piccole, i riflessi non tornano subito (raccoglie la semina di h03b)",
+            "Inquadratura canonica del grafo per h07: solo Noah / il gesto. Gabriel ed Elias fuori campo o ai margini"
+          ],
+          "subhooks_declared_in_marker": "[s02_h07a, s02_h07b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h07a",
+              "page_book": 11,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h07b",
+              "page_book": 12,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h07a",
+              "page_book": 11,
+              "text_split_marker": "Noah aveva ancora il bastoncino",
+              "image_status": "TBD",
+              "note": "Primo piano sul gesto: la mano di Noah che si apre, il bastoncino che tocca l'acqua, i cerchi argentei concentrici che si allargano e frantumano i riflessi — dentro i cerchi solo pezzi di nuvole. Niente volti interi: la scena è la mano, il legnetto, l'acqua. Il bastoncino è lo stesso tipo di legnetto di s01 (callback visivo)."
+            },
+            {
+              "id": "s02_h07b",
+              "page_book": 12,
+              "text_split_marker": "Una folata di Vento Taglio",
+              "image_status": "TBD",
+              "note": "Quasi-muta: la superficie intera coperta di pieghe piccole sotto la folata bassa di Taglio, i riflessi assenti/spezzati. I tre eventualmente solo come presenze sfocate o ombre ai bordi dell'inquadratura. La pozza come protagonista: il vento che si vede solo attraverso l'acqua."
+            }
+          ]
         },
         {
           "hook_id": "s02_h08",
           "page": 8,
           "image": "TBD",
-          "text_preview": "Restarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\nIl bastoncino galleggiò qualche secondo. Si inclinò. Sparì sotto.\n\nI tre si rialzarono.",
-          "text_full": "Restarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\nIl bastoncino galleggiò qualche secondo. Si inclinò. Sparì sotto.\n\nI tre si rialzarono.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h08a | @page_book 13 | @image TBD -->\nRestarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\n<!-- @subhook s02_h08b | @page_book 14 | @image...",
+          "text_full": "<!-- @subhook s02_h08a | @page_book 13 | @image TBD -->\nRestarono lì, accovacciati, in silenzio.\n\nLa pozza si calmò.\n\nLe immagini tornarono ma erano diverse. Gabriel aveva di nuovo la sua faccia. Elias non era più piccolissimo. Noah non era più fermo.\n\n<!-- @subhook s02_h08b | @page_book 14 | @image TBD -->\nIl bastoncino galleggiò qualche secondo. Si inclinò. Sparì sotto.\n\nI tre si rialzarono.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "bordo_primo_pomeriggio"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "La pozza si calma. Le immagini tornano ma diverse: Gabriel ha di nuovo la sua faccia, Elias non è più piccolissimo, Noah non è più fermo",
+            "ECO COMPOSITIVA: stessa inquadratura dello spread h05, ma con i riflessi finalmente fedeli — il bambino confronta con lo spread di prima",
+            "Il bastoncino galleggia qualche secondo, si inclina, sparisce sotto: SEMINA seed_oggetto_fantasma_congelato (il bastoncino resta nella pozza — tornerà)",
+            "I tre si rialzano"
+          ],
+          "subhooks_declared_in_marker": "[s02_h08a, s02_h08b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h08a",
+              "page_book": 13,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h08b",
+              "page_book": 14,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h08a",
+              "page_book": 13,
+              "text_split_marker": "Restarono lì",
+              "image_status": "TBD",
+              "note": "Eco speculare di h05: stessa angolazione obliqua sulla pozza (formato singola pagina), i tre accovacciati in silenzio e sotto i riflessi GIUSTI — fedeli, della stessa tonalità dei corpi veri. Quiete riconquistata. Il bambino che ha visto lo spread riconosce l'inquadratura e nota la differenza."
+            },
+            {
+              "id": "s02_h08b",
+              "page_book": 14,
+              "text_split_marker": "Il bastoncino galleggiò",
+              "image_status": "TBD",
+              "note": "Quasi-muta, primo piano basso sull'acqua: il bastoncino che galleggia inclinandosi, un attimo prima di sparire sotto. Ai margini o sullo sfondo i tre che si rialzano. È l'addio al prop di s01 — e la semina dell'oggetto-fantasma: resta nella pozza. Piccolo momento malinconico e pulito."
+            }
+          ]
         },
         {
           "hook_id": "s02_h09",
           "page": 9,
           "image": "TBD",
-          "text_preview": "Salirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\nElias disse il messaggio, le due frasi, esatte come Stria le aveva fatte ripetere. I Pastori ascoltarono. Fecero ...",
-          "text_full": "Salirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\nElias disse il messaggio, le due frasi, esatte come Stria le aveva fatte ripetere. I Pastori ascoltarono. Fecero un cenno.\n\nEra fatto.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h09a | @page_book 15 | @image TBD -->\nSalirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\n<!-- @subhook s02_h09b | @page_book 16 | @image TBD -->\nE...",
+          "text_full": "<!-- @subhook s02_h09a | @page_book 15 | @image TBD -->\nSalirono ai Pastori.\n\nErano sul margine della radura alta, dove sono sempre. Due si fermarono per qualche secondo. Il bastone scese a terra: TIK-TIK-TIIK.\n\nI fratelli alzarono una mano.\n\n<!-- @subhook s02_h09b | @page_book 16 | @image TBD -->\nElias disse il messaggio, le due frasi, esatte come Stria le aveva fatte ripetere. I Pastori ascoltarono. Fecero un cenno.\n\nEra fatto.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "radura_dei_pini",
+            "variant": "margine_radura_alta"
           },
           "characters_in_scene": [
-            "elias",
             "pastori",
-            "stria"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "I Pastori: entità collettiva, sfondo costante delle storie, MAI individuati (vincolo grafo). In immagine: figure/sagome collettive, niente volti caratterizzati, fedeli alla scheda collettivo",
+            "Due si fermano per qualche secondo. Il bastone scende a terra: TIK-TIK-TIIK (onomatopea — possibile resa tipografica nel lettering)",
+            "I fratelli alzano una mano (saluto sobrio, eco del gesto Camminante s01)",
+            "Elias dice il messaggio: le due frasi, esatte come Stria gliele aveva fatte ripetere. Chiusura dell'arco di Elias: quello che nella pozza si vedeva piccolo compie la missione con la voce",
+            "I Pastori ascoltano, fanno un cenno. «Era fatto.»"
+          ],
+          "subhooks_declared_in_marker": "[s02_h09a, s02_h09b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h09a",
+              "page_book": 15,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h09b",
+              "page_book": 16,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h09a",
+              "page_book": 15,
+              "text_split_marker": "Salirono ai Pastori",
+              "image_status": "TBD",
+              "note": "L'arrivo: margine della radura alta, due Pastori fermi come figure distanti/controluce (sagome collettive, non individuate), il bastone che tocca terra — TIK-TIK-TIIK. I tre fratelli in basso che alzano una mano. Distanza rispettosa tra i due gruppi: il saluto dell'isola."
+            },
+            {
+              "id": "s02_h09b",
+              "page_book": 16,
+              "text_split_marker": "Elias disse il messaggio",
+              "image_status": "TBD",
+              "note": "La pagina di Elias: lui mezzo passo avanti rispetto ai fratelli, dritto, che dice le due frasi esatte. I Pastori che ascoltano (sagome, cenno appena accennato). Inquadratura che dà a Elias il centro: il riscatto visivo di chi nella pozza si vedeva schiacciato in mezzo. Gabriel e Noah un passo dietro, presenti ma in secondo piano."
+            }
+          ]
         },
         {
           "hook_id": "s02_h10",
           "page": 10,
           "image": "TBD",
-          "text_preview": "Tornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\nQuando i tre passarono accanto alla pozza, il sole era già basso. La superficie era di nuovo pia...",
-          "text_full": "Tornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\nQuando i tre passarono accanto alla pozza, il sole era già basso. La superficie era di nuovo piatta, dura.\n\nNon guardarono dentro.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s02_h10a | @page_book 17 | @image TBD -->\nTornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\n<!-- @subhook s02_h10b | @page_book 18 |...",
+          "text_full": "<!-- @subhook s02_h10a | @page_book 17 | @image TBD -->\nTornarono giù prima di sera.\n\nSulla via del ritorno, sul margine della Foresta, Bru era seduto fermo. Non si mosse quando passarono. Gli occhi neri li seguirono per quattro o cinque metri. Poi si voltò.\n\n<!-- @subhook s02_h10b | @page_book 18 | @image TBD -->\nQuando i tre passarono accanto alla pozza, il sole era già basso. La superficie era di nuovo piatta, dura.\n\nNon guardarono dentro.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "pozza_abbeveratoio_pastori",
+            "variant": "sera_piatta_dura"
           },
           "characters_in_scene": [
+            "gabriel",
+            "elias",
+            "noah",
             "bru"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "Cornice s02_c2 (cameo): Bru (tassino) fermo sul bordo della Foresta, occhi neri verso i fratelli, non si avvicina e non si allontana, li segue con lo sguardo per quattro o cinque metri, poi si volta. Pre-installa Bru",
+            "Bru appare SOLO nel subhook a (il passaggio al margine Foresta sulla via del ritorno)",
+            "Reference esistente perfetta: bru_canonica_v1_silenzio_ascolto.jpg",
+            "Subhook b: la pozza al sole basso, superficie di nuovo piatta, dura. «Non guardarono dentro» — chiusura",
+            "Eco strutturale con s01_h10b: chiusura su un esterno che continua a vivere"
+          ],
+          "subhooks_declared_in_marker": "[s02_h10a, s02_h10b]",
+          "subhooks_inline": [
+            {
+              "id": "s02_h10a",
+              "page_book": 17,
+              "image": "TBD"
+            },
+            {
+              "id": "s02_h10b",
+              "page_book": 18,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s02_h10a",
+              "page_book": 17,
+              "text_split_marker": "Tornarono giù prima di sera",
+              "image_status": "TBD",
+              "note": "Il ritorno, luce che cala: i tre che passano lungo il margine della Foresta Intrecciata; Bru seduto fermo al bordo, piccolo, gli occhi neri che li seguono. Nessuna interazione: lui non si muove, loro camminano. Il bambino scopre il cucciolo che custodisce — seconda presenza silenziosa della giornata."
+            },
+            {
+              "id": "s02_h10b",
+              "page_book": 18,
+              "text_split_marker": "Quando i tre passarono accanto alla pozza",
+              "image_status": "TBD",
+              "note": "Chiusura quasi-muta: la pozza al sole basso, superficie piatta e dura come metallo spento, e i tre di spalle che le passano OLTRE senza voltarsi, verso casa. «Non guardarono dentro» — lo dice l'immagine. Sotto quella superficie, invisibile, resta il bastoncino."
+            }
+          ]
         }
       ],
       "audited_entities": {
         "personaggi": {
-          "elias": {
-            "found": true,
-            "id": "elias",
-            "path": "visual/personaggi/individuali/bambini/elias",
-            "scheda": true,
-            "prompt_grok": true,
-            "n_images": 4,
-            "image_paths": [
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg"
-            ]
-          },
-          "pastori": {
-            "found": true,
-            "id": "pastori",
-            "path": "visual/personaggi/collettivi/pastori",
-            "scheda": true,
-            "prompt_grok": false,
-            "n_images": 0,
-            "image_paths": []
-          },
           "stria": {
             "found": true,
             "id": "stria",
@@ -1086,20 +1399,6 @@
               "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg",
               "visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg",
               "visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg"
-            ]
-          },
-          "amo": {
-            "found": true,
-            "id": "amo",
-            "path": "visual/personaggi/individuali/secondari/amo",
-            "scheda": true,
-            "prompt_grok": true,
-            "n_images": 4,
-            "image_paths": [
-              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg",
-              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg",
-              "visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg",
-              "visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg"
             ]
           },
           "gabriel": {
@@ -1117,18 +1416,18 @@
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg"
             ]
           },
-          "cardo": {
+          "elias": {
             "found": true,
-            "id": "cardo",
-            "path": "visual/personaggi/individuali/cuccioli/cardo",
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
             "scheda": true,
             "prompt_grok": true,
             "n_images": 4,
             "image_paths": [
-              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg",
-              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg",
-              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg",
-              "visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg"
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg"
             ]
           },
           "noah": {
@@ -1144,6 +1443,30 @@
               "visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg",
               "visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg"
             ]
+          },
+          "memolo": {
+            "found": true,
+            "id": "memolo",
+            "path": "visual/personaggi/individuali/primari/memolo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 5,
+            "image_paths": [
+              "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_con_pun.jpg",
+              "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_preciso.jpg",
+              "visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_sciarpa.jpg",
+              "visual/personaggi/individuali/primari/memolo/immagini/memolo_turnaround_v1.jpg"
+            ]
+          },
+          "pastori": {
+            "found": true,
+            "id": "pastori",
+            "path": "visual/personaggi/collettivi/pastori",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
           },
           "bru": {
             "found": true,
@@ -1162,6 +1485,19 @@
           }
         },
         "luoghi": {
+          "piazza_villaggio": {
+            "found": true,
+            "id": "piazza_villaggio",
+            "path": "visual/luoghi/villaggio_centrale/piazza_villaggio",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 3,
+            "image_paths": [
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_albero_centrale.jpg",
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_mercato_mezzogiorno.jpg",
+              "visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg"
+            ]
+          },
           "via_che_sale": {
             "found": true,
             "id": "via_che_sale",
@@ -1174,17 +1510,36 @@
               "visual/luoghi/quartiere_aria/via_che_sale/immagini/via_che_sale_canonica_v1_vista_alta.jpg"
             ]
           },
-          "bocca": {
+          "pozza_abbeveratoio_pastori": {
             "found": true,
-            "id": "bocca",
-            "path": "visual/luoghi/quartiere_acqua/bocca",
+            "id": "pozza_abbeveratoio_pastori",
+            "path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "radura_dei_pini": {
+            "found": true,
+            "id": "radura_dei_pini",
+            "path": "visual/luoghi/quartiere_terra/foresta_intrecciata/radura_dei_pini",
             "scheda": true,
             "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           }
         },
-        "oggetti": {}
+        "oggetti": {
+          "scialle_stria": {
+            "found": true,
+            "id": "scialle_stria",
+            "path": "visual/oggetti/scialle_stria",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          }
+        }
       },
       "inventory": {
         "exists": false
@@ -1233,23 +1588,59 @@
       "cycle": "A",
       "total_pages": 10,
       "total_hooks": 10,
-      "book_pages_total": null,
+      "book_pages_total": 23,
       "status": "definitiva",
-      "ultima_modifica": "2026-05-04",
+      "ultima_modifica": "2026-06-11",
       "file_path": "pipeline_narrativa/storie_finali/s03_il_pallone_oltre_la_foresta.md",
       "github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/s03_il_pallone_oltre_la_foresta.md",
-      "annotations_present": false,
-      "annotations_path": null,
-      "annotations_github_url": null,
-      "canon_additions_todo": [],
+      "annotations_present": true,
+      "annotations_path": "pipeline_narrativa/storie_finali/_annotations/s03.yaml",
+      "annotations_github_url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/pipeline_narrativa/storie_finali/_annotations/s03.yaml",
+      "canon_additions_todo": [
+        {
+          "location": "via_degli_orti",
+          "note": "MANCA prompt_grok.md — da creare per h10 (sentiero di terra fredda verso il Villaggio, sera)",
+          "priority": "high"
+        },
+        {
+          "character": "coltivatori_del_cerchio",
+          "note": "MANCA prompt_grok.md — da creare per h02 (figure collettive al lavoro, zappe, cantilena; mai individuati come i Pastori?)",
+          "priority": "high"
+        },
+        {
+          "location": "foresta_intrecciata",
+          "note": "Verificare che il prompt copra le varianti s03: 'margine/confine Orti con sasso di soglia', 'buio tra i tronchi di sera', 'primi tronchi con luce che muore'. Il sasso di soglia (pietra grigio-verde rotonda, concavità con acqua, tracce animali) è Tier A ricorrente",
+          "priority": "medium"
+        },
+        {
+          "location": "orti_del_cerchio",
+          "note": "Aggiungi varianti 'margine foresta zona gioco' e 'tramonto gennaio coi Coltivatori' al prompt",
+          "priority": "medium"
+        },
+        {
+          "object": "conchiglia_s03",
+          "note": "DECISIONE RICHIESTA: la conchiglia a terra di h04 (cornice s03_c2, 'Forse Liù') deve essere visivamente identica al tipo di conchiglia_amo (conica scura) per permettere il ricollegamento futuro, o volutamente diversa? Oggi non ha entity propria",
+          "priority": "high"
+        },
+        {
+          "character": "rovo",
+          "note": "Verifica che il prompt includa bandana scura stretta sulla fronte e il pelo grigio-tronco (mimetismo h08a è un punto di canone visivo)",
+          "priority": "medium"
+        },
+        {
+          "character": "salvia",
+          "note": "Aggiungi variante 'cortile basso, separa ortiche, sguardo basso' (cameo h02b) se non coperta",
+          "priority": "low"
+        }
+      ],
       "stats": {
         "chars_distinct": 7,
-        "chars_with_imgs": 7,
-        "locs_distinct": 1,
+        "chars_with_imgs": 6,
+        "locs_distinct": 3,
         "locs_with_imgs": 1,
-        "locs_with_prompt": 1,
-        "objs_distinct": 1,
-        "objs_with_prompt": 1,
+        "locs_with_prompt": 3,
+        "objs_distinct": 2,
+        "objs_with_prompt": 2,
         "hooks_image_ready": 0,
         "hooks_total": 10
       },
@@ -1258,246 +1649,614 @@
           "hook_id": "s03_h01",
           "page": 1,
           "image": "TBD",
-          "text_preview": "Sull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\nI tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime ai...",
-          "text_full": "Sull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\nI tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta. Hanno il pallone di stoffa cucita — quello fatto da Salvia, che da una parte si scuce sempre, e che non è mai del tutto rotondo.\n\nNoah corre dietro al pallone come corre dietro a tutto, con le ginocchia che vanno una di qua e una di là, e ride per niente. Elias para. Gabriel passa. Il pallone fa un suono morbido sull'erba bassa, e ogni tanto si scuce un altro pezzo, e nessuno se ne accorge.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\n<!-- @subhook s03...",
+          "text_full": "<!-- @subhook s03_h01a | @page_book 1 | @image TBD -->\nSull'Isola dei Tre Venti, ogni tanto, capita un pomeriggio così. L'inverno c'è ancora, ma per un'ora si distrae. Il vento del Taglio non passa. Il cielo è grigio fermo. L'aria, senza dirlo a nessuno, si fa un filo più tiepida.\n\n<!-- @subhook s03_h01b | @page_book 2 | @image TBD -->\nI tre fratelli sono ai margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta. Hanno il pallone di stoffa cucita — quello fatto da Salvia, che da una parte si scuce sempre, e che non è mai del tutto rotondo.\n\n<!-- @subhook s03_h01c | @page_book 3 | @image TBD -->\nNoah corre dietro al pallone come corre dietro a tutto, con le ginocchia che vanno una di qua e una di là, e ride per niente. Elias para. Gabriel passa. Il pallone fa un suono morbido sull'erba bassa, e ogni tanto si scuce un altro pezzo, e nessuno se ne accorge.",
+          "source": "manual",
           "location": {
             "id": "orti_del_cerchio",
-            "variant": ""
+            "variant": "margine_foresta_pomeriggio_inverno_tiepido"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
-            "noah",
+            "elias",
+            "noah"
+          ],
+          "characters_offscreen_or_distant": [
             "salvia"
           ],
-          "characters_offscreen_or_distant": [],
           "objects_in_scene": [
             "pallone_di_stoffa_cucita"
           ],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "Atmosfera canonica: inverno che 'si distrae' per un'ora — Taglio non passa, cielo grigio fermo, aria un filo più tiepida",
+            "Il pallone di stoffa cucita: fatto da Salvia, si scuce sempre da una parte, mai del tutto rotondo (seed_pallone_stoffa_cucita)",
+            "Geografia: margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta",
+            "Gesti-firma del gioco: Noah corre dietro a tutto con le ginocchia che vanno una di qua e una di là; Elias para; Gabriel passa"
+          ],
+          "subhooks_declared_in_marker": "[s03_h01a, s03_h01b, s03_h01c]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h01a",
+              "page_book": 1,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h01b",
+              "page_book": 2,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h01c",
+              "page_book": 3,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h01a",
+              "page_book": 1,
+              "text_split_marker": "Sull'Isola dei Tre Venti",
+              "image_status": "TBD",
+              "note": "Apertura atmosferica, quasi-muta: il pomeriggio d'inverno che si distrae. Vista ampia sugli Orti al margine della Foresta, cielo grigio fermo, luce tiepida e bassa. Niente azione: la pagina è la stagione. I tre possono essere figure piccole in fondo, appena accennate."
+            },
+            {
+              "id": "s03_h01b",
+              "page_book": 2,
+              "text_split_marker": "I tre fratelli sono ai margini",
+              "image_status": "TBD",
+              "note": "Presentazione del pallone: i tre fermi ai margini degli Orti, il pallone di stoffa cucita in primo piano o in mano — irregolare, mai del tutto rotondo, una cucitura che si apre. Dietro di loro le ultime aiuole, davanti i primi tronchi della Foresta: la geografia della storia in un'immagine."
+            },
+            {
+              "id": "s03_h01c",
+              "page_book": 3,
+              "text_split_marker": "Noah corre dietro al pallone",
+              "image_status": "TBD",
+              "note": "Il gioco vivo: Noah che corre con le ginocchia una di qua e una di là, ridendo per niente; Elias in posizione da parata; Gabriel che passa. Movimento ed energia sull'erba bassa, il pallone a mezz'aria o rotolante. La pagina più allegra della storia — prima che tutto cambi."
+            }
+          ]
         },
         {
           "hook_id": "s03_h02",
           "page": 2,
           "image": "TBD",
-          "text_preview": "Più in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, p...",
-          "text_full": "Più in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, poi torna come prima. Loro abbassano la voce un secondo, senza pensarci. Riprendono dopo.\n\nSull'isola, certe cose si dicono così. Non con le parole.\n\nAncora più in là, davanti a una casa col cortile basso, Salvia separa l'ortica vecchia da quella ancora verde. Le mani si muovono da sole. Lei non alza gli occhi.\n\nIl sole comincia a calare. A gennaio, sull'isola, succede prima di quanto uno se lo aspetti.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h02a | @page_book 4 | @image TBD -->\nPiù in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più v...",
+          "text_full": "<!-- @subhook s03_h02a | @page_book 4 | @image TBD -->\nPiù in là, dove gli Orti si fanno fitti, i Coltivatori stanno chiudendo il lavoro della giornata. Si sente la cantilena bassa, quella che fanno mentre zappano. Il TUM-tum-TUM delle zappe sulle ultime zolle. Quando i fratelli passano un po' più vicino, la cantilena cambia di un tono per un battito, poi torna come prima. Loro abbassano la voce un secondo, senza pensarci. Riprendono dopo.\n\nSull'isola, certe cose si dicono così. Non con le parole.\n\n<!-- @subhook s03_h02b | @page_book 5 | @image TBD -->\nAncora più in là, davanti a una casa col cortile basso, Salvia separa l'ortica vecchia da quella ancora verde. Le mani si muovono da sole. Lei non alza gli occhi.\n\nIl sole comincia a calare. A gennaio, sull'isola, succede prima di quanto uno se lo aspetti.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "orti_del_cerchio",
+            "variant": "vista_panoramica_tramonto_gennaio"
           },
           "characters_in_scene": [
-            "salvia"
+            "coltivatori_del_cerchio",
+            "salvia",
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita"
+          ],
+          "canonical_details": [
+            "Onomatopea firma: TUM-tum-TUM delle zappe sulle ultime zolle (possibile resa tipografica)",
+            "I Coltivatori del Cerchio: cantilena bassa mentre zappano; quando i fratelli passano vicino la cantilena cambia di un tono per un battito, poi torna — «certe cose si dicono così, non con le parole»",
+            "Cornice s03_c1: Salvia davanti a una casa col cortile basso, separa l'ortica vecchia da quella verde, le mani si muovono da sole, non alza gli occhi — pre-installa Salvia per s04",
+            "Salvia appare SOLO nel subhook b",
+            "A gennaio il sole cala prima di quanto uno se lo aspetti"
+          ],
+          "subhooks_declared_in_marker": "[s03_h02a, s03_h02b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h02a",
+              "page_book": 4,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h02b",
+              "page_book": 5,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h02a",
+              "page_book": 4,
+              "text_split_marker": "Più in là, dove gli Orti",
+              "image_status": "TBD",
+              "note": "Vista d'insieme degli Orti che si fanno fitti: i Coltivatori che chiudono la giornata, zappe sulle ultime zolle (TUM-tum-TUM), figure collettive chine al lavoro. I tre fratelli che passano a distanza, voce abbassata. La comunicazione senza parole: due gruppi che si riconoscono senza guardarsi."
+            },
+            {
+              "id": "s03_h02b",
+              "page_book": 5,
+              "text_split_marker": "Ancora più in là",
+              "image_status": "TBD",
+              "note": "Cameo di Salvia: davanti alla casa col cortile basso, china a separare l'ortica vecchia dalla verde, le mani che si muovono da sole, lo sguardo basso. Luce che comincia a calare (gennaio). I tre passano sullo sfondo o ai margini. Il bambino incontra Salvia prima di s04 — quiete operosa."
+            }
+          ]
         },
         {
           "hook_id": "s03_h03",
           "page": 3,
           "image": "TBD",
-          "text_preview": "Noah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa...",
-          "text_full": "Noah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa.\n\nIl pallone non si ferma al sasso. Lo supera, va avanti ancora un poco, e si infila tra i primi tronchi della Foresta. Si vede ancora, biancastro, per qualche metro. Poi gli alberi se lo prendono.\n\nNoah resta fermo con la gamba ancora un po' alzata, come se aspettasse che il calcio tornasse indietro insieme al pallone.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h03a | @page_book 6 | @image TBD -->\nNoah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre....",
+          "text_full": "<!-- @subhook s03_h03a | @page_book 6 | @image TBD -->\nNoah tira un calcio mal misurato.\n\nIl pallone parte di traverso. Rotola sull'erba dura, supera il sentiero, e a un certo punto passa accanto a un sasso grosso e rotondo che ha in cima una pozzetta d'acqua di pioggia. Quel sasso sta lì da sempre. Segna dove gli Orti finiscono e comincia un'altra cosa.\n\n<!-- @subhook s03_h03b | @page_book 7 | @image TBD -->\nIl pallone non si ferma al sasso. Lo supera, va avanti ancora un poco, e si infila tra i primi tronchi della Foresta. Si vede ancora, biancastro, per qualche metro. Poi gli alberi se lo prendono.\n\nNoah resta fermo con la gamba ancora un po' alzata, come se aspettasse che il calcio tornasse indietro insieme al pallone.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "orti_del_cerchio",
+            "variant": "margine_foresta_luce_che_cala"
           },
           "characters_in_scene": [
-            "noah",
-            "pun"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita"
+          ],
+          "canonical_details": [
+            "Sasso di soglia (path_detail Tier A): grossa pietra grigio-verde, rotonda, con una concavità in alto dove si raccoglie acqua piovana; segna il confine tra Orti e Foresta; tracce di animali che ci hanno bevuto. Cardine geografico di s03",
+            "Traiettoria canonica: il calcio mal misurato di Noah, il pallone di traverso sull'erba dura, supera il sentiero, passa accanto al sasso, lo supera, si infila tra i primi tronchi",
+            "Il pallone resta visibile, biancastro, per qualche metro. Poi gli alberi se lo prendono",
+            "Gesto congelato di Noah: resta fermo con la gamba ancora un po' alzata"
+          ],
+          "subhooks_declared_in_marker": "[s03_h03a, s03_h03b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h03a",
+              "page_book": 6,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h03b",
+              "page_book": 7,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h03a",
+              "page_book": 6,
+              "text_split_marker": "Noah tira un calcio",
+              "image_status": "TBD",
+              "note": "Il calcio sbagliato: Noah a fine gesto, il pallone che corre di traverso sull'erba dura — la traiettoria leggibile nell'immagine fino al sasso di soglia (pietra grigio-verde rotonda con la pozzetta d'acqua in cima, primo piano o medio). Il sasso entra in scena come personaggio geografico: qui finiscono gli Orti."
+            },
+            {
+              "id": "s03_h03b",
+              "page_book": 7,
+              "text_split_marker": "Il pallone non si ferma al sasso",
+              "image_status": "TBD",
+              "note": "Il pallone inghiottito: oltre il sasso, il pallone biancastro ancora visibile per qualche metro tra i primi tronchi scuri, un attimo prima che gli alberi se lo prendano. In primo piano o a lato Noah congelato con la gamba ancora un po' alzata, come se aspettasse che il calcio tornasse indietro. Sospensione comica e inquieta insieme."
+            }
+          ]
         },
         {
           "hook_id": "s03_h04",
           "page": 4,
           "image": "TBD",
-          "text_preview": "I tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole...",
-          "text_full": "I tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole.\n\nTra le radici, un po' più in là, il pallone è già lontano. È l'unica cosa chiara, là dentro.\n\nVicino al sentiero, per terra, c'è una conchiglia. Una sola. Conica, scura, con la punta verso l'alto. Le conchiglie sono al mare. Nessuno la nomina. Nessuno la raccoglie.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h04a | @page_book 8 | @image TBD -->\nI tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora ...",
+          "text_full": "<!-- @subhook s03_h04a | @page_book 8 | @image TBD -->\nI tre fanno qualche passo verso il sasso. Si fermano lì.\n\nLì, dove il pallone è entrato, la Foresta è già un'altra cosa. I tronchi sono fitti, stretti uno all'altro, scuri di un verde quasi nero. L'aria è diversa — più ferma, più vecchia. Odora di foglie umide e di terra che non ha mai preso il sole.\n\n<!-- @subhook s03_h04b | @page_book 9 | @image TBD -->\nTra le radici, un po' più in là, il pallone è già lontano. È l'unica cosa chiara, là dentro.\n\nVicino al sentiero, per terra, c'è una conchiglia. Una sola. Conica, scura, con la punta verso l'alto. Le conchiglie sono al mare. Nessuno la nomina. Nessuno la raccoglie.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "primi_tronchi_dalla_soglia"
           },
           "characters_in_scene": [
-            "pun"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita"
+          ],
+          "canonical_details": [
+            "La Foresta come altra cosa: tronchi fitti, stretti uno all'altro, verde quasi nero; aria più ferma, più vecchia; odore di foglie umide e terra che non ha mai preso il sole",
+            "Il pallone là dentro: già lontano tra le radici, l'unica cosa chiara",
+            "Cornice s03_c2 (mistero): una conchiglia per terra vicino al sentiero — una sola, conica, scura, punta verso l'alto. Le conchiglie sono al mare. Nessuno la nomina, nessuno la raccoglie. Il grafo annota: «Forse Liù». NON è (ancora) collegata a conchiglia_amo nel canone — ma visivamente è dello stesso tipo conico scuro della firma di Amo: scelta da validare con Ray",
+            "La conchiglia appare SOLO nel subhook b"
+          ],
+          "subhooks_declared_in_marker": "[s03_h04a, s03_h04b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h04a",
+              "page_book": 8,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h04b",
+              "page_book": 9,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h04a",
+              "page_book": 8,
+              "text_split_marker": "I tre fanno qualche passo",
+              "image_status": "TBD",
+              "note": "La soglia: i tre fermi al sasso di soglia, di spalle o tre quarti, davanti al muro della Foresta — tronchi fitti verde quasi nero, buio tra i fusti. Contrasto netto di luce: gli Orti chiari dietro, la Foresta scura davanti. L'aria 'più vecchia' resa con densità e ombra. I tre piccoli contro la massa verde."
+            },
+            {
+              "id": "s03_h04b",
+              "page_book": 9,
+              "text_split_marker": "Tra le radici, un po' più in là",
+              "image_status": "TBD",
+              "note": "Dentro, dalla soglia: tra le radici il pallone già lontano, macchia chiara unica nel buio verde. E in basso, vicino al sentiero, la conchiglia — una sola, conica, scura, punta in su, fuori posto (le conchiglie sono al mare). Primo piano possibile sulla conchiglia con il pallone sfocato in profondità: due oggetti fuori posto, uno spiegabile e uno no. Il bambino la nota; nessuno nel libro la nomina."
+            }
+          ]
         },
         {
           "hook_id": "s03_h05",
           "page": 5,
           "image": "TBD",
-          "text_preview": "I tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della...",
-          "text_full": "I tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della propria madre.\n\nNoah dice che basta un passo. Dice che il pallone è lì, vicinissimo, che lo prende lui e torna. Lo dice tre volte, con la voce che si fa ogni volta un po' più piccola.\n\nGabriel dice di no. Lo dice una sola volta, e basta così.\n\nElias guarda Noah. Guarda Gabriel. Guarda dentro la Foresta. Là dentro, la luce è già quasi finita.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h05a | @page_book 10 | @image TBD -->\nI tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano d...",
+          "text_full": "<!-- @subhook s03_h05a | @page_book 10 | @image TBD -->\nI tre si fermano sul margine. Non lo decidono. Si fermano e basta.\n\nNella Foresta, di sera, non si entra. Nessuno gliel'ha mai detto con queste parole. È una di quelle cose che sull'isola si imparano senza che qualcuno te le insegni — entrano dentro come entra l'odore del pane caldo, o la voce della propria madre.\n\n<!-- @subhook s03_h05b | @page_book 11 | @image TBD -->\nNoah dice che basta un passo. Dice che il pallone è lì, vicinissimo, che lo prende lui e torna. Lo dice tre volte, con la voce che si fa ogni volta un po' più piccola.\n\nGabriel dice di no. Lo dice una sola volta, e basta così.\n\nElias guarda Noah. Guarda Gabriel. Guarda dentro la Foresta. Là dentro, la luce è già quasi finita.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "confine_orti_sera_che_arriva"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "Il fermarsi come gesto attivo (callback strutturale cb_s03_001 da s01: eco del fermarsi nella nebbia)",
+            "La regola non detta: «Nella Foresta, di sera, non si entra» — imparata senza che qualcuno la insegni, «come entra l'odore del pane caldo, o la voce della propria madre»",
+            "Noah lo dice tre volte, la voce ogni volta un po' più piccola; Gabriel dice di no una sola volta; Elias guarda Noah, guarda Gabriel, guarda dentro la Foresta",
+            "Dentro, la luce è già quasi finita"
+          ],
+          "subhooks_declared_in_marker": "[s03_h05a, s03_h05b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h05a",
+              "page_book": 10,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h05b",
+              "page_book": 11,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h05a",
+              "page_book": 10,
+              "text_split_marker": "I tre si fermano sul margine",
+              "image_status": "TBD",
+              "note": "Il fermarsi: i tre immobili sul margine, allineati davanti al buio, nessuno che decide — si fermano e basta. Composizione calma e frontale: la linea invisibile tra erba e radici sotto i loro piedi. Eco visiva del fermarsi nella nebbia di s01 (stessa postura del non-muoversi)."
+            },
+            {
+              "id": "s03_h05b",
+              "page_book": 11,
+              "text_split_marker": "Noah dice che basta un passo",
+              "image_status": "TBD",
+              "note": "Il dialogo sulla soglia: Noah proteso verso la Foresta (il corpo che vuole entrare), Gabriel fermo e chiuso (il no detto una volta), Elias in mezzo che guarda l'uno, l'altro, e il buio. Tre posture, tre risposte. Dentro i tronchi la luce quasi finita: il buio che sale mentre loro parlano."
+            }
+          ]
         },
         {
           "hook_id": "s03_h06",
           "page": 6,
           "image": "TBD",
-          "text_preview": "Allora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, diventa subito un'altra voce. Si fa piccola, come se la Forest...",
-          "text_full": "Allora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, diventa subito un'altra voce. Si fa piccola, come se la Foresta se la prendesse un pezzo per volta.\n\nPer qualche secondo, niente. Solo il rumore della Foresta che si prepara alla sera. Un fruscio basso di foglie morte. Un battito d'ali alto, lontano. Poi più niente, di nuovo.\n\nGabriel e Noah, dietro, restano fermi. Anche loro adesso ascoltano.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h06a | @page_book 12 | @image TBD -->\nAllora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, divent...",
+          "text_full": "<!-- @subhook s03_h06a | @page_book 12 | @image TBD -->\nAllora Elias fa una cosa che gli altri due non si aspettano.\n\nFa un passo avanti. Si ferma sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Ma chiama.\n\n«C'è nessuno?»\n\nLa sua voce, dentro la Foresta, diventa subito un'altra voce. Si fa piccola, come se la Foresta se la prendesse un pezzo per volta.\n\n<!-- @subhook s03_h06b | @page_book 13 | @image TBD -->\nPer qualche secondo, niente. Solo il rumore della Foresta che si prepara alla sera. Un fruscio basso di foglie morte. Un battito d'ali alto, lontano. Poi più niente, di nuovo.\n\nGabriel e Noah, dietro, restano fermi. Anche loro adesso ascoltano.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "confine_orti_soglia"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "Il gesto di Elias: un passo avanti, fermo sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Chiama: «C'è nessuno?»",
+            "La voce dentro la Foresta diventa un'altra voce: si fa piccola, «come se la Foresta se la prendesse un pezzo per volta»",
+            "L'attesa: fruscio basso di foglie morte, un battito d'ali alto e lontano, poi più niente",
+            "Gabriel e Noah dietro, fermi, che ascoltano anche loro"
+          ],
+          "subhooks_declared_in_marker": "[s03_h06a, s03_h06b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h06a",
+              "page_book": 12,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h06b",
+              "page_book": 13,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h06a",
+              "page_book": 12,
+              "text_split_marker": "Allora Elias fa una cosa",
+              "image_status": "TBD",
+              "note": "La soglia di Elias — pagina iconica: lui esattamente sulla linea, un piede sull'erba chiara degli Orti e un piede quasi tra le radici scure, il corpo proteso, le mani alla bocca o aperte nel chiamare. «C'è nessuno?» Gabriel e Noah un passo dietro. Il confine passa fisicamente attraverso Elias: il suo gesto è il ponte."
+            },
+            {
+              "id": "s03_h06b",
+              "page_book": 13,
+              "text_split_marker": "Per qualche secondo, niente",
+              "image_status": "TBD",
+              "note": "L'attesa, quasi-muta: i tre immobili che ascoltano il buio. La Foresta che si prepara alla sera — foglie morte a terra, un battito d'ali alto appena suggerito (forma scura in alto tra le chiome). Tensione tenuta col silenzio: tanta Foresta, tre figure piccole che aspettano una risposta."
+            }
+          ]
         },
         {
           "hook_id": "s03_h07",
           "page": 7,
           "image": "TBD",
-          "text_preview": "Poi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca scricchia sotto qualcosa.\n\nI tre fratelli si stringono u...",
-          "text_full": "Poi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca scricchia sotto qualcosa.\n\nI tre fratelli si stringono un po', senza accorgersene. Noah viene un mezzo passo dietro a Gabriel.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h07a | @page_book 14 | @image TBD -->\nPoi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca ...",
+          "text_full": "<!-- @subhook s03_h07a | @page_book 14 | @image TBD -->\nPoi una voce. Brusca, vecchia, che viene da dentro.\n\n«Chi è?»\n\nNon lo vedono ancora. Lo sentono spostarsi tra i rami, da qualche parte là dietro — un passo pesante, di chi cammina nel suo posto e non ha bisogno di nascondersi. Una foglia secca scricchia sotto qualcosa.\n\nI tre fratelli si stringono un po', senza accorgersene. Noah viene un mezzo passo dietro a Gabriel.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "vista_dalla_soglia_buio_tra_i_tronchi"
           },
           "characters_in_scene": [
-            "bru",
             "gabriel",
+            "elias",
             "noah"
           ],
-          "characters_offscreen_or_distant": [],
+          "characters_offscreen_or_distant": [
+            "rovo"
+          ],
           "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "canonical_details": [
+            "La voce: brusca, vecchia, da dentro — «Chi è?»",
+            "Rovo NON si vede: si sente spostarsi tra i rami, passo pesante «di chi cammina nel suo posto e non ha bisogno di nascondersi», una foglia secca che scricchia",
+            "I tre si stringono un po' senza accorgersene; Noah un mezzo passo dietro a Gabriel",
+            "VINCOLO: l'apparizione di Rovo è alla pagina dopo — qui solo presenza sonora"
+          ],
+          "subhooks_declared_in_marker": "[s03_h07a]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h07a",
+              "page_book": 14,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h07a",
+              "page_book": 14,
+              "text_split_marker": "Poi una voce",
+              "image_status": "TBD",
+              "note": "La voce dal buio: i tre stretti l'uno all'altro sulla soglia (Noah mezzo passo dietro Gabriel), gli occhi verso un punto del buio tra i tronchi dove non si vede niente — o quasi: il buio può appena suggerire un movimento, mai una figura. Suspense da page-turn: Rovo esiste solo come direzione degli sguardi."
+            }
+          ]
         },
         {
           "hook_id": "s03_h08",
           "page": 8,
           "image": "TBD",
-          "text_preview": "Esce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\nÈ basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo ten...",
-          "text_full": "Esce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\nÈ basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo tenesse da un po'. Ha quell'aria di chi brontola anche quando non parla.\n\nSi chiama Rovo. I fratelli non lo sanno ancora — lo sapranno dopo, a casa, quando lo racconteranno.\n\nSi avvicina al margine, ma non lo passa. Si ferma proprio sulla linea. Posa il pallone per terra dalla parte degli Orti. Non lo lancia. Lo posa. A un passo dal margine, esatto.\n\nPoi guarda i tre. Non in faccia: di sbieco, come guarda lui.\n\n«Cosa fate qua a quest'ora? È buio. Andate.»\n\nMentre parla, dietro di lui, un'ombra più piccola si affaccia per un istante. Due occhi neri che brillano contro il buio dei tronchi. È Bru. Non avanza. Sta fermo lì, a guardarli, dentro un quadrato di buio tra due radici. Poi si ritira, senza un rumore.\n\nRovo non si volta a controllare. Lo sa.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h08a | @page_book 15 | @image TBD -->\nEsce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\n<!-- @subhook s03_h08b | @page_book 16 | @image TB...",
+          "text_full": "<!-- @subhook s03_h08a | @page_book 15 | @image TBD -->\nEsce dalla Foresta tre o quattro metri più in là di dove se l'aspettavano. Fanno fatica a vederlo, all'inizio — il suo pelo grigio si confonde con i tronchi. Poi si stacca dallo sfondo, e c'è.\n\n<!-- @subhook s03_h08b | @page_book 16 | @image TBD -->\nÈ basso, largo, con una bandana scura legata stretta sulla fronte. Tiene il pallone in mano come se lo tenesse da un po'. Ha quell'aria di chi brontola anche quando non parla.\n\nSi chiama Rovo. I fratelli non lo sanno ancora — lo sapranno dopo, a casa, quando lo racconteranno.\n\n<!-- @subhook s03_h08c | @page_book 17 | @image TBD -->\nSi avvicina al margine, ma non lo passa. Si ferma proprio sulla linea. Posa il pallone per terra dalla parte degli Orti. Non lo lancia. Lo posa. A un passo dal margine, esatto.\n\nPoi guarda i tre. Non in faccia: di sbieco, come guarda lui.\n\n«Cosa fate qua a quest'ora? È buio. Andate.»\n\n<!-- @subhook s03_h08d | @page_book 18 | @image TBD -->\nMentre parla, dietro di lui, un'ombra più piccola si affaccia per un istante. Due occhi neri che brillano contro il buio dei tronchi. È Bru. Non avanza. Sta fermo lì, a guardarli, dentro un quadrato di buio tra due radici. Poi si ritira, senza un rumore.\n\nRovo non si volta a controllare. Lo sa.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "confine_orti_sera"
           },
           "characters_in_scene": [
+            "rovo",
             "bru",
-            "rovo"
+            "gabriel",
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita",
+            "bandana_rovo"
+          ],
+          "canonical_details": [
+            "SCENA CHIAVE del volume: prima apparizione di Rovo (tasso, primari). Esce tre o quattro metri più in là di dove se l'aspettavano; il pelo grigio si confonde coi tronchi, poi si stacca dallo sfondo",
+            "Rovo: basso, largo, bandana scura legata stretta sulla fronte (oggetto canonico bandana_rovo), aria di chi brontola anche quando non parla; guarda di sbieco, mai in faccia",
+            "«Si chiama Rovo. I fratelli non lo sanno ancora — lo sapranno dopo, a casa»",
+            "Il gesto canonico: posa il pallone per terra dalla parte degli Orti, a un passo esatto dal margine. Non lo lancia. Lo posa",
+            "Frase canonica Rovo: «Cosa fate qua a quest'ora? È buio. Andate.»",
+            "Cornice/cameo: Bru si affaccia per un istante dietro Rovo — due occhi neri contro il buio, dentro un quadrato di buio tra due radici, poi si ritira senza rumore. «Rovo non si volta a controllare. Lo sa.» Secondo avvistamento di Bru (dopo s02): il bambino lo riconosce",
+            "Bru appare SOLO nel subhook d",
+            "Scale: Rovo basso e largo accanto ai tre bambini (proporzioni da schede + GU)"
+          ],
+          "subhooks_declared_in_marker": "[s03_h08a, s03_h08b, s03_h08c, s03_h08d]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h08a",
+              "page_book": 15,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h08b",
+              "page_book": 16,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h08c",
+              "page_book": 17,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h08d",
+              "page_book": 18,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h08a",
+              "page_book": 15,
+              "text_split_marker": "Esce dalla Foresta",
+              "image_status": "TBD",
+              "note": "Il mimetismo — pagina-gioco: Rovo che esce tre o quattro metri più in là del punto guardato, il pelo grigio ancora mezzo confuso coi tronchi, la figura che si sta appena staccando dallo sfondo. L'immagine deve far 'faticare' anche il lettore un istante: il bambino cerca Rovo nei tronchi come i fratelli. I tre sulla soglia colti di sorpresa, teste girate verso il punto sbagliato o appena ruotate verso quello giusto."
+            },
+            {
+              "id": "s03_h08b",
+              "page_book": 16,
+              "text_split_marker": "È basso, largo",
+              "image_status": "TBD",
+              "note": "Il ritratto di Rovo: ora interamente visibile — basso, largo, bandana scura stretta sulla fronte, il pallone di stoffa tenuto in mano «come se lo tenesse da un po'», l'aria di chi brontola anche da fermo. Prima presentazione piena del personaggio: inquadratura che gli dà peso e dignità, i fratelli ai margini che lo guardano."
+            },
+            {
+              "id": "s03_h08c",
+              "page_book": 17,
+              "text_split_marker": "Si avvicina al margine",
+              "image_status": "TBD",
+              "note": "La posa del pallone: Rovo chinato che POSA (non lancia) il pallone per terra dalla parte degli Orti, a un passo esatto dal margine — il gesto di precisione è il cuore dell'immagine. Lo sguardo di sbieco verso i tre, mai frontale. «Cosa fate qua a quest'ora? È buio. Andate.» La linea di confine leggibile tra lui e loro: ognuno dal suo lato."
+            },
+            {
+              "id": "s03_h08d",
+              "page_book": 18,
+              "text_split_marker": "Mentre parla, dietro di lui",
+              "image_status": "TBD",
+              "note": "Il quadrato di buio: dietro Rovo, tra due radici, due occhi neri che brillano un istante — Bru, fermo, che guarda i fratelli. Composizione su due piani: Rovo grande in primo piano che parla (non si volta: lo sa), e il piccolo riquadro di buio con gli occhi dietro di lui. Il bambino che ha letto s02 riconosce Bru — secondo avvistamento, sempre in silenzio."
+            }
+          ]
         },
         {
           "hook_id": "s03_h09",
           "page": 9,
           "image": "TBD",
-          "text_preview": "Gabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\nRovo non risponde subito. Fa due passi dentro la Foresta. Si ...",
-          "text_full": "Gabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\nRovo non risponde subito. Fa due passi dentro la Foresta. Si ferma. Resta di spalle. Guarda davanti a sé, in mezzo ai tronchi, in qualcosa che i fratelli non vedono — qualcosa che forse non c'è, o che c'è solo per lui.\n\nPoi, senza voltarsi del tutto, dice:\n\n«Le cose della Foresta hanno il loro orario.»\n\nLo dice come si dice una cosa vera che non si vuole spiegare. E rientra.\n\nBru gli scivola dietro tra le radici e sparisce. Si sente il passo di Rovo per qualche secondo ancora, sempre più lontano. Poi non si sente più niente — solo la Foresta che continua a fare la Foresta, per conto suo.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h09a | @page_book 19 | @image TBD -->\nGabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\n<!-- ...",
+          "text_full": "<!-- @subhook s03_h09a | @page_book 19 | @image TBD -->\nGabriel si fa avanti. Raccoglie il pallone. Lo tiene stretto sotto il braccio, come se fosse un po' più suo di prima.\n\nPrima di tornare indietro, alza gli occhi su Rovo, che si è già voltato per rientrare.\n\n«Perché di sera non si entra?»\n\n<!-- @subhook s03_h09b | @page_book 20 | @image TBD -->\nRovo non risponde subito. Fa due passi dentro la Foresta. Si ferma. Resta di spalle. Guarda davanti a sé, in mezzo ai tronchi, in qualcosa che i fratelli non vedono — qualcosa che forse non c'è, o che c'è solo per lui.\n\nPoi, senza voltarsi del tutto, dice:\n\n«Le cose della Foresta hanno il loro orario.»\n\nLo dice come si dice una cosa vera che non si vuole spiegare. E rientra.\n\n<!-- @subhook s03_h09c | @page_book 21 | @image TBD -->\nBru gli scivola dietro tra le radici e sparisce. Si sente il passo di Rovo per qualche secondo ancora, sempre più lontano. Poi non si sente più niente — solo la Foresta che continua a fare la Foresta, per conto suo.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "foresta_intrecciata",
+            "variant": "confine_orti_sera_rovo_di_spalle"
           },
           "characters_in_scene": [
+            "rovo",
             "bru",
             "gabriel",
-            "rovo"
+            "elias",
+            "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita",
+            "bandana_rovo"
+          ],
+          "canonical_details": [
+            "Gabriel raccoglie il pallone e lo tiene stretto sotto il braccio «come se fosse un po' più suo di prima»",
+            "La domanda di Gabriel: «Perché di sera non si entra?»",
+            "Rovo: due passi dentro la Foresta, fermo, di spalle, guarda in mezzo ai tronchi «qualcosa che i fratelli non vedono — qualcosa che forse non c'è, o che c'è solo per lui»",
+            "FRASE CHIAVE della storia (senza voltarsi del tutto): «Le cose della Foresta hanno il loro orario.» Detta «come si dice una cosa vera che non si vuole spiegare»",
+            "Uscita: Bru gli scivola dietro tra le radici e sparisce; il passo di Rovo si sente ancora qualche secondo, poi niente — «solo la Foresta che continua a fare la Foresta, per conto suo»",
+            "Bru appare SOLO nel subhook c"
+          ],
+          "subhooks_declared_in_marker": "[s03_h09a, s03_h09b, s03_h09c]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h09a",
+              "page_book": 19,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h09b",
+              "page_book": 20,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h09c",
+              "page_book": 21,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h09a",
+              "page_book": 19,
+              "text_split_marker": "Gabriel si fa avanti",
+              "image_status": "TBD",
+              "note": "Il recupero e la domanda: Gabriel chinato sul pallone o già rialzato con il pallone stretto sotto il braccio, lo sguardo alzato verso Rovo che si è già voltato per rientrare. Il momento in cui il maggiore osa la domanda. Elias e Noah dietro, fermi. Tensione gentile tra chi va e chi chiede."
+            },
+            {
+              "id": "s03_h09b",
+              "page_book": 20,
+              "text_split_marker": "Rovo non risponde subito",
+              "image_status": "TBD",
+              "note": "La pagina della frase: Rovo due passi dentro la Foresta, fermo, DI SPALLE, la testa appena ruotata senza voltarsi del tutto. Davanti a lui solo tronchi e buio — il qualcosa che guarda non si vede (forse non c'è, o c'è solo per lui). «Le cose della Foresta hanno il loro orario.» I tre piccoli sulla soglia alle sue spalle. La schiena di Rovo porta tutto il peso della pagina."
+            },
+            {
+              "id": "s03_h09c",
+              "page_book": 21,
+              "text_split_marker": "Bru gli scivola dietro",
+              "image_status": "TBD",
+              "note": "L'uscita di scena, quasi-muta: Rovo che si allontana tra i tronchi, già mezzo riassorbito dal grigio-verde (mimetismo inverso dell'apparizione), Bru piccola ombra che gli scivola dietro tra le radici. I tre sulla soglia che guardano la Foresta richiudersi. Il suono del passo che si spegne reso con la distanza: la Foresta torna a fare la Foresta."
+            }
+          ]
         },
         {
           "hook_id": "s03_h10",
           "page": 10,
           "image": "TBD",
-          "text_preview": "I tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.\n\nIl sole è andato giù del tutto. Sopra i tet...",
-          "text_full": "I tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.\n\nIl sole è andato giù del tutto. Sopra i tetti del Villaggio, basso, comincia adesso il Mulinello della sera — quel vento piccolo che gira intorno ai comignoli e fa muovere le ultime foglie rimaste sui rami.\n\nDomani, forse, sarà già un'altra stagione. Stasera no.\n\nStasera è ancora questa.",
-          "source": "auto",
+          "text_preview": "<!-- @subhook s03_h10a | @page_book 22 | @image TBD -->\nI tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, ...",
+          "text_full": "<!-- @subhook s03_h10a | @page_book 22 | @image TBD -->\nI tre fratelli tornano verso il Villaggio.\n\nCamminano in silenzio, sul sentiero degli Orti che a quest'ora è di terra fredda. Il pallone sotto il braccio di Gabriel. Noah cammina in mezzo, vicino. Elias ogni tanto si volta a guardare indietro, poi smette.\n\n<!-- @subhook s03_h10b | @page_book 23 | @image TBD -->\nIl sole è andato giù del tutto. Sopra i tetti del Villaggio, basso, comincia adesso il Mulinello della sera — quel vento piccolo che gira intorno ai comignoli e fa muovere le ultime foglie rimaste sui rami.\n\nDomani, forse, sarà già un'altra stagione. Stasera no.\n\nStasera è ancora questa.",
+          "source": "manual",
           "location": {
-            "id": "",
-            "variant": ""
+            "id": "via_degli_orti",
+            "variant": "sera_terra_fredda_verso_villaggio"
           },
           "characters_in_scene": [
-            "elias",
             "gabriel",
+            "elias",
             "noah"
           ],
           "characters_offscreen_or_distant": [],
-          "objects_in_scene": [],
-          "canonical_details": [],
-          "subhooks_declared_in_marker": "[]",
-          "subhooks_inline": [],
-          "subhooks_annotated": []
+          "objects_in_scene": [
+            "pallone_di_stoffa_cucita"
+          ],
+          "canonical_details": [
+            "Il ritorno in silenzio: sentiero degli Orti di terra fredda, il pallone sotto il braccio di Gabriel, Noah in mezzo vicino, Elias che ogni tanto si volta a guardare indietro, poi smette",
+            "Il Mulinello della sera: sole andato giù del tutto, sopra i tetti del Villaggio comincia «quel vento piccolo che gira intorno ai comignoli e fa muovere le ultime foglie». Terzo vento, chiusura di volume",
+            "Chiusura canonica: «Domani, forse, sarà già un'altra stagione. Stasera no. Stasera è ancora questa.»",
+            "Eco strutturale di chiusura con s01_h10b e s02_h10b: l'esterno che continua a vivere"
+          ],
+          "subhooks_declared_in_marker": "[s03_h10a, s03_h10b]",
+          "subhooks_inline": [
+            {
+              "id": "s03_h10a",
+              "page_book": 22,
+              "image": "TBD"
+            },
+            {
+              "id": "s03_h10b",
+              "page_book": 23,
+              "image": "TBD"
+            }
+          ],
+          "subhooks_annotated": [
+            {
+              "id": "s03_h10a",
+              "page_book": 22,
+              "text_split_marker": "I tre fratelli tornano",
+              "image_status": "TBD",
+              "note": "Il ritorno: i tre in cammino sulla via degli Orti di terra fredda, luce blu di sera. Gabriel col pallone sotto il braccio, Noah in mezzo, vicino, Elias che si volta a guardare indietro verso la Foresta ormai lontana e scura. Tre andature, un silenzio condiviso. La Foresta come massa scura alle loro spalle."
+            },
+            {
+              "id": "s03_h10b",
+              "page_book": 23,
+              "text_split_marker": "Il sole è andato giù",
+              "image_status": "TBD",
+              "note": "Chiusura quasi-muta, eco di volume: i tetti del Villaggio in basso, e sopra i comignoli il Mulinello della sera reso visibile — il vento piccolo che gira, le ultime foglie mosse in spirale. I tre piccoli che scendono verso le case. Terzo vento a chiudere il primo volume (s01 Taglio sulle Gemelle, s02 Taglio sulla pozza, s03 Mulinello sui tetti). Quiete: stasera è ancora questa stagione."
+            }
+          ]
         }
       ],
       "audited_entities": {
         "personaggi": {
-          "elias": {
-            "found": true,
-            "id": "elias",
-            "path": "visual/personaggi/individuali/bambini/elias",
-            "scheda": true,
-            "prompt_grok": true,
-            "n_images": 4,
-            "image_paths": [
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg",
-              "visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg"
-            ]
-          },
           "gabriel": {
             "found": true,
             "id": "gabriel",
@@ -1511,6 +2270,20 @@
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg",
               "visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg"
+            ]
+          },
+          "elias": {
+            "found": true,
+            "id": "elias",
+            "path": "visual/personaggi/individuali/bambini/elias",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 4,
+            "image_paths": [
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg",
+              "visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg"
             ]
           },
           "noah": {
@@ -1542,19 +2315,24 @@
               "visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg"
             ]
           },
-          "pun": {
+          "coltivatori_del_cerchio": {
             "found": true,
-            "id": "pun",
-            "path": "visual/personaggi/individuali/cuccioli/pun",
+            "id": "coltivatori_del_cerchio",
+            "path": "visual/personaggi/collettivi/coltivatori_del_cerchio",
             "scheda": true,
             "prompt_grok": true,
-            "n_images": 5,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "rovo": {
+            "found": true,
+            "id": "rovo",
+            "path": "visual/personaggi/individuali/primari/rovo",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 1,
             "image_paths": [
-              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg",
-              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg",
-              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg",
-              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg",
-              "visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg"
+              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
             ]
           },
           "bru": {
@@ -1571,17 +2349,6 @@
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg",
               "visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg"
             ]
-          },
-          "rovo": {
-            "found": true,
-            "id": "rovo",
-            "path": "visual/personaggi/individuali/primari/rovo",
-            "scheda": true,
-            "prompt_grok": true,
-            "n_images": 1,
-            "image_paths": [
-              "visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg"
-            ]
           }
         },
         "luoghi": {
@@ -1595,6 +2362,24 @@
             "image_paths": [
               "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg"
             ]
+          },
+          "foresta_intrecciata": {
+            "found": true,
+            "id": "foresta_intrecciata",
+            "path": "visual/luoghi/quartiere_terra/foresta_intrecciata",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "via_degli_orti": {
+            "found": true,
+            "id": "via_degli_orti",
+            "path": "visual/luoghi/quartiere_terra/via_degli_orti",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
           }
         },
         "oggetti": {
@@ -1602,6 +2387,15 @@
             "found": true,
             "id": "pallone_di_stoffa_cucita",
             "path": "visual/oggetti/pallone_di_stoffa_cucita",
+            "scheda": true,
+            "prompt_grok": true,
+            "n_images": 0,
+            "image_paths": []
+          },
+          "bandana_rovo": {
+            "found": true,
+            "id": "bandana_rovo",
+            "path": "visual/oggetti/bandana_rovo",
             "scheda": true,
             "prompt_grok": true,
             "n_images": 0,
@@ -5431,7 +6225,7 @@
             "id": "pastori",
             "path": "visual/personaggi/collettivi/pastori",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },
@@ -6227,7 +7021,7 @@
             "id": "pastori",
             "path": "visual/personaggi/collettivi/pastori",
             "scheda": true,
-            "prompt_grok": false,
+            "prompt_grok": true,
             "n_images": 0,
             "image_paths": []
           },

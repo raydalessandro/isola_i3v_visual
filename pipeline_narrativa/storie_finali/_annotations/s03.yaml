@@ -1,0 +1,296 @@
+sid: s03
+title: Il Pallone oltre la Foresta
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+  Le note subhook sono il BLOCCO SCENA del prompt illustratore (Manus): coprono beat, azione
+  focale, inquadratura, varianti atmosferiche e continuità. NON ripetono stile (stylesheet),
+  tratti fisici (schede + scale GU) né firme ambientali (prompt_grok): quelli l'illustratore
+  li assembla dalle fonti canoniche.
+
+book_pages_total: 23
+
+hooks:
+
+  s03_h01:
+    location: orti_del_cerchio
+    location_variant: margine_foresta_pomeriggio_inverno_tiepido
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: [salvia]
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "Atmosfera canonica: inverno che 'si distrae' per un'ora — Taglio non passa, cielo grigio fermo, aria un filo più tiepida"
+      - "Il pallone di stoffa cucita: fatto da Salvia, si scuce sempre da una parte, mai del tutto rotondo (seed_pallone_stoffa_cucita)"
+      - "Geografia: margini degli Orti del Cerchio, dove le ultime aiuole si appoggiano ai primi alberi della Foresta"
+      - "Gesti-firma del gioco: Noah corre dietro a tutto con le ginocchia che vanno una di qua e una di là; Elias para; Gabriel passa"
+    subhooks:
+      - id: s03_h01a
+        page_book: 1
+        text_split_marker: "Sull'Isola dei Tre Venti"
+        image_status: TBD
+        note: "Apertura atmosferica, quasi-muta: il pomeriggio d'inverno che si distrae. Vista ampia sugli Orti al margine della Foresta, cielo grigio fermo, luce tiepida e bassa. Niente azione: la pagina è la stagione. I tre possono essere figure piccole in fondo, appena accennate."
+      - id: s03_h01b
+        page_book: 2
+        text_split_marker: "I tre fratelli sono ai margini"
+        image_status: TBD
+        note: "Presentazione del pallone: i tre fermi ai margini degli Orti, il pallone di stoffa cucita in primo piano o in mano — irregolare, mai del tutto rotondo, una cucitura che si apre. Dietro di loro le ultime aiuole, davanti i primi tronchi della Foresta: la geografia della storia in un'immagine."
+      - id: s03_h01c
+        page_book: 3
+        text_split_marker: "Noah corre dietro al pallone"
+        image_status: TBD
+        note: "Il gioco vivo: Noah che corre con le ginocchia una di qua e una di là, ridendo per niente; Elias in posizione da parata; Gabriel che passa. Movimento ed energia sull'erba bassa, il pallone a mezz'aria o rotolante. La pagina più allegra della storia — prima che tutto cambi."
+
+  s03_h02:
+    location: orti_del_cerchio
+    location_variant: vista_panoramica_tramonto_gennaio
+    characters_in_scene: [coltivatori_del_cerchio, salvia, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "Onomatopea firma: TUM-tum-TUM delle zappe sulle ultime zolle (possibile resa tipografica)"
+      - "I Coltivatori del Cerchio: cantilena bassa mentre zappano; quando i fratelli passano vicino la cantilena cambia di un tono per un battito, poi torna — «certe cose si dicono così, non con le parole»"
+      - "Cornice s03_c1: Salvia davanti a una casa col cortile basso, separa l'ortica vecchia da quella verde, le mani si muovono da sole, non alza gli occhi — pre-installa Salvia per s04"
+      - "Salvia appare SOLO nel subhook b"
+      - "A gennaio il sole cala prima di quanto uno se lo aspetti"
+    subhooks:
+      - id: s03_h02a
+        page_book: 4
+        text_split_marker: "Più in là, dove gli Orti"
+        image_status: TBD
+        note: "Vista d'insieme degli Orti che si fanno fitti: i Coltivatori che chiudono la giornata, zappe sulle ultime zolle (TUM-tum-TUM), figure collettive chine al lavoro. I tre fratelli che passano a distanza, voce abbassata. La comunicazione senza parole: due gruppi che si riconoscono senza guardarsi."
+      - id: s03_h02b
+        page_book: 5
+        text_split_marker: "Ancora più in là"
+        image_status: TBD
+        note: "Cameo di Salvia: davanti alla casa col cortile basso, china a separare l'ortica vecchia dalla verde, le mani che si muovono da sole, lo sguardo basso. Luce che comincia a calare (gennaio). I tre passano sullo sfondo o ai margini. Il bambino incontra Salvia prima di s04 — quiete operosa."
+
+  s03_h03:
+    location: orti_del_cerchio
+    location_variant: margine_foresta_luce_che_cala
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "Sasso di soglia (path_detail Tier A): grossa pietra grigio-verde, rotonda, con una concavità in alto dove si raccoglie acqua piovana; segna il confine tra Orti e Foresta; tracce di animali che ci hanno bevuto. Cardine geografico di s03"
+      - "Traiettoria canonica: il calcio mal misurato di Noah, il pallone di traverso sull'erba dura, supera il sentiero, passa accanto al sasso, lo supera, si infila tra i primi tronchi"
+      - "Il pallone resta visibile, biancastro, per qualche metro. Poi gli alberi se lo prendono"
+      - "Gesto congelato di Noah: resta fermo con la gamba ancora un po' alzata"
+    subhooks:
+      - id: s03_h03a
+        page_book: 6
+        text_split_marker: "Noah tira un calcio"
+        image_status: TBD
+        note: "Il calcio sbagliato: Noah a fine gesto, il pallone che corre di traverso sull'erba dura — la traiettoria leggibile nell'immagine fino al sasso di soglia (pietra grigio-verde rotonda con la pozzetta d'acqua in cima, primo piano o medio). Il sasso entra in scena come personaggio geografico: qui finiscono gli Orti."
+      - id: s03_h03b
+        page_book: 7
+        text_split_marker: "Il pallone non si ferma al sasso"
+        image_status: TBD
+        note: "Il pallone inghiottito: oltre il sasso, il pallone biancastro ancora visibile per qualche metro tra i primi tronchi scuri, un attimo prima che gli alberi se lo prendano. In primo piano o a lato Noah congelato con la gamba ancora un po' alzata, come se aspettasse che il calcio tornasse indietro. Sospensione comica e inquieta insieme."
+
+  s03_h04:
+    location: foresta_intrecciata
+    location_variant: primi_tronchi_dalla_soglia
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "La Foresta come altra cosa: tronchi fitti, stretti uno all'altro, verde quasi nero; aria più ferma, più vecchia; odore di foglie umide e terra che non ha mai preso il sole"
+      - "Il pallone là dentro: già lontano tra le radici, l'unica cosa chiara"
+      - "Cornice s03_c2 (mistero): una conchiglia per terra vicino al sentiero — una sola, conica, scura, punta verso l'alto. Le conchiglie sono al mare. Nessuno la nomina, nessuno la raccoglie. Il grafo annota: «Forse Liù». NON è (ancora) collegata a conchiglia_amo nel canone — ma visivamente è dello stesso tipo conico scuro della firma di Amo: scelta da validare con Ray"
+      - "La conchiglia appare SOLO nel subhook b"
+    subhooks:
+      - id: s03_h04a
+        page_book: 8
+        text_split_marker: "I tre fanno qualche passo"
+        image_status: TBD
+        note: "La soglia: i tre fermi al sasso di soglia, di spalle o tre quarti, davanti al muro della Foresta — tronchi fitti verde quasi nero, buio tra i fusti. Contrasto netto di luce: gli Orti chiari dietro, la Foresta scura davanti. L'aria 'più vecchia' resa con densità e ombra. I tre piccoli contro la massa verde."
+      - id: s03_h04b
+        page_book: 9
+        text_split_marker: "Tra le radici, un po' più in là"
+        image_status: TBD
+        note: "Dentro, dalla soglia: tra le radici il pallone già lontano, macchia chiara unica nel buio verde. E in basso, vicino al sentiero, la conchiglia — una sola, conica, scura, punta in su, fuori posto (le conchiglie sono al mare). Primo piano possibile sulla conchiglia con il pallone sfocato in profondità: due oggetti fuori posto, uno spiegabile e uno no. Il bambino la nota; nessuno nel libro la nomina."
+
+  s03_h05:
+    location: foresta_intrecciata
+    location_variant: confine_orti_sera_che_arriva
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Il fermarsi come gesto attivo (callback strutturale cb_s03_001 da s01: eco del fermarsi nella nebbia)"
+      - "La regola non detta: «Nella Foresta, di sera, non si entra» — imparata senza che qualcuno la insegni, «come entra l'odore del pane caldo, o la voce della propria madre»"
+      - "Noah lo dice tre volte, la voce ogni volta un po' più piccola; Gabriel dice di no una sola volta; Elias guarda Noah, guarda Gabriel, guarda dentro la Foresta"
+      - "Dentro, la luce è già quasi finita"
+    subhooks:
+      - id: s03_h05a
+        page_book: 10
+        text_split_marker: "I tre si fermano sul margine"
+        image_status: TBD
+        note: "Il fermarsi: i tre immobili sul margine, allineati davanti al buio, nessuno che decide — si fermano e basta. Composizione calma e frontale: la linea invisibile tra erba e radici sotto i loro piedi. Eco visiva del fermarsi nella nebbia di s01 (stessa postura del non-muoversi)."
+      - id: s03_h05b
+        page_book: 11
+        text_split_marker: "Noah dice che basta un passo"
+        image_status: TBD
+        note: "Il dialogo sulla soglia: Noah proteso verso la Foresta (il corpo che vuole entrare), Gabriel fermo e chiuso (il no detto una volta), Elias in mezzo che guarda l'uno, l'altro, e il buio. Tre posture, tre risposte. Dentro i tronchi la luce quasi finita: il buio che sale mentre loro parlano."
+
+  s03_h06:
+    location: foresta_intrecciata
+    location_variant: confine_orti_soglia
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Il gesto di Elias: un passo avanti, fermo sulla soglia, un piede sull'erba degli Orti e un piede quasi tra le radici. Non entra. Chiama: «C'è nessuno?»"
+      - "La voce dentro la Foresta diventa un'altra voce: si fa piccola, «come se la Foresta se la prendesse un pezzo per volta»"
+      - "L'attesa: fruscio basso di foglie morte, un battito d'ali alto e lontano, poi più niente"
+      - "Gabriel e Noah dietro, fermi, che ascoltano anche loro"
+    subhooks:
+      - id: s03_h06a
+        page_book: 12
+        text_split_marker: "Allora Elias fa una cosa"
+        image_status: TBD
+        note: "La soglia di Elias — pagina iconica: lui esattamente sulla linea, un piede sull'erba chiara degli Orti e un piede quasi tra le radici scure, il corpo proteso, le mani alla bocca o aperte nel chiamare. «C'è nessuno?» Gabriel e Noah un passo dietro. Il confine passa fisicamente attraverso Elias: il suo gesto è il ponte."
+      - id: s03_h06b
+        page_book: 13
+        text_split_marker: "Per qualche secondo, niente"
+        image_status: TBD
+        note: "L'attesa, quasi-muta: i tre immobili che ascoltano il buio. La Foresta che si prepara alla sera — foglie morte a terra, un battito d'ali alto appena suggerito (forma scura in alto tra le chiome). Tensione tenuta col silenzio: tanta Foresta, tre figure piccole che aspettano una risposta."
+
+  s03_h07:
+    location: foresta_intrecciata
+    location_variant: vista_dalla_soglia_buio_tra_i_tronchi
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: [rovo]
+    objects_in_scene: []
+    canonical_details:
+      - "La voce: brusca, vecchia, da dentro — «Chi è?»"
+      - "Rovo NON si vede: si sente spostarsi tra i rami, passo pesante «di chi cammina nel suo posto e non ha bisogno di nascondersi», una foglia secca che scricchia"
+      - "I tre si stringono un po' senza accorgersene; Noah un mezzo passo dietro a Gabriel"
+      - "VINCOLO: l'apparizione di Rovo è alla pagina dopo — qui solo presenza sonora"
+    subhooks:
+      - id: s03_h07a
+        page_book: 14
+        text_split_marker: "Poi una voce"
+        image_status: TBD
+        note: "La voce dal buio: i tre stretti l'uno all'altro sulla soglia (Noah mezzo passo dietro Gabriel), gli occhi verso un punto del buio tra i tronchi dove non si vede niente — o quasi: il buio può appena suggerire un movimento, mai una figura. Suspense da page-turn: Rovo esiste solo come direzione degli sguardi."
+
+  s03_h08:
+    location: foresta_intrecciata
+    location_variant: confine_orti_sera
+    characters_in_scene: [rovo, bru, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita, bandana_rovo]
+    canonical_details:
+      - "SCENA CHIAVE del volume: prima apparizione di Rovo (tasso, primari). Esce tre o quattro metri più in là di dove se l'aspettavano; il pelo grigio si confonde coi tronchi, poi si stacca dallo sfondo"
+      - "Rovo: basso, largo, bandana scura legata stretta sulla fronte (oggetto canonico bandana_rovo), aria di chi brontola anche quando non parla; guarda di sbieco, mai in faccia"
+      - "«Si chiama Rovo. I fratelli non lo sanno ancora — lo sapranno dopo, a casa»"
+      - "Il gesto canonico: posa il pallone per terra dalla parte degli Orti, a un passo esatto dal margine. Non lo lancia. Lo posa"
+      - "Frase canonica Rovo: «Cosa fate qua a quest'ora? È buio. Andate.»"
+      - "Cornice/cameo: Bru si affaccia per un istante dietro Rovo — due occhi neri contro il buio, dentro un quadrato di buio tra due radici, poi si ritira senza rumore. «Rovo non si volta a controllare. Lo sa.» Secondo avvistamento di Bru (dopo s02): il bambino lo riconosce"
+      - "Bru appare SOLO nel subhook d"
+      - "Scale: Rovo basso e largo accanto ai tre bambini (proporzioni da schede + GU)"
+    subhooks:
+      - id: s03_h08a
+        page_book: 15
+        text_split_marker: "Esce dalla Foresta"
+        image_status: TBD
+        note: "Il mimetismo — pagina-gioco: Rovo che esce tre o quattro metri più in là del punto guardato, il pelo grigio ancora mezzo confuso coi tronchi, la figura che si sta appena staccando dallo sfondo. L'immagine deve far 'faticare' anche il lettore un istante: il bambino cerca Rovo nei tronchi come i fratelli. I tre sulla soglia colti di sorpresa, teste girate verso il punto sbagliato o appena ruotate verso quello giusto."
+      - id: s03_h08b
+        page_book: 16
+        text_split_marker: "È basso, largo"
+        image_status: TBD
+        note: "Il ritratto di Rovo: ora interamente visibile — basso, largo, bandana scura stretta sulla fronte, il pallone di stoffa tenuto in mano «come se lo tenesse da un po'», l'aria di chi brontola anche da fermo. Prima presentazione piena del personaggio: inquadratura che gli dà peso e dignità, i fratelli ai margini che lo guardano."
+      - id: s03_h08c
+        page_book: 17
+        text_split_marker: "Si avvicina al margine"
+        image_status: TBD
+        note: "La posa del pallone: Rovo chinato che POSA (non lancia) il pallone per terra dalla parte degli Orti, a un passo esatto dal margine — il gesto di precisione è il cuore dell'immagine. Lo sguardo di sbieco verso i tre, mai frontale. «Cosa fate qua a quest'ora? È buio. Andate.» La linea di confine leggibile tra lui e loro: ognuno dal suo lato."
+      - id: s03_h08d
+        page_book: 18
+        text_split_marker: "Mentre parla, dietro di lui"
+        image_status: TBD
+        note: "Il quadrato di buio: dietro Rovo, tra due radici, due occhi neri che brillano un istante — Bru, fermo, che guarda i fratelli. Composizione su due piani: Rovo grande in primo piano che parla (non si volta: lo sa), e il piccolo riquadro di buio con gli occhi dietro di lui. Il bambino che ha letto s02 riconosce Bru — secondo avvistamento, sempre in silenzio."
+
+  s03_h09:
+    location: foresta_intrecciata
+    location_variant: confine_orti_sera_rovo_di_spalle
+    characters_in_scene: [rovo, bru, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita, bandana_rovo]
+    canonical_details:
+      - "Gabriel raccoglie il pallone e lo tiene stretto sotto il braccio «come se fosse un po' più suo di prima»"
+      - "La domanda di Gabriel: «Perché di sera non si entra?»"
+      - "Rovo: due passi dentro la Foresta, fermo, di spalle, guarda in mezzo ai tronchi «qualcosa che i fratelli non vedono — qualcosa che forse non c'è, o che c'è solo per lui»"
+      - "FRASE CHIAVE della storia (senza voltarsi del tutto): «Le cose della Foresta hanno il loro orario.» Detta «come si dice una cosa vera che non si vuole spiegare»"
+      - "Uscita: Bru gli scivola dietro tra le radici e sparisce; il passo di Rovo si sente ancora qualche secondo, poi niente — «solo la Foresta che continua a fare la Foresta, per conto suo»"
+      - "Bru appare SOLO nel subhook c"
+    subhooks:
+      - id: s03_h09a
+        page_book: 19
+        text_split_marker: "Gabriel si fa avanti"
+        image_status: TBD
+        note: "Il recupero e la domanda: Gabriel chinato sul pallone o già rialzato con il pallone stretto sotto il braccio, lo sguardo alzato verso Rovo che si è già voltato per rientrare. Il momento in cui il maggiore osa la domanda. Elias e Noah dietro, fermi. Tensione gentile tra chi va e chi chiede."
+      - id: s03_h09b
+        page_book: 20
+        text_split_marker: "Rovo non risponde subito"
+        image_status: TBD
+        note: "La pagina della frase: Rovo due passi dentro la Foresta, fermo, DI SPALLE, la testa appena ruotata senza voltarsi del tutto. Davanti a lui solo tronchi e buio — il qualcosa che guarda non si vede (forse non c'è, o c'è solo per lui). «Le cose della Foresta hanno il loro orario.» I tre piccoli sulla soglia alle sue spalle. La schiena di Rovo porta tutto il peso della pagina."
+      - id: s03_h09c
+        page_book: 21
+        text_split_marker: "Bru gli scivola dietro"
+        image_status: TBD
+        note: "L'uscita di scena, quasi-muta: Rovo che si allontana tra i tronchi, già mezzo riassorbito dal grigio-verde (mimetismo inverso dell'apparizione), Bru piccola ombra che gli scivola dietro tra le radici. I tre sulla soglia che guardano la Foresta richiudersi. Il suono del passo che si spegne reso con la distanza: la Foresta torna a fare la Foresta."
+
+  s03_h10:
+    location: via_degli_orti
+    location_variant: sera_terra_fredda_verso_villaggio
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "Il ritorno in silenzio: sentiero degli Orti di terra fredda, il pallone sotto il braccio di Gabriel, Noah in mezzo vicino, Elias che ogni tanto si volta a guardare indietro, poi smette"
+      - "Il Mulinello della sera: sole andato giù del tutto, sopra i tetti del Villaggio comincia «quel vento piccolo che gira intorno ai comignoli e fa muovere le ultime foglie». Terzo vento, chiusura di volume"
+      - "Chiusura canonica: «Domani, forse, sarà già un'altra stagione. Stasera no. Stasera è ancora questa.»"
+      - "Eco strutturale di chiusura con s01_h10b e s02_h10b: l'esterno che continua a vivere"
+    subhooks:
+      - id: s03_h10a
+        page_book: 22
+        text_split_marker: "I tre fratelli tornano"
+        image_status: TBD
+        note: "Il ritorno: i tre in cammino sulla via degli Orti di terra fredda, luce blu di sera. Gabriel col pallone sotto il braccio, Noah in mezzo, vicino, Elias che si volta a guardare indietro verso la Foresta ormai lontana e scura. Tre andature, un silenzio condiviso. La Foresta come massa scura alle loro spalle."
+      - id: s03_h10b
+        page_book: 23
+        text_split_marker: "Il sole è andato giù"
+        image_status: TBD
+        note: "Chiusura quasi-muta, eco di volume: i tetti del Villaggio in basso, e sopra i comignoli il Mulinello della sera reso visibile — il vento piccolo che gira, le ultime foglie mosse in spirale. I tre piccoli che scendono verso le case. Terzo vento a chiudere il primo volume (s01 Taglio sulle Gemelle, s02 Taglio sulla pozza, s03 Mulinello sui tetti). Quiete: stasera è ancora questa stagione."
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - location: via_degli_orti
+    note: "MANCA prompt_grok.md — da creare per h10 (sentiero di terra fredda verso il Villaggio, sera)"
+    priority: high
+  - character: coltivatori_del_cerchio
+    note: "MANCA prompt_grok.md — da creare per h02 (figure collettive al lavoro, zappe, cantilena; mai individuati come i Pastori?)"
+    priority: high
+  - location: foresta_intrecciata
+    note: "Verificare che il prompt copra le varianti s03: 'margine/confine Orti con sasso di soglia', 'buio tra i tronchi di sera', 'primi tronchi con luce che muore'. Il sasso di soglia (pietra grigio-verde rotonda, concavità con acqua, tracce animali) è Tier A ricorrente"
+    priority: medium
+  - location: orti_del_cerchio
+    note: "Aggiungi varianti 'margine foresta zona gioco' e 'tramonto gennaio coi Coltivatori' al prompt"
+    priority: medium
+  - object: conchiglia_s03
+    note: "DECISIONE RICHIESTA: la conchiglia a terra di h04 (cornice s03_c2, 'Forse Liù') deve essere visivamente identica al tipo di conchiglia_amo (conica scura) per permettere il ricollegamento futuro, o volutamente diversa? Oggi non ha entity propria"
+    priority: high
+  - character: rovo
+    note: "Verifica che il prompt includa bandana scura stretta sulla fronte e il pelo grigio-tronco (mimetismo h08a è un punto di canone visivo)"
+    priority: medium
+  - character: salvia
+    note: "Aggiungi variante 'cortile basso, separa ortiche, sguardo basso' (cameo h02b) se non coperta"
+    priority: low
