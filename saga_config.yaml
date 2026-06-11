@@ -1,0 +1,135 @@
+# ============================================================================
+# saga_config.yaml — CANONE NORMATIVO MACHINE-READABLE della saga
+# ============================================================================
+# Unica fonte di verità per enum, vincoli, grammatica marker e quote lessicali.
+# Da qui IMPORTANO (mai duplicare): scripts/write_hooks_to_graph.py,
+# scripts/audit/audit_1..4, (futuro) web e starter kit.
+#
+# Regole di evoluzione:
+#   - ogni modifica qui è una modifica di CANONE: stessa PR di chi la consuma,
+#     commit COSA+PERCHÉ, audit verdi prima del merge
+#   - bump grafo autorizzato = aggiornare graph.expected_* QUI (non più
+#     costanti negli audit)
+#   - i valori qualitativi (voce, stile, pugno emotivo) NON stanno qui:
+#     restano in PATTERN_AI_DA_BANDIRE_v1.md e nei documenti progetto;
+#     qui vive solo ciò che una macchina può verificare
+#
+# Loader: scripts/saga_canon.py (valida il file e compila le regex).
+# Per la prossima saga: lo starter kit istanzia questo file con i valori
+# del nuovo mondo — gli script non cambiano.
+# ============================================================================
+
+config_version: 1
+
+saga:
+  id: isola_tre_venti
+  title: "L'Isola dei Tre Venti"
+  language: it
+
+graph:
+  expected_schema: "1.4"
+  expected_graph: "1.2.0"
+  backup_globs:
+    - "story_graph.*.backup.json"
+    - "story_graph.json.*.backup.json"
+
+stories:
+  count: 12
+  id_format: "s{n:02d}"          # s01..s12
+
+hooks:
+  per_story: 10
+  id_regex: "^s(\\d{2})_h(\\d{2})$"
+  focal_action_max_words: 30      # regola operativa del writer (NB: non 25)
+  max_signature_per_story: 3
+  max_consecutive_same_type: 3
+  min_distinct_types: 4
+  types:
+    - panorama
+    - azione
+    - introspettivo
+    - atmosferico
+    - transizione
+    - interno
+    - dettaglio
+  composition_zones:
+    - sky_space
+    - fog_space
+    - ground_space
+    - side_space
+    - vignette
+    - corner_lower_left
+    - corner_lower_right
+  provenance:
+    - original_v1
+    - extended_v2
+  required_fields:
+    - hook_id
+    - type
+    - is_signature
+    - provenance
+    - moment
+    - location
+    - characters_present
+    - focal_action
+    - atmosphere
+    - palette
+    - composition_zone
+
+cornici:
+  per_story: 2
+  id_regex: "^s(\\d{2})_c(\\d+)$"
+  required_fields: [id, story, type, who, where, what]
+  # Estensione step8 (2026-06-10): 'nominati' = coppie/triplette nominate
+  # insieme nella stessa cornice; usa who.refs (lista, >=2) invece di who.ref.
+  who_kinds: [gruppo, nominato, nominati, anonimo]
+  refs_min_for_nominati: 2
+
+quadrants:
+  - aria_nord
+  - acqua_sud
+  - fuoco_est
+  - terra_ovest
+  - centro
+  - acqua_nord     # canone esteso confermato (grafo v1.2.0)
+  - tutti
+
+paths:
+  tier_a:
+    - via_dell_alba
+    - sentiero_orti_torrente_foresta
+    - via_che_sale
+    - sentiero_orti_casa_salvia
+    - viottolo_perimetrale_piazza
+  details_total: 20
+
+markers:
+  # Grammatica dei marker machine-readable in storie_finali/ (contratto di
+  # build_volume.py, verificata da audit_4). I gruppi catturati sono parte
+  # del contratto: non cambiare arità/ordine senza aggiornare i consumatori.
+  hook_regex: >-
+    <!--\s*@hook\s+(s\d{2}_h\d{2})\s*\|\s*@page\s+(\d+)\s*\|\s*@subhooks\s*\[([^\]]*)\]\s*\|\s*@image\s+([^>]*?)\s*-->
+  subhook_regex: >-
+    <!--\s*@subhook\s+(s\d{2}_h\d{2}[a-z])\s*\|\s*@page_book\s+(\[[^\]]*\]|\d+)\s*(?:\|\s*@layout\s+(\S+)\s*)?\|\s*@image\s+([^>]*?)\s*-->
+
+lexicon:
+  # Proiezione machine-readable di PATTERN_AI_DA_BANDIRE_v1.md §6
+  # (il documento resta la fonte autoritativa per le regole qualitative).
+  quotas:
+    - {pattern: "piano piano",                  max_per_story: 1}
+    - {pattern: "qualcosa di",                  max_per_story: 1}
+    - {pattern: "in qualche modo",              max_per_story: 1}
+    - {pattern: "a poco a poco",                max_per_story: 0}
+    - {pattern: "lentamente",                   max_per_story: 1}
+    - {pattern: "piccolo piccolo",              max_per_story: 1}
+    - {pattern: "guardò il cielo",              max_per_story: 0}
+    - {pattern: "guardò fuori dalla finestra",  max_per_story: 0}
+    - {pattern: "stringeva forte",              max_per_story: 0}
+    - {pattern: "abbracciò forte",              max_per_story: 0}
+    - {pattern: "si ricordò di",                max_per_story: 1, only_stories: [s11, s12]}
+  piano_family:
+    patterns: ["piano piano", "pian piano", "a poco a poco", "un po' alla volta"]
+    saga_max: 6
+
+entities:
+  categories: [characters, objects, locations, winds]

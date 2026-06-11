@@ -52,33 +52,24 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 GRAPH = REPO / "pipeline_narrativa" / "story_graph.json"
 
-VALID_TYPES = {
-    "panorama", "azione", "introspettivo", "atmosferico",
-    "transizione", "interno", "dettaglio",
-}
-VALID_COMPOSITION_ZONES = {
-    "sky_space", "fog_space", "ground_space", "side_space",
-    "vignette", "corner_lower_left", "corner_lower_right",
-}
-VALID_PROVENANCE = {"original_v1", "extended_v2"}
-HOOK_ID_RE = re.compile(r"^s(\d{2})_h(\d{2})$")
-CORNICE_ID_RE = re.compile(r"^s(\d{2})_c(\d+)$")
-REQUIRED_HOOK_FIELDS = (
-    "hook_id", "type", "is_signature", "provenance", "moment",
-    "location", "characters_present", "focal_action", "atmosphere",
-    "palette", "composition_zone",
-)
-REQUIRED_CORNICE_FIELDS = ("id", "story", "type", "who", "where", "what")
-FOCAL_ACTION_MAX_WORDS = 30
-EXPECTED_TIER_A_PATHS = {
-    "via_dell_alba",
-    "sentiero_orti_torrente_foresta",
-    "via_che_sale",
-    "sentiero_orti_casa_salvia",
-    "viottolo_perimetrale_piazza",
-}
-EXPECTED_PATH_DETAILS_TOTAL = 20
-STORY_IDS = tuple(f"s{i:02d}" for i in range(1, 13))
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # scripts/
+import saga_canon  # noqa: E402  (canone normativo: saga_config.yaml)
+_C = saga_canon.load(Path(__file__).resolve().parents[2])
+
+VALID_TYPES = _C.hooks.types
+VALID_COMPOSITION_ZONES = _C.hooks.composition_zones
+VALID_PROVENANCE = _C.hooks.provenance
+HOOK_ID_RE = _C.hooks.id_re
+CORNICE_ID_RE = _C.cornici.id_re
+WHO_KINDS = _C.cornici.who_kinds
+REFS_MIN_NOMINATI = _C.cornici.refs_min_for_nominati
+REQUIRED_HOOK_FIELDS = _C.hooks.required_fields
+REQUIRED_CORNICE_FIELDS = _C.cornici.required_fields
+FOCAL_ACTION_MAX_WORDS = _C.hooks.focal_action_max_words
+EXPECTED_TIER_A_PATHS = _C.paths.tier_a
+EXPECTED_PATH_DETAILS_TOTAL = _C.paths.details_total
+STORY_IDS = _C.story_ids
 
 errors: list[str] = []
 
@@ -201,15 +192,15 @@ def check_cornici(sid: str, story: dict) -> None:
             kind = who.get("kind")
             # Estensione step8 (2026-06-10): 'nominati' = coppia/tripletta
             # nominata insieme nella stessa cornice, usa who.refs lista.
-            if kind not in {"gruppo", "nominato", "nominati", "anonimo"}:
+            if kind not in WHO_KINDS:
                 err(f"{prefix}: who.kind {kind!r} non in "
-                    f"{{gruppo, nominato, nominati, anonimo}} (DOC_3)")
+                    f"{sorted(WHO_KINDS)} (canone: saga_config.yaml)")
             if kind in {"gruppo", "nominato"} and is_blank(who.get("ref")):
                 err(f"{prefix}: who.ref vuoto (obbligatorio per kind={kind})")
             if kind == "nominati":
                 refs = who.get("refs")
-                if not isinstance(refs, list) or len(refs) < 2:
-                    err(f"{prefix}: who.refs lista non vuota (>=2) "
+                if not isinstance(refs, list) or len(refs) < REFS_MIN_NOMINATI:
+                    err(f"{prefix}: who.refs lista non vuota (>={REFS_MIN_NOMINATI}) "
                         f"obbligatoria per kind=nominati")
             if kind == "anonimo" and not is_blank(who.get("ref")):
                 err(f"{prefix}: who.ref {who.get('ref')!r} valorizzato "

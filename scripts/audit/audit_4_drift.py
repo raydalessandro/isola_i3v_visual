@@ -62,34 +62,24 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[2]
 GRAPH = REPO / "pipeline_narrativa" / "story_graph.json"
 STORIE = REPO / "pipeline_narrativa" / "storie_finali"
-STORY_IDS = tuple(f"s{i:02d}" for i in range(1, 13))
 
-# (pattern, max per storia, solo_storie | None)
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # scripts/
+import saga_canon  # noqa: E402  (canone normativo: saga_config.yaml)
+_C = saga_canon.load(Path(__file__).resolve().parents[2])
+
+STORY_IDS = _C.story_ids
+
+# Quote lessicali e grammatica marker: dal canone (saga_config.yaml).
+# (pattern, max per storia, solo_storie | None) — formato interno invariato.
 LEXICAL_QUOTAS: list[tuple[str, int, tuple[str, ...] | None]] = [
-    (r"piano piano", 1, None),
-    (r"qualcosa di", 1, None),
-    (r"in qualche modo", 1, None),
-    (r"a poco a poco", 0, None),
-    (r"lentamente", 1, None),
-    (r"piccolo piccolo", 1, None),
-    (r"guardò il cielo", 0, None),
-    (r"guardò fuori dalla finestra", 0, None),
-    (r"stringeva forte", 0, None),
-    (r"abbracciò forte", 0, None),
-    (r"si ricordò di", 1, ("s11", "s12")),
+    (q.pattern, q.max_per_story, q.only_stories) for q in _C.lexicon.quotas
 ]
-PIANO_FAMILY = (r"piano piano", r"pian piano", r"a poco a poco",
-                r"un po' alla volta")
-PIANO_FAMILY_SAGA_MAX = 6
+PIANO_FAMILY = _C.lexicon.piano_family_patterns
+PIANO_FAMILY_SAGA_MAX = _C.lexicon.piano_family_saga_max
 
-HOOK_MARKER_RE = re.compile(
-    r"<!--\s*@hook\s+(s\d{2}_h\d{2})\s*\|\s*@page\s+(\d+)\s*\|\s*"
-    r"@subhooks\s*\[([^\]]*)\]\s*\|\s*@image\s+([^>]*?)\s*-->"
-)
-SUBHOOK_MARKER_RE = re.compile(
-    r"<!--\s*@subhook\s+(s\d{2}_h\d{2}[a-z])\s*\|\s*@page_book\s+"
-    r"(\[[^\]]*\]|\d+)\s*(?:\|\s*@layout\s+(\S+)\s*)?\|\s*@image\s+([^>]*?)\s*-->"
-)
+HOOK_MARKER_RE = _C.markers.hook_re
+SUBHOOK_MARKER_RE = _C.markers.subhook_re
 FM_RE = re.compile(r"\A---\n(.*?)\n---\n", re.DOTALL)
 
 errors: list[str] = []
