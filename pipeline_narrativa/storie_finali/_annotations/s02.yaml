@@ -1,0 +1,263 @@
+sid: s02
+title: Il Riflesso nella Pozza
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+  Le note subhook sono il BLOCCO SCENA del prompt illustratore (Manus): coprono beat, azione
+  focale, inquadratura, varianti atmosferiche e continuità. NON ripetono stile (stylesheet),
+  tratti fisici (schede + scale GU) né firme ambientali (prompt_grok): quelli l'illustratore
+  li assembla dalle fonti canoniche.
+
+book_pages_total: 18
+
+hooks:
+
+  s02_h01:
+    location: piazza_villaggio
+    location_variant: davanti_scuola_mattino_inverno
+    characters_in_scene: [stria, gabriel, elias, noah, memolo]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [scialle_stria]
+    canonical_details:
+      - "Stria = airone cenerino, scialle di lana cenere sulle spalle (oggetto canonico scialle_stria)"
+      - "Frase canonica Stria: «Mi serve una cosa.»"
+      - "Il messaggio: due frasi brevi, dette a voce, ripetute, poi fatte ripetere a Elias parola per parola"
+      - "Cornice s02_c1 (cameo ravvicinato): Mèmolo attraversa con sciarpa di sbieco, cenno breve a Stria, lei risponde con la testa senza interrompere — pre-installa Mèmolo prima di s06"
+      - "Mèmolo appare SOLO nel subhook b (passaggio sullo sfondo, non si ferma)"
+      - "Stagione: inverno, mattino presto, luce fredda"
+    subhooks:
+      - id: s02_h01a
+        page_book: 1
+        text_split_marker: "Quel mattino Stria"
+        image_status: TBD
+        note: "Apertura: piazza d'inverno al mattino presto, davanti alla scuola. Stria con lo scialle cenere scende e si ferma vedendo i tre fratelli passare. Momento dell'aggancio: lei davanti, i tre che si arrestano. «Mi serve una cosa.» Inquadratura ampia che reintroduce la piazza (triade Albero Vecchio + Pozzo + Panca sullo sfondo, come s01_h02)."
+      - id: s02_h01b
+        page_book: 2
+        text_split_marker: "Era un messaggio"
+        image_status: TBD
+        note: "Il rito della ripetizione: Stria china verso Elias che ripete il messaggio una parola alla volta, concentrato. Gabriel e Noah ai lati che guardano. Sullo sfondo Mèmolo (riccio, sciarpa di sbieco) attraversa la piazza dalla parte della casetta tonda e fa un cenno breve; Stria risponde con la testa senza interrompere. Due azioni simultanee in una scena: il bambino può scoprire Mèmolo da solo."
+
+  s02_h02:
+    location: piazza_villaggio
+    location_variant: cielo_basso_inverno
+    characters_in_scene: [stria, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [scialle_stria]
+    canonical_details:
+      - "Frase-seme della storia — Gabriel: «Tu dove vai?» / Stria: «Tu cosa pensi?» (non aspetta la risposta)"
+      - "Stria alza le braccia e vola via: sagoma scura che si fa piccola nel cielo basso d'inverno"
+      - "Reference volo esistente: stria_canonica_v1_volo.jpg"
+      - "Chiusura beat — Elias: «Andiamo.»"
+    subhooks:
+      - id: s02_h02a
+        page_book: 3
+        text_split_marker: "Gabriel le chiese"
+        image_status: TBD
+        note: "Il volo. I tre fratelli di spalle / tre quarti col naso in su, fermi in piazza; la sagoma scura di Stria in volo che si fa piccola nel cielo basso e chiaro d'inverno. Tanto cielo, terra in basso: la composizione lascia respiro in alto. Il distacco tra chi resta a terra e chi vola."
+
+  s02_h03:
+    location: via_che_sale
+    location_variant: asciutta_inverno_terso
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Contrasto deliberato con s01: stessa via, oggi asciutta, niente nebbia, si vede dove finisce il sentiero e oltre"
+      - "Cardo isolato (path_detail via_che_sale, 'orologio del sentiero'): ciglio est, tratto medio, cresce solo da una crepa nella terra, secco e dorato. Nessuno dei tre lo nomina: lo vedono e tirano avanti"
+      - "Vento Taglio attivo (wind_active s02): passa alto, al Villaggio non si sente, qui sì"
+      - "Il cardo torna in 3 storie con stati stagionali diversi: continuità visiva da preservare"
+    subhooks:
+      - id: s02_h03a
+        page_book: 4
+        text_split_marker: "La Via che Sale era asciutta"
+        image_status: TBD
+        note: "La salita tersa: i tre in fila sulla via asciutta, visibilità lunga fino in fondo al sentiero (eco e contrasto con s01_h03a, stessa via nella nebbia). In primo piano sul ciglio est il cardo secco e dorato che spunta dalla crepa: dettaglio-uovo-di-pasqua che il bambino impara a riconoscere, i tre non lo guardano."
+      - id: s02_h03b
+        page_book: 5
+        text_split_marker: "Il Vento Taglio passava alto"
+        image_status: TBD
+        note: "Pagina respiro, quasi-muta: il Vento Taglio reso visibile in alto (erba dei cigli piegata, nuvole stirate, linee d'aria nella parte alta della composizione), i tre piccoli in basso che salgono. Prima apparizione attiva di Taglio nella storia: semina la folata che a h07 incresperà la pozza."
+
+  s02_h04:
+    location: pozza_abbeveratoio_pastori
+    location_variant: inverno_ghiaccio_appena_sgelato
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "La pozza: conca riparata a metà cammino, d'estate abbeveratoio delle capre dei Pastori, d'inverno coperta di ghiaccio e foglie marce. Oggi il ghiaccio è andato via durante la notte: acqua ferma, lucida"
+      - "VINCOLO PAGE-TURN: in questa pagina i riflessi dei tre NON si vedono. L'acqua può riflettere solo cielo/nulla da questa angolazione. La rivelazione è alla pagina dopo (spread h05)"
+      - "I tre si chinano per bere: il gesto resta sospeso a fine pagina"
+    subhooks:
+      - id: s02_h04a
+        page_book: 6
+        text_split_marker: "A metà cammino"
+        image_status: TBD
+        note: "La scoperta: vista dal sentiero sulla conca riparata, la pozza in fondo che brilla ferma e lucida, sgombra di ghiaccio. I tre che scendono / si avvicinano e si chinano per bere, visti di lato o di tre quarti da dietro. NIENTE riflessi visibili: la pagina termina sul gesto del chinarsi — il page-turn fa la rivelazione."
+
+  s02_h05:
+    location: pozza_abbeveratoio_pastori
+    location_variant: bordo_mezzogiorno_specchio
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "SCENA CHIAVE della storia: i tre si vedono nella pozza, ma non come si vedono di solito"
+      - "Riflesso Gabriel: bocca tirata, dura, da qualcuno più grande"
+      - "Riflesso Elias: piccolissimo, schiacciato in mezzo, Gabriel e Noah nel riflesso paiono più grandi di quanto sono"
+      - "Riflesso Noah: fermo (lui non è mai fermo), braccia lungo i fianchi, occhi spalancati"
+      - "I riflessi sono un filo più scuri dei volti veri. Più rigidi"
+      - "DOUBLE SPREAD: 1 sotto-hook su 2 pagine libro (immagine che attraversa lo spread)"
+    subhooks:
+      - id: s02_h05a
+        page_book: [7, 8]
+        text_split_marker: "E si videro"
+        image_status: TBD
+        layout: double_spread
+        note: "SPREAD. Vista obliqua dall'alto sulla pozza che attraversa le due pagine. Sopra: i tre chinati fianco a fianco sul bordo, veri. Sotto, nell'acqua: i tre riflessi SBAGLIATI — Gabriel con bocca dura da adulto, Elias minuscolo schiacciato tra due figure più grandi del vero, Noah immobile a braccia lungo i fianchi e occhi spalancati. Riflessi un filo più scuri e più rigidi dei corpi veri. Immagine-confronto: il bambino legge le differenze sopra/sotto da solo, senza adulto."
+
+  s02_h06:
+    location: pozza_abbeveratoio_pastori
+    location_variant: bordo_mezzogiorno
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "La lite: Noah dice una cosa, Gabriel risponde male, Elias dice «smettete» ma nessuno lo sente. Voci alte, gesti scomposti, un minuto, due"
+      - "Poi il silenzio: Elias si china, tocca l'acqua col dito, ritrae la mano"
+      - "Frase canonica Elias (detta basso): «Voi siete grandi davvero.» Nessuno gli risponde"
+      - "Contrasto emotivo voluto tra i due subhook: caos → quiete"
+    subhooks:
+      - id: s02_h06a
+        page_book: 9
+        text_split_marker: "Cominciarono a litigare"
+        image_status: TBD
+        note: "La lite sopra l'acqua: bocche aperte, gesti scomposti, corpi che si fronteggiano sul bordo. Possibile doppio livello: i riflessi distorti sotto che litigano anche loro (un filo più esagerati dei corpi veri). Energia e disordine — la pagina più mossa della storia."
+      - id: s02_h06b
+        page_book: 10
+        text_split_marker: "Poi Elias si zittì"
+        image_status: TBD
+        note: "Il silenzio dopo il caos: Elias accovacciato al bordo, il dito che tocca l'acqua (o appena ritratto, primo cerchio minimo sulla superficie), Gabriel e Noah dietro, zitti, ancora irrigiditi dalla lite. Intimità e quiete: «Voi siete grandi davvero.» La composizione stringe su Elias."
+
+  s02_h07:
+    location: pozza_abbeveratoio_pastori
+    location_variant: superficie_cerchi
+    characters_in_scene: [noah]
+    characters_offscreen_or_distant: [gabriel, elias]
+    objects_in_scene: []
+    canonical_details:
+      - "CALLBACK cb_s02_001 (da s01): il bastoncino raccolto da Noah in cammino sui Pascoli cade qui nella pozza. Continuità visiva: stesso tipo di legnetto visto in s01"
+      - "Gesto-firma di Noah: «Non lo lanciò: lo lasciò cadere»"
+      - "I cerchi argentei si allargano e dentro, per un secondo, ci sono solo pezzi di nuvole"
+      - "Folata bassa di Vento Taglio: la pozza si copre di pieghe piccole, i riflessi non tornano subito (raccoglie la semina di h03b)"
+      - "Inquadratura canonica del grafo per h07: solo Noah / il gesto. Gabriel ed Elias fuori campo o ai margini"
+    subhooks:
+      - id: s02_h07a
+        page_book: 11
+        text_split_marker: "Noah aveva ancora il bastoncino"
+        image_status: TBD
+        note: "Primo piano sul gesto: la mano di Noah che si apre, il bastoncino che tocca l'acqua, i cerchi argentei concentrici che si allargano e frantumano i riflessi — dentro i cerchi solo pezzi di nuvole. Niente volti interi: la scena è la mano, il legnetto, l'acqua. Il bastoncino è lo stesso tipo di legnetto di s01 (callback visivo)."
+      - id: s02_h07b
+        page_book: 12
+        text_split_marker: "Una folata di Vento Taglio"
+        image_status: TBD
+        note: "Quasi-muta: la superficie intera coperta di pieghe piccole sotto la folata bassa di Taglio, i riflessi assenti/spezzati. I tre eventualmente solo come presenze sfocate o ombre ai bordi dell'inquadratura. La pozza come protagonista: il vento che si vede solo attraverso l'acqua."
+
+  s02_h08:
+    location: pozza_abbeveratoio_pastori
+    location_variant: bordo_primo_pomeriggio
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "La pozza si calma. Le immagini tornano ma diverse: Gabriel ha di nuovo la sua faccia, Elias non è più piccolissimo, Noah non è più fermo"
+      - "ECO COMPOSITIVA: stessa inquadratura dello spread h05, ma con i riflessi finalmente fedeli — il bambino confronta con lo spread di prima"
+      - "Il bastoncino galleggia qualche secondo, si inclina, sparisce sotto: SEMINA seed_oggetto_fantasma_congelato (il bastoncino resta nella pozza — tornerà)"
+      - "I tre si rialzano"
+    subhooks:
+      - id: s02_h08a
+        page_book: 13
+        text_split_marker: "Restarono lì"
+        image_status: TBD
+        note: "Eco speculare di h05: stessa angolazione obliqua sulla pozza (formato singola pagina), i tre accovacciati in silenzio e sotto i riflessi GIUSTI — fedeli, della stessa tonalità dei corpi veri. Quiete riconquistata. Il bambino che ha visto lo spread riconosce l'inquadratura e nota la differenza."
+      - id: s02_h08b
+        page_book: 14
+        text_split_marker: "Il bastoncino galleggiò"
+        image_status: TBD
+        note: "Quasi-muta, primo piano basso sull'acqua: il bastoncino che galleggia inclinandosi, un attimo prima di sparire sotto. Ai margini o sullo sfondo i tre che si rialzano. È l'addio al prop di s01 — e la semina dell'oggetto-fantasma: resta nella pozza. Piccolo momento malinconico e pulito."
+
+  s02_h09:
+    location: radura_dei_pini
+    location_variant: margine_radura_alta
+    characters_in_scene: [pastori, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "I Pastori: entità collettiva, sfondo costante delle storie, MAI individuati (vincolo grafo). In immagine: figure/sagome collettive, niente volti caratterizzati, fedeli alla scheda collettivo"
+      - "Due si fermano per qualche secondo. Il bastone scende a terra: TIK-TIK-TIIK (onomatopea — possibile resa tipografica nel lettering)"
+      - "I fratelli alzano una mano (saluto sobrio, eco del gesto Camminante s01)"
+      - "Elias dice il messaggio: le due frasi, esatte come Stria gliele aveva fatte ripetere. Chiusura dell'arco di Elias: quello che nella pozza si vedeva piccolo compie la missione con la voce"
+      - "I Pastori ascoltano, fanno un cenno. «Era fatto.»"
+    subhooks:
+      - id: s02_h09a
+        page_book: 15
+        text_split_marker: "Salirono ai Pastori"
+        image_status: TBD
+        note: "L'arrivo: margine della radura alta, due Pastori fermi come figure distanti/controluce (sagome collettive, non individuate), il bastone che tocca terra — TIK-TIK-TIIK. I tre fratelli in basso che alzano una mano. Distanza rispettosa tra i due gruppi: il saluto dell'isola."
+      - id: s02_h09b
+        page_book: 16
+        text_split_marker: "Elias disse il messaggio"
+        image_status: TBD
+        note: "La pagina di Elias: lui mezzo passo avanti rispetto ai fratelli, dritto, che dice le due frasi esatte. I Pastori che ascoltano (sagome, cenno appena accennato). Inquadratura che dà a Elias il centro: il riscatto visivo di chi nella pozza si vedeva schiacciato in mezzo. Gabriel e Noah un passo dietro, presenti ma in secondo piano."
+
+  s02_h10:
+    location: pozza_abbeveratoio_pastori
+    location_variant: sera_piatta_dura
+    characters_in_scene: [gabriel, elias, noah, bru]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Cornice s02_c2 (cameo): Bru (tassino) fermo sul bordo della Foresta, occhi neri verso i fratelli, non si avvicina e non si allontana, li segue con lo sguardo per quattro o cinque metri, poi si volta. Pre-installa Bru"
+      - "Bru appare SOLO nel subhook a (il passaggio al margine Foresta sulla via del ritorno)"
+      - "Reference esistente perfetta: bru_canonica_v1_silenzio_ascolto.jpg"
+      - "Subhook b: la pozza al sole basso, superficie di nuovo piatta, dura. «Non guardarono dentro» — chiusura"
+      - "Eco strutturale con s01_h10b: chiusura su un esterno che continua a vivere"
+    subhooks:
+      - id: s02_h10a
+        page_book: 17
+        text_split_marker: "Tornarono giù prima di sera"
+        image_status: TBD
+        note: "Il ritorno, luce che cala: i tre che passano lungo il margine della Foresta Intrecciata; Bru seduto fermo al bordo, piccolo, gli occhi neri che li seguono. Nessuna interazione: lui non si muove, loro camminano. Il bambino scopre il cucciolo che custodisce — seconda presenza silenziosa della giornata."
+      - id: s02_h10b
+        page_book: 18
+        text_split_marker: "Quando i tre passarono accanto alla pozza"
+        image_status: TBD
+        note: "Chiusura quasi-muta: la pozza al sole basso, superficie piatta e dura come metallo spento, e i tre di spalle che le passano OLTRE senza voltarsi, verso casa. «Non guardarono dentro» — lo dice l'immagine. Sotto quella superficie, invisibile, resta il bastoncino."
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - location: pozza_abbeveratoio_pastori
+    note: "MANCA prompt_grok.md — da creare. La pozza è location di 6 hook su 10 in s02. Servono 4 stati di superficie: specchio fermo (h04-h05), increspata da Taglio (h07b), calma ricomposta (h08), piatta e dura al sole basso (h10b)"
+    priority: high
+  - location: radura_dei_pini
+    note: "MANCA prompt_grok.md — da creare per h09 (margine radura alta, incontro Pastori)"
+    priority: high
+  - character: pastori
+    note: "Scheda collettivo provvisoria senza indicazioni visive — per h09 servono indicazioni minime per sagome collettive mai individuate (specie miste, bastoni)"
+    priority: high
+  - location: via_che_sale
+    note: "Aggiungi variante 'asciutta inverno terso' (contrasto con nebbia s01) e verifica che il cardo isolato (ciglio est, tratto medio, secco dorato) sia nel prompt_grok come dettaglio fisso — è l'orologio del sentiero, torna in 3 storie"
+    priority: medium
+  - location: piazza_villaggio
+    note: "Aggiungi variante 'mattino inverno, cielo basso' (h01-h02)"
+    priority: low
+  - object: scialle_stria
+    note: "Scheda stub — definire lana cenere (gioco col piumaggio dell'airone cenerino) per coerenza h01-h02"
+    priority: medium
