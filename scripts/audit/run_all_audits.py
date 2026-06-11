@@ -4,7 +4,7 @@ run_all_audits.py — Esegue gli audit 1..4 in sequenza e aggrega l'esito.
 
 Uso:
     python3 scripts/audit/run_all_audits.py
-    python3 scripts/audit/run_all_audits.py --fast   # salta audit_4 (prosa)
+    python3 scripts/audit/run_all_audits.py --fast   # salta solo audit_4 (prosa)
 
 Convenzione: exit 0 = tutti PASS, exit 1 = almeno un FAIL.
 L'agente blocca la pipeline se l'esito è FAIL (vedi scripts/audit/README.md).
@@ -21,7 +21,8 @@ AUDITS = [
     "audit_1_integrity.py",
     "audit_2_schema.py",
     "audit_3_navigability.py",
-    "audit_4_drift.py",
+    "audit_4_drift.py",      # prosa (saltato con --fast)
+    "audit_5_timeline.py",   # ordine temporale semi/callback/quote
 ]
 
 
@@ -31,7 +32,7 @@ def main() -> int:
                     help="salta audit_4 (drift prosa)")
     args = ap.parse_args()
 
-    audits = AUDITS[:3] if args.fast else AUDITS
+    audits = [a for a in AUDITS if not (args.fast and a == "audit_4_drift.py")]
     results: list[tuple[str, int]] = []
     for name in audits:
         print()

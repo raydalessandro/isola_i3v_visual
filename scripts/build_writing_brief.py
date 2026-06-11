@@ -235,6 +235,141 @@ def build_core(s: dict) -> str:
     return "".join(out)
 
 
+def build_stato_mondo(g: dict, sid: str) -> str:
+    """Sezione 2-bis — STATO DEL MONDO all'inizio di sNN.
+
+    Proiezione derivata piegando il grafo da s01 a s(N-1): nessuno stato
+    mantenuto altrove, il grafo resta l'unica fonte (sola lettura). Dà a chi
+    scrive la continuity senza dover rileggere le storie precedenti:
+    semi attivi/da fiorire/chiusi, callback già spesi, chi ha già debuttato
+    e chi debutta QUI, luoghi già visitati. (Branch timeline-worldstate;
+    la coerenza temporale di questi dati è blindata da audit_5.)
+    """
+    order = lambda x: int(x[1:])
+    n = order(sid)
+    stories = g.get("stories", {})
+    seeds = g.get("seeds", {})
+    cbs = g.get("callbacks", {})
+
+    out = [f"\n---\n\n## §2-bis. STATO DEL MONDO ALL'INIZIO DI {sid.upper()}\n\n"]
+    out.append("> Derivato dal grafo (s01 → s" + f"{n-1:02d}" + "). Vincolante per la "
+               "continuity: non ri-fiorire semi chiusi, non trattare i debutti "
+               "come personaggi già noti, non ri-spendere callback già fatti.\n\n")
+
+    if n == 1:
+        out.append("**Mondo vergine.** Prima storia della saga: nessun seme "
+                   "attivo, nessun personaggio già apparso, nessun callback "
+                   "disponibile. Ogni elemento introdotto qui è un debutto.\n")
+        return "".join(out)
+
+    def as_list(v):
+        return v if isinstance(v, list) else ([v] if v else [])
+
+    def short(txt, lim=110):
+        txt = (txt or "").strip().replace("\n", " ")
+        return txt if len(txt) <= lim else txt[: lim - 1] + "…"
+
+    # --- semi -------------------------------------------------------------
+    attivi, fioriscono_qui, maturano_qui, chiusi = [], [], [], []
+    for seed_id, sd in seeds.items():
+        o = sd.get("origin_story")
+        if not o or o not in stories or order(o) >= n:
+            continue  # nati qui o dopo: non sono "mondo precedente"
+        b = sd.get("bloomed_in_story")
+        if b and b in stories and order(b) < n:
+            chiusi.append((seed_id, b))
+            continue
+        riga = f"- `{seed_id}` (da {o}): {short(sd.get('description'))}"
+        vc = sd.get("voice_constraint")
+        if vc:
+            riga += f" — voce: `{vc}`"
+        bt = as_list(sd.get("bloom_target_stories"))
+        if sid in bt:
+            fioriscono_qui.append(riga + f" — **TARGET FIORITURA: QUI**")
+        elif sid in as_list(sd.get("maturing_planned_stories")):
+            maturano_qui.append(riga + " — *maturazione prevista qui*")
+        else:
+            attivi.append(riga + (f" (target: {', '.join(bt)})" if bt else ""))
+
+    if fioriscono_qui:
+        out.append(f"**Semi che il piano fa FIORIRE in {sid}** "
+                   f"({len(fioriscono_qui)}):\n" + "\n".join(fioriscono_qui) + "\n\n")
+    if maturano_qui:
+        out.append(f"**Semi in maturazione prevista QUI** "
+                   f"({len(maturano_qui)}):\n" + "\n".join(maturano_qui) + "\n\n")
+    if attivi:
+        out.append(f"**Altri semi attivi sullo sfondo** ({len(attivi)}) — "
+                   "vivi, non forzarne la fioritura:\n" + "\n".join(attivi) + "\n\n")
+    if chiusi:
+        righe = ", ".join(f"`{s_}`→{b_}" for s_, b_ in sorted(chiusi, key=lambda x: x[1]))
+        out.append(f"**Semi GIÀ FIORITI (chiusi)** ({len(chiusi)}) — eco "
+                   f"ammessa, MAI ri-fiorire: {righe}\n\n")
+
+    # --- callback già spesi -------------------------------------------------
+    spesi = [(cid, cb) for cid, cb in cbs.items()
+             if cb.get("registered_in_story") in stories
+             and order(cb["registered_in_story"]) < n]
+    if spesi:
+        elementi = sorted({cb.get("element", cid) for cid, cb in spesi})
+        out.append(f"**Callback già spesi nelle storie precedenti** "
+                   f"({len(spesi)}) — non ripeterli come se fossero nuovi: "
+                   + ", ".join(f"`{e}`" for e in elementi) + "\n\n")
+
+    # --- debutti ------------------------------------------------------------
+    def chars_of(story):
+        out_ = []
+        for f in ("characters_in_scene", "characters_offscreen_or_background"):
+            for x in as_list(story.get(f)):
+                cid = x if isinstance(x, str) else x.get("id")
+                if cid:
+                    out_.append(cid)
+        return out_
+
+    visti = set()
+    for prev in sorted(stories):
+        if order(prev) >= n:
+            continue
+        visti.update(chars_of(stories[prev]))
+    qui = chars_of(stories.get(sid, {}))
+    debutti = [c for c in dict.fromkeys(qui) if c not in visti]
+    if debutti:
+        out.append(f"**DEBUTTI in {sid}** — prima apparizione assoluta, vanno "
+                   "presentati, non dati per noti: "
+                   + ", ".join(f"`{c}`" for c in debutti) + "\n\n")
+    gia = [c for c in dict.fromkeys(qui) if c in visti]
+    if gia:
+        out.append(f"**Già apparsi prima** ({len(gia)}): "
+                   + ", ".join(f"`{c}`" for c in gia) + "\n\n")
+
+    # --- luoghi -------------------------------------------------------------
+    def locs_of(story):
+        out_ = []
+        lp = story.get("location_primary")
+        for x in as_list(lp) + as_list(story.get("locations_secondary")):
+            lid = x if isinstance(x, str) else x.get("id")
+            if lid:
+                out_.append(lid)
+        return out_
+
+    visitati = set()
+    for prev in sorted(stories):
+        if order(prev) >= n:
+            continue
+        visitati.update(locs_of(stories[prev]))
+    qui_loc = list(dict.fromkeys(locs_of(stories.get(sid, {}))))
+    nuovi = [l for l in qui_loc if l not in visitati]
+    if nuovi:
+        out.append("**Luoghi mai visti prima nella saga**: "
+                   + ", ".join(f"`{l}`" for l in nuovi)
+                   + " — la prima descrizione li fonda.\n")
+    noti = [l for l in qui_loc if l in visitati]
+    if noti:
+        out.append("**Luoghi già visitati** (il lettore li conosce): "
+                   + ", ".join(f"`{l}`" for l in noti) + "\n")
+
+    return "".join(out)
+
+
 def build_narrazione_fattuale(repo_root: Path, sid: str) -> str:
     nf = load_narrazione_fattuale(repo_root, sid)
     out = "\n---\n\n## §3. NARRAZIONE FATTUALE (referente di verità)\n\n"
@@ -1075,6 +1210,7 @@ def build_brief(repo_root: Path, sid: str) -> str:
     parts = []
     parts.append(build_frontmatter(g, sid, s))
     parts.append(build_core(s))
+    parts.append(build_stato_mondo(g, sid))
     parts.append(build_narrazione_fattuale(repo_root, sid))
     parts.append(build_hooks(s))
     parts.append(build_cast_in_scena(repo_root, g, s, sid, narr))
