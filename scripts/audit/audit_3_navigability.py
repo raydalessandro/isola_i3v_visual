@@ -56,12 +56,13 @@ VISUAL_LUOGHI = REPO / "visual" / "luoghi"
 VISUAL_COLLETTIVI = REPO / "visual" / "personaggi" / "collettivi"
 KNOWN_ISSUES = Path(__file__).resolve().parent / "_data" / "known_issues.yaml"
 
-VALID_QUADRANTS = {
-    "aria_nord", "acqua_sud", "fuoco_est", "terra_ovest", "centro",
-    # valori osservati nel grafo v1.2.0 — confermati come canone esteso:
-    "acqua_nord", "tutti",
-}
-STORY_IDS = tuple(f"s{i:02d}" for i in range(1, 13))
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # scripts/
+import saga_canon  # noqa: E402  (canone normativo: saga_config.yaml)
+_C = saga_canon.load(Path(__file__).resolve().parents[2])
+
+VALID_QUADRANTS = _C.quadrants
+STORY_IDS = _C.story_ids
 SEED_FIELDS = ("seeds_planted", "seeds_picked_up",
                "seeds_maturing_here", "seeds_bloomed_here")
 

@@ -77,22 +77,18 @@ GRAPH = REPO / 'pipeline_narrativa' / 'story_graph.json'
 BACKUP = REPO / 'pipeline_narrativa' / 'story_graph.json.pre_fase_g.backup.json'
 PROPOSALS_DIR = REPO / 'pipeline_narrativa' / 'hooks_proposals'
 
-VALID_TYPES = {
-    'panorama', 'azione', 'introspettivo', 'atmosferico',
-    'transizione', 'interno', 'dettaglio',
-}
-VALID_COMPOSITION_ZONES = {
-    'sky_space', 'fog_space', 'ground_space', 'side_space',
-    'vignette', 'corner_lower_left', 'corner_lower_right',
-}
-VALID_PROVENANCE = {'original_v1', 'extended_v2'}
-HOOK_ID_RE = re.compile(r'^s(\d{2})_h(\d{2})$')
+# Enum e vincoli: dal canone normativo (saga_config.yaml via saga_canon).
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))  # scripts/
+import saga_canon  # noqa: E402
+_C = saga_canon.load(Path(__file__).resolve().parent.parent)
 
-REQUIRED_FIELDS = (
-    'hook_id', 'type', 'is_signature', 'provenance', 'moment',
-    'location', 'characters_present', 'focal_action', 'atmosphere',
-    'palette', 'composition_zone',
-)
+VALID_TYPES = _C.hooks.types
+VALID_COMPOSITION_ZONES = _C.hooks.composition_zones
+VALID_PROVENANCE = _C.hooks.provenance
+HOOK_ID_RE = _C.hooks.id_re
+REQUIRED_FIELDS = _C.hooks.required_fields
+FOCAL_ACTION_MAX_WORDS = _C.hooks.focal_action_max_words
 
 CYCLE_TO_STORIES = {
     'A': ['s01', 's02', 's03'],
@@ -242,9 +238,9 @@ def validate_hooks(story_id: str, hooks: list, graph: dict) -> None:
         # non prosa autoriale; il prompt-immagine finale viene montato altrove
         # con grafo + Bible + catalogo, qui basta che la frase sia sintetica).
         n_words = len(h['focal_action'].split())
-        if n_words > 30:
+        if n_words > FOCAL_ACTION_MAX_WORDS:
             raise ValidationError(
-                f'{prefix}: focal_action {n_words} parole > 30 (rendere piu\' neutra)'
+                f'{prefix}: focal_action {n_words} parole > {FOCAL_ACTION_MAX_WORDS} (rendere piu\' neutra)'
             )
 
     # vincoli aggregate

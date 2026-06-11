@@ -41,19 +41,23 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
 GRAPH = REPO / "pipeline_narrativa" / "story_graph.json"
-BACKUP_GLOBS = (
-    "story_graph.*.backup.json",
-    "story_graph.json.*.backup.json",
-)
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parents[1]))  # scripts/
+import saga_canon  # noqa: E402  (canone normativo: saga_config.yaml)
+_C = saga_canon.load(Path(__file__).resolve().parents[2])
+
+BACKUP_GLOBS = _C.graph.backup_globs
 MANIFEST = Path(__file__).resolve().parent / "_data" / "backup_manifest.sha256"
 
-EXPECTED_SCHEMA = "1.4"
-EXPECTED_GRAPH = "1.2.0"
+# Versioni attese: dal canone (saga_config.yaml → graph.expected_*).
+# Bump autorizzato = aggiornare il config, non questo file.
+EXPECTED_SCHEMA = _C.graph.expected_schema
+EXPECTED_GRAPH = _C.graph.expected_graph
 REQUIRED_ROOT_KEYS = (
     "schema_version", "graph_version", "last_updated", "entities",
     "stories", "quote_tracker", "world_conventions", "migration_log",
 )
-STORY_IDS = tuple(f"s{i:02d}" for i in range(1, 13))
+STORY_IDS = _C.story_ids
 ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}")
 
 errors: list[str] = []
@@ -124,10 +128,10 @@ def check_root(g: dict) -> None:
     gv = g.get("graph_version")
     if str(sv) != EXPECTED_SCHEMA:
         err(f"schema_version {sv!r} != atteso {EXPECTED_SCHEMA!r} "
-            f"(se il bump è autorizzato, aggiorna EXPECTED_SCHEMA in questo audit)")
+            f"(se il bump è autorizzato, aggiorna graph.expected_schema in saga_config.yaml)")
     if str(gv) != EXPECTED_GRAPH:
         err(f"graph_version {gv!r} != atteso {EXPECTED_GRAPH!r} "
-            f"(se il bump è autorizzato, aggiorna EXPECTED_GRAPH in questo audit)")
+            f"(se il bump è autorizzato, aggiorna graph.expected_graph in saga_config.yaml)")
 
     lu = g.get("last_updated", "")
     if not isinstance(lu, str) or not ISO_DATE_RE.match(lu):
