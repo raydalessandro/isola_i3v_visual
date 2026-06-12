@@ -30,7 +30,9 @@ caratteristica. Mai sospeso nel nulla, mai sfondi inventati.}}
 
 Reference da allegare: immagini canoniche del catalogo
 (`visual/<categoria>/<id>/immagini/`, preferire `_hd/`) per il personaggio
-E per il luogo.
+E per il luogo. **In ogni nuova chat di generazione le reference si
+ri-allegano sempre; una chat per batch, mai proseguire in sessioni sature**
+(il generatore deriva verso le proprie ultime uscite).
 
 ## BLOCCO 3 — Composizione (dal template della variante assegnata)
 
@@ -38,6 +40,13 @@ Incollare il blocco "FULL-PAGE COMPOSITION" da
 `template/variante_{{X}}.md`. Definisce: dove sta il soggetto, dove resta
 lo spazio quieto DIEGETICO (cielo, nebbia, muro, prato — mai carta vuota
 incollata), divieto assoluto di testo, formato verticale min 1748×2480.
+
+## BLOCCO 4 — CHARACTER CONSISTENCY (fisso, chiude il prompt)
+
+Incollare **identico** il blocco da `skills/scenografo/SKILL.md` §2-bis
+(fonte normativa unica). Vale per ogni tavola con personaggi nominati;
+per soggetti singoli le righe sugli altri personaggi sono inerti.
+Prototipo completo: `fiamma_prompt_manus.md`.
 
 ---
 

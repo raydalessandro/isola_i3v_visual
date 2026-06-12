@@ -10,7 +10,7 @@ order: 60
 
 > Per **istanze IA** (es. Manus) o **collaboratori** che si connettono alla repo `isola_i3v_visual` per **generare le illustrazioni di scena** del libro: una immagine per ogni subhook (pagina libro fisica) delle storie.
 >
-> Versione: 1.0 — 2026-06-11. Formalizza il metodo già validato sulle 17 scene di s01: nessuna deduzione necessaria, ogni blocco del prompt ha una fonte precisa in repo.
+> Versione: 1.1 — 2026-06-12 (v1.0 + STORY MOMENT, blocco CHARACTER CONSISTENCY nel prompt, regola sessione fresca — lezioni del primo batch s02). Formalizza il metodo già validato sulle 17 scene di s01: nessuna deduzione necessaria, ogni blocco del prompt ha una fonte precisa in repo.
 >
 > **Confine con `skills/illustratore/SKILL.md`:** questa skill copre la **composizione del prompt e la generazione**; la **consegna** dei file (naming, `_hd/`, branch, PR) segue l'illustratore. Leggere entrambe.
 
@@ -43,17 +43,49 @@ Le immagini di scena **non** sono reference catalogo (quelle vivono in `visual/<
 | # | Blocco | Fonte in repo | Cosa prendere |
 |---|---|---|---|
 | 1 | **STILE** (fisso per tutta la saga) | `_visual_pipeline/_canone/01_SAGA_STYLESHEET_v1.md` | Il blocco STYLESHEET integrale, incluso il NEGATIVE. Incollato identico in ogni prompt. Mai modificarlo. |
-| 2 | **SCENA** (cosa succede in questa pagina) | `_annotations/sNN.yaml` → hook → `location` + `location_variant` + `canonical_details` + subhook → `note` | La `note` del subhook è il cuore: beat, azione focale, inquadratura, atmosfera, vincoli. I `canonical_details` dell'hook danno frasi-codice, dettagli Tier A, vincoli di continuità. |
+| 2 | **SCENA** (cosa succede in questa pagina) | `_annotations/sNN.yaml` → hook → `location` + `location_variant` + `canonical_details` + subhook → `note` **+ testo della pagina** (`storie_finali/sNN_*.md`, tra i marker del subhook) | La `note` del subhook è il cuore: beat, azione focale, inquadratura, atmosfera, vincoli. Il testo della pagina è contesto per l'agente (tono, dettagli, relazioni spaziali): si distilla nello **STORY MOMENT** (§2-bis), mai incollato grezzo nel prompt. I `canonical_details` dell'hook danno frasi-codice, dettagli Tier A, vincoli di continuità. |
 | 3 | **CAST** (chi è in scena, com'è fatto) | `visual/personaggi/.../<id>/scheda.md` per ogni id in `characters_in_scene` | Tratti fisici, abbigliamento-firma, **scale GU** (proporzioni: es. Gabriel 1.0, Elias 0.85, Noah 0.65 — esplicitare sempre "Gabriel is the tallest, Noah is the smallest"). |
 | 4 | **LUOGO** (firme ambientali) | `visual/luoghi/.../<location_id>/prompt_grok.md` | Le firme architettoniche/paesaggistiche della veduta più vicina alla `location_variant` richiesta. Se la variante non esiste nel prompt del luogo, usare la veduta base + descrivere la variante dai `canonical_details`. |
 | 5 | **REFERENCE VISIVE** (ancore di coerenza) | `visual/.../immagini/<id>_canonica_v1_<vista>.jpg` | Passare i path delle canoniche di OGNI personaggio in scena (fronte o vista più pertinente) e, se utile, del luogo. Sono le ancore per volti, colori, vestiti. |
 
 **Regola di non-duplicazione:** le note YAML non ripetono stile né tratti fisici — è voluto. Se una nota sembra "incompleta" su questi punti, i blocchi 1/3/4 la completano. Non colmare con conoscenza propria.
 
+## 2-bis. STORY MOMENT e blocco CHARACTER CONSISTENCY
+
+**STORY MOMENT** — apre il blocco SCENA nel prompt: 1-2 frasi in inglese,
+distillate dal testo della pagina e dalla `note`. Devono contenere: azione
+in corso, emozione dominante, **relazioni spaziali esplicite** (chi è dove
+rispetto a cosa: "walking ALONG the path, single file, following its
+direction", "kneeling AT THE EDGE of the pool"). Mai incollare il testo
+italiano grezzo: il generatore pesa male la prosa lunga e gli elementi non
+visivi contaminano la scena.
+
+**CHARACTER CONSISTENCY** — blocco fisso, incollato **identico** in coda a
+ogni prompt (dopo il blocco LUOGO). È la versione permanente del rinforzo
+che finora si faceva a voce nella chat di generazione: i vincoli vivono nel
+prompt-file, mai solo nella conversazione.
+
+```
+CHARACTER CONSISTENCY — the attached reference images are BINDING, not
+inspiration. Match them exactly for every named character: face shape and
+proportions, hair color and cut, eye color, build, skin tone. Signature
+neckerchiefs by name: Gabriel purple, Elias yellow, Noah light
+turquoise-blue — never swapped, never missing, never replaced by scarves.
+Relative heights per the GU scale (Gabriel tallest, Noah smallest).
+Clothing follows the character sheets unless the subhook note explicitly
+says otherwise.
+```
+
+> Fonte normativa del blocco: questa sezione. Il template delle
+> tavole-atlante (`visual/atlante/prompt/_TEMPLATE_prompt_manus.md`) lo
+> incolla da qui. Candidato a promozione in `_visual_pipeline/_canone/`
+> come documento proprio: decisione di Ray.
+
 ---
 
 ## 3. Workflow operativo
 
+0. Apri una chat di generazione **nuova** per la storia e ri-allega le reference (regola §4 "Sessione fresca").
 1. Leggi `_annotations/sNN.yaml` della storia assegnata.
 2. Per ogni hook in ordine, per ogni subhook con `image_status: TBD`:
    a. assembla i 5 blocchi (tabella §2) nell'ordine 1→2→3→4 + reference (5) come input immagine;
@@ -70,6 +102,7 @@ Le immagini di scena **non** sono reference catalogo (quelle vivono in `visual/<
 
 - **Scale GU sempre nel prompt** quando ci sono più personaggi: il modello tende a uniformare le altezze.
 - **Reference = ancore, non suggerimenti:** se l'immagine generata diverge dalla canonica (colore vestito, forma orecchie, bandana), si rigenera.
+- **Sessione di generazione fresca:** una chat di generazione NUOVA per ogni storia (o batch), con le reference ri-allegate all'inizio. Mai proseguire un batch in una chat che ha già generato molte immagini: il generatore deriva verso le proprie ultime uscite e i vincoli iniziali si diluiscono col contesto.
 - **Vincoli di pagina prima di tutto:** i `canonical_details` marcati come VINCOLO (page-turn, apparizioni rimandate, presenze solo-in-un-subhook) prevalgono su qualsiasi scelta compositiva.
 - **Onomatopee e lettering** (TIK-TIK-TIIK, TUM-tum-TUM): l'immagine NON contiene testo. NO text, NO lettering, NO signs, NO written words, NO captions, NO labels in nessuna parte della scena — insegne, cartelli e qualsiasi parola scritta sono aggiunti dal compositore libro. Vale per ogni lingua e per qualunque elemento riconducibile a scrittura.
 - **Quiet zone alta:** vincolo compositivo dello stylesheet (sezione PAGE COMPOSITION), vale per ogni scena. Il ~25-30% superiore del frame deve restare quieto e a basso dettaglio per ospitare il testo della pagina libro. Le note subhook possono indicare COSA mettere nella fascia alta — cielo, nebbia, chiome alte, parete liscia — mai cosa metterci di importante (volti, azioni, oggetti firma).
@@ -115,6 +148,9 @@ Output: `_scene/s02/s02_h05a.jpg` + `_scene/s02/_hd/s02_h05a_hd.jpg`.
 - [ ] Naming esatto `sNN_hMMx` (+ `_hd` solo dentro `_hd/`)
 - [ ] HD: ≥1824×2736 px verticale 2:3, JPG q95, sRGB, metadato DPI a 300
 - [ ] Personaggi conformi alle canoniche **da ogni angolazione** (volti, capelli, vestiti, scale GU — incluso pose di spalle/profilo)
+- [ ] Blocco CHARACTER CONSISTENCY presente, identico, in coda a ogni prompt (§2-bis)
+- [ ] STORY MOMENT presente: azione + emozione + relazioni spaziali esplicite, in inglese
+- [ ] Chat di generazione nuova per questo batch, reference ri-allegate
 - [ ] Vincoli di pagina rispettati (page-turn, apparizioni, presenze per-subhook)
 - [ ] Quiet zone alta rispettata: ~25-30% superiore del frame senza dettagli importanti (cielo / nebbia / parete)
 - [ ] Nessun testo, lettering, insegna o parola scritta nell'immagine
