@@ -9,7 +9,7 @@
 ## TL;DR (in 60 secondi)
 
 1. **§0 PRIMA DI TUTTO**: classifica ogni file in uno dei 3 contesti (sotto). Sbagliare contesto = rilavorazione + disallineamento canone.
-2. **Formato:** JPEG qualità 95, RGB profilo sRGB, min 1664×2496 px (verticale).
+2. **Formato:** JPEG qualità 95, RGB profilo sRGB, min **1824×2736 px** verticale 2:3, metadato DPI = 300.
 3. **Dove:** SEMPRE in una subdir `_hd/`, MAI nella cartella padre. **MAI sostituire i low-res esistenti.**
 4. **Branch:** una branch per scope coerente (es. `claude/hd-storia-s02`, `claude/hd-intro-v02`, `claude/hd-catalogo-primari`). Mai pushare su `main`.
 5. **Commit:** **un solo commit** per branch, messaggio descrittivo. NO 34 commit atomici "Aggiunge X / Rimuove Y".
@@ -117,10 +117,10 @@ Esempio: `visual/personaggi/individuali/primari/fiamma/immagini/_hd/fiamma_canon
 | Formato | **JPEG** (estensione `.jpg`, MAI `.jpeg` con due caratteri) |
 | Qualità JPEG | **95** (encoder Grok/Imagine/Photoshop) |
 | Profilo colore | **sRGB** (RGB, NO CMYK — la conversione è dello stampatore) |
-| Risoluzione minima | **1664×2496 px** per orientamento verticale (formato libro tipico) |
+| Risoluzione minima | **1824×2736 px** verticale 2:3 (calcolata sul fit di `build_volume.py`: A5+bleed = 1824×2556 a 300 DPI, l'immagine 2:3 minima che copre è 1824×2736). Standard precedente 1664×2496 accettato per s01 v1. |
 | Risoluzione ideale | **2000×3000 px** o superiore (margine per ridimensionamento stampa) |
 | Peso file tipico | 300-700 KB per pagina, fino a ~1 MB se molto dettagliata |
-| Metadata DPI | irrilevante (lo stampatore ricalcola da pixel + dimensione fisica) |
+| Metadata DPI | **impostare a 300** (informativo per lo stampatore; il rendering del compositore usa pixel + dimensione fisica) |
 
 **Naming:**
 - Sempre **lowercase** (`fiamma_hd.jpg`, mai `Fiamma_HD.JPG`)
@@ -225,7 +225,7 @@ Prima del merge in `main`, verifica:
 1. **§0 Classificazione contesto** — per OGNI file: è un ritratto? → catalogo (1c). È una scena? → _scene/ (1a). È un decoro specifico volume? → _volumi/ (1b). Se hai dubbio anche solo per UN file → chiedi a Ray prima del merge. **Sbagliare il contesto è il bug più comune e crea disallineamento canone difficile da recuperare.**
 2. **Path corretto** — file in `_hd/` del contesto giusto
 3. **Naming corretto** — `<id>_hd.jpg` lowercase snake_case
-4. **Formato corretto** — JPEG q95, RGB sRGB, ≥1664×2496 px
+4. **Formato corretto** — JPEG q95, RGB sRGB, ≥1824×2736 px verticale 2:3, metadato DPI = 300
 5. **Diff pulito** — solo file aggiunti, nessuna modifica accidentale a low-res o `.md`
 6. **Commit pulito** — un solo commit con messaggio standard
 7. **Nessuna contaminazione** — niente codice app web, niente file fuori scope

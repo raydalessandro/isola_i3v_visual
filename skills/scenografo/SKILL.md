@@ -13,7 +13,7 @@
 1. **Fonte scena = `pipeline_narrativa/storie_finali/_annotations/sNN.yaml`** — un blocco `subhooks` per ogni pagina libro, con la `note` che è il blocco-scena del prompt. NON dedurre le scene dal testo o dai writing_briefs: le annotations sono la ground truth.
 2. **Il prompt è la somma di 5 blocchi**, ognuno con la sua fonte (tabella §2). Lo scenografo li assembla, non li inventa.
 3. **Reference visive obbligatorie** per ogni personaggio in scena: le immagini canoniche del catalogo come ancore (§4).
-4. **Output:** sempre **verticale**, low-res 832×1248 reference + HD 1664×2496 JPG q95 sRGB. Naming deterministico `sNN_hMMx` (§5). Anche per gli spread: il compositore libro gestisce il layout, l'immagine resta verticale.
+4. **Output:** sempre **verticale 2:3**, low-res 832×1248 reference + HD ≥1824×2736 JPG q95 sRGB (metadato DPI 300). Naming deterministico `sNN_hMMx` (§5). Anche per gli spread: il compositore libro gestisce il layout, l'immagine resta verticale.
 5. **Mai inventare** dettagli non presenti nelle fonti. Se un'entità non ha prompt_grok o scheda visiva, **fermarsi e segnalare**, non improvvisare.
 
 ---
@@ -63,9 +63,11 @@ Le immagini di scena **non** sono reference catalogo (quelle vivono in `visual/<
 - **Scale GU sempre nel prompt** quando ci sono più personaggi: il modello tende a uniformare le altezze.
 - **Reference = ancore, non suggerimenti:** se l'immagine generata diverge dalla canonica (colore vestito, forma orecchie, bandana), si rigenera.
 - **Vincoli di pagina prima di tutto:** i `canonical_details` marcati come VINCOLO (page-turn, apparizioni rimandate, presenze solo-in-un-subhook) prevalgono su qualsiasi scelta compositiva.
-- **Onomatopee e lettering** (TIK-TIK-TIIK, TUM-tum-TUM): l'immagine NON contiene testo. Le rese tipografiche sono del compositore libro.
+- **Onomatopee e lettering** (TIK-TIK-TIIK, TUM-tum-TUM): l'immagine NON contiene testo. NO text, NO lettering, NO signs, NO written words, NO captions, NO labels in nessuna parte della scena — insegne, cartelli e qualsiasi parola scritta sono aggiunti dal compositore libro. Vale per ogni lingua e per qualunque elemento riconducibile a scrittura.
+- **Quiet zone alta:** vincolo compositivo dello stylesheet (sezione PAGE COMPOSITION), vale per ogni scena. Il ~25-30% superiore del frame deve restare quieto e a basso dettaglio per ospitare il testo della pagina libro. Le note subhook possono indicare COSA mettere nella fascia alta — cielo, nebbia, chiome alte, parete liscia — mai cosa metterci di importante (volti, azioni, oggetti firma).
 - **Mai inventare contenuto narrativo o visivo** (regola repo, `CLAUDE.md` §TL;DR punto 8). Entità senza scheda/prompt → segnalare a Ray (issue o nota PR), non improvvisare.
 - **Cammei e presenze di sfondo** (Mèmolo che passa, Bru nel quadrato di buio, collettivi mai individuati): seguire alla lettera la nota — figure piccole, volti non protagonisti, fedeli ai vincoli dei collettivi (`visual/personaggi/collettivi/*/prompt_grok.md`).
+- **Coerenza a 360°:** le reference canoniche valgono da ogni angolazione. Nelle pose di spalle o di profilo, capelli (taglio e colore), colori e forme dei vestiti, oggetti-firma e proporzioni GU devono restare conformi alle canoniche frontali. Per le pose di spalle, esplicitare nel prompt i dettagli visibili da dietro ricavati dalla scheda (es. colore fazzoletto annodato sulla nuca, forma della sciarpa); in assenza di reference di retro, le canoniche frontali restano l'ancora per colori e proporzioni.
 
 ---
 
@@ -73,8 +75,10 @@ Le immagini di scena **non** sono reference catalogo (quelle vivono in `visual/<
 
 ```
 pipeline_narrativa/storie_finali/_scene/sNN/sNN_hMMx.jpg          ← low-res 832×1248
-pipeline_narrativa/storie_finali/_scene/sNN/_hd/sNN_hMMx_hd.jpg   ← HD 1664×2496, JPG q95, sRGB
+pipeline_narrativa/storie_finali/_scene/sNN/_hd/sNN_hMMx_hd.jpg   ← HD ≥1824×2736 verticale 2:3, JPG q95 sRGB, DPI metadata 300
 ```
+
+Lo standard precedente 1664×2496 resta valido per le scene già consegnate di s01 (v1); dal 2026-06 nuovo minimo 1824×2736 — copre 300 DPI effettivi sul fit reale del compositore (A5 + bleed 3.175 mm in `scripts/build_volume.py`).
 
 - `x` = lettera subhook (`a`, `b`, `c`, ...). Mai altri suffissi.
 - **Formato sempre verticale 2:3**, anche per i subhook con `@layout double_spread`: il compositore (`scripts/build_volume.py`) impagina lo spread affiancando l'immagine alla pagina di testo. Non generare immagini a doppia larghezza salvo richiesta esplicita di Ray.
@@ -101,7 +105,9 @@ Output: `_scene/s02/s02_h05a.jpg` + `_scene/s02/_hd/s02_h05a_hd.jpg`.
 
 - [ ] Ogni file ha il suo subhook in `_annotations/sNN.yaml` e nel testo storia
 - [ ] Naming esatto `sNN_hMMx` (+ `_hd` solo dentro `_hd/`)
-- [ ] HD: 1664×2496 minimo, JPG q95, sRGB, verticale
-- [ ] Personaggi conformi alle canoniche (volti, vestiti, scale)
+- [ ] HD: ≥1824×2736 px verticale 2:3, JPG q95, sRGB, metadato DPI a 300
+- [ ] Personaggi conformi alle canoniche **da ogni angolazione** (volti, capelli, vestiti, scale GU — incluso pose di spalle/profilo)
 - [ ] Vincoli di pagina rispettati (page-turn, apparizioni, presenze per-subhook)
+- [ ] Quiet zone alta rispettata: ~25-30% superiore del frame senza dettagli importanti (cielo / nebbia / parete)
+- [ ] Nessun testo, lettering, insegna o parola scritta nell'immagine
 - [ ] Branch solo-immagini, un commit, PR aperta, attesa OK Ray

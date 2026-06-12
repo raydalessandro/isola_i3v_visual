@@ -49,7 +49,7 @@ isola_i3v_visual/
 │   ├── storie_finali/sNN_<slug>.md   12 testi prosa DEFINITIVI con frontmatter YAML + marker @hook (narrativo, 1..10) + marker @subhook (pagina libro fisica, 1..book_pages_total) machine-readable, consumati da scripts/build_volume.py (compositore PDF KDP, attivo dal 2026-06-08; vedi storie_finali/README.md)
 │   ├── storie_finali/_annotations/   YAML autoriali Ray (sNN.yaml) — note di scena
 │   ├── storie_finali/_inventory/     inventari testuali derivati (audit/QA prosa)
-│   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg low-res, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Subdir `_hd/sNN_hMMx_hd.jpg` per versione HD stampa (JPG q95, ≥1664×2496 px). NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
+│   ├── storie_finali/_scene/sNN/     immagini-scena composte per pagina libro fisica (sNN_hMMx.jpg low-res, x ∈ {a,b,c,...}), referenziate dal marker @subhook ... @image. Subdir `_hd/sNN_hMMx_hd.jpg` per versione HD stampa (JPG q95 sRGB, ≥1824×2736 px, DPI metadata 300; vedi sezione 9). NON sono reference catalogo (quelle stanno in visual/<categoria>/<id>/immagini/)
 │   ├── storie_finali/_volumi/        cornice editoriale 4 volumi (3 storie/volume, 1:1 con cicli A/B/C/D): soglia, introduzioni_cicli, stato_zero_e_sigilli, presentazione_completa, presentazioni_parziali, porte, congedo + _elementi_fissi/ (riferimenti read-only) + v0N/_hd/v0N_intro_<slug>_hd.jpg per illustrazioni HD intro volume. Marker ## VOLUME N interni per compositore libro
 │   └── documenti_progetto/           Bible, Carta Voce, ARCHI, Glossario, EAR, Pattern AI da bandire
 │
@@ -553,7 +553,7 @@ Le immagini per **stampa del libro** convivono con i reference digitali low-res 
 
 ```
 <cartella canonica>/<id>.jpg          ← LOW-RES reference digitale (browsing, catalogo web)
-<cartella canonica>/_hd/<id>_hd.jpg   ← HD per stampa (JPG q95, ≥1664×2496 px)
+<cartella canonica>/_hd/<id>_hd.jpg   ← HD per stampa (JPG q95, ≥1824×2736 px, DPI metadata 300)
 ```
 
 I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositore libro `scripts/build_volume.py` (attivo dal 2026-06-08, in attivo affinamento) cerca prima `_hd/<id>_hd.jpg`, fallback su low-res.
@@ -570,9 +570,11 @@ I marker `@image` nei file `.md` puntano SEMPRE al low-res. Lo script compositor
 
 - **Formato:** JPEG (estensione `.jpg`), qualità 95
 - **Profilo colore:** RGB sRGB (la conversione CMYK è dello stampatore)
-- **Risoluzione minima:** 1664×2496 px verticale (ideale 2000×3000 px)
+- **Risoluzione minima:** **1824×2736 px** verticale 2:3 — calcolata sul fit reale di `scripts/build_volume.py` (pagina al vivo A5 + bleed 3.175 mm = 1824×2556 px a 300 DPI, l'immagine 2:3 più piccola che copre quel rettangolo è 1824×2736). Ideale 2000×3000 px o superiore.
+- **DPI metadata:** **impostare il metadato DPI del JPEG a 300** (informativo per lo stampatore; il rendering del compositore usa pixel + dimensione fisica)
 - **Peso file:** 300-700 KB tipico, fino a ~1 MB
 - **Naming:** lowercase, snake_case, suffisso obbligatorio `_hd`, mai `.jpeg`/`.JPG`/spazi/maiuscole
+- **Standard precedente:** 1664×2496 accettato per le scene di s01 consegnate a 2026-05 (resta valido come v1); dal 2026-06 nuovo minimo 1824×2736.
 
 ### Workflow upload (per illustratore — IA o umano)
 
