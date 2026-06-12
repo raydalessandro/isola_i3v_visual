@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "descrizione": "Spec dell'Atlante degli Abitanti in stile taccuino del naturalista. La verità sta qui: lo script di montaggio (scripts/build_volume.py) legge questo file e rende le pagine in modo puramente meccanico. Le tavole sono immagini full-page SENZA TESTO generate con Manus; il testo (eyebrow, nome, trafiletto, firma) viene sovrapposto dalla pipeline nelle zone definite dalla variante.",
+  "coordinate": "Tutte le zone sono in frazioni normalizzate [0,1] della pagina al vivo (TX_W=1748 x TX_H=2480 px, A5 300 DPI). x,y = angolo alto-sinistra; w,h = dimensioni. La zona 'figura' indica al prompt Manus DOVE concentrare soggetto e vignette: il complemento resta carta quieta per il testo.",
+  "qualita_tavole": {
+    "min_w": 1748,
+    "min_h": 2480,
+    "formato": "JPEG q95, RGB sRGB, verticale, proporzione ~A5 (il render fa cover-fit con crop centrale)",
+    "vincolo": "Nessun testo, lettera, numero o pseudo-scrittura in nessun punto della tavola."
+  },
+  "ritmo": {
+    "ciclo": [
+      "A",
+      "C",
+      "B",
+      "D"
+    ],
+    "regola": "Il ciclo si applica alle sole voci di tipo 'tavola', nell'ordine in cui compaiono nel volume. Mai due varianti uguali consecutive. Le assegnazioni esplicite qui sotto sono la verità; il ciclo documenta solo il criterio con cui sono state generate."
+  },
+  "varianti": {
+    "A": {
+      "nome": "riva",
+      "descrizione": "Testo in colonna a sinistra, figura principale e vignette a destra. Ingresso classico dell'atlante.",
+      "fs_corpo": 44,
+      "zone": {
+        "eyebrow": {
+          "x": 0.085,
+          "y": 0.06,
+          "w": null,
+          "h": null
+        },
+        "nome": {
+          "x": 0.085,
+          "y": 0.092,
+          "w": 0.5,
+          "h": null
+        },
+        "corpo": {
+          "x": 0.085,
+          "y": 0.21,
+          "w": 0.46,
+          "h": 0.62
+        },
+        "firma": {
+          "x": 0.5,
+          "y": 0.905,
+          "w": null,
+          "h": null
+        },
+        "figura": {
+          "x": 0.555,
+          "y": 0.055,
+          "w": 0.405,
+          "h": 0.8
+        }
+      }
+    },
+    "B": {
+      "nome": "controriva",
+      "descrizione": "Specchio di A: figura a sinistra, testo in colonna a destra. Cambio di passo a metà galleria.",
+      "fs_corpo": 44,
+      "zone": {
+        "eyebrow": {
+          "x": 0.455,
+          "y": 0.06,
+          "w": null,
+          "h": null
+        },
+        "nome": {
+          "x": 0.455,
+          "y": 0.092,
+          "w": 0.5,
+          "h": null
+        },
+        "corpo": {
+          "x": 0.455,
+          "y": 0.21,
+          "w": 0.46,
+          "h": 0.62
+        },
+        "firma": {
+          "x": 0.5,
+          "y": 0.905,
+          "w": null,
+          "h": null
+        },
+        "figura": {
+          "x": 0.04,
+          "y": 0.055,
+          "w": 0.405,
+          "h": 0.8
+        }
+      }
+    },
+    "C": {
+      "nome": "radura",
+      "descrizione": "Figura e vignette nella metà alta, testo in fascia piena nella metà bassa. Respiro orizzontale.",
+      "fs_corpo": 38,
+      "zone": {
+        "eyebrow": {
+          "x": 0.085,
+          "y": 0.555,
+          "w": null,
+          "h": null
+        },
+        "nome": {
+          "x": 0.085,
+          "y": 0.585,
+          "w": 0.6,
+          "h": null
+        },
+        "corpo": {
+          "x": 0.085,
+          "y": 0.672,
+          "w": 0.83,
+          "h": 0.205
+        },
+        "firma": {
+          "x": 0.5,
+          "y": 0.91,
+          "w": null,
+          "h": null
+        },
+        "figura": {
+          "x": 0.04,
+          "y": 0.045,
+          "w": 0.92,
+          "h": 0.48
+        }
+      }
+    },
+    "D": {
+      "nome": "cielo alto",
+      "descrizione": "Testo in fascia piena in alto, figura e vignette nella metà bassa. Specchio verticale di C.",
+      "fs_corpo": 38,
+      "zone": {
+        "eyebrow": {
+          "x": 0.085,
+          "y": 0.058,
+          "w": null,
+          "h": null
+        },
+        "nome": {
+          "x": 0.085,
+          "y": 0.088,
+          "w": 0.6,
+          "h": null
+        },
+        "corpo": {
+          "x": 0.085,
+          "y": 0.178,
+          "w": 0.83,
+          "h": 0.205
+        },
+        "firma": {
+          "x": 0.5,
+          "y": 0.91,
+          "w": null,
+          "h": null
+        },
+        "figura": {
+          "x": 0.04,
+          "y": 0.43,
+          "w": 0.92,
+          "h": 0.44
+        }
+      }
+    }
+  },
+  "voci": [
+    {
+      "titolo": "Questa è l'isola",
+      "slug": "questa_l_isola",
+      "volume": 1,
+      "tipo": "mappa",
+      "variante": null,
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": "Doppia fissa: resta la mappa cartografica, nessuna tavola naturalistica."
+    },
+    {
+      "titolo": "Il Villaggio",
+      "slug": "il_villaggio",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Il Quartiere di Fuoco",
+      "slug": "il_quartiere_di_fuoco",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "C",
+      "tavola": null,
+      "quartiere": "fuoco",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Il Quartiere d'Aria",
+      "slug": "il_quartiere_d_aria",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "B",
+      "tavola": null,
+      "quartiere": "aria",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Fiamma",
+      "slug": "fiamma",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "D",
+      "tavola": null,
+      "quartiere": "fuoco",
+      "binomio": null,
+      "note": "Prototipo: primo prompt Manus in prompt/fiamma_prompt_manus.md."
+    },
+    {
+      "titolo": "Grunto",
+      "slug": "grunto",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "aria",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Rovo e Bru",
+      "slug": "rovo_bru",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "C",
+      "tavola": null,
+      "quartiere": "terra",
+      "binomio": null,
+      "note": "Tavola a due soggetti: coerenza Rovo/Bru tra vignette da verificare in selezione."
+    },
+    {
+      "titolo": "Stria",
+      "slug": "stria",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "B",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": "HOLD reference HD in volo: per la tavola usare posa a terra (vedi canone)."
+    },
+    {
+      "titolo": "Mèmolo e Pun",
+      "slug": "memolo_pun",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "D",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "I bambini dell'isola",
+      "slug": "i_bambini_dell_isola",
+      "volume": 1,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": "Soggetti umani multipli: la voce più fragile per coerenza, prevedere più tentativi."
+    },
+    {
+      "titolo": "Il Quartiere di Terra",
+      "slug": "il_quartiere_di_terra",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "terra",
+      "binomio": null,
+      "note": "Trafiletto più lungo dell'atlante (656 caratteri): variante a colonna obbligata."
+    },
+    {
+      "titolo": "Il Quartiere d'Acqua",
+      "slug": "il_quartiere_d_acqua",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "C",
+      "tavola": null,
+      "quartiere": "acqua",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Nodo",
+      "slug": "nodo",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "B",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Salvia",
+      "slug": "salvia",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "D",
+      "tavola": null,
+      "quartiere": "terra",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Zolla",
+      "slug": "zolla",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "terra",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Il Mercato del Mezzogiorno",
+      "slug": "il_mercato_del_mezzogiorno",
+      "volume": 2,
+      "tipo": "tavola",
+      "variante": "C",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "Bartolo e Toba",
+      "slug": "bartolo_toba",
+      "volume": 3,
+      "tipo": "tavola",
+      "variante": "A",
+      "tavola": null,
+      "quartiere": "centro",
+      "binomio": null,
+      "note": null
+    },
+    {
+      "titolo": "I Pastori",
+      "slug": "i_pastori",
+      "volume": 4,
+      "tipo": "tavola",
+      "variante": "C",
+      "tavola": null,
+      "quartiere": "aria",
+      "binomio": null,
+      "note": "Variante diversa dal vol.3 per chi colleziona i 4 volumi."
+    }
+  ]
+}

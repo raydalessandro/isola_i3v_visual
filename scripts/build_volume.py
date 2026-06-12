@@ -38,6 +38,7 @@ from __future__ import annotations
 
 import argparse
 import io
+import json
 import logging
 import re
 import sys
@@ -815,6 +816,233 @@ def make_presentazione_page(
     return canvas
 
 # ═══════════════════════════════════════════════════════════════════════════
+# RENDERING — PAGINA ATLANTE A TAVOLA (taccuino del naturalista)
+# ═══════════════════════════════════════════════════════════════════════════
+# Le tavole sono immagini full-page SENZA TESTO (visual/atlante/tavole/),
+# generate con Manus lasciando quiete le zone definite in ATLANTE_SPEC.json.
+# Il testo viene sovrapposto qui, in modo puramente meccanico, leggendo
+# la variante di layout assegnata alla voce. Design-back from the answer:
+# la verità sta nello spec, non nel prompt.
+
+ATLANTE_DIR  = REPO / "visual/atlante"
+ATLANTE_SPEC = ATLANTE_DIR / "ATLANTE_SPEC.json"
+ATL_MIN_W, ATL_MIN_H = TX_W, TX_H        # la tavola È la pagina: min full-bleed trim
+
+_atlante_spec_cache: dict | None = None
+
+
+def load_atlante_spec(force: bool = False) -> dict | None:
+    """Carica e cache-a ATLANTE_SPEC.json. None se il file non esiste."""
+    global _atlante_spec_cache
+    if _atlante_spec_cache is not None and not force:
+        return _atlante_spec_cache
+    if not ATLANTE_SPEC.exists():
+        return None
+    _atlante_spec_cache = json.loads(ATLANTE_SPEC.read_text(encoding="utf-8"))
+    return _atlante_spec_cache
+
+
+def atlante_entry_for(title: str) -> tuple[dict, Path] | None:
+    """
+    Se la voce ha una tavola pronta nello spec, ritorna (voce, path_tavola).
+    Altrimenti None → il chiamante cade sul layout classico (degradazione
+    dolce: il volume si monta sempre, con o senza tavole).
+    """
+    spec = load_atlante_spec()
+    if spec is None:
+        return None
+    slug = _title_to_slug(title)
+    for voce in spec.get("voci", []):
+        if voce.get("slug") != slug:
+            continue
+        if voce.get("tipo") != "tavola" or not voce.get("tavola"):
+            return None
+        p = REPO / voce["tavola"]
+        if not p.exists():
+            log.warning("Tavola atlante dichiarata ma assente: %s", p)
+            return None
+        return voce, p
+    return None
+
+
+def check_tavola_quality(path: Path) -> tuple[bool, str]:
+    """Qualità minima tavola atlante: pagina intera verticale (TX_W×TX_H)."""
+    if not path.exists():
+        return False, "FILE NON TROVATO"
+    try:
+        img = Image.open(path)
+        w, h = img.size
+        if w >= ATL_MIN_W and h >= ATL_MIN_H and h >= w:
+            return True, f"{w}×{h}px ✓"
+        return False, f"{w}×{h}px — sotto spec ({ATL_MIN_W}×{ATL_MIN_H} richiesti, verticale)"
+    except (OSError, IOError) as exc:
+        return False, f"ERRORE LETTURA: {exc}"
+
+
+def _cover_fit(img: Image.Image, w: int, h: int) -> Image.Image:
+    """Riempie w×h preservando le proporzioni (crop centrale dell'eccesso)."""
+    sw, sh = img.size
+    scale = max(w / sw, h / sh)
+    nw, nh = max(w, int(round(sw * scale))), max(h, int(round(sh * scale)))
+    img = img.resize((nw, nh), Image.LANCZOS)
+    x0 = (nw - w) // 2
+    y0 = (nh - h) // 2
+    return img.crop((x0, y0, x0 + w, y0 + h))
+
+
+def _quiet_zone(canvas: Image.Image, box: tuple[int, int, int, int],
+                strength: float = 0.42) -> Image.Image:
+    """
+    Schiarita dolce e sfumata della zona testo (stessa tecnica DODGE delle
+    pagine storia): garantisce leggibilità anche se la tavola ha macchie,
+    senza box né bordi netti.
+    """
+    mask = Image.new("L", canvas.size, 0)
+    md = ImageDraw.Draw(mask)
+    md.rectangle(list(box), fill=255)
+    mask = mask.filter(ImageFilter.GaussianBlur(int(canvas.width * 0.025)))
+    paper = Image.new("RGB", canvas.size, DS.PAPER)
+    lightened = Image.blend(canvas, paper, strength)
+    return Image.composite(lightened, canvas, mask)
+
+
+def make_atlante_plate_page(
+    title: str,
+    text: str,
+    plate_path: Path,
+    volume: int = 1,
+    variante_id: str = "A",
+    kind: str = "personaggio",
+    binomio: str | None = None,
+    layout_warnings: list | None = None,
+) -> Image.Image:
+    """
+    Pagina-atlante a tavola naturalistica full-page.
+    La tavola (senza testo) fa da fondo; eyebrow, nome+glifo, trafiletto con
+    capolettera e firma vengono disegnati nelle zone della variante assegnata
+    (ATLANTE_SPEC.json). Stesso linguaggio tipografico della pagina classica.
+    """
+    spec = load_atlante_spec()
+    var  = spec["varianti"][variante_id]
+    Z    = var["zone"]
+    vento    = _quartiere_color_for(title)
+    slug     = _title_to_slug(title)
+    motifs   = DS.MOTIF_MAP.get(slug, DS.DEFAULT_MOTIFS)
+    glifo_fn = DS.GLIFO_VENTO.get(VOLUME_CONFIG[volume]["ciclo"], DS.glifo_mulinello)
+
+    def zx(z): return int(Z[z]["x"] * TX_W)
+    def zy(z): return int(Z[z]["y"] * TX_H)
+    def zw(z): return int((Z[z]["w"] or 0) * TX_W)
+    def zh(z): return int((Z[z]["h"] or 0) * TX_H)
+
+    # ── Tavola di fondo: cover-fit + controllo qualità + velo del vento ───
+    illus = Image.open(plate_path).convert("RGB")
+    ok, quality_desc = check_tavola_quality(plate_path)
+    canvas = _cover_fit(illus, TX_W, TX_H)
+    if not ok:
+        canvas = add_quality_banner(canvas, plate_path, quality_desc)
+        log.warning("Tavola sotto spec per '%s': %s", title, quality_desc)
+        if layout_warnings is not None:
+            layout_warnings.append({
+                "entry": f"[TAVOLA SOTTO SPEC] {title}",
+                "troncato_dopo": "", "testo_tagliato": "",
+                "suggerimento": (
+                    f'Sostituire tavola per "{title}" con versione HD '
+                    f"(min {ATL_MIN_W}×{ATL_MIN_H}px verticale). "
+                    f"File attuale: {plate_path.name} ({quality_desc})"
+                ),
+            })
+    canvas = Image.blend(canvas, Image.new("RGB", (TX_W, TX_H), vento), 0.03)
+
+    # ── Zone quiete sotto i blocchi di testo ──────────────────────────────
+    fs     = int(var["fs_corpo"])
+    LH     = int(fs * 1.55)
+    head_box = (zx("eyebrow") - int(TX_W*0.02), zy("eyebrow") - int(TX_H*0.012),
+                zx("nome") + zw("nome") + int(TX_W*0.10),
+                zy("nome") + int(TX_W*0.066) + int(TX_H*0.022))
+    corpo_box = (zx("corpo") - int(TX_W*0.02), zy("corpo") - int(TX_H*0.012),
+                 zx("corpo") + zw("corpo") + int(TX_W*0.02),
+                 zy("corpo") + zh("corpo") + int(TX_H*0.012))
+    canvas = _quiet_zone(canvas, head_box)
+    canvas = _quiet_zone(canvas, corpo_box)
+    draw = ImageDraw.Draw(canvas)
+
+    # ── Eyebrow ───────────────────────────────────────────────────────────
+    f_eye = DS.font_weighted("sans", int(FS_SMALL*0.82), 700)
+    eyebrow = "UN ABITANTE DELL'ISOLA" if kind == "personaggio" else "UN LUOGO DELL'ISOLA"
+    ex, ey = zx("eyebrow"), zy("eyebrow")
+    for ch in eyebrow:
+        draw.text((ex, ey), ch, font=f_eye, fill=vento)
+        ex += draw.textlength(ch, font=f_eye) + 4
+
+    # ── Nome + glifo-vento (+ binomio se canonizzato) ─────────────────────
+    nx, ny = zx("nome"), zy("nome")
+    f_name = DS.font_weighted("display", int(TX_W*0.066), 450)
+    draw.text((nx, ny), title, font=f_name, fill=DS.INK)
+    name_w = draw.textlength(title, font=f_name)
+    glifo_fn(draw, int(nx + name_w + TX_W*0.040), int(ny + TX_W*0.030),
+             int(TX_W*0.018), vento, max(2, TX_W//500))
+    if binomio:
+        f_bin = fnt(int(fs*0.82), italic=True)
+        draw.text((nx + int(TX_W*0.004), ny + int(TX_W*0.074)),
+                  binomio, font=f_bin, fill=DS.tint_color(DS.INK, 0.25))
+
+    # ── Corpo con capolettera nel colore-vento ────────────────────────────
+    cx, cy, cw, chh = zx("corpo"), zy("corpo"), zw("corpo"), zh("corpo")
+    f_body = fnt(fs)
+    f_drop = DS.font_weighted("display", int(fs*2.05), 500)
+    first, rest = text[0], text[1:]
+    draw.text((cx, cy - int(fs*0.10)), first, font=f_drop, fill=vento)
+    indent = int(draw.textlength(first, font=f_drop) + TX_W*0.010)
+
+    words = rest.strip().split()
+    lines: list[tuple[str, int, int]] = []
+    yy, line_no, i = cy, 0, 0
+    max_y = cy + chh
+    while i < len(words) and yy + LH <= max_y:
+        xoff = indent if line_no < 2 else 0
+        w_av = cw - xoff
+        cur = ""
+        while i < len(words):
+            t = (cur + " " + words[i]).strip()
+            if draw.textlength(t, font=f_body) <= w_av:
+                cur = t; i += 1
+            else:
+                break
+        if not cur:
+            cur = words[i]; i += 1
+        lines.append((cur, cx + xoff, yy)); yy += LH; line_no += 1
+
+    if i < len(words) and layout_warnings is not None:
+        remainder = " ".join(words[i:]).strip()
+        if remainder:
+            layout_warnings.append({
+                "entry": title,
+                "troncato_dopo": (lines[-1][0][-60:] if lines else ""),
+                "testo_tagliato": remainder,
+                "suggerimento": (
+                    f'Variante {variante_id} stretta per "{title}": accorciare il '
+                    f"trafiletto di ~{len(remainder.split())} parole in "
+                    f"presentazioni_parziali.md o cambiare variante in ATLANTE_SPEC.json"
+                ),
+            })
+
+    for ln, x_at, ly in lines:
+        draw.text((x_at, ly), ln, font=f_body, fill=DS.INK)
+
+    # ── Firma: oggetto + glifo + separatore camuno ────────────────────────
+    fy = zy("firma")
+    obj_motif = motifs[-1] if motifs else None
+    if obj_motif:
+        obj_motif(draw, int(TX_W*0.42), fy, int(TX_W*0.026), vento)
+    glifo_fn(draw, int(TX_W*0.58), fy, int(TX_W*0.020), vento, max(2, TX_W//500))
+    DS.separatore_camuno(draw, TX_W//2 - int(TX_W*0.14), TX_W//2 + int(TX_W*0.14),
+                         fy + int(TX_H*0.030), DS.tint_color(vento, 0.35),
+                         max(2, TX_W//560))
+
+    return canvas
+
+# ═══════════════════════════════════════════════════════════════════════════
 # RENDERING — PAGINA STORIA (illustrata)
 # ═══════════════════════════════════════════════════════════════════════════
 
@@ -1484,6 +1712,7 @@ def build_volume_pages(
     posizione_pres:    Literal["prima", "dopo"] = "dopo",
     dedica:            str = DEDICA_DEFAULT,
     map_path:          Path | None = None,
+    usa_atlante:       bool = True,
 ) -> tuple[list[tuple[str, Image.Image]], list[dict]]:
     """
     Costruisce la sequenza completa di pagine del volume.
@@ -1525,6 +1754,19 @@ def build_volume_pages(
                   "il quartiere d'aria", "il quartiere di terra",
                   "il quartiere d'acqua", "il mercato del mezzogiorno"}
         for t, body in entries:
+            kind = "luogo" if t.lower() in luoghi else "personaggio"
+            # Tavola naturalistica (visual/atlante/) se pronta nello spec;
+            # altrimenti layout classico — degradazione dolce.
+            atl = atlante_entry_for(t) if usa_atlante else None
+            if atl is not None:
+                voce, tavola = atl
+                print(f"    · {t}: tavola atlante ({voce['variante']})")
+                pages.append(("single", make_atlante_plate_page(
+                    t, body, tavola, volume=volume,
+                    variante_id=voce["variante"], kind=kind,
+                    binomio=voce.get("binomio"),
+                    layout_warnings=layout_warnings)))
+                continue
             img = find_presentazione_image(t, image_map)
             # Promozione HD: se è un path low-res nel catalogo, prendi la HD
             # da _hd/<stem>_hd.jpg quando disponibile. Stesso pattern degli
@@ -1532,7 +1774,6 @@ def build_volume_pages(
             # nei warning di qualità (basta la low-res come riferimento).
             if img is not None:
                 img = resolve_scene_image(img)
-            kind = "luogo" if t.lower() in luoghi else "personaggio"
             pages.append(("single", make_presentazione_page(
                 t, body, img, volume=volume, kind=kind,
                 layout_warnings=layout_warnings)))
@@ -1757,6 +1998,9 @@ def main() -> None:
     ap.add_argument("--no-front-matter", action="store_true")
     ap.add_argument("--map",            type=str, default=None,
                     help="Path mappa isola alternativa")
+    ap.add_argument("--atlante",        choices=["auto", "off"], default="auto",
+                    help="Tavole naturalistiche atlante: auto (usa quelle pronte, "
+                         "fallback classico) o off (sempre layout classico)")
     ap.add_argument("--verbose",        action="store_true")
     args = ap.parse_args()
 
@@ -1789,6 +2033,7 @@ def main() -> None:
         posizione_pres   = args.presentazione,
         dedica           = dedica,
         map_path         = map_path,
+        usa_atlante      = (args.atlante == "auto"),
     )
 
     pfx = f"vol{vol}_pres-{args.presentazione}"

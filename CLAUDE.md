@@ -30,6 +30,7 @@ Questo file spiega come funziona la repo e dove andare per ogni tipo di lavoro. 
 | **canonizzatore** | canonizzazione completa di una scheda visual (scheda + prompt grok + descrizione social + immagini canoniche, fase F.2) | visual/ (schede della entità in lavorazione) — via flusso _visual_pipeline/ | make catalogo (dopo ogni scheda) | `skills/canonizzatore/SKILL.md` |
 | **visual** | descrizioni visive, vincoli prompt, immagini reference (famiglia visual; per la compilazione schede vedi compilatore.md) | visual/, scripts/ (tool condivisi) | make catalogo | `skills/visual/SKILL.md` |
 | **illustratore** | caricamento immagini HD per stampa nei 3 contesti (scene, intro volume, catalogo) | subdir _hd/ via branch dedicata claude/hd-* + PR (mai merge in autonomia) | — | `skills/illustratore/SKILL.md` |
+| **atlantista** | produrre le tavole-atlante full-page (prompt Manus + selezione + ingest) per le pagine abitanti/luoghi dei volumi | visual/atlante/ (tavole, prompt; spec SOLO via ingest_tavola.py) — branch claude/atlante-* | python3 scripts/ingest_tavola.py <manifest> · pytest tests/test_atlante.py | `skills/atlantista/SKILL.md` |
 | **scenografo** | comporre prompt e generare le immagini di scena (una per subhook/pagina libro) | consegna file via skill illustratore (branch claude/hd-*) | — | `skills/scenografo/SKILL.md` |
 | **cartografo** | manutenzione/estensione della cartografia tecnica (geojson, viewer, convenzioni) | cartografia/, scripts/ (tool condivisi) | — | `skills/cartografo/SKILL.md` |
 | **contributore** | collaboratore esterno che propone aggiunte/dettagli alle schede (senza permessi di modifica diretta) | contributi/ — SOLO file nuovi datati, mai modificare esistenti | — | `skills/contributore/SKILL.md` |
@@ -91,6 +92,7 @@ Principio: **non ricordare le conseguenze, rigenerale.** Tutto ciò che è deriv
 | `pipeline_narrativa/storie_finali/sNN_*.md` | `make audit` + rebuild volume quando serve (`build_volume.py`) |
 | `saga_config.yaml` (autorizzato) | bump `config_version` + `make sync` + `make audit` |
 | `skills/**` (nuova skill, scope o trigger cambiati) | `make routing` (rigenera la tabella qui sopra) |
+| `visual/atlante/` (tavole/manifest) | `ingest_tavola.py` (MAI scrivere lo spec a mano) + `pytest tests/test_atlante.py` |
 | `scripts/**` | `make check` (test + audit) |
 | `web/**` | test app (`web/`: `npm test` dove previsto) + verifica deploy |
 | `CLAUDE.md` / `docs/PIPELINE.md` | bump della versione nell'header del file toccato |
