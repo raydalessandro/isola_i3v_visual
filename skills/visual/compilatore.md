@@ -12,7 +12,7 @@ Specializzazione operativa della **skill visual**. Compila il *body* delle sched
 
 **Premessa:** prima di operare leggi:
 1. `skills/README.md` (regole comuni: isolamento `pipeline_narrativa/` read-only, comunicazione, gerarchia fonti).
-2. `skills/visual/README.md` (skill visual: struttura, schema scheda, vincoli).
+2. `skills/visual/SKILL.md` (skill visual: struttura, schema scheda, vincoli).
 3. Questo file.
 
 ---

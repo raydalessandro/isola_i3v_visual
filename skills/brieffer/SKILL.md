@@ -1,3 +1,11 @@
+---
+role: brieffer
+trigger: generare/aggiornare i writing brief delle 12 storie (operatore di estrazione, zero token)
+scope_write: "pipeline_narrativa/writing_briefs/ (solo via script)"
+commands: "make briefs"
+order: 10
+---
+
 # SKILL — Brieffer
 
 > **Per l'agente che si occupa di generare/aggiornare i writing brief della saga.**

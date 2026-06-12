@@ -1,3 +1,11 @@
+---
+role: illustratore
+trigger: caricamento immagini HD per stampa nei 3 contesti (scene, intro volume, catalogo)
+scope_write: "subdir _hd/ via branch dedicata claude/hd-* + PR (mai merge in autonomia)"
+commands: "—"
+order: 50
+---
+
 # Skill — Agente illustratore
 
 > Per **istanze IA** o **collaboratori umani** che si connettono alla repo `isola_i3v_visual` per **caricare immagini HD** (illustrazioni di scena, ritratti, intro volume) generate via Grok Imagine o altro tool.

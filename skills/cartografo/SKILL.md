@@ -1,3 +1,11 @@
+---
+role: cartografo
+trigger: manutenzione/estensione della cartografia tecnica (geojson, viewer, convenzioni)
+scope_write: "cartografia/, scripts/ (tool condivisi)"
+commands: "—"
+order: 70
+---
+
 # skill: cartografo
 
 **Scope:** manutenzione, estensione e validazione della cartografia tecnica dell'Isola.
@@ -198,7 +206,7 @@ Apri `cartografia/geo/viewer/index.html` in browser (o servire la directory con 
 **Ray:** "È arrivata S9. Ecco il nuovo story_graph.json. Verifica coerenza."
 
 **Tu:**
-1. Leggi `skills/README.md`, `skills/cartografo.md`, `cartografia/CHANGELOG.md`.
+1. Leggi `skills/README.md`, `skills/cartografo/SKILL.md`, `cartografia/CHANGELOG.md`.
 2. Diff grafo vecchio vs nuovo. Trovi storia S9 aggiunta, eventuali location nuove.
 3. Verifichi backward-compat. Se MISSING, segnali e chiedi a Ray.
 4. Se ID nuovi sono varianti di luoghi esistenti, proponi `aliases` o `children`.

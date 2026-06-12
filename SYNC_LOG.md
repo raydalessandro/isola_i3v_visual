@@ -480,3 +480,14 @@ Questo file traccia ogni modifica fatta in `isola_i3v_visual` che **impatta o po
 
 - Ray ha annunciato che a breve farà manutenzione sul grafo storie e porterà qui la versione manutenuta come **nuova baseline**. Quando arriverà, registrarla qui come entry SYNC dedicata.
 - Le entry restano come storico anche dopo essere state riflesse (mai cancellare). Cambiare solo lo stato.
+## SYNC-2026-06-12-019 — Riordino governance: CLAUDE.md router + skill a convenzione unica
+
+- **Stato:** DA_RIFLETTERE
+- **Tipo:** governance + skills
+- **Repo target:** `_starter_kit/` (il pattern router + frontmatter + make routing/sync va replicato nel template v2); archivio storico (informativo)
+- **Cambiamento:**
+  - `CLAUDE.md` v3.0: solo invariante (regole + routing + matrice di propagazione). Stato → `PROJECT_STATE.md` (snapshot puro); storia → `docs/fasi/` (FASI_COMPLETATE.md, SESSIONI_ARCHIVIO.md). Nulla perso: tutto ricollocato integrale.
+  - Skill a convenzione unica `skills/<ruolo>/SKILL.md` con frontmatter YAML (role/trigger/scope_write/commands/order). Spostate: `cartografo.md` → `cartografo/SKILL.md`, `visual/README.md` → `visual/SKILL.md`. Nuove: `canonizzatore/` (puntatore a `_visual_pipeline/`), `contributore/` (ex sezione 5 CLAUDE.md). `skills/README.md` → indice snello (regole comuni fuse nel CLAUDE.md, fonte unica).
+  - `scripts/build_routing_table.py` (idempotente, dry-run default): genera la tabella di routing nel CLAUDE.md dai frontmatter. `make routing`.
+  - `make sync` = catalogo + briefs + routing: il `git status` post-sync è il report dei disallineamenti. Matrice di propagazione nel CLAUDE.md: "non ricordare le conseguenze, rigenerale".
+- **File toccati:** CLAUDE.md, PROJECT_STATE.md, Makefile, skills/* (8 SKILL.md + README), scripts/build_routing_table.py, docs/fasi/* (2 nuovi), visual/README.md, scripts/README.md (fix riferimenti), SYNC_LOG.md (questa entry)

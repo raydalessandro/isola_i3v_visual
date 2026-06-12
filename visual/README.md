@@ -2,7 +2,7 @@
 
 Fonte unica per tutto ciò che è **visivo** nel progetto *L'Isola dei Tre Venti*: descrizioni ricche per IA generative, riferimenti per illustratori, modelli per stampa 3D, dettagli per narrativa e campagne social.
 
-**Per il workflow operativo dell'agente IA:** vedi [`skills/visual/README.md`](../skills/visual/README.md) e le sotto-skill in [`skills/visual/`](../skills/visual/) (es. `compilatore.md` per la compilazione delle schede).
+**Per il workflow operativo dell'agente IA:** vedi [`skills/visual/SKILL.md`](../skills/visual/SKILL.md) e le sotto-skill in [`skills/visual/`](../skills/visual/) (es. `skills/visual/compilatore.md` per la compilazione delle schede).
 
 ## Struttura
 
