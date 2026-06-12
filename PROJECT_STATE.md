@@ -16,7 +16,7 @@
 - **Visual / fase F.2:** in corso — 101 immagini catalogate, 15 entità canoniche complete (al 2026-06-10). 116 schede esistenti.
 - **Catalogo v2 (`web/`):** Next.js 15 su Vercel. ⚠️ TODO aperto: debug deploy fermo alle 16:23 UTC del 2026-06-10 (le PR successive non sono visibili sul sito).
 - **Standard scene v1.1 (2026-06-12, PR #22):** minimo HD **1824×2736 px** (300 DPI reali sul fit di `build_volume.py`), metadato DPI 300, coerenza reference a 360°, quiet zone alta ~25-30% per il testo di pagina, NO-TEXT rinforzato nel NEGATIVE. Fonti vive: stylesheet + skill scenografo/illustratore. Le scene s01 (1664×2496) restano valide come v1.
-- **Roadmap immediata:** cutover catalogo statico → estrazione starter kit v2 → seeding saga "Rocco e Idvara".
+- **Roadmap immediata:** cutover catalogo statico → **riordino brieffer blocchi A/B cache** (debito tecnico: `docs/TODO_BRIEFFER_CACHE_AB.md`, da chiudere prima del template) → estrazione starter kit v2 → seeding saga "Rocco e Idvara".
 
 ## Ultima sessione
 
