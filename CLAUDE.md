@@ -34,6 +34,7 @@ Questo file spiega come funziona la repo e dove andare per ogni tipo di lavoro. 
 | **scenografo** | comporre prompt e generare le immagini di scena (una per subhook/pagina libro) | consegna file via skill illustratore (branch claude/hd-*) | — | `skills/scenografo/SKILL.md` |
 | **cartografo** | manutenzione/estensione della cartografia tecnica (geojson, viewer, convenzioni) | cartografia/, scripts/ (tool condivisi) | — | `skills/cartografo/SKILL.md` |
 | **contributore** | collaboratore esterno che propone aggiunte/dettagli alle schede (senza permessi di modifica diretta) | contributi/ — SOLO file nuovi datati, mai modificare esistenti | — | `skills/contributore/SKILL.md` |
+| **manutentore** | lavoro SULLA repo — refactoring, ottimizzazioni, riordini, integrazione di pacchetti/branch, governance (non un ruolo operativo della pipeline) | trasversale ma dichiarato per intervento (perimetro scritto prima di toccare); branch claude/<scope>; MAI pipeline_narrativa/, MAI merge in autonomia | make sync · make check · make routing | `skills/manutentore/SKILL.md` |
 <!-- ROUTING:END -->
 
 **Flussi senza skill dedicata** (instradati a doc/prompt):
