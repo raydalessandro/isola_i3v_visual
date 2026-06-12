@@ -1,7 +1,7 @@
 # Makefile — entrate rapide per il tooling della repo isola_i3v_visual.
 # (blindatura 2026-06)
 
-.PHONY: help deps audit audit-fast test test-all catalogo briefs volume1 check
+.PHONY: help deps audit audit-fast test test-all catalogo briefs volume1 check routing sync
 
 help:
 	@echo "Target disponibili:"
@@ -14,6 +14,8 @@ help:
 	@echo "  make catalogo   — rigenera catalogo_web/data/entities.json"
 	@echo "  make briefs     — rigenera i 12 writing brief"
 	@echo "  make volume1    — build PDF volume 1 in _output/"
+	@echo "  make routing    — rigenera la tabella di routing nel CLAUDE.md dai frontmatter skill"
+	@echo "  make sync       — rigenera tutto il derivato (catalogo+briefs+routing); git status = report"
 
 deps:
 	python3 -m pip install -r requirements.txt -r requirements-dev.txt
@@ -40,3 +42,13 @@ briefs:
 
 volume1:
 	python3 scripts/build_volume.py --volume 1
+
+routing:
+	python3 scripts/build_routing_table.py --apply
+
+# sync: rigenera tutto il derivato. Essendo gli script idempotenti,
+# il `git status` dopo il sync mostra esattamente cosa era disallineato.
+sync: catalogo briefs routing
+	@echo ""
+	@echo "Sync completato — 'git status' mostra cosa era disallineato:"
+	@git status --short

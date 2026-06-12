@@ -1,3 +1,11 @@
+---
+role: prosa
+trigger: scrivere il testo finale di una storia in chat collaborativa con Ray, una pagina alla volta
+scope_write: "solo chat — non tocca la repo"
+commands: "—"
+order: 20
+---
+
 # SKILL — Agente Prosa
 
 > **Da incollare all'inizio di una chat del progetto "L'Isola dei Tre Venti" su Claude.ai per attivare la modalità scrittura.**

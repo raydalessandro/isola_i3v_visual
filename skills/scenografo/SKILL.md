@@ -1,3 +1,11 @@
+---
+role: scenografo
+trigger: comporre prompt e generare le immagini di scena (una per subhook/pagina libro)
+scope_write: "consegna file via skill illustratore (branch claude/hd-*)"
+commands: "—"
+order: 60
+---
+
 # Skill — Agente scenografo (generazione immagini di scena)
 
 > Per **istanze IA** (es. Manus) o **collaboratori** che si connettono alla repo `isola_i3v_visual` per **generare le illustrazioni di scena** del libro: una immagine per ogni subhook (pagina libro fisica) delle storie.

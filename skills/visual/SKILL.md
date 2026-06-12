@@ -1,3 +1,11 @@
+---
+role: visual
+trigger: descrizioni visive, vincoli prompt, immagini reference (famiglia visual; per la compilazione schede vedi compilatore.md)
+scope_write: "visual/, scripts/ (tool condivisi)"
+commands: "make catalogo"
+order: 40
+---
+
 # skill: visual
 
 **Scope:** costruisci e mantieni il **serbatoio di descrizioni visive** di tutte le entità della saga (personaggi, luoghi, oggetti, venti, visual_signatures), con immagini di riferimento per modelli generativi e per stampa 3D. La repo `visual/` è la **fonte unica** per tutto ciò che è visivo: IA generative, illustrazioni di riferimento, modelli 3D, descrizioni per narrativa e campagne social.
