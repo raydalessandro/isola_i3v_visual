@@ -50,6 +50,21 @@ Divieto assoluto di testo. Verticale, min 1748×2480.
 
 ---
 
+## BLOCCO 4 — CHARACTER CONSISTENCY (fisso)
+
+```
+CHARACTER CONSISTENCY — the attached reference images are BINDING, not
+inspiration. Match them exactly for every named character: face shape and
+proportions, hair color and cut, eye color, build, skin tone. Signature
+neckerchiefs by name: Gabriel purple, Elias yellow, Noah light
+turquoise-blue — never swapped, never missing, never replaced by scarves.
+Relative heights per the GU scale (Gabriel tallest, Noah smallest).
+Clothing follows the character sheets unless the subhook note explicitly
+says otherwise.
+```
+
+---
+
 ## Dopo la generazione
 
 1. Selezione umana con la checklist di `skills/atlantista/SKILL.md` §3.
