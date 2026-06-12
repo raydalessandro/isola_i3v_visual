@@ -36,10 +36,17 @@ watercolor wash, no harsh contrasts, no dramatic chiaroscuro. The
 overall feeling is of a serene, lived-in world — quiet, dignified, 
 slightly nostalgic but contemporary.
 
+PAGE COMPOSITION (for story-scene images): keep the upper ~25-30% of the 
+frame quiet and low-detail (open sky, mist, soft wash, plain wall) — this 
+band hosts the page text. Main action, faces and key elements live in the 
+lower two thirds. No important detail in the top band.
+
 NEGATIVE: NO 3D render, NO photorealistic detail, NO oil painting 
 heaviness, NO anime, NO manga, NO chibi, NO disney cartoon, NO pixar, 
 NO flat vector illustration, NO comic book style, NO airbrush gloss, 
 NO neon colors, NO dark gothic atmosphere, NO horror, NO grim. 
+NO text, NO lettering, NO signs or written words anywhere in the image 
+(signs and labels are added by the book compositor). 
 Aspect of a high-quality contemporary European picture book for ages 4-10.
 ```
 
@@ -52,7 +59,8 @@ Aspect of a high-quality contemporary European picture book for ages 4-10.
 manga, chibi, disney cartoon, pixar, dreamworks, flat vector, comic book, 
 airbrushed, glossy, plastic, neon colors, fluorescent, dark gothic, horror, 
 big anime eyes, long eyelashes, sparkles, fantasy magic, glowing aura, 
-sparkle effects, kawaii, cute mascot, cartoon-flat
+sparkle effects, kawaii, cute mascot, cartoon-flat, text, lettering, 
+signs, written words, captions, labels, typography
 ```
 
 ---
