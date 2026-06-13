@@ -1,8 +1,8 @@
 window.DASHBOARD_DATA = {
- "generated_at": "2026-06-13T08:25:05+00:00",
+ "generated_at": "2026-06-13T09:07:24+00:00",
  "head": {
-  "sha": "c882f6d",
-  "date": "2026-06-12T17:45:43+00:00"
+  "sha": "d96d13a",
+  "date": "2026-06-13T10:52:39+02:00"
  },
  "agent_entry": {
   "sequence": [
@@ -51,7 +51,7 @@ window.DASHBOARD_DATA = {
     "bytes": 1958,
     "lines": 59,
     "tokens_est": 490,
-    "mtime": "2026-06-12T12:05:54+00:00",
+    "mtime": "2026-06-13T08:25:42+00:00",
     "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/Makefile",
     "role": "Comandi disponibili (make help).",
     "tokens_cumulative": 9136
@@ -385,7 +385,7 @@ window.DASHBOARD_DATA = {
    "bytes": 1958,
    "lines": 59,
    "tokens_est": 490,
-   "mtime": "2026-06-12T12:05:54+00:00",
+   "mtime": "2026-06-13T08:25:42+00:00",
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/Makefile",
    "category": "core",
    "preview": ""
@@ -715,7 +715,7 @@ window.DASHBOARD_DATA = {
    "bytes": 2703,
    "lines": 56,
    "tokens_est": 676,
-   "mtime": "2026-06-13T08:24:46.570763+00:00",
+   "mtime": "2026-06-13T08:25:42+00:00",
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/dashboard/README.md",
    "category": "operativo",
    "preview": "Vista **meta** della repo: regole, ruoli, stato e debito del sistema che produce la saga — non il contenuto della saga."
