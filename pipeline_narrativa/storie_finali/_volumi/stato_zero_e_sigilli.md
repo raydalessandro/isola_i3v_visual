@@ -38,7 +38,7 @@ I Volumi 2-3-4 hanno versioni proprie per stagione e vento.
 
 #### *L'isola dorme*
 
-Adesso conosci l'isola. Sai dov'è il Villaggio, sai dove vivono Bartolo e Fiamma e Rovo e Stria e Mèmolo. Sai dove pascolano le capre, sai dov'è il Pontile, sai dove si tiene il Mercato a mezzogiorno. Bene. Allora possiamo cominciare.
+Ecco l'isola. Guardala bene. Vedi il Villaggio, in mezzo. Vedi le Montagne Gemelle, e il Fiume che gira tutto intorno. Vedi il Pontile, e le barche sul mare. È qui che vivono Bartolo e Fiamma e Rovo e Stria e Mèmolo. È qui che pascolano le capre, e che a mezzogiorno si tiene il Mercato. Adesso che la vedi, possiamo cominciare.
 
 Cominciamo da qui: dall'isola che dorme.
 

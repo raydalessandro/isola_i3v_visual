@@ -40,6 +40,7 @@ import argparse
 import io
 import json
 import logging
+import os
 import re
 import sys
 import unicodedata
@@ -823,6 +824,7 @@ def make_presentazione_page(
 # Così il testo lungo non si sovrappone mai all'immagine.
 
 ISOLA_PANORAMICA = REPO / "visual/atlante/isola/isola_panoramica_v1.jpg"
+ISOLA_CHE_DORME  = REPO / "visual/atlante/isola/isola_che_dorme_v1.jpg"
 
 
 def make_isola_doppia(
@@ -831,14 +833,19 @@ def make_isola_doppia(
     img_path: Path | None = None,
     volume: int = 1,
     layout_warnings: list | None = None,
+    eyebrow: str = "UN LUOGO DELL'ISOLA",
+    src_default: Path | None = None,
+    remainder_out: list | None = None,
 ) -> Image.Image:
     """
-    Spread "Questa è l'isola": ritorna un'immagine larga IMG_W*2 (sinistra +
-    destra già affiancate), compatibile con build_spread_pdf / build_stampa_pdf.
-    Sinistra: veduta isola full-bleed (cover-fit). Destra: trafiletto su carta
-    con eyebrow, nome+glifo, capolettera e firma — stesso linguaggio atlante.
+    Spread "Questa è l'isola" / "L'isola che dorme": ritorna un'immagine larga
+    IMG_W*2 (sinistra + destra già affiancate), compatibile con
+    build_spread_pdf / build_stampa_pdf.
+    Sinistra: veduta isola full-bleed (scala per altezza, sfumata sul bordo
+    esterno). Destra: trafiletto su carta con eyebrow, titolo+glifo,
+    capolettera, decori marini e firma — stesso linguaggio dell'atlante.
     """
-    src = img_path or ISOLA_PANORAMICA
+    src = img_path or src_default or ISOLA_PANORAMICA
     import numpy as np
     vento    = _quartiere_color_for(title)
     slug     = _title_to_slug(title)
@@ -848,31 +855,50 @@ def make_isola_doppia(
     # ── PAGINA SINISTRA — la veduta dell'isola, satura, protagonista ──────
     # L'isola riempie tutta la larghezza. Sul bordo ESTERNO (sinistro = taglio
     # del libro) l'immagine si sfuma dolcemente, così non c'è stacco netto col
-    # margine. Sul bordo interno (verso la piega) prosegue piena: di là il mare
-    # entra nella pagina-testo. Nessun decoro qui: l'immagine è già satura.
+    # La pagina sinistra ospita la veduta dell'isola. NON usiamo un gradiente
+    # azzurro artificiale come sfondo (creava una "striscia" che litigava coi
+    # colori dell'immagine): la SOLA sorgente di colore è l'immagine stessa.
     mare = DS.CICLO_COLOR.get(VOLUME_CONFIG[volume]["ciclo"], DS.VENTO_TAGLIO)
-    left = DS.mare_gradiente(IMG_W, IMG_H, mare, riflesso=0.5)
+    left = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
+    isola_fit = None
     if src and Path(src).exists():
         isola = Image.open(src).convert("RGB")
         ok, quality_desc = (check_tavola_quality(Path(src)) if src == ISOLA_PANORAMICA
                             else check_image_quality(Path(src)))
-        # Scala per ALTEZZA piena: l'immagine resta INTERA in verticale
-        # (titolo in alto e pontile in basso dentro), nessun crop. L'isola si
-        # ancora al bordo esterno (sinistro); lo spazio residuo a destra va
-        # verso la piega, dove il mare-gradiente prosegue nella pagina-testo.
+        # Scala per ALTEZZA piena: immagine intera in verticale, ancorata al
+        # bordo ESTERNO (sinistro = taglio del libro), dove resta netta.
         sw, sh = isola.size
         scale = IMG_H / sh
         nw, nh = int(round(sw * scale)), IMG_H
-        isola_fit = isola.resize((nw, nh), Image.LANCZOS)
+        isola_fit = isola.resize((nw, nh), Image.LANCZOS).convert("RGB")
         oy = 0
-        # Sfumatura sul bordo ESTERNO (sinistro): l'immagine si dissolve nel
-        # mare-gradiente sottostante lungo una fascia stretta.
-        fade_w = int(IMG_W * 0.10)
-        a = isola_fit.convert("RGB")
-        amask = np.full((nh, nw), 255, dtype="uint8")
-        ramp = (np.linspace(0.0, 1.0, fade_w) ** 1.4 * 255).astype("uint8")
-        amask[:, :fade_w] = ramp[None, :]
-        left.paste(a, (0, oy), Image.fromarray(amask, "L"))
+        # ── Coda di colore: estende i COLORI REALI dell'immagine verso destra ──
+        # Lo spazio tra il bordo destro dell'immagine (nw) e il bordo pagina
+        # (IMG_W) viene riempito stirando l'ultima colonna dell'immagine, così
+        # i colori dell'isola (mare/cielo/tramonto di quella riga) proseguono
+        # nella pagina-testo e vi si dissolvono. È l'immagine che cola di là,
+        # non una banda artificiale che fa da ponte.
+        gap = IMG_W - nw
+        if gap > 0:
+            edge = isola_fit.crop((nw - 1, 0, nw, nh))          # ultima colonna
+            tail = edge.resize((gap, nh), Image.LANCZOS)        # stirata a destra
+            # leggera sfocatura orizzontale per togliere ogni rigatura netta
+            tail = tail.filter(ImageFilter.GaussianBlur(max(1, gap // 8)))
+            left.paste(tail, (nw, 0))
+        left.paste(isola_fit, (0, oy))
+        # Dissolvenza finale verso la carta SOLO nell'ultimo tratto a destra,
+        # così la coda di colore non arriva dura al bordo pagina ma sfuma nel
+        # foglio dove inizia la pagina-testo.
+        fade_start = nw + int(gap * 0.35)
+        fade_w = IMG_W - fade_start
+        if fade_w > 0:
+            band = left.crop((fade_start, 0, IMG_W, IMG_H)).convert("RGB")
+            paper = Image.new("RGB", (fade_w, IMG_H), DS.PAPER)
+            m = np.tile(
+                (np.linspace(0.0, 1.0, fade_w) ** 1.5 * 255).astype("uint8"),
+                (IMG_H, 1))
+            blended = Image.composite(paper, band, Image.fromarray(m, "L"))
+            left.paste(blended, (fade_start, 0))
         if not ok:
             left = add_quality_banner(left, Path(src), quality_desc)
             log.warning("Veduta isola sotto spec: %s", quality_desc)
@@ -895,9 +921,17 @@ def make_isola_doppia(
     right = Image.blend(Image.new("RGB", (IMG_W, IMG_H), DS.PAPER),
                         Image.new("RGB", (IMG_W, IMG_H), vento), 0.03)
     # Fascia di mare sul bordo SINISTRO (confine con l'isola) che si dissolve
-    # nella carta: continuità visiva tra le due pagine, niente taglio netto.
+    # nella carta. Sorgente colore: l'ULTIMA colonna dell'immagine isola (gli
+    # stessi colori in cui finisce la pagina sinistra), così attraverso la
+    # piega il colore è CONTINUO — l'immagine cola davvero nel testo, niente
+    # banda azzurra artificiale. Fallback al mare-gradiente se manca l'immagine.
     band_w = int(IMG_W * 0.30)
-    sea = DS.mare_gradiente(band_w, IMG_H, mare, riflesso=0.5)
+    if isola_fit is not None:
+        edge_r = isola_fit.crop((isola_fit.width - 1, 0, isola_fit.width, isola_fit.height))
+        sea = edge_r.resize((band_w, IMG_H), Image.LANCZOS).filter(
+            ImageFilter.GaussianBlur(max(1, band_w // 6)))
+    else:
+        sea = DS.mare_gradiente(band_w, IMG_H, mare, riflesso=0.5)
     # maschera orizzontale: piena a sinistra (x=0), 0 verso destra (dissolve).
     # Coda lunga e morbida (cubica) così il passaggio è impercettibile.
     xs = 1.0 - np.linspace(0.0, 1.0, band_w)
@@ -922,7 +956,7 @@ def make_isola_doppia(
 
     f_eye = DS.font_weighted("sans", int(FS_SMALL*0.82), 700)
     ex = MX
-    for ch in "UN LUOGO DELL'ISOLA":
+    for ch in eyebrow:
         draw.text((ex, y), ch, font=f_eye, fill=vento)
         ex += draw.textlength(ch, font=f_eye) + 4
     y += int(TX_H * 0.030)
@@ -964,9 +998,11 @@ def make_isola_doppia(
             cur = words[i]; i += 1
         lines.append((cur, MX + xoff, yy)); yy += LH; line_no += 1
 
-    if i < len(words) and layout_warnings is not None:
+    if i < len(words):
         remainder = " ".join(words[i:]).strip()
-        if remainder:
+        if remainder and remainder_out is not None:
+            remainder_out.append(remainder)
+        elif remainder and layout_warnings is not None:
             layout_warnings.append({
                 "entry": title,
                 "troncato_dopo": (lines[-1][0][-60:] if lines else ""),
@@ -1382,8 +1418,51 @@ def draw_rich_row(draw: ImageDraw.ImageDraw, x: int, y: int,
             cx += draw.textlength(word, font=f_body)
 
 
+def _scegli_fascia_v2(img: "Image.Image", block_h: int):
+    """
+    Scelta fascia testo migliorata (alto/basso, mai blocchi flottanti).
+    Rispetto alla v1 (solo media di luminosità/movimento), questa:
+      - divide ciascuna fascia candidata in strisce sottili e misura il
+        dettaglio per striscia, così una piccola zona molto dettagliata
+        (es. i volti dei personaggi) non viene "diluita" dalla media;
+      - penalizza la fascia il cui PICCO di dettaglio è alto (probabile
+        soggetto/volto sotto il testo), non solo la media;
+      - sceglie la fascia col soggetto meno invaso; a parità, preferisce
+        l'alto (posizione di default, prevedibile in lettura).
+    Ritorna (zone, y0z, bright, move) compatibile con la v1.
+    """
+    H = img.height
+    def metriche(y0, y1):
+        y0 = max(0, y0); y1 = min(H, y1)
+        z = img.crop((0, y0, img.width, y1)).convert("L")
+        bright = ImageStat.Stat(z).mean[0] / 255.0
+        edges  = z.filter(ImageFilter.FIND_EDGES)
+        move_mean = ImageStat.Stat(edges).mean[0] / 255.0
+        # picco di dettaglio: striscia orizzontale più "movimentata"
+        n = 8
+        sh = max(1, (y1 - y0) // n)
+        peak = 0.0
+        for k in range(n):
+            s = edges.crop((0, k*sh, img.width, min((k+1)*sh, y1-y0)))
+            if s.height <= 0: continue
+            peak = max(peak, ImageStat.Stat(s).mean[0] / 255.0)
+        return bright, move_mean, peak
+
+    bt, mt, pt = metriche(0, block_h)
+    bb, mb, pb = metriche(H - block_h, H)
+    # costo della fascia: il PICCO conta doppio (è lì che stanno i volti),
+    # più una penalità se è scura (testo meno leggibile anche dopo dodge).
+    def costo(bright, move, peak):
+        return peak * 2.0 + move + max(0.0, 0.45 - bright) * 0.5
+    c_top, c_bot = costo(bt, mt, pt), costo(bb, mb, pb)
+    # preferenza all'alto: il basso vince solo se è chiaramente migliore
+    if c_bot < c_top - 0.05:
+        return "bottom", H - block_h, bb, mb
+    return "top", 0, bt, mt
+
+
 def compose_story_page(img_path: Path | None, text: str,
-                       key_color=None) -> Image.Image:
+                       key_color=None, force_zone=None) -> Image.Image:
     """
     Compone una pagina storia:
     - Se esiste la HD (_hd/), la carica direttamente (già ≥1664×2496)
@@ -1463,26 +1542,38 @@ def compose_story_page(img_path: Path | None, text: str,
     b_top, m_top = zone_metrics(*top_zone)
     b_bot, m_bot = zone_metrics(*bottom_zone)
 
-    # scegli ancora: preferisci alto; se alto molto movimentato e basso più
-    # calmo, vai in basso (il soggetto comanda)
-    if m_top > 0.16 and m_bot < m_top - 0.04:
-        zone = "bottom"; y0z = IMG_H - block_h
-        bright, move = b_bot, m_bot
+    # scegli ancora: force_zone ha priorità (override esplicito), poi v2/v1
+    if force_zone == "bottom":
+        zone = "bottom"; y0z = IMG_H - block_h; bright, move = b_bot, m_bot
+    elif force_zone == "top":
+        zone = "top"; y0z = 0; bright, move = b_top, m_top
+    elif os.environ.get("TESTO_V2") == "1":
+        zone, y0z, bright, move = _scegli_fascia_v2(img, block_h)
     else:
-        zone = "top"; y0z = 0
-        bright, move = b_top, m_top
+        if m_top > 0.16 and m_bot < m_top - 0.04:
+            zone = "bottom"; y0z = IMG_H - block_h
+            bright, move = b_bot, m_bot
+        else:
+            zone = "top"; y0z = 0
+            bright, move = b_top, m_top
 
     # decidi trattamento: INSIDE se calmo+chiaro, altrimenti DODGE
     treatment = "INSIDE" if (bright > 0.60 and move < 0.11) else "DODGE"
 
     if treatment == "DODGE":
-        # schiarita dolce, sfumata, niente box
+        # schiarita dolce, sfumata, niente box. Forza modulata sulla
+        # scurezza reale: zone già mediamente chiare si schiariscono meno
+        # (più simili all'INSIDE), zone molto scure di più (leggibilità).
+        if os.environ.get("TESTO_V2") == "1":
+            forza = 0.52 + (0.60 - min(bright, 0.60)) * 0.55   # ~0.52–0.85
+        else:
+            forza = 0.72
         mask = Image.new("L", (IMG_W, IMG_H), 0)
         md = ImageDraw.Draw(mask)
         md.rectangle([0, y0z, IMG_W, y0z + block_h], fill=255)
         mask = mask.filter(ImageFilter.GaussianBlur(int(IMG_W*0.04)))
         paper = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
-        lightened = Image.blend(img, paper, 0.72)
+        lightened = Image.blend(img, paper, forza)
         img = Image.composite(lightened, img, mask)
 
     draw = ImageDraw.Draw(img)
@@ -1676,33 +1767,78 @@ def _tracked_center(draw, text, font, y, color, tracking, w=TX_W):
         x += draw.textlength(c, font=font) + tracking
 
 
+def make_occhiello_copertina() -> Image.Image:
+    """Occhiello illustrato: la copertina riproposta come pagina interna a
+    piena pagina (half-title illustrato), prima del frontespizio. Riempie la
+    larghezza; il minimo eccesso verticale è centrato (scena piena, nessuna
+    perdita significativa). Se manca l'immagine, ritorna carta vuota."""
+    img = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
+    cov_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
+    if cov_p.exists():
+        cov = Image.open(cov_p).convert("RGB")
+        sw, sh = cov.size
+        scale = IMG_W / sw
+        nw, nh = IMG_W, int(round(sh * scale))
+        cov_fit = cov.resize((nw, nh), Image.LANCZOS)
+        oy = (IMG_H - nh) // 2          # centra l'eccesso verticale
+        # Velo leggero verso la carta: la copertina-occhiello non parte a
+        # colori pieni ma un filo attenuata, così fa più "intro" / soglia.
+        paper = Image.new("RGB", cov_fit.size, DS.PAPER)
+        cov_fit = Image.blend(cov_fit, paper, 0.18)
+        img.paste(cov_fit, (0, oy))
+        # Vignettatura morbida: i bordi sfumano nella carta (cornice-soglia).
+        import numpy as np
+        paper_full = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
+        yy, xx = np.mgrid[0:IMG_H, 0:IMG_W]
+        dx = np.abs(xx - IMG_W/2) / (IMG_W/2)
+        dy = np.abs(yy - IMG_H/2) / (IMG_H/2)
+        edge = np.maximum(dx, dy)                 # 0 centro, 1 bordi
+        vmask = (np.clip((edge - 0.74) / 0.26, 0, 1) ** 1.6 * 160).astype("uint8")
+        img = Image.composite(paper_full, img, Image.fromarray(vmask, "L"))
+    return img
+
+
 def make_frontespizio(volume: int) -> Image.Image:
-    """Frontespizio: logo spirale + titolo collana + volume + ciclo + editore."""
+    """Frontespizio: titolo + rosone dei tre venti (emblema) + volume + editore.
+    L'emblema (foglia/onda/piuma nel cerchio) dà peso visivo senza ripetere la
+    copertina; è il linguaggio dei tre venti in forma decorativa, non esplicita.
+    """
     cfg = VOLUME_CONFIG[volume]
     img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
     d = ImageDraw.Draw(img)
     vento = DS.CICLO_COLOR.get(cfg["ciclo"], DS.ACCENT)
 
-    logo = DS.make_logo_image(int(TX_W*0.13), DS.SPIRALE)
-    img.paste(logo, (TX_W//2 - logo.width//2, int(TX_H*0.14)), logo)
-
+    # Titolo in alto
     f_title = DS.font("mark", int(TX_W*0.066))
-    _center(d, "L'Isola", f_title, int(TX_H*0.265), DS.INK)
-    _center(d, "dei Tre Venti", f_title, int(TX_H*0.322), DS.INK)
+    _center(d, "L'Isola", f_title, int(TX_H*0.085), DS.INK)
+    _center(d, "dei Tre Venti", f_title, int(TX_H*0.142), DS.INK)
 
+    # Emblema centrale: il rosone dei tre venti (terra/acqua/aria + spirale)
+    rosone_p = REPO / "visual/atlante/emblema/rosone_tre_venti.png"
+    if rosone_p.exists():
+        ros = Image.open(rosone_p).convert("RGBA")
+        target = int(TX_W * 0.52)
+        rr = ros.resize((target, int(target * ros.height / ros.width)), Image.LANCZOS)
+        rx = TX_W//2 - rr.width//2
+        ry = int(TX_H*0.30)
+        img.paste(rr, (rx, ry), rr)
+    else:
+        logo = DS.make_logo_image(int(TX_W*0.13), DS.SPIRALE)
+        img.paste(logo, (TX_W//2 - logo.width//2, int(TX_H*0.32)), logo)
+
+    # Volume + sottotitolo-ciclo sotto l'emblema
     DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.14), TX_W//2 + int(TX_W*0.14),
-                      int(TX_H*0.40), DS.RULE, max(2, TX_W//560))
-
+                      int(TX_H*0.70), DS.RULE, max(2, TX_W//560))
     f_vol = DS.font_weighted("sans", int(TX_W*0.025), 700)
-    _tracked_center(d, VOLUME_NOMI[volume], f_vol, int(TX_H*0.425), DS.SPIRALE, 5)
-
+    _tracked_center(d, VOLUME_NOMI[volume], f_vol, int(TX_H*0.725), DS.SPIRALE, 5)
     f_sub = DS.font("display_i", int(TX_W*0.032))
-    _center(d, CICLO_SOTTOTITOLO.get(cfg["ciclo"], ""), f_sub, int(TX_H*0.465), DS.INK_SOFT)
+    _center(d, CICLO_SOTTOTITOLO.get(cfg["ciclo"], ""), f_sub, int(TX_H*0.765), DS.INK_SOFT)
 
+    # Autore + editore in basso
     f_auth = DS.font("sans", int(TX_W*0.024))
-    _center(d, "Ray D'Alessandro", f_auth, int(TX_H*0.85), DS.INK)
+    _center(d, "Ray D'Alessandro", f_auth, int(TX_H*0.88), DS.INK)
     f_ed = DS.font_weighted("sans", int(TX_W*0.019), 600)
-    _tracked_center(d, "SPIRALE EDITRICE", f_ed, int(TX_H*0.88), DS.INK_FAINT, 4)
+    _tracked_center(d, "SPIRALE EDITRICE", f_ed, int(TX_H*0.91), DS.INK_FAINT, 4)
     return img
 
 
@@ -1764,7 +1900,7 @@ def make_colophon(volume: int) -> Image.Image:
     ly = TX_H - int(TX_H*0.12)
     img.paste(logo, (MXc, ly), logo)
     d.text((MXc + logo.width + 14, ly + logo.height//3),
-           "EAR LAB · SPIRALE EDITRICE",
+           "SPIRALE EDITRICE",
            font=DS.font_weighted("sans", int(TX_W*0.018), 700), fill=DS.INK_FAINT)
     return img
 
@@ -2034,6 +2170,93 @@ def make_soglia_ingresso(titolo_sezione: str = "L'isola dorme") -> Image.Image:
 # COSTRUZIONE PAGINE STORIA
 # ═══════════════════════════════════════════════════════════════════════════
 
+# ═══════════════════════════════════════════════════════════════════════════
+# IL MITO DEI TRE VENTI — bonus illustrato (tempo arcaico, deroga palette)
+# ═══════════════════════════════════════════════════════════════════════════
+
+MITO_DIR = REPO / "visual/atlante/mito"
+MITO_SCENE = MITO_DIR / "scene"
+# Colore "antico" desaturato per il mito (oro spento, non legato a un ciclo)
+MITO_INK = (92, 74, 52)
+
+
+def make_occhiello_mito() -> Image.Image:
+    """Frontespizio del mito: eyebrow 'IL MITO DELLE ORIGINI', titolo, riga
+    vento. Tono arcaico, sobrio. Apre il bonus."""
+    img = Image.new("RGB", (TX_W, TX_H), DS.PAPER)
+    d = ImageDraw.Draw(img)
+    oro = DS.ACCENT
+
+    # rosone dei tre venti, piccolo, in alto (richiamo all'emblema)
+    rosone_p = REPO / "visual/atlante/emblema/rosone_tre_venti.png"
+    if rosone_p.exists():
+        ros = Image.open(rosone_p).convert("RGBA")
+        target = int(TX_W * 0.30)
+        rr = ros.resize((target, int(target * ros.height / ros.width)), Image.LANCZOS)
+        img.paste(rr, (TX_W//2 - rr.width//2, int(TX_H*0.20)), rr)
+
+    f_eye = DS.font_weighted("sans", int(TX_W*0.021), 700)
+    eb = "IL MITO DELLE ORIGINI"
+    tot = sum(d.textlength(c, font=f_eye) + 5 for c in eb) - 5
+    ex = TX_W/2 - tot/2
+    for c in eb:
+        d.text((ex, int(TX_H*0.48)), c, font=f_eye, fill=oro)
+        ex += d.textlength(c, font=f_eye) + 5
+
+    f_t = DS.font("mark", int(TX_W*0.058))
+    _center(d, "Il Mito", f_t, int(TX_H*0.52), DS.INK)
+    _center(d, "dei Tre Venti", f_t, int(TX_H*0.575), DS.INK)
+
+    DS.draw_wind_rule(d, TX_W//2 - int(TX_W*0.12), TX_W//2 + int(TX_W*0.12),
+                      int(TX_H*0.65), DS.RULE, max(2, TX_W//560))
+
+    f_sub = DS.font("display_i", int(TX_W*0.028))
+    _center(d, "come lo raccontava Grunto", f_sub, int(TX_H*0.67), DS.INK_SOFT)
+    return img
+
+
+def _parse_mito() -> list[dict]:
+    """Legge mito_tre_venti.md, ritorna lista di scene (testo + immagine)."""
+    md_p = MITO_DIR / "mito_tre_venti.md"
+    if not md_p.exists():
+        return []
+    md = md_p.read_text(encoding="utf-8")
+    pat = re.compile(
+        r"<!--\s*@scene\s+(\S+)\s*\|\s*@page\s+(\d+)\s*\|\s*@image\s+([^\s>]+)\s*-->",
+        re.IGNORECASE)
+    parts = pat.split(md)
+    scenes = []
+    i = 1
+    while i + 3 < len(parts) + 1 and i < len(parts):
+        if i + 2 >= len(parts):
+            break
+        scene_id = parts[i].strip()
+        img_name = parts[i+2].strip()
+        text = parts[i+3].strip() if i+3 < len(parts) else ""
+        scenes.append({
+            "scene": scene_id,
+            "image_path": MITO_SCENE / img_name,
+            "text": text,
+        })
+        i += 4
+    return scenes
+
+
+def build_mito_pages() -> list[tuple[str, Image.Image]]:
+    """Monta il mito completo: occhiello + pagine illustrate. Le immagini hanno
+    già la deroga palette (antica/desaturata). Testo con oracoli (parole-chiave
+    evidenziate) nel colore oro del mito."""
+    pages: list[tuple[str, Image.Image]] = []
+    pages.append(("single", make_occhiello_mito()))
+    for sc in _parse_mito():
+        # La scena tempesta ha il gufo in alto: il testo sta meglio in basso.
+        fz = "bottom" if sc["scene"] == "s4_tempesta" else None
+        img = compose_story_page(sc["image_path"], sc["text"],
+                                 key_color=DS.ACCENT, force_zone=fz)
+        pages.append(("single", img))
+    return pages
+
+
 def build_story_pages(sid: str, key_color=None) -> list[tuple[str, Image.Image]]:
     pages: list[tuple[str, Image.Image]] = []
     for sh in parse_story_md(sid):
@@ -2141,6 +2364,10 @@ def build_volume_pages(
     if con_front_matter and not solo_storie:
         print("  → Front matter (frontespizio, colophon, dedica, indice)")
         voci_indice = build_indice_voci(volume, storie, posizione_pres)
+        cover_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
+        pages.append(("single", make_blank()))   # foglio di guardia iniziale
+        if cover_p.exists():
+            pages.append(("single", make_occhiello_copertina()))
         pages.extend([
             ("single", make_frontespizio(volume)),
             ("single", make_colophon(volume)),
@@ -2159,12 +2386,28 @@ def build_volume_pages(
         txt(get_soglia())
         print(f"  → Introduzione ciclo {volume}")
         txt(get_introduzione_ciclo(volume))
-        print(f"  → Qui entri nell'isola (soglia)")
-        pages_recto()
-        mark("isola_dorme")
-        pages.append(("single", make_soglia_ingresso("L'isola dorme")))
         print(f"  → Stato Zero vol.{volume}")
-        txt(get_stato_zero(volume))
+        if ISOLA_CHE_DORME.exists() and usa_atlante:
+            # La doppia "L'isola che dorme" sostituisce la pagina-soglia:
+            # è già l'ingresso forte, inutile ripetere il titolo prima.
+            print("    · L'isola che dorme: doppia (spread) + continuazione")
+            pages = ensure_recto(pages)
+            mark("isola_dorme")
+            _rem = []
+            pages.append(("spread", make_isola_doppia(
+                "L'isola che dorme", get_stato_zero(volume),
+                volume=volume, layout_warnings=layout_warnings,
+                eyebrow="ECCO L'ISOLA", src_default=ISOLA_CHE_DORME,
+                remainder_out=_rem)))
+            if _rem and _rem[0].strip():
+                # il testo che non entra nella doppia prosegue su pagina/e carta
+                txt(_rem[0])
+        else:
+            # Fallback senza immagine: pagina-soglia + testo su carta.
+            pages_recto()
+            mark("isola_dorme")
+            pages.append(("single", make_soglia_ingresso("L'isola dorme")))
+            txt(get_stato_zero(volume))
 
         if posizione_pres == "prima":
             build_pres_pages()
