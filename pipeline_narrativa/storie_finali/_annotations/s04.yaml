@@ -1,0 +1,264 @@
+sid: s04
+title: Le Radici che Parlano
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+  Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
+  inquadratura, varianti atmosferiche e continuità. NON ripetono stile (stylesheet), tratti
+  fisici (schede + scale GU) né firme ambientali (prompt_grok). La quiet zone alta (~25-30%
+  per il testo di pagina) è vincolo dello stylesheet e vale per ogni scena.
+
+book_pages_total: 20
+
+hooks:
+
+  s04_h01:
+    location: foresta_intrecciata
+    location_variant: margine_lato_orti_primavera_mattina
+    characters_in_scene: [salvia, gabriel, elias, noah, coltivatori_del_cerchio, liu]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [cesto_salvia]
+    canonical_details:
+      - "Prima mattina di tepore vero dopo l'inverno: primavera che apre, germogli minuti che bucano l'ocra negli Orti"
+      - "Salvia (lepre) col cesto già al fianco: «Mi accompagnate al margine? Devo prendere ortica.»"
+      - "I Coltivatori al lavoro pieno di stagione, cantilena lunga; quando i fratelli passano scende di un tono per un battito (saluto senza parole, eco s03); TUM-tum delle zappe in lontananza"
+      - "Cornice s04_c1: Liù passa veloce sopra gli Orti — un *frrr* breve, una piega d'aria. Salvia non alza la testa. Liù appare SOLO nel subhook b"
+      - "Al margine: «Voi qua. Torno presto.» Salvia entra col cesto; per qualche metro si vede la sabbia chiara delle sue zampe di lepre tra le radici, poi sparisce"
+      - "Coltivatori: figure collettive mai individuate, zappe dal manico curvo"
+    subhooks:
+      - id: s04_h01a
+        page_book: 1
+        text_split_marker: "Era una mattina di quelle che aprono"
+        image_status: TBD
+        note: "Apertura di primavera: Salvia col cesto al fianco sulla porta dei fratelli, mattina di primo tepore, luce che apre. I tre sulla soglia, pronti a seguirla. Cambio di stagione dichiarato rispetto al volume 1: verde nuovo, aria chiara."
+      - id: s04_h01b
+        page_book: 2
+        text_split_marker: "Andarono volentieri"
+        image_status: TBD
+        note: "L'attraversamento degli Orti in primavera: file di terra smossa, germogli minuti, i Coltivatori al lavoro pieno in lontananza (figure chine, zappe). I quattro in cammino che rallentano il passo nel punto del saluto-cantilena. In alto, veloce, Liù che passa sopra gli orti — una piega d'aria, un colibrì in un frrr. Pagina-mondo: il bambino ritrova i Coltivatori di s03 e scopre Liù."
+      - id: s04_h01c
+        page_book: 3
+        text_split_marker: "Al margine della Foresta Salvia si fermò"
+        image_status: TBD
+        note: "Il margine: Salvia indica ai tre la zampata di terra fuori («Voi qua»), poi entra tra i primi tronchi col cesto — ancora visibile per qualche metro, la sabbia chiara sulle zampe di lepre, un attimo prima di sparire. I tre che restano fuori. Eco della soglia di s03: stessa Foresta, altro umore (primavera, fiducia)."
+
+  s04_h02:
+    location: foresta_intrecciata
+    location_variant: primo_tratto_oltre_soglia
+    characters_in_scene: [noah]
+    characters_offscreen_or_distant: [gabriel, elias]
+    objects_in_scene: []
+    canonical_details:
+      - "La farfalla blu (seed_farfalla_blu_seguire_fuori_soglia): esce da un'ombra tra i tronchi, si posa sulla terra del margine davanti a Noah. «Era molto blu» — l'unico blu acceso della scena"
+      - "Il meccanismo: si posa, rialza il volo di due metri, si riposa. Noah la segue: un passo dentro, poi due, poi cinque"
+      - "Gabriel guarda i Coltivatori, Elias cerca un sasso: distratti, di spalle"
+    subhooks:
+      - id: s04_h02a
+        page_book: 4
+        text_split_marker: "I tre si sedettero per terra"
+        image_status: TBD
+        note: "L'incontro col blu: i tre seduti a terra al margine, Gabriel ed Elias distratti (uno guarda lontano, l'altro fruga nell'erba), e Noah voltato verso la Foresta con davanti la farfalla blu posata sulla terra — l'unica nota di blu acceso nell'immagine. Lo sguardo di Noah già catturato. Noah si sta alzando."
+      - id: s04_h02b
+        page_book: 5
+        text_split_marker: "La farfalla rialzò il volo"
+        image_status: TBD
+        note: "Il seguire: Noah piccolo visto da dietro che entra tra i primi tronchi dietro la farfalla blu in volo basso davanti a lui — un passo, poi due, poi cinque. I fratelli fuori campo. La Foresta che lo accoglie senza drammaticità: luce di primavera tra i fusti, ma la distanza dal margine già leggibile. Page-turn verso la scoperta dell'assenza."
+
+  s04_h03:
+    location: foresta_intrecciata
+    location_variant: margine_lato_orti
+    characters_in_scene: [gabriel, elias]
+    characters_offscreen_or_distant: [noah]
+    objects_in_scene: []
+    canonical_details:
+      - "Gabriel si accorge: la farfalla non c'è più e Noah non c'è più"
+      - "Il gridare inutile: mani a coppa, bocche aperte verso gli alberi, due, tre volte"
+      - "Vento Intreccio attivo: passa alto tra le chiome, prende le voci e le scompiglia nel fruscio. «Le voci dei bambini sono corte. Non viaggiano.»"
+    subhooks:
+      - id: s04_h03a
+        page_book: 6
+        text_split_marker: "Gabriel non se ne accorse subito"
+        image_status: TBD
+        note: "L'accorgersi: Gabriel voltato di scatto verso la Foresta, Elias che si alza con lui — il punto dove Noah era seduto, vuoto. Il momento di sospensione prima del panico: due figure e un'assenza."
+      - id: s04_h03b
+        page_book: 7
+        text_split_marker: "Gridarono insieme"
+        image_status: TBD
+        note: "Il grido che si perde: Gabriel ed Elias con le mani a coppa, le bocche aperte verso gli alberi — e in alto, tra le chiome, l'Intreccio reso visibile che scompiglia e disperde (foglie mosse, linee d'aria che si attorcigliano). La fascia alta della pagina è del vento che ruba le voci; in basso i due piccoli che gridano. Il fallimento della voce, mostrato."
+
+  s04_h04:
+    location: foresta_intrecciata
+    location_variant: margine_lato_orti
+    characters_in_scene: [gabriel, elias]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "CALLBACK cb_s04_001 (da s01): il fermarsi come gesto attivo — istituito da Gabriel nella nebbia, qui di nuovo suo. Stessa postura del non-muoversi di s01/s03"
+      - "Frase canonica Gabriel: «Gridiamo no. Pensiamo.»"
+      - "Pagina volutamente quasi-muta (20 parole): il silenzio dopo i gridi"
+    subhooks:
+      - id: s04_h04a
+        page_book: 8
+        text_split_marker: "Gabriel smise di gridare"
+        image_status: TBD
+        note: "Il fermarsi: Gabriel immobile, mani lungo i fianchi, il viso che cambia dal panico al pensiero. Elias che guarda lui, non la Foresta. Composizione calma e frontale, tanta aria intorno: il silenzio come scelta. Terza apparizione del gesto-firma del fermarsi (s01 nebbia, s03 soglia): il bambino lo riconosce."
+
+  s04_h05:
+    location: foresta_intrecciata
+    location_variant: interno_radici_grande_albero
+    characters_in_scene: [noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Noah perso ma non in lacrime: «Non pianse. Aspettò.» Seduto tra le radici grosse di un grande albero vecchio, radici come nodi di legno duro che escono dalla terra, schiena al tronco"
+      - "Il gesto-seme (seed_gesto_della_terra_palmo): il palmo destro appoggiato per terra, senza ragione — il suo modo di stare fermo"
+      - "Gli alberi tutti uguali: il disorientamento è del luogo, non drammatizzato"
+    subhooks:
+      - id: s04_h05a
+        page_book: 9
+        text_split_marker: "Dentro, Noah si era fermato"
+        image_status: TBD
+        note: "Noah tra le radici: piccolo, seduto con la schiena contro il grande tronco vecchio, le radici-nodo che lo abbracciano da terra, il palmo destro aperto appoggiato al suolo. Intorno, fusti tutti uguali in ogni direzione. Quiete vigile, non paura: lui aspetta. Il palmo a terra è IL dettaglio della pagina (prepara h07). Anche Noah, ora, si è fermato — il gesto dei fratelli arrivato a lui."
+
+  s04_h06:
+    location: foresta_intrecciata
+    location_variant: interno_radice_esposta
+    characters_in_scene: [elias, gabriel]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "La radice-ponte: una radice grossa che esce dalla terra, fa un arco e rientra — «una di quelle radici che sembrano un ponte basso»"
+      - "Il ritmo-codice (seed_tum_tum_tum_codice_fratelli): TUM-tum-TUM-tum-TUM, inventato dai tre una sera, lo riconoscono solo loro"
+      - "Elias in ginocchio batte col palmo aperto e non si ferma; Gabriel con una mano sul tronco, aspetta"
+      - "Il concetto: il battito viaggia nel legno vivo, da radice a radice, sotto terra — non nell'aria dove l'Intreccio lo scompiglierebbe. «La Foresta sentiva.»"
+      - "Onomatopea: resa tipografica del compositore, MAI testo nell'immagine"
+    subhooks:
+      - id: s04_h06a
+        page_book: 10
+        text_split_marker: "Elias si inginocchiò"
+        image_status: TBD
+        note: "Il battito: Elias inginocchiato davanti alla radice ad arco, il palmo aperto a metà gesto sul legno; Gabriel in piedi accanto, una mano sul tronco, in ascolto. Concentrazione assoluta dei due corpi. La radice-ponte ben leggibile come protagonista materica della scena."
+      - id: s04_h06b
+        page_book: 11
+        text_split_marker: "Sotto, da radice a radice"
+        image_status: TBD
+        note: "Il viaggio del battito, quasi-muta e concettuale: composizione che segue le radici esposte che corrono tra i tronchi — una rete di legno vivo che attraversa la pagina e si perde nella profondità della Foresta. I due fratelli piccoli in alto/a margine, il percorso sotterraneo come vero soggetto. La vibrazione suggerita dal disegno delle radici (linee che si rincorrono), mai con simboli grafici. La Foresta che sente."
+
+  s04_h07:
+    location: foresta_intrecciata
+    location_variant: interno_radici_grande_albero
+    characters_in_scene: [noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Noah sente sotto la mano, non con le orecchie: la vibrazione bassa che arriva dal palmo a terra"
+      - "Il riconoscere e il rispondere: solleva il palmo, lo riappoggia, poi alza la mano e la riabbatte sulla terra — lo stesso ritmo, di risposta"
+      - "Pagina speculare di h06a: stesso codice, dall'altro capo della linea"
+    subhooks:
+      - id: s04_h07a
+        page_book: 12
+        text_split_marker: "Noah, sotto la mano, sentì"
+        image_status: TBD
+        note: "La risposta: primo piano su Noah tra le radici nel momento del gesto — la mano alzata che sta per riabbattersi sulla terra, il viso acceso dal riconoscimento (ha sentito il loro ritmo). Eco compositiva di h06a ma rovesciata: là Elias trasmette, qui Noah risponde. Le radici del grande albero intorno, le stesse di h05."
+
+  s04_h08:
+    location: foresta_intrecciata
+    location_variant: interno_tra_tronchi
+    characters_in_scene: [gabriel]
+    characters_offscreen_or_distant: [elias]
+    objects_in_scene: []
+    canonical_details:
+      - "Gabriel ascolta con i piedi: il battito basso che trafila dal terreno dentro i polpacci; cammina, si ferma, ascolta, riprende. Non guarda tra gli alberi"
+      - "Elias resta sulla radice e continua a battere: «Era l'ancora»"
+      - "Dettaglio-mondo: il ramo basso curvato che attraversa il sentiero — i bambini ci passano sotto naturalmente, «era il sentiero a ricordarsi di essere per piccoli»"
+    subhooks:
+      - id: s04_h08a
+        page_book: 13
+        text_split_marker: "Gabriel camminò"
+        image_status: TBD
+        note: "L'ascolto coi piedi: Gabriel a metà passo tra i tronchi, fermo in equilibrio, lo sguardo basso/assente — tutta l'attenzione nei piedi. Postura inconfondibile di chi sente il terreno. Dietro, lontano, Elias ancora inginocchiato sulla radice che batte (l'ancora, piccola in profondità)."
+      - id: s04_h08b
+        page_book: 14
+        text_split_marker: "Gabriel passò sotto un ramo basso"
+        image_status: TBD
+        note: "Il sentiero per piccoli: Gabriel che passa naturalmente sotto il ramo basso curvato ad arco sopra il sentiero, senza notarlo. Il ramo come porta gentile a misura di bambino — un adulto dovrebbe chinarsi, lui no. La Foresta che si fa accogliente senza dirlo. Direzione di marcia leggibile: verso il battito."
+
+  s04_h09:
+    location: foresta_intrecciata
+    location_variant: punto_di_ritrovamento
+    characters_in_scene: [gabriel, elias, noah, bru, rovo]
+    characters_offscreen_or_distant: [cardo]
+    objects_in_scene: [bandana_rovo]
+    canonical_details:
+      - "Noah batteva più piano man mano che Gabriel si avvicinava, per non confondergli la direzione (delicatezza invisibile: Gabriel non se ne accorge)"
+      - "Gli abbracci: prima in due, poi Elias arriva sulle tracce e in tre. «Per un paio di minuti, niente.»"
+      - "Bru: appoggiato a un tronco a tre-quattro metri, unghie affondate nell'humus, occhi neri, non sorpreso — aveva sentito anche lui dalla sua parte di Foresta. Non si muove. Terzo avvistamento (s02, s03, s04)"
+      - "Rovo: arriva brontolando, bandana scura. Frase canonica: «Battete come capre. Tutta la Foresta l'ha sentito.» Non aiutò: era già nella Foresta per fatti suoi, venuto a vedere chi disturbava casa sua. Cenno breve a Bru, rispariscono insieme nella direzione opposta"
+      - "Cornice s04_c2: Cardo lontano oltre il limite degli alberi — guarda i fratelli per un secondo, si volta, sparisce tra le radici. Pre-installa Cardo. Appare SOLO nel subhook d"
+      - "Ordine presenze nei subhook: a=solo fratelli, b=+Bru, c=+Rovo (e uscita con Bru), d=Cardo solo"
+    subhooks:
+      - id: s04_h09a
+        page_book: 15
+        text_split_marker: "Quando arrivò, Noah stava battendo"
+        image_status: TBD
+        note: "L'abbraccio: i tre stretti tra le radici del grande albero — Gabriel abbassato su Noah, Elias appena arrivato che li avvolge. Nessun pianto: sollievo quieto. Composizione raccolta, calda, i tre corpi un nodo solo (come le radici intorno). La pagina-cuore della storia."
+      - id: s04_h09b
+        page_book: 16
+        text_split_marker: "Tre o quattro metri più in là"
+        image_status: TBD
+        note: "Il testimone: Bru appoggiato a un tronco poco più in là, le unghie nell'humus, gli occhi neri sui fratelli abbracciati (sfocati o parziali a margine). Non sorpreso, non in movimento: aveva sentito anche lui. Terza apparizione, la più vicina finora — il bambino ormai lo cerca."
+      - id: s04_h09c
+        page_book: 17
+        text_split_marker: "Poi un passo pesante tra le radici"
+        image_status: TBD
+        note: "Rovo brontolone: arriva tra le radici con la bandana scura, l'aria di chi rimprovera («Battete come capre»), i tre ancora vicini che lo guardano. Nessuna minaccia: burbero domestico. Sul lato, Bru che già gli si accoda al cenno. I due di casa nella Foresta che se ne vanno insieme per i fatti loro."
+      - id: s04_h09d
+        page_book: 18
+        text_split_marker: "Più lontano, oltre il limite"
+        image_status: TBD
+        note: "Quasi-muta, il quarto sguardo: lontano, oltre il limite degli alberi, Cardo fermo — un secondo di sguardo verso i fratelli, il corpo già voltato per sparire tra le radici. Figura piccola, margine della composizione, luce di taglio. Primo avvistamento di Cardo: un'altra presenza che custodisce senza farsi vedere. I fratelli minuscoli o fuori campo."
+
+  s04_h10:
+    location: foresta_intrecciata
+    location_variant: margine_lato_orti_ritorno
+    characters_in_scene: [salvia, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [cesto_salvia]
+    canonical_details:
+      - "I tre escono nel posto giusto: Gabriel davanti (ha sentito la strada), Noah in mezzo, Elias dietro"
+      - "Salvia esce dalla sua parte col cesto pieno di foglie verde scuro di ortica giovane; le zampe di lepre hanno lasciato tracce sulla sabbia chiara. «Non si era accorta di niente. “Pronti? Andiamo.”»"
+      - "Il rosmarino vecchio lungo il sentiero degli Orti: Salvia ci allunga la mano senza pensarci, le foglie si staccano, «le dita le rimasero profumate per ore» (dettaglio-firma di Salvia)"
+      - "Chiusura canonica: «Sull'isola, certe cose si tengono così. Senza dirle.»"
+    subhooks:
+      - id: s04_h10a
+        page_book: 19
+        text_split_marker: "I tre camminarono verso il margine"
+        image_status: TBD
+        note: "Le due uscite: i tre che emergono dal margine della Foresta esattamente mentre Salvia esce dalla sua parte, il cesto colmo di ortica verde scuro, le tracce delle zampe sulla sabbia chiara. Lei serena, ignara; loro composti, col segreto addosso. L'incrocio dei due mondi che non si sono accorti l'uno dell'altro."
+      - id: s04_h10b
+        page_book: 20
+        text_split_marker: "I tre si guardarono"
+        image_status: TBD
+        note: "Chiusura sul sentiero degli Orti: il gruppetto in cammino verso casa nella luce piena di primavera, Salvia che allunga la mano sul rosmarino vecchio al passaggio — il gesto distratto e antico. I tre dietro/accanto, lo sguardo d'intesa fra loro. Quiete: certe cose si tengono senza dirle. Eco delle chiusure-camino del volume 1, ma in andata serena."
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - location: foresta_intrecciata
+    note: "s04 vive INTERAMENTE nella Foresta con 6 qualifier interni (margine_lato_orti, primo_tratto_oltre_soglia, interno_radici_grande_albero, interno_radice_esposta, interno_tra_tronchi, punto_di_ritrovamento). Verificare che il prompt copra gli interni di primavera (luce tra i fusti, radici esposte); valutare veduta dedicata 'radici del grande albero vecchio'"
+    priority: high
+  - object: farfalla_blu
+    note: "Seed ricorrente (seed_farfalla_blu_seguire_fuori_soglia) senza entity: definire se diventa oggetto/creatura canonica con reference (il blu acceso è la sua firma — unico blu saturo ammesso nella scena?)"
+    priority: medium
+  - object: radice_ponte
+    note: "La radice ad arco 'come un ponte basso' e il ramo basso curvato sul sentiero sono dettagli-mondo candidati Tier A della Foresta (tornano? verificare nelle storie successive)"
+    priority: low
+  - character: cardo
+    note: "Prima apparizione in scena (cornice s04_c2): verificare che la reference canonica copra la posa 'lontano, di taglio, mezzo voltato'"
+    priority: low

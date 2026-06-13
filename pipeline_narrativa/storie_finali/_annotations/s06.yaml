@@ -1,0 +1,279 @@
+sid: s06
+title: Il Dono per Mèmolo
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+  Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
+  inquadratura, varianti atmosferiche e continuità. NON ripetono stile (stylesheet), tratti
+  fisici (schede + scale GU) né firme ambientali (prompt_grok). La quiet zone alta (~25-30%
+  per il testo di pagina) è vincolo dello stylesheet e vale per ogni scena.
+
+book_pages_total: 19
+
+hooks:
+
+  s06_h01:
+    location: scuola_stria
+    location_variant: interno_aula_mattina
+    characters_in_scene: [stria, gabriel, elias, noah, pun]
+    characters_offscreen_or_distant: [memolo]
+    objects_in_scene: []
+    canonical_details:
+      - "Apertura canonica: «Sull'Isola dei Tre Venti, certe tristezze non si dicono. Si vedono dalla sciarpa.»"
+      - "PRIMA SCENA dentro la scuola: Stria di spalle alla lavagna che scrive numeri, le orecchie dritte sopra lo scialle"
+      - "Pun guarda fuori dalla finestra, non la lavagna; si china verso Gabriel: «Papà ha perso una cosa. Non si ricorda dove.»"
+      - "Stria non si volta mai: solo la voce dalla cattedra («E quale cosa?»). Sente tutto, non interrompe la lezione"
+      - "I tre fratelli si guardano: la missione nasce qui, in silenzio"
+    subhooks:
+      - id: s06_h01a
+        page_book: 1
+        text_split_marker: "Sull'Isola dei Tre Venti"
+        image_status: TBD
+        note: "L'aula: prima veduta interna della scuola — Stria di spalle alla lavagna piena di numeri, lo scialle cenere, le orecchie dritte; i banchi con i cuccioli, e Pun che guarda fuori dalla finestra invece che la lavagna. Luce di mattina che entra dalle finestre. Il bambino lettore vede subito chi è triste: lo dice la postura."
+      - id: s06_h01b
+        page_book: 2
+        text_split_marker: "Si china verso Gabriel"
+        image_status: TBD
+        note: "La confidenza: Pun chinato verso Gabriel nel banco accanto, la zampa quasi a coprire le parole; Gabriel che ascolta serio, Elias e Noah che intuiscono dai banchi vicini. Stria sempre di spalle alla lavagna — ma le orecchie dritte: ha sentito. L'intimità del segreto detto piano in classe."
+
+  s06_h02:
+    location: piazza_villaggio
+    location_variant: esterno_lato_albero_vecchio_mattina
+    characters_in_scene: [memolo]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Mèmolo che trotterella più piano del solito: la sciarpa storta, si ferma, la sistema, riparte — TRE volte. La sciarpa torna storta"
+      - "«Certe tristezze si vedono dalla sciarpa»: la coazione come segnale visivo dello smarrimento"
+      - "Una finestra accesa in piazza: qualcuno dentro vede e non interviene (la discrezione dell'isola)"
+      - "Il Vento Taglio passa alto, dove non lo prende"
+      - "VINCOLO: Mèmolo è SOLO in scena — la solitudine è il soggetto"
+    subhooks:
+      - id: s06_h02a
+        page_book: 3
+        text_split_marker: "Mèmolo è in piazza"
+        image_status: TBD
+        note: "Mèmolo solo a metà piazza: fermo, le zampe alla sciarpa che non sta dritta, l'aria smarrita di chi cerca una cosa che non ricorda. La piazza grande e vuota intorno a lui (Albero Vecchio, pozzo), una sola finestra accesa che lo guarda da lontano. In alto il Taglio che passa senza toccarlo. Malinconia tenera, mai cupa: un riccio piccolo in uno spazio largo."
+
+  s06_h03:
+    location: forno
+    location_variant: interno_soglia_porta
+    characters_in_scene: [fiamma, gabriel, elias, noah]
+    characters_offscreen_or_distant: [memolo]
+    objects_in_scene: []
+    canonical_details:
+      - "Fiamma in modalità chiacchiera-fiume: impasta con le maniche tirate su, le mani bianche di farina fino al gomito, parla senza punteggiatura"
+      - "L'indizio nel fiume di parole: Mèmolo è passato presto, ha mangiato un cornetto sulla porta, ha detto «la scatoletta», «dov'è la scatoletta», poi verso gli Orti"
+      - "Il gesto segreto di Noah (seed_cornetto_briciole): si infila mezzo cornetto nel taschino, NESSUNO lo vede — tranne il lettore"
+      - "Il vapore del pane che sale sul gradino fuori (eco del Forno di s01)"
+    subhooks:
+      - id: s06_h03a
+        page_book: 4
+        text_split_marker: "Al Forno, Fiamma impasta"
+        image_status: TBD
+        note: "Il fiume di Fiamma: lei al banco che impasta a pieno ritmo, maniche su, farina fino ai gomiti, la bocca a metà frase — i tre sulla soglia investiti dalla chiacchiera. Il Forno caldo e vivo di s01 ritrovato in primavera. Energia domestica: chi parla tanto e ascolta tutto."
+      - id: s06_h03b
+        page_book: 5
+        text_split_marker: "Noah si infila mezzo cornetto"
+        image_status: TBD
+        note: "Il gesto complice, quasi-muta: primo piano su Noah che fa sparire mezzo cornetto nel taschino, lo sguardo altrove con finta innocenza — nessuno in scena lo vede, solo il lettore. Dietro/fuori, il vapore del pane che sale sul gradino. Pagina-segreto col bambino: questo cornetto tornerà (le briciole di h10)."
+
+  s06_h04:
+    location: via_dell_alba
+    location_variant: tratto_verso_orti
+    characters_in_scene: [gabriel, elias, noah, camminanti]
+    characters_offscreen_or_distant: [toba]
+    objects_in_scene: []
+    canonical_details:
+      - "Cornice s06_c1 (primo passaggio): una camminante talpa attraversa con la carriola CARICA; una mano si stacca dal manico, sale, ricade — Gabriel alza la sua. Il saluto-camminante di s01, tornato. (Il secondo passaggio, simmetrico a carriola vuota, è in h10b)"
+      - "Dettagli-mondo del sentiero: il muretto crollato in un tratto, tre-quattro pietre cadute coperte di muschio, e tra le pietre una piuma viola (mistero non spiegato)"
+      - "Noah si abbassa senza fermare il passo e raccoglie un bastoncino (primo dei due — il pattern di Noah, eco s01/s02)"
+      - "Cornice s06_c2: in fondo, oltre i tetti, il Pontile — sul bordo una piccola figura: Toba che guarda l'acqua. Pre-installa Toba. SOLO sagoma lontana"
+    subhooks:
+      - id: s06_h04a
+        page_book: 6
+        text_split_marker: "Camminano. Verso ovest"
+        image_status: TBD
+        note: "Il saluto della carriola: la camminante talpa che attraversa con la carriola carica, la mano staccata dal manico a mezz'aria, e Gabriel che risponde alzando la sua. I due gesti gemelli nello stesso istante, a distanza. Il rito di s01 che il bambino riconosce. Via di mattina, luce di primavera."
+      - id: s06_h04b
+        page_book: 7
+        text_split_marker: "Sul sentiero degli Orti, il muretto"
+        image_status: TBD
+        note: "Pagina-caccia ai dettagli: il tratto di muretto crollato con le pietre muschiose e, tra le pietre, la piuma viola (nessuno la commenta: il lettore la trova); Noah che si abbassa in piena camminata a raccogliere un bastoncino; e in fondo, oltre i tetti, il Pontile con una figura piccolissima seduta sul bordo — Toba, primo avvistamento. Tre scoperte in una pagina, tutte mute."
+
+  s06_h05:
+    location: casa_salvia
+    location_variant: cortile_giardino_erbe
+    characters_in_scene: [salvia, gabriel, elias, noah]
+    characters_offscreen_or_distant: [memolo]
+    objects_in_scene: []
+    canonical_details:
+      - "Salvia con le mani occupate: foglie d'ortica seccate da una parte, foglie verdi dall'altra, le ceste sotto («verde scuro a destra, verde tenero a sinistra»). Non si ferma mentre risponde"
+      - "L'indizio: Mèmolo passato dopo il forno, ha chiesto di «una cosa piccola — una scatoletta? un sacchettino?»"
+      - "«Le mie ortiche maturano oggi, ho da fare»: la gentilezza operosa che non interrompe il lavoro (firma di Salvia, eco s03/s04)"
+    subhooks:
+      - id: s06_h05a
+        page_book: 8
+        text_split_marker: "Salvia ha le mani occupate"
+        image_status: TBD
+        note: "Salvia al lavoro nel cortile delle erbe: le mani che separano ortica secca da ortica verde sopra le due ceste (scuro a destra, tenero a sinistra), lo sguardo sulle foglie mentre parla; i tre fermi al limite del cortile, rispettosi. La risposta data senza smettere: l'isola che aiuta lavorando. Eco diretta del cameo s03."
+
+  s06_h06:
+    location: casa_zolla
+    location_variant: gradino_esterno_ingresso
+    characters_in_scene: [zolla, gabriel, elias, noah]
+    characters_offscreen_or_distant: [memolo]
+    objects_in_scene: []
+    canonical_details:
+      - "PRIMA APPARIZIONE RAVVICINATA DI ZOLLA: seduto sul gradino di casa, allinea ghiande per terra una accanto all'altra — «Quattordici raccolte stamattina. Quindici se conto questa.»"
+      - "L'indizio: Mèmolo passato poco fa, guardava per terra, cercava qualcosa di piccolo. Zolla non gliel'ha chiesto"
+      - "Le ghiande in fila: il bambino può CONTARLE nell'immagine (gioco numerico nascosto)"
+      - "Noah trova il SECONDO bastoncino: «adesso ne ha due» (il pattern cresce)"
+    subhooks:
+      - id: s06_h06a
+        page_book: 9
+        text_split_marker: "Zolla è seduto sul gradino"
+        image_status: TBD
+        note: "Zolla e le ghiande: lui seduto sul gradino di casa, chino sulla fila di ghiande allineate per terra con precisione (quattordici — disegnarle contabili: il bambino le conta), il dito che indica la quindicesima davanti a sé. I tre in piedi che guardano per cortesia. Comicità quieta del personaggio tutto-numeri."
+      - id: s06_h06b
+        page_book: 10
+        text_split_marker: "Verso il centro, di nuovo"
+        image_status: TBD
+        note: "Ritorno verso il centro nel sole ormai caldo: i tre in cammino, e Noah che raccoglie il SECONDO bastoncino — ora ne ha uno per mano, soddisfatto del suo piccolo arsenale. Pagina di transizione leggera: il giro del villaggio continua, il pattern di Noah cresce sotto gli occhi del lettore."
+
+  s06_h07:
+    location: mercato_del_mezzogiorno_panca_di_pietra
+    location_variant: panca_in_ombra_lato_albero_vecchio
+    characters_in_scene: [gabriel, elias, noah, mercato_del_mezzogiorno, liu]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "A mezzogiorno la piazza diventa il Mercato: bancarelle fuori"
+      - "Le Vecchie del Mercato: tre, di età diverse, sedute sulla panca di pietra in fondo, all'ombra. Non parlano molto. Non parlano agli estranei. MAI individuate per nome"
+      - "Il gesto-seme (seed_vecchie_indicare_in_silenzio): alla domanda, nessuna risposta — quella in mezzo solleva LENTAMENTE un braccio, indica il cespuglio dietro l'Albero Vecchio, riabbassa il braccio. Le altre due non guardano"
+      - "Cameo Liù: un *frrr* piccolissimo vicino alle teste, un attimo su una foglia, poi parte di corsa nell'altra direzione (secondo avvistamento dopo s04)"
+      - "Liù appare SOLO nel subhook b"
+    subhooks:
+      - id: s06_h07a
+        page_book: 11
+        text_split_marker: "A mezzogiorno la piazza"
+        image_status: TBD
+        note: "Il Mercato del mezzogiorno: la piazza trasformata — bancarelle, vita, luce piena — e in fondo, nell'ombra, la panca di pietra con le tre Vecchie sedute, immobili e diverse d'età, fuori dal movimento. Contrasto vivo/fermo: il mercato che brulica e le tre che guardano. Prima presentazione del collettivo."
+      - id: s06_h07b
+        page_book: 12
+        text_split_marker: "I fratelli si avvicinano"
+        image_status: TBD
+        note: "L'indicare in silenzio — pagina-icona: i tre fermi davanti alla panca, e la Vecchia in mezzo col braccio sollevato lentamente, il dito verso il cespuglio dietro l'Albero Vecchio in fondo. Le altre due immobili che non guardano. La linea del gesto attraversa la composizione e dà la direzione al lettore. Vicino alle teste, piccolissimo, il frrr di Liù che riparte. Solennità minima di un oracolo di paese."
+
+  s06_h08:
+    location: cespuglio_dietro_albero_vecchio
+    location_variant: dietro_tronco_lato_ovest
+    characters_in_scene: [elias, pun, gabriel, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Il ritrovamento: per terra tra le foglie, una scatoletta di legno scuro, piccola, il coperchio aperto a metà nella caduta"
+      - "Dentro: un dente da latte, bianco, piccolo — «un dente di cucciolo qualunque»"
+      - "Pun arriva di corsa, guarda dentro: «È mio. L'avevo perso anni fa.» (il padre custodiva il dente del figlio: la rivelazione non viene spiegata)"
+      - "Il gesto di Elias: non parla, chiude la scatoletta, la RIMETTE IN MANO A PUN, si tira indietro di un passo. «Gabriel non chiede niente.»"
+      - "Discrezione strutturale: nessuno commenta, il lettore capisce da solo"
+    subhooks:
+      - id: s06_h08a
+        page_book: 13
+        text_split_marker: "Elias va verso il cespuglio"
+        image_status: TBD
+        note: "Il ritrovamento: Elias chinato tra i rami bassi aperti del cespuglio, e a terra tra le foglie la scatoletta di legno scuro col coperchio a metà — dentro, appena visibile, il piccolo dente bianco. Gabriel e Noah dietro che guardano oltre le sue spalle. Primo piano basso, da scoperta: il tesoro minuscolo nell'ombra del cespuglio."
+      - id: s06_h08b
+        page_book: 14
+        text_split_marker: "Pun arriva di corsa"
+        image_status: TBD
+        note: "La restituzione: Pun appena arrivato, accucciato accanto a Elias, lo sguardo dentro la scatoletta («È mio»); ed Elias che gliela rimette in mano — il momento esatto del passaggio, due zampe/mani sulla scatoletta — già tirandosi indietro di un passo. Nessuna domanda nei volti: solo il dare. La delicatezza come azione."
+
+  s06_h09:
+    location: casa_memolo_cortile
+    location_variant: cortile_albero_piccolo_centro
+    characters_in_scene: [memolo, pun, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Il cortile di Mèmolo: terra battuta, al centro un albero piccolo con TRE RAMI IN CROCE e UNA FOGLIA SOLA che ancora si tiene dall'inverno (dettaglio Tier A del luogo)"
+      - "Mèmolo con la sciarpa di sbieco, che mormora; Pun gli mette la scatoletta in mano"
+      - "Il riso piccolo: Mèmolo apre, vede il dente, ride — «un riso piccolo, di quelli che durano un attimo solo» — poi la confusione gentile («l'avevo messa da... no. Sì. No.») e la intasca senza guardarla"
+      - "KEY PHRASE della storia, detta una volta sola: «Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.»"
+      - "Il gesto finale: sistema una spina di Pun sulla testa, distratto — il padre che torna padre per un attimo"
+      - "«Gabriel non chiede a Elias. Elias non spiega.»"
+    subhooks:
+      - id: s06_h09a
+        page_book: 15
+        text_split_marker: "Il cortile davanti a casa"
+        image_status: TBD
+        note: "Il cortile di Mèmolo: terra battuta nuda, l'alberello al centro con tre rami in croce e l'unica foglia superstite dell'inverno — e Mèmolo lì sotto, sciarpa di sbieco, che mormora tra sé. I cinque che arrivano al limite del cortile. Il luogo dice il personaggio: spoglio, dolce, un po' perso. La foglia sola è IL dettaglio."
+      - id: s06_h09b
+        page_book: 16
+        text_split_marker: "Pun gli mette la scatoletta"
+        image_status: TBD
+        note: "Il dono: Pun che mette la scatoletta nella zampa del padre, e Mèmolo nell'attimo del riso piccolo — il viso aperto un istante sopra la scatoletta aperta, il dente bianco dentro. Pun fermo davanti a lui, serissimo. I tre fratelli in disparte, testimoni. La gioia che dura un attimo, disegnata in quell'attimo."
+      - id: s06_h09c
+        page_book: 17
+        text_split_marker: "Poi dice, una volta sola"
+        image_status: TBD
+        note: "La frase: Mèmolo già tornato quieto, la zampa che sistema distratta una spina sulla testa di Pun — il gesto di padre — la scatoletta sparita in tasca. «Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.» Composizione raccolta su padre e figlio, i fratelli ai margini che ricevono la frase senza capirla del tutto. La pagina-chiave, quieta come tutte le verità dell'isola."
+
+  s06_h10:
+    location: piazza_villaggio
+    location_variant: margine_uscita_verso_case_pomeriggio
+    characters_in_scene: [gabriel, elias, noah, camminanti]
+    characters_offscreen_or_distant: [memolo, pun]
+    objects_in_scene: []
+    canonical_details:
+      - "Pun resta col padre; i tre si avviano nel sole giallo caldo del pomeriggio. Sui tetti, il primo Mulinello leggero della sera (tutti e tre i venti toccano s06: Intreccio attivo, Taglio in h02, Mulinello qui)"
+      - "Chiusura narrante: «certi giri si fanno per cercare una cosa e si chiudono restituendola a qualcun altro. Capita.»"
+      - "Le briciole dorate (seed_cornetto_briciole): Noah tira fuori dal taschino la manciata di briciole del cornetto, la tiene un attimo aperta sul palmo (il segreto di h03b che riaffiora — a chi sono destinate non si dice)"
+      - "Cornice s06_c1 (secondo passaggio, SIMMETRICO): la camminante torna verso est con la carriola VUOTA; la mano si stacca, sale, ricade; «Gabriel risponde appena»"
+      - "Il bastoncino che scivola e cade: «Lui non se ne accorge» — ECO ESATTA di s01 (il gesto del lasciar andare di Noah)"
+      - "Chiusura canonica: «L'isola, dall'alto, sarebbe una rete di passi.»"
+    subhooks:
+      - id: s06_h10a
+        page_book: 18
+        text_split_marker: "Pun resta col padre"
+        image_status: TBD
+        note: "L'avvio: i tre che lasciano il cortile nel giallo caldo del pomeriggio — dietro, piccoli, Pun e Mèmolo che restano insieme. Sui tetti il primo Mulinello della sera (foglie in spirale leggera sui comignoli). Noah col palmo aperto e la manciata di briciole dorate, un attimo, lo sguardo suo soltanto. Il segreto del lettore che riaffiora senza spiegarsi."
+      - id: s06_h10b
+        page_book: 19
+        text_split_marker: "In fondo alla piazza, la camminante"
+        image_status: TBD
+        note: "Chiusura a rete di passi: vista leggermente alta sulla piazza nel tardo pomeriggio — la camminante che torna verso est con la carriola vuota e la mano a mezz'aria, Gabriel che risponde appena, e dietro di loro, minuscolo a terra, il bastoncino appena scivolato dalla mano di Noah (lui non se ne accorge: eco esatta di s01). Le traiettorie dei personaggi leggibili nella piazza come una rete. L'isola dall'alto, per un attimo, come la vedrebbe Liù."
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - character: mercato_del_mezzogiorno
+    note: "MANCA prompt_grok.md — le tre Vecchie del Mercato (h07): collettivo MAI individuato per nome ma con identità forte (tre, età diverse, panca di pietra in ombra, il gesto lento dell'indicare). Servono indicazioni: specie? abbigliamento? La 'Vecchia in mezzo' ha un ruolo ricorrente?"
+    priority: high
+  - location: via_dell_alba
+    note: "MANCA prompt_grok.md — location di h04. Dettagli Tier A candidati dal testo: il tratto di muretto crollato con pietre muschiose, la piuma viola tra le pietre (torna?)"
+    priority: high
+  - location: cespuglio_dietro_albero_vecchio
+    note: "MANCA prompt_grok.md — micro-luogo di h08 (lato ovest dell'Albero Vecchio). Basta veduta singola: rami bassi apribili, ombra, terra con foglie"
+    priority: medium
+  - location: mercato_del_mezzogiorno_panca_di_pietra
+    note: "MANCA directory catalogo (l'id esiste nel grafo): creare scheda + prompt della panca di pietra in ombra, lato Albero Vecchio"
+    priority: medium
+  - object: scatoletta_memolo
+    note: "DECISIONE: la scatoletta di legno scuro col dente da latte — oggetto carico (custodia del padre) che Mèmolo intasca: diventa entity canonica? Torna nelle storie future?"
+    priority: medium
+  - object: piuma_viola
+    note: "La piuma viola tra le pietre del muretto (h04): mistero seminato senza seed registrato nel grafo — verificare se è intenzionale/di chi è (nessun personaggio viola noto?)"
+    priority: medium
+  - character: toba
+    note: "Pre-install (cornice s06_c2, sagoma lontana sul Pontile): verificare reference per silhouette riconoscibile a distanza"
+    priority: low
+  - location: pontile
+    note: "Citato come sfondo (h04): nessuna directory catalogo trovata — servirà scheda/prompt quando Toba entrerà in scena"
+    priority: low
