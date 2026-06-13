@@ -19,7 +19,7 @@ Controlli:
 Uso:
   python3 scripts/ingest_tavola.py visual/atlante/tavole/<slug>_tavola_v1.json
   python3 scripts/ingest_tavola.py <manifest> --dry-run   # solo report
-  python3 scripts/ingest_tavola.py <manifest> --force     # ignora quiete zone
+  python3 scripts/ingest_tavola.py <manifest> --force     # ignora quiete zone + dimensioni sotto-spec (selezione umana approva baseline)
 
 Exit code: 0 ok, 1 controlli falliti, 2 errore d'uso.
 """
@@ -105,10 +105,19 @@ def verifica_tavola(manifest_path: Path, force: bool = False
     img = Image.open(img_path).convert("RGB")
     w, h = img.size
     q = spec["qualita_tavole"]
-    if w < q["min_w"] or h < q["min_h"] or h < w:
+    if h < w:
         ok = False
-        rep.append(f"✗ Immagine {w}×{h}px — sotto spec "
-                   f"(min {q['min_w']}×{q['min_h']} verticale)")
+        rep.append(f"✗ Immagine {w}×{h}px — orientamento non verticale (h < w)")
+    elif w < q["min_w"] or h < q["min_h"]:
+        if force:
+            rep.append(f"! Immagine {w}×{h}px — sotto spec "
+                       f"(min {q['min_w']}×{q['min_h']}), accettata per --force "
+                       f"(decisione umana: baseline approvata, qualità marginale per stampa)")
+        else:
+            ok = False
+            rep.append(f"✗ Immagine {w}×{h}px — sotto spec "
+                       f"(min {q['min_w']}×{q['min_h']} verticale) — "
+                       f"rigenerare o usare --force per baseline")
     else:
         rep.append(f"✓ Immagine {w}×{h}px")
 
