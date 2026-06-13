@@ -862,3 +862,74 @@ if __name__ == "__main__":
 
     img.save("/home/claude/design_test.png")
     print("Design system test → /home/claude/design_test.png")
+
+
+# ═══════════════════════════════════════════════════════════════════════════
+# DECORI MARINI — vettoriali, stile glifo "disegnato a mano da bambino"
+# ═══════════════════════════════════════════════════════════════════════════
+# Usati nella doppia "Questa è l'isola" per legare la pagina-isola alla
+# pagina-testo: il mare prosegue e si dissolve, con ondine, gabbiani,
+# barchette, pesci. Niente PNG — solo linee curve leggere, come i glifi.
+
+def mare_gradiente(w, h, color, verso="verticale", riflesso=0.0):
+    """
+    Tela mare w×h con gradiente morbido: in alto schiarito (riflesso del
+    cielo), in basso il colore pieno. 'riflesso' (0..1) alza la luce in alto.
+    Ritorna un'immagine RGB. Vettoriale (NumPy) per velocità.
+    """
+    from PIL import Image
+    import numpy as np
+    top = np.array([c + (255 - c) * (0.45 + 0.4*riflesso) for c in color[:3]])
+    bot = np.array([c * 0.82 for c in color[:3]])
+    t = np.linspace(0.0, 1.0, h)
+    t = t*t*(3 - 2*t)                        # easing dolce
+    col = (top[None, :] + (bot - top)[None, :] * t[:, None])  # (h,3)
+    arr = np.repeat(col[:, None, :], w, axis=1).astype("uint8")  # (h,w,3)
+    return Image.fromarray(arr, "RGB")
+
+
+def onde(draw, x0, x1, y, color, width, ampiezza=None, passo=None, fase=0.0):
+    """Una fila di ondine (~~~) leggere, come tratteggio dell'acqua."""
+    import math
+    span = x1 - x0
+    amp = ampiezza if ampiezza is not None else max(3, span * 0.012)
+    step = passo if passo is not None else max(8, span * 0.06)
+    pts = []
+    x = x0
+    while x <= x1:
+        pts.append((x, y + amp * math.sin((x - x0) / step * math.pi + fase)))
+        x += max(2, step / 10)
+    if len(pts) > 1:
+        draw.line(pts, fill=color, width=width, joint="curve")
+
+
+def gabbiano(draw, cx, cy, r, color, width):
+    """Un gabbiano stilizzato: due archi a 'm' morbida (le ali in volo)."""
+    draw.arc([cx - r, cy - r*0.5, cx, cy + r*0.5], 200, 340, fill=color, width=width)
+    draw.arc([cx, cy - r*0.5, cx + r, cy + r*0.5], 200, 340, fill=color, width=width)
+
+
+def barchetta(draw, cx, cy, r, color, width):
+    """Barchetta stilizzata: scafo a mezzaluna + alberetto + vela triangolo."""
+    # scafo
+    draw.arc([cx - r, cy - r*0.35, cx + r, cy + r*0.7], 20, 160, fill=color, width=width)
+    # albero
+    draw.line([(cx, cy - r*0.9), (cx, cy + r*0.15)], fill=color, width=width)
+    # vela (triangolo verso destra)
+    draw.line([(cx, cy - r*0.85), (cx + r*0.7, cy), (cx, cy)],
+              fill=color, width=width, joint="curve")
+
+
+def pesce(draw, cx, cy, r, color, width):
+    """Pesciolino: corpo a goccia (due archi) + codina a V."""
+    draw.arc([cx - r, cy - r*0.5, cx + r*0.6, cy + r*0.5], 30, 330, fill=color, width=width)
+    # coda
+    draw.line([(cx - r, cy), (cx - r*1.4, cy - r*0.35)], fill=color, width=width)
+    draw.line([(cx - r, cy), (cx - r*1.4, cy + r*0.35)], fill=color, width=width)
+
+
+def pesciolino_bolla(draw, cx, cy, r, color, width):
+    """Pesce + una bollicina sopra (vezzo da disegno di bambino)."""
+    pesce(draw, cx, cy, r, color, width)
+    draw.ellipse([cx + r*0.5, cy - r*0.9, cx + r*0.5 + r*0.18, cy - r*0.9 + r*0.18],
+                 outline=color, width=max(1, width - 1))

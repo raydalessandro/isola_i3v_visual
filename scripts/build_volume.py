@@ -816,6 +816,188 @@ def make_presentazione_page(
     return canvas
 
 # ═══════════════════════════════════════════════════════════════════════════
+# RENDERING — DOPPIA "QUESTA È L'ISOLA" (mappa-veduta a sinistra, testo a destra)
+# ═══════════════════════════════════════════════════════════════════════════
+# La voce mappa apre l'atlante con una doppia pagina: pagina sinistra =
+# veduta dell'isola a piena pagina; pagina destra = trafiletto su carta.
+# Così il testo lungo non si sovrappone mai all'immagine.
+
+ISOLA_PANORAMICA = REPO / "visual/atlante/isola/isola_panoramica_v1.jpg"
+
+
+def make_isola_doppia(
+    title: str,
+    text: str,
+    img_path: Path | None = None,
+    volume: int = 1,
+    layout_warnings: list | None = None,
+) -> Image.Image:
+    """
+    Spread "Questa è l'isola": ritorna un'immagine larga IMG_W*2 (sinistra +
+    destra già affiancate), compatibile con build_spread_pdf / build_stampa_pdf.
+    Sinistra: veduta isola full-bleed (cover-fit). Destra: trafiletto su carta
+    con eyebrow, nome+glifo, capolettera e firma — stesso linguaggio atlante.
+    """
+    src = img_path or ISOLA_PANORAMICA
+    import numpy as np
+    vento    = _quartiere_color_for(title)
+    slug     = _title_to_slug(title)
+    motifs   = DS.MOTIF_MAP.get(slug, DS.DEFAULT_MOTIFS)
+    glifo_fn = DS.GLIFO_VENTO.get(VOLUME_CONFIG[volume]["ciclo"], DS.glifo_mulinello)
+
+    # ── PAGINA SINISTRA — la veduta dell'isola, satura, protagonista ──────
+    # L'isola riempie tutta la larghezza. Sul bordo ESTERNO (sinistro = taglio
+    # del libro) l'immagine si sfuma dolcemente, così non c'è stacco netto col
+    # margine. Sul bordo interno (verso la piega) prosegue piena: di là il mare
+    # entra nella pagina-testo. Nessun decoro qui: l'immagine è già satura.
+    mare = DS.CICLO_COLOR.get(VOLUME_CONFIG[volume]["ciclo"], DS.VENTO_TAGLIO)
+    left = DS.mare_gradiente(IMG_W, IMG_H, mare, riflesso=0.5)
+    if src and Path(src).exists():
+        isola = Image.open(src).convert("RGB")
+        ok, quality_desc = (check_tavola_quality(Path(src)) if src == ISOLA_PANORAMICA
+                            else check_image_quality(Path(src)))
+        # Scala per ALTEZZA piena: l'immagine resta INTERA in verticale
+        # (titolo in alto e pontile in basso dentro), nessun crop. L'isola si
+        # ancora al bordo esterno (sinistro); lo spazio residuo a destra va
+        # verso la piega, dove il mare-gradiente prosegue nella pagina-testo.
+        sw, sh = isola.size
+        scale = IMG_H / sh
+        nw, nh = int(round(sw * scale)), IMG_H
+        isola_fit = isola.resize((nw, nh), Image.LANCZOS)
+        oy = 0
+        # Sfumatura sul bordo ESTERNO (sinistro): l'immagine si dissolve nel
+        # mare-gradiente sottostante lungo una fascia stretta.
+        fade_w = int(IMG_W * 0.10)
+        a = isola_fit.convert("RGB")
+        amask = np.full((nh, nw), 255, dtype="uint8")
+        ramp = (np.linspace(0.0, 1.0, fade_w) ** 1.4 * 255).astype("uint8")
+        amask[:, :fade_w] = ramp[None, :]
+        left.paste(a, (0, oy), Image.fromarray(amask, "L"))
+        if not ok:
+            left = add_quality_banner(left, Path(src), quality_desc)
+            log.warning("Veduta isola sotto spec: %s", quality_desc)
+            if layout_warnings is not None:
+                layout_warnings.append({
+                    "entry": f"[IMMAGINE SOTTO SPEC] {title}",
+                    "troncato_dopo": "", "testo_tagliato": "",
+                    "suggerimento": (
+                        f'Sostituire veduta isola con versione HD '
+                        f'(min {TX_W}×{TX_H}px). File: {Path(src).name} ({quality_desc})'
+                    ),
+                })
+    else:
+        log.warning("Veduta isola non trovata: %s", src)
+        d0 = ImageDraw.Draw(left)
+        d0.text((BLEED_PX + 60, IMG_H - 120), "[veduta isola in lavorazione]",
+                font=fnt(36), fill=(180, 162, 138))
+
+    # ── PAGINA DESTRA — trafiletto su carta, col mare che entra da sinistra ─
+    right = Image.blend(Image.new("RGB", (IMG_W, IMG_H), DS.PAPER),
+                        Image.new("RGB", (IMG_W, IMG_H), vento), 0.03)
+    # Fascia di mare sul bordo SINISTRO (confine con l'isola) che si dissolve
+    # nella carta: continuità visiva tra le due pagine, niente taglio netto.
+    band_w = int(IMG_W * 0.30)
+    sea = DS.mare_gradiente(band_w, IMG_H, mare, riflesso=0.5)
+    # maschera orizzontale: piena a sinistra (x=0), 0 verso destra (dissolve).
+    # Coda lunga e morbida (cubica) così il passaggio è impercettibile.
+    xs = 1.0 - np.linspace(0.0, 1.0, band_w)
+    col = (255 * xs**3).astype("uint8")             # (band_w,)
+    mask_arr = np.repeat(col[None, :], IMG_H, axis=0)  # (IMG_H, band_w)
+    mask = Image.fromarray(mask_arr, "L")
+    right.paste(sea, (0, 0), mask)
+    # decori marini ancorati alla fascia (dove c'è acqua, non nel bianco)
+    dR = ImageDraw.Draw(right)
+    deco_r = DS.tint_color(mare, 0.32)
+    sea_mid = int(band_w * 0.34)     # centro visivo della parte ancora "mare"
+    DS.onde(dR, int(band_w*0.06), int(band_w*0.58), int(IMG_H*0.20), deco_r, max(2,IMG_W//1000))
+    DS.gabbiano(dR, sea_mid, int(IMG_H*0.115), int(band_w*0.13), deco_r, max(2,IMG_W//1000))
+    DS.gabbiano(dR, int(sea_mid*1.4), int(IMG_H*0.14), int(band_w*0.09), deco_r, max(2,IMG_W//1100))
+    DS.barchetta(dR, sea_mid, int(IMG_H*0.48), int(band_w*0.15), deco_r, max(2,IMG_W//950))
+    DS.pesce(dR, int(band_w*0.30), int(IMG_H*0.64), int(band_w*0.11), deco_r, max(2,IMG_W//1050))
+    DS.onde(dR, int(band_w*0.06), int(band_w*0.52), int(IMG_H*0.82), deco_r, max(2,IMG_W//1000), fase=0.9)
+    draw = ImageDraw.Draw(right)
+    MX = int(band_w * 0.66) + int(TX_W * 0.04)   # testo oltre la fascia mare
+    RW = (IMG_W - BLEED_PX - int(TX_W * 0.10)) - MX   # larghezza utile testo
+    y  = BLEED_PX + int(TX_H * 0.075)
+
+    f_eye = DS.font_weighted("sans", int(FS_SMALL*0.82), 700)
+    ex = MX
+    for ch in "UN LUOGO DELL'ISOLA":
+        draw.text((ex, y), ch, font=f_eye, fill=vento)
+        ex += draw.textlength(ch, font=f_eye) + 4
+    y += int(TX_H * 0.030)
+
+    f_name = DS.font_weighted("display", int(TX_W*0.072), 450)
+    draw.text((MX, y), title, font=f_name, fill=DS.INK)
+    name_w = draw.textlength(title, font=f_name)
+    glifo_fn(draw, int(MX + name_w + TX_W*0.045), int(y + TX_W*0.032),
+             int(TX_W*0.020), vento, max(2, TX_W//500))
+    y += int(TX_H * 0.082)
+
+    # corpo con capolettera nel colore-vento
+    fs = FS_BODY
+    LH = LH_BODY
+    f_body = fnt(fs)
+    f_drop = DS.font_weighted("display", int(fs*2.05), 500)
+    first, rest = text[0], text[1:]
+    d_box = draw.textbbox((0, 0), first, font=f_drop)
+    drop_h = d_box[3] - d_box[1]
+    draw.text((MX, y - d_box[1]), first, font=f_drop, fill=vento)
+    indent = int((d_box[2] - d_box[0]) + TX_W*0.012)
+    drop_lines = max(2, -(-drop_h // LH))
+
+    words = rest.strip().split()
+    yy, line_no, i = y, 0, 0
+    max_y = BLEED_PX + int(TX_H * 0.88)
+    lines: list[tuple[str, int, int]] = []
+    while i < len(words) and yy + LH <= max_y:
+        xoff = indent if line_no < drop_lines else 0
+        w_av = RW - xoff
+        cur = ""
+        while i < len(words):
+            t = (cur + " " + words[i]).strip()
+            if draw.textlength(t, font=f_body) <= w_av:
+                cur = t; i += 1
+            else:
+                break
+        if not cur:
+            cur = words[i]; i += 1
+        lines.append((cur, MX + xoff, yy)); yy += LH; line_no += 1
+
+    if i < len(words) and layout_warnings is not None:
+        remainder = " ".join(words[i:]).strip()
+        if remainder:
+            layout_warnings.append({
+                "entry": title,
+                "troncato_dopo": (lines[-1][0][-60:] if lines else ""),
+                "testo_tagliato": remainder,
+                "suggerimento": (
+                    f'Accorciare "{title}" di ~{len(remainder.split())} parole '
+                    f"in presentazioni_parziali.md"
+                ),
+            })
+    for ln, x_at, ly in lines:
+        draw.text((x_at, ly), ln, font=f_body, fill=DS.INK)
+
+    # firma in basso (pagina destra)
+    fy = BLEED_PX + int(TX_H * 0.90)
+    obj_motif = motifs[-1] if motifs else None
+    if obj_motif:
+        obj_motif(draw, MX + int(TX_W*0.32), fy, int(TX_W*0.026), vento)
+    glifo_fn(draw, MX + int(TX_W*0.48), fy, int(TX_W*0.020), vento, max(2, TX_W//500))
+    cx = MX + RW // 2
+    DS.separatore_camuno(draw, cx - int(TX_W*0.14), cx + int(TX_W*0.14),
+                         fy + int(TX_H*0.030), DS.tint_color(vento, 0.35),
+                         max(2, TX_W//560))
+
+    # ── Affianca: spread larga IMG_W*2 ───────────────────────────────────
+    spread = Image.new("RGB", (IMG_W * 2 + SCALE * 4, IMG_H), (165, 155, 142))
+    spread.paste(left, (0, 0))
+    spread.paste(right, (IMG_W + SCALE * 4, 0))
+    return spread
+
+
+# ═══════════════════════════════════════════════════════════════════════════
 # RENDERING — PAGINA ATLANTE A TAVOLA (taccuino del naturalista)
 # ═══════════════════════════════════════════════════════════════════════════
 # Le tavole sono immagini full-page SENZA TESTO (visual/atlante/tavole/),
@@ -888,6 +1070,34 @@ def _cover_fit(img: Image.Image, w: int, h: int) -> Image.Image:
     x0 = (nw - w) // 2
     y0 = (nh - h) // 2
     return img.crop((x0, y0, x0 + w, y0 + h))
+
+
+def _contain_fit(img: Image.Image, w: int, h: int) -> Image.Image:
+    """
+    Mostra l'immagine INTERA dentro w×h (niente crop), centrata. Le bande
+    di riempimento prendono il colore medio del bordo corrispondente
+    dell'immagine (per la veduta isola = il mare), così la cornice non
+    stacca e sembra continuità.
+    """
+    sw, sh = img.size
+    scale = min(w / sw, h / sh)
+    nw, nh = max(1, int(round(sw * scale))), max(1, int(round(sh * scale)))
+    resized = img.resize((nw, nh), Image.LANCZOS)
+    # colore di fondo: media dei bordi laterali (o sup/inf) dell'immagine
+    if nw < w:   # bande verticali ai lati → campiona colonne di bordo
+        left_col  = resized.crop((0, 0, 2, nh))
+        right_col = resized.crop((nw - 2, 0, nw, nh))
+        bg = tuple(int((a + b) / 2) for a, b in zip(
+            ImageStat.Stat(left_col).mean, ImageStat.Stat(right_col).mean))
+    else:        # bande orizzontali sopra/sotto → campiona righe di bordo
+        top_row = resized.crop((0, 0, nw, 2))
+        bot_row = resized.crop((0, nh - 2, nw, nh))
+        bg = tuple(int((a + b) / 2) for a, b in zip(
+            ImageStat.Stat(top_row).mean, ImageStat.Stat(bot_row).mean))
+    bg = tuple(max(0, min(255, c)) for c in bg[:3])
+    canvas = Image.new("RGB", (w, h), bg)
+    canvas.paste(resized, ((w - nw) // 2, (h - nh) // 2))
+    return canvas
 
 
 def _quiet_zone(canvas: Image.Image, box: tuple[int, int, int, int],
@@ -992,15 +1202,21 @@ def make_atlante_plate_page(
     f_body = fnt(fs)
     f_drop = DS.font_weighted("display", int(fs*2.05), 500)
     first, rest = text[0], text[1:]
-    draw.text((cx, cy - int(fs*0.10)), first, font=f_drop, fill=vento)
-    indent = int(draw.textlength(first, font=f_drop) + TX_W*0.010)
+    # Allinea la cima della lettera alla cima della prima riga (bbox-aware:
+    # i font display hanno spesso un offset interno verso il basso).
+    d_box = draw.textbbox((0, 0), first, font=f_drop)
+    drop_h = d_box[3] - d_box[1]
+    draw.text((cx, cy - d_box[1]), first, font=f_drop, fill=vento)
+    indent = int((d_box[2] - d_box[0]) + TX_W*0.012)
+    # Quante righe di corpo "abbraccia" il capolettera: solo quelle rientrano.
+    drop_lines = max(2, -(-drop_h // LH))   # ceil
 
     words = rest.strip().split()
     lines: list[tuple[str, int, int]] = []
     yy, line_no, i = cy, 0, 0
     max_y = cy + chh
     while i < len(words) and yy + LH <= max_y:
-        xoff = indent if line_no < 2 else 0
+        xoff = indent if line_no < drop_lines else 0
         w_av = cw - xoff
         cur = ""
         while i < len(words):
@@ -1046,7 +1262,128 @@ def make_atlante_plate_page(
 # RENDERING — PAGINA STORIA (illustrata)
 # ═══════════════════════════════════════════════════════════════════════════
 
-def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
+# ═══════════════════════════════════════════════════════════════════════════
+# FRASI-ORACOLO — evidenziazione parole-chiave inline (stile "isola")
+# ═══════════════════════════════════════════════════════════════════════════
+# Le parole-chiave delle frasi-oracolo si marcano nel testo con *asterischi*:
+#   «Le cose della *Foresta* hanno il loro *orario*.»
+# Restano INLINE (nessuna riga aggiunta, nessuno spazio rubato all'immagine):
+# il testo normale è in Lora, le parole-chiave in Fredoka leggermente più
+# grande e nel colore-vento del ciclo. Il marker non appare mai nel libro.
+
+_ORACOLO_RE = re.compile(r"\*([^*\n]+)\*")
+
+
+def _font_oracolo(base_fs: int) -> ImageFont.FreeTypeFont:
+    """Fredoka per le parole-chiave (tondo, giocoso), un filo più grande."""
+    if DS.F_MARK and DS.F_MARK.exists():
+        return ImageFont.truetype(str(DS.F_MARK), int(base_fs * 1.10))
+    return fnt(int(base_fs * 1.10))
+
+
+def _parse_rich(text: str) -> list[tuple[str, bool]]:
+    """Spezza una stringa in segmenti (testo, is_keyword) sui marker *...*."""
+    segs: list[tuple[str, bool]] = []
+    pos = 0
+    for m in _ORACOLO_RE.finditer(text):
+        if m.start() > pos:
+            segs.append((text[pos:m.start()], False))
+        segs.append((m.group(1), True))
+        pos = m.end()
+    if pos < len(text):
+        segs.append((text[pos:], False))
+    return segs
+
+
+def has_oracolo(text: str) -> bool:
+    return bool(_ORACOLO_RE.search(text))
+
+
+def strip_oracolo(text: str) -> str:
+    """Rimuove i marker *...* lasciando le parole (per misure di lunghezza)."""
+    return _ORACOLO_RE.sub(r"\1", text)
+
+
+def rich_word_wrap(text: str, f_body: ImageFont.FreeTypeFont,
+                   f_key: ImageFont.FreeTypeFont, max_w: int,
+                   draw: ImageDraw.ImageDraw) -> list[list[tuple[str, bool, bool]]]:
+    """
+    Word-wrap che conosce le parole-chiave: ritorna righe, ogni riga è una
+    lista di token (parola, is_keyword, attaccato_al_precedente). La larghezza
+    di ogni token usa il font giusto; 'attaccato' evita lo spazio spurio tra
+    una keyword e la punteggiatura che la segue (es. «...orario.»).
+    """
+    def tok_w(word: str, key: bool) -> float:
+        return draw.textlength(word, font=(f_key if key else f_body))
+    space_w = draw.textlength(" ", font=f_body)
+
+    rows: list[list[tuple[str, bool, bool]]] = []
+    for para in text.split("\n"):
+        if not para.strip():
+            rows.append([])
+            continue
+        # Costruisco token (parola, key, glued): glued=True → niente spazio prima.
+        toks: list[tuple[str, bool, bool]] = []
+        segs = _parse_rich(para)
+        for si, (seg, key) in enumerate(segs):
+            parts = seg.split(" ")
+            for pi, w in enumerate(parts):
+                if w == "":
+                    continue
+                # glued se: è il primo pezzo di un segmento che NON inizia con
+                # spazio e segue un altro segmento senza spazio intermedio.
+                glued = False
+                if pi == 0 and toks:
+                    # il segmento precedente finiva senza spazio e questo non
+                    # inizia con spazio → attaccato (es. keyword + ".")
+                    prev_seg = segs[si-1][0] if si > 0 else ""
+                    if not prev_seg.endswith(" ") and not seg.startswith(" "):
+                        glued = True
+                toks.append((w, key, glued))
+
+        cur: list[tuple[str, bool, bool]] = []
+        cur_w = 0.0
+        for word, key, glued in toks:
+            ww = tok_w(word, key)
+            add = ww if (not cur or glued) else space_w + ww
+            if cur and not glued and cur_w + add > max_w:
+                rows.append(cur)
+                cur = [(word, key, False)]; cur_w = ww
+            else:
+                cur.append((word, key, glued)); cur_w += add
+        if cur:
+            rows.append(cur)
+    return rows
+
+
+def draw_rich_row(draw: ImageDraw.ImageDraw, x: int, y: int,
+                  row: list[tuple[str, bool, bool]],
+                  f_body: ImageFont.FreeTypeFont,
+                  f_key: ImageFont.FreeTypeFont,
+                  ink, key_color) -> None:
+    """Disegna una riga di token, parole-chiave in Fredoka+colore-vento.
+    Le keyword sono allineate per baseline col corpo (Fredoka è più alto).
+    Il flag 'glued' sopprime lo spazio prima del token (punteggiatura)."""
+    space_w = draw.textlength(" ", font=f_body)
+    body_asc = f_body.getmetrics()[0]
+    key_asc  = f_key.getmetrics()[0]
+    dy = body_asc - key_asc
+    cx = x
+    first = True
+    for word, key, glued in row:
+        if not first and not glued:
+            cx += space_w
+        first = False
+        if key:
+            draw.text((cx, y + dy), word, font=f_key, fill=key_color)
+            cx += draw.textlength(word, font=f_key)
+        else:
+            draw.text((cx, y), word, font=f_body, fill=ink)
+            cx += draw.textlength(word, font=f_body)
+
+
+def compose_story_page(img_path: Path | None, text: str,
+                       key_color=None) -> Image.Image:
     """
     Compone una pagina storia:
     - Se esiste la HD (_hd/), la carica direttamente (già ≥1664×2496)
@@ -1077,12 +1414,15 @@ def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
         label = resolved.name if resolved else "in lavorazione"
         draw.text((MX2, IMG_H - 100), f"[{label}]", font=fnt(36), fill=(180, 162, 138))
         if text.strip():
-            f     = fnt(FS)
-            lines = word_wrap(text, f, IMG_W - 2*MX2, draw)
-            y     = MT
-            for ln in lines:
-                if ln == "": y += PGS; continue
-                draw.text((MX2, y), ln, font=f, fill=STORY_INK); y += LH
+            f      = fnt(FS)
+            f_key  = _font_oracolo(FS)
+            kc     = key_color or DS.DEFAULT_QUARTIERE_COLOR
+            rows   = rich_word_wrap(text, f, f_key, IMG_W - 2*MX2, draw)
+            y      = MT
+            for row in rows:
+                if not row: y += PGS; continue
+                draw_rich_row(draw, MX2, y, row, f, f_key, STORY_INK, kc)
+                y += LH
         return img
 
     # Carica e controlla qualità
@@ -1103,10 +1443,12 @@ def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
     # ── Testo ADATTIVO: dentro l'illustrazione, con schiarita dolce ───────
     # Ancora: alto (default). Se la fascia alta è occupata da un soggetto
     # importante o troppo scura, lo script sposta in basso e/o schiarisce.
-    f     = fnt(FS)
-    d0    = ImageDraw.Draw(img)
-    lines = word_wrap(text, f, IMG_W - 2*MX2, d0)
-    n_lines = len([l for l in lines if l])
+    f      = fnt(FS)
+    f_key  = _font_oracolo(FS)
+    kc     = key_color or DS.DEFAULT_QUARTIERE_COLOR
+    d0     = ImageDraw.Draw(img)
+    rows   = rich_word_wrap(text, f, f_key, IMG_W - 2*MX2, d0)
+    n_lines = len([r for r in rows if r])
     block_h = n_lines * LH + MT + int(FS * 0.8)
 
     def zone_metrics(y0, y1):
@@ -1145,10 +1487,10 @@ def compose_story_page(img_path: Path | None, text: str) -> Image.Image:
 
     draw = ImageDraw.Draw(img)
     y = MT if zone == "top" else (y0z + MT)
-    for ln in lines:
-        if ln == "":
+    for row in rows:
+        if not row:
             y += PGS; continue
-        draw.text((MX2, y), ln, font=f, fill=STORY_INK)
+        draw_rich_row(draw, MX2, y, row, f, f_key, STORY_INK, kc)
         y += LH
 
     # Applica banner qualità sulle storie sotto spec
@@ -1295,9 +1637,15 @@ def make_title_map_page(title: str, sid: str, map_path: Path | None = None) -> I
     return img
 
 
+def _facciate(pages: list) -> int:
+    """Conta le facciate reali: uno spread occupa 2 facciate, un single 1."""
+    return sum(2 if k == "spread" else 1 for k, _ in pages)
+
+
 def ensure_recto(pages: list) -> list:
-    """Aggiunge una bianca se necessario perché la prossima pagina cada su recto."""
-    if len(pages) % 2 == 1:
+    """Aggiunge una bianca se necessario perché la prossima pagina cada su recto.
+    Conta gli spread come 2 facciate (altrimenti la parità si sfasa)."""
+    if _facciate(pages) % 2 == 1:
         return pages + [("single", make_blank())]
     return pages
 
@@ -1686,10 +2034,10 @@ def make_soglia_ingresso(titolo_sezione: str = "L'isola dorme") -> Image.Image:
 # COSTRUZIONE PAGINE STORIA
 # ═══════════════════════════════════════════════════════════════════════════
 
-def build_story_pages(sid: str) -> list[tuple[str, Image.Image]]:
+def build_story_pages(sid: str, key_color=None) -> list[tuple[str, Image.Image]]:
     pages: list[tuple[str, Image.Image]] = []
     for sh in parse_story_md(sid):
-        img = compose_story_page(sh["image_path"], sh["text"])
+        img = compose_story_page(sh["image_path"], sh["text"], key_color=key_color)
         if sh["layout"] == "double_spread" or isinstance(sh["page_book"], list):
             sp = Image.new("RGB", (IMG_W * 2 + SCALE * 4, IMG_H), (165, 155, 142))
             sp.paste(img, (0, 0))
@@ -1755,6 +2103,12 @@ def build_volume_pages(
                   "il quartiere d'acqua", "il mercato del mezzogiorno"}
         for t, body in entries:
             kind = "luogo" if t.lower() in luoghi else "personaggio"
+            # "Questa è l'isola": doppia pagina (veduta isola sx + testo dx).
+            if _title_to_slug(t) == "questa_l_isola":
+                print(f"    · {t}: doppia isola (spread)")
+                pages.append(("spread", make_isola_doppia(
+                    t, body, volume=volume, layout_warnings=layout_warnings)))
+                continue
             # Tavola naturalistica (visual/atlante/) se pronta nello spec;
             # altrimenti layout classico — degradazione dolce.
             atl = atlante_entry_for(t) if usa_atlante else None
@@ -1826,7 +2180,9 @@ def build_volume_pages(
             pages = ensure_recto(pages)
         else:
             add(make_text_pages("", title=title))
-        pages.extend(build_story_pages(sid))
+        ciclo = VOLUME_CONFIG[volume]["ciclo"]
+        pages.extend(build_story_pages(
+            sid, key_color=DS.CICLO_COLOR.get(ciclo, DS.DEFAULT_QUARTIERE_COLOR)))
 
     # ── Sezioni finali ────────────────────────────────────────────────────
     if not solo_storie:
@@ -1855,11 +2211,12 @@ def build_volume_pages(
         voci_num = build_indice_voci_numerate(volume, storie, posizione_pres, toc_marks)
         pages[indice_page_idx[0]] = ("single", make_indice(volume, voci_num))
 
-    # ── Garanzia KDP: numero di pagine pari ───────────────────────────────
-    if len(pages) % 2 == 1:
+    # ── Garanzia KDP: numero di facciate pari (spread = 2 facciate) ───────
+    if _facciate(pages) % 2 == 1:
         pages.append(("single", make_blank()))
 
-    print(f"  Totale pagine: {len(pages)}")
+    print(f"  Totale facciate: {_facciate(pages)} "
+          f"({len(pages)} elementi, {sum(1 for k,_ in pages if k=='spread')} spread)")
     return pages, layout_warnings
 
 # ═══════════════════════════════════════════════════════════════════════════

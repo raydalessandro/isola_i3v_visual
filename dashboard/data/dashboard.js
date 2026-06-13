@@ -1,8 +1,8 @@
 window.DASHBOARD_DATA = {
- "generated_at": "2026-06-13T14:11:12+00:00",
+ "generated_at": "2026-06-13T20:15:55+00:00",
  "head": {
-  "sha": "9f6b51f",
-  "date": "2026-06-13T11:08:14+02:00"
+  "sha": "01e22af",
+  "date": "2026-06-13T22:09:10+02:00"
  },
  "agent_entry": {
   "sequence": [
@@ -432,10 +432,10 @@ window.DASHBOARD_DATA = {
   },
   {
    "path": "_output/vol1_pres-dopo_s01_LAYOUT_WARNINGS.md",
-   "bytes": 1320,
-   "lines": 21,
-   "tokens_est": 330,
-   "mtime": "2026-06-10T14:45:03.253304+00:00",
+   "bytes": 3321,
+   "lines": 105,
+   "tokens_est": 830,
+   "mtime": "2026-06-13T20:15:40.541006+00:00",
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/_output/vol1_pres-dopo_s01_LAYOUT_WARNINGS.md",
    "category": "operativo",
    "preview": "_Generato da `build_volume.py`. Non modificare._"

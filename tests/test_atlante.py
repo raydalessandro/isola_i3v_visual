@@ -229,6 +229,76 @@ def test_binomio_renderizzato_senza_errori(bv, tavola_finta):
     assert img.size == (bv.TX_W, bv.TX_H)
 
 
+# ═══ 5bis. DOPPIA ISOLA — spread mappa+testo ════════════════════════════════
+
+def test_isola_doppia_e_uno_spread(bv):
+    """make_isola_doppia ritorna un'immagine larga ~IMG_W*2 (left+right)."""
+    img = bv.make_isola_doppia("Questa è l'isola", "Questa è l'isola dei venti.",
+                               volume=1)
+    assert img.height == bv.IMG_H
+    assert img.width >= bv.IMG_W * 2          # due facciate affiancate
+    assert img.width <= bv.IMG_W * 2 + 100    # solo la gutter di mezzo
+
+
+def test_isola_doppia_fallback_senza_immagine(bv, tmp_path):
+    """Immagine assente → niente crash, placeholder, spread valido."""
+    fantasma = tmp_path / "non_esiste.jpg"
+    img = bv.make_isola_doppia("Questa è l'isola", "Testo.", img_path=fantasma,
+                               volume=1)
+    assert img.height == bv.IMG_H and img.width >= bv.IMG_W * 2
+
+
+def test_isola_doppia_warning_sotto_spec(bv, tmp_path):
+    small = tmp_path / "isola_piccola.jpg"
+    Image.new("RGB", (800, 1100), (160, 180, 170)).save(small, "JPEG")
+    warns = []
+    bv.make_isola_doppia("Questa è l'isola", "Testo.", img_path=small,
+                         volume=1, layout_warnings=warns)
+    assert any("SOTTO SPEC" in w["entry"] for w in warns)
+
+
+def test_isola_doppia_deterministica(bv):
+    a = bv.make_isola_doppia("Questa è l'isola", "Testo di prova.", volume=1)
+    b = bv.make_isola_doppia("Questa è l'isola", "Testo di prova.", volume=1)
+    assert a.tobytes() == b.tobytes()
+
+
+def test_isola_doppia_testo_lungo_non_crasha(bv):
+    img = bv.make_isola_doppia("Questa è l'isola", "parola " * 400, volume=1)
+    assert img.height == bv.IMG_H
+
+
+def test_capolettera_non_invade_terza_riga(bv, tavola_finta, spec):
+    """Il capolettera deve far rientrare le prime righe e liberare le
+    successive: confronto il margine sinistro del testo riga per riga.
+    Render reale di una tavola e analisi delle colonne d'inchiostro."""
+    import numpy as np
+    txt = ("Questa è una prova lunga abbastanza da generare diverse righe di "
+           "testo nel corpo della scheda, così da poter osservare il rientro "
+           "del capolettera nelle prime due righe e il ritorno a piena "
+           "larghezza dalla terza riga in avanti, come deve essere.")
+    img = bv.make_atlante_plate_page("Fiamma", txt, tavola_finta,
+                                     volume=1, variante_id="A")
+    Z = spec["varianti"]["A"]["zone"]["corpo"]
+    x0 = int(Z["x"] * bv.TX_W); y0 = int(Z["y"] * bv.TX_H)
+    w  = int(Z["w"] * bv.TX_W); h = int(Z["h"] * bv.TX_H)
+    arr = np.asarray(img.convert("L").crop((x0, y0, x0 + w, y0 + h)))
+    # Per ogni riga di pixel, prima colonna "scura" (inchiostro)
+    dark = arr < 110
+    left_edges = []
+    for row in dark:
+        nz = np.nonzero(row)[0]
+        if nz.size:
+            left_edges.append(int(nz[0]))
+    assert left_edges, "nessun testo rilevato nella zona corpo"
+    # Il bordo sinistro minimo (righe a piena larghezza, sotto il capolettera)
+    # deve trovarsi più a sinistra del bordo delle righe rientrate.
+    min_left = min(left_edges)
+    max_left = max(left_edges)
+    assert max_left - min_left > int(bv.TX_W * 0.02), \
+        "il rientro del capolettera non è visibile (testo non rientrato)"
+
+
 # ═══ 6. INGEST — manifest verificato, mai creduto ═══════════════════════════
 
 @pytest.fixture(scope="session")
@@ -362,3 +432,111 @@ def test_ingest_aggiorna_spec_e_ripristino(ingest, bv, spec, tmp_path):
         assert voce["variante"] == "D"
     finally:
         SPEC_PATH.write_text(backup, encoding="utf-8")
+
+
+# ═══ 7. PARITÀ FACCIATE CON SPREAD — KDP richiede pagine pari ═══════════════
+
+def test_facciate_conta_spread_come_due(bv):
+    pagine = [("single", None), ("spread", None), ("single", None)]
+    assert bv._facciate(pagine) == 4
+
+
+def test_ensure_recto_con_spread(bv):
+    """ensure_recto deve pareggiare contando lo spread come 2 facciate."""
+    # 1 spread (2) + 1 single (1) = 3 facciate → dispari → aggiunge bianca
+    pagine = [("spread", bv.make_blank()), ("single", bv.make_blank())]
+    out = bv.ensure_recto(pagine)
+    assert bv._facciate(out) % 2 == 0
+
+
+def test_volume_intero_facciate_pari(bv):
+    """Il volume 1 completo (con la doppia isola) deve avere facciate pari."""
+    pages, _ = bv.build_volume_pages(1)
+    assert bv._facciate(pages) % 2 == 0, \
+        f"{bv._facciate(pages)} facciate (dispari) — KDP richiede pari"
+
+
+# ═══ 8. FRASI-ORACOLO — evidenziazione inline parole-chiave ═════════════════
+
+def test_oracolo_parse_segmenti(bv):
+    segs = bv._parse_rich("Le cose della *Foresta* hanno il loro *orario*.")
+    assert ("Foresta", True) in segs and ("orario", True) in segs
+    assert any(not k for _, k in segs)  # c'è anche testo normale
+
+
+def test_oracolo_has_e_strip(bv):
+    s = "Le cose della *Foresta* hanno il loro *orario*."
+    assert bv.has_oracolo(s)
+    assert bv.strip_oracolo(s) == "Le cose della Foresta hanno il loro orario."
+    assert not bv.has_oracolo("frase normale senza marker")
+
+
+def test_oracolo_punteggiatura_attaccata(bv):
+    """La keyword seguita da punteggiatura non deve avere spazio spurio."""
+    from PIL import Image, ImageDraw
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    f = bv.fnt(50); fk = bv._font_oracolo(50)
+    rows = bv.rich_word_wrap("«Le cose della *Foresta* hanno il loro *orario*.»",
+                             f, fk, 1500, d)
+    flat = [t for r in rows for t in r]
+    # il token di chiusura ".»" deve essere glued (attaccato a orario)
+    chius = [t for t in flat if t[0] == ".»"]
+    assert chius and chius[0][2] is True, "punteggiatura finale non attaccata"
+
+
+def test_oracolo_wrap_non_sfora(bv):
+    """Le keyword in Fredoka (più larghe) non devono sforare il margine."""
+    from PIL import Image, ImageDraw
+    d = ImageDraw.Draw(Image.new("RGB", (10, 10)))
+    f = bv.fnt(50); fk = bv._font_oracolo(50)
+    maxw = 900
+    rows = bv.rich_word_wrap("Una frase con *parolemoltolunghe* e *altrekeyword* "
+                             "che messe in fila *potrebbero* sforare il margine.",
+                             f, fk, maxw, d)
+    for row in rows:
+        w = 0.0
+        space = d.textlength(" ", font=f)
+        for i, (word, key, glued) in enumerate(row):
+            ww = d.textlength(word, font=(fk if key else f))
+            w += ww if (i == 0 or glued) else space + ww
+        assert w <= maxw + 1, f"riga sfora: {w} > {maxw}"
+
+
+def test_oracolo_rendering_pagina_non_crasha(bv):
+    import design_system as DS
+    shs = bv.parse_story_md("s03")
+    target = [s for s in shs if "orario" in s["text"]]
+    assert target, "frase-oracolo di s03 non trovata (marker rimosso?)"
+    img = bv.compose_story_page(target[0]["image_path"], target[0]["text"],
+                                key_color=DS.CICLO_COLOR["Δ"])
+    assert img.size == (bv.IMG_W, bv.IMG_H)
+
+
+# ═══ 9. DOPPIA ISOLA — mare di collegamento e decori vettoriali ═════════════
+
+def test_primitive_marine_esistono(bv):
+    import design_system as DS
+    for fn in ("mare_gradiente", "onde", "gabbiano", "barchetta", "pesce"):
+        assert hasattr(DS, fn), f"manca primitiva marina {fn}"
+
+
+def test_mare_gradiente_dimensioni_e_tipo(bv):
+    import design_system as DS
+    img = DS.mare_gradiente(200, 400, DS.VENTO_TAGLIO, riflesso=0.5)
+    assert img.size == (200, 400) and img.mode == "RGB"
+    # la riga in alto deve essere più chiara di quella in basso (riflesso cielo)
+    top = img.getpixel((100, 2)); bot = img.getpixel((100, 398))
+    assert sum(top) > sum(bot), "il gradiente non schiarisce verso l'alto"
+
+
+def test_isola_doppia_con_mare_non_crasha(bv):
+    img = bv.make_isola_doppia("Questa è l'isola",
+                               "Questa è l'isola dei tre venti. " * 8, volume=1)
+    assert img.height == bv.IMG_H and img.width >= bv.IMG_W * 2
+
+
+def test_isola_doppia_mare_per_ogni_ciclo(bv):
+    """Il colore del mare segue il ciclo del volume: nessun volume crasha."""
+    for vol in (1, 2, 3, 4):
+        img = bv.make_isola_doppia("Questa è l'isola", "Testo di prova.", volume=vol)
+        assert img.height == bv.IMG_H
