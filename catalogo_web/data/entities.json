@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-13T20:21:50",
+  "generated_at": "2026-06-13T20:30:14",
   "meta": {
-    "generated_at": "2026-06-13T20:21:50",
+    "generated_at": "2026-06-13T20:30:14",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -681,7 +681,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "forest",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/quartiere_terra/foresta_intrecciata"
               }
             },
@@ -693,7 +693,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "fields",
                 "status": "provvisorio",
-                "n_images": 1,
+                "n_images": 2,
                 "folder_path": "visual/luoghi/quartiere_terra/orti_del_cerchio"
               }
             },
@@ -1121,7 +1121,7 @@
             "famiglia": "oggetto",
             "sottotipo": "oggetto_di_scena_ricorrente",
             "status": "provvisorio",
-            "n_images": 0,
+            "n_images": 1,
             "folder_path": "visual/oggetti/pallone_di_stoffa_cucita"
           }
         },
@@ -4909,8 +4909,14 @@
         "quartiere_terra",
         "foresta_intrecciata"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "foresta_intrecciata_canonica_v1_interno.jpg",
+          "path": "visual/luoghi/quartiere_terra/foresta_intrecciata/immagini/foresta_intrecciata_canonica_v1_interno.jpg",
+          "size_kb": 526
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "tana_rovo",
@@ -5164,12 +5170,17 @@
       ],
       "images": [
         {
+          "filename": "orti_del_cerchio_canonica_v1_coltivatori_al_lavoro.jpg",
+          "path": "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_coltivatori_al_lavoro.jpg",
+          "size_kb": 314
+        },
+        {
           "filename": "orti_del_cerchio_canonica_v1_panoramica.jpg",
           "path": "visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg",
           "size_kb": 387
         }
       ],
-      "n_images": 1
+      "n_images": 2
     },
     {
       "id": "sentiero_casa_salvia_casa_zolla",
@@ -7223,8 +7234,14 @@
         "oggetti",
         "pallone_di_stoffa_cucita"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "pallone_di_stoffa_cucita_canonica_v1_fronte.jpg",
+          "path": "visual/oggetti/pallone_di_stoffa_cucita/immagini/pallone_di_stoffa_cucita_canonica_v1_fronte.jpg",
+          "size_kb": 327
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "scialle_stria",
