@@ -5,3 +5,4 @@
 PyYAML>=6.0          # build_catalogo_web, write_hooks_to_graph, step cornice_mondo, audit_3
 Pillow>=10.0         # build_volume (composizione pagine), design_system
 reportlab>=4.0       # build_volume (PDF KDP)
+numpy>=1.24       # build_volume (mare-gradiente, decori marini doppia isola)

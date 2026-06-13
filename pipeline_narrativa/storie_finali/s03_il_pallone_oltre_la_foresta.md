@@ -181,7 +181,7 @@ Rovo non risponde subito. Fa due passi dentro la Foresta. Si ferma. Resta di spa
 
 Poi, senza voltarsi del tutto, dice:
 
-«Le cose della Foresta hanno il loro orario.»
+«Le cose della *Foresta* hanno il loro *orario*.»
 
 Lo dice come si dice una cosa vera che non si vuole spiegare. E rientra.
 
