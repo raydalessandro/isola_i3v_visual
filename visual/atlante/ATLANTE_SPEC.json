@@ -185,10 +185,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/il_villaggio_tavola_v1.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": null
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Il Quartiere di Fuoco",
@@ -196,10 +196,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "C",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/il_quartiere_di_fuoco_tavola_v1.jpg",
       "quartiere": "fuoco",
       "binomio": null,
-      "note": null
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Il Quartiere d'Aria",
@@ -207,10 +207,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "B",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/il_quartiere_d_aria_tavola_v1.jpg",
       "quartiere": "aria",
       "binomio": null,
-      "note": null
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Fiamma",
@@ -218,10 +218,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "D",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/fiamma_tavola_v1.jpg",
       "quartiere": "fuoco",
       "binomio": null,
-      "note": "Prototipo: primo prompt Manus in prompt/fiamma_prompt_manus.md."
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Grunto",
@@ -229,10 +229,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/grunto_tavola_v1.jpg",
       "quartiere": "aria",
       "binomio": null,
-      "note": null
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Rovo e Bru",
@@ -240,10 +240,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "C",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/rovo_bru_tavola_v1.jpg",
       "quartiere": "terra",
       "binomio": null,
-      "note": "Tavola a due soggetti: coerenza Rovo/Bru tra vignette da verificare in selezione."
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Stria",
@@ -251,10 +251,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "B",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/stria_tavola_v1.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "HOLD reference HD in volo: per la tavola usare posa a terra (vedi canone)."
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Mèmolo e Pun",
@@ -262,10 +262,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "D",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/memolo_pun_tavola_v1.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": null
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "I bambini dell'isola",
@@ -273,10 +273,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": null,
+      "tavola": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v1.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Soggetti umani multipli: la voce più fragile per coerenza, prevedere più tentativi."
+      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
     },
     {
       "titolo": "Il Quartiere di Terra",
