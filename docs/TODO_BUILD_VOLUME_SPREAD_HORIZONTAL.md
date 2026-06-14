@@ -1,21 +1,19 @@
-# TODO — Spread orizzontale per s01_h07 (sessione dedicata `build_volume.py`)
+# TODO — Spread orizzontali (sessione dedicata `build_volume.py`)
 
-**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`
+**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`, esteso da `claude/illustratore-s02-storia`
 
 ## Contesto
 
-L'illustratore (Manus) ha rifatto le scene di s01 con stile coerente al resto. Per **s01_h07** (originariamente 1 sola immagine verticale `s01_h07a` con testo nella pagina) ha consegnato una composizione diversa: **un'immagine orizzontale 2560×1440** pensata come **spread doppia pagina**:
+L'illustratore (Manus) sta consegnando alcune scene come **immagini orizzontali** pensate per **spread doppia pagina** invece che come singola pagina verticale. Casi attuali:
 
-- **Pagina sinistra**: paesaggio della cengia (zona quieta → ospita il testo)
-- **Pagina destra**: i tre bambini sulla cengia (zona piena, niente testo)
+| Storia | Subhook | File | Dimensioni | Contenuto |
+|---|---|---|---|---|
+| s01 | h07 (era h07a) | `_scene/s01/_pending/s01_h07_spread_landscape.jpg` | 2560×1440 | paesaggio cengia (sx) + tre bambini sulla cengia (dx) |
+| s02 | h05 (era h05a) | `_scene/s02/_pending/s02_h05_spread_landscape.jpg` | 1672×941 | scena spread Vol 2 |
 
-Il file landscape è in:
-
-```
-pipeline_narrativa/storie_finali/_scene/s01/_pending/s01_h07_spread_landscape.jpg   (2560×1440)
-```
-
-Non è stato collocato in `_hd/` perché `scripts/build_volume.py` **non sa ancora gestire** uno spread con immagine landscape divisa su 2 pagine. Il vecchio HD verticale `s01_h07a_hd.jpg` (524 KB, verticale) **resta in `_hd/`** come fallback finché lo script non viene esteso — Vol 1 continua a buildare regolarmente.
+In entrambi i casi:
+- Il vecchio HD verticale resta in `_hd/` (Vol continua a buildare regolarmente)
+- L'immagine landscape sta in `_pending/` in attesa che lo script sappia gestirla
 
 ## Da decidere (decisione editoriale + tecnica)
 
