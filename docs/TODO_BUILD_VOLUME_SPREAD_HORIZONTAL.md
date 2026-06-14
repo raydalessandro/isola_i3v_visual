@@ -1,8 +1,35 @@
 # TODO — Spread orizzontali (sessione dedicata `build_volume.py`)
 
-**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`, esteso da `claude/illustratore-s02-storia`
+**Stato:** ✅ RISOLTO — 2026-06-14, sessione Ray + Claude.
 
-## Contesto
+## Esito (decisione presa)
+
+Adottata di fatto una via che combina A e B: **1 sola immagine landscape sorgente**
+(semantica chiara "è uno spread") che lo script **taglia a metà** in **2 facciate A5
+indipendenti** per la stampa (KDP-friendly, nessun problema di bleed sul taglio centrale).
+
+Implementazione in `scripts/build_volume.py`:
+- `compose_spread_horizontal()` — cover-fit del landscape su canvas continuo
+  `(IMG_W*2 + gutter) × IMG_H`, **testo solo sulla pagina sinistra** (riusa
+  `_overlay_text`, helper estratto da `compose_story_page`).
+- `build_story_pages()` instrada i subhook `@layout double_spread` (o con
+  `@page_book [N, N+1]`) alla nuova funzione.
+- `build_stampa_pdf` (già esistente) taglia lo spread a `width//2` → 2 pagine A5.
+- `build_spread_pdf` (già esistente) lo rende come doppia pagina continua (digitale).
+- `_facciate`/`ensure_recto` (già esistenti) contano lo spread come 2 facciate.
+- **Bugfix regex parser**: `@page_book [N, N+1]` con lo spazio ora viene riconosciuto
+  (prima `s02_h05a` veniva silenziosamente saltato → s02 si montava senza h05).
+- Banner "sotto spec" attivo: i landscape attuali sono a bassa risoluzione per il
+  full-bleed A5 (s01 2560×1440, s02 1672×941) → da rigenerare ≥3328×2496 per la stampa
+  finale (si lega ai 4 miglioramenti standard generazione).
+- Test: `tests/test_spread_horizontal.py` (parser, dimensioni, split, facciate, testo-sx).
+
+Marker aggiornati: `s01_h07a` e `s02_h05a` → `@layout double_spread` + `@image` al
+landscape. Annotation `_annotations/s01.yaml`, `s02.yaml` allineate.
+
+---
+
+## (storico) Contesto originale
 
 L'illustratore (Manus) sta consegnando alcune scene come **immagini orizzontali** pensate per **spread doppia pagina** invece che come singola pagina verticale. Casi attuali:
 

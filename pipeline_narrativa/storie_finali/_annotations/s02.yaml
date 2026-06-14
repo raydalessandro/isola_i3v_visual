@@ -119,9 +119,10 @@ hooks:
       - id: s02_h05a
         page_book: [7, 8]
         text_split_marker: "E si videro"
-        image_status: TBD
+        image_status: spread_landscape_pending_hd
+        image_path: _scene/s02/_pending/s02_h05_spread_landscape.jpg
         layout: double_spread
-        note: "SPREAD. Vista obliqua dall'alto sulla pozza che attraversa le due pagine. Sopra: i tre chinati fianco a fianco sul bordo, veri. Sotto, nell'acqua: i tre riflessi SBAGLIATI — Gabriel con bocca dura da adulto, Elias minuscolo schiacciato tra due figure più grandi del vero, Noah immobile a braccia lungo i fianchi e occhi spalancati. Riflessi un filo più scuri e più rigidi dei corpi veri. Immagine-confronto: il bambino legge le differenze sopra/sotto da solo, senza adulto."
+        note: "SPREAD. Vista obliqua dall'alto sulla pozza che attraversa le due pagine. Sopra: i tre chinati fianco a fianco sul bordo, veri. Sotto, nell'acqua: i tre riflessi SBAGLIATI — Gabriel con bocca dura da adulto, Elias minuscolo schiacciato tra due figure più grandi del vero, Noah immobile a braccia lungo i fianchi e occhi spalancati. Riflessi un filo più scuri e più rigidi dei corpi veri. Immagine-confronto: il bambino legge le differenze sopra/sotto da solo, senza adulto. CABLATO in build_volume.py: 1 immagine landscape su 2 facciate, testo solo a sinistra. Landscape attuale 1672×941 sotto spec per stampa HD (banner attivo) — rigenerare ≥3328×2496."
 
   s02_h06:
     location: pozza_abbeveratoio_pastori

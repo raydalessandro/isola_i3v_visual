@@ -51,7 +51,7 @@ logging.basicConfig(format="%(levelname)s: %(message)s", level=logging.WARNING)
 log = logging.getLogger("build_volume")
 
 try:
-    from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageStat
+    from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageStat, ImageChops
     from reportlab.pdfgen import canvas as rl_canvas
     from reportlab.lib.units import mm
     from reportlab.lib.utils import ImageReader
@@ -151,6 +151,9 @@ TEXT_ACCENT = (115, 78,  38)
 TEXT_RULE   = (190, 168, 138)
 TEXT_LIGHT  = (245, 240, 228)
 STORY_INK   = (45,  28,  14)
+# Luminanza minima desiderata del fondo SOTTO i glifi per una lettura comoda
+# dell'inchiostro scuro (0..1). Guida la schiaritura adattiva locale del testo.
+STORY_READ_FLOOR = 0.68
 STORY_HALO  = (250, 246, 236)
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -1461,6 +1464,131 @@ def _scegli_fascia_v2(img: "Image.Image", block_h: int):
     return "top", 0, bt, mt
 
 
+def _overlay_text(img: Image.Image, text: str, key_color=None,
+                  force_zone=None) -> Image.Image:
+    """
+    Sovrappone il testo storia su una pagina già pronta IMG_W×IMG_H.
+    Stessa logica adattiva (fascia alto/basso + schiarita DODGE) usata dalle
+    pagine singole: estratta qui per essere riusata dagli spread orizzontali
+    (testo solo sulla pagina sinistra). Non tocca mai il file sorgente.
+    Ritorna RGB.
+    """
+    FS  = 50
+    LH  = int(FS * 1.62)
+    PGS = int(FS * 0.62)
+    MX2 = 136
+    MT  = 100
+
+    img = img.convert("RGB")
+    if not text.strip():
+        return img
+
+    f      = fnt(FS)
+    f_key  = _font_oracolo(FS)
+    kc     = key_color or DS.DEFAULT_QUARTIERE_COLOR
+    d0     = ImageDraw.Draw(img)
+    rows   = rich_word_wrap(text, f, f_key, IMG_W - 2*MX2, d0)
+    n_lines = len([r for r in rows if r])
+    block_h = n_lines * LH + MT + int(FS * 0.8)
+
+    def zone_metrics(y0, y1):
+        z = img.crop((0, max(0,y0), IMG_W, min(IMG_H,y1))).convert("L")
+        brightness = ImageStat.Stat(z).mean[0] / 255.0
+        movement = ImageStat.Stat(z.filter(ImageFilter.FIND_EDGES)).mean[0] / 255.0
+        return brightness, movement
+
+    top_zone    = (0, block_h)
+    bottom_zone = (IMG_H - block_h, IMG_H)
+    b_top, m_top = zone_metrics(*top_zone)
+    b_bot, m_bot = zone_metrics(*bottom_zone)
+
+    if force_zone == "bottom":
+        zone = "bottom"; y0z = IMG_H - block_h; bright, move = b_bot, m_bot
+    elif force_zone == "top":
+        zone = "top"; y0z = 0; bright, move = b_top, m_top
+    elif os.environ.get("TESTO_V2") == "1":
+        zone, y0z, bright, move = _scegli_fascia_v2(img, block_h)
+    else:
+        if m_top > 0.16 and m_bot < m_top - 0.04:
+            zone = "bottom"; y0z = IMG_H - block_h
+            bright, move = b_bot, m_bot
+        else:
+            zone = "top"; y0z = 0
+            bright, move = b_top, m_top
+
+    # ── SCRIM ADATTIVO LOCALE ────────────────────────────────────────────
+    # Sostituisce il vecchio on/off INSIDE/DODGE (forza fissa su banda
+    # rettangolare). Misura il fondo SOLO dove cadono i glifi e schiarisce
+    # con una sagoma morbida che segue il testo:
+    #   - fondo già chiaro e calmo  → scrim ~0 (pagina invariata);
+    #   - fondo scuro/movimentato   → schiarita progressiva, ben sfumata;
+    #   - macchie scure residue sotto il testo → recupero locale mirato.
+    paper  = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
+    y_text = MT if zone == "top" else (y0z + MT)
+
+    # 1) maschera-sagoma: i glifi in bianco su L (corpo + parole-chiave)
+    tmask = Image.new("L", (IMG_W, IMG_H), 0)
+    td    = ImageDraw.Draw(tmask)
+    yy    = y_text
+    for row in rows:
+        if not row:
+            yy += PGS; continue
+        draw_rich_row(td, MX2, yy, row, f, f_key, 255, 255)
+        yy += LH
+
+    bbox = tmask.getbbox()
+    if bbox is not None:
+        bx0, by0, bx1, by1 = bbox
+        pad = int(FS * 0.6)
+        crop = (max(0, bx0 - pad), max(0, by0 - pad),
+                min(IMG_W, bx1 + pad), min(IMG_H, by1 + pad))
+        foot = img.crop(crop).convert("L")
+
+        # 2) metriche LOCALI sotto i glifi (non la media dell'intera banda)
+        bg   = ImageStat.Stat(foot).mean[0] / 255.0
+        busy = ImageStat.Stat(foot.filter(ImageFilter.FIND_EDGES)).mean[0] / 255.0
+        floor255  = int(STORY_READ_FLOOR * 255)
+        hist = foot.histogram()
+        tot  = sum(hist) or 1
+        dark_frac = sum(hist[:floor255]) / tot
+
+        # 3) forza base continua (0 dove è già leggibile, su dove serve)
+        base = 0.0
+        if bg < 0.72:
+            base += (0.72 - bg) * 1.15
+        base += busy * 0.85
+        base += dark_frac * 0.40
+        base = max(0.0, min(0.82, base))
+
+        # 4) scrim dalla sagoma: fonde le righe + alone morbido ("sfumare")
+        scrim = tmask.filter(ImageFilter.GaussianBlur(int(LH * 0.95)))
+        scrim = scrim.point(lambda v: 255 if v > 38 else int(v * 255 / 38))
+        scrim = scrim.filter(ImageFilter.GaussianBlur(int(IMG_W * 0.022)))
+
+        # 5) schiarita base verso la carta, modulata da base e mascherata sul testo
+        if base > 0.02:
+            base_mask = scrim.point(lambda v, b=base: int(v * b))
+            img = Image.composite(paper, img, base_mask)
+
+        # 6) recupero locale: dove resta sotto la soglia, schiarisci di più
+        #    ("schiarire sfondo sotto testo") — solo entro la sagoma del testo
+        lum     = img.convert("L")
+        deficit = lum.point(lambda v: max(0, min(255, int((floor255 - v) * 1.7))))
+        deficit = ImageChops.multiply(deficit, scrim)
+        deficit = deficit.filter(ImageFilter.GaussianBlur(int(IMG_W * 0.015)))
+        img = Image.composite(paper, img, deficit)
+
+    # 7) disegna il testo
+    draw = ImageDraw.Draw(img)
+    y = y_text
+    for row in rows:
+        if not row:
+            y += PGS; continue
+        draw_rich_row(draw, MX2, y, row, f, f_key, STORY_INK, kc)
+        y += LH
+    return img
+
+
 def compose_story_page(img_path: Path | None, text: str,
                        key_color=None, force_zone=None) -> Image.Image:
     """
@@ -1521,77 +1649,76 @@ def compose_story_page(img_path: Path | None, text: str,
 
     # ── Testo ADATTIVO: dentro l'illustrazione, con schiarita dolce ───────
     # Ancora: alto (default). Se la fascia alta è occupata da un soggetto
-    # importante o troppo scura, lo script sposta in basso e/o schiarisce.
-    f      = fnt(FS)
-    f_key  = _font_oracolo(FS)
-    kc     = key_color or DS.DEFAULT_QUARTIERE_COLOR
-    d0     = ImageDraw.Draw(img)
-    rows   = rich_word_wrap(text, f, f_key, IMG_W - 2*MX2, d0)
-    n_lines = len([r for r in rows if r])
-    block_h = n_lines * LH + MT + int(FS * 0.8)
-
-    def zone_metrics(y0, y1):
-        z = img.crop((0, max(0,y0), IMG_W, min(IMG_H,y1))).convert("L")
-        brightness = ImageStat.Stat(z).mean[0] / 255.0
-        movement = ImageStat.Stat(z.filter(ImageFilter.FIND_EDGES)).mean[0] / 255.0
-        return brightness, movement
-
-    # valuta zona alta e bassa
-    top_zone    = (0, block_h)
-    bottom_zone = (IMG_H - block_h, IMG_H)
-    b_top, m_top = zone_metrics(*top_zone)
-    b_bot, m_bot = zone_metrics(*bottom_zone)
-
-    # scegli ancora: force_zone ha priorità (override esplicito), poi v2/v1
-    if force_zone == "bottom":
-        zone = "bottom"; y0z = IMG_H - block_h; bright, move = b_bot, m_bot
-    elif force_zone == "top":
-        zone = "top"; y0z = 0; bright, move = b_top, m_top
-    elif os.environ.get("TESTO_V2") == "1":
-        zone, y0z, bright, move = _scegli_fascia_v2(img, block_h)
-    else:
-        if m_top > 0.16 and m_bot < m_top - 0.04:
-            zone = "bottom"; y0z = IMG_H - block_h
-            bright, move = b_bot, m_bot
-        else:
-            zone = "top"; y0z = 0
-            bright, move = b_top, m_top
-
-    # decidi trattamento: INSIDE se calmo+chiaro, altrimenti DODGE
-    treatment = "INSIDE" if (bright > 0.60 and move < 0.11) else "DODGE"
-
-    if treatment == "DODGE":
-        # schiarita dolce, sfumata, niente box. Forza modulata sulla
-        # scurezza reale: zone già mediamente chiare si schiariscono meno
-        # (più simili all'INSIDE), zone molto scure di più (leggibilità).
-        if os.environ.get("TESTO_V2") == "1":
-            forza = 0.52 + (0.60 - min(bright, 0.60)) * 0.55   # ~0.52–0.85
-        else:
-            forza = 0.72
-        mask = Image.new("L", (IMG_W, IMG_H), 0)
-        md = ImageDraw.Draw(mask)
-        md.rectangle([0, y0z, IMG_W, y0z + block_h], fill=255)
-        mask = mask.filter(ImageFilter.GaussianBlur(int(IMG_W*0.04)))
-        paper = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
-        lightened = Image.blend(img, paper, forza)
-        img = Image.composite(lightened, img, mask)
-
-    draw = ImageDraw.Draw(img)
-    y = MT if zone == "top" else (y0z + MT)
-    for row in rows:
-        if not row:
-            y += PGS; continue
-        draw_rich_row(draw, MX2, y, row, f, f_key, STORY_INK, kc)
-        y += LH
+    # importante o troppo scura, l'helper sposta in basso e/o schiarisce.
+    img = _overlay_text(img, text, key_color=key_color, force_zone=force_zone)
 
     # Applica banner qualità sulle storie sotto spec
     if not ok:
-        img_rgb = img.convert("RGB")
-        img_rgb = add_quality_banner(img_rgb, resolved, quality_desc)
+        img_rgb = add_quality_banner(img.convert("RGB"), resolved, quality_desc)
         log.warning("Immagine storia sotto spec: %s (%s)", resolved.name, quality_desc)
         return img_rgb
 
     return img.convert("RGB")
+
+
+def compose_spread_horizontal(landscape_path: Path | None, text: str,
+                              key_color=None) -> tuple[str, Image.Image]:
+    """
+    Compone uno spread orizzontale doppia-pagina da UNA sola immagine
+    landscape che attraversa le due facciate.
+
+      - cover-fit dell'immagine su un canvas CONTINUO (IMG_W*2 + gutter)×IMG_H:
+        nessuna banda inserita al centro, la continuità è reale e lo split
+        a metà (fatto da build_stampa_pdf) cade naturalmente sulla piega,
+        come in ogni spread fisico;
+      - il testo è sovrapposto SOLO sulla pagina sinistra (zona quieta del
+        paesaggio), riusando _overlay_text (stessa logica delle pagine singole);
+      - se l'immagine non basta a servire 2 facciate full-bleed HD, applica
+        il banner arancione "sotto spec" per la verifica visiva (non blocca).
+
+    Ritorna ('spread', canvas). A valle:
+      - build_spread_pdf  → la rende come doppia pagina continua (digitale)
+      - build_stampa_pdf  → la taglia a metà in 2 pagine A5 indipendenti (KDP)
+    """
+    SW = IMG_W * 2 + SCALE * 4   # stessa larghezza usata altrove per gli spread
+
+    resolved = None
+    if landscape_path and landscape_path.exists():
+        resolved = resolve_scene_image(landscape_path)
+
+    # ── Placeholder se manca l'immagine ──────────────────────────────────
+    if resolved is None or not resolved.exists():
+        if resolved:
+            log.warning("Spread landscape non trovato: %s", resolved)
+        canvas = Image.new("RGB", (SW, IMG_H), (245, 241, 233))
+        d = ImageDraw.Draw(canvas)
+        label = landscape_path.name if landscape_path else "spread in lavorazione"
+        d.text((136, IMG_H - 100), f"[{label}]", font=fnt(36), fill=(180, 162, 138))
+        left = _overlay_text(canvas.crop((0, 0, IMG_W, IMG_H)), text, key_color)
+        canvas.paste(left, (0, 0))
+        return ("spread", canvas)
+
+    # ── Carica + cover-fit sul canvas continuo ───────────────────────────
+    try:
+        src = Image.open(resolved).convert("RGB")
+    except (OSError, IOError) as exc:
+        log.error("Spread non apribile '%s': %s", resolved, exc)
+        src = Image.new("RGB", (SW, IMG_H), (245, 241, 233))
+    canvas = _cover_fit(src, SW, IMG_H)
+
+    # ── Testo solo sulla metà sinistra ───────────────────────────────────
+    left = _overlay_text(canvas.crop((0, 0, IMG_W, IMG_H)), text, key_color=key_color)
+    canvas.paste(left, (0, 0))
+
+    # ── Banner qualità: lo spread serve 2 facciate full-bleed ────────────
+    sw, sh = src.size
+    if sw < 2 * PRES_MIN_W or sh < PRES_MIN_H:
+        desc = (f"{sw}×{sh}px — spread sotto spec "
+                f"(≥{2*PRES_MIN_W}×{PRES_MIN_H} per 2 facciate HD)")
+        canvas = add_quality_banner(canvas, resolved, desc)
+        log.warning("Spread sotto spec: %s (%s)", resolved.name, desc)
+
+    return ("spread", canvas)
 
 # ═══════════════════════════════════════════════════════════════════════════
 # PARSER STORIA MD
@@ -1606,7 +1733,7 @@ def parse_story_md(sid: str) -> list[dict]:
     md  = matches[0].read_text(encoding="utf-8")
     pat = re.compile(
         r"<!--\s*@subhook\s+(\S+)\s*\|"
-        r"\s*@page_book\s+(\S+)\s*"
+        r"\s*@page_book\s+(\[[^\]]*\]|\S+)\s*"
         r"(?:\|\s*@layout\s+(\S+)\s*)?"
         r"(?:\|\s*@image\s+([^\s>][^\|>]*?))?\s*-->",
         re.IGNORECASE,
@@ -2260,14 +2387,14 @@ def build_mito_pages() -> list[tuple[str, Image.Image]]:
 def build_story_pages(sid: str, key_color=None) -> list[tuple[str, Image.Image]]:
     pages: list[tuple[str, Image.Image]] = []
     for sh in parse_story_md(sid):
-        img = compose_story_page(sh["image_path"], sh["text"], key_color=key_color)
-        if sh["layout"] == "double_spread" or isinstance(sh["page_book"], list):
-            sp = Image.new("RGB", (IMG_W * 2 + SCALE * 4, IMG_H), (165, 155, 142))
-            sp.paste(img, (0, 0))
-            sp.paste(Image.new("RGB", (IMG_W, IMG_H), (245, 241, 233)),
-                     (IMG_W + SCALE * 4, 0))
-            pages.append(("spread", sp))
+        is_spread = sh["layout"] == "double_spread" or isinstance(sh["page_book"], list)
+        if is_spread:
+            # Spread orizzontale: 1 immagine landscape su 2 facciate,
+            # testo solo a sinistra. build_stampa_pdf la taglia poi in 2 A5.
+            pages.append(compose_spread_horizontal(
+                sh["image_path"], sh["text"], key_color=key_color))
         else:
+            img = compose_story_page(sh["image_path"], sh["text"], key_color=key_color)
             pages.append(("single", img))
     return pages
 

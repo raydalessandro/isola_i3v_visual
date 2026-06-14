@@ -149,9 +149,10 @@ hooks:
       - id: s01_h07a
         page_book: [11, 12]
         text_split_marker: "Il vento restava"
-        image_status: TBD
+        image_status: spread_landscape_pending_hd
+        image_path: _scene/s01/_pending/s01_h07_spread_landscape.jpg
         layout: double_spread
-        note: "Spread doppia: la salita lungo la cengia verso Grunto. Lichene verde sulle pareti, sole che fa pietre d'oro. Momento importante della salita."
+        note: "Spread doppia: la salita lungo la cengia verso Grunto. Lichene verde sulle pareti, sole che fa pietre d'oro. Momento importante della salita. CABLATO in build_volume.py: 1 immagine landscape su 2 facciate, testo solo a sinistra, taglio centrale = piega. Landscape attuale 2560×1440 sotto spec per stampa HD (banner attivo) — rigenerare ≥3328×2496."
 
   s01_h08:
     location: grotta_grunto
