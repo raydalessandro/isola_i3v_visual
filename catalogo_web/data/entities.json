@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-14T10:38:33",
+  "generated_at": "2026-06-14T11:30:51",
   "meta": {
-    "generated_at": "2026-06-14T10:38:33",
+    "generated_at": "2026-06-14T11:30:51",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -425,7 +425,7 @@
                     "famiglia": "luogo",
                     "sottotipo": "water_feature",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 4,
                     "folder_path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori"
                   }
                 }
@@ -634,7 +634,7 @@
                     "famiglia": "luogo",
                     "sottotipo": "clearing",
                     "status": "provvisorio",
-                    "n_images": 0,
+                    "n_images": 1,
                     "folder_path": "visual/luoghi/quartiere_terra/foresta_intrecciata/radura_dei_pini"
                   }
                 },
@@ -907,7 +907,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "building",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 1,
                 "folder_path": "visual/luoghi/villaggio_centrale/scuola_stria"
               }
             },
@@ -1211,7 +1211,7 @@
                 "famiglia": "personaggio",
                 "sottotipo": "collettivo",
                 "status": "provvisorio",
-                "n_images": 0,
+                "n_images": 2,
                 "folder_path": "visual/personaggi/collettivi/pastori"
               }
             },
@@ -3686,8 +3686,29 @@
         "pascoli_alti",
         "pozza_abbeveratoio_pastori"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "pozza_abbeveratoio_pastori_canonica_v1_increspata.jpg",
+          "path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/immagini/pozza_abbeveratoio_pastori_canonica_v1_increspata.jpg",
+          "size_kb": 396
+        },
+        {
+          "filename": "pozza_abbeveratoio_pastori_canonica_v1_ricomposta.jpg",
+          "path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/immagini/pozza_abbeveratoio_pastori_canonica_v1_ricomposta.jpg",
+          "size_kb": 348
+        },
+        {
+          "filename": "pozza_abbeveratoio_pastori_canonica_v1_sera.jpg",
+          "path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/immagini/pozza_abbeveratoio_pastori_canonica_v1_sera.jpg",
+          "size_kb": 239
+        },
+        {
+          "filename": "pozza_abbeveratoio_pastori_canonica_v1_specchio.jpg",
+          "path": "visual/luoghi/quartiere_aria/pascoli_alti/pozza_abbeveratoio_pastori/immagini/pozza_abbeveratoio_pastori_canonica_v1_specchio.jpg",
+          "size_kb": 351
+        }
+      ],
+      "n_images": 4
     },
     {
       "id": "pascoli_alti",
@@ -4847,8 +4868,14 @@
         "foresta_intrecciata",
         "radura_dei_pini"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "radura_dei_pini_canonica_v1_margine.jpg",
+          "path": "visual/luoghi/quartiere_terra/foresta_intrecciata/radura_dei_pini/immagini/radura_dei_pini_canonica_v1_margine.jpg",
+          "size_kb": 364
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "foresta_intrecciata",
@@ -6406,8 +6433,14 @@
         "villaggio_centrale",
         "scuola_stria"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "scuola_stria_canonica_v1_esterno.jpg",
+          "path": "visual/luoghi/villaggio_centrale/scuola_stria/immagini/scuola_stria_canonica_v1_esterno.jpg",
+          "size_kb": 343
+        }
+      ],
+      "n_images": 1
     },
     {
       "id": "sentiero_forno_orti_diretto",
@@ -7550,8 +7583,19 @@
         "collettivi",
         "pastori"
       ],
-      "images": [],
-      "n_images": 0
+      "images": [
+        {
+          "filename": "pastori_canonica_v1_margine_saluto.jpg",
+          "path": "visual/personaggi/collettivi/pastori/immagini/pastori_canonica_v1_margine_saluto.jpg",
+          "size_kb": 305
+        },
+        {
+          "filename": "pastori_canonica_v1_pendii_gregge.jpg",
+          "path": "visual/personaggi/collettivi/pastori/immagini/pastori_canonica_v1_pendii_gregge.jpg",
+          "size_kb": 206
+        }
+      ],
+      "n_images": 2
     },
     {
       "id": "pescatori_case_basse",
