@@ -1,8 +1,8 @@
 window.DASHBOARD_DATA = {
- "generated_at": "2026-06-14T10:36:40+00:00",
+ "generated_at": "2026-06-14T11:17:13+00:00",
  "head": {
-  "sha": "5996f34",
-  "date": "2026-06-14T10:36:34+00:00"
+  "sha": "d5ead04",
+  "date": "2026-06-14T10:38:34+00:00"
  },
  "agent_entry": {
   "sequence": [
@@ -435,7 +435,7 @@ window.DASHBOARD_DATA = {
    "bytes": 3464,
    "lines": 106,
    "tokens_est": 866,
-   "mtime": "2026-06-13T23:43:50.079369+00:00",
+   "mtime": "2026-06-14T11:16:33.213447+00:00",
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/_output/vol1_pres-dopo_s01_LAYOUT_WARNINGS.md",
    "category": "operativo",
    "preview": "_Generato da `build_volume.py`. Non modificare._"
@@ -789,6 +789,16 @@ window.DASHBOARD_DATA = {
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BRIEFFER_CACHE_AB.md",
    "category": "operativo",
    "preview": "**Stato:** debito tecnico aperto · registrato 2026-06-12 · priorità: prima del seeding \"Rocco e Idvara\" (il template eredita il pattern)"
+  },
+  {
+   "path": "docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+   "bytes": 4022,
+   "lines": 71,
+   "tokens_est": 1006,
+   "mtime": "2026-06-14T11:15:39.957018+00:00",
+   "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+   "category": "operativo",
+   "preview": "**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`"
   },
   {
    "path": "docs/fasi/FASI_COMPLETATE.md",
@@ -1533,6 +1543,23 @@ window.DASHBOARD_DATA = {
     ]
    },
    {
+    "path": "docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+    "category": "operativo",
+    "items": [
+     {
+      "line": 1,
+      "kind": "sezione",
+      "text": "TODO — Spread orizzontale per s01_h07 (sessione dedicata `build_volume.py`)"
+     },
+     {
+      "line": 3,
+      "kind": "voce",
+      "text": "Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`"
+     }
+    ]
+   },
+   {
     "path": "_visual_pipeline/_api/README.md",
     "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/_visual_pipeline/_api/README.md",
     "category": "operativo",
@@ -1557,7 +1584,7 @@ window.DASHBOARD_DATA = {
     ]
    }
   ],
-  "total": 67,
+  "total": 69,
   "known_issues": {
    "raw": "# known_issues.yaml — Incoerenze referenziali NOTE del grafo, in attesa di\n# decisione autoriale Ray.\n#\n# Meccanismo a cricchetto (audit_3_navigability.py):\n#   - le voci elencate qui vengono declassate da ERRORE a \"[known]\"\n#   - qualunque incoerenza NUOVA resta un errore e blocca la CI\n#   - quando il grafo viene corretto, l'audit segnala la voce come stantia:\n#     rimuoverla da questo file. Obiettivo: file vuoto.\n#\n# Match: (kind, where, ref) — devono coincidere con l'output dell'audit.\n#\n# STATO 2026-06-10: file svuotato. Le 7 voci rilevate il 2026-06-09 sono\n# state risolte da scripts/cornice_mondo/step8_fix_canonical_refs.py\n# (autorizzazione Ray 2026-06-10). Vedi migration_log entry\n# \"cornice_mondo_step8\" nel grafo.\n\nissues: []\n",
    "count": 0,
@@ -1617,10 +1644,10 @@ window.DASHBOARD_DATA = {
  ],
  "counts": {
   "skills": 10,
-  "documents": 76,
+  "documents": 77,
   "docs_by_category": {
    "core": 15,
-   "operativo": 36,
+   "operativo": 37,
    "progetto": 13,
    "archivio": 12
   }
