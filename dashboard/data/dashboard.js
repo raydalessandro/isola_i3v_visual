@@ -1,8 +1,8 @@
 window.DASHBOARD_DATA = {
- "generated_at": "2026-06-14T11:17:13+00:00",
+ "generated_at": "2026-06-14T11:29:24+00:00",
  "head": {
-  "sha": "d5ead04",
-  "date": "2026-06-14T10:38:34+00:00"
+  "sha": "928359d",
+  "date": "2026-06-14T13:20:19+02:00"
  },
  "agent_entry": {
   "sequence": [
@@ -795,7 +795,7 @@ window.DASHBOARD_DATA = {
    "bytes": 4022,
    "lines": 71,
    "tokens_est": 1006,
-   "mtime": "2026-06-14T11:15:39.957018+00:00",
+   "mtime": "2026-06-14T11:17:40+00:00",
    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
    "category": "operativo",
    "preview": "**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`"
