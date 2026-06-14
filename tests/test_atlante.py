@@ -540,3 +540,41 @@ def test_isola_doppia_mare_per_ogni_ciclo(bv):
     for vol in (1, 2, 3, 4):
         img = bv.make_isola_doppia("Questa è l'isola", "Testo di prova.", volume=vol)
         assert img.height == bv.IMG_H
+
+
+# ═══ 9. DOPPIA "L'ISOLA CHE DORME" — spread + continuazione ═════════════════
+
+def test_isola_dorme_doppia_e_spread(bv):
+    img = bv.make_isola_doppia("L'isola che dorme", "Ecco l'isola. Vedi che c'è.",
+                               volume=1, eyebrow="ECCO L'ISOLA",
+                               src_default=bv.ISOLA_CHE_DORME)
+    assert img.height == bv.IMG_H
+    assert img.width >= bv.IMG_W * 2
+
+
+def test_isola_dorme_remainder_split(bv):
+    """Testo lungo: parte entra nella doppia, il resto va in remainder_out."""
+    testo = "parola " * 400
+    rem = []
+    bv.make_isola_doppia("L'isola che dorme", testo, volume=1,
+                         eyebrow="ECCO L'ISOLA", src_default=bv.ISOLA_CHE_DORME,
+                         remainder_out=rem)
+    assert rem and rem[0].strip(), "il testo eccedente deve finire in remainder_out"
+    # il remainder è più corto del totale (qualcosa è entrato nella doppia)
+    assert len(rem[0].split()) < 400
+
+
+def test_isola_dorme_testo_corto_niente_remainder(bv):
+    rem = []
+    bv.make_isola_doppia("L'isola che dorme", "Testo breve.", volume=1,
+                         eyebrow="ECCO L'ISOLA", src_default=bv.ISOLA_CHE_DORME,
+                         remainder_out=rem)
+    assert not rem or not rem[0].strip()
+
+
+def test_eyebrow_personalizzato(bv):
+    """L'eyebrow passato come parametro non deve crashare il render."""
+    img = bv.make_isola_doppia("L'isola che dorme", "Testo.", volume=1,
+                               eyebrow="ECCO L'ISOLA",
+                               src_default=bv.ISOLA_CHE_DORME)
+    assert img.height == bv.IMG_H
