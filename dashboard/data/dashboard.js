@@ -1,5 +1,5 @@
 window.DASHBOARD_DATA = {
- "generated_at": "2026-06-14T11:29:24+00:00",
+ "generated_at": "2026-06-14T11:33:32+00:00",
  "head": {
   "sha": "928359d",
   "date": "2026-06-14T13:20:19+02:00"
@@ -441,6 +441,16 @@ window.DASHBOARD_DATA = {
    "preview": "_Generato da `build_volume.py`. Non modificare._"
   },
   {
+   "path": "_output/vol1_pres-dopo_s02_LAYOUT_WARNINGS.md",
+   "bytes": 3464,
+   "lines": 106,
+   "tokens_est": 866,
+   "mtime": "2026-06-14T11:33:31.941144+00:00",
+   "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/_output/vol1_pres-dopo_s02_LAYOUT_WARNINGS.md",
+   "category": "operativo",
+   "preview": "_Generato da `build_volume.py`. Non modificare._"
+  },
+  {
    "path": "_output/vol1_pres-dopo_s03_LAYOUT_WARNINGS.md",
    "bytes": 3321,
    "lines": 105,
@@ -791,14 +801,14 @@ window.DASHBOARD_DATA = {
    "preview": "**Stato:** debito tecnico aperto · registrato 2026-06-12 · priorità: prima del seeding \"Rocco e Idvara\" (il template eredita il pattern)"
   },
   {
-   "path": "docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
-   "bytes": 4022,
-   "lines": 71,
-   "tokens_est": 1006,
-   "mtime": "2026-06-14T11:17:40+00:00",
-   "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+   "path": "docs/TODO_BUILD_VOLUME_SPREAD_HORIZONTAL.md",
+   "bytes": 3845,
+   "lines": 69,
+   "tokens_est": 961,
+   "mtime": "2026-06-14T11:31:49.064175+00:00",
+   "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_HORIZONTAL.md",
    "category": "operativo",
-   "preview": "**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`"
+   "preview": "**Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`, esteso da `claude/illustratore-s02-storia`"
   },
   {
    "path": "docs/fasi/FASI_COMPLETATE.md",
@@ -1543,19 +1553,19 @@ window.DASHBOARD_DATA = {
     ]
    },
    {
-    "path": "docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
-    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_H07A.md",
+    "path": "docs/TODO_BUILD_VOLUME_SPREAD_HORIZONTAL.md",
+    "url": "https://github.com/raydalessandro/isola_i3v_visual/blob/main/docs/TODO_BUILD_VOLUME_SPREAD_HORIZONTAL.md",
     "category": "operativo",
     "items": [
      {
       "line": 1,
       "kind": "sezione",
-      "text": "TODO — Spread orizzontale per s01_h07 (sessione dedicata `build_volume.py`)"
+      "text": "TODO — Spread orizzontali (sessione dedicata `build_volume.py`)"
      },
      {
       "line": 3,
       "kind": "voce",
-      "text": "Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`"
+      "text": "Stato:** in attesa — sessione dedicata Ray + Claude · registrato 2026-06-14 · branch `claude/illustratore-s01-hd-refresh`, esteso da `claude/illustratore-s02-storia`"
      }
     ]
    },
@@ -1644,10 +1654,10 @@ window.DASHBOARD_DATA = {
  ],
  "counts": {
   "skills": 10,
-  "documents": 77,
+  "documents": 78,
   "docs_by_category": {
    "core": 15,
-   "operativo": 37,
+   "operativo": 38,
    "progetto": 13,
    "archivio": 12
   }
