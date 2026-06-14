@@ -108,7 +108,13 @@ E si aggiorna **solo** il marker `@image` del corrispondente `@subhook` nel test
 
 Vincoli:
 - Naming **deterministico**: `<sid>_<hook_id><subhook_letter>.jpg`. Mai inventare suffissi.
-- Una scena = una immagine. Per spread doppia: stesso file referenziato da entrambi i subhook con `@layout: double_spread`.
+- Una scena = una immagine. **Spread doppia (`@layout double_spread`):** UN solo
+  subhook con `@page_book [N, N+1]` e UNA immagine **landscape** (es.
+  `_scene/sNN/_pending/sNN_hMM_spread_landscape.jpg`); `build_volume.py` la fa
+  attraversare le due facciate (cover-fit continuo, testo solo sulla pagina
+  sinistra) e la taglia a metà in 2 pagine A5 indipendenti per la stampa KDP.
+  Il landscape deve essere ≥ ~3328×2496 px (2 facciate HD), altrimenti banner
+  "sotto spec".
 - Mai modificare gli `@subhook` id (stabili, legati al testo prosa).
 - Le immagini-scena NON sono reference catalogo — quelle stanno in `visual/<categoria>/<id>/immagini/<id>_canonica_v1_<vista>.jpg` (vedi `_visual_pipeline/`). Le `_scene/` sono il **prodotto finale composto** per il libro.
 

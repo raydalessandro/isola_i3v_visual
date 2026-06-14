@@ -146,7 +146,7 @@ I tre fratelli stettero zitti.
 
 <!-- @hook s01_h07 | @page 7 | @subhooks [s01_h07a] | @image TBD -->
 
-<!-- @subhook s01_h07a | @page_book 11 | @image pipeline_narrativa/storie_finali/_scene/s01/s01_h07a.jpg -->
+<!-- @subhook s01_h07a | @page_book [11, 12] | @layout double_spread | @image pipeline_narrativa/storie_finali/_scene/s01/_pending/s01_h07_spread_landscape.jpg -->
 Il vento restava. La nebbia adesso si consumava da sola.
 
 Ripresero il sentiero — ma a sinistra, non dritto. Salirono lungo la cengia, una striscia stretta in mezzaroccia, con il lichene verde che faceva quasi parete. L'aria pizzicava il naso. Il sole batteva su una pietra ogni tanto e quella pietra diventava per un attimo d'oro.
