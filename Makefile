@@ -6,8 +6,8 @@
 help:
 	@echo "Target disponibili:"
 	@echo "  make deps       — installa dipendenze (requirements + dev)"
-	@echo "  make audit      — audit 1..4 (grafo + prosa)"
-	@echo "  make audit-fast — audit 1..3 (salta prosa)"
+	@echo "  make audit      — audit 1..5 (grafo + prosa)"
+	@echo "  make audit-fast — audit 1,2,3,5 (salta audit_4 drift/prosa)"
 	@echo "  make test       — pytest veloce (non slow, ~3s)"
 	@echo "  make test-all   — pytest completo (build PDF reale, ~60s)"
 	@echo "  make check      — test + audit (il cancello pre-push)"
