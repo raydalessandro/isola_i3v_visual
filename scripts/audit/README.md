@@ -6,7 +6,7 @@ Script di validazione del grafo e della prosa. **Implementati 2026-06-09**
 - dalla CI su ogni push/PR (`.github/workflows/ci.yml`),
 - a mano: `python3 scripts/audit/run_all_audits.py` (o `make audit`).
 
-## I 4 audit
+## I 5 audit
 
 | Script | Cosa verifica | Stato |
 |---|---|---|

@@ -1,10 +1,12 @@
 # PIPELINE — Flusso end-to-end per una storia
 
+**Aggiornato: 2026-06-14** (sync alla realtà: audit 1..5 implementati e in CI, `audit_4_drift` deterministico, prompt prosa = `skills/prosa/SKILL.md`; unico TODO residuo: orchestratore di flusso).
+
 Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fino al testo libro committato. Vale per ogni storia s01..s12 (e per future espansioni).
 
-> **Nota:** la repo è **strutturata** e parzialmente **automatizzata**. La fase G (estrazione 10 hook visivi per storia) è stata completata il 2026-04-29 con tooling deterministico (`scripts/write_hooks_to_graph.py` + agenti sub `general-purpose` per la stesura). Stato: ~70% delle tappe meccaniche automatizzate; manca prompt+orchestrazione per la scrittura prosa autoriale (Tappa 6).
+> **Nota:** la repo è **strutturata** e ampiamente **automatizzata**. La fase G (estrazione 10 hook visivi per storia) è stata completata il 2026-04-29 con tooling deterministico (`scripts/write_hooks_to_graph.py` + agenti sub `general-purpose` per la stesura). Stato (aggiornato 2026-06-14): le tappe meccaniche sono automatizzate — audit 1..5 in CI, brief zero-token, composizione PDF — e il prompt prosa esiste come skill (`skills/prosa/SKILL.md`). L'unico anello mancante per il flusso end-to-end automatico è l'**orchestratore** che concatena le tappe 2→7 fermandosi alle review umane.
 >
-> **Pipeline parallela visual** (canonizzazione delle 115 schede `visual/` + immagini canoniche per illustrazioni): vedi [`_visual_pipeline/`](../_visual_pipeline/) — flusso a 6 fasi separato dal flusso storia, alimenta il prompt-immagine finale con reference visivi per personaggi/oggetti/luoghi.
+> **Pipeline parallela visual** (canonizzazione delle 116 schede `visual/` + immagini canoniche per illustrazioni): vedi [`_visual_pipeline/`](../_visual_pipeline/) — flusso a 6 fasi separato dal flusso storia, alimenta il prompt-immagine finale con reference visivi per personaggi/oggetti/luoghi.
 
 ---
 
@@ -56,11 +58,12 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 │  TAPPA 5  — AUDIT GRAFO                                             │
 │  Input:   grafo modificato                                          │
 │  Output:  PASS / FAIL                                               │
-│  Auto:    100%  (4 script Python — implementati, `make audit`)      │
+│  Auto:    100%  (5 script Python — implementati, `make audit`)      │
 │  Script:  scripts/audit/audit_1_integrity.py                        │
 │           scripts/audit/audit_2_schema.py                           │
 │           scripts/audit/audit_3_navigability.py                     │
 │           scripts/audit/audit_4_drift.py                            │
+│           scripts/audit/audit_5_timeline.py                         │
 └─────────────────────────────────────────────────────────────────────┘
                                 ↓
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -70,7 +73,7 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 │           + schede visual/ (palette, vincoli, voci personaggi)      │
 │  Output:  libro/sNN_<titolo>.md  (testo prosa per illustrazione)    │
 │  Auto:    60%  (agente con prompt stretto + review Ray)             │
-│  Prompt:  pipeline_narrativa/prompts/PROMPT_AGENTE_PROSA  (DA SCRIVERE) │
+│  Prompt:  skills/prosa/SKILL.md (esiste dal 2026-04-30)             │
 └─────────────────────────────────────────────────────────────────────┘
                                 ↓
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -93,14 +96,14 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 | 3 | Review hook | proposta | OK/edit | 0% | (Ray) |
 | 4 | Scrittura grafo | hook approvati | `story_graph.json` aggiornato | 100% | `pipeline_narrativa/story_graph.json` |
 | 5 | Audit grafo | grafo nuovo | PASS/FAIL | 100% | `scripts/audit/*` |
-| 6 | Prosa autoriale | grafo + voce + visual | `libro/sNN.md` | 60% | prompt da scrivere |
+| 6 | Prosa autoriale | grafo + voce + visual | `libro/sNN.md` | 60% | `skills/prosa/SKILL.md` |
 | 7 | Review + commit | testo | git push | 20% | (git) |
 
-**Totale automatizzazione (escludendo input umano puro tappa 0): ~70%**
+**Totale automatizzazione (escludendo input umano puro tappa 0): ~80%** — le tappe meccaniche (4, 5) sono al 100% e brief/composizione PDF sono deterministici; resta da costruire l'orchestratore che concatena il flusso. Le tappe 1/2/6 mantengono review umana by-design.
 
 ---
 
-## Stato attuale (2026-04-29)
+## Stato attuale (2026-04-29 · aggiornato 2026-06-14)
 
 ### Pronto e funzionante
 
@@ -109,11 +112,12 @@ Questo documento descrive il **flusso operativo** dall'idea autoriale di Ray fin
 - **Tappa 4** (scrittura grafo): `scripts/write_hooks_to_graph.py` con 16 controlli pre-scrittura, idempotente, backup automatico. **Eseguito su tutte le 12 storie il 2026-04-29 — Fase G completata, 120/120 hook v1.3 nel grafo.**
 - **Schema bump v1.2 → v1.3**: eseguito via `scripts/migrate_graph_v1_2_to_v1_3.py` (one-shot, retro-compat sui hook legacy).
 - **Promozione entità catalogo → grafo**: `scripts/promote_visual_entities_to_graph.py` (idempotente).
+- **Tappa 5** (audit grafo): **5 script implementati** (`audit_1_integrity` … `audit_5_timeline`), idempotenti e in CI (`make audit`). Tutti **Python puro**: l'`audit_4_drift` controlla i pattern AI da bandire con regex sulle quote di `saga_config.yaml`, **senza LLM** (la previsione del 2026-04 — «il 4° richiede LLM» — è stata superata).
+- **Tappa 6** (prosa autoriale): **prompt esistente** in `skills/prosa/SKILL.md` (dal 2026-04-30), da incollare in chat per attivare la modalità scrittura una pagina alla volta. Il §13 del brief replica l'istruzione operativa, generato da `build_writing_brief.py`.
 
 ### Specificato ma non implementato
 
-- **Tappa 5** (audit grafo): 4 script specificati in `scripts/audit/README.md`. Da implementare prima dell'avvio fase G a regime. **3 di 4 sono Python puro** (integrity/schema/navigability). Il 4° (drift) richiede LLM per controllare pattern AI da bandire.
-- **Tappa 6** (prosa autoriale): prompt **da scrivere**. Pattern replicabile dal prompt fase G (stessa struttura: lettura fonti → proposta → review → commit).
+- **Orchestratore di flusso** (`skills/pipeline_storia.md` — non ancora creato): la skill che, dato uno `sNN_input.md`, esegue le tappe 2→7 in sequenza fermandosi alle review umane (3 e 7). È l'unico anello mancante; audit e prompt prosa, un tempo elencati qui come da fare, sono ora pronti.
 
 ### Umano puro (by design)
 
@@ -143,11 +147,11 @@ Una storia per volta. Mai parallelo. Approvazione Ray tra tappa e tappa critica 
 
 ## Cosa manca per scalare il flusso (lavoro futuro)
 
-Quando le 12 storie saranno completate manualmente con questo flusso, le 3 cose da preparare per **rendere il processo davvero automatizzato** in futuro (es. revisioni, espansioni, traduzioni) sono:
+Delle 3 cose elencate qui per **rendere il processo davvero automatizzato** (revisioni, espansioni, traduzioni), **2 sono fatte**:
 
-1. **`scripts/audit/audit_1..4.py`** — implementazione dei 4 audit. Specs già pronte in `scripts/audit/README.md`. Stima: mezza giornata.
-2. **`pipeline_narrativa/prompts/PROMPT_AGENTE_PROSA_v1.md`** — prompt operativo per scrittura prosa autoriale. Stesso pattern del prompt hook. Stima: 2-3 iterazioni con Ray sulla Carta Voce.
-3. **Skill orchestratore** — un file `skills/pipeline_storia.md` che dato uno `sNN_input.md` esegue le tappe 2-7 in sequenza, fermandosi alle review umane. Stima: 1 giornata.
+1. ~~`scripts/audit/audit_1..4.py`~~ — **FATTO**: 5 audit implementati (1..5), in CI come cancello di merge.
+2. ~~`PROMPT_AGENTE_PROSA`~~ — **FATTO**: vive in `skills/prosa/SKILL.md` (dal 2026-04-30); il §13 dei brief replica l'istruzione operativa.
+3. **Skill orchestratore** — un file `skills/pipeline_storia.md` che dato uno `sNN_input.md` esegue le tappe 2-7 in sequenza, fermandosi alle review umane. **Ancora da fare: è l'unico anello mancante.** Stima: 1 giornata.
 
 Stato post-storie: il sistema è documentato, riproducibile, e l'investimento di token speso fin qui (porting grafo + struttura repo + decisioni autoriali) si traduce in un acceleratore stabile per ogni storia futura. Le decisioni autoriali (le idee, le scelte di voce, i vincoli) restano l'unico input umano necessario.
 
