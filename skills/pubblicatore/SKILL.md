@@ -299,21 +299,7 @@ attendere.
 
 ---
 
-## 8. Stato corrente (2026-06-15)
-
-| Volume | Storie | HD scene | Copertina pulita | Listing | PDF | Wrap |
-|---|---|---|---|---|---|---|
-| 1 | s01, s02, s03 ✅ | ✅ tutte | ✅ `copertina_clean_v2.png` | ✅ bozza `listing_vol1.md` | ✅ (vol1_pres-dopo_*.pdf rigenerabile) | ✅ (output/copertina/vol1_wrap_T3_island_C.png) |
-| 2 | s04, s05, s06 (prosa OK, HD ?) | parziale | ❌ da generare | ❌ da scrivere | — | — |
-| 3 | s07, s08, s09 (prosa OK, HD parziale) | parziale | ❌ da generare | ❌ da scrivere | — | — |
-| 4 | s10, s11, s12 (mito) | — | ❌ da generare | ❌ da scrivere | — | — |
-
-**Prossimo passo realistico**: Vol 1 in stampa proof su KDP (Ray decide
-quando), poi Vol 2 quando le HD di s04-s06 sono pronte.
-
----
-
-## 9. Quando in dubbio
+## 8. Quando in dubbio
 
 1. Rileggi questa skill
 2. Apri `kdp/listing_vol1.md` come reference
