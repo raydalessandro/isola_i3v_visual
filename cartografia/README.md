@@ -1,6 +1,6 @@
 # CARTOGRAFIA TECNICA — L'Isola dei Tre Venti
 
-**Versione:** 0.1 (bootstrap)
+**Versione:** 0.6.2 (vedi `CHANGELOG.md`)
 **Data inizio:** 2026-04-24
 **Maintainer:** Ray + Claude (Agente Cartografo)
 
