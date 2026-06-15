@@ -38,7 +38,16 @@ isola_i3v_visual/
 │   │   └── 5 schede sentieri Tier A (via_dell_alba, sentiero_orti_torrente_foresta, via_che_sale, sentiero_orti_casa_salvia, viottolo_perimetrale_piazza) con `## Coerenza cross-scena` aggiornata con dettagli stabili da `path_details.paths.<id>` del grafo
 │   ├── oggetti/                      14 schede (13 oggetti-simbolo + 1 oggetto_di_scena_ricorrente) — tutte con prompt_grok.md
 │   ├── venti/                        3 schede (Taglio/Intreccio/Mulinello)
-│   └── visual_signatures/            1 scheda (quando_acqua_trema)
+│   ├── visual_signatures/            1 scheda (quando_acqua_trema)
+│   └── atlante/                      tavole-atlante per libri stampa (full-page abitanti/luoghi) + emblema collana + isola + mappe
+│       ├── ATLANTE_SPEC.json         single source of truth (varianti A/B/C/D × voci); aggiornato SOLO via scripts/ingest_tavola.py
+│       ├── emblema/                  copertina_v1.jpg (preview con testo), copertina_clean_v2.png (PNG pulito sorgente per build_cover.py), rosone_tre_venti.png
+│       ├── isola/                    isola_che_dorme_v1.jpg, isola_panoramica_v1.jpg, isola_riferimento_canonico_v1.jpg (reference canoniche)
+│       ├── mappe/                    ⭐ NEW (2026-06-15) viste cartografiche/aeree per copertine: isola_aerea_v1.jpg
+│       ├── mito/                     7 scene mito storage (Vol 4)
+│       ├── tavole/                   tavole accettate via ingest
+│       ├── prompt/                   prompt Manus per generazione tavole
+│       └── template/                 template manifest + check operativi
 │
 ├── _visual_pipeline/          ✅ pacchetto operativo (canone, template, esempi, skill)
 │   ├── README.md                     entry point pipeline
@@ -91,6 +100,7 @@ isola_i3v_visual/
 │   ├── write_hooks_to_graph.py          writer deterministico fase G (input YAML hooks_proposals/)
 │   ├── build_writing_brief.py           ⭐ NEW (2026-04-30) generatore zero-token brief writing per agente prosa
 │   ├── build_volume.py                  ⭐ NEW (2026-06-08, v2) compositore libro stampa KDP (A5 300 DPI bleed) — output PDF in _output/
+│   ├── build_cover.py                   ⭐ NEW (2026-06-15) generatore copertina KDP (wrap fronte+dorso+quarta+bleed, 4 stili titolo × 4 stili quarta, sistema collana 4 volumi) — output PNG in output/copertina/
 │   ├── design_system.py                 ⭐ NEW (2026-06-08) identita visiva collana (palette tre venti + 6 quartieri, font, ornamenti, glifi, cornici, camuni)
 │   ├── cornice_mondo/                   ⭐ NEW (2026-04-30) pacchetto 7 step "cornice del mondo"
 │   │   ├── step1_world_conventions.py   crea nodo radice world_conventions + extends quote_tracker
@@ -124,6 +134,9 @@ isola_i3v_visual/
 │   └── visual/
 │       ├── README.md                 skill visual generale
 │       └── compilatore.md            sotto-skill compilazione schede
+│
+├── kdp/                       ⭐ NEW (2026-06-15) bozze schede prodotto Amazon KDP per volume
+│   └── listing_vol1.md              campi: serie, volume, titolo, sottotitolo, descrizione, keywords (7 slot ≤50 char), BISAC, bio autore
 │
 ├── README.md                  panoramica generale
 ├── PROJECT_STATE.md           snapshot operativo
