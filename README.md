@@ -109,9 +109,10 @@ python3 scripts/build_cover.py               # wrap copertina (fronte+dorso+quar
 La scheda prodotto Amazon (titolo, sottotitolo, descrizione, keywords KDP,
 categorie BISAC) si scrive a mano in [`kdp/listing_volN.md`](./kdp/).
 
-Una skill `pubblicatore` che orchestra il tutto (PDF + copertina + listing
-+ checklist KDP) è in fase di progettazione — design doc:
-[`docs/DESIGN_SKILL_PUBBLICATORE.md`](./docs/DESIGN_SKILL_PUBBLICATORE.md).
+Skill operativa per chi (IA o umano) clona la repo e prepara un volume per KDP:
+[`skills/pubblicatore/SKILL.md`](./skills/pubblicatore/SKILL.md) — non automatizza,
+**è la guida**: dove sono gli script, quali sono gli standard (DPI, spina mm,
+BISAC, keywords), workflow per volume, checklist KDP.
 
 ---
 

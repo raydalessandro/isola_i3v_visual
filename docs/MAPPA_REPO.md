@@ -131,6 +131,8 @@ isola_i3v_visual/
 │   │   └── SKILL.md                  da incollare in chat Claude.ai per attivare modalita scrittura
 │   ├── illustratore/                 ⭐ NEW (2026-05-19) agente illustratore: workflow upload HD per stampa
 │   │   └── SKILL.md                  pattern branch + naming + commit per immagini HD pronte al merge
+│   ├── pubblicatore/                 ⭐ NEW (2026-06-15) guida per preparare pacchetto pubblicazione Amazon KDP di un volume (PDF libro + PDF stampa + wrap copertina + bozza listing). NON automatizza: orchestra a mano gli script esistenti
+│   │   └── SKILL.md                  workflow per volume: build_volume.py + build_cover.py + listing manuale + standard KDP
 │   └── visual/
 │       ├── README.md                 skill visual generale
 │       └── compilatore.md            sotto-skill compilazione schede
