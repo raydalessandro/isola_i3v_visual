@@ -97,6 +97,25 @@ Per il flusso end-to-end dall'idea autoriale di Ray al testo libro committato (7
 
 ---
 
+## Pubblicazione KDP
+
+Il libro stampato Amazon KDP si compone con due script paralleli:
+
+```bash
+python3 scripts/build_volume.py --volume 1   # PDF libro + stampa (A5 + bleed, 300 DPI)
+python3 scripts/build_cover.py               # wrap copertina (fronte+dorso+quarta+bleed) in PNG
+```
+
+La scheda prodotto Amazon (titolo, sottotitolo, descrizione, keywords KDP,
+categorie BISAC) si scrive a mano in [`kdp/listing_volN.md`](./kdp/).
+
+Skill operativa per chi (IA o umano) clona la repo e prepara un volume per KDP:
+[`skills/pubblicatore/SKILL.md`](./skills/pubblicatore/SKILL.md) — non automatizza,
+**è la guida**: dove sono gli script, quali sono gli standard (DPI, spina mm,
+BISAC, keywords), workflow per volume, checklist KDP.
+
+---
+
 ## File di stato
 
 | File | Cosa contiene |
