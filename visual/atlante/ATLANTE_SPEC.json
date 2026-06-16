@@ -229,10 +229,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": "visual/atlante/tavole/grunto_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/grunto_tavola_v2.jpg",
       "quartiere": "aria",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
     },
     {
       "titolo": "Rovo e Bru",
@@ -240,10 +240,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "C",
-      "tavola": "visual/atlante/tavole/rovo_bru_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/rovo_bru_tavola_v2.jpg",
       "quartiere": "terra",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
     },
     {
       "titolo": "Stria",
@@ -251,10 +251,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "B",
-      "tavola": "visual/atlante/tavole/stria_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/stria_tavola_v2.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
     },
     {
       "titolo": "Mèmolo e Pun",
@@ -262,10 +262,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "D",
-      "tavola": "visual/atlante/tavole/memolo_pun_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/memolo_pun_tavola_v2.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
     },
     {
       "titolo": "I bambini dell'isola",
@@ -273,10 +273,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v2.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
     },
     {
       "titolo": "Il Quartiere di Terra",

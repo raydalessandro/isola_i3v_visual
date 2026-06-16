@@ -826,7 +826,7 @@ def make_presentazione_page(
 # veduta dell'isola a piena pagina; pagina destra = trafiletto su carta.
 # Così il testo lungo non si sovrappone mai all'immagine.
 
-ISOLA_PANORAMICA = REPO / "visual/atlante/isola/isola_panoramica_v1.jpg"
+ISOLA_PANORAMICA = REPO / "visual/atlante/isola/_hd/isola_notturna_hd.jpg"
 ISOLA_CHE_DORME  = REPO / "visual/atlante/isola/isola_che_dorme_v1.jpg"
 
 
@@ -1900,7 +1900,9 @@ def make_occhiello_copertina() -> Image.Image:
     larghezza; il minimo eccesso verticale è centrato (scena piena, nessuna
     perdita significativa). Se manca l'immagine, ritorna carta vuota."""
     img = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
-    cov_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
+    cov_p = REPO / "pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_candidate_v2_hd.jpg"
+    if not cov_p.exists():
+        cov_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
     if cov_p.exists():
         cov = Image.open(cov_p).convert("RGB")
         sw, sh = cov.size
@@ -2491,7 +2493,9 @@ def build_volume_pages(
     if con_front_matter and not solo_storie:
         print("  → Front matter (frontespizio, colophon, dedica, indice)")
         voci_indice = build_indice_voci(volume, storie, posizione_pres)
-        cover_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
+        cover_p = REPO / "pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_candidate_v2_hd.jpg"
+        if not cover_p.exists():
+            cover_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
         pages.append(("single", make_blank()))   # foglio di guardia iniziale
         if cover_p.exists():
             pages.append(("single", make_occhiello_copertina()))

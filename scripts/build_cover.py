@@ -44,7 +44,7 @@ SPINE_MM     = 6.4                      # PROVVISORIA per volume: ricalcolare da
 # --- dati PER VOLUME --- (titolo saga e mappa isola restano uguali; cambiano numero, vento, immagine, storie)
 # Volumi 2-4 = SEGNAPOSTO: quando li produci aggiorna immagine pulita, sottotitolo del vento e le 3 storie.
 VOLUMES = {
-    1: dict(cover="visual/atlante/emblema/copertina_clean_v2.png",  wind="taglio",
+    1: dict(cover="pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_notxt_hd.jpg",  wind="taglio",
             subtitle="IL VENTO CHE TAGLIA",    vento="Vento Taglio",    ordinale="primo",
             stories=("La Nebbia delle Montagne Gemelle","Il Riflesso nella Pozza","Il Pallone oltre la Foresta")),
     2: dict(cover="visual/atlante/emblema/copertina_clean_vol2.png", wind="intreccio",
