@@ -211,23 +211,23 @@ L'ordine in cui completare le 115 schede è importante perché alcune entità so
 
 ## ⚠️ REGOLE NON NEGOZIABILI
 
-### NEVER (mai, sotto nessuna circostanza)
+> Le regole **generali** di non-danno (`pipeline_narrativa/` read-only, niente
+> contenuto inventato, niente push su `main` senza il via di Ray, leggere le
+> fonti prima di scrivere, commit descrittivi) vivono in **`CLAUDE.md` §Regole
+> di non-danno** e valgono **integralmente** qui. Sotto, solo ciò che è
+> **specifico del flusso visual**.
 
-1. ❌ **Mai modificare `pipeline_narrativa/`** (Bible, grafo, documenti progetto). Sono READ-ONLY.
-2. ❌ **Mai inventare contenuto narrativo** non derivabile dalle fonti.
-3. ❌ **Mai cambiare lo stile della saga** senza autorizzazione di Ray.
-4. ❌ **Mai usare `_da popolare dal grafo_` come scusa** per non riempire una sezione che è derivabile.
-5. ❌ **Mai pushare su main senza il via di Ray**. Sempre branch dedicato + merge fast-forward.
-6. ❌ **Mai modificare il canone (`_canone/*.md`)** senza tracciare il cambiamento e bumpare versione.
+### NEVER (specifico visual)
 
-### ALWAYS (sempre)
+1. ❌ **Mai cambiare lo stile/stylesheet della saga** senza autorizzazione di Ray.
+2. ❌ **Mai usare `_da popolare dal grafo_` come scusa** per non riempire una sezione derivabile.
+3. ❌ **Mai modificare il canone visual (`_canone/*.md`)** senza tracciare il cambiamento e bumpare versione.
 
-1. ✅ **Sempre leggere le fonti canoniche** prima di scrivere.
-2. ✅ **Sempre dichiarare le derivazioni** nei "Riferimenti puntuali".
-3. ✅ **Sempre rispettare la stylesheet saga** nei prompt Grok.
-4. ✅ **Sempre verificare la checklist post-generazione** sulle immagini.
-5. ✅ **Sempre rigenerare `catalogo_web/data/entities.json`** dopo modifiche al `visual/`.
-6. ✅ **Sempre commit con messaggio descrittivo** (cosa + perché).
+### ALWAYS (specifico visual)
+
+1. ✅ **Sempre rispettare la stylesheet saga** nei prompt Grok.
+2. ✅ **Sempre verificare la checklist post-generazione** sulle immagini.
+3. ✅ **Sempre rigenerare `catalogo_web/data/entities.json`** dopo modifiche al `visual/`.
 
 ---
 
