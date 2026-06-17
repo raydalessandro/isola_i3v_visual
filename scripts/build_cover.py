@@ -39,7 +39,7 @@ BACK_STYLE   = "island_C"               # collana | island_A | island_B | island
 SUBTITLE_POS = "top"                    # "top" | "bottom" — posizione del sottotitolo del vento
 PUBLISHER_FRONT = "logo"                # "none" | "logo" (solo sigillo) | "full" (sigillo + testo)
 TITLE_TOP, SUB_Y = 0.058, 0.864
-SPINE_MM     = 6.4                      # PROVVISORIA per volume: ricalcolare da pagine + carta
+SPINE_MM     = 5.96                     # 102 pagine x 0.05842 (premium/standard color KDP) — ricalcolata 2026-06-16
 
 # --- dati PER VOLUME --- (titolo saga e mappa isola restano uguali; cambiano numero, vento, immagine, storie)
 # Volumi 2-4 = SEGNAPOSTO: quando li produci aggiorna immagine pulita, sottotitolo del vento e le 3 storie.

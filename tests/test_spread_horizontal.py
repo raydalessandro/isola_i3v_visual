@@ -30,7 +30,7 @@ def test_parser_riconosce_spread_con_spazio(sid, expected):
     assert spread, f"{expected} non parsato (regex page_book rotta?)"
     sh = spread[0]
     assert isinstance(sh["page_book"], list) and len(sh["page_book"]) == 2
-    assert sh["layout"] == "double_spread"
+    assert sh["layout"].startswith("double_spread")
     assert sh["image_path"] is not None, "immagine landscape non risolta"
 
 
@@ -66,12 +66,14 @@ def test_facciate_spread_vale_due(sid):
 
 @pytest.mark.parametrize("sid", SPREAD_SUBHOOKS)
 def test_testo_solo_a_sinistra(sid):
-    """Confronta spread con testo vs senza: la differenza dei pixel deve
-    concentrarsi nella metà sinistra (testo + schiarita DODGE), non a destra."""
+    """Modalità LEFT (default): la differenza dei pixel deve concentrarsi nella
+    metà sinistra (testo + schiarita DODGE), non a destra."""
     sh = next(s for s in bv.parse_story_md(sid)
               if s["subhook_id"] == SPREAD_SUBHOOKS[sid])
-    _, img = bv.compose_spread_horizontal(sh["image_path"], sh["text"])
-    _, plain = bv.compose_spread_horizontal(sh["image_path"], "")
+    _, img = bv.compose_spread_horizontal(sh["image_path"], sh["text"],
+                                          spread_text="left")
+    _, plain = bv.compose_spread_horizontal(sh["image_path"], "",
+                                            spread_text="left")
     half = img.width // 2
 
     def mean_abs_diff(box):
@@ -84,3 +86,59 @@ def test_testo_solo_a_sinistra(sid):
     d_right = mean_abs_diff((half, 0, img.width, img.height))
     assert d_left > 1.0, "nessun testo rilevato sulla pagina sinistra"
     assert d_right < 0.05, "la pagina destra è stata alterata (testo sconfinato)"
+
+
+# ── SPLIT del testo sulle due pagine ─────────────────────────────────────────
+
+def test_split_text_balanced_bilancia_e_non_perde_testo():
+    txt = ("Uno.\n\nDue due.\n\nTre tre tre.\n\nQuattro quattro quattro quattro.")
+    left, right = bv._split_text_balanced(txt)
+    assert left and right, "lo split deve produrre due parti non vuote"
+    # nessuna parola persa
+    assert set(txt.split()) == set((left + " " + right).split())
+    # confine di paragrafo (niente paragrafo spezzato a metà)
+    assert "\n\n" not in left.strip("\n") or left.count("\n\n") < txt.count("\n\n")
+
+
+def test_split_su_due_pagine_mette_testo_su_entrambe():
+    """spread_text='split' → testo su SINISTRA e DESTRA."""
+    sh = next(s for s in bv.parse_story_md("s02")
+              if s["subhook_id"] == "s02_h05a")
+    _, img = bv.compose_spread_horizontal(sh["image_path"], sh["text"],
+                                          spread_text="split")
+    _, plain = bv.compose_spread_horizontal(sh["image_path"], "",
+                                            spread_text="split")
+    half = img.width // 2
+    from PIL import ImageChops
+
+    def diff(box):
+        a, b = img.crop(box).convert("L"), plain.crop(box).convert("L")
+        return ImageStat.Stat(ImageChops.difference(a, b)).mean[0]
+
+    assert diff((0, 0, half, img.height)) > 1.0, "manca testo a sinistra"
+    assert diff((half, 0, img.width, img.height)) > 1.0, "manca testo a destra"
+
+
+def test_s02_e_split_s01_e_left_nel_libro():
+    """Wiring: s02_h05a usa lo split, s01_h07a resta solo-sinistra."""
+    s02 = next(s for s in bv.parse_story_md("s02") if s["subhook_id"] == "s02_h05a")
+    s01 = next(s for s in bv.parse_story_md("s01") if s["subhook_id"] == "s01_h07a")
+    assert s02["layout"] == "double_spread_split"
+    assert s01["layout"] == "double_spread"
+
+    from PIL import ImageChops
+
+    def right_has_text(sid, mode):
+        sh = next(s for s in bv.parse_story_md(sid)
+                  if s["subhook_id"] == SPREAD_SUBHOOKS[sid])
+        _, img = bv.compose_spread_horizontal(sh["image_path"], sh["text"],
+                                              spread_text=mode)
+        _, plain = bv.compose_spread_horizontal(sh["image_path"], "",
+                                                spread_text=mode)
+        half = img.width // 2
+        a = img.crop((half, 0, img.width, img.height)).convert("L")
+        b = plain.crop((half, 0, img.width, img.height)).convert("L")
+        return ImageStat.Stat(ImageChops.difference(a, b)).mean[0] > 1.0
+
+    assert right_has_text("s02", "split"), "s02 dovrebbe avere testo anche a destra"
+    assert not right_has_text("s01", "left"), "s01 non deve avere testo a destra"
