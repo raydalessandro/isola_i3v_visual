@@ -218,10 +218,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "D",
-      "tavola": "visual/atlante/tavole/fiamma_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/fiamma_tavola_v2.jpg",
       "quartiere": "fuoco",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: rigenerata da Manus a 3344×5017 (sopra spec 1748×2480). Sostituisce v1 (1536×2304 sotto spec)."
     },
     {
       "titolo": "Grunto",
@@ -273,10 +273,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v2.jpg",
+      "tavola": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v3.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Vol 1 v2: upgrade qualità da v1 (1536×2304 sotto-spec) a 3344×5017 sopra-spec. Contenuto identico, solo risoluzione."
+      "note": "Vol 1 v3: refresh autoriale dopo v2 (PR #42). Stessa risoluzione 3344×5017 sopra spec."
     },
     {
       "titolo": "Il Quartiere di Terra",
