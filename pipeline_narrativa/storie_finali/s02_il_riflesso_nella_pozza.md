@@ -100,7 +100,7 @@ I tre si chinarono per bere.
 
 <!-- @hook s02_h05 | @page 5 | @subhooks [s02_h05a] | @image TBD -->
 
-<!-- @subhook s02_h05a | @page_book [7, 8] | @layout double_spread | @image pipeline_narrativa/storie_finali/_scene/s02/_pending/s02_h05_spread_landscape.jpg -->
+<!-- @subhook s02_h05a | @page_book [7, 8] | @layout double_spread_split | @image pipeline_narrativa/storie_finali/_scene/s02/_pending/s02_h05_spread_landscape.jpg -->
 E si videro.
 
 Non come si vedono di solito.

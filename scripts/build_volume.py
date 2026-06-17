@@ -151,6 +151,9 @@ TEXT_ACCENT = (115, 78,  38)
 TEXT_RULE   = (190, 168, 138)
 TEXT_LIGHT  = (245, 240, 228)
 STORY_INK   = (45,  28,  14)
+# Autore UFFICIALE del libro (byline). DEVE combaciare con build_cover.AUTHOR:
+# il test test_author_byline.py lo verifica per evitare divergenze cover↔interno.
+AUTHOR_BYLINE = "Beatrice Mercuri"
 # Luminanza minima desiderata del fondo SOTTO i glifi per una lettura comoda
 # dell'inchiostro scuro (0..1). Guida la schiaritura adattiva locale del testo.
 STORY_READ_FLOOR = 0.68
@@ -828,6 +831,32 @@ def make_presentazione_page(
 
 ISOLA_PANORAMICA = REPO / "visual/atlante/isola/_hd/isola_notturna_hd.jpg"
 ISOLA_CHE_DORME  = REPO / "visual/atlante/isola/isola_che_dorme_v1.jpg"
+# Mappa aerea dell'isola DI GIORNO (vista dall'alto), versione HD SENZA testo
+# (la candidate_v2 ha il titolo impresso → doppione col titolo dell'atlante).
+ISOLA_AEREA_GIORNO = REPO / "pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_candidate_v1_hd.jpg"
+
+# ── Sorgenti immagine del FRONT MATTER Vol.1 — UNICA FONTE DI VERITÀ ──────────
+# Tre slot facili da scambiare per sbaglio. Cambiare SOLO qui. I test in
+# tests/test_frontmatter_images.py verificano PRIMA del build che notte / giorno
+# / copertina non finiscano nel posto sbagliato (luminanza + filename).
+OCCHIELLO_COVER = REPO / "pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_notxt_hd.jpg"
+OCCHIELLO_COVER_FALLBACKS = [
+    REPO / "visual/atlante/emblema/copertina_clean_v2.png",
+    REPO / "visual/atlante/emblema/copertina_v1.jpg",
+]
+FRONTMATTER_ISOLA = {
+    "stato_zero":           ISOLA_PANORAMICA,    # "Ecco l'isola" — veduta NOTTURNA
+    "atlante_questa_isola": ISOLA_AEREA_GIORNO,  # "Questa è l'isola" — mappa GIORNO
+}
+
+
+def _occhiello_cover_path() -> "Path | None":
+    """Sorgente della pagina-2 (occhiello copertina): la cover SENZA testo, con
+    fallback. Centralizzata e testabile (vedi test_frontmatter_images)."""
+    for p in (OCCHIELLO_COVER, *OCCHIELLO_COVER_FALLBACKS):
+        if p.exists():
+            return p
+    return None
 
 
 def make_isola_doppia(
@@ -1661,8 +1690,37 @@ def compose_story_page(img_path: Path | None, text: str,
     return img.convert("RGB")
 
 
+def _split_text_balanced(text: str) -> tuple[str, str]:
+    """Divide il testo in due parti ~uguali per uno spread con testo su
+    entrambe le pagine, scegliendo il confine MIGLIORE: preferisce un confine
+    di PARAGRAFO (riga vuota), altrimenti di FRASE, più vicino al punto di metà.
+    Ritorna (sinistra, destra). Se non c'è un confine sensato → (testo, "")."""
+    text = (text or "").strip()
+    if not text:
+        return "", ""
+    target = len(text) / 2.0
+    paras = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+    if len(paras) >= 2:
+        blocks, joiner = paras, "\n\n"
+    else:
+        blocks = [b.strip() for b in
+                  re.findall(r'.*?[.!?…]+[»"”\')\]]?(?:\s+|$)', text, flags=re.S)
+                  if b.strip()]
+        joiner = " "
+    if len(blocks) < 2:
+        return text, ""
+    best_k, best_d, cum = 1, None, 0
+    for k in range(1, len(blocks)):
+        cum += len(blocks[k - 1]) + len(joiner)
+        d = abs(cum - target)
+        if best_d is None or d < best_d:
+            best_d, best_k = d, k
+    return joiner.join(blocks[:best_k]).strip(), joiner.join(blocks[best_k:]).strip()
+
+
 def compose_spread_horizontal(landscape_path: Path | None, text: str,
-                              key_color=None) -> tuple[str, Image.Image]:
+                              key_color=None, spread_text: str = "left"
+                              ) -> tuple[str, Image.Image]:
     """
     Compone uno spread orizzontale doppia-pagina da UNA sola immagine
     landscape che attraversa le due facciate.
@@ -1706,9 +1764,21 @@ def compose_spread_horizontal(landscape_path: Path | None, text: str,
         src = Image.new("RGB", (SW, IMG_H), (245, 241, 233))
     canvas = _cover_fit(src, SW, IMG_H)
 
-    # ── Testo solo sulla metà sinistra ───────────────────────────────────
-    left = _overlay_text(canvas.crop((0, 0, IMG_W, IMG_H)), text, key_color=key_color)
-    canvas.paste(left, (0, 0))
+    # ── Testo: solo a sinistra (default) oppure SPLIT sulle due pagine ────
+    if spread_text == "split":
+        left_txt, right_txt = _split_text_balanced(text)
+        left = _overlay_text(canvas.crop((0, 0, IMG_W, IMG_H)),
+                             left_txt, key_color=key_color)
+        canvas.paste(left, (0, 0))
+        if right_txt:
+            rx0 = SW - IMG_W   # pagina destra (oltre la piega)
+            right = _overlay_text(canvas.crop((rx0, 0, SW, IMG_H)),
+                                  right_txt, key_color=key_color)
+            canvas.paste(right, (rx0, 0))
+    else:
+        left = _overlay_text(canvas.crop((0, 0, IMG_W, IMG_H)),
+                             text, key_color=key_color)
+        canvas.paste(left, (0, 0))
 
     # ── Banner qualità: lo spread serve 2 facciate full-bleed ────────────
     sw, sh = src.size
@@ -1900,20 +1970,21 @@ def make_occhiello_copertina() -> Image.Image:
     larghezza; il minimo eccesso verticale è centrato (scena piena, nessuna
     perdita significativa). Se manca l'immagine, ritorna carta vuota."""
     img = Image.new("RGB", (IMG_W, IMG_H), DS.PAPER)
-    cov_p = REPO / "pipeline_narrativa/storie_finali/_volumi/v01/_hd/v01_copertina_candidate_v2_hd.jpg"
-    if not cov_p.exists():
-        cov_p = REPO / "visual/atlante/emblema/copertina_v1.jpg"
-    if cov_p.exists():
+    # La copertina VERA (illustrazione personaggi) SENZA testo, in HD: pagina
+    # interna che "replica la copertina" come soglia. Niente scritte (il testo
+    # della cover lo disegna build_cover.py, non sta nell'immagine pulita).
+    cov_p = _occhiello_cover_path()
+    if cov_p is not None:
         cov = Image.open(cov_p).convert("RGB")
         sw, sh = cov.size
         scale = IMG_W / sw
         nw, nh = IMG_W, int(round(sh * scale))
         cov_fit = cov.resize((nw, nh), Image.LANCZOS)
         oy = (IMG_H - nh) // 2          # centra l'eccesso verticale
-        # Velo leggero verso la carta: la copertina-occhiello non parte a
-        # colori pieni ma un filo attenuata, così fa più "intro" / soglia.
+        # Velo verso la carta: la copertina-occhiello non parte a colori pieni
+        # ma più chiara/attenuata, così legge come "intro" / soglia interna.
         paper = Image.new("RGB", cov_fit.size, DS.PAPER)
-        cov_fit = Image.blend(cov_fit, paper, 0.18)
+        cov_fit = Image.blend(cov_fit, paper, 0.25)
         img.paste(cov_fit, (0, oy))
         # Vignettatura morbida: i bordi sfumano nella carta (cornice-soglia).
         import numpy as np
@@ -1965,7 +2036,7 @@ def make_frontespizio(volume: int) -> Image.Image:
 
     # Autore + editore in basso
     f_auth = DS.font("sans", int(TX_W*0.024))
-    _center(d, "Ray D'Alessandro", f_auth, int(TX_H*0.88), DS.INK)
+    _center(d, AUTHOR_BYLINE, f_auth, int(TX_H*0.88), DS.INK)
     f_ed = DS.font_weighted("sans", int(TX_W*0.019), 600)
     _tracked_center(d, "SPIRALE EDITRICE", f_ed, int(TX_H*0.91), DS.INK_FAINT, 4)
     return img
@@ -1979,7 +2050,7 @@ def make_colophon(volume: int) -> Image.Image:
     MXc = int(TX_W * 0.10)
     y = int(TX_H * 0.12)
 
-    d.text((MXc, y), "© 2026 RAY D'ALESSANDRO",
+    d.text((MXc, y), f"© 2026 {AUTHOR_BYLINE.upper()}",
            font=DS.font_weighted("sans", int(TX_W*0.023), 800), fill=DS.INK)
     y += int(TX_H * 0.045)
 
@@ -2389,12 +2460,17 @@ def build_mito_pages() -> list[tuple[str, Image.Image]]:
 def build_story_pages(sid: str, key_color=None) -> list[tuple[str, Image.Image]]:
     pages: list[tuple[str, Image.Image]] = []
     for sh in parse_story_md(sid):
-        is_spread = sh["layout"] == "double_spread" or isinstance(sh["page_book"], list)
+        layout = sh["layout"]
+        is_spread = layout.startswith("double_spread") or isinstance(sh["page_book"], list)
         if is_spread:
-            # Spread orizzontale: 1 immagine landscape su 2 facciate,
-            # testo solo a sinistra. build_stampa_pdf la taglia poi in 2 A5.
+            # Spread orizzontale: 1 immagine landscape su 2 facciate.
+            # double_spread       → testo solo a sinistra
+            # double_spread_split → testo diviso sulle due pagine (punto migliore)
+            # build_stampa_pdf taglia poi lo spread in 2 A5.
+            spread_text = "split" if layout == "double_spread_split" else "left"
             pages.append(compose_spread_horizontal(
-                sh["image_path"], sh["text"], key_color=key_color))
+                sh["image_path"], sh["text"], key_color=key_color,
+                spread_text=spread_text))
         else:
             img = compose_story_page(sh["image_path"], sh["text"], key_color=key_color)
             pages.append(("single", img))
@@ -2403,6 +2479,38 @@ def build_story_pages(sid: str, key_color=None) -> list[tuple[str, Image.Image]]
 # ═══════════════════════════════════════════════════════════════════════════
 # COSTRUZIONE SEQUENZA VOLUME
 # ═══════════════════════════════════════════════════════════════════════════
+
+def _mean_lum(path: "Path", sample: int = 128) -> float:
+    """Luminanza media (0..1) su un campione ridotto — veloce, per i guard."""
+    return ImageStat.Stat(
+        Image.open(path).convert("L").resize((sample, sample))).mean[0] / 255.0
+
+
+def validate_frontmatter_isola(log_warn=True) -> list[str]:
+    """Guard PRE-BUILD: verifica che notte/giorno/copertina del front matter non
+    siano scambiati. Ritorna la lista dei problemi (vuota = ok). Non blocca il
+    build, ma logga un avviso netto. Gli stessi invarianti sono coperti dai test
+    (tests/test_frontmatter_images.py) che girano in `make check`."""
+    problems: list[str] = []
+    notte = FRONTMATTER_ISOLA["stato_zero"]
+    giorno = FRONTMATTER_ISOLA["atlante_questa_isola"]
+    cover = _occhiello_cover_path()
+    if notte.exists() and giorno.exists():
+        ln, lg = _mean_lum(notte), _mean_lum(giorno)
+        if not (ln < lg - 0.15):
+            problems.append(
+                f"isola notte/giorno forse SCAMBIATE: 'Ecco l'isola'={notte.name} "
+                f"(lum {ln:.2f}) non è più scura di 'Questa è l'isola'="
+                f"{giorno.name} (lum {lg:.2f})")
+    if cover is not None and ("candidate_v2" in cover.name):
+        problems.append(
+            f"pagina-2 usa una cover col TITOLO impresso ({cover.name}): serve "
+            f"la versione senza testo (notxt/clean)")
+    if log_warn:
+        for p in problems:
+            log.warning("FRONT MATTER: %s", p)
+    return problems
+
 
 def build_volume_pages(
     volume:            int,
@@ -2425,6 +2533,8 @@ def build_volume_pages(
     """
     cfg    = VOLUME_CONFIG[volume]
     storie = storie_override or cfg["storie"]
+    if con_front_matter and not solo_storie:
+        validate_frontmatter_isola()   # guard: notte/giorno/copertina al posto giusto
     pages: list[tuple[str, Image.Image]] = []
     layout_warnings: list[dict] = []
 
@@ -2455,11 +2565,12 @@ def build_volume_pages(
                   "il quartiere d'acqua", "il mercato del mezzogiorno"}
         for t, body in entries:
             kind = "luogo" if t.lower() in luoghi else "personaggio"
-            # "Questa è l'isola": doppia pagina (veduta isola sx + testo dx).
+            # "Questa è l'isola": doppia pagina (mappa isola GIORNO sx + testo dx).
             if _title_to_slug(t) == "questa_l_isola":
-                print(f"    · {t}: doppia isola (spread)")
+                print(f"    · {t}: doppia isola giorno (spread)")
                 pages.append(("spread", make_isola_doppia(
-                    t, body, volume=volume, layout_warnings=layout_warnings)))
+                    t, body, volume=volume, layout_warnings=layout_warnings,
+                    src_default=FRONTMATTER_ISOLA["atlante_questa_isola"])))
                 continue
             # Tavola naturalistica (visual/atlante/) se pronta nello spec;
             # altrimenti layout classico — degradazione dolce.
@@ -2518,9 +2629,11 @@ def build_volume_pages(
         print(f"  → Introduzione ciclo {volume}")
         txt(get_introduzione_ciclo(volume))
         print(f"  → Stato Zero vol.{volume}")
-        if ISOLA_CHE_DORME.exists() and usa_atlante:
+        _isola_notte = FRONTMATTER_ISOLA["stato_zero"]
+        if _isola_notte.exists() and usa_atlante:
             # La doppia "L'isola che dorme" sostituisce la pagina-soglia:
             # è già l'ingresso forte, inutile ripetere il titolo prima.
+            # Veduta NOTTURNA HD dell'isola (coerente con "l'isola che dorme").
             print("    · L'isola che dorme: doppia (spread) + continuazione")
             pages = ensure_recto(pages)
             mark("isola_dorme")
@@ -2528,7 +2641,7 @@ def build_volume_pages(
             pages.append(("spread", make_isola_doppia(
                 "L'isola che dorme", get_stato_zero(volume),
                 volume=volume, layout_warnings=layout_warnings,
-                eyebrow="ECCO L'ISOLA", src_default=ISOLA_CHE_DORME,
+                eyebrow="ECCO L'ISOLA", src_default=_isola_notte,
                 remainder_out=_rem)))
             if _rem and _rem[0].strip():
                 # il testo che non entra nella doppia prosegue su pagina/e carta
