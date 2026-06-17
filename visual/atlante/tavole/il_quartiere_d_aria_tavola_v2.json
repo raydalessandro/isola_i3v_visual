@@ -1,0 +1,9 @@
+{
+  "schema": "tavola_atlante/1.0",
+  "slug": "il_quartiere_d_aria",
+  "variante": "B",
+  "file": "visual/atlante/tavole/il_quartiere_d_aria_tavola_v2.jpg",
+  "generatore": "manus",
+  "data": "2026-06-16",
+  "note": "Vol 1 v2: stesso soggetto del v1, upgrade a 3344×5017 (sopra spec 1748×2480). File ricavato dalla panoramica HD del quartiere già caricata in visual/luoghi/ (PR #42)."
+}

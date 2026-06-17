@@ -185,10 +185,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "A",
-      "tavola": "visual/atlante/tavole/il_villaggio_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/il_villaggio_tavola_v2.jpg",
       "quartiere": "centro",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: stesso soggetto del v1, upgrade a 3344×5017 (sopra spec 1748×2480). File ricavato dalla panoramica HD del quartiere già caricata in visual/luoghi/ (PR #42)."
     },
     {
       "titolo": "Il Quartiere di Fuoco",
@@ -196,10 +196,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "C",
-      "tavola": "visual/atlante/tavole/il_quartiere_di_fuoco_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/il_quartiere_di_fuoco_tavola_v2.jpg",
       "quartiere": "fuoco",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: stesso soggetto del v1, upgrade a 3344×5017 (sopra spec 1748×2480). File ricavato dalla panoramica HD del quartiere già caricata in visual/luoghi/ (PR #42)."
     },
     {
       "titolo": "Il Quartiere d'Aria",
@@ -207,10 +207,10 @@
       "volume": 1,
       "tipo": "tavola",
       "variante": "B",
-      "tavola": "visual/atlante/tavole/il_quartiere_d_aria_tavola_v1.jpg",
+      "tavola": "visual/atlante/tavole/il_quartiere_d_aria_tavola_v2.jpg",
       "quartiere": "aria",
       "binomio": null,
-      "note": "Baseline Vol 1, dimensioni 1536×2304 (sotto-spec) — accettata per --force (decisione Ray)"
+      "note": "Vol 1 v2: stesso soggetto del v1, upgrade a 3344×5017 (sopra spec 1748×2480). File ricavato dalla panoramica HD del quartiere già caricata in visual/luoghi/ (PR #42)."
     },
     {
       "titolo": "Fiamma",
