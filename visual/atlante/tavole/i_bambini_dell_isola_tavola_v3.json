@@ -1,0 +1,9 @@
+{
+  "schema": "tavola_atlante/1.0",
+  "slug": "i_bambini_dell_isola",
+  "variante": "A",
+  "file": "visual/atlante/tavole/i_bambini_dell_isola_tavola_v3.jpg",
+  "generatore": "manus",
+  "data": "2026-06-17",
+  "note": "Vol 1 v3: refresh autoriale dopo v2 (PR #42). Stessa risoluzione 3344×5017 sopra spec."
+}
