@@ -2288,7 +2288,7 @@ def make_occhiello_porte(volume: int) -> Image.Image:
     vento = DS.CICLO_COLOR.get(VOLUME_CONFIG[volume]["ciclo"], DS.ACCENT)
     return _occhiello_base(
         "DOPO LE STORIE", "Le porte",
-        "Domande e giochi\nper restare ancora un po' sull'isola.",
+        "Bambini che sono passati sull'isola...",
         lambda d, cx, cy: DS.camuno_rosa(d, cx, cy, int(TX_W*0.10), vento, max(3, TX_W//300)),
         vento)
 
