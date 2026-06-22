@@ -6,6 +6,76 @@
 
 ---
 
+## Sessione 2026-06-10 notte tarda — Canonizzazione + chiusura branch illustratore + fix sito
+
+Sequenza di PR per chiudere il backlog illustratore + restituire al sito le funzionalità per Manus (illustratore AI).
+
+### A. PR #13 — Canonizzazione 11 personaggi + 3 luoghi
+
+- **Status canonico** per 11 schede personaggi (frontmatter `status: provvisorio` → `canonico`):
+  - primari: fiamma, grunto, stria, memolo, bartolo
+  - secondari: nodo, salvia, zolla
+  - cuccioli: pun, bru, toba
+  - Catalogo personaggi canonici: **4 → 15**
+- **3 luoghi** promossi dalla branch `immagini-nuove`: `forno` (panoramica), `pascoli_alti` (era vuoto), `via_che_sale` (vista_alta).
+
+### B. PR #14 — 4 luoghi ambigui + cronologia semi + fix copy hook
+
+- **4 luoghi** restanti dalla branch `immagini-nuove` collocati con la mappa decisa da Ray:
+  - `il_villaggio.jpg` + `il_mercato_del_mezzogiorno.jpeg` → `piazza_villaggio/` (`albero_centrale` + `mercato_mezzogiorno`)
+  - `il_quartiere_di_terra.jpeg` → `orti_del_cerchio/` (orti concentrici — categoria contenitore mappata a sotto-luogo)
+  - `il_quartiere_di_acqua.jpeg` → `spiaggia_conchiglie/` (spiaggia + casa)
+- **Cronologia semi ricomparsa**: widget Server Component `<NarrativeChronologyBlock>` letto dal grafo. Mostra per ogni storia 🌱 piantati / 🌾 raccolti / 🌿 maturano / 🌸 sbocciati + 🔁 callback espliciti con summary. `scripts/build_storie_data.py` esteso con `load_graph_chronology()`.
+- **Fix copy prompt hook narrativo**: `hook-item.tsx` riga 221 aveva `{!subhooksAnn.length && (...)}` — il pulsante "Copia prompt hook" era nascosto se la storia aveva subhook annotati. s01 (unica con subhook) non lo mostrava. Rimosso il guard.
+- **Branch `immagini-nuove` completamente recuperata** (11 file totali — può essere cancellata da UI GitHub).
+
+### C. PR #15 — Riordino layout hook per workflow Manus
+
+Su segnalazione Ray ("sotto-hook e prompt copiabili devono essere la main visual"):
+
+| Prima | Dopo |
+|---|---|
+| Luogo → Personaggi → Oggetti → Note → Subhook (prompt in `<details>` chiuso) → Prompt hook → Testo | 🎨 **Subhook + prompt VISIBILE + copy** (FULCRO) → 🎨 Prompt hook → 📍 Luogo (reference) → 👤 Personaggi (reference) → 📦 Oggetti (reference) → 📌 Note → Testo |
+
+- Subhook card con bordo `accent/30` (in evidenza)
+- Prompt scena visibile direttamente (non più `<details>` collassato)
+- CopyButton già presente, ora più prominente per posizione
+
+### D. TODO domani — Vercel non ribuilda
+
+Stato verificato a sera:
+- Codice in `origin/main`: nuovo layout ✓, cronologia semi ✓, luoghi ✓
+- Codice in `origin/claude/cutover-deploy-preview`: idem (fast-forward a main) ✓
+- **Vercel** sembra fermo al deploy delle 16:23 UTC (PR #11): nuove PR non visibili in produzione
+
+Ray esamina domani. Possibili cause: branch deploy sbagliata, auto-deploy disabilitato, build silenzioso fallito, due project Vercel sovrapposti, route config in `vercel.json` che intercetta. Pushato anche un commit di trigger (`b3a6ef4`) su `main` con timestamp aggiornato (`generated_at: 2026-06-10T18:22:33`) per verificare visivamente se Vercel ribuilda.
+
+### E. Stato repo verificato
+
+```
+catalogo            116 entità, 101 immagini (+4 luoghi rispetto a sera)
+canonici            15 personaggi (era 4)
+audit fast          3/3 PASS
+pytest fast         78 PASS
+pytest slow         6 PASS (build PDF Vol1 s01 reale)
+mirror Vercel       entities + storie-dashboard + orchestra + search-index sincronizzati
+```
+
+### F. Branch illustratore obsolete (da cancellare da UI GitHub)
+
+Tutte recuperate, niente da mergiare:
+- `Modifiche-Hook-storia` (PR #4 + PR #11 hanno preso il contenuto)
+- `Personaggi-modificati` (PR #4 + PR #12 hanno preso il contenuto)
+- `immagini-nuove` (PR #14 ha preso gli ultimi 4 luoghi)
+- `claude/show-uploaded-images-1rEQ1` (vuota)
+
+### G. Prossimo passo Ray
+
+1. Debug Vercel (capire perché non ribuilda)
+2. Integrare 2 branch di miglioria qualità codice (preparate da Ray, ancora da pushare)
+
+---
+
 ## Sessione 2026-06-10 notte — Promozione reference dal volume al catalogo + fix SKILL illustratore
 
 ### A. Diagnosi disallineamento
