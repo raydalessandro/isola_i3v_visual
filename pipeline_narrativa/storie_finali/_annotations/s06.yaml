@@ -8,6 +8,7 @@ note: |
   - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
   - objects_in_scene: oggetti canonici visibili (id da entities.objects)
   - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - pov: punto di vista del lettore in frase tecnica esplicita (inglese) — blocco obbligatorio del prompt (skill scenografo §2-ter); distillato dal punto di vista già implicito nella note
   - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
                 Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
   Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
@@ -36,11 +37,13 @@ hooks:
         page_book: 1
         text_split_marker: "Sull'Isola dei Tre Venti"
         image_status: TBD
+        pov: "eye-level interior of the school: Stria back-turned at the numbers-blackboard, the desks with cubs, Pun looking out the window, morning light"
         note: "L'aula: prima veduta interna della scuola — Stria di spalle alla lavagna piena di numeri, lo scialle cenere, le orecchie dritte; i banchi con i cuccioli, e Pun che guarda fuori dalla finestra invece che la lavagna. Luce di mattina che entra dalle finestre. Il bambino lettore vede subito chi è triste: lo dice la postura."
       - id: s06_h01b
         page_book: 2
         text_split_marker: "Si china verso Gabriel"
         image_status: TBD
+        pov: "eye-level on Pun leaning toward Gabriel at the desk, paw near his words, Stria still back-turned but ears up"
         note: "La confidenza: Pun chinato verso Gabriel nel banco accanto, la zampa quasi a coprire le parole; Gabriel che ascolta serio, Elias e Noah che intuiscono dai banchi vicini. Stria sempre di spalle alla lavagna — ma le orecchie dritte: ha sentito. L'intimità del segreto detto piano in classe."
 
   s06_h02:
@@ -60,6 +63,7 @@ hooks:
         page_book: 3
         text_split_marker: "Mèmolo è in piazza"
         image_status: TBD
+        pov: "eye-level on Mèmolo alone mid-square, paws at his crooked scarf, the large empty piazza around him, one lit window far off, Taglio passing high"
         note: "Mèmolo solo a metà piazza: fermo, le zampe alla sciarpa che non sta dritta, l'aria smarrita di chi cerca una cosa che non ricorda. La piazza grande e vuota intorno a lui (Albero Vecchio, pozzo), una sola finestra accesa che lo guarda da lontano. In alto il Taglio che passa senza toccarlo. Malinconia tenera, mai cupa: un riccio piccolo in uno spazio largo."
 
   s06_h03:
@@ -78,11 +82,13 @@ hooks:
         page_book: 4
         text_split_marker: "Al Forno, Fiamma impasta"
         image_status: TBD
+        pov: "eye-level on Fiamma at the counter kneading full-tilt, sleeves up, flour to the elbows, the three on the threshold caught in her chatter"
         note: "Il fiume di Fiamma: lei al banco che impasta a pieno ritmo, maniche su, farina fino ai gomiti, la bocca a metà frase — i tre sulla soglia investiti dalla chiacchiera. Il Forno caldo e vivo di s01 ritrovato in primavera. Energia domestica: chi parla tanto e ascolta tutto."
       - id: s06_h03b
         page_book: 5
         text_split_marker: "Noah si infila mezzo cornetto"
         image_status: TBD
+        pov: "tight close-up on Noah slipping half a cornetto into his pocket, eyes elsewhere with feigned innocence, bread steam behind"
         note: "Il gesto complice, quasi-muta: primo piano su Noah che fa sparire mezzo cornetto nel taschino, lo sguardo altrove con finta innocenza — nessuno in scena lo vede, solo il lettore. Dietro/fuori, il vapore del pane che sale sul gradino. Pagina-segreto col bambino: questo cornetto tornerà (le briciole di h10)."
 
   s06_h04:
@@ -101,11 +107,13 @@ hooks:
         page_book: 6
         text_split_marker: "Camminano. Verso ovest"
         image_status: TBD
+        pov: "eye-level on the carriola greeting: the mole camminante crossing with a loaded barrow, hand off the handle mid-air, Gabriel raising his in answer"
         note: "Il saluto della carriola: la camminante talpa che attraversa con la carriola carica, la mano staccata dal manico a mezz'aria, e Gabriel che risponde alzando la sua. I due gesti gemelli nello stesso istante, a distanza. Il rito di s01 che il bambino riconosce. Via di mattina, luce di primavera."
       - id: s06_h04b
         page_book: 7
         text_split_marker: "Sul sentiero degli Orti, il muretto"
         image_status: TBD
+        pov: "eye-level detail-hunt along the orchard path: the collapsed wall with mossy stones and a purple feather among them, Noah stooping mid-stride for a stick, the Pontile tiny beyond the roofs with a small figure"
         note: "Pagina-caccia ai dettagli: il tratto di muretto crollato con le pietre muschiose e, tra le pietre, la piuma viola (nessuno la commenta: il lettore la trova); Noah che si abbassa in piena camminata a raccogliere un bastoncino; e in fondo, oltre i tetti, il Pontile con una figura piccolissima seduta sul bordo — Toba, primo avvistamento. Tre scoperte in una pagina, tutte mute."
 
   s06_h05:
@@ -123,6 +131,7 @@ hooks:
         page_book: 8
         text_split_marker: "Salvia ha le mani occupate"
         image_status: TBD
+        pov: "eye-level on Salvia in the herb yard, hands sorting dry from green nettle over two baskets, the three at the edge of the yard"
         note: "Salvia al lavoro nel cortile delle erbe: le mani che separano ortica secca da ortica verde sopra le due ceste (scuro a destra, tenero a sinistra), lo sguardo sulle foglie mentre parla; i tre fermi al limite del cortile, rispettosi. La risposta data senza smettere: l'isola che aiuta lavorando. Eco diretta del cameo s03."
 
   s06_h06:
@@ -141,11 +150,13 @@ hooks:
         page_book: 9
         text_split_marker: "Zolla è seduto sul gradino"
         image_status: TBD
+        pov: "eye-level on Zolla on his doorstep bent over the line of acorns (countable in frame), finger on the fifteenth, the three standing by"
         note: "Zolla e le ghiande: lui seduto sul gradino di casa, chino sulla fila di ghiande allineate per terra con precisione (quattordici — disegnarle contabili: il bambino le conta), il dito che indica la quindicesima davanti a sé. I tre in piedi che guardano per cortesia. Comicità quieta del personaggio tutto-numeri."
       - id: s06_h06b
         page_book: 10
         text_split_marker: "Verso il centro, di nuovo"
         image_status: TBD
+        pov: "eye-level on the three walking back toward the center in warm sun, Noah picking up the second stick, one in each hand"
         note: "Ritorno verso il centro nel sole ormai caldo: i tre in cammino, e Noah che raccoglie il SECONDO bastoncino — ora ne ha uno per mano, soddisfatto del suo piccolo arsenale. Pagina di transizione leggera: il giro del villaggio continua, il pattern di Noah cresce sotto gli occhi del lettore."
 
   s06_h07:
@@ -165,11 +176,13 @@ hooks:
         page_book: 11
         text_split_marker: "A mezzogiorno la piazza"
         image_status: TBD
+        pov: "eye-level on the midday Mercato: bustling stalls, and in the shade at the back the stone bench with the three motionless Old Women"
         note: "Il Mercato del mezzogiorno: la piazza trasformata — bancarelle, vita, luce piena — e in fondo, nell'ombra, la panca di pietra con le tre Vecchie sedute, immobili e diverse d'età, fuori dal movimento. Contrasto vivo/fermo: il mercato che brulica e le tre che guardano. Prima presentazione del collettivo."
       - id: s06_h07b
         page_book: 12
         text_split_marker: "I fratelli si avvicinano"
         image_status: TBD
+        pov: "eye-level on the three before the bench, the middle Old Woman's arm raised slowly pointing toward the bush behind the Old Tree, the gesture line crossing the frame, Liù's tiny frrr near the heads"
         note: "L'indicare in silenzio — pagina-icona: i tre fermi davanti alla panca, e la Vecchia in mezzo col braccio sollevato lentamente, il dito verso il cespuglio dietro l'Albero Vecchio in fondo. Le altre due immobili che non guardano. La linea del gesto attraversa la composizione e dà la direzione al lettore. Vicino alle teste, piccolissimo, il frrr di Liù che riparte. Solennità minima di un oracolo di paese."
 
   s06_h08:
@@ -189,11 +202,13 @@ hooks:
         page_book: 13
         text_split_marker: "Elias va verso il cespuglio"
         image_status: TBD
+        pov: "low discovery close-up: Elias crouched at the parted low branches of the bush, the dark wooden box on the ground with the lid ajar, the little white tooth just visible, Gabriel and Noah looking over his shoulders"
         note: "Il ritrovamento: Elias chinato tra i rami bassi aperti del cespuglio, e a terra tra le foglie la scatoletta di legno scuro col coperchio a metà — dentro, appena visibile, il piccolo dente bianco. Gabriel e Noah dietro che guardano oltre le sue spalle. Primo piano basso, da scoperta: il tesoro minuscolo nell'ombra del cespuglio."
       - id: s06_h08b
         page_book: 14
         text_split_marker: "Pun arriva di corsa"
         image_status: TBD
+        pov: "eye-level on the handover: Pun crouched beside Elias, eyes in the box, Elias placing it back in his hands, already drawing back a step"
         note: "La restituzione: Pun appena arrivato, accucciato accanto a Elias, lo sguardo dentro la scatoletta («È mio»); ed Elias che gliela rimette in mano — il momento esatto del passaggio, due zampe/mani sulla scatoletta — già tirandosi indietro di un passo. Nessuna domanda nei volti: solo il dare. La delicatezza come azione."
 
   s06_h09:
@@ -214,16 +229,19 @@ hooks:
         page_book: 15
         text_split_marker: "Il cortile davanti a casa"
         image_status: TBD
+        pov: "eye-level on Mèmolo's bare courtyard: beaten earth, the small tree at center with three crossed branches and one surviving leaf, Mèmolo beneath it murmuring, the five arriving at the edge"
         note: "Il cortile di Mèmolo: terra battuta nuda, l'alberello al centro con tre rami in croce e l'unica foglia superstite dell'inverno — e Mèmolo lì sotto, sciarpa di sbieco, che mormora tra sé. I cinque che arrivano al limite del cortile. Il luogo dice il personaggio: spoglio, dolce, un po' perso. La foglia sola è IL dettaglio."
       - id: s06_h09b
         page_book: 16
         text_split_marker: "Pun gli mette la scatoletta"
         image_status: TBD
+        pov: "eye-level on the gift: Pun placing the box in his father's paw, Mèmolo in the instant of the small laugh over the open box and white tooth, Pun serious before him, the brothers aside as witnesses"
         note: "Il dono: Pun che mette la scatoletta nella zampa del padre, e Mèmolo nell'attimo del riso piccolo — il viso aperto un istante sopra la scatoletta aperta, il dente bianco dentro. Pun fermo davanti a lui, serissimo. I tre fratelli in disparte, testimoni. La gioia che dura un attimo, disegnata in quell'attimo."
       - id: s06_h09c
         page_book: 17
         text_split_marker: "Poi dice, una volta sola"
         image_status: TBD
+        pov: "eye-level raccolto on father and son: Mèmolo's paw absently fixing a quill on Pun's head, the box gone into his pocket, the brothers at the margins receiving the phrase"
         note: "La frase: Mèmolo già tornato quieto, la zampa che sistema distratta una spina sulla testa di Pun — il gesto di padre — la scatoletta sparita in tasca. «Le cose che si perdono non si perdono. Si nascondono dove non sai cercare.» Composizione raccolta su padre e figlio, i fratelli ai margini che ricevono la frase senza capirla del tutto. La pagina-chiave, quieta come tutte le verità dell'isola."
 
   s06_h10:
@@ -244,11 +262,13 @@ hooks:
         page_book: 18
         text_split_marker: "Pun resta col padre"
         image_status: TBD
+        pov: "eye-level on the three leaving the courtyard in warm yellow afternoon, Pun and Mèmolo small behind, first Mulinello on the rooftops, Noah's open palm with the golden crumbs"
         note: "L'avvio: i tre che lasciano il cortile nel giallo caldo del pomeriggio — dietro, piccoli, Pun e Mèmolo che restano insieme. Sui tetti il primo Mulinello della sera (foglie in spirale leggera sui comignoli). Noah col palmo aperto e la manciata di briciole dorate, un attimo, lo sguardo suo soltanto. Il segreto del lettore che riaffiora senza spiegarsi."
       - id: s06_h10b
         page_book: 19
         text_split_marker: "In fondo alla piazza, la camminante"
         image_status: TBD
+        pov: "slightly high view of the piazza in late afternoon: the camminante returning east with the empty barrow, hand mid-air, Gabriel answering faintly, the dropped stick tiny on the ground behind Noah, paths legible like a net"
         note: "Chiusura a rete di passi: vista leggermente alta sulla piazza nel tardo pomeriggio — la camminante che torna verso est con la carriola vuota e la mano a mezz'aria, Gabriel che risponde appena, e dietro di loro, minuscolo a terra, il bastoncino appena scivolato dalla mano di Noah (lui non se ne accorge: eco esatta di s01). Le traiettorie dei personaggi leggibili nella piazza come una rete. L'isola dall'alto, per un attimo, come la vedrebbe Liù."
 
 # Aggiunte da prosa al canone (todo per Ray):
