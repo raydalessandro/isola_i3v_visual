@@ -8,6 +8,7 @@ note: |
   - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
   - objects_in_scene: oggetti canonici visibili (id da entities.objects)
   - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - pov: punto di vista del lettore in frase tecnica esplicita (inglese) — blocco obbligatorio del prompt (skill scenografo §2-ter); distillato dal punto di vista già implicito nella note
   - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
                 Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
   Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
@@ -36,11 +37,13 @@ hooks:
         page_book: 1
         text_split_marker: "Qualche settimana dopo"
         image_status: TBD
+        pov: "eye-level on the single file behind Bru, the badger leading, the three following between trunks in full spring light"
         note: "La fila dietro Bru: il tassino davanti, deciso, senza voltarsi; i tre fratelli in fila dietro di lui tra i tronchi, nella luce calda di primavera piena. Il rovesciamento è il soggetto: il più piccolo guida, i bambini si fidano. Andatura tranquilla, fiducia leggibile nei corpi."
       - id: s05_h01b
         page_book: 2
         text_split_marker: "Venti minuti, forse trenta"
         image_status: TBD
+        pov: "tracking view of the walk, sasso di soglia and the heaped pinecones recognizable to the side, Bru passing them"
         note: "Il cammino con i segni: la Foresta che si apre e si richiude; sul lato, riconoscibili, il sasso di soglia (s03) e il mucchio di pigne ammassato — la 'casa conosciuta' di Bru, che ci passa accanto senza fermarsi. Pagina-caccia: il bambino ritrova i dettagli delle storie passate. L'Intreccio in alto tra le chiome, appena suggerito."
 
   s05_h02:
@@ -59,11 +62,13 @@ hooks:
         page_book: 3
         text_split_marker: "Arrivano al torrente"
         image_status: TBD
+        pov: "eye-level on the four at the bank, the wide fast torrent before them, the far shore with its starting path, ring of moss in the foreground"
         note: "L'ostacolo: i tre e Bru fermi sulla sponda, il torrente largo e veloce davanti (acqua di neve, riflessi freddi nel verde di primavera), l'altra riva col sentiero che comincia — irraggiungibile. In primo piano sulla pietra di riva il cerchio di muschio vuoto: la forma del ponte che non c'è più. L'assenza resa visibile."
       - id: s05_h02b
         page_book: 4
         text_split_marker: "Più a monte, su un'ansa"
         image_status: TBD
+        pov: "distant view upstream of the weasel mantenitrice on a ladder against a walkway, the four small below looking"
         note: "Cameo della mantenitrice: più a monte, in distanza sull'ansa, una donnola al lavoro su una scaletta a pioli contro una passerella — figura piccola, operosa, non individuata. I quattro in basso che guardano e annuiscono. Il mondo che ripara se stesso: prepara l'idea (se loro riparano, possiamo costruire anche noi)."
 
   s05_h03:
@@ -82,6 +87,7 @@ hooks:
         page_book: 5
         text_split_marker: "Stanno per dire che si torna"
         image_status: TBD
+        pov: "eye-level on the four heads up, all gazes in the same direction through the high foliage toward the unseen sound"
         note: "Il richiamo: i quattro a testa alta, fermi, gli sguardi tutti nella stessa direzione tra le chiome — da dove arriva il suono. Niente fonte visibile: solo la direzione condivisa dei quattro corpi e la luce tra gli alberi. L'Intreccio in alto che 'porta dritto'. Pagina di ascolto e riconoscimento, sospesa sul page-turn."
 
   s05_h04:
@@ -100,11 +106,13 @@ hooks:
         page_book: 6
         text_split_marker: "Nodo è accosciato sulla scaletta"
         image_status: TBD
+        pov: "eye-level on Nodo crouched on the ladder, red crest first, head down on the knot, the four waiting a step away"
         note: "L'apparizione di Nodo: la cresta rossa per prima cosa — lui accosciato sulla scaletta, concentrato sul nodo tra le mani, la matassa di corda chiara al braccio, la testa bassa sul lavoro. I quattro fermi a un passo, in attesa rispettosa, nessuno che interrompe. Il ritratto del maestro che non sa di esserlo."
       - id: s05_h04b
         page_book: 7
         text_split_marker: "Nodo finisce il giro"
         image_status: TBD
+        pov: "eye-level dialogue: Nodo head just lifted, gaze on the brothers, Elias half a step forward explaining with his hands"
         note: "Il dialogo: Nodo che ha appena alzato la testa (il lavoro finito e verificato), lo sguardo dritto sui fratelli — «Cosa vi serve.» Elias un mezzo passo avanti che spiega, le mani che disegnano l'idea (il torrente, le pertiche). Gli altri dietro. Scambio asciutto tra chi chiede bene e chi ascolta sul serio."
 
   s05_h05:
@@ -123,6 +131,7 @@ hooks:
         page_book: 8
         text_split_marker: "Quando Elias finisce"
         image_status: TBD
+        pov: "tight close-up on the hands: Nodo showing the knot slowly on the pale rope, Elias very close watching, others out of focus"
         note: "La lezione del marinaro: primo piano sulle mani — Nodo che mostra il nodo lentamente sulla corda chiara (il giro, il passaggio, la mezza chiave), Elias vicinissimo che guarda con tutta l'attenzione del mondo, le mani già pronte a ricevere. Una volta sola: la solennità tranquilla dell'insegnare. Gli altri fuori fuoco o fuori campo."
 
   s05_h06:
@@ -141,11 +150,13 @@ hooks:
         page_book: 9
         text_split_marker: "Tornano al torrente"
         image_status: TBD
+        pov: "eye-level on the work team: Bru's muzzle pointing at a fallen branch, Noah running happily with a pole"
         note: "La squadra al lavoro: Bru col muso puntato su un ramo caduto degno, Noah in corsa felice con già una pertica in spalla o tra le braccia («Questo! E questo!»). Energia da raccolto, sottobosco di primavera con rami d'inverno a terra. Il piccolo che indica e il bambino che esegue: la coppia comica e seria insieme."
       - id: s05_h06b
         page_book: 10
         text_split_marker: "Non lo è"
         image_status: TBD
+        pov: "eye-level on Noah holding his silly thin twig mid-air, looking at Bru who passes it by toward a real branch"
         note: "La correzione muta: Noah col suo rametto sottile e ridicolo a mezz'aria, lo sguardo su Bru — che gli passa oltre, già rivolto a un ramo serio, senza degnare il rametto. Il momento esatto in cui Noah capisce e lo lascia cadere. Commedia minima e dignitosa: si impara guardando."
 
   s05_h07:
@@ -164,11 +175,13 @@ hooks:
         page_book: 11
         text_split_marker: "Quattro pertiche, posate parallele"
         image_status: TBD
+        pov: "eye-level on Elias bent over the first lashing, rope tangled, Gabriel beside holding the poles on the mossy bank"
         note: "Il nodo che non viene: Elias chino sulla prima legatura, la corda imbrogliata tra le dita, la concentrazione e la frustrazione trattenuta; Gabriel accanto che tiene ferme le pertiche sul muschio della sponda. Il fallimento operoso, terzo tentativo in arrivo. Le quattro pertiche già stese sull'acqua: il ponte che esiste a metà."
       - id: s05_h07b
         page_book: 12
         text_split_marker: "Gabriel tiene ferme le pertiche"
         image_status: TBD
+        pov: "wider corale view on the bank: Gabriel holding the poles, Elias tying, Noah arriving with rope, Bru coming out of the shallows with recovered cord"
         note: "La squadra completa: composizione corale sulla sponda — Gabriel piegato a tenere strette le pertiche, Elias che lega (ora il nodo tiene), Noah che arriva di corsa con la corda nuova, e Bru che esce dall'acqua bassa riportando il pezzo di corda recuperato. Quattro lavori diversi, un solo ponte. L'Intreccio sopra le chiome, il torrente liscio sotto."
 
   s05_h08:
@@ -187,21 +200,25 @@ hooks:
         page_book: 13
         text_split_marker: "Quando il ponte è finito"
         image_status: TBD
+        pov: "eye-level on the four before Nodo, who lifts his head just enough to glance at the distant bridge"
         note: "Il permesso: i quattro davanti a Nodo, che alza appena la testa dal lavoro guardando il ponte in distanza — il gesto minimo di chi approva senza cerimonie («È vostro. Provatelo voi»). Tensione buona: il verdetto del maestro che restituisce l'opera ai suoi autori."
       - id: s05_h08b
         page_book: 14
         text_split_marker: "Elias passa per primo"
         image_status: TBD
+        pov: "eye-level on Elias alone mid-bridge, arms slightly open for balance, water rushing below, the others watching from the bank"
         note: "Il collaudo di Elias — pagina-icona: lui solo a metà del ponte di pertiche, le braccia un po' aperte per l'equilibrio, l'acqua che corre sotto, gli altri tre e Bru sulla sponda che guardano. Le pertiche che vibrano appena. Chi ha fatto, prova per primo: la responsabilità come onore. Reggono."
       - id: s05_h08c
         page_book: 15
         text_split_marker: "Davanti al Forno, intanto"
         image_status: TBD
+        pov: "eye-level intermezzo at the Forno in the village: Pun on tiptoe fixing Mèmolo's crooked scarf, Mèmolo letting him, paw on the boy's head, bread steam behind"
         note: "INTERMEZZO al villaggio (cambio scena totale): davanti al Forno, Pun il riccino in punta di zampe che sistema la sciarpa storta di Mèmolo — tira un capo, poi l'altro; Mèmolo fermo che lo lascia fare, la zampa che si posa sulla testa del figlio. Tenerezza minuta, vapore di pane sullo sfondo. Mentre nel bosco si collauda, in piazza ci si prende cura: il montaggio parallelo prepara s06."
       - id: s05_h08d
         page_book: 16
         text_split_marker: "Noah passa per secondo"
         image_status: TBD
+        pov: "eye-level back at the bridge: Noah light near mid-crossing, Gabriel more cautious behind, Bru last with four light paws"
         note: "Gli altri passaggi: ritorno al ponte — Noah leggero quasi a metà corsa, Gabriel dietro più cauto dove le pertiche cigolano, e Bru ultimo, quattro zampe delicate sul ponte fatto da loro: la cortesia dell'ospite. Sequenza leggibile in un'unica scena (tre punti del ponte) o col fuoco su Bru che chiude la fila. Il ponte funziona per tutti."
 
   s05_h09:
@@ -220,6 +237,7 @@ hooks:
         page_book: 17
         text_split_marker: "Camminano cento, centocinquanta metri"
         image_status: TBD
+        pov: "slightly high view to read the circle: the yellow grass clearing in vertical light, pines all around, Bru at the center, the three seated in a ring around him"
         note: "La radura — pagina-icona della storia: il cerchio d'erba quasi gialla nella luce verticale, i pini alti tutt'intorno come colonne, Bru seduto esatto al centro e i tre fratelli seduti in cerchio intorno a lui. Composizione centrata, quasi sacrale e però domestica: il premio del viaggio è un posto dove stare zitti insieme. Vista leggermente alta per leggere il cerchio."
 
   s05_h10:
@@ -237,11 +255,13 @@ hooks:
         page_book: 18
         text_split_marker: "Tornano. Riattraversano il ponte"
         image_status: TBD
+        pov: "eye-level on the four just off the bridge on the starting bank, the empty spot where Nodo worked, heads turned toward the far-off sound"
         note: "Il maestro andato: i quattro appena scesi dal ponte sulla sponda di partenza, lo spazio dove stava Nodo vuoto — niente scaletta, niente corda, solo il punto dove lavorava. Le teste girate verso il TOK-TOK-TOK lontanissimo, da un'altra parte della Foresta. L'assenza che è fiducia: non gli serviva controllare."
       - id: s05_h10b
         page_book: 19
         text_split_marker: "Il ponte è ancora lì"
         image_status: TBD
+        pov: "eye-level on the empty pole bridge alone in fading light, the pale rope knots visible, water running below, no one in frame or the four tiny in the distance"
         note: "Chiusura quasi-muta: il ponte di pertiche da solo, vuoto, nella luce che cala — i quattro nodi di corda chiara ben visibili, l'acqua che corre sotto, nessuno in scena (o i quattro piccolissimi che si allontanano in fondo). La cosa fatta che resta. Eco delle chiusure di volume: qui non un vento, ma un'opera."
 
 # Aggiunte da prosa al canone (todo per Ray):

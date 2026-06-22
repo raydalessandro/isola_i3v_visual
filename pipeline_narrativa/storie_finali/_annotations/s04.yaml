@@ -8,6 +8,7 @@ note: |
   - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
   - objects_in_scene: oggetti canonici visibili (id da entities.objects)
   - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - pov: punto di vista del lettore in frase tecnica esplicita (inglese) — blocco obbligatorio del prompt (skill scenografo §2-ter); distillato dal punto di vista già implicito nella note
   - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
                 Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
   Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
@@ -37,16 +38,19 @@ hooks:
         page_book: 1
         text_split_marker: "Era una mattina di quelle che aprono"
         image_status: TBD
+        pov: "eye-level establishing shot of the three at the door with Salvia, spring morning light"
         note: "Apertura di primavera: Salvia col cesto al fianco sulla porta dei fratelli, mattina di primo tepore, luce che apre. I tre sulla soglia, pronti a seguirla. Cambio di stagione dichiarato rispetto al volume 1: verde nuovo, aria chiara."
       - id: s04_h01b
         page_book: 2
         text_split_marker: "Andarono volentieri"
         image_status: TBD
+        pov: "wide tracking view of the four crossing the orchards, Coltivatori bent at work in the background, Liù darting high across the top"
         note: "L'attraversamento degli Orti in primavera: file di terra smossa, germogli minuti, i Coltivatori al lavoro pieno in lontananza (figure chine, zappe). I quattro in cammino che rallentano il passo nel punto del saluto-cantilena. In alto, veloce, Liù che passa sopra gli orti — una piega d'aria, un colibrì in un frrr. Pagina-mondo: il bambino ritrova i Coltivatori di s03 e scopre Liù."
       - id: s04_h01c
         page_book: 3
         text_split_marker: "Al margine della Foresta Salvia si fermò"
         image_status: TBD
+        pov: "eye-level at the forest margin, Salvia entering between the first trunks, seen from the brothers' side"
         note: "Il margine: Salvia indica ai tre la zampata di terra fuori («Voi qua»), poi entra tra i primi tronchi col cesto — ancora visibile per qualche metro, la sabbia chiara sulle zampe di lepre, un attimo prima di sparire. I tre che restano fuori. Eco della soglia di s03: stessa Foresta, altro umore (primavera, fiducia)."
 
   s04_h02:
@@ -64,11 +68,13 @@ hooks:
         page_book: 4
         text_split_marker: "I tre si sedettero per terra"
         image_status: TBD
+        pov: "low eye-level on Noah, the blue butterfly resting on the ground in the foreground, the other two distracted behind"
         note: "L'incontro col blu: i tre seduti a terra al margine, Gabriel ed Elias distratti (uno guarda lontano, l'altro fruga nell'erba), e Noah voltato verso la Foresta con davanti la farfalla blu posata sulla terra — l'unica nota di blu acceso nell'immagine. Lo sguardo di Noah già catturato. Noah si sta alzando."
       - id: s04_h02b
         page_book: 5
         text_split_marker: "La farfalla rialzò il volo"
         image_status: TBD
+        pov: "seen from behind Noah, small, stepping between the first trunks after the butterfly ahead of him"
         note: "Il seguire: Noah piccolo visto da dietro che entra tra i primi tronchi dietro la farfalla blu in volo basso davanti a lui — un passo, poi due, poi cinque. I fratelli fuori campo. La Foresta che lo accoglie senza drammaticità: luce di primavera tra i fusti, ma la distanza dal margine già leggibile. Page-turn verso la scoperta dell'assenza."
 
   s04_h03:
@@ -86,11 +92,13 @@ hooks:
         page_book: 6
         text_split_marker: "Gabriel non se ne accorse subito"
         image_status: TBD
+        pov: "eye-level on Gabriel turning sharply toward the forest, the empty spot where Noah sat beside them"
         note: "L'accorgersi: Gabriel voltato di scatto verso la Foresta, Elias che si alza con lui — il punto dove Noah era seduto, vuoto. Il momento di sospensione prima del panico: due figure e un'assenza."
       - id: s04_h03b
         page_book: 7
         text_split_marker: "Gridarono insieme"
         image_status: TBD
+        pov: "low three-quarter on the two boys cupping their hands and shouting, the Intreccio swirling visibly across the upper band of foliage"
         note: "Il grido che si perde: Gabriel ed Elias con le mani a coppa, le bocche aperte verso gli alberi — e in alto, tra le chiome, l'Intreccio reso visibile che scompiglia e disperde (foglie mosse, linee d'aria che si attorcigliano). La fascia alta della pagina è del vento che ruba le voci; in basso i due piccoli che gridano. Il fallimento della voce, mostrato."
 
   s04_h04:
@@ -108,6 +116,7 @@ hooks:
         page_book: 8
         text_split_marker: "Gabriel smise di gridare"
         image_status: TBD
+        pov: "calm frontal eye-level on Gabriel standing still, Elias watching him, open air around them"
         note: "Il fermarsi: Gabriel immobile, mani lungo i fianchi, il viso che cambia dal panico al pensiero. Elias che guarda lui, non la Foresta. Composizione calma e frontale, tanta aria intorno: il silenzio come scelta. Terza apparizione del gesto-firma del fermarsi (s01 nebbia, s03 soglia): il bambino lo riconosce."
 
   s04_h05:
@@ -125,6 +134,7 @@ hooks:
         page_book: 9
         text_split_marker: "Dentro, Noah si era fermato"
         image_status: TBD
+        pov: "intimate eye-level on Noah among the great roots, schiena al tronco, his right palm flat on the ground, identical trunks receding all around"
         note: "Noah tra le radici: piccolo, seduto con la schiena contro il grande tronco vecchio, le radici-nodo che lo abbracciano da terra, il palmo destro aperto appoggiato al suolo. Intorno, fusti tutti uguali in ogni direzione. Quiete vigile, non paura: lui aspetta. Il palmo a terra è IL dettaglio della pagina (prepara h07). Anche Noah, ora, si è fermato — il gesto dei fratelli arrivato a lui."
 
   s04_h06:
@@ -144,11 +154,13 @@ hooks:
         page_book: 10
         text_split_marker: "Elias si inginocchiò"
         image_status: TBD
+        pov: "close eye-level on Elias kneeling at the arched root, palm mid-strike, Gabriel standing beside with a hand on the trunk"
         note: "Il battito: Elias inginocchiato davanti alla radice ad arco, il palmo aperto a metà gesto sul legno; Gabriel in piedi accanto, una mano sul tronco, in ascolto. Concentrazione assoluta dei due corpi. La radice-ponte ben leggibile come protagonista materica della scena."
       - id: s04_h06b
         page_book: 11
         text_split_marker: "Sotto, da radice a radice"
         image_status: TBD
+        pov: "low view following the exposed roots running between trunks across the page into the forest depth, the two boys small at the margin"
         note: "Il viaggio del battito, quasi-muta e concettuale: composizione che segue le radici esposte che corrono tra i tronchi — una rete di legno vivo che attraversa la pagina e si perde nella profondità della Foresta. I due fratelli piccoli in alto/a margine, il percorso sotterraneo come vero soggetto. La vibrazione suggerita dal disegno delle radici (linee che si rincorrono), mai con simboli grafici. La Foresta che sente."
 
   s04_h07:
@@ -166,6 +178,7 @@ hooks:
         page_book: 12
         text_split_marker: "Noah, sotto la mano, sentì"
         image_status: TBD
+        pov: "tight close-up on Noah among the roots, his hand raised about to strike the earth again, face lit with recognition"
         note: "La risposta: primo piano su Noah tra le radici nel momento del gesto — la mano alzata che sta per riabbattersi sulla terra, il viso acceso dal riconoscimento (ha sentito il loro ritmo). Eco compositiva di h06a ma rovesciata: là Elias trasmette, qui Noah risponde. Le radici del grande albero intorno, le stesse di h05."
 
   s04_h08:
@@ -183,11 +196,13 @@ hooks:
         page_book: 13
         text_split_marker: "Gabriel camminò"
         image_status: TBD
+        pov: "eye-level on Gabriel mid-step between trunks, balanced and still, listening with his feet; Elias tiny far behind on the root"
         note: "L'ascolto coi piedi: Gabriel a metà passo tra i tronchi, fermo in equilibrio, lo sguardo basso/assente — tutta l'attenzione nei piedi. Postura inconfondibile di chi sente il terreno. Dietro, lontano, Elias ancora inginocchiato sulla radice che batte (l'ancora, piccola in profondità)."
       - id: s04_h08b
         page_book: 14
         text_split_marker: "Gabriel passò sotto un ramo basso"
         image_status: TBD
+        pov: "eye-level on Gabriel passing under the low arched branch over the path without noticing it"
         note: "Il sentiero per piccoli: Gabriel che passa naturalmente sotto il ramo basso curvato ad arco sopra il sentiero, senza notarlo. Il ramo come porta gentile a misura di bambino — un adulto dovrebbe chinarsi, lui no. La Foresta che si fa accogliente senza dirlo. Direzione di marcia leggibile: verso il battito."
 
   s04_h09:
@@ -208,21 +223,25 @@ hooks:
         page_book: 15
         text_split_marker: "Quando arrivò, Noah stava battendo"
         image_status: TBD
+        pov: "close raccolto view on the three embracing among the roots, three bodies one knot"
         note: "L'abbraccio: i tre stretti tra le radici del grande albero — Gabriel abbassato su Noah, Elias appena arrivato che li avvolge. Nessun pianto: sollievo quieto. Composizione raccolta, calda, i tre corpi un nodo solo (come le radici intorno). La pagina-cuore della storia."
       - id: s04_h09b
         page_book: 16
         text_split_marker: "Tre o quattro metri più in là"
         image_status: TBD
+        pov: "eye-level past the brothers toward Bru leaning against a trunk a few meters off, black eyes on them"
         note: "Il testimone: Bru appoggiato a un tronco poco più in là, le unghie nell'humus, gli occhi neri sui fratelli abbracciati (sfocati o parziali a margine). Non sorpreso, non in movimento: aveva sentito anche lui. Terza apparizione, la più vicina finora — il bambino ormai lo cerca."
       - id: s04_h09c
         page_book: 17
         text_split_marker: "Poi un passo pesante tra le radici"
         image_status: TBD
+        pov: "eye-level on Rovo arriving among the roots with his dark bandana, the three near him, Bru slipping to his side"
         note: "Rovo brontolone: arriva tra le radici con la bandana scura, l'aria di chi rimprovera («Battete come capre»), i tre ancora vicini che lo guardano. Nessuna minaccia: burbero domestico. Sul lato, Bru che già gli si accoda al cenno. I due di casa nella Foresta che se ne vanno insieme per i fatti loro."
       - id: s04_h09d
         page_book: 18
         text_split_marker: "Più lontano, oltre il limite"
         image_status: TBD
+        pov: "wide distant view: Cardo a small figure beyond the tree line, half-turned to vanish, low raking light, brothers tiny or off-frame"
         note: "Quasi-muta, il quarto sguardo: lontano, oltre il limite degli alberi, Cardo fermo — un secondo di sguardo verso i fratelli, il corpo già voltato per sparire tra le radici. Figura piccola, margine della composizione, luce di taglio. Primo avvistamento di Cardo: un'altra presenza che custodisce senza farsi vedere. I fratelli minuscoli o fuori campo."
 
   s04_h10:
@@ -241,11 +260,13 @@ hooks:
         page_book: 19
         text_split_marker: "I tre camminarono verso il margine"
         image_status: TBD
+        pov: "eye-level on the two margins: the three emerging as Salvia exits her side with the full basket"
         note: "Le due uscite: i tre che emergono dal margine della Foresta esattamente mentre Salvia esce dalla sua parte, il cesto colmo di ortica verde scuro, le tracce delle zampe sulla sabbia chiara. Lei serena, ignara; loro composti, col segreto addosso. L'incrocio dei due mondi che non si sono accorti l'uno dell'altro."
       - id: s04_h10b
         page_book: 20
         text_split_marker: "I tre si guardarono"
         image_status: TBD
+        pov: "eye-level on the little group walking home along the orchard path, Salvia brushing the old rosemary, full spring light"
         note: "Chiusura sul sentiero degli Orti: il gruppetto in cammino verso casa nella luce piena di primavera, Salvia che allunga la mano sul rosmarino vecchio al passaggio — il gesto distratto e antico. I tre dietro/accanto, lo sguardo d'intesa fra loro. Quiete: certe cose si tengono senza dirle. Eco delle chiusure-camino del volume 1, ma in andata serena."
 
 # Aggiunte da prosa al canone (todo per Ray):
