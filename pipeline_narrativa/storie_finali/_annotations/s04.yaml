@@ -16,7 +16,7 @@ note: |
   fisici (schede + scale GU) né firme ambientali (prompt_grok). La quiet zone alta (~25-30%
   per il testo di pagina) è vincolo dello stylesheet e vale per ogni scena.
 
-book_pages_total: 20
+book_pages_total: 26
 
 hooks:
 
@@ -136,6 +136,12 @@ hooks:
         image_status: TBD
         pov: "intimate eye-level on Noah among the great roots, schiena al tronco, his right palm flat on the ground, identical trunks receding all around"
         note: "Noah tra le radici: piccolo, seduto con la schiena contro il grande tronco vecchio, le radici-nodo che lo abbracciano da terra, il palmo destro aperto appoggiato al suolo. Intorno, fusti tutti uguali in ogni direzione. Quiete vigile, non paura: lui aspetta. Il palmo a terra è IL dettaglio della pagina (prepara h07). Anche Noah, ora, si è fermato — il gesto dei fratelli arrivato a lui."
+      - id: s04_h05b
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s04_h06:
     location: foresta_intrecciata
@@ -180,6 +186,12 @@ hooks:
         image_status: TBD
         pov: "tight close-up on Noah among the roots, his hand raised about to strike the earth again, face lit with recognition"
         note: "La risposta: primo piano su Noah tra le radici nel momento del gesto — la mano alzata che sta per riabbattersi sulla terra, il viso acceso dal riconoscimento (ha sentito il loro ritmo). Eco compositiva di h06a ma rovesciata: là Elias trasmette, qui Noah risponde. Le radici del grande albero intorno, le stesse di h05."
+      - id: s04_h07b
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s04_h08:
     location: foresta_intrecciata
@@ -243,6 +255,24 @@ hooks:
         image_status: TBD
         pov: "wide distant view: Cardo a small figure beyond the tree line, half-turned to vanish, low raking light, brothers tiny or off-frame"
         note: "Quasi-muta, il quarto sguardo: lontano, oltre il limite degli alberi, Cardo fermo — un secondo di sguardo verso i fratelli, il corpo già voltato per sparire tra le radici. Figura piccola, margine della composizione, luce di taglio. Primo avvistamento di Cardo: un'altra presenza che custodisce senza farsi vedere. I fratelli minuscoli o fuori campo."
+      - id: s04_h09e
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
+      - id: s04_h09f
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
+      - id: s04_h09g
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s04_h10:
     location: foresta_intrecciata
@@ -268,6 +298,12 @@ hooks:
         image_status: TBD
         pov: "eye-level on the little group walking home along the orchard path, Salvia brushing the old rosemary, full spring light"
         note: "Chiusura sul sentiero degli Orti: il gruppetto in cammino verso casa nella luce piena di primavera, Salvia che allunga la mano sul rosmarino vecchio al passaggio — il gesto distratto e antico. I tre dietro/accanto, lo sguardo d'intesa fra loro. Quiete: certe cose si tengono senza dirle. Eco delle chiusure-camino del volume 1, ma in andata serena."
+      - id: s04_h10c
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
 # Aggiunte da prosa al canone (todo per Ray):
 canon_additions_todo:
