@@ -16,7 +16,7 @@ note: |
   fisici (schede + scale GU) né firme ambientali (prompt_grok). La quiet zone alta (~25-30%
   per il testo di pagina) è vincolo dello stylesheet e vale per ogni scena.
 
-book_pages_total: 19
+book_pages_total: 24
 
 hooks:
 
@@ -133,6 +133,18 @@ hooks:
         image_status: TBD
         pov: "tight close-up on the hands: Nodo showing the knot slowly on the pale rope, Elias very close watching, others out of focus"
         note: "La lezione del marinaro: primo piano sulle mani — Nodo che mostra il nodo lentamente sulla corda chiara (il giro, il passaggio, la mezza chiave), Elias vicinissimo che guarda con tutta l'attenzione del mondo, le mani già pronte a ricevere. Una volta sola: la solennità tranquilla dell'insegnare. Gli altri fuori fuoco o fuori campo."
+      - id: s05_h05b
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
+      - id: s05_h05c
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s05_h06:
     location: foresta_intrecciata
@@ -183,6 +195,12 @@ hooks:
         image_status: TBD
         pov: "wider corale view on the bank: Gabriel holding the poles, Elias tying, Noah arriving with rope, Bru coming out of the shallows with recovered cord"
         note: "La squadra completa: composizione corale sulla sponda — Gabriel piegato a tenere strette le pertiche, Elias che lega (ora il nodo tiene), Noah che arriva di corsa con la corda nuova, e Bru che esce dall'acqua bassa riportando il pezzo di corda recuperato. Quattro lavori diversi, un solo ponte. L'Intreccio sopra le chiome, il torrente liscio sotto."
+      - id: s05_h07c
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s05_h08:
     location: torrente_affluente_foresta
@@ -220,6 +238,18 @@ hooks:
         image_status: TBD
         pov: "eye-level back at the bridge: Noah light near mid-crossing, Gabriel more cautious behind, Bru last with four light paws"
         note: "Gli altri passaggi: ritorno al ponte — Noah leggero quasi a metà corsa, Gabriel dietro più cauto dove le pertiche cigolano, e Bru ultimo, quattro zampe delicate sul ponte fatto da loro: la cortesia dell'ospite. Sequenza leggibile in un'unica scena (tre punti del ponte) o col fuoco su Bru che chiude la fila. Il ponte funziona per tutti."
+      - id: s05_h08e
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
+      - id: s05_h08f
+        page_book: null
+        text_split_marker: "da compilare"
+        image_status: TBD
+        pov: "da compilare"
+        note: "da compilare"
 
   s05_h09:
     location: radura_dei_pini
