@@ -1829,13 +1829,27 @@ def parse_story_md(sid: str) -> list[dict]:
             r"^---\s*$|^##\s+Pagina\s+\d+\s*$", "", text_clean, flags=re.MULTILINE
         ).strip()
 
-        # Risolve path immagine: @image punta al low-res, resolve_scene_image trova l'HD
+        # Risolve path immagine. @image può puntare al low-res (Vol 1) o essere TBD
+        # (Vol 2+: le branch illustratore consegnano solo _hd/, senza proxy low-res).
+        # Ordine di ricerca, dal più esplicito al convenzionale:
+        #   1. path low-res esplicito dal marker, se esiste
+        #   2. low-res convenzionale _scene/sNN/sNN_hMMx.jpg, se esiste
+        #   3. HD convenzionale _scene/sNN/_hd/sNN_hMMx_hd.jpg (branch HD-only)
+        # resolve_scene_image a valle fa comunque l'upgrade low-res→HD quando il
+        # low-res è presente; qui garantiamo che l'HD-only non degradi a placeholder.
+        img_path = None
         if img_raw and img_raw != "TBD":
             low_res = REPO / img_raw.strip()
-            img_path = low_res if low_res.exists() else None
-        else:
+            if low_res.exists():
+                img_path = low_res
+        if img_path is None:
             candidate = SCENE_DIR / sid / f"{sh_id}.jpg"
-            img_path  = candidate if candidate.exists() else None
+            if candidate.exists():
+                img_path = candidate
+        if img_path is None:
+            hd_only = SCENE_DIR / sid / "_hd" / f"{sh_id}_hd.jpg"
+            if hd_only.exists():
+                img_path = hd_only
 
         result.append({
             "subhook_id": sh_id,
