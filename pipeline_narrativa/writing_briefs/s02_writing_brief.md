@@ -41,6 +41,31 @@ Blu profondo dell'acqua sotto il ghiaccio + bianco del velo + grigio pietra dei 
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S02
+
+> Derivato dal grafo (s01 → s01). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Semi che il piano fa FIORIRE in s02** (2):
+- `seed_s01_bastoncino_noah` (da s01): Noah raccoglie un bastoncino in cammino sui Pascoli. Nominato una sola volta en passant, mai annunciato come … — voce: `ci_si_appoggiava_un_po_come_fanno_i_grandi_o_simile` — **TARGET FIORITURA: QUI**
+- `seed_noah_raccoglie_oggetti` (da s01): Gesto-firma di Noah: cammina e raccoglie cose (bastoncini, rametti). Mai dichiarato come abitudine, emerge pe… — **TARGET FIORITURA: QUI**
+
+**Altri semi attivi sullo sfondo** (6) — vivi, non forzarne la fioritura:
+- `seed_pagnotta_grunto_rito` (da s01): Fiamma consegna pagnotta ai fratelli da portare a Grunto. Piccolo rituale ricorrente: Fiamma sa che Grunto c'… (target: s12)
+- `seed_grunto_prima_apparizione` (da s01): Prima apparizione di Grunto come incontro vero. Una sola parola ('Buono'). ZERO frammenti pre-Vento. Stabilis… (target: s12)
+- `seed_due_passi_dal_burrone` (da s01): Posizione fisica precisa: la cengia a due passi dal bordo del Burrone dove il Vento Taglio apre la nebbia. Mi… (target: s12)
+- `seed_gabriel_sa_la_strada_senza_vedere` (da s01): Gabriel, Δ del personaggio, sa fermarsi e sa la strada anche senza vedere. Capacità caratteriale, si trasferi… (target: s04, s10)
+- `seed_fermarsi_come_gesto_attivo` (da s01): Fermarsi quando non si distingue = gesto attivo, non passivo. Gabriel lo istituisce nella nebbia. Sarà trasfe… (target: s04, s07)
+- `seed_paura_noah_buio` (da s01): Paura di Noah del buio. Declinazioni: S1 bianco totale (nebbia, perdita di riferimenti); S3 buio della Forest… (target: s10)
+
+**DEBUTTI in s02** — prima apparizione assoluta, vanno presentati, non dati per noti: `stria`, `pastori`
+
+**Già apparsi prima** (3): `gabriel`, `elias`, `noah`
+
+**Luoghi mai visti prima nella saga**: `pascoli_alti`, `sentiero_capanne_pastori_pascoli` — la prima descrizione li fonda.
+**Luoghi già visitati** (il lettore li conosce): `via_che_sale`
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -384,6 +409,8 @@ Tornano giù prima di sera. Quando passano vicino alla pozza, il sole è già sc
   solo for character-sheet purposes.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
+
 ### ELIAS
 - **Specie:** umano
 - **Età band:** medio
@@ -561,6 +588,8 @@ Tornano giù prima di sera. Quando passano vicino alla pozza, il sole è già sc
   accessories. Always at least one brother in scene EXCEPT for these
   canonical reference images.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
 
 ### NOAH
 - **Specie:** umano
@@ -754,6 +783,8 @@ Tornano giù prima di sera. Quando passano vicino alla pozza, il sole è già sc
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### STRIA
 - **Specie:** airone_cenerino
 - **Età band:** ?
@@ -879,6 +910,8 @@ Non dà mai una risposta diretta. Rilancia. *"Tu cosa pensi?"* è la sua frase p
   explicit moral lesson (her authority is in the HOW, never the WHAT).
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg
+
 ### PERSONAGGI OFFSCREEN / BACKGROUND
 
 > Sono presenti senza essere centrali. Possono essere nominati o evocati, mai protagonisti di scena.
@@ -903,7 +936,7 @@ Non dà mai una risposta diretta. Rilancia. *"Tu cosa pensi?"* è la sua frase p
 
 ### Cornice `s02_c2` — Processo D (cameo_lontano)
 - **Chi:** nominato: `bru`
-- **Dove:** margine_foresta_intrecciata
+- **Dove:** foresta_intrecciata
 - **Cosa accade:** Bru fermo sul bordo della Foresta, occhi neri verso i fratelli, non si avvicina, non si allontana.
 - **Intensità:** low
 - **Ruolo strutturale:** pre_install_presenza_onnisciente_bru
@@ -936,6 +969,118 @@ Non dà mai una risposta diretta. Rilancia. *"Tu cosa pensi?"* è la sua frase p
 
 **Contesto ricorrente (catalogo):** Esce dalla Piazza del Villaggio in direzione nord, sale attraverso i Pascoli Alti del Quartiere d'Aria fino alla Roccia Alta (2 ore) e prosegue verso le Montagne Gemelle e la grotta di Grunto (4-5 ore). Tragitto canonico Villaggio → Pascoli → Roccia Alta → Burrone.
 
+**Canone visivo (da `prompt_grok.md` — supporto):**
+```
+A painterly illustrated landscape scene in the style of Beatrix Potter
+and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+hand-drawn children's picture book aesthetic. Vertical 3:4 composition,
+wide depth (camera looks NORTH up the slope from low position). NO
+PEOPLE. NO text, NO writing, NO signs.
+
+Scene: THE WAY THAT RISES (Via che Sale), the main path leaving the
+village square going NORTH into the Quartiere d'Aria — a long path
+that climbs gradually through the High Meadows toward the High Rock
+and the Twin Mountains in the far distance. The CHARACTER OF THIS
+PATH is "the way that goes up": always heading north, always rising,
+exposed to wind, stone underfoot.
+
+PATH (subject):
+- A NARROW PACKED-EARTH AND STONE TRAIL, single-file width, winding
+  gently up the slope. Surface is mostly compact earth with EMBEDDED
+  STONES showing through (limestone, grey-brown). NOT paved. NOT
+  cobblestone. Worn by generations of feet.
+- The trail runs from BOTTOM-CENTER of the frame (foreground, near
+  village level) up toward the BACKGROUND-CENTER-NORTH, becoming
+  thinner and steeper as it goes higher.
+- A few stones along the edges, occasional patches of grass eaten
+  back by passage.
+
+LOWER FOREGROUND (origin — Piazza del Villaggio):
+- Just a HINT of the village edge in the very bottom of the frame:
+  a low stone wall corner, the edge of a terracotta rooftop, the
+  back of the Old Tree's canopy. Brief, just to mark the origin.
+
+LOWER-MIDDLE THIRD (first stretch of climb — canonical detail):
+- THE STONE OF THREE STEPS (Pietra dei Tre Passi, vcs_d01): a flat
+  stone slab placed across the path. Three paces before, the path
+  is even; three paces after, the path is even again — but at the
+  stone itself, the body naturally pauses for a beat. Shows as a
+  slightly wider flat stone embedded in the trail, lichen-marked,
+  smoothed in the center.
+
+MIDDLE THIRD (medium stretch — canonical detail):
+- THE LONE THISTLE (Cardo Isolato, vcs_d02): on the EAST EDGE of
+  the path (right side of frame), growing alone from a crack in the
+  earth. Tall thistle plant — purple-flowering in spring, dry-golden
+  in autumn. For this canonical reference render it DRY GOLDEN (most
+  common state, late summer / autumn). It is the path's "clock", the
+  signature object that changes with the seasons. The crack in the
+  earth at its base is visible.
+
+UPPER MIDDLE (high stretch near the meadows — canonical details):
+- THE BELL-STONE (Sasso del Campanaccio, vcs_d03): a rounded boulder
+  embedded in the slope, with a smooth worn spot on the top where
+  shepherds tap their walking stick. Located near where the path
+  approaches the Pascoli Alti (high meadows).
+- THE PASSAGE MARK (Segno del Passaggio, vcs_d04): two PARALLEL LINES
+  of flattened-yellowed grass on either side of the path — visible
+  even when no one is walking, the lines never grow back straight.
+  Geological memory of generations of pastori passing.
+
+UPPER THIRD (top of frame — destination):
+- The path continues upward toward the WIDE PASCOLI ALTI (high
+  meadows), suggested as rolling sage-green slopes opening out.
+- IN FAR BACKGROUND, on the horizon: the silhouette of the MONTAGNE
+  GEMELLE (twin mountains) rising — modest peaks, never alpine-
+  extreme, two cuts against the sky.
+- Possibly: a hint of the ROCCIA ALTA (high rock outcrop) as a small
+  vertical accent in the middle distance.
+
+SKY & ATMOSPHERE:
+- WIDE, OPEN SKY taking the upper portion of the frame. Pale-grey-blue
+  with thin cool clouds. The sky reads "high" — this is the Quartiere
+  d'Aria.
+- AIR feels DRY and COOL — visible through subtle wind movement of
+  the lone thistle and the grass at the path edges.
+
+LIGHTING: late morning, soft cool light from south-east (low rear
+left), warm enough to read as natural sun but never theatrical. Long
+soft shadows of the path stones reaching west.
+
+ATMOSPHERE: WIND-EXPOSED, MINERAL, PATIENT. The path is the way to
+the high places — austere but inviting, a working route between the
+village and the wild north. Not picturesque-romantic, not dramatic-
+wild. Lived in, used, alive.
+
+PALETTE (Bible §6 Quartiere d'Aria): grigio pietra (path stones,
+boulders, mountains), blu ghiaccio (sky), vento secco (dry-yellow
+grass at edges, dry-gold thistle). Plus warm packed earth (path),
+sage-green meadow far ahead.
+
+NOT INCLUDED:
+- NO PEOPLE — no shepherds, no Camminanti, no children. The reference
+  shows the path itself. People are added later via character canon.
+- NO TEXT, NO writing, NO signs / waymarkers / arrows
+- NO MODERN ELEMENTS (no fences barbed-wire, no electric, no concrete,
+  no painted blazes on stones)
+- NO PAVING, NO COBBLESTONE — packed earth and embedded stone only
+- NO HORSE / NO CART (it is a foot-path, narrow, single-file)
+- NO TROPICAL/EXOTIC vegetation, NO palm trees, NO bright flowers
+  except the lone thistle (dry-golden in this version)
+- NO ALPINE EXTREME peaks (Montagne Gemelle are modest twin cuts,
+  NOT Alps)
+- NO DRAMATIC SUNRISE/SUNSET poster colors
+- NO sheep / goats in this reference (those belong to Pascoli Alti
+  scenes, not the path itself)
+- NO Albero Vecchio dominant (only the canopy edge hint at the very
+  bottom — the Albero is the village center, this view is leaving
+  it)
+
+STYLE: traditional watercolor + thin sepia ink, palette grey stone +
+pale sky + dry gold + sage meadow far ahead. Beatrix Potter / Brian
+Wildsmith. Mood: wind-exposed, mineral, patient.
+```
+
 ### `sentiero_capanne_pastori_pascoli`
 _(nessun dettaglio stabile assegnato a s02 per questo sentiero — è di passaggio)_
 
@@ -962,12 +1107,144 @@ _(nessun dettaglio stabile assegnato a s02 per questo sentiero — è di passagg
 - **Coerenza fissa:** Pendenza dolce. Animali: capre/pecore di alcune famiglie. Capanne stagionali di Pastori. Posizione: Quartiere d'Aria a nord, lungo la Via che Sale.
 - **Contesto e ambientazioni ricorrenti:** Stanno nel Quartiere d'Aria a nord, lungo la Via che Sale. I Pastori abitano le capanne stagionali d'estate. Oltre i Pascoli Alti finisce l'abitato e iniziano la Roccia Alta e le Montagne Gemelle.
 
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal panoramic
+  composition. NO PEOPLE. NO text.
+
+  Scene: HIGH MEADOWS (Pascoli Alti) on a Mediterranean island, above
+  the village. Wide expanse of grass-covered slopes in gentle gradient,
+  under a wide sky. The Quartiere d'Aria.
+
+  LANDSCAPE:
+  - WIDE ROLLING GRASS MEADOWS in gentle slope (the "alti" = elevated),
+    sage-green grass with patches of low wildflowers (small pale
+    yellows, whites). The slopes rise gradually toward the north,
+    becoming rockier and steeper in the far distance.
+  - A FEW SCATTERED LARGE STONES / BOULDERS naturally placed across
+    the meadows (some lichen-covered)
+  - A SMALL POND OR POZZA visible in middle distance — flat shallow
+    pool reflecting the sky (canonical s02 "pozza dei pascoli" o
+    "pozza_abbeveratoio_pastori")
+  - THE CAPANNE DEI PASTORI (shepherds' huts): a SMALL CLUSTER of 3-4
+    HUMBLE STONE-AND-WOOD HUTS in the middle distance, with low conical
+    thatched roofs or rough-stone tile roofs. Walls of dry-stone or
+    rough plaster. Modest, working, lived-in.
+  - A FEW DISTANT SHEEP/GOATS visible as small white-grey shapes
+    grazing on the slopes (NO close-up, just dots in the distance —
+    these are not characters, just animals of the world)
+  - IN FAR BACKGROUND (north): the gentle silhouette of taller mountains
+    rising — the Montagne Gemelle (twin mountains) and beyond, the
+    ridge that leads to the Roccia Alta panoramic point.
+
+  WIND ELEMENT (canonical):
+  - The wind is the Vento Mulinello in the evening or general air
+    movement — show this through GENTLE GRASS BENDING in the foreground
+    (no dramatic gusts, just natural movement)
+
+  LIGHTING: late morning or afternoon, sun high south-southwest, warm
+  light on the meadows, soft cloud shadows moving across the slopes.
+  Or alternatively dawn light if seasonally appropriate.
+
+  ATMOSPHERE: open, breath, alive. The Pascoli Alti are the lung of
+  the island — wide, breath-giving, where Pastori live and work.
+
+  PALETTE: sage-green grass, scattered stone-grey rocks, dark green
+  distant trees on the higher slopes, terracotta+wood huts (small),
+  soft white-grey distant sheep, soft blue sky with gentle clouds,
+  warm afternoon gold or pale dawn pink.
+
+  NOT INCLUDED:
+  - NO PEOPLE, NO Pastori visible (just the place + distant flock dots)
+  - NO TEXT, NO writing
+  - NO MODERN ELEMENTS (no wire fences, no electric, no concrete)
+  - NO TROPICAL/EXOTIC vegetation (no palm trees)
+  - NO CRASHING WATERFALLS, NO rivers (the Fiume is far below in the
+    Quartiere d'Acqua)
+  - NO ALPINE EXTREME peaks (the Montagne Gemelle in distance are
+    modest, not Alps)
+  - NO DRAMATIC SUNRISE/SUNSET poster — just a calm wide light
+
+  STYLE: traditional watercolor + thin sepia ink, palette wide green-
+  gold meadow + grey stone + soft sky. Beatrix Potter / Brian Wildsmith.
+  Mood: open, breath, alive.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_aria/pascoli_alti/immagini/pascoli_alti_canonica_v1_panoramica.jpg
+
 ### `pascoli_alti` (secondario)
 - **Aspetto:** Prati estesi in pendenza dolce, capre/pecore di alcune famiglie, capanne stagionali di Pastori d'estate. (§8.5)
 - **Comportamento:** Odore: erba e animali nei Pascoli. Suono: il vento sempre.
 - **Atmosfera:** Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 - **Coerenza fissa:** Pendenza dolce. Animali: capre/pecore di alcune famiglie. Capanne stagionali di Pastori. Posizione: Quartiere d'Aria a nord, lungo la Via che Sale.
 - **Contesto e ambientazioni ricorrenti:** Stanno nel Quartiere d'Aria a nord, lungo la Via che Sale. I Pastori abitano le capanne stagionali d'estate. Oltre i Pascoli Alti finisce l'abitato e iniziano la Roccia Alta e le Montagne Gemelle.
+
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal panoramic
+  composition. NO PEOPLE. NO text.
+
+  Scene: HIGH MEADOWS (Pascoli Alti) on a Mediterranean island, above
+  the village. Wide expanse of grass-covered slopes in gentle gradient,
+  under a wide sky. The Quartiere d'Aria.
+
+  LANDSCAPE:
+  - WIDE ROLLING GRASS MEADOWS in gentle slope (the "alti" = elevated),
+    sage-green grass with patches of low wildflowers (small pale
+    yellows, whites). The slopes rise gradually toward the north,
+    becoming rockier and steeper in the far distance.
+  - A FEW SCATTERED LARGE STONES / BOULDERS naturally placed across
+    the meadows (some lichen-covered)
+  - A SMALL POND OR POZZA visible in middle distance — flat shallow
+    pool reflecting the sky (canonical s02 "pozza dei pascoli" o
+    "pozza_abbeveratoio_pastori")
+  - THE CAPANNE DEI PASTORI (shepherds' huts): a SMALL CLUSTER of 3-4
+    HUMBLE STONE-AND-WOOD HUTS in the middle distance, with low conical
+    thatched roofs or rough-stone tile roofs. Walls of dry-stone or
+    rough plaster. Modest, working, lived-in.
+  - A FEW DISTANT SHEEP/GOATS visible as small white-grey shapes
+    grazing on the slopes (NO close-up, just dots in the distance —
+    these are not characters, just animals of the world)
+  - IN FAR BACKGROUND (north): the gentle silhouette of taller mountains
+    rising — the Montagne Gemelle (twin mountains) and beyond, the
+    ridge that leads to the Roccia Alta panoramic point.
+
+  WIND ELEMENT (canonical):
+  - The wind is the Vento Mulinello in the evening or general air
+    movement — show this through GENTLE GRASS BENDING in the foreground
+    (no dramatic gusts, just natural movement)
+
+  LIGHTING: late morning or afternoon, sun high south-southwest, warm
+  light on the meadows, soft cloud shadows moving across the slopes.
+  Or alternatively dawn light if seasonally appropriate.
+
+  ATMOSPHERE: open, breath, alive. The Pascoli Alti are the lung of
+  the island — wide, breath-giving, where Pastori live and work.
+
+  PALETTE: sage-green grass, scattered stone-grey rocks, dark green
+  distant trees on the higher slopes, terracotta+wood huts (small),
+  soft white-grey distant sheep, soft blue sky with gentle clouds,
+  warm afternoon gold or pale dawn pink.
+
+  NOT INCLUDED:
+  - NO PEOPLE, NO Pastori visible (just the place + distant flock dots)
+  - NO TEXT, NO writing
+  - NO MODERN ELEMENTS (no wire fences, no electric, no concrete)
+  - NO TROPICAL/EXOTIC vegetation (no palm trees)
+  - NO CRASHING WATERFALLS, NO rivers (the Fiume is far below in the
+    Quartiere d'Acqua)
+  - NO ALPINE EXTREME peaks (the Montagne Gemelle in distance are
+    modest, not Alps)
+  - NO DRAMATIC SUNRISE/SUNSET poster — just a calm wide light
+
+  STYLE: traditional watercolor + thin sepia ink, palette wide green-
+  gold meadow + grey stone + soft sky. Beatrix Potter / Brian Wildsmith.
+  Mood: open, breath, alive.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_aria/pascoli_alti/immagini/pascoli_alti_canonica_v1_panoramica.jpg
 
 
 ---

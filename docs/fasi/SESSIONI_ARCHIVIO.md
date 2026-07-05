@@ -6,6 +6,41 @@
 
 ---
 
+## Sessione 2026-06-22 — Integrazione subhook pov Vol 2 + scenografo v1.2 (manutentore)
+
+Due pacchetti preparati da Ray (zip), integrati come una branch per zip, verificati e mergiati su main nell'ordine richiesto (skill prima, contenuto poi). Le due modifiche sono collegate: il campo `pov` nelle annotations alimenta il blocco POV obbligatorio del prompt scena.
+
+### A. PR #48 — skill scenografo v1.2 + PROMPT_TEMPLATE.md
+
+- `skills/scenografo/SKILL.md` v1.1 → **v1.2**: §0 contesto di sessione/cache (invariante vs variante), riordino blocchi del prompt (STILE → POV → SCALA GU → CAST → LUOGO → MOOD → DIVIETI), POV e SCALA GU estratti come blocchi propri, **POV obbligatorio** (§2-ter), blocco DIVIETI fisso, §8 `prompt_approvati.md` (memoria viva, si popola progressivamente).
+- `PROMPT_TEMPLATE.md` nuovo in **root** (v1.0): template blindato coi blocchi fissi già compilati, caselle `{{...}}` dalle fonti. Collocazione root confermata dalla skill ("radice repo").
+- Verifica: `make routing` → tabella già allineata (11 skill, scope/trigger scenografo invariati).
+
+### B. PR #49 — subhook Vol 2 campo pov (s04–s06) + derivati
+
+- `_annotations/s04,s05,s06.yaml`: aggiunto campo `pov` (frase tecnica EN, punto di vista del lettore) a ogni subhook + riga di legenda. **Puramente additivo**, nessuna nota esistente toccata.
+- `catalogo_web/data/storie.json` + `web/public/data/storie-dashboard.json`: **rigenerati** con `scripts/build_storie_data.py` (non copiati dallo zip), byte-identici alla build di Ray → idempotenza confermata.
+- Verifica: `make audit` → PASS 5/5 (4 warning preesistenti sul grafo, non toccato).
+
+### C. Incoerenze valutate (entrambe spiegate, nessuna reale)
+
+1. `catalogo_web/` è "non toccare" ma lo zip lo modifica → non è una mano umana: `build_storie_data.py` scrive quel file come **mirror derivato**. Legittimo.
+2. I due `.json` cambiano ma lo script non legge `pov` → il loro delta è solo il recupero del **debito derivati stale main** (non l'effetto del pov). Confermato: rigenerazione da fonte = quei byte.
+
+### D. Note
+
+- I due `.json` rigenerati chiudono **parzialmente** il debito derivati stale (restano writing_briefs + entities).
+- Lo zip della skill era nominato "v12" ma l'header corretto è **v1.2**: lasciato v1.2.
+- `make check` non eseguibile in ambiente remoto (`pytest` non installato): girerà in CI sul push. Audit (python puro) verde.
+
+### E. Prossimo passo Ray
+
+1. Cancellare da UI GitHub i branch mergiati `claude/scenografo-v12` e `claude/subhook-vol2-pov` (o farlo cancellare).
+2. Debito derivati residuo: chiudere writing_briefs + entities in sessione manutentore dedicata (`docs/TODO_DERIVATI_STALE_MAIN.md`).
+3. TODO Vercel ancora aperto (deploy fermo).
+
+---
+
 ## Sessione 2026-06-10 notte tarda — Canonizzazione + chiusura branch illustratore + fix sito
 
 Sequenza di PR per chiudere il backlog illustratore + restituire al sito le funzionalità per Manus (illustratore AI).

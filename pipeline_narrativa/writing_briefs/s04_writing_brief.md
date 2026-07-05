@@ -41,6 +41,43 @@ Verdi tenerissimi delle foglie nuove di primavera + marrone scuro umido delle ra
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S04
+
+> Derivato dal grafo (s01 → s03). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Semi che il piano fa FIORIRE in s04** (4):
+- `seed_gabriel_sa_la_strada_senza_vedere` (da s01): Gabriel, Δ del personaggio, sa fermarsi e sa la strada anche senza vedere. Capacità caratteriale, si trasferi… — **TARGET FIORITURA: QUI**
+- `seed_fermarsi_come_gesto_attivo` (da s01): Fermarsi quando non si distingue = gesto attivo, non passivo. Gabriel lo istituisce nella nebbia. Sarà trasfe… — **TARGET FIORITURA: QUI**
+- `seed_rovo_resistenza_che_protegge` (da s03): Prima apparizione di Rovo come maggiore. Modo istituito: brontola, protegge senza ammetterlo, posa l'oggetto … — **TARGET FIORITURA: QUI**
+- `seed_foresta_tempi_modi_propri` (da s03): La Foresta come luogo che ha tempi propri. Istituito dalla frase di Rovo 'Le cose della Foresta hanno il loro… — **TARGET FIORITURA: QUI**
+
+**Semi in maturazione prevista QUI** (2):
+- `seed_paura_elias_piccolo` (da s02): Elias si vede 'piccolo' nel riflesso della pozza — molto piccolo, tra i fratelli che nello specchio risultano… — *maturazione prevista qui*
+- `seed_bru_presenza_che_custodisce` (da s03): Prima apparizione di Bru. Intravisto dietro Rovo, occhi che brillano, poi si ritira. Nessuna parola. Seme del… — *maturazione prevista qui*
+
+**Altri semi attivi sullo sfondo** (8) — vivi, non forzarne la fioritura:
+- `seed_noah_raccoglie_oggetti` (da s01): Gesto-firma di Noah: cammina e raccoglie cose (bastoncini, rametti). Mai dichiarato come abitudine, emerge pe… (target: s02, s06, s07)
+- `seed_pagnotta_grunto_rito` (da s01): Fiamma consegna pagnotta ai fratelli da portare a Grunto. Piccolo rituale ricorrente: Fiamma sa che Grunto c'… (target: s12)
+- `seed_grunto_prima_apparizione` (da s01): Prima apparizione di Grunto come incontro vero. Una sola parola ('Buono'). ZERO frammenti pre-Vento. Stabilis… (target: s12)
+- `seed_due_passi_dal_burrone` (da s01): Posizione fisica precisa: la cengia a due passi dal bordo del Burrone dove il Vento Taglio apre la nebbia. Mi… (target: s12)
+- `seed_stria_vede_prima` (da s02): Stria rilancia invece di rispondere ('Tu cosa pensi?'). Vola via senza spiegare dove va. Archetipo di Stria c… (target: s11)
+- `seed_oggetto_fantasma_congelato` (da s02): Meccanica del mondo: un oggetto caduto nell'acqua poco prima del calar del sole resta congelato dentro il vel…
+- `seed_paura_noah_buio` (da s01): Paura di Noah del buio. Declinazioni: S1 bianco totale (nebbia, perdita di riferimenti); S3 buio della Forest… (target: s10)
+- `seed_pallone_stoffa_cucita` (da s03): Pallone di stoffa cucita. Oggetto di gioco dei fratelli. In S3 rotola oltre il margine della Foresta, recuper… (target: s11)
+
+**Semi GIÀ FIORITI (chiusi)** (1) — eco ammessa, MAI ri-fiorire: `seed_s01_bastoncino_noah`→s02
+
+**Callback già spesi nelle storie precedenti** (3) — non ripeterli come se fossero nuovi: `bastoncino_noah`, `fermarsi_come_gesto_attivo`, `gesto_firma_noah_raccoglie`
+
+**DEBUTTI in s04** — prima apparizione assoluta, vanno presentati, non dati per noti: `salvia`
+
+**Già apparsi prima** (6): `gabriel`, `elias`, `noah`, `rovo`, `bru`, `coltivatori_del_cerchio`
+
+**Luoghi mai visti prima nella saga**: `casa_salvia`, `sentiero_orti_casa_salvia` — la prima descrizione li fonda.
+**Luoghi già visitati** (il lettore li conosce): `foresta_intrecciata`, `orti_del_cerchio`, `sentiero_orti_torrente_foresta`
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -409,6 +446,8 @@ I tre si guardano. Camminano accanto a Salvia verso casa. Nessuno dice niente di
   solo for character-sheet purposes.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
+
 ### ELIAS
 - **Specie:** umano
 - **Età band:** medio
@@ -584,6 +623,8 @@ I tre si guardano. Camminano accanto a Salvia verso casa. Nessuno dice niente di
   accessories. Always at least one brother in scene EXCEPT for these
   canonical reference images.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
 
 ### NOAH
 - **Specie:** umano
@@ -781,6 +822,8 @@ I tre si guardano. Camminano accanto a Salvia verso casa. Nessuno dice niente di
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### SALVIA
 - **Specie:** lepre
 - **Età band:** ?
@@ -909,6 +952,8 @@ I tre si guardano. Camminano accanto a Salvia verso casa. Nessuno dice niente di
   or chatty mode. NO standing still doing nothing — she is always with
   plants.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cammino.jpg, visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_cura.jpg, visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_fronte.jpg, visual/personaggi/individuali/secondari/salvia/immagini/salvia_canonica_v1_ritratto.jpg, visual/personaggi/individuali/secondari/salvia/immagini/salvia_turnaround_v1.jpg
 
 ### ROVO
 - **Specie:** tasso
@@ -1093,6 +1138,8 @@ I tre si guardano. Camminano accanto a Salvia verso casa. Nessuno dice niente di
   moved gaze — at most he averts.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/rovo/immagini/rovo_canonica_v1_con_bru.jpg
+
 ### BRU
 - **Specie:** tassino
 - **Età band:** ?
@@ -1126,6 +1173,8 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
   **Palette e atmosfera (dal catalogo):**
   Regola Cuccioli (§6): versione più chiara/morbida dell'adulto di riferimento — qui Rovo (grigio-marrone terra, pelo, bandana scura). Per Bru il pelo è esplicitamente "grigio-scuro ancora morbido", riga bianca sulla testa più sottile di quella di Rovo.
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg
+
 ### PERSONAGGI OFFSCREEN / BACKGROUND
 
 > Sono presenti senza essere centrali. Possono essere nominati o evocati, mai protagonisti di scena.
@@ -1150,7 +1199,7 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 
 ### Cornice `s04_c2` — Processo D (cameo_lontano)
 - **Chi:** nominato: `cardo`
-- **Dove:** margine_foresta_intrecciata
+- **Dove:** foresta_intrecciata
 - **Cosa accade:** Cardo lontano, lo sguardo si posa sui fratelli per un attimo e si stacca. Pre-installa la sua presenza per s09 e s11.
 - **Intensità:** low
 - **Ruolo strutturale:** pre_install_per_s09_s11
@@ -1214,6 +1263,87 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 - **Coerenza fissa:** Entrata graduale dagli Orti (no linea netta). Tracce e non sentieri. Radici connesse sotto terra. Posizione ovest, oltre gli Orti del Cerchio.
 - **Contesto e ambientazioni ricorrenti:** Tana di Rovo ai margini della Foresta (sotto ceppo coperto di muschio, tre uscite). Zona di lavoro di Salvia al margine est della Foresta dove raccoglie erbe. Torrente affluente che attraversa la Foresta. Zolla raccoglie nel bosco confinante con gli Orti.
 
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated forest scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Vertical 3:4 composition.
+  NO PEOPLE. NO text.
+
+  Scene: FORESTA INTRECCIATA — the "Interwoven Forest" of a Mediterranean
+  island. A dense old broadleaf forest where the BRANCHES OF ADJACENT
+  TREES INTERLACE OVERHEAD, creating a canopy that filters light into
+  patterns of shifting shadows. Quartiere di Terra.
+
+  THE FOREST INTERIOR:
+  - TALL OLD BROADLEAF TREES (oaks, beeches, chestnuts — Mediterranean
+    generic, not species-specific). Trunks are GREY-BROWN, deeply
+    textured, with thick gnarled bark. Many trunks visible in the
+    middle and background, receding into atmospheric depth.
+  - THE CANONICAL "INTRECCIO" (signature):
+    * The BRANCHES of adjacent trees REACH ACROSS to interweave with
+      branches of nearby trees, creating a NATURAL CANOPY OF
+      INTERLACED LIMBS overhead. The "intreccio" is naturalistic, not
+      magical — it just happens that the trees here grow with branches
+      crossing, giving the forest its name.
+    * Visible interlacing in the MIDDLE-UPPER region of the frame.
+  - DAPPLED SUNLIGHT filtering through the canopy creating bright spots
+    on the forest floor, alternating with deep warm shadows.
+  - FOREST FLOOR:
+    * Carpet of fallen leaves (browns, ochres, some still green)
+    * MOSS-COVERED ROOTS visible at the base of trunks (canonical:
+      "Radici Parlano" of s04)
+    * Some low ferns, small undergrowth
+    * Possibly a small mushroom cluster, scattered
+    * Patches of deep shadow under denser canopy areas
+  - Possibly a SMALL EARTH PATH winding through the forest (one of
+    the canonical sentieri like sentiero_orti_torrente_foresta)
+
+  CONTEXT (cinematic atmosphere):
+  - The view is INSIDE the forest, not at the edge. We are surrounded
+    by trees with depth fading into atmospheric haze in the
+    background.
+  - Possibly a sliver of sky visible high through the canopy
+  - Mood is QUIET, ALIVE, ANCIENT. The Foresta is dense but not
+    threatening — it's the dwelling place of Rovo and Bru, the
+    threshold of the Quartiere di Terra.
+
+  LIGHTING: midday or afternoon, sun filtering through high canopy,
+  creating dappled patterns on the floor. Atmospheric perspective
+  into depth.
+
+  ATMOSPHERE: dense but alive, ancient, quiet. The trees feel
+  "interwoven" naturally. Mood is grounded, slightly secretive but
+  NEVER threatening.
+
+  PALETTE: grey-brown trunk bark, deep greens of canopy and ferns,
+  warm browns and ochres of fallen leaves, dappled gold sun patches,
+  deep warm shadows in the depth, soft green-grey atmospheric haze
+  in background.
+
+  NOT INCLUDED:
+  - NO PEOPLE
+  - NO TEXT
+  - NO MAGICAL ELEMENTS (no fairy lights, no glowing mushrooms, no
+    enchanted forest sparkles, no floating leaves)
+  - NO TROPICAL forest (no palm trees, no jungle vines, no exotic
+    flowers)
+  - NO ALPINE conifer forest (no fir/pine — these are broadleaf
+    Mediterranean trees)
+  - NO SINISTER/THREATENING atmosphere (no dark fog, no menacing
+    shadows, no creepy elements)
+  - NO CARTOON faces in the trees
+  - NO MODERN ELEMENTS
+  - NO POSTCARD GREEN OVERDRIVE (the greens are warm, real, not
+    saturated tropical)
+
+  STYLE: traditional watercolor + thin sepia ink, atmospheric forest
+  palette. Beatrix Potter / Brian Wildsmith — the deep forest interiors
+  of "Squirrel Nutkin" or Beatrix's own forest watercolors. Mood:
+  ancient, quiet, alive.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_terra/foresta_intrecciata/immagini/foresta_intrecciata_canonica_v1_interno.jpg
+
 ### `orti_del_cerchio` (secondario)
 - **Atmosfera:** **Quartiere di Terra a ovest** (Bible §6): **verde scuro, marrone caldo, ocra dell'argilla**.
 
@@ -1268,11 +1398,151 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 - **S6**: passaggio agli Orti durante il giro per cercare l'oggetto perso di Mèmolo (passa da casa Salvia, casa Zolla).
 - **S11 (Festa del Raccolto)**: gli Orti come fonte del raccolto autunnale (castagne, ghiande, noci, mele, susine), Zolla che dichiara *"Quest'anno noci in più. Fortuna."*.
 
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal panoramic
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION (EXTERIOR —
+  CONCENTRIC GARDEN FIELDS) da
+  `visual/luoghi/quartiere_terra/orti_del_cerchio/scheda.md`,
+  sezione "Descrizione visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from a slightly elevated angle on the village side (east),
+  looking west across the Orti toward the margin of the Foresta
+  Intrecciata. Three-quarter perspective. The composition shows the
+  THREE CONCENTRIC RINGS of cultivated fields:
+  - INNER RING (closest to the village, foreground): smaller plots
+    with vegetable rows, herbs, low fruit trees, well-tended
+  - MIDDLE RING: larger fields with grain crops or root vegetables,
+    divided by low stone walls or simple paths, working scale
+  - OUTER RING (furthest, near forest margin): rougher fields with
+    scrubby crops, transitioning to wild grass and the dark green
+    edge of the FORESTA INTRECCIATA in the far background
+
+  Earth paths radiate between the rings (concentric and radial). Low
+  dry-stone walls or wooden fences separate the plots, but there is
+  NO fortification — the rings are visible as organization, not
+  barrier. Some sentieri (paths) cross the rings, including the
+  canonical SENTIERO ORTI-TORRENTE-FORESTA (visible heading west from
+  the inner ring, crossing the outer ring, disappearing into the
+  forest margin).
+
+  ELEMENTS:
+  - A few small clay water jugs at the edges of plots
+  - Wooden tools (hoes, baskets) leaning against stone walls
+  - Wicker baskets here and there with harvest
+  - Possibly a humble small wooden shelter (proofing/storage) at the
+    edge of the middle ring
+  - Vegetation: rows of healthy crops in inner+middle, transitioning
+    to wilder grass at the outer ring
+  - Low scattered wildflowers along the path edges
+
+  LIGHTING: morning or afternoon, warm natural light, the sun coming
+  from the south/southeast, soft shadows. The light should differentiate
+  the rings — inner well-lit and tended, middle warmer, outer in
+  softer tones blending with the forest edge.
+
+  ATMOSPHERE: organized, working, alive but currently empty (the
+  Coltivatori have stepped away or are in a different field). The
+  "ring of cultivation" feels ancient, generational, lived-in. The
+  composition should communicate the CIRCULAR organization without
+  being aggressively geometric — the rings are organic, irregular,
+  human-built over time.
+
+  NOT INCLUDED: NO people (Coltivatori absent in this reference), NO
+  text, NO modern farm machinery, NO greenhouses, NO plastic, NO
+  chemical sprays/equipment, NO straight industrial fields, NO
+  postcard-perfect arrangement, NO bright tropical colors, NO
+  watermelon-stand colors. Sound implied by silence — the cantilena
+  of the Coltivatori is NOT singing now (they're absent).
+
+  STYLE: traditional watercolor + thin sepia ink, warm earth palette
+  (deep green crops + ochre soil + sage green grass + dark green
+  forest edge + warm gold sunlight + grey-brown stone walls).
+  Beatrix Potter / Brian Wildsmith. Mood: working, ancient, organized.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_coltivatori_al_lavoro.jpg, visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg
+
 ### `casa_salvia` (secondario)
 - **Aspetto:** Casa-tana ai margini esterni degli Orti del Cerchio (Quartiere di Terra a ovest), col giardino di erbe ordinato per file davanti casa. Bible §4.9 la specifica come "casa-tana semicoperta di terra all'inizio degli Orti del Cerchio".
 - **Atmosfera:** Quartiere di Terra (Ovest): verde scuro, marrone radici, ocra. Salvia stessa: sabbia + verdi delle erbe del cesto.
 - **Coerenza fissa:** Casa-tana semicoperta di terra. Posizione: margini esterni degli Orti del Cerchio. Giardino di erbe ordinato per file davanti casa.
 - **Contesto e ambientazioni ricorrenti:** Dimora di Salvia, lepre che cura — conosce le piante medicinali, le raccoglie nei campi e ai bordi della Foresta. Davanti casa, piccolo giardino di erbe ordinate per file. Il cespuglio dietro Casa Salvia è citato come riferimento stagionale per le bacche rosse che maturano con la prima brina (§4.12).
+
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated architectural scene in the style of Beatrix
+  Potter and Brian Wildsmith — watercolor + thin sepia ink, warm earthy
+  palette, hand-drawn children's picture book aesthetic. NO PEOPLE.
+  NO text, NO writing.
+
+  Scene: SALVIA'S COTTAGE — a small humble dwelling at the edge of the
+  Orti del Cerchio (cultivated rings) on a Mediterranean island. The
+  home of Salvia the hare, herbalist of the village.
+
+  THE COTTAGE (signature: half-buried in earth):
+  - A SMALL LOW STONE-AND-WOOD COTTAGE PARTLY COVERED IN EARTH/TURF —
+    the back and sides are buried into a low earth bank, leaving only
+    the front facade fully exposed. The roof is GREEN — a TURF/GRASS
+    ROOF with growing wildflowers and herbs (canonical signature: the
+    herbalist's house has plants growing on top of it).
+  - The exposed FRONT FACADE is plain stone-and-plaster, ochre/sandy
+    color, with a SIMPLE WOODEN DOOR (closed or ajar) and 1-2 small
+    windows with wooden shutters.
+  - A SMALL CHIMNEY rising from the turf roof (possibly thin smoke if
+    cool season).
+
+  THE HERB GARDEN (signature: ordered rows):
+  - A SMALL ORDERED HERB GARDEN beside or in front of the cottage —
+    ROWS of herbs (sage/salvia, rosemary, thyme, lavender, mint, etc.)
+    laid out in NEAT PARALLEL ROWS, each row a different herb. Modest
+    in size but visibly cultivated with care. A few small wooden labels
+    could be on each row (BUT NO TEXT — just a small carved symbol
+    if anything, OR simply no labels at all).
+  - A LOW DRY-STONE WALL or wooden border separating the garden from
+    the surrounding wild grass.
+  - Possibly a wicker basket leaning against the wall, a small wooden
+    stool, a clay water jug.
+
+  CONTEXT:
+  - BEHIND/AROUND the cottage: gentle rolling pastureland, hint of the
+    outer ring of Orti del Cerchio (cultivated fields)
+  - IN THE BACKGROUND on one side: hint of the dark edge of the Foresta
+    Intrecciata
+  - Earth path leading to the cottage door
+  - Some wild wildflowers along the path
+
+  LIGHTING: late morning or afternoon, warm sun on the front facade,
+  the turf roof glowing green with the light passing through the
+  plants.
+
+  ATMOSPHERE: gentle, herbal, ordered. Salvia is the village healer-
+  herbalist; her cottage is humble and cared-for, slightly hidden in
+  the earth, with plants growing both on it and around it.
+
+  PALETTE: warm ochre walls, GREEN TURF ROOF (with small wildflower
+  dots), rows of multi-shade green and grey-green herbs, dark weathered
+  wood (door, shutters), grey dry-stone wall, packed earth path, sage-
+  green pastureland background, dark green forest hint.
+
+  NOT INCLUDED:
+  - NO PEOPLE, NO Salvia visible
+  - NO TEXT, NO labels with writing on herb rows
+  - NO MODERN ELEMENTS
+  - NO ELABORATE COTTAGE DECORATION (no painted shutters, no flower
+    boxes hanging dramatic, no fairy-tale elements)
+  - NO HOBBIT BURROW (the cottage is partly earth-buried but it's a
+    REAL stone-and-wood dwelling, not a hobbit hole with round door)
+  - NO MAGICAL HERBS GLOWING / sparkles
+  - NO BUNDLES OF HERBS HANGING DRAMATIC from beams (modest only)
+
+  STYLE: traditional watercolor + thin sepia ink, palette earth-and-
+  green herbal cottage. Beatrix Potter / Brian Wildsmith. Mood:
+  gentle, herbal, ordered.
+  ```
 
 
 ---

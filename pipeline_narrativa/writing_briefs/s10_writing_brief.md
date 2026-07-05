@@ -70,6 +70,50 @@ Chiusura visiva: la tavola ultima inquadra i tre fratelli seduti sulla panca di 
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S10
+
+> Derivato dal grafo (s01 → s09). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Semi che il piano fa FIORIRE in s10** (4):
+- `seed_paura_noah_buio` (da s01): Paura di Noah del buio. Declinazioni: S1 bianco totale (nebbia, perdita di riferimenti); S3 buio della Forest… — **TARGET FIORITURA: QUI**
+- `seed_cornetto_briciole_pattern_a_rinforzo` (da s06): RINFORZO PATTERN A. Il cornetto che Noah intasca al Forno per Bru al mattino — Bru non si vede durante il gir… — voce: `mai_dichiarato_mai_regola_solo_immagine_del_cornetto_diventato_briciole_nel_taschino_dopo_il_giorno_di_cammino_nessun_personaggio_lo_commenta` — **TARGET FIORITURA: QUI**
+- `seed_bartolo_vede_e_basta` (da s07): Il modo di Bartolo nel blocco D: vede quello che succede, non interviene, non raccoglie, non commenta. Un occ… — voce: `mai_parola_mai_gesto_attivo_solo_l_occhio_che_registra_il_mondo_passa` — **TARGET FIORITURA: QUI**
+- `seed_nido_vuoto_curato_da_noah` (da s08): Noah trova tra i rami del noce caduto un piccolo nido vuoto (abbandonato dopo covata di maggio). Lo trova inc… — voce: `mai_dichiarato_come_significativo_nel_testo_gesto_piccolo_irriflesso_fisica_fragilita_mostrata_nei_verbi_gesti_a_coppa_si_sente_che_e_secco_non_negli_aggettivi` — **TARGET FIORITURA: QUI**
+
+**Altri semi attivi sullo sfondo** (21) — vivi, non forzarne la fioritura:
+- `seed_noah_raccoglie_oggetti` (da s01): Gesto-firma di Noah: cammina e raccoglie cose (bastoncini, rametti). Mai dichiarato come abitudine, emerge pe… (target: s02, s06, s07)
+- `seed_pagnotta_grunto_rito` (da s01): Fiamma consegna pagnotta ai fratelli da portare a Grunto. Piccolo rituale ricorrente: Fiamma sa che Grunto c'… (target: s12)
+- `seed_grunto_prima_apparizione` (da s01): Prima apparizione di Grunto come incontro vero. Una sola parola ('Buono'). ZERO frammenti pre-Vento. Stabilis… (target: s12)
+- `seed_due_passi_dal_burrone` (da s01): Posizione fisica precisa: la cengia a due passi dal bordo del Burrone dove il Vento Taglio apre la nebbia. Mi… (target: s12)
+- `seed_paura_elias_piccolo` (da s02): Elias si vede 'piccolo' nel riflesso della pozza — molto piccolo, tra i fratelli che nello specchio risultano… (target: s11)
+- `seed_stria_vede_prima` (da s02): Stria rilancia invece di rispondere ('Tu cosa pensi?'). Vola via senza spiegare dove va. Archetipo di Stria c… (target: s11)
+- `seed_oggetto_fantasma_congelato` (da s02): Meccanica del mondo: un oggetto caduto nell'acqua poco prima del calar del sole resta congelato dentro il vel…
+- `seed_rovo_resistenza_che_protegge` (da s03): Prima apparizione di Rovo come maggiore. Modo istituito: brontola, protegge senza ammetterlo, posa l'oggetto … (target: s04)
+- `seed_pallone_stoffa_cucita` (da s03): Pallone di stoffa cucita. Oggetto di gioco dei fratelli. In S3 rotola oltre il margine della Foresta, recuper… (target: s11)
+- `seed_tum_tum_tum_codice_fratelli` (da s04): TUM-tum-TUM-tum-TUM. Il ritmo che solo i tre fratelli sanno — 'la loro canzone', non spiegata, non insegnata … — voce: `mai_spiegato_come_lo_hanno_imparato_mai_chiamato_la_loro_canzone_nel_testo_salvo_come_narratore_memoria_lunga_discreta` (target: s12)
+- `seed_rovo_abitante_foresta` (da s04): Secondo registro di Rovo, fratello del primo (seed_rovo_resistenza_che_protegge, S3). Rovo come abitante dell…
+- `seed_farfalla_blu_seguire_fuori_soglia` (da s04): Noah segue una farfalla blu — singolo punto cromatico isolato che poi sparisce. Gesto del piccolo che si lasc…
+- `seed_gesto_della_terra_palmo` (da s04): Gesto del palmo aperto sulla terra per sentire e per parlare. Noah lo fa per primo quando e' perso (irrifless… (target: s12)
+- `seed_radura_coi_pini_luogo_silenzioso` (da s05): Radura sull'altra sponda del torrente, dentro la Foresta, 100-150 metri oltre il ponte. Cerchio d'erba con al… (target: s12)
+- `seed_bru_sa_indicare_luoghi_che_altri_non_vedono` (da s05): Bru sa indicare luoghi che gli altri non vedono. In S5 ha indicato la radura coi pini senza parole, solo col …
+- `seed_paura_gabriel_fratelli_crescono_diversi` (da s09): Paura di Gabriel: i fratelli cresceranno diversi. Emerge con peso visibile per la prima volta in saga nel ges… (target: s12)
+- `seed_braccialetto_di_noah_a_gabriel` (da s09): Braccialetto fatto da Noah da solo. Materiale stagionale coerente (fine estate → inizio autunno). Il nodo che… (target: s12)
+- `seed_fette_uguali` (da s09): Gesto-soglia di Gabriel: taglio fette diseguali per abitudine ('il piccolo per Noah'), poi fette uguali dopo … (target: s12)
+- `seed_noah_annoda_da_solo` (da s09): Noah impara da Elias (off-screen dopo S8) un nodo semplice, variante del Marinaro per mani piccole. Prima man… (target: s11)
+- `seed_compleanno_come_rito_non_rito` (da s09): Sull'isola i compleanni non sono feste organizzate. C'e' un piccolo rito: dolce, annuncio a scuola, attenzion… (target: s11)
+- `seed_cardo_prima_voce_individuata` (da s09): Cardo passa da sfondo collettivo dei cuccioli a voce individuata. Prima voce: 'Eh, ma chi te l'ha detto che e… (target: s11)
+
+**Semi GIÀ FIORITI (chiusi)** (11) — eco ammessa, MAI ri-fiorire: `seed_s01_bastoncino_noah`→s02, `seed_gabriel_sa_la_strada_senza_vedere`→s04, `seed_fermarsi_come_gesto_attivo`→s04, `seed_foresta_tempi_modi_propri`→s04, `seed_bru_presenza_che_custodisce`→s05, `seed_nodo_marinaro_capacita_elias`→s07, `seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto`→s08, `seed_pattern_a_rami_caduti_diventano_materia`→s08, `seed_vecchie_indicare_in_silenzio`→s08, `seed_gabriel_micro_occhiata_noah_cresciuto`→s09, `seed_memolo_sul_pozzo_con_gabriel`→s09
+
+**Callback già spesi nelle storie precedenti** (34) — non ripeterli come se fossero nuovi: `aspettiamo_di_gabriel_diventa_pensiamo`, `bastoncino_noah`, `bru_da_intravisto_a_presenza_concreta`, `bru_indica_col_mento_direzione_radura`, `bru_menzione_offscreen_noah_intasca_cornetto`, `bru_presenza_che_custodisce`, `cantilena_coltivatori`, `cb_s08_001`, `cb_s08_002`, `cb_s08_003`, `cb_s08_004`, `cb_s08_005`, `cb_s08_006`, `cb_s09_001`, `cb_s09_002`, `cb_s09_003`, `cb_s09_004`, `cb_s09_005`, `cb_s09_006`, `cb_s09_007`, `cornetto_noah_per_bru_diventa_briciole_pattern_a_rinforzo`, `fermarsi_come_gesto_attivo`, `fermarsi_come_gesto_attivo_pattern_trasferito_tra_fratelli`, `fiamma_modalita_chiacchiera_detto_popolare`, `foresta_che_ha_suoi_modi`, `gesto_firma_noah_raccoglie`, `messaggio_pastori_consegna_offscreen_risolta`, `noah_cresciuto_continuita_evolutiva_non_piange`, `nodo_marinaro_insegnato_da_nodo_e_praticato_nella_radura_coi_pini`, `pertiche_cadute_diventano_ponte_pattern_a_seminato`, `rovo_registro_diverso`, `salvia_cornice_pianta_nominata_diversa`, `stria_archetipo_rilancia_non_risponde`
+
+**Già apparsi prima** (8): `noah`, `gabriel`, `elias`, `bartolo`, `amo`, `fiamma`, `grunto`, `coltivatori_del_cerchio`
+
+**Luoghi mai visti prima nella saga**: `via_del_pontile`, `sentiero_pontile_forno` — la prima descrizione li fonda.
+**Luoghi già visitati** (il lettore li conosce): `pontile_bocca`, `piazza_villaggio`, `viottolo_perimetrale_piazza`, `via_dell_alba`
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -566,6 +610,8 @@ Nessuno dice «ti è passata», nessuno dice «sei stato bravo», nessuno dice n
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### GABRIEL
 - **Specie:** umano
 - **Età band:** maggiore_dei_tre
@@ -844,6 +890,8 @@ Nessuno dice «ti è passata», nessuno dice «sei stato bravo», nessuno dice n
   EXCEPT for the canonical reference images below where he is shown
   solo for character-sheet purposes.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
 
 ### ELIAS
 - **Specie:** umano
@@ -1127,6 +1175,8 @@ Nessuno dice «ti è passata», nessuno dice «sei stato bravo», nessuno dice n
   accessories. Always at least one brother in scene EXCEPT for these
   canonical reference images.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
 
 ### BARTOLO
 - **Specie:** tartaruga_di_mare_anziana
@@ -1428,7 +1478,7 @@ Bartolo è **vestito in modo minimale**, coerente col suo ruolo di traghettatore
   (hugs, caresses) with the brothers.
   ```
 
-  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg
 
 ### AMO
 - **Specie:** cormorano
@@ -1704,6 +1754,8 @@ Quando porta il pesce al Mercato, lo posa sul banco e basta. Non contratta.
   multicolored plumage — STRICTLY black with the bronze-green sheen.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg
+
 ### FIAMMA
 - **Specie:** volpe_rossa
 - **Età band:** ?
@@ -1930,7 +1982,7 @@ Quartiere di Fuoco a est come ambiente nativo: terracotta, rosso brace, oro (Bib
   pure quadruped fox pose.
   ```
 
-  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
 
 ### GRUNTO
 - **Specie:** stambecco_verde_vecchio
@@ -2151,6 +2203,8 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
   story is never visualized).
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg
+
 ### PERSONAGGI OFFSCREEN / BACKGROUND
 
 > Sono presenti senza essere centrali. Possono essere nominati o evocati, mai protagonisti di scena.
@@ -2331,6 +2385,40 @@ _(nessun dettaglio stabile assegnato a s10 per questo sentiero — è di passagg
 - **S11**: cammeo, arrivo Pontile con frutti da fuori, sera (Bartolo torna da oltre-il-mare).
 - **S12**: cammeo Pontile mattino, "mano alzata che ricade"; nel sigillo finale: presenza nella barca implicita, mai mostrata.
 
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Horizontal
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION (EXTERIOR —
+  PIER) da `visual/luoghi/quartiere_acqua/pontile_bocca/scheda.md`,
+  sezione "Descrizione visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from the west shore looking south-east, three-quarter
+  angle. We see the wooden pier extending from the foreground (left)
+  out to the water, with Bartolo's small thatched-roof hut at the far
+  end. The Bocca channel water visible (with its canonical color
+  mixing — greenish-blue inner + silver-blue toward sea). The east
+  cliff with Amo's house is visible in the distance (right). A small
+  rowboat moored at the pier. Possibly the small wooden footbridge
+  visible to the east of the pier.
+
+  LIGHTING: morning, low east light, warm golden tones on the pier
+  wood and the hut, water bright with reflections.
+
+  ATMOSPHERE: working pier, lived-in, never picturesque-tourist. The
+  pier is Bartolo's place of work and threshold to the open sea.
+
+  NOT INCLUDED: NO people, NO text, NO crashing waves, NO modern
+  docks, NO concrete, NO lighthouse, NO fishing trawlers (only small
+  rowboats), NO postcard sunset drama, NO tropical turquoise.
+
+  STYLE: traditional watercolor + thin sepia ink, warm earth palette,
+  tradition Beatrix Potter / Brian Wildsmith. Mood quiet, working.
+  ```
+
 ### `piazza_villaggio` (secondario)
 - **Note dal grafo:** attraversato in partenza, invisibile sotto il buio pieno — nessun dettaglio architettonico descritto [legacy_id_villaggio_centrale_mappato_a_piazza_villaggio]
 - **Aspetto:** Al centro del Villaggio c'è la Piazza. Al centro della Piazza c'è l'Albero Vecchio. Accanto all'Albero Vecchio c'è il Pozzo. Vicino al Pozzo c'è la Panca di Pietra, dove siedono le Vecchie del Mercato. Intorno alla Piazza: la bottega di Nodo col portico aperto, la casetta tonda di Mèmolo nascosta dietro un cespuglio, qualche casa di Coltivatori e di Mantenitori. Quattro vie escono dalla Piazza verso i quartieri: Via dell'Alba (est), Via del Pontile (sud), Via degli Orti (ovest), Via che Sale (nord).
@@ -2338,6 +2426,84 @@ _(nessun dettaglio stabile assegnato a s10 per questo sentiero — è di passagg
 - **Atmosfera:** Villaggio centrale: terracotta, legno caldo, verde Albero Vecchio.
 - **Coerenza fissa:** Centro esatto dell'isola. Pianta canonica: Albero Vecchio al centro, Pozzo accanto, Panca di Pietra vicino al Pozzo. Cespuglio + casetta tonda di Mèmolo. Bottega di Nodo col portico aperto. Quattro vie in uscita (Via dell'Alba a est, Via del Pontile a sud, Via degli Orti a ovest, Via che Sale a nord).
 - **Contesto e ambientazioni ricorrenti:** Il Villaggio sta al centro della terra interna, nel cuore esatto dell'isola. È piccolo: poche decine di case basse di pietra e di legno, tetti di canne o di tegole scure, finestre piccole. La Piazza è il fuoco rituale e quotidiano del Villaggio — vi convergono le quattro vie principali, vi si tiene il mercato a mezzogiorno, vi siedono le Vecchie del Mercato sulla Panca di Pietra accanto al Pozzo.
+
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal panoramic
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  Scene: The central square (Piazza) of a small Mediterranean-style
+  island village. The square is the heart of the village and its mandala
+  center — a humble open packed-earth space surrounded by low stone-and-
+  wood buildings.
+
+  CENTRAL ELEMENTS (canonical triade, MUST be visible):
+  - THE OLD TREE (Albero Vecchio): a HUGE ancient broad-leafed tree at
+    the very center of the square, with a trunk so wide that four
+    brothers would need to embrace it to encircle it. Its branches
+    spread like a great open hand above the square, providing shade
+    over half the piazza in summer. Roots visible at base, partly
+    exposed. Bark deeply textured, grey-brown.
+  - THE WELL (Pozzo): right next to the Old Tree, on the east side. A
+    modest stone wellhead, circular, about waist-high, with a simple
+    wooden bucket-and-rope assembly. Weathered grey stones.
+  - THE STONE BENCH (Panca di Pietra): a long low stone bench beside
+    the well, where the Vecchie del Mercato sit. Worn smooth from
+    generations of use. Currently empty.
+
+  SURROUNDING THE SQUARE:
+  - LOW HOUSES of stone and wood, single-story, with cane or terracotta
+    tile roofs, small windows, simple wooden doors. Modest, lived-in.
+  - NODO'S OPEN-PORTICO WORKSHOP visible on one side: a humble carpentry
+    bottega with a covered porch (no walls), tools hanging, wood stacks
+  - MEMOLO'S ROUND COTTAGE visible on another side: a small rounded
+    stone cottage HIDDEN PARTLY BY A LARGE BUSH (cespuglio) — the
+    bush is canonical (Mèmolo's house is "behind a bush")
+  - A few other modest dwellings (Coltivatori, Mantenitori) along the
+    edges, low and quiet
+  - FOUR PATHS exit the square toward the four cardinal directions
+    (only the openings of the paths visible at the square edges, not
+    the paths themselves):
+    * EAST: Via dell'Alba (toward Forno/Quartiere Fuoco)
+    * SOUTH: Via del Pontile (toward sea/Quartiere Acqua)
+    * WEST: Via degli Orti (toward Orti del Cerchio/Quartiere Terra)
+    * NORTH: Via che Sale (toward Pascoli Alti/Quartiere Aria)
+
+  LIGHTING: morning, sun low from east, warm golden tones on the east
+  side of buildings and the Old Tree's eastern face. Soft long shadows.
+  The square mostly empty (early morning, before market hour).
+
+  ATMOSPHERE: quiet, ancient, alive. The square is the SILENT MANDALA
+  of the village — never solemn or theatrical, just the natural center
+  where life converges. Currently empty (a few minutes before the
+  village wakes properly).
+
+  PALETTE: warm terracotta (roof tiles), warm wood (doors, shutters,
+  porticos), grey-brown stone (well, bench, walls), DEEP GREEN of the
+  Old Tree's leaves (summer) or bare branches (winter), packed earth
+  ochre (square ground), warm gold morning sky.
+
+  NOT INCLUDED:
+  - NO PEOPLE, NO characters, NO Vecchie on the bench (currently empty)
+  - NO TEXT, NO WRITING, NO SIGNS
+  - NO MARKET STALLS visible (this is morning, before the Mercato del
+    Mezzogiorno) — possibly hint of a wooden cart or basket leaning
+    against a wall, but no organized market
+  - NO SOLEMN/THEATRICAL framing of the Old Tree (Bible §4.4 forbids
+    "scene sotto l'Albero Vecchio in modo solenne")
+  - NO modern elements (no electric lines, no concrete, no cars)
+  - NO tropical palm trees, NO crashing fountains, NO stone-paved
+    square (it's PACKED EARTH)
+  - NO ornate baroque-style architecture, NO bell tower, NO church
+  - NO walls/fortifications around the square
+  - NO postcard-pretty arrangement
+
+  STYLE: traditional watercolor + thin sepia ink, Beatrix Potter / Brian
+  Wildsmith. Mood: quiet, ancient, lived-in, threshold of day.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_albero_centrale.jpg, visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_mercato_mezzogiorno.jpg, visual/luoghi/villaggio_centrale/piazza_villaggio/immagini/piazza_villaggio_canonica_v1_panoramica.jpg
 
 
 ---

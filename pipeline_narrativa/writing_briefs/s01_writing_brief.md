@@ -41,6 +41,14 @@ Bianco-grigio-azzurro freddo della nebbia → al diradarsi, oro pallido invernal
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S01
+
+> Derivato dal grafo (s01 → s00). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Mondo vergine.** Prima storia della saga: nessun seme attivo, nessun personaggio già apparso, nessun callback disponibile. Ogni elemento introdotto qui è un debutto.
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -380,6 +388,8 @@ Al Forno, Fiamma è dentro che sistema il piano di lavoro per il giorno dopo. Li
   solo for character-sheet purposes.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
+
 ### ELIAS
 - **Specie:** umano
 - **Età band:** medio
@@ -551,6 +561,8 @@ Al Forno, Fiamma è dentro che sistema il piano di lavoro per il giorno dopo. Li
   accessories. Always at least one brother in scene EXCEPT for these
   canonical reference images.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
 
 ### NOAH
 - **Specie:** umano
@@ -742,6 +754,8 @@ Al Forno, Fiamma è dentro che sistema il piano di lavoro per il giorno dopo. Li
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### FIAMMA
 - **Specie:** volpe_rossa
 - **Età band:** ?
@@ -851,7 +865,7 @@ Quartiere di Fuoco a est come ambiente nativo: terracotta, rosso brace, oro (Bib
   pure quadruped fox pose.
   ```
 
-  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
 
 ### GRUNTO
 - **Specie:** stambecco_verde_vecchio
@@ -989,6 +1003,8 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
   story is never visualized).
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_cengia.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_frammento.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_canonica_v1_via.jpg, visual/personaggi/individuali/primari/grunto/immagini/grunto_turnaround_v1.jpg
+
 ---
 
 ## §6. CORNICI DEL MONDO (sfondo, MAI trama)
@@ -1040,6 +1056,118 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
 
 **Contesto ricorrente (catalogo):** Esce dalla Piazza del Villaggio in direzione nord, sale attraverso i Pascoli Alti del Quartiere d'Aria fino alla Roccia Alta (2 ore) e prosegue verso le Montagne Gemelle e la grotta di Grunto (4-5 ore). Tragitto canonico Villaggio → Pascoli → Roccia Alta → Burrone.
 
+**Canone visivo (da `prompt_grok.md` — supporto):**
+```
+A painterly illustrated landscape scene in the style of Beatrix Potter
+and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+hand-drawn children's picture book aesthetic. Vertical 3:4 composition,
+wide depth (camera looks NORTH up the slope from low position). NO
+PEOPLE. NO text, NO writing, NO signs.
+
+Scene: THE WAY THAT RISES (Via che Sale), the main path leaving the
+village square going NORTH into the Quartiere d'Aria — a long path
+that climbs gradually through the High Meadows toward the High Rock
+and the Twin Mountains in the far distance. The CHARACTER OF THIS
+PATH is "the way that goes up": always heading north, always rising,
+exposed to wind, stone underfoot.
+
+PATH (subject):
+- A NARROW PACKED-EARTH AND STONE TRAIL, single-file width, winding
+  gently up the slope. Surface is mostly compact earth with EMBEDDED
+  STONES showing through (limestone, grey-brown). NOT paved. NOT
+  cobblestone. Worn by generations of feet.
+- The trail runs from BOTTOM-CENTER of the frame (foreground, near
+  village level) up toward the BACKGROUND-CENTER-NORTH, becoming
+  thinner and steeper as it goes higher.
+- A few stones along the edges, occasional patches of grass eaten
+  back by passage.
+
+LOWER FOREGROUND (origin — Piazza del Villaggio):
+- Just a HINT of the village edge in the very bottom of the frame:
+  a low stone wall corner, the edge of a terracotta rooftop, the
+  back of the Old Tree's canopy. Brief, just to mark the origin.
+
+LOWER-MIDDLE THIRD (first stretch of climb — canonical detail):
+- THE STONE OF THREE STEPS (Pietra dei Tre Passi, vcs_d01): a flat
+  stone slab placed across the path. Three paces before, the path
+  is even; three paces after, the path is even again — but at the
+  stone itself, the body naturally pauses for a beat. Shows as a
+  slightly wider flat stone embedded in the trail, lichen-marked,
+  smoothed in the center.
+
+MIDDLE THIRD (medium stretch — canonical detail):
+- THE LONE THISTLE (Cardo Isolato, vcs_d02): on the EAST EDGE of
+  the path (right side of frame), growing alone from a crack in the
+  earth. Tall thistle plant — purple-flowering in spring, dry-golden
+  in autumn. For this canonical reference render it DRY GOLDEN (most
+  common state, late summer / autumn). It is the path's "clock", the
+  signature object that changes with the seasons. The crack in the
+  earth at its base is visible.
+
+UPPER MIDDLE (high stretch near the meadows — canonical details):
+- THE BELL-STONE (Sasso del Campanaccio, vcs_d03): a rounded boulder
+  embedded in the slope, with a smooth worn spot on the top where
+  shepherds tap their walking stick. Located near where the path
+  approaches the Pascoli Alti (high meadows).
+- THE PASSAGE MARK (Segno del Passaggio, vcs_d04): two PARALLEL LINES
+  of flattened-yellowed grass on either side of the path — visible
+  even when no one is walking, the lines never grow back straight.
+  Geological memory of generations of pastori passing.
+
+UPPER THIRD (top of frame — destination):
+- The path continues upward toward the WIDE PASCOLI ALTI (high
+  meadows), suggested as rolling sage-green slopes opening out.
+- IN FAR BACKGROUND, on the horizon: the silhouette of the MONTAGNE
+  GEMELLE (twin mountains) rising — modest peaks, never alpine-
+  extreme, two cuts against the sky.
+- Possibly: a hint of the ROCCIA ALTA (high rock outcrop) as a small
+  vertical accent in the middle distance.
+
+SKY & ATMOSPHERE:
+- WIDE, OPEN SKY taking the upper portion of the frame. Pale-grey-blue
+  with thin cool clouds. The sky reads "high" — this is the Quartiere
+  d'Aria.
+- AIR feels DRY and COOL — visible through subtle wind movement of
+  the lone thistle and the grass at the path edges.
+
+LIGHTING: late morning, soft cool light from south-east (low rear
+left), warm enough to read as natural sun but never theatrical. Long
+soft shadows of the path stones reaching west.
+
+ATMOSPHERE: WIND-EXPOSED, MINERAL, PATIENT. The path is the way to
+the high places — austere but inviting, a working route between the
+village and the wild north. Not picturesque-romantic, not dramatic-
+wild. Lived in, used, alive.
+
+PALETTE (Bible §6 Quartiere d'Aria): grigio pietra (path stones,
+boulders, mountains), blu ghiaccio (sky), vento secco (dry-yellow
+grass at edges, dry-gold thistle). Plus warm packed earth (path),
+sage-green meadow far ahead.
+
+NOT INCLUDED:
+- NO PEOPLE — no shepherds, no Camminanti, no children. The reference
+  shows the path itself. People are added later via character canon.
+- NO TEXT, NO writing, NO signs / waymarkers / arrows
+- NO MODERN ELEMENTS (no fences barbed-wire, no electric, no concrete,
+  no painted blazes on stones)
+- NO PAVING, NO COBBLESTONE — packed earth and embedded stone only
+- NO HORSE / NO CART (it is a foot-path, narrow, single-file)
+- NO TROPICAL/EXOTIC vegetation, NO palm trees, NO bright flowers
+  except the lone thistle (dry-golden in this version)
+- NO ALPINE EXTREME peaks (Montagne Gemelle are modest twin cuts,
+  NOT Alps)
+- NO DRAMATIC SUNRISE/SUNSET poster colors
+- NO sheep / goats in this reference (those belong to Pascoli Alti
+  scenes, not the path itself)
+- NO Albero Vecchio dominant (only the canopy edge hint at the very
+  bottom — the Albero is the village center, this view is leaving
+  it)
+
+STYLE: traditional watercolor + thin sepia ink, palette grey stone +
+pale sky + dry gold + sage meadow far ahead. Beatrix Potter / Brian
+Wildsmith. Mood: wind-exposed, mineral, patient.
+```
+
 
 ---
 
@@ -1054,6 +1182,68 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
 - **Atmosfera:** Quartiere d'Aria (Nord): grigio pietra, blu ghiaccio, vento secco.
 - **Coerenza fissa:** Sistema di due cime gemelle. Burrone profondo che le separa. Posizione: cuore della terra interna, Quartiere d'Aria a nord. Raggiungibili solo dall'interno (non dal guado nord). Pendici nord: ripide, quasi impraticabili. Bbox cartografica 600 m est-ovest.
 - **Contesto e ambientazioni ricorrenti:** Cuore della terra interna, Quartiere d'Aria a nord. L'acqua del Fiume che Gira nasce dalle pendici delle Montagne Gemelle (§8 introduzione). Tra le due cime sta il Burrone, e nel Burrone su una cengia riparata sta la grotta di Grunto. Le pendici nord sono ripide e quasi impraticabili: Grunto le conosce ma non le usa.
+
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. NO PEOPLE. NO text.
+
+  Scene: TWIN MOUNTAINS (Montagne Gemelle) — two similar peaks rising
+  on the northern horizon of a Mediterranean island, separated by a
+  narrow ravine (Burrone) between them. View from the village or
+  Pascoli Alti looking north.
+
+  THE TWIN MOUNTAINS:
+  - TWO SIMILAR PEAKS rising relatively close together, of comparable
+    height (~600-800m above sea level — modest, not Alps). They are
+    IDENTIFIABLY TWINS — neither identical nor wildly different,
+    symmetrical-feeling but with natural irregularities.
+  - Slopes are GREY-BROWN ROCKY, with patches of green vegetation on
+    the lower flanks transitioning to bare rock higher up.
+  - Between the two peaks: a NARROW V-SHAPED PASS / NOTCH — this is
+    the BURRONE (the ravine where Grunto lives). Visible as a darker
+    line of shadow between the peaks.
+  - The summits are bare grey-brown rock, possibly with a touch of
+    morning mist or thin cloud near them (canonical s01 "Nebbia delle
+    Montagne Gemelle" — the canonical morning mist).
+
+  CONTEXT (foreground/middle):
+  - FOREGROUND: hint of village or Pascoli Alti landscape (low rolling
+    meadows, possibly a few houses or trees in foreground for scale)
+  - MIDDLE GROUND: rising slopes leading up to the mountain bases,
+    becoming rockier with altitude
+  - ATMOSPHERIC PERSPECTIVE: the mountains feel DISTANT, hazy with
+    distance, blue-grey tones in the upper slopes
+
+  LIGHTING: morning (canonical for s01 nebbia) or clear day. If morning,
+  the canonical NEBBIA (mist) covers the lower slopes and the Burrone
+  notch, with the peaks emerging above the mist — this is the canonical
+  opening image of the saga.
+
+  ATMOSPHERE: distant, dignified, threshold. The Twin Mountains are
+  the high horizon of the island, the home of Grunto, and the canonical
+  summit-direction of the saga's beginning.
+
+  PALETTE: grey-brown peaks, soft blue-grey atmospheric haze, white-grey
+  mist (morning), green lower slopes, sage-green meadows in foreground,
+  warm gold or pale dawn sky behind the peaks.
+
+  NOT INCLUDED:
+  - NO PEOPLE
+  - NO TEXT, NO labels
+  - NO ALPINE-EXTREME features (no glaciers, no snow caps in summer,
+    no Himalayan-scale)
+  - NO TROPICAL elements
+  - NO DRAMATIC POSTERS (no godrays, no eagle silhouettes, no
+    sunburst)
+  - NO MODERN ELEMENTS (no antenna towers, no roads up the mountains)
+  - NO MAGICAL elements
+
+  STYLE: traditional watercolor + thin sepia ink, palette atmospheric
+  with depth. Beatrix Potter / Brian Wildsmith. Mood: distant
+  dignified threshold.
+  ```
 
 ### `forno` (secondario)
 - **Atmosfera:** **Quartiere di Fuoco a est** (Bible §6): **terracotta, rosso brace, oro**.
@@ -1077,17 +1267,32 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
 - Posizione lungo la Via dell'Alba, primo edificio del Quartiere di Fuoco
 - Niente recinzione
 
-**Interno:**
-- Stanza unica
-- Pavimento di terra battuta
+**Sala Laboratorio (sala A):**
+- Sala AMPIA (~9×7 m), soffitto ALTO ~3.2 m con travi a vista
+- Sensazione di SPAZIO ARIOSO (4 persone si muovono comodamente, mai claustrofobia)
+- Pavimento di terra battuta velata di farina
 - Pareti intonacate ocra grezzo
-- Soffitto basso con travi a vista
-- **Forno di pietra a cupola** sulla parete sud-est, con bocca rivolta verso il centro stanza
-- **Banco da impasto in legno** sotto la finestra est (asse infarinata, ciotole)
-- Tavolo da pranzo (di legno semplice, 4-6 posti)
-- Mensole con pane proofing, ceste di legna piccola, attrezzi
+- **2 grandi forni a cupola** affiancati sulla parete EST (forno comune di borgo), ciascuno con bocca ~1.5-1.8 m, fieldstone, banchetta separatrice tra i due
+- **Cappa/canna fumaria centrale** che sale al tetto
+- **Lungo tavolone da impasto** (~2 m) sulla parete OVEST sotto la finestra principale
+- **Finestra est** sopra il tavolone (o sulla parete est) che dà sul cortile retro + vista alba con silhouette delle Case del Mattino in controluce
+- **Mensole** sulla parete EST accanto/tra i forni con utensili, pale lunghe, ciotole
+- **Zona centrale aperta** (circolazione)
 - Pavimento e ogni superficie leggermente velata di farina
-- Ganci a parete con strofinacci, padelle, utensili in legno e ferro
+
+**Sala Dispensa-Pranzo (sala B, comunicante con A via porta interna):**
+- Sala più contenuta (~6×5 m), soffitto un po' più basso
+- **Mensole stipate** floor-to-ceiling sulla parete OVEST (cesti di vimini, vasi terracotta, anfore — quantità abbondante = forno comunitario)
+- **Tavolo rettangolare in legno + 2 panche** al centro stanza (4-6 posti)
+- **Porta** sulla parete sud/est che dà sul **cortile retro** (visibile aperta nelle scene diurne)
+- Pavimento in pietra/cotto o terra battuta
+- Possibili: piccolo banco accessorio, candela sul tavolo nelle scene serali
+
+**Cortile retro:**
+- **Tettoia in legno** che protegge cataste regolari di legna spaccata
+- Ceppi spaccati a terra
+- Retro casa visibile in pietra
+- Niente recinzione, sentiero che si perde nell'erba verso est
 
 **Cortile retro:**
 - Cataste di legna regolari contro la parete posteriore
@@ -1110,6 +1315,216 @@ Non ama compagnia. Quando un cucciolo o un fratello sale fino a lui, la prima co
 - **S10**: cammeo all'alba al ritorno (cuore caldo)
 - **S11**: cammeo banco dolci durante la festa
 - **S12**: cornice apertura mattino (pagnotta a Grunto) + chiusura sera (dolce normale, quattro fette, sigillo della saga)
+
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Vertical 3:4
+  composition. NO PEOPLE in the image. NO text, NO writing, NO signs.
+
+  Scene: A small rural artisan bakery at dawn — the first light of day on
+  a Mediterranean-style island village. The bakery is the first building
+  along the village's east-facing main path (Via dell'Alba). The bakery
+  is silent but awake — smoke rises gently from the chimney, the rest of
+  the small village still sleeps. View from outside, three-quarter angle
+  from the north-west.
+
+  ═══════════════════════════════════════════
+  CRITICAL COMPOSITIONAL CONSTRAINT (for text overlay):
+  ═══════════════════════════════════════════
+
+  The IMAGE IS DIVIDED VERTICALLY:
+  - The UPPER THIRD of the image (top 33%) must be MOSTLY EMPTY DAWN SKY
+    with WARM UNIFORM TONES (rose-orange-gold gradient), with LOW CONTRAST
+    and FEW DETAILS. This space will be used for text overlay later. The
+    chimney top of the bakery may peek into the lower edge of this upper
+    third, with a thin trail of smoke rising. NOTHING ELSE in the upper
+    third — no trees, no mountains, no birds, no clouds with strong
+    contrast.
+  - The LOWER TWO-THIRDS (bottom 67%) contain the bakery, the village
+    context around it, the path, and the rural surroundings.
+
+  ═══════════════════════════════════════════
+  THE BAKERY (DOMINANT element — must occupy ~50-60% of the lower 2/3):
+  ═══════════════════════════════════════════
+
+  The bakery is the MAIN SUBJECT and must be PROMINENTLY VISIBLE — close
+  enough to read its details clearly. It should occupy approximately 50%
+  to 60% of the lower two-thirds height of the image, positioned slightly
+  to the right of center.
+
+  THE BUILDING:
+  A SMALL LOW STONE COTTAGE-BAKERY, single-story, rectangular, about 7×8
+  meters in real-world scale. Seen from a 3/4 angle: we see the WEST
+  FACADE (facing us, where the front door is) AND the NORTH SIDE (left of
+  the building, slightly receding into perspective). The east side
+  (behind, partially visible) catches the first dawn light.
+
+  - WALLS: rough hand-applied OCHRE PLASTER, slightly uneven, warm and
+    worn (NOT bare red brick, NOT smooth stucco)
+  - ROOF: pitched roof with DARK TERRACOTTA TILES (irregular old tiles,
+    slightly mossy in places)
+  - A STONE CHIMNEY rising from the roof on the back-right corner —
+    thin smoke rising gently, drifting north-west in the still dawn air
+  - THE FRONT DOOR (on the west facade, facing us): simple weathered
+    wooden plank door with iron hinges. Currently CLOSED.
+  - A SMALL SQUARE WINDOW beside the door (west side): wooden shutters
+    CLOSED.
+  - ON THE EAST SIDE (visible in 3/4 perspective, on the right side of
+    the building): another small window — partially visible in
+    perspective, showing a SOFT WARM AMBER GLOW from inside (the kneading
+    area is lit, the day's work has begun).
+  - A LOW WOODEN BENCH against the north wall (worn smooth by years of
+    use)
+
+  ═══════════════════════════════════════════
+  THE REAR COURTYARD (visible from the north angle):
+  ═══════════════════════════════════════════
+
+  Because we view from the north-west angle, we can see PART OF THE BACK
+  COURTYARD on the left side of the bakery — a small open courtyard with:
+  - A STACK OF SPLIT FIREWOOD organized against the bakery's east wall,
+    about a meter high
+  - A small WOODEN AXE leaning against a chopping block
+  - Packed earth ground
+
+  This grounds the bakery as a WORKING dwelling, not isolated. Just a
+  glimpse, not the focus.
+
+  ═══════════════════════════════════════════
+  THE QUARTIERE DI FUOCO CONTEXT (CRITICAL — bakery is NOT alone):
+  ═══════════════════════════════════════════
+
+  The bakery is the FIRST building of a small cluster — the Quartiere
+  di Fuoco (Fire Quarter). The other buildings of the quarter stretch
+  out to the EAST behind/past the bakery, along the same earth path.
+
+  BEHIND THE BAKERY (visible to the right and slightly behind in
+  perspective):
+  - 3 to 4 SMALL OTHER STONE COTTAGES in similar pre-industrial style —
+    these are the CASE DEL MATTINO (Houses of the Morning). They are
+    SIMPLER and SMALLER than the bakery, with similar ochre plaster
+    walls and dark terracotta roofs. They are positioned along the
+    continuing earth path, receding into the distance toward the rising
+    sun.
+  - The other houses are STILL SLEEPING — closed doors, closed shutters,
+    no smoke from their chimneys (only the bakery's chimney smokes).
+  - One of the distant houses might have a small visible adjacent feature
+    hinting at its trade: e.g., a small dark anvil shape outside one
+    (the blacksmith), or some low racks (the tanner). VERY subtle, just
+    hints.
+  - The houses get smaller and more atmospheric as they recede into the
+    distance.
+
+  ═══════════════════════════════════════════
+  THE VIA DELL'ALBA (the path):
+  ═══════════════════════════════════════════
+
+  The earth path (Via dell'Alba) runs in front of the bakery, slightly
+  diagonal, leading the eye into the scene from the lower-left foreground
+  and continuing past the bakery and beyond to the east where it
+  disappears in the distance toward the dawn light.
+
+  - Packed earth surface, slightly uneven, with patches of grass at the
+    edges
+  - A few WILDFLOWERS (tiny dots of pale yellow/white) at the path edges
+  - Slight wear in the middle of the path (where feet pass)
+
+  ═══════════════════════════════════════════
+  THE RURAL SURROUNDINGS:
+  ═══════════════════════════════════════════
+
+  - TO THE LEFT/FOREGROUND of the bakery: low GENTLE PASTURELAND with
+    sage-green grass and a few patches of wildflowers
+  - A SINGLE MODEST TREE near the bakery (perhaps an olive tree or an
+    almond tree, characteristic of Mediterranean countryside) on the
+    left foreground area, providing a natural anchor and depth
+  - A SMALL VEGETABLE PATCH adjacent to the bakery (north or west side)
+    — just a humble plot with rows, low and simple, bordered with a few
+    stones
+  - IN THE FAR DISTANCE (left, beyond the bakery): hint of the rest of
+    the island's gentle countryside, very low rolling pastures
+
+  ═══════════════════════════════════════════
+  LIGHT (CRITICAL):
+  ═══════════════════════════════════════════
+
+  DAWN — the first hour. The sun has just begun rising in the EAST
+  (behind/right of the bakery, behind the cluster of Case del Mattino).
+  The light:
+  - Catches the EAST SIDE of the bakery and the eastern walls of the
+    distant houses, making them glow warm
+  - The WEST FACADE of the bakery (facing us) is in soft cool shadow
+    but warmed by reflected dawn glow
+  - The path is partially in warm light where the dawn reaches between
+    buildings
+  - The chimney smoke rises softly through warm-tinted air
+
+  The SKY (upper third) is the warmest part: a calm gradient of rose,
+  peach, and gold, with maybe one or two thin wispy clouds.
+
+  The mood is QUIET, ALIVE, EXPECTANT. The bakery has woken up first.
+  The rest of the village still sleeps. Something is about to begin.
+
+  ═══════════════════════════════════════════
+  WHAT MUST NOT APPEAR (CRITICAL):
+  ═══════════════════════════════════════════
+
+  - NO PEOPLE, NO characters, NO foxes, NO animals, NO figures of any
+    kind, NOT EVEN silhouettes
+  - NO TEXT, NO WRITING, NO SIGNS, NO LETTERS, NO INSCRIPTIONS — there
+    is no writing on this island, ever
+  - NO "PANIFICIO" sign, NO "BAKERY" sign, NO names on the building
+  - NO SEA visible (the bakery is INLAND east, not on coast)
+  - NO MOUNTAINS visible (mountains are far north, not from this
+    perspective)
+  - NO WINDMILLS
+  - NO MODERN ELEMENTS: no aluminum frames, no glass doors, no electric
+    cables, no street lights, no concrete, no plastic, no electric power
+  - NO RED BRICK FACADE (walls are ochre plaster)
+  - NO COMMERCIAL DISPLAY: no shop window, no goods displayed outside,
+    no produce in front
+  - NO HOBBIT/elf-style architecture (no curved doorways, no round
+    windows)
+  - NO Disney/Pixar 3D rendering
+  - NO over-stylized Studio Ghibli
+  - NO heavy black ink outlines (use thin warm sepia)
+  - NO sparkles, no glow effects, no magical light particles
+  - NO postcard sunset/sunrise drama (this is a calm humble dawn, not
+    an epic sunrise)
+  - NO LARGE TOWN OR CITY visible in the background — only the small
+    cluster of Case del Mattino (3-4 houses), nothing more
+  - NO walled village, NO town gate, NO fortifications
+  - NO bell towers, NO church spires
+  - NO dense vegetation in the upper third (kept clear for text)
+  - NO flying birds
+  - NO ISOLATED LONELY BAKERY IN AN EMPTY FIELD (the bakery is part of
+    a small village quarter — there must be the cluster of Case del
+    Mattino visible behind/past it)
+
+  ═══════════════════════════════════════════
+  STYLE NOTES (CRITICAL):
+  ═══════════════════════════════════════════
+
+  - TECHNIQUE: traditional watercolor and thin sepia ink illustration,
+    hand-drawn quality with slight imperfections
+  - INK: warm brown-sepia lines, light touch, never harsh black, organic
+  - WATERCOLOR: soft luminous warm washes, visible texture, slight
+    color bleeds at edges, watercolor pooling on paper
+  - PALETTE: warm ochre walls, dark terracotta roof tiles, light
+    weathered wood (door, shutters), pale gray-blue chimney smoke,
+    rose-peach-gold dawn sky in the upper third, sage green pastures,
+    warm earth-brown path. Cool soft shadows on the west facade.
+    Amber glow from the east window only.
+  - AESTHETIC: tradition of Beatrix Potter, Brian Wildsmith, classic
+    European children's illustration. Think the village views in
+    "The Tale of Mrs. Tiggy-Winkle" or "Tom Kitten" — humble, alive,
+    dignified, with a sense of community settlement.
+  - MOOD: quiet, awake, expectant. The first hour of the day. The
+    village is still asleep. The bakery has woken up first.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_cortile_retro.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_dispensa_pranzo.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_esterno_alba.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_dettaglio.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_panoramica.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_verticale.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_panoramica.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_planimetria_canonica.jpg
 
 
 ---

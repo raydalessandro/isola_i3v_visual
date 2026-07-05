@@ -41,6 +41,50 @@ Dominanti: terracotta_del_Forno_cornice_fissa + marrone_caldo_delle_castagne + r
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S09
+
+> Derivato dal grafo (s01 → s08). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Semi che il piano fa FIORIRE in s09** (1):
+- `seed_memolo_sul_pozzo_con_gabriel` (da s08): Gabriel fa sedere Memolo confuso sul bordo del Pozzo (dopo aver spostato foglie rotte dall'impatto), gli tien… — voce: `inversione_ruoli_mai_dichiarata_nel_testo` — **TARGET FIORITURA: QUI**
+
+**Semi in maturazione prevista QUI** (2):
+- `seed_paura_elias_piccolo` (da s02): Elias si vede 'piccolo' nel riflesso della pozza — molto piccolo, tra i fratelli che nello specchio risultano… — *maturazione prevista qui*
+- `seed_stria_vede_prima` (da s02): Stria rilancia invece di rispondere ('Tu cosa pensi?'). Vola via senza spiegare dove va. Archetipo di Stria c… — *maturazione prevista qui*
+
+**Altri semi attivi sullo sfondo** (18) — vivi, non forzarne la fioritura:
+- `seed_noah_raccoglie_oggetti` (da s01): Gesto-firma di Noah: cammina e raccoglie cose (bastoncini, rametti). Mai dichiarato come abitudine, emerge pe… (target: s02, s06, s07)
+- `seed_pagnotta_grunto_rito` (da s01): Fiamma consegna pagnotta ai fratelli da portare a Grunto. Piccolo rituale ricorrente: Fiamma sa che Grunto c'… (target: s12)
+- `seed_grunto_prima_apparizione` (da s01): Prima apparizione di Grunto come incontro vero. Una sola parola ('Buono'). ZERO frammenti pre-Vento. Stabilis… (target: s12)
+- `seed_due_passi_dal_burrone` (da s01): Posizione fisica precisa: la cengia a due passi dal bordo del Burrone dove il Vento Taglio apre la nebbia. Mi… (target: s12)
+- `seed_oggetto_fantasma_congelato` (da s02): Meccanica del mondo: un oggetto caduto nell'acqua poco prima del calar del sole resta congelato dentro il vel…
+- `seed_paura_noah_buio` (da s01): Paura di Noah del buio. Declinazioni: S1 bianco totale (nebbia, perdita di riferimenti); S3 buio della Forest… (target: s10)
+- `seed_rovo_resistenza_che_protegge` (da s03): Prima apparizione di Rovo come maggiore. Modo istituito: brontola, protegge senza ammetterlo, posa l'oggetto … (target: s04)
+- `seed_pallone_stoffa_cucita` (da s03): Pallone di stoffa cucita. Oggetto di gioco dei fratelli. In S3 rotola oltre il margine della Foresta, recuper… (target: s11)
+- `seed_tum_tum_tum_codice_fratelli` (da s04): TUM-tum-TUM-tum-TUM. Il ritmo che solo i tre fratelli sanno — 'la loro canzone', non spiegata, non insegnata … — voce: `mai_spiegato_come_lo_hanno_imparato_mai_chiamato_la_loro_canzone_nel_testo_salvo_come_narratore_memoria_lunga_discreta` (target: s12)
+- `seed_rovo_abitante_foresta` (da s04): Secondo registro di Rovo, fratello del primo (seed_rovo_resistenza_che_protegge, S3). Rovo come abitante dell…
+- `seed_farfalla_blu_seguire_fuori_soglia` (da s04): Noah segue una farfalla blu — singolo punto cromatico isolato che poi sparisce. Gesto del piccolo che si lasc…
+- `seed_gesto_della_terra_palmo` (da s04): Gesto del palmo aperto sulla terra per sentire e per parlare. Noah lo fa per primo quando e' perso (irrifless… (target: s12)
+- `seed_radura_coi_pini_luogo_silenzioso` (da s05): Radura sull'altra sponda del torrente, dentro la Foresta, 100-150 metri oltre il ponte. Cerchio d'erba con al… (target: s12)
+- `seed_bru_sa_indicare_luoghi_che_altri_non_vedono` (da s05): Bru sa indicare luoghi che gli altri non vedono. In S5 ha indicato la radura coi pini senza parole, solo col …
+- `seed_cornetto_briciole_pattern_a_rinforzo` (da s06): RINFORZO PATTERN A. Il cornetto che Noah intasca al Forno per Bru al mattino — Bru non si vede durante il gir… — voce: `mai_dichiarato_mai_regola_solo_immagine_del_cornetto_diventato_briciole_nel_taschino_dopo_il_giorno_di_cammino_nessun_personaggio_lo_commenta` (target: s07, s08, s10, s11, s12)
+- `seed_bartolo_vede_e_basta` (da s07): Il modo di Bartolo nel blocco D: vede quello che succede, non interviene, non raccoglie, non commenta. Un occ… — voce: `mai_parola_mai_gesto_attivo_solo_l_occhio_che_registra_il_mondo_passa` (target: s10)
+- `seed_gabriel_micro_occhiata_noah_cresciuto` (da s07): Quando Noah dice 'pero' due rametti vanno avanti' dopo lo STRAPP al punto dei due massi, Gabriel lo guarda un… — voce: `mai_nominata_mai_mostrata_al_lettore_vive_solo_nel_visual_anchor_della_storia`
+- `seed_nido_vuoto_curato_da_noah` (da s08): Noah trova tra i rami del noce caduto un piccolo nido vuoto (abbandonato dopo covata di maggio). Lo trova inc… — voce: `mai_dichiarato_come_significativo_nel_testo_gesto_piccolo_irriflesso_fisica_fragilita_mostrata_nei_verbi_gesti_a_coppa_si_sente_che_e_secco_non_negli_aggettivi` (target: s10)
+
+**Semi GIÀ FIORITI (chiusi)** (9) — eco ammessa, MAI ri-fiorire: `seed_s01_bastoncino_noah`→s02, `seed_gabriel_sa_la_strada_senza_vedere`→s04, `seed_fermarsi_come_gesto_attivo`→s04, `seed_foresta_tempi_modi_propri`→s04, `seed_bru_presenza_che_custodisce`→s05, `seed_nodo_marinaro_capacita_elias`→s07, `seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto`→s08, `seed_pattern_a_rami_caduti_diventano_materia`→s08, `seed_vecchie_indicare_in_silenzio`→s08
+
+**Callback già spesi nelle storie precedenti** (27) — non ripeterli come se fossero nuovi: `aspettiamo_di_gabriel_diventa_pensiamo`, `bastoncino_noah`, `bru_da_intravisto_a_presenza_concreta`, `bru_indica_col_mento_direzione_radura`, `bru_menzione_offscreen_noah_intasca_cornetto`, `bru_presenza_che_custodisce`, `cantilena_coltivatori`, `cb_s08_001`, `cb_s08_002`, `cb_s08_003`, `cb_s08_004`, `cb_s08_005`, `cb_s08_006`, `cornetto_noah_per_bru_diventa_briciole_pattern_a_rinforzo`, `fermarsi_come_gesto_attivo`, `fermarsi_come_gesto_attivo_pattern_trasferito_tra_fratelli`, `fiamma_modalita_chiacchiera_detto_popolare`, `foresta_che_ha_suoi_modi`, `gesto_firma_noah_raccoglie`, `messaggio_pastori_consegna_offscreen_risolta`, `noah_cresciuto_continuita_evolutiva_non_piange`, `nodo_marinaro_insegnato_da_nodo_e_praticato_nella_radura_coi_pini`, `pertiche_cadute_diventano_ponte_pattern_a_seminato`, `rovo_registro_diverso`, `salvia_cornice_pianta_nominata_diversa`, `stria_archetipo_rilancia_non_risponde`
+
+**DEBUTTI in s09** — prima apparizione assoluta, vanno presentati, non dati per noti: `cardo`
+
+**Già apparsi prima** (12): `gabriel`, `noah`, `elias`, `stria`, `fiamma`, `memolo`, `pun`, `toba`, `bru`, `liu`, `zolla`, `coltivatori_del_cerchio`
+
+**Luoghi mai visti prima nella saga**: `via_dell_alba` — la prima descrizione li fonda.
+**Luoghi già visitati** (il lettore li conosce): `forno`, `scuola_stria`, `sentiero_orti_casa_salvia`, `viottolo_piazza_casa_memolo`
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -425,6 +469,8 @@ Gabriel tiene il braccialetto in mano. Non si dice se lo mette o no.
   solo for character-sheet purposes.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
+
 ### NOAH
 - **Specie:** umano
 - **Età band:** piccolo
@@ -621,6 +667,8 @@ Gabriel tiene il braccialetto in mano. Non si dice se lo mette o no.
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### ELIAS
 - **Specie:** umano
 - **Età band:** medio
@@ -798,6 +846,8 @@ Gabriel tiene il braccialetto in mano. Non si dice se lo mette o no.
   canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
+
 ### STRIA
 - **Specie:** airone_cenerino
 - **Età band:** ?
@@ -919,6 +969,8 @@ Non dà mai una risposta diretta. Rilancia. *"Tu cosa pensi?"* è la sua frase p
   explicit moral lesson (her authority is in the HOW, never the WHAT).
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_attesa.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_scuola.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_canonica_v1_volo.jpg, visual/personaggi/individuali/primari/stria/immagini/stria_turnaround_v1.jpg
+
 ### FIAMMA
 - **Specie:** volpe_rossa
 - **Età band:** ?
@@ -1027,7 +1079,7 @@ Quartiere di Fuoco a est come ambiente nativo: terracotta, rosso brace, oro (Bib
   pure quadruped fox pose.
   ```
 
-  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ferma.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_impasta.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/fiamma/immagini/fiamma_turnaround_v1.jpg
 
 ### MEMOLO
 - **Specie:** riccio
@@ -1148,6 +1200,8 @@ Confonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a stor
   buttons or watch chain (no Wind-in-the-Willows toad style).
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_con_pun.jpg, visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_preciso.jpg, visual/personaggi/individuali/primari/memolo/immagini/memolo_canonica_v1_sciarpa.jpg, visual/personaggi/individuali/primari/memolo/immagini/memolo_turnaround_v1.jpg
+
 ### PUN
 - **Specie:** riccino
 - **Età band:** ?
@@ -1238,6 +1292,8 @@ Confonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a stor
   backpack — woven satchel. NO eyeglasses on a cub.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_con_papa.jpg, visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_intuizione.jpg, visual/personaggi/individuali/cuccioli/pun/immagini/pun_canonica_v1_ritratto.jpg, visual/personaggi/individuali/cuccioli/pun/immagini/pun_turnaround_v1.jpg
+
 ### TOBA
 - **Specie:** tartarughina
 - **Età band:** ?
@@ -1259,6 +1315,8 @@ Confonde i nomi degli abitanti, si dimentica le commissioni. Ma una volta a stor
 
   **Palette e atmosfera (dal catalogo):**
   Regola Cuccioli (§6): versione più chiara/morbida dell'adulto di riferimento — qui Bartolo (verde mare antico, guscio scuro, cicatrici pallide). Per Toba il guscio è esplicitamente "più chiaro di quello del padre, segnato di righe gialle sottili".
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg
 
 ### BRU
 - **Specie:** tassino
@@ -1284,6 +1342,8 @@ Sotto la calma c'è qualcosa di custodito che Bru non mostra. Quando vede Rovo d
 
   **Palette e atmosfera (dal catalogo):**
   Regola Cuccioli (§6): versione più chiara/morbida dell'adulto di riferimento — qui Rovo (grigio-marrone terra, pelo, bandana scura). Per Bru il pelo è esplicitamente "grigio-scuro ancora morbido", riga bianca sulla testa più sottile di quella di Rovo.
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_ritratto.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_silenzio_ascolto.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_canonica_v1_vicino_a_rovo.jpg, visual/personaggi/individuali/cuccioli/bru/immagini/bru_turnaround_v1.jpg
 
 ### CARDO
 - **Specie:** lupacchiotto
@@ -1311,6 +1371,8 @@ Sotto la provocazione, Cardo ha una sua lealtà strana. Se uno dei compagni è i
   **Palette e atmosfera (dal catalogo):**
   Eccezione esplicita §6: Cardo è grigio-marrone (non segue la regola "versioni più chiare/morbide dei rispettivi adulti" valida per gli altri cuccioli, salvo Liù).
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_lealta_silenziosa.jpg, visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_canonica_v1_provocazione.jpg, visual/personaggi/individuali/cuccioli/cardo/immagini/cardo_turnaround_v1.jpg
+
 ### LIU
 - **Specie:** libellulina
 - **Età band:** ?
@@ -1327,6 +1389,8 @@ Sotto la provocazione, Cardo ha una sua lealtà strana. Se uno dei compagni è i
   Liù fa cose-da-libellula. Vola dappertutto — copre l'isola in poco tempo. Sente conversazioni — sta sulle foglie sopra le teste degli abitanti, e gli abitanti la dimenticano lì. Porta notizie — non come Stria che è messaggera ufficiale, ma in modo informale. Si ferma in aria per parlare — il battito d'ali fa un piccolissimo *frrr*.
 
 Sceglie cosa ridire e cosa no. Non è pettegola.
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_ascolto_foglia.jpg, visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/liu/immagini/liu_canonica_v1_stop_in_aria_frrr.jpg, visual/personaggi/individuali/cuccioli/liu/immagini/liu_turnaround_v1.jpg
 
 ### PERSONAGGI OFFSCREEN / BACKGROUND
 
@@ -1447,17 +1511,32 @@ _(nessun dettaglio stabile assegnato a s09 per questo sentiero — è di passagg
 - Posizione lungo la Via dell'Alba, primo edificio del Quartiere di Fuoco
 - Niente recinzione
 
-**Interno:**
-- Stanza unica
-- Pavimento di terra battuta
+**Sala Laboratorio (sala A):**
+- Sala AMPIA (~9×7 m), soffitto ALTO ~3.2 m con travi a vista
+- Sensazione di SPAZIO ARIOSO (4 persone si muovono comodamente, mai claustrofobia)
+- Pavimento di terra battuta velata di farina
 - Pareti intonacate ocra grezzo
-- Soffitto basso con travi a vista
-- **Forno di pietra a cupola** sulla parete sud-est, con bocca rivolta verso il centro stanza
-- **Banco da impasto in legno** sotto la finestra est (asse infarinata, ciotole)
-- Tavolo da pranzo (di legno semplice, 4-6 posti)
-- Mensole con pane proofing, ceste di legna piccola, attrezzi
+- **2 grandi forni a cupola** affiancati sulla parete EST (forno comune di borgo), ciascuno con bocca ~1.5-1.8 m, fieldstone, banchetta separatrice tra i due
+- **Cappa/canna fumaria centrale** che sale al tetto
+- **Lungo tavolone da impasto** (~2 m) sulla parete OVEST sotto la finestra principale
+- **Finestra est** sopra il tavolone (o sulla parete est) che dà sul cortile retro + vista alba con silhouette delle Case del Mattino in controluce
+- **Mensole** sulla parete EST accanto/tra i forni con utensili, pale lunghe, ciotole
+- **Zona centrale aperta** (circolazione)
 - Pavimento e ogni superficie leggermente velata di farina
-- Ganci a parete con strofinacci, padelle, utensili in legno e ferro
+
+**Sala Dispensa-Pranzo (sala B, comunicante con A via porta interna):**
+- Sala più contenuta (~6×5 m), soffitto un po' più basso
+- **Mensole stipate** floor-to-ceiling sulla parete OVEST (cesti di vimini, vasi terracotta, anfore — quantità abbondante = forno comunitario)
+- **Tavolo rettangolare in legno + 2 panche** al centro stanza (4-6 posti)
+- **Porta** sulla parete sud/est che dà sul **cortile retro** (visibile aperta nelle scene diurne)
+- Pavimento in pietra/cotto o terra battuta
+- Possibili: piccolo banco accessorio, candela sul tavolo nelle scene serali
+
+**Cortile retro:**
+- **Tettoia in legno** che protegge cataste regolari di legna spaccata
+- Ceppi spaccati a terra
+- Retro casa visibile in pietra
+- Niente recinzione, sentiero che si perde nell'erba verso est
 
 **Cortile retro:**
 - Cataste di legna regolari contro la parete posteriore
@@ -1481,12 +1560,286 @@ _(nessun dettaglio stabile assegnato a s09 per questo sentiero — è di passagg
 - **S11**: cammeo banco dolci durante la festa
 - **S12**: cornice apertura mattino (pagnotta a Grunto) + chiusura sera (dolce normale, quattro fette, sigillo della saga)
 
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Vertical 3:4
+  composition. NO PEOPLE in the image. NO text, NO writing, NO signs.
+
+  Scene: A small rural artisan bakery at dawn — the first light of day on
+  a Mediterranean-style island village. The bakery is the first building
+  along the village's east-facing main path (Via dell'Alba). The bakery
+  is silent but awake — smoke rises gently from the chimney, the rest of
+  the small village still sleeps. View from outside, three-quarter angle
+  from the north-west.
+
+  ═══════════════════════════════════════════
+  CRITICAL COMPOSITIONAL CONSTRAINT (for text overlay):
+  ═══════════════════════════════════════════
+
+  The IMAGE IS DIVIDED VERTICALLY:
+  - The UPPER THIRD of the image (top 33%) must be MOSTLY EMPTY DAWN SKY
+    with WARM UNIFORM TONES (rose-orange-gold gradient), with LOW CONTRAST
+    and FEW DETAILS. This space will be used for text overlay later. The
+    chimney top of the bakery may peek into the lower edge of this upper
+    third, with a thin trail of smoke rising. NOTHING ELSE in the upper
+    third — no trees, no mountains, no birds, no clouds with strong
+    contrast.
+  - The LOWER TWO-THIRDS (bottom 67%) contain the bakery, the village
+    context around it, the path, and the rural surroundings.
+
+  ═══════════════════════════════════════════
+  THE BAKERY (DOMINANT element — must occupy ~50-60% of the lower 2/3):
+  ═══════════════════════════════════════════
+
+  The bakery is the MAIN SUBJECT and must be PROMINENTLY VISIBLE — close
+  enough to read its details clearly. It should occupy approximately 50%
+  to 60% of the lower two-thirds height of the image, positioned slightly
+  to the right of center.
+
+  THE BUILDING:
+  A SMALL LOW STONE COTTAGE-BAKERY, single-story, rectangular, about 7×8
+  meters in real-world scale. Seen from a 3/4 angle: we see the WEST
+  FACADE (facing us, where the front door is) AND the NORTH SIDE (left of
+  the building, slightly receding into perspective). The east side
+  (behind, partially visible) catches the first dawn light.
+
+  - WALLS: rough hand-applied OCHRE PLASTER, slightly uneven, warm and
+    worn (NOT bare red brick, NOT smooth stucco)
+  - ROOF: pitched roof with DARK TERRACOTTA TILES (irregular old tiles,
+    slightly mossy in places)
+  - A STONE CHIMNEY rising from the roof on the back-right corner —
+    thin smoke rising gently, drifting north-west in the still dawn air
+  - THE FRONT DOOR (on the west facade, facing us): simple weathered
+    wooden plank door with iron hinges. Currently CLOSED.
+  - A SMALL SQUARE WINDOW beside the door (west side): wooden shutters
+    CLOSED.
+  - ON THE EAST SIDE (visible in 3/4 perspective, on the right side of
+    the building): another small window — partially visible in
+    perspective, showing a SOFT WARM AMBER GLOW from inside (the kneading
+    area is lit, the day's work has begun).
+  - A LOW WOODEN BENCH against the north wall (worn smooth by years of
+    use)
+
+  ═══════════════════════════════════════════
+  THE REAR COURTYARD (visible from the north angle):
+  ═══════════════════════════════════════════
+
+  Because we view from the north-west angle, we can see PART OF THE BACK
+  COURTYARD on the left side of the bakery — a small open courtyard with:
+  - A STACK OF SPLIT FIREWOOD organized against the bakery's east wall,
+    about a meter high
+  - A small WOODEN AXE leaning against a chopping block
+  - Packed earth ground
+
+  This grounds the bakery as a WORKING dwelling, not isolated. Just a
+  glimpse, not the focus.
+
+  ═══════════════════════════════════════════
+  THE QUARTIERE DI FUOCO CONTEXT (CRITICAL — bakery is NOT alone):
+  ═══════════════════════════════════════════
+
+  The bakery is the FIRST building of a small cluster — the Quartiere
+  di Fuoco (Fire Quarter). The other buildings of the quarter stretch
+  out to the EAST behind/past the bakery, along the same earth path.
+
+  BEHIND THE BAKERY (visible to the right and slightly behind in
+  perspective):
+  - 3 to 4 SMALL OTHER STONE COTTAGES in similar pre-industrial style —
+    these are the CASE DEL MATTINO (Houses of the Morning). They are
+    SIMPLER and SMALLER than the bakery, with similar ochre plaster
+    walls and dark terracotta roofs. They are positioned along the
+    continuing earth path, receding into the distance toward the rising
+    sun.
+  - The other houses are STILL SLEEPING — closed doors, closed shutters,
+    no smoke from their chimneys (only the bakery's chimney smokes).
+  - One of the distant houses might have a small visible adjacent feature
+    hinting at its trade: e.g., a small dark anvil shape outside one
+    (the blacksmith), or some low racks (the tanner). VERY subtle, just
+    hints.
+  - The houses get smaller and more atmospheric as they recede into the
+    distance.
+
+  ═══════════════════════════════════════════
+  THE VIA DELL'ALBA (the path):
+  ═══════════════════════════════════════════
+
+  The earth path (Via dell'Alba) runs in front of the bakery, slightly
+  diagonal, leading the eye into the scene from the lower-left foreground
+  and continuing past the bakery and beyond to the east where it
+  disappears in the distance toward the dawn light.
+
+  - Packed earth surface, slightly uneven, with patches of grass at the
+    edges
+  - A few WILDFLOWERS (tiny dots of pale yellow/white) at the path edges
+  - Slight wear in the middle of the path (where feet pass)
+
+  ═══════════════════════════════════════════
+  THE RURAL SURROUNDINGS:
+  ═══════════════════════════════════════════
+
+  - TO THE LEFT/FOREGROUND of the bakery: low GENTLE PASTURELAND with
+    sage-green grass and a few patches of wildflowers
+  - A SINGLE MODEST TREE near the bakery (perhaps an olive tree or an
+    almond tree, characteristic of Mediterranean countryside) on the
+    left foreground area, providing a natural anchor and depth
+  - A SMALL VEGETABLE PATCH adjacent to the bakery (north or west side)
+    — just a humble plot with rows, low and simple, bordered with a few
+    stones
+  - IN THE FAR DISTANCE (left, beyond the bakery): hint of the rest of
+    the island's gentle countryside, very low rolling pastures
+
+  ═══════════════════════════════════════════
+  LIGHT (CRITICAL):
+  ═══════════════════════════════════════════
+
+  DAWN — the first hour. The sun has just begun rising in the EAST
+  (behind/right of the bakery, behind the cluster of Case del Mattino).
+  The light:
+  - Catches the EAST SIDE of the bakery and the eastern walls of the
+    distant houses, making them glow warm
+  - The WEST FACADE of the bakery (facing us) is in soft cool shadow
+    but warmed by reflected dawn glow
+  - The path is partially in warm light where the dawn reaches between
+    buildings
+  - The chimney smoke rises softly through warm-tinted air
+
+  The SKY (upper third) is the warmest part: a calm gradient of rose,
+  peach, and gold, with maybe one or two thin wispy clouds.
+
+  The mood is QUIET, ALIVE, EXPECTANT. The bakery has woken up first.
+  The rest of the village still sleeps. Something is about to begin.
+
+  ═══════════════════════════════════════════
+  WHAT MUST NOT APPEAR (CRITICAL):
+  ═══════════════════════════════════════════
+
+  - NO PEOPLE, NO characters, NO foxes, NO animals, NO figures of any
+    kind, NOT EVEN silhouettes
+  - NO TEXT, NO WRITING, NO SIGNS, NO LETTERS, NO INSCRIPTIONS — there
+    is no writing on this island, ever
+  - NO "PANIFICIO" sign, NO "BAKERY" sign, NO names on the building
+  - NO SEA visible (the bakery is INLAND east, not on coast)
+  - NO MOUNTAINS visible (mountains are far north, not from this
+    perspective)
+  - NO WINDMILLS
+  - NO MODERN ELEMENTS: no aluminum frames, no glass doors, no electric
+    cables, no street lights, no concrete, no plastic, no electric power
+  - NO RED BRICK FACADE (walls are ochre plaster)
+  - NO COMMERCIAL DISPLAY: no shop window, no goods displayed outside,
+    no produce in front
+  - NO HOBBIT/elf-style architecture (no curved doorways, no round
+    windows)
+  - NO Disney/Pixar 3D rendering
+  - NO over-stylized Studio Ghibli
+  - NO heavy black ink outlines (use thin warm sepia)
+  - NO sparkles, no glow effects, no magical light particles
+  - NO postcard sunset/sunrise drama (this is a calm humble dawn, not
+    an epic sunrise)
+  - NO LARGE TOWN OR CITY visible in the background — only the small
+    cluster of Case del Mattino (3-4 houses), nothing more
+  - NO walled village, NO town gate, NO fortifications
+  - NO bell towers, NO church spires
+  - NO dense vegetation in the upper third (kept clear for text)
+  - NO flying birds
+  - NO ISOLATED LONELY BAKERY IN AN EMPTY FIELD (the bakery is part of
+    a small village quarter — there must be the cluster of Case del
+    Mattino visible behind/past it)
+
+  ═══════════════════════════════════════════
+  STYLE NOTES (CRITICAL):
+  ═══════════════════════════════════════════
+
+  - TECHNIQUE: traditional watercolor and thin sepia ink illustration,
+    hand-drawn quality with slight imperfections
+  - INK: warm brown-sepia lines, light touch, never harsh black, organic
+  - WATERCOLOR: soft luminous warm washes, visible texture, slight
+    color bleeds at edges, watercolor pooling on paper
+  - PALETTE: warm ochre walls, dark terracotta roof tiles, light
+    weathered wood (door, shutters), pale gray-blue chimney smoke,
+    rose-peach-gold dawn sky in the upper third, sage green pastures,
+    warm earth-brown path. Cool soft shadows on the west facade.
+    Amber glow from the east window only.
+  - AESTHETIC: tradition of Beatrix Potter, Brian Wildsmith, classic
+    European children's illustration. Think the village views in
+    "The Tale of Mrs. Tiggy-Winkle" or "Tom Kitten" — humble, alive,
+    dignified, with a sense of community settlement.
+  - MOOD: quiet, awake, expectant. The first hour of the day. The
+    village is still asleep. The bakery has woken up first.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_cortile_retro.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_dispensa_pranzo.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_esterno_alba.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_dettaglio.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_panoramica.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_laboratorio_verticale.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_canonica_v1_panoramica.jpg, visual/luoghi/quartiere_fuoco/forno/immagini/forno_planimetria_canonica.jpg
+
 ### `scuola_stria` (secondario)
 - **Aspetto:** Casa stretta e alta col tetto molto spiovente — l'unica del villaggio col tetto molto spiovente, perché Stria ci atterra sopra prima di entrare. Accanto, la sua casa. (Bible §8.1 + §4.6)
 - **Comportamento:** Stria atterra sul tetto spiovente prima di entrare. La scuola è il fuoco mattutino per i cuccioli del villaggio.
 - **Atmosfera:** Villaggio centrale: terracotta, legno caldo, verde Albero Vecchio.
 - **Coerenza fissa:** Forma: casa stretta e alta. Tetto: molto spiovente (l'unica del villaggio così). Posizione: a sud-ovest del centro, sul piccolo prato tra Albero Vecchio e Orti del Cerchio. Casa di Stria adiacente.
 - **Contesto e ambientazioni ricorrenti:** A sud-ovest del centro del Villaggio, su un piccolo prato tra l'Albero Vecchio e gli Orti del Cerchio (§4.6). Adiacente alla casa di Stria. La scuola è il luogo della maestra-airone — autorità calma, scambio asimmetrico, memoria del villaggio.
+
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated architectural scene in the style of Beatrix
+  Potter and Brian Wildsmith — watercolor + thin sepia ink, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Vertical 3:4
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  Scene: A small village school on a small grass meadow, on the south-
+  west edge of the central square, between the Old Tree (Albero Vecchio)
+  and the garden rings (Orti del Cerchio).
+
+  THE BUILDING (signature element):
+  - A NARROW, TALL HOUSE — distinctly TALLER and NARROWER than other
+    houses in the village. Single-front, two-story-tall feeling but
+    actually one large room with a high pitched roof.
+  - THE STEEP PITCHED ROOF is the canonical signature: STEEPLY ANGLED,
+    more vertical than horizontal, almost gothic-acute (but humble, not
+    gothic-ornate). The roof is so steep that Stria the heron lands
+    directly on it before entering. Covered in dark terracotta tiles.
+  - WALLS of stone-and-plaster, ochre/sandy color, hand-applied texture
+  - A SIMPLE WOODEN PLANK DOOR at the front (closed)
+  - A FEW SMALL WINDOWS with wooden shutters (some open, some closed)
+  - A SMALL CHIMNEY rising from one side of the steep roof (perhaps a
+    thin trail of smoke in cool seasons)
+  - ADJACENT to the right (very close): another similar but smaller
+    building with a more normal roof — that is Stria's HOUSE
+
+  CONTEXT around the school:
+  - A SMALL GRASS MEADOW around it (sage green, tended)
+  - In the BACKGROUND on one side: hint of the Old Tree's canopy
+    (signaling proximity to the Piazza)
+  - On the OPPOSITE side: hint of the cultivated rings of Orti del
+    Cerchio (low fields receding into distance)
+  - A simple EARTH PATH leading to the door
+
+  LIGHTING: morning, sun east-southeast, warm light catching the steep
+  roof and the front facade. Soft long shadows from the steep roofline.
+
+  ATMOSPHERE: dignified, calm, slightly austere — the school is the
+  "morning hearth" for the cuccioli, but it's also the place of Stria
+  the maestra-airone whose authority is calm-but-asymmetric. The
+  narrow tall building stands out among the village's low cottages
+  because of the roof — that's where Stria lands.
+
+  PALETTE: warm ochre walls, dark terracotta roof tiles, dark
+  weathered wood (door, shutters), sage green grass, deep green
+  canopy hint, warm gold morning sky.
+
+  NOT INCLUDED:
+  - NO PEOPLE, NO Stria visible (just the building, empty before class)
+  - NO TEXT, NO signs above door, NO "scuola" written anywhere
+  - NO MODERN ELEMENTS (no electric, no glass windows, no concrete)
+  - NO BELL/BELL TOWER (the school has no bell)
+  - NO PLAYGROUND / SLIDES / SWINGS (this is a humble pre-industrial
+    village school, not a modern primary school)
+  - NO ORNATE GOTHIC ARCHITECTURE (the steep roof is steep but humble,
+    not gothic)
+  - NO CHURCH-LIKE styling
+
+  STYLE: traditional watercolor + thin sepia ink, Beatrix Potter /
+  Brian Wildsmith. Mood: dignified, quiet, ready-for-the-morning.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/villaggio_centrale/scuola_stria/immagini/scuola_stria_canonica_v1_esterno.jpg
 
 
 ---

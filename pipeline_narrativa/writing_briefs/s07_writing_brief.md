@@ -41,6 +41,48 @@ Dominanti: oro_caldo_alba_estiva_al_guado_verdi_scuri_foresta_ocra_terra_orti_ce
 
 ---
 
+## §2-bis. STATO DEL MONDO ALL'INIZIO DI S07
+
+> Derivato dal grafo (s01 → s06). Vincolante per la continuity: non ri-fiorire semi chiusi, non trattare i debutti come personaggi già noti, non ri-spendere callback già fatti.
+
+**Semi che il piano fa FIORIRE in s07** (4):
+- `seed_noah_raccoglie_oggetti` (da s01): Gesto-firma di Noah: cammina e raccoglie cose (bastoncini, rametti). Mai dichiarato come abitudine, emerge pe… — **TARGET FIORITURA: QUI**
+- `seed_nodo_marinaro_capacita_elias` (da s05): Il Nodo Marinaro — uno dei quattro nodi di Nodo (Bible §4.10) — viene mostrato una volta da Nodo a Elias dura… — voce: `nel_testo_mai_spiegato_come_si_fa_il_nodo_solo_mostrato_nodo_non_spiega_mai_elias_lo_impara_facendo` — **TARGET FIORITURA: QUI**
+- `seed_pattern_a_rami_caduti_diventano_materia` (da s05): PRIMA SEMINA FORMALE DEL PATTERN A. Le pertiche cadute dalla Foresta — cose cadute, rotte, lasciate, che la F… — voce: `mai_dichiarato_mai_regola_vive_solo_nell_immagine_fisica_del_ponte_fatto_di_pertiche_cadute_e_in_al_massimo_1_inciso_narratore` — **TARGET FIORITURA: QUI**
+- `seed_cornetto_briciole_pattern_a_rinforzo` (da s06): RINFORZO PATTERN A. Il cornetto che Noah intasca al Forno per Bru al mattino — Bru non si vede durante il gir… — voce: `mai_dichiarato_mai_regola_solo_immagine_del_cornetto_diventato_briciole_nel_taschino_dopo_il_giorno_di_cammino_nessun_personaggio_lo_commenta` — **TARGET FIORITURA: QUI**
+
+**Altri semi attivi sullo sfondo** (17) — vivi, non forzarne la fioritura:
+- `seed_pagnotta_grunto_rito` (da s01): Fiamma consegna pagnotta ai fratelli da portare a Grunto. Piccolo rituale ricorrente: Fiamma sa che Grunto c'… (target: s12)
+- `seed_grunto_prima_apparizione` (da s01): Prima apparizione di Grunto come incontro vero. Una sola parola ('Buono'). ZERO frammenti pre-Vento. Stabilis… (target: s12)
+- `seed_due_passi_dal_burrone` (da s01): Posizione fisica precisa: la cengia a due passi dal bordo del Burrone dove il Vento Taglio apre la nebbia. Mi… (target: s12)
+- `seed_paura_elias_piccolo` (da s02): Elias si vede 'piccolo' nel riflesso della pozza — molto piccolo, tra i fratelli che nello specchio risultano… (target: s11)
+- `seed_stria_vede_prima` (da s02): Stria rilancia invece di rispondere ('Tu cosa pensi?'). Vola via senza spiegare dove va. Archetipo di Stria c… (target: s11)
+- `seed_oggetto_fantasma_congelato` (da s02): Meccanica del mondo: un oggetto caduto nell'acqua poco prima del calar del sole resta congelato dentro il vel…
+- `seed_paura_noah_buio` (da s01): Paura di Noah del buio. Declinazioni: S1 bianco totale (nebbia, perdita di riferimenti); S3 buio della Forest… (target: s10)
+- `seed_rovo_resistenza_che_protegge` (da s03): Prima apparizione di Rovo come maggiore. Modo istituito: brontola, protegge senza ammetterlo, posa l'oggetto … (target: s04)
+- `seed_pallone_stoffa_cucita` (da s03): Pallone di stoffa cucita. Oggetto di gioco dei fratelli. In S3 rotola oltre il margine della Foresta, recuper… (target: s11)
+- `seed_tum_tum_tum_codice_fratelli` (da s04): TUM-tum-TUM-tum-TUM. Il ritmo che solo i tre fratelli sanno — 'la loro canzone', non spiegata, non insegnata … — voce: `mai_spiegato_come_lo_hanno_imparato_mai_chiamato_la_loro_canzone_nel_testo_salvo_come_narratore_memoria_lunga_discreta` (target: s12)
+- `seed_rovo_abitante_foresta` (da s04): Secondo registro di Rovo, fratello del primo (seed_rovo_resistenza_che_protegge, S3). Rovo come abitante dell…
+- `seed_farfalla_blu_seguire_fuori_soglia` (da s04): Noah segue una farfalla blu — singolo punto cromatico isolato che poi sparisce. Gesto del piccolo che si lasc…
+- `seed_gesto_della_terra_palmo` (da s04): Gesto del palmo aperto sulla terra per sentire e per parlare. Noah lo fa per primo quando e' perso (irrifless… (target: s12)
+- `seed_radura_coi_pini_luogo_silenzioso` (da s05): Radura sull'altra sponda del torrente, dentro la Foresta, 100-150 metri oltre il ponte. Cerchio d'erba con al… (target: s12)
+- `seed_bru_sa_indicare_luoghi_che_altri_non_vedono` (da s05): Bru sa indicare luoghi che gli altri non vedono. In S5 ha indicato la radura coi pini senza parole, solo col …
+- `seed_elias_collauda_per_primo_responsabilita_di_chi_ha_fatto` (da s05): Chi ha fatto una cosa, la collauda per primo. Non e' dichiarato nel testo — e' il gesto di Elias che passa pe… (target: s08)
+- `seed_vecchie_indicare_in_silenzio` (da s06): Firma gestuale istituita delle Vecchie del Mercato sulla Panca di Pietra: indicano in silenzio senza parlare.… — voce: `mai_parola_mai_nome_individuale_mai_spiegazione_solo_gesto_minimo_una_indica_le_altre_annuiscono` (target: s08, s11)
+
+**Semi GIÀ FIORITI (chiusi)** (5) — eco ammessa, MAI ri-fiorire: `seed_s01_bastoncino_noah`→s02, `seed_gabriel_sa_la_strada_senza_vedere`→s04, `seed_fermarsi_come_gesto_attivo`→s04, `seed_foresta_tempi_modi_propri`→s04, `seed_bru_presenza_che_custodisce`→s05
+
+**Callback già spesi nelle storie precedenti** (16) — non ripeterli come se fossero nuovi: `aspettiamo_di_gabriel_diventa_pensiamo`, `bastoncino_noah`, `bru_da_intravisto_a_presenza_concreta`, `bru_indica_col_mento_direzione_radura`, `bru_menzione_offscreen_noah_intasca_cornetto`, `bru_presenza_che_custodisce`, `cantilena_coltivatori`, `fermarsi_come_gesto_attivo`, `fiamma_modalita_chiacchiera_detto_popolare`, `foresta_che_ha_suoi_modi`, `gesto_firma_noah_raccoglie`, `messaggio_pastori_consegna_offscreen_risolta`, `rovo_registro_diverso`, `salvia_cornice_pianta_nominata_diversa`, `stria_archetipo_rilancia_non_risponde`
+
+**DEBUTTI in s07** — prima apparizione assoluta, vanno presentati, non dati per noti: `bartolo`, `toba`, `amo`, `camminanti`
+
+**Già apparsi prima** (5): `gabriel`, `elias`, `noah`, `nodo`, `coltivatori_del_cerchio`
+
+**Luoghi mai visti prima nella saga**: `fiume_che_gira`, `guado_di_pietre_piatte`, `bocca`, `pontile_bocca`, `spiaggia_conchiglie`, `casa_amo`, `sentiero_al_guado`, `sentiero_riva_ovest`, `sentiero_ritorno_bocca_orti`, `sentiero_pontile_spiaggia`, `sentiero_case_basse_bocca` — la prima descrizione li fonda.
+**Luoghi già visitati** (il lettore li conosce): `foresta_intrecciata`, `orti_del_cerchio`
+
+---
+
 ## §3. NARRAZIONE FATTUALE (referente di verità)
 
 > Questa è la stesura fattuale, asciutta, della storia. NON è il testo del libro. È il *referente di verità* sui fatti, l'ordine, le frasi codificate. La voce autoriale che scriverai è altra cosa — userà i fatti qui ma li dirà con voce piena, ritmo da picture book, frasi dialoganti con l'illustrazione.
@@ -436,6 +478,8 @@ Tornano al Villaggio tagliando dentro, attraverso gli Orti del Cerchio. Non risa
   solo for character-sheet purposes.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_con_fratelli.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_in_cammino.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_canonica_v1_seduto.jpg, visual/personaggi/individuali/bambini/gabriel/immagini/gabriel_turnaround_v1.jpg
+
 ### ELIAS
 - **Specie:** umano
 - **Età band:** medio
@@ -621,6 +665,8 @@ Tornano al Villaggio tagliando dentro, attraverso gli Orti del Cerchio. Non risa
   accessories. Always at least one brother in scene EXCEPT for these
   canonical reference images.
   ```
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_inginocchiato.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_canonica_v1_ritratto_ghiande.jpg, visual/personaggi/individuali/bambini/elias/immagini/elias_turnaround_v1.jpg
 
 ### NOAH
 - **Specie:** umano
@@ -825,6 +871,8 @@ Tornano al Villaggio tagliando dentro, attraverso gli Orti del Cerchio. Non risa
   EXCEPT for these canonical reference images.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_aggrappato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_concentrato.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_canonica_v1_fronte.jpg, visual/personaggi/individuali/bambini/noah/immagini/noah_turnaround_v1.jpg
+
 ### BARTOLO
 - **Specie:** tartaruga_di_mare_anziana
 - **Età band:** ?
@@ -1008,7 +1056,7 @@ Bartolo è **vestito in modo minimale**, coerente col suo ruolo di traghettatore
   (hugs, caresses) with the brothers.
   ```
 
-  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_barca.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_con_toba.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_fronte.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_canonica_v1_ritratto.jpg, visual/personaggi/individuali/primari/bartolo/immagini/bartolo_turnaround_v1.jpg
 
 ### TOBA
 - **Specie:** tartarughina
@@ -1041,6 +1089,8 @@ Bartolo è **vestito in modo minimale**, coerente col suo ruolo di traghettatore
 
   **Palette e atmosfera (dal catalogo):**
   Regola Cuccioli (§6): versione più chiara/morbida dell'adulto di riferimento — qui Bartolo (verde mare antico, guscio scuro, cicatrici pallide). Per Toba il guscio è esplicitamente "più chiaro di quello del padre, segnato di righe gialle sottili".
+
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_barca_padre.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_domanda.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_canonica_v1_fronte.jpg, visual/personaggi/individuali/cuccioli/toba/immagini/toba_turnaround_v1.jpg
 
 ### AMO
 - **Specie:** cormorano
@@ -1179,6 +1229,8 @@ Quando porta il pesce al Mercato, lo posa sul banco e basta. Non contratta.
   multicolored plumage — STRICTLY black with the bronze-green sheen.
   ```
 
+  **Immagini canoniche di riferimento:** visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_attesa.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_fronte.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_canonica_v1_tuffo.jpg, visual/personaggi/individuali/secondari/amo/immagini/amo_turnaround_v1.jpg
+
 ### PERSONAGGI OFFSCREEN / BACKGROUND
 
 > Sono presenti senza essere centrali. Possono essere nominati o evocati, mai protagonisti di scena.
@@ -1207,7 +1259,7 @@ Quando porta il pesce al Mercato, lo posa sul banco e basta. Non contratta.
 
 ### Cornice `s07_c2` — Processo D (cameo_lontano)
 - **Chi:** nominato: `rovo`
-- **Dove:** margine_foresta_intrecciata
+- **Dove:** foresta_intrecciata
 - **Cosa accade:** Rovo fermo sul margine, bandana scura. Non si avvicina, non scompare subito. È lì.
 - **Intensità:** low
 - **Ruolo strutturale:** continuita_cross_storia_quartiere_terra
@@ -1315,6 +1367,87 @@ Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna
 - **Coerenza fissa:** Entrata graduale dagli Orti (no linea netta). Tracce e non sentieri. Radici connesse sotto terra. Posizione ovest, oltre gli Orti del Cerchio.
 - **Contesto e ambientazioni ricorrenti:** Tana di Rovo ai margini della Foresta (sotto ceppo coperto di muschio, tre uscite). Zona di lavoro di Salvia al margine est della Foresta dove raccoglie erbe. Torrente affluente che attraversa la Foresta. Zolla raccoglie nel bosco confinante con gli Orti.
 
+- **Canone visivo (da `prompt_grok.md` — supporto, in inglese):**
+  ```
+  A painterly illustrated forest scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Vertical 3:4 composition.
+  NO PEOPLE. NO text.
+
+  Scene: FORESTA INTRECCIATA — the "Interwoven Forest" of a Mediterranean
+  island. A dense old broadleaf forest where the BRANCHES OF ADJACENT
+  TREES INTERLACE OVERHEAD, creating a canopy that filters light into
+  patterns of shifting shadows. Quartiere di Terra.
+
+  THE FOREST INTERIOR:
+  - TALL OLD BROADLEAF TREES (oaks, beeches, chestnuts — Mediterranean
+    generic, not species-specific). Trunks are GREY-BROWN, deeply
+    textured, with thick gnarled bark. Many trunks visible in the
+    middle and background, receding into atmospheric depth.
+  - THE CANONICAL "INTRECCIO" (signature):
+    * The BRANCHES of adjacent trees REACH ACROSS to interweave with
+      branches of nearby trees, creating a NATURAL CANOPY OF
+      INTERLACED LIMBS overhead. The "intreccio" is naturalistic, not
+      magical — it just happens that the trees here grow with branches
+      crossing, giving the forest its name.
+    * Visible interlacing in the MIDDLE-UPPER region of the frame.
+  - DAPPLED SUNLIGHT filtering through the canopy creating bright spots
+    on the forest floor, alternating with deep warm shadows.
+  - FOREST FLOOR:
+    * Carpet of fallen leaves (browns, ochres, some still green)
+    * MOSS-COVERED ROOTS visible at the base of trunks (canonical:
+      "Radici Parlano" of s04)
+    * Some low ferns, small undergrowth
+    * Possibly a small mushroom cluster, scattered
+    * Patches of deep shadow under denser canopy areas
+  - Possibly a SMALL EARTH PATH winding through the forest (one of
+    the canonical sentieri like sentiero_orti_torrente_foresta)
+
+  CONTEXT (cinematic atmosphere):
+  - The view is INSIDE the forest, not at the edge. We are surrounded
+    by trees with depth fading into atmospheric haze in the
+    background.
+  - Possibly a sliver of sky visible high through the canopy
+  - Mood is QUIET, ALIVE, ANCIENT. The Foresta is dense but not
+    threatening — it's the dwelling place of Rovo and Bru, the
+    threshold of the Quartiere di Terra.
+
+  LIGHTING: midday or afternoon, sun filtering through high canopy,
+  creating dappled patterns on the floor. Atmospheric perspective
+  into depth.
+
+  ATMOSPHERE: dense but alive, ancient, quiet. The trees feel
+  "interwoven" naturally. Mood is grounded, slightly secretive but
+  NEVER threatening.
+
+  PALETTE: grey-brown trunk bark, deep greens of canopy and ferns,
+  warm browns and ochres of fallen leaves, dappled gold sun patches,
+  deep warm shadows in the depth, soft green-grey atmospheric haze
+  in background.
+
+  NOT INCLUDED:
+  - NO PEOPLE
+  - NO TEXT
+  - NO MAGICAL ELEMENTS (no fairy lights, no glowing mushrooms, no
+    enchanted forest sparkles, no floating leaves)
+  - NO TROPICAL forest (no palm trees, no jungle vines, no exotic
+    flowers)
+  - NO ALPINE conifer forest (no fir/pine — these are broadleaf
+    Mediterranean trees)
+  - NO SINISTER/THREATENING atmosphere (no dark fog, no menacing
+    shadows, no creepy elements)
+  - NO CARTOON faces in the trees
+  - NO MODERN ELEMENTS
+  - NO POSTCARD GREEN OVERDRIVE (the greens are warm, real, not
+    saturated tropical)
+
+  STYLE: traditional watercolor + thin sepia ink, atmospheric forest
+  palette. Beatrix Potter / Brian Wildsmith — the deep forest interiors
+  of "Squirrel Nutkin" or Beatrix's own forest watercolors. Mood:
+  ancient, quiet, alive.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_terra/foresta_intrecciata/immagini/foresta_intrecciata_canonica_v1_interno.jpg
+
 ### `orti_del_cerchio` (secondario)
 - **Atmosfera:** **Quartiere di Terra a ovest** (Bible §6): **verde scuro, marrone caldo, ocra dell'argilla**.
 
@@ -1368,6 +1501,74 @@ Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna
 - **S5**: rametti raccolti la sera prima nel passaggio agli Orti per la zattera.
 - **S6**: passaggio agli Orti durante il giro per cercare l'oggetto perso di Mèmolo (passa da casa Salvia, casa Zolla).
 - **S11 (Festa del Raccolto)**: gli Orti come fonte del raccolto autunnale (castagne, ghiande, noci, mele, susine), Zolla che dichiara *"Quest'anno noci in più. Fortuna."*.
+
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal panoramic
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION (EXTERIOR —
+  CONCENTRIC GARDEN FIELDS) da
+  `visual/luoghi/quartiere_terra/orti_del_cerchio/scheda.md`,
+  sezione "Descrizione visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from a slightly elevated angle on the village side (east),
+  looking west across the Orti toward the margin of the Foresta
+  Intrecciata. Three-quarter perspective. The composition shows the
+  THREE CONCENTRIC RINGS of cultivated fields:
+  - INNER RING (closest to the village, foreground): smaller plots
+    with vegetable rows, herbs, low fruit trees, well-tended
+  - MIDDLE RING: larger fields with grain crops or root vegetables,
+    divided by low stone walls or simple paths, working scale
+  - OUTER RING (furthest, near forest margin): rougher fields with
+    scrubby crops, transitioning to wild grass and the dark green
+    edge of the FORESTA INTRECCIATA in the far background
+
+  Earth paths radiate between the rings (concentric and radial). Low
+  dry-stone walls or wooden fences separate the plots, but there is
+  NO fortification — the rings are visible as organization, not
+  barrier. Some sentieri (paths) cross the rings, including the
+  canonical SENTIERO ORTI-TORRENTE-FORESTA (visible heading west from
+  the inner ring, crossing the outer ring, disappearing into the
+  forest margin).
+
+  ELEMENTS:
+  - A few small clay water jugs at the edges of plots
+  - Wooden tools (hoes, baskets) leaning against stone walls
+  - Wicker baskets here and there with harvest
+  - Possibly a humble small wooden shelter (proofing/storage) at the
+    edge of the middle ring
+  - Vegetation: rows of healthy crops in inner+middle, transitioning
+    to wilder grass at the outer ring
+  - Low scattered wildflowers along the path edges
+
+  LIGHTING: morning or afternoon, warm natural light, the sun coming
+  from the south/southeast, soft shadows. The light should differentiate
+  the rings — inner well-lit and tended, middle warmer, outer in
+  softer tones blending with the forest edge.
+
+  ATMOSPHERE: organized, working, alive but currently empty (the
+  Coltivatori have stepped away or are in a different field). The
+  "ring of cultivation" feels ancient, generational, lived-in. The
+  composition should communicate the CIRCULAR organization without
+  being aggressively geometric — the rings are organic, irregular,
+  human-built over time.
+
+  NOT INCLUDED: NO people (Coltivatori absent in this reference), NO
+  text, NO modern farm machinery, NO greenhouses, NO plastic, NO
+  chemical sprays/equipment, NO straight industrial fields, NO
+  postcard-perfect arrangement, NO bright tropical colors, NO
+  watermelon-stand colors. Sound implied by silence — the cantilena
+  of the Coltivatori is NOT singing now (they're absent).
+
+  STYLE: traditional watercolor + thin sepia ink, warm earth palette
+  (deep green crops + ochre soil + sage green grass + dark green
+  forest edge + warm gold sunlight + grey-brown stone walls).
+  Beatrix Potter / Brian Wildsmith. Mood: working, ancient, organized.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_coltivatori_al_lavoro.jpg, visual/luoghi/quartiere_terra/orti_del_cerchio/immagini/orti_del_cerchio_canonica_v1_panoramica.jpg
 
 ### `bocca` (secondario)
 - **Atmosfera:** **Quartiere d'Acqua a sud** (Bible §6): **verde mare antico, blu-grigio profondo, sabbia chiara, riflessi argentei**.
@@ -1427,6 +1628,87 @@ Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna
 - **S10**: ricetto notturno per Bartolo (sul Pontile) — la Bocca come acqua scura sotto.
 - **S11**: arrivo Bartolo da fuori (la barca attraversa la Bocca al ritorno).
 - **S12**: cammeo cammino al passaggio del Pontile.
+
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Horizontal 16:9
+  composition, panoramic establishing shot. NO PEOPLE in the image.
+  NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION ESTERNO da
+  `visual/luoghi/quartiere_acqua/bocca/scheda.md`, sezione "Descrizione
+  visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from a slightly elevated angle, north-east, looking south-
+  west toward the open sea opening. From this vantage we can see in a
+  single composition:
+  - The wooden Pontile (Bartolo's pier) extending from the west shore
+    with its small thatched-roof hut at the far end (left foreground)
+  - The wide central channel with VISIBLE COLOR DIFFERENCES on the
+    water surface (greenish-blue inner river water meeting paler
+    silver-blue saltwater)
+  - The two natural rocky promontories framing the south opening
+    (middle-distance), beyond which the OPEN SEA extends to the horizon
+  - The east cliff rising on the right, with Amo's small wooden house
+    carved into the rock, and the small stone staircase descending to
+    the water
+  - The Case Basse dei Pescatori (low fisherman houses) visible in the
+    background behind the pier on the north-west shore
+  - The small wooden footbridge from the east side of the pier crossing
+    to the Shell Beach (visible just behind the pier)
+  - A few seagulls in flight or floating
+
+  LIGHTING: morning — low east light from over the east cliff, golden
+  tones touching the west shore and the pier, water surface bright with
+  reflections, color difference between river and sea most visible,
+  warm soft shadows.
+
+  ATMOSPHERE: physical, salty, transitional, alive. The Bocca is a real
+  working river mouth, not a magical portal. Quiet, awake, lived-in.
+
+  ═══════════════════════════════════════════
+  WHAT MUST NOT APPEAR (CRITICAL):
+  ═══════════════════════════════════════════
+
+  - NO PEOPLE, NO characters, NO animals (except distant seagulls), NO
+    figures of any kind, NOT EVEN silhouettes
+  - NO TEXT, NO WRITING, NO SIGNS, NO LETTERS — there is no writing
+    on this island
+  - NO crashing waves, NO foam at the color boundary on the water
+  - NO tropical turquoise, NO magical sparkles on the water
+  - NO leaping fish, NO dramatic seabird formations
+  - NO dramatic sunset poster colors (gold/pink overdrive)
+  - NO modern boats: only simple wooden rowboats
+  - NO concrete, NO modern docks, NO iron railings
+  - NO lighthouse, NO maritime industrial elements
+  - NO large city or town visible — only the modest cluster of Case
+    Basse and the Casa di Amo
+  - NO Disney/Pixar 3D rendering, NO over-stylized Studio Ghibli
+  - NO heavy black ink outlines (use thin warm sepia)
+  - NO ferries, NO sailboats, NO fishing trawlers (just small rowboats)
+
+  ═══════════════════════════════════════════
+  STYLE NOTES:
+  ═══════════════════════════════════════════
+
+  - TECHNIQUE: traditional watercolor and thin sepia ink illustration,
+    hand-drawn quality with slight imperfections
+  - INK: warm brown-sepia lines, light touch, never harsh black, organic
+  - WATERCOLOR: soft luminous warm washes, visible texture on shores
+    and rocks, slight color bleeds, watercolor pooling on the water
+  - PALETTE: deep greenish-blue (inner river water), pale silver-blue
+    (outer sea water), sandy-cream (west/north shores), grey-brown
+    (east cliff), green (low vegetation), dark weathered wood (pier,
+    hut, boats), white-grey (gulls), warm gold dawn sky transitioning
+    to soft blue overhead
+  - AESTHETIC: tradition of Beatrix Potter, Brian Wildsmith, classic
+    European children's illustration. Coastal landscapes by an island
+    illustrator, intimate scale, never grand or postcard-dramatic
+  - MOOD: alive, working, transitional. The threshold between inland
+    river and open sea, captured in a quiet morning.
+  ```
 
 ### `pontile_bocca` (secondario)
 - **Atmosfera:** **Quartiere d'Acqua a sud** (Bible §6): **verde mare antico, blu-grigio profondo, sabbia chiara, riflessi argentei**.
@@ -1501,6 +1783,40 @@ Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna
 - **S11**: cammeo, arrivo Pontile con frutti da fuori, sera (Bartolo torna da oltre-il-mare).
 - **S12**: cammeo Pontile mattino, "mano alzata che ricade"; nel sigillo finale: presenza nella barca implicita, mai mostrata.
 
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor and thin sepia ink lines, warm earthy
+  palette, hand-drawn children's picture book aesthetic. Horizontal
+  composition. NO PEOPLE. NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION (EXTERIOR —
+  PIER) da `visual/luoghi/quartiere_acqua/pontile_bocca/scheda.md`,
+  sezione "Descrizione visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from the west shore looking south-east, three-quarter
+  angle. We see the wooden pier extending from the foreground (left)
+  out to the water, with Bartolo's small thatched-roof hut at the far
+  end. The Bocca channel water visible (with its canonical color
+  mixing — greenish-blue inner + silver-blue toward sea). The east
+  cliff with Amo's house is visible in the distance (right). A small
+  rowboat moored at the pier. Possibly the small wooden footbridge
+  visible to the east of the pier.
+
+  LIGHTING: morning, low east light, warm golden tones on the pier
+  wood and the hut, water bright with reflections.
+
+  ATMOSPHERE: working pier, lived-in, never picturesque-tourist. The
+  pier is Bartolo's place of work and threshold to the open sea.
+
+  NOT INCLUDED: NO people, NO text, NO crashing waves, NO modern
+  docks, NO concrete, NO lighthouse, NO fishing trawlers (only small
+  rowboats), NO postcard sunset drama, NO tropical turquoise.
+
+  STYLE: traditional watercolor + thin sepia ink, warm earth palette,
+  tradition Beatrix Potter / Brian Wildsmith. Mood quiet, working.
+  ```
+
 ### `spiaggia_conchiglie` (secondario)
 - **Atmosfera:** **Quartiere d'Acqua a sud** (Bible §6): **verde mare antico, blu-grigio profondo, sabbia chiara, riflessi argentei**.
 
@@ -1556,6 +1872,48 @@ Gli abitanti dicono che il Fiume gira, perché chi cammina lungo la riva interna
 **Ruolo nelle storie:**
 - **S7** (passaggio): i fratelli passano vicino alla scogliera est tornando al Pontile, vedono Amo con le ali aperte. La Spiaggia è zona di passaggio.
 - Storie di compleanno/giochi non specifiche: la Spiaggia è candidata per cammei o passaggi liberi della saga.
+
+- **Canone visivo (da `prompt_grok.md` — fallback principale, in inglese):**
+  ```
+  A painterly illustrated landscape scene in the style of Beatrix Potter
+  and Brian Wildsmith — watercolor + thin sepia ink, warm earthy palette,
+  hand-drawn children's picture book aesthetic. Horizontal composition.
+  NO PEOPLE. NO text, NO writing, NO signs.
+
+  [LOCATION block — incolla integralmente il blocco LOCATION (EXTERIOR —
+  BEACH) da `visual/luoghi/quartiere_acqua/spiaggia_conchiglie/scheda.md`,
+  sezione "Descrizione visiva canonica per generazione — ESTERNO"]
+
+  VIEWPOINT: from the small wooden footbridge (or just past it) looking
+  out over the beach. Three-quarter angle. We see the small sandy
+  beach extending toward the open sea, with SCATTERED CONCHIGLIE
+  (seashells) of various small types on the wet and dry sand —
+  particularly the canonical conical-spiral shells (similar to Amo's
+  necklace shell, soft greys and dark blues). Some larger smooth
+  beach stones at the high-tide line. The Bocca channel water visible
+  on one side, the open sea horizon visible in the distance. The east
+  cliff with Casa di Amo visible to one side in the background. The
+  small wooden footbridge from the Pontile visible at the entrance to
+  the beach.
+
+  LIGHTING: late morning or early afternoon, sun overhead-southwest,
+  warm light on the sand, water bright with reflections.
+
+  ATMOSPHERE: quiet, intimate, working-coastal. The beach is small and
+  humble — not a tourist beach. A place of small shells, where Amo's
+  canonical signature conchiglia comes from.
+
+  NOT INCLUDED: NO people, NO text, NO sandcastles, NO beach umbrellas,
+  NO modern beach equipment, NO tropical palm trees, NO crashing waves
+  (calm water), NO seagull formations, NO postcard sunset drama, NO
+  bright tropical colors.
+
+  STYLE: traditional watercolor + thin sepia ink, warm coastal palette
+  (sandy cream + soft sea blue + grey-brown stones + dark weathered
+  wood of the footbridge + scattered shell whites/greys). Beatrix
+  Potter / Brian Wildsmith. Mood: quiet, alive, working coast.
+  ```
+- **Immagini canoniche di riferimento:** visual/luoghi/quartiere_acqua/spiaggia_conchiglie/immagini/spiaggia_conchiglie_canonica_v1_panoramica.jpg
 
 
 ---
