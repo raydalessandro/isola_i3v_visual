@@ -1,0 +1,361 @@
+sid: s10
+title: La Notte senza Luna
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa, sovrascrivono il NER fuzzy).
+  Per ogni hook narrativo (h01..h10):
+  - location: id luogo canonico DOVE SUCCEDE LA SCENA (1 solo, deve esistere in entities.locations)
+  - characters_in_scene: personaggi fisicamente in scena (id da entities.characters)
+  - characters_offscreen_or_distant: personaggi citati ma non in scena (es. sagome lontane, cammei sonori)
+  - objects_in_scene: oggetti canonici visibili (id da entities.objects)
+  - canonical_details: dettagli stabili (es. dettagli Tier A path_details, vincoli scena)
+  - pov: punto di vista del lettore in frase tecnica esplicita (inglese) — blocco obbligatorio del prompt (skill scenografo §2-ter); distillato dal punto di vista già implicito nella note
+  - subhooks: lista sotto-hook se l'hook è splittato in più pagine libro (default: 1 sotto-hook = 1 pagina)
+                Il campo page_book può essere int (1 pagina) o lista [N, N+1] per spread doppia.
+  Le note subhook sono il BLOCCO SCENA del prompt illustratore: coprono beat, azione focale,
+  inquadratura, varianti atmosferiche e continuità. NON ripetono stile (stylesheet), tratti
+  fisici (schede + scale GU) né firme ambientali (prompt_grok). La quiet zone alta (~25-30%
+  per il testo di pagina) è vincolo dello stylesheet e vale per ogni scena.
+
+  VINCOLI TRASVERSALI DI s10 (valgono per OGNI subhook, non ripetuti nelle note):
+  - `night_not_personified`: il buio è oggettivo — mai occhi, volti, artigli, presenze nel nero.
+    Nessuna figura minacciosa, nessuna ombra antropomorfa, nessun mostro suggerito.
+  - `fears_resolved_by_brothers_only`: nessun adulto in scena fino a h09. Nessuno consola, mai.
+  - Nessuna stella, mai: cielo coperto da nubi basse (realismo autunnale). Nessuna luna.
+  - Nessuna fonte di luce oltre la lanterna velata di Elias, fino all'alba naturale di h08-h10.
+  - Il cerchio di luce è PICCOLO — 50-60 cm davanti ai piedi, a livello delle ginocchia.
+    Mai cono ampio di torcia moderna, mai fascio direzionale, mai bagliore diffuso.
+  - Autunno avanzato notturno: mantello di lana ognuno sopra il pigiama, calze, sandali.
+    La lana si inumidisce col procedere del cammino (h06 in poi, resa nei toni non nei dettagli).
+  - Braccialetto di s09 NON al polso di Gabriel (vincolo ARCHI: castagna rugata solo in s12).
+  - Noah in modalità `aggrappato` (scheda noah §Modalità) da h02 a h10: postura più piccola del
+    normale, vicino ai fratelli, bocca chiusa, mai pianto melodrammatico.
+  - Grunto solo acustico (h07): mai visto, mai sagoma, mai nominato.
+  - Nessun testo, nessuna onomatopea disegnata: TOK, tot tot tot e splash sono resa tipografica
+    del compositore libro.
+
+  NOTA SULLA QUIET ZONE IN s10: nelle tavole notturne (h01-h07) la fascia alta è nero pieno
+  o quasi — è la quiet zone più semplice della saga. Non riempirla di dettagli "per non
+  lasciarla vuota": il vuoto in alto È il soggetto.
+
+book_pages_total: 21
+
+hooks:
+
+  s10_h01:
+    location: piazza_villaggio
+    location_variant: interno_casa_fratelli_non_cartografato_notte_fonda_luna_nuova
+    characters_in_scene: [noah, gabriel, elias]
+    characters_offscreen_or_distant: [coltivatori_del_cerchio]
+    objects_in_scene: [nido_vuoto_s08]
+    canonical_details:
+      - "Apertura: notte fonda, luna NUOVA — «quelle notti in cui il cielo non manda niente, e dentro le case è buio come sotto una coperta». Imposte serrate, non entra niente"
+      - "Tre letti nella stessa stanza: Gabriel e Elias dormono (respiro regolare), Noah no — sdraiato sul fianco, occhi aperti"
+      - "Sul comodino accanto alla testa di Noah: il nido vuoto preso dietro il Pozzo in s08 e portato a casa. VINCOLO: «Adesso non lo vedeva. Sapeva che era lì» — il nido è visibile al LETTORE come accenno di rametti, non a Noah"
+      - "Il nido è centro ottico MARGINALE: piccolo, non al centro della tavola, ma trovabile"
+      - "VINCOLO ARREDO (canonical json): NIENTE orologio, NIENTE lume da notte, NIENTE oggetti superflui — spoglio canonico. Coperte di lana ruvida, lenzuolo bianco-avorio appena percepibile"
+      - "Eco spenta della cantilena serale dei Coltivatori: fuori non si sente più niente. Offscreen puro, non illustrato"
+      - "Palette: nero quasi pieno, micro-accenni avorio del lenzuolo, marrone scuro dei rametti del nido, un solo riflesso minimo sull'occhio aperto di Noah"
+    subhooks:
+      - id: s10_h01a
+        page_book: 1
+        text_split_marker: "Era notte fonda"
+        image_status: TBD
+        pov: "eye-level from the dark room, wide enough to read the three beds side by side, closed shutters at the back, no light source in frame"
+        note: "La stanza al buio pieno — tavola d'apertura: i tre letti accostati letti come volumi appena più chiari del nero, le coperte di lana ruvida, le imposte serrate in fondo senza una fessura di luce. Gabriel ed Elias dormono, corpi distesi e quieti; Noah sul fianco è l'unica forma sveglia. Nessuna fonte di luce: la stanza si legge per differenze minime di nero e per il bianco-avorio quasi invisibile del lenzuolo. Composizione ampia e ferma: il bambino lettore deve capire dove siamo prima di capire chi non dorme. La fascia alta è nero pieno."
+      - id: s10_h01b
+        page_book: 2
+        text_split_marker: "Noah era sdraiato sul fianco"
+        image_status: TBD
+        pov: "low close view at pillow height on Noah lying on his side, the bedside table with the nest just inside the frame edge"
+        note: "L'occhio aperto e il nido — pagina-dettaglio: primo piano basso all'altezza del cuscino su Noah sdraiato sul fianco, capelli un po' arruffati sul lato, la bocca chiusa, e un unico riflesso tenue sull'occhio aperto che guarda il nero. Al margine dell'inquadratura, sul comodino, il nido vuoto di s08 — rametti intrecciati e muschio secco appena leggibili nel buio, piccoli, non spiegati. Noah non lo guarda: guarda davanti a sé. Il lettore lo vede, lui lo sa. Intimità massima, zero melodramma."
+
+  s10_h02:
+    location: piazza_villaggio
+    location_variant: interno_casa_fratelli_non_cartografato_buio_assoluto
+    characters_in_scene: [noah, gabriel]
+    characters_offscreen_or_distant: [elias]
+    objects_in_scene: []
+    canonical_details:
+      - "HOOK FIRMA — la pagina più nera della saga. L'illustratore deve RESISTERE alla tentazione di aggiungere luce"
+      - "KEY PHRASE alla lettera, sola voce di Noah in tutta la storia: «Ho paura.» — silenzio — «Qui è buio.» Cinque parole, due frasi, una pausa nel mezzo. Il testo è del compositore: nell'immagine NON c'è testo"
+      - "Noah non si muove, non piange, non chiama nessuno. Dice e basta"
+      - "Gabriel era già sveglio — «Non si sa se si era svegliato adesso o prima». Nessuna parola: tende la mano nel buio, nello spazio fra i due letti, e cerca"
+      - "VINCOLO: due soli punti-luce-riflesso in tutta la tavola — l'occhio aperto di Noah e il contorno della mano di Gabriel. Il resto è nero pieno"
+      - "Elias offscreen nel terzo letto: si sta alzando, percepibile SOLO dal lenzuolo che si sposta. Non ancora in piedi, non ancora un volto"
+      - "Le due mani si trovano e si tengono: fine del beat, page-turn"
+    subhooks:
+      - id: s10_h02a
+        page_book: 3
+        text_split_marker: "Poi Noah disse, ad alta voce nel buio"
+        image_status: TBD
+        pov: "very tight close-up on Noah's face in near-total black, only the faint reflection on his open eye legible, mouth just parted"
+        note: "Le cinque parole — la tavola più nera: primissimo piano sul volto di Noah nel nero quasi totale, con la bocca appena aperta nell'istante in cui dice. Un solo riflesso tenue sull'occhio aperto; il contorno del viso e del cuscino si intuisce per differenze minime di nero, senza contorni nitidi. Nessun'altra forma nella tavola. La pagina deve sembrare quasi vuota e non lo è: è un bambino che parla al buio. Fascia alta interamente nera."
+      - id: s10_h02b
+        page_book: 4
+        text_split_marker: "Tese la mano nel buio"
+        image_status: TBD
+        pov: "low horizontal view across the gap between the two beds, Gabriel's arm entering from the left, reaching into the dark, Noah's hand not yet touching"
+        note: "La mano che cerca: vista orizzontale bassa nello spazio nero tra i due letti — dalla sinistra entra il braccio di Gabriel, teso, la mano aperta che cerca senza vedere; dalla destra la mano piccola di Noah, ancora a qualche centimetro. Le due mani NON si toccano in questa pagina: la tavola è tutta nell'attesa. Solo i contorni delle dita hanno un riflesso lievissimo; tutto il resto è nero. La distanza tra le due mani è il soggetto compositivo."
+      - id: s10_h02c
+        page_book: 5
+        text_split_marker: "Si tennero"
+        image_status: TBD
+        pov: "tight close-up on the two joined hands in the black gap between beds, nothing else in frame"
+        note: "Si tennero — pagina-icona muta: primo piano stretto sulle due mani che si sono trovate e si tengono, sospese nel nero tra i due letti. La mano grande e la mano piccola, le dita intrecciate senza stringere troppo. Nient'altro nell'inquadratura: né volti, né letti, né stanza. È la risposta di Gabriel, e non è una parola. Tenerezza senza dolcezza aggiunta: due mani, il nero, basta."
+
+  s10_h03:
+    location: piazza_villaggio
+    location_variant: interno_cucina_casa_fratelli_non_cartografato_notte
+    characters_in_scene: [elias]
+    characters_offscreen_or_distant: [gabriel, noah]
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "Elias si alza SENZA che nessuno glielo chieda: si mette i sandali, esce dalla stanza, il legno del corridoio fa scric"
+      - "In cucina: cassetto aperto piano, fiammifero, lanterna accesa. Prima e unica fiamma viva della storia"
+      - "NASCITA DELL'OGGETTO-SIMBOLO: il panno di lana vecchia avvolto TRE-QUARTI attorno al vetro tondo, in modo che la luce esca solo dal basso, in un cerchio piccolo per terra. Vetro tondo con riflesso giallo interno, sportellino metallico parzialmente coperto"
+      - "VINCOLO CANONE (`ELIAS_GESTO_VELATURA_LANTERNA_NON_SPIEGATO`): il gesto si mostra, non si spiega. Nessun didascalismo, nessuna sequenza a step"
+      - "Inversione speculare di s08_h10 (Mèmolo copre il nido con una foglia per proteggerlo dal vento — qui Elias copre la luce per proteggere i fratelli dal buio). Non dichiarata: solo l'eco del gesto"
+      - "Elias solo in scena: i fratelli restano nella stanza, offscreen"
+      - "Palette: nero della cucina, giallo caldo della prima fiamma, ocra del panno di lana, marrone delle dita di Elias"
+      - "Onomatopea scric: resa tipografica del compositore, mai nell'immagine"
+    subhooks:
+      - id: s10_h03a
+        page_book: 6
+        text_split_marker: "In cucina aprì un cassetto piano"
+        image_status: TBD
+        pov: "close three-quarter view on Elias's hands and lit face at the kitchen table, the match flame the only light source in the frame"
+        note: "Il fiammifero: tre quarti ravvicinato sulle mani e sul volto di Elias in cucina, illuminati dal basso dalla fiamma piccola del fiammifero che sta portando allo stoppino — l'unico punto caldo in una stanza altrimenti nera. La cucina si intuisce per pochissimo: il bordo di un tavolo, il taglio di un cassetto socchiuso. Il viso è concentrato, sveglissimo, senza paura e senza eroismo: un bambino che fa una cosa che sa fare. Il giallo caldo è minuscolo nella tavola nera."
+      - id: s10_h03b
+        page_book: 7
+        text_split_marker: "Poi prese un panno di lana"
+        image_status: TBD
+        pov: "very tight close-up on Elias's hands wrapping the wool cloth three-quarters around the glass, seen slightly from above, light escaping only downward"
+        note: "La velatura — nascita dell'oggetto: primissimo piano sulle mani di Elias che avvolgono il panno di lana vecchia tre-quarti attorno al vetro tondo della lanterna, visto un poco dall'alto. Il giallo interno resta prigioniero: la luce esce solo dal basso e si posa in un cerchio piccolo sul pavimento, ai suoi piedi. Si vedono la trama ruvida della lana, lo sportellino metallico mezzo coperto, il riflesso caldo sul vetro. Il gesto non è spiegato da nulla nella tavola: si capisce dal risultato."
+
+  s10_h04:
+    location: piazza_villaggio
+    location_variant: interno_casa_fratelli_non_cartografato_vestizione
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "«Gabriel non lasciò la mano di Noah. Lo aiutò ad alzarsi così, con una mano sola.» — il vincolo è la mano che NON si stacca: tutta la vestizione avviene a una mano"
+      - "Si vestono SOPRA il pigiama: due strati, calze, sandali, un mantello di lana ognuno. Vestizione rapida, non ordinata"
+      - "VINCOLO: il braccialetto di s09 NON è al polso di Gabriel (castagna rugata solo in s12)"
+      - "Elias tiene la lanterna velata bassa: «Il cerchio di luce stava sui sandali»"
+      - "Tre figure quasi sagome, distinguibili solo per il cerchio di luce ai piedi. I fazzoletti-firma si intuiscono appena, non si leggono come colore pieno"
+      - "«Uscirono dalla stanza. Uscirono dalla casa. Erano in tre, e nessuno parlava.»"
+      - "Palette: nero della stanza, giallo basso del cerchio sui sandali, marrone-lana dei mantelli, ocra dei pigiami visibili sotto il bordo"
+    subhooks:
+      - id: s10_h04a
+        page_book: 8
+        text_split_marker: "Gabriel non lasciò la mano di Noah"
+        image_status: TBD
+        pov: "eye-level medium view on Gabriel helping Noah up with one hand only, the other hand still holding Noah's, cloaks half-on, lantern circle on the floor at the edge of frame"
+        note: "La vestizione a una mano: piano medio su Gabriel che tira su Noah tenendogli la mano — l'altra mano non si stacca, e tutto il gesto è impacciato per questo: il mantello di lana infilato di traverso, il pigiama che sporge sotto il bordo, una calza ancora a metà. Noah in modalità aggrappato, piccolo, silenzioso, che si lascia vestire. In basso al margine, il cerchio giallo della lanterna di Elias sui sandali. Figure quasi in silhouette: si leggono i volumi, non i dettagli. La goffaggine dell'amore pratico."
+      - id: s10_h04b
+        page_book: 9
+        text_split_marker: "Uscirono dalla stanza"
+        image_status: TBD
+        pov: "seen from behind the three as they cross the house doorway into the outer black, Elias first with the low lantern, the reader left inside the room"
+        note: "L'uscita: di spalle ai tre, sulla soglia di casa che si apre su un nero più pieno di quello della stanza — Elias davanti con la lanterna bassa, Gabriel e Noah mano nella mano subito dietro. Il lettore resta dentro, li guarda andare. Il cerchio di luce cade sul gradino e su un mezzo metro di selciato, nient'altro è visibile fuori: né case, né cielo, né strada. Tre mantelli di lana che entrano nel buio. Nessuno parla, e si vede."
+
+  s10_h05:
+    location: piazza_villaggio
+    location_variant: attraversamento_notturno_buio_pieno
+    characters_in_scene: [gabriel, elias, noah, mantenitori]
+    characters_offscreen_or_distant: [memolo]
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "«Fuori era buio pieno. La Piazza non si vedeva — solo le sagome più scure delle case più vicine.»"
+      - "Le tre presenze canoniche della Piazza ridotte a valori di nero: l'Albero Vecchio «una sagoma più nera del nero», il Pozzo «una macchia grigia chiara» contro il selciato"
+      - "Mèmolo offscreen puro: «dormiva da qualche parte». NON illustrato, nemmeno come finestra"
+      - "L'angolo del viottolo dove di sera il Mulinello fa sempre un giro di foglie: stanotte è FERMO. Niente foglie, solo silenzio — il vento si nota per la sua assenza"
+      - "Cornice s10_c2 (Processo B, speculare a s01_c1): un mantenitore FRINGUELLO apre la porta di casa con la scopa in mano; la scopa tocca il selciato — TOK singolo (saluto del gruppo). «I tre annuirono. Lui annuì. La giornata cominciò di lì.»"
+      - "VINCOLO COLLETTIVI: il mantenitore non è individuato per nome, specie fringuello solo qui in tutta la saga. Oggetto-firma: la scopa (non la scala a pioli, che è il simbolo generale del gruppo)"
+      - "Il mantenitore appare SOLO nel subhook b"
+      - "Il freddo è oggettivo: selciato freddo sotto le scarpe, aria umida che bagna la lana"
+    subhooks:
+      - id: s10_h05a
+        page_book: 10
+        text_split_marker: "Fuori era buio pieno"
+        image_status: TBD
+        pov: "wide slightly high view of the black piazza, the three tiny with their small light low in the frame, the Old Tree a blacker mass, the well a pale gray patch"
+        note: "La Piazza che non si vede: campo largo, leggermente dall'alto, su una piazza fatta solo di gradazioni di nero — la massa più nera dell'Albero Vecchio da un lato, la macchia grigia chiara del Pozzo sul selciato, le sagome appena più scure delle case più vicine ai bordi. I tre sono piccolissimi in basso, riconoscibili solo dal cerchio giallo che li accompagna. Nell'angolo del viottolo dove il Mulinello fa sempre il suo giro di foglie: niente, terra pulita, fermo. Il luogo più familiare della saga reso irriconoscibile — e il lettore lo riconosce comunque."
+      - id: s10_h05b
+        page_book: 11
+        text_split_marker: "Alla curva della piazza incontrarono qualcuno"
+        image_status: TBD
+        pov: "eye-level at the piazza bend, the finch mantenitore in his half-open doorway with the broom touching the paving, the three stopped a few steps away in their circle of light"
+        note: "Il TOK del mantenitore — cornice speculare: alla curva della piazza, un fringuello sulla porta di casa mezza aperta, la scopa in mano appena posata sul selciato; dalla soglia esce un filo di luce interna, il secondo e ultimo giallo della notte. I tre fermi a qualche passo, dentro il loro cerchio, la testa appena chinata nel cenno. Lui annuisce. Due mondi che si incrociano per un istante: chi finisce la notte e chi comincia la giornata. Figura di collettivo: operosa, quieta, non protagonista."
+
+  s10_h06:
+    location: via_del_pontile
+    location_variant: cammino_notturno_nero_pieno
+    characters_in_scene: [elias, gabriel, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "HOOK FIRMA — pagina-chiave di s10. VINCOLO CENTRALE: il nero riempie 80-90% della tavola. NESSUN contorno di case, NESSUNA sagoma di albero, NESSUN paesaggio, NESSUN cielo"
+      - "Ordine di fila canonico e invariabile: Elias davanti con la lanterna, Gabriel in mezzo che tiene la mano di Noah, Noah dietro"
+      - "«Il cerchio di luce era piccolo. Illuminava i sassi del sentiero per mezzo metro davanti, e tre paia di scarpe.» — cerchio di 50-60 cm, lanterna all'altezza delle ginocchia"
+      - "«Niente alberi. Niente case. Niente cielo. Solo il cerchio, e dentro il cerchio i piedi.» — vincolo letterale per l'illustratore"
+      - "La via scende: leggera discesa, lastricata in questo tratto"
+      - "Una foglia secca passa nel cerchio e sparisce nel buio (Mulinello leggero, mai mostrato come vento)"
+      - "L'aria umida d'autunno avanzato bagna la lana dei mantelli dopo qualche minuto"
+      - "Strato 3: metafora del crescere — un passo alla volta nel non-visibile. Mai dichiarata"
+    subhooks:
+      - id: s10_h06a
+        page_book: 12
+        text_split_marker: "Imboccarono la Via del Pontile"
+        image_status: TBD
+        pov: "high near-vertical view straight down on the small circle of light: three pairs of shoes and a half-metre of stony path, everything else black"
+        note: "Il cerchio e i piedi — la tavola-firma: vista quasi verticale dall'alto sul cerchio di luce piccolo, dentro il quale ci sono soltanto i sassi del sentiero per mezzo metro e tre paia di scarpe in fila, con l'orlo dei mantelli di lana e i bordi dei pigiami. Fuori dal cerchio, nero pieno per tutta la tavola: nessuna casa, nessun albero, nessun cielo, nessun orizzonte. Il bordo del cerchio è morbido, non un taglio netto di torcia. La pagina che il bambino ricorderà."
+      - id: s10_h06b
+        page_book: 13
+        text_split_marker: "Una foglia secca passava nella luce"
+        image_status: TBD
+        pov: "low view at ankle height inside the circle, a single dry leaf crossing the light, the three pairs of feet mid-stride behind it"
+        note: "La foglia che attraversa: vista bassa, all'altezza delle caviglie, dentro il cerchio di luce — una sola foglia secca ocra passa nell'illuminato, netta per un istante, mentre dietro di lei tre paia di piedi sono a metà passo. Ai margini il nero si chiude subito: la foglia sta già andando dove non si vede più. Nient'altro nella tavola. Il tempo del cammino reso con un dettaglio minuscolo invece che con il paesaggio."
+
+  s10_h07:
+    location: via_del_pontile
+    location_variant: cammino_notturno_tratto_avanzato_aria_di_sale
+    characters_in_scene: [elias, gabriel, noah]
+    characters_offscreen_or_distant: [grunto]
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "Camminano da molto: la via gira, scende ancora, il fondo passa da lastricato a sterrato. L'aria comincia a sapere di sale"
+      - "Il suono: alle loro spalle, lontanissimo, dall'alto — tot tot tot di zoccolo su pietra. Dura due secondi e si spegne. Viene dalle Montagne Gemelle"
+      - "VINCOLO GRUNTO (`grunto_max_2_fragments_saga`): Grunto NON si vede, NON è una sagoma, NON viene nominato. Solo il suono. Nessuna montagna disegnata in modo riconoscibile: al massimo un nero appena diverso in alto alle spalle"
+      - "«Nessuno disse niente. Nessuno si voltò. Continuarono.» — VINCOLO: nessuno dei tre gira la testa. La reazione è tutta nel non-reagire"
+      - "Onomatopea tot tot tot: piccolissima, in alto a destra, distante. Resa tipografica del compositore — MAI testo nell'immagine"
+      - "Nessuna paura aggiunta: il suono non è una minaccia, è il mondo che veglia altrove"
+    subhooks:
+      - id: s10_h07a
+        page_book: 14
+        text_split_marker: "Camminavano da molto"
+        image_status: TBD
+        pov: "eye-level from behind and slightly to the side of the three, the path bending downhill, the lantern circle carrying them, no landscape resolved"
+        note: "Il tratto avanzato: di spalle e un poco di lato ai tre, sul sentiero che gira e scende ancora — il fondo dentro il cerchio è passato da lastricato a sterrato, terra e ghiaino. La fila è la stessa, l'andatura più stanca, gli orli dei mantelli ora scuri di umidità. Il nero intorno resta assoluto, ma la tavola è un poco più larga della precedente: si intuisce che la strada va in basso. Nessun paesaggio risolto, nessun mare visibile: solo aria salata che non si disegna."
+      - id: s10_h07b
+        page_book: 15
+        text_split_marker: "alle loro spalle, lontanissimo"
+        image_status: TBD
+        pov: "wide view from behind the three, the empty black uphill space above and behind them occupying most of the frame, no one turning"
+        note: "Il suono alle spalle — pagina del non-voltarsi: campo largo da dietro i tre, con la massa nera del pendio alle loro spalle che occupa la maggior parte della tavola, in alto a destra un nero appena meno fitto (nulla di riconoscibile, nessuna montagna disegnata). I tre continuano a camminare in avanti: nessuna testa girata, nessun corpo fermo. Il vuoto dietro di loro è dove sta il suono, e resta vuoto. Presenza che veglia e non si mostra."
+
+  s10_h08:
+    location: via_del_pontile
+    location_variant: discesa_verso_pontile_passaggio_nero_grigio
+    characters_in_scene: [elias, gabriel, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "CERNIERA notte → alba. «Non in fretta»: da nero a nero un po' più chiaro, poi grigio scurissimo, poi grigio"
+      - "«Le sagome delle cose tornarono» — per la prima volta nella storia il CIELO è il soggetto, non il buio"
+      - "Si vede il bordo della via. Si vede il fiato dei tre: una nuvoletta corta davanti a ognuno (prima volta visibile — il freddo umido è oggettivo)"
+      - "La lanterna è ancora accesa ma la luce dentro il panno è diventata pallida: «quasi un giallino sciocco contro il grigio del giorno che arrivava». Il giallo perde, non viene spento"
+      - "VINCOLO: nessun sole, nessun raggio, nessuna alba drammatica. Nubi basse compatte, luce che cresce da sé"
+      - "Eco di s09_h10 (cielo di sera che chiudeva s09) — qui cielo che apre il mattino di s10. Non dichiarata"
+      - "Vestiti ora visibili: marrone-lana dei mantelli, colori dei fazzoletti-firma che tornano leggibili per la prima volta dalla pagina 2"
+    subhooks:
+      - id: s10_h08a
+        page_book: 16
+        text_split_marker: "Il cielo cominciò a cambiare"
+        image_status: TBD
+        pov: "wide low view with the flat gray sky filling the upper two thirds, the three small silhouettes on the descending path at the bottom, seen from behind"
+        note: "Il cielo che vince — la cerniera: campo largo dal basso, con il cielo grigio uniforme che occupa i due terzi alti della tavola e i tre in basso, piccoli, di spalle sul sentiero in discesa. Nubi basse compatte, nessun sole, nessun raggio: solo un grigio che è appena più chiaro in fondo, verso sud. I bordi della via tornano visibili, le prime sagome — un muretto, un cespuglio — riemergono senza dettaglio. La tavola in cui il buio smette da sé, senza essere sconfitto."
+      - id: s10_h08b
+        page_book: 17
+        text_split_marker: "Si vedeva il fiato dei tre fratelli"
+        image_status: TBD
+        pov: "three-quarter medium view on the three walking, close enough to read the short breath clouds in front of each face and the pale lantern in Elias's hand"
+        note: "Il fiato e il giallino sciocco: piano medio a tre quarti sui tre in cammino, ora leggibili — la nuvoletta corta del fiato davanti a ciascuna faccia nell'aria umida, i mantelli di lana scuri di umidità, i fazzoletti-firma che tornano a farsi riconoscere nella luce grigia. Nella mano di Elias la lanterna velata è ancora accesa ma non serve più: il giallo dentro il panno è diventato pallido e un po' ridicolo contro il grigio del giorno. Noah tiene ancora la mano di Gabriel. Nessuno commenta niente."
+
+  s10_h09:
+    location: pontile_bocca
+    location_variant: arrivo_lato_nord_prima_alba_grigio_rosa
+    characters_in_scene: [elias, gabriel, noah, bartolo]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [lanterna_velata_s10]
+    canonical_details:
+      - "Arrivo da NORD, dalla Via del Pontile. Grigio-rosa di prima alba: «il sole non era ancora sorto — il cielo era coperto, era una di quelle albe senza stelle e senza sole netto, solo luce che cresce»"
+      - "L'acqua della Bocca è blu-grigio BRUMOSA. Bruma sottile sull'acqua, corrente antioraria che esce verso il mare"
+      - "VINCOLO DI POSIZIONE (prosa definitiva): «La barca di Bartolo era legata. Bartolo era dentro la barca.» — DENTRO LA BARCA, non sulle rocce. La barca è ormeggiata al lato est del Pontile, legata con nodo Marinaro a un palo"
+      - "Bartolo: coperta marrone tirata su, la testa fuori, il guscio dietro come SCHIENALE. Gli occhi aperti. «Aveva sentito i tre arrivare da molto lontano. Non disse niente.»"
+      - "VINCOLO SPECIE (canonical json): Bartolo è una tartaruga di mare anziana — guscio, pinne vestigiali, testa rugosa. NON tasso, NON nutria"
+      - "Bloom `seed_bartolo_vede_e_basta`: vede, non interviene, non commenta. Un occhio che registra"
+      - "Firme del luogo: assi scure consumate dal sale, pali neri d'immersione inclinati, capanna col tetto di canne all'estremità sud, panca di legno scuro"
+      - "Inversione dell'apertura di s01 (Forno caldo, Fiamma che parla) — qui Pontile freddo, Bartolo che tace"
+    subhooks:
+      - id: s10_h09a
+        page_book: 18
+        text_split_marker: "Quando arrivarono al Pontile"
+        image_status: TBD
+        pov: "wide establishing view from the north end of the pier looking south, gray-pink sky over misty water, the three arriving small at the near end, the hut at the far end"
+        note: "L'arrivo — tavola di panorama: campo largo dall'estremità nord del Pontile verso sud, il cielo grigio-rosa di prima alba senza sole né stelle sopra l'acqua blu-grigio velata di bruma, la capanna col tetto di canne in fondo, i pali neri inclinati che escono dall'acqua. I tre arrivano piccoli dal lato terra, Elias davanti con la lanterna ormai inutile, Gabriel e Noah ancora mano nella mano. La corrente della Bocca che esce verso il mare, leggibile in linee di colore diverso. Il luogo che li aspettava senza saperlo. Fascia alta: cielo, quieto."
+      - id: s10_h09b
+        page_book: 19
+        text_split_marker: "Bartolo era dentro la barca"
+        image_status: TBD
+        pov: "eye-level close view on Bartolo inside the moored boat, brown blanket pulled up, head out, shell behind him as a backrest, eyes open, the three just entering the frame edge"
+        note: "Bartolo che aveva già sentito: piano ravvicinato sulla barca ormeggiata al lato est del Pontile, con Bartolo dentro — la coperta marrone tirata su fino al collo, la testa rugosa fuori, il guscio scuro appoggiato dietro come schienale, gli occhi aperti nel grigio-rosa. Non si muove, non saluta, non parla. Al margine dell'inquadratura i tre appena arrivati sulle assi. L'accoglienza che non è un gesto: uno che era già sveglio e ti ha sentito venire da molto lontano."
+
+  s10_h10:
+    location: pontile_bocca
+    location_variant: panca_seduti_alba_luce_che_cresce
+    characters_in_scene: [elias, gabriel, noah, bartolo, fiamma, amo]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [lanterna_velata_s10, pagnotta_forno]
+    canonical_details:
+      - "HOOK FIRMA — sigillo della storia e cerniera del blocco D verso s11"
+      - "Elias soffia sulla lanterna, la spegne, toglie il panno di lana e lo posa sul pontile ad asciugare. Fine dell'oggetto-simbolo: torna a essere una lanterna e un panno"
+      - "Ordine di seduta canonico sulla panca di legno scuro: Elias, Noah IN MEZZO, Gabriel. «Bartolo spostò un poco la testa — fece spazio»"
+      - "«La mano di Gabriel non lasciò la mano di Noah finché Noah non si appoggiò alla sua spalla» — il rilascio della mano è l'unico evento della pagina"
+      - "Cornice s10_c1 (Processo E): Amo sagoma lontana sull'acqua, un tuffo — splash — e riemerge. Cormorano nero-blu lucido, NON dettagliato, piccolo e distante. «La pesca dell'alba era cominciata»"
+      - "Cameo Fiamma: arriva dalla Via dell'Alba con un cesto piccolo, mantello ROSSO VIVO — unico squillo cromatico della tavola, visibile da molto lontano contro il grigio. Posa sulla panca una pagnotta tiepida che fuma appena"
+      - "KEY PHRASE Fiamma, sola parola pronunciata da un adulto in tutta la storia: «Mangiate.» Lo dice e basta"
+      - "VINCOLO `fiamma_non_madre_default_fratelli` + NO MORALINA: Fiamma non si china, non abbraccia, non chiede niente, non si stupisce. Va avanti verso la barca, mette qualcosa in mano a Bartolo, torna indietro e sparisce dietro la curva"
+      - "Chiusura: i fratelli spezzano la pagnotta in tre. «Il giorno cresceva. Nessuno disse altro.» Nessuno dice «ti è passata», nessuno commenta il buio"
+      - "Onomatopea splash: piccola, lontana, resa tipografica del compositore"
+    subhooks:
+      - id: s10_h10a
+        page_book: 20
+        text_split_marker: "Elias soffiò sulla lanterna"
+        image_status: TBD
+        pov: "eye-level three-quarter view on the dark bench beside the boat: the three seated in a row with Noah in the middle leaning onto Gabriel's shoulder, Bartolo's head turned slightly, the folded wool cloth drying on the planks"
+        note: "Seduti — la pagina del rilascio: piano a tre quarti sulla panca di legno scuro accanto alla barca, i tre seduti in fila con Noah in mezzo che si appoggia con la spalla a Gabriel, e la mano di Gabriel che si è appena aperta. Elias all'altro capo, la lanterna spenta ai suoi piedi e il panno di lana steso sulle assi ad asciugare, ancora umido. Bartolo nella barca, la testa spostata di poco: ha fatto spazio. Lontano sull'acqua brumosa, piccolissima, la sagoma di Amo nell'istante del tuffo. Il grigio-rosa che diventa oro pallido. Nessuno si guarda: guardano l'acqua."
+      - id: s10_h10b
+        page_book: 21
+        text_split_marker: "dalla Via dell'Alba arrivò Fiamma"
+        image_status: TBD
+        pov: "wide view of the pier from the land side, Fiamma's red cloak small and bright walking away along the curve, the warm loaf steaming on the bench, the three breaking it in three"
+        note: "Il rosso che se ne va — sigillo: campo largo sul Pontile dal lato terra, con il mantello rosso vivo di Fiamma piccolo e acceso mentre si allontana lungo la curva della via, unica nota calda in tutto il grigio-oro dell'alba. Sulla panca, il cesto già ripartito e la pagnotta tiepida che fuma appena nell'aria fredda; i tre fratelli la stanno spezzando in tre, senza cerimonia. Bartolo fermo nella barca con qualcosa in mano. L'acqua, la bruma, il giorno che cresce. Nessuno parla, nessuno spiega, e la storia è chiusa."
+
+# Aggiunte da prosa al canone (todo per Ray):
+canon_additions_todo:
+  - location: casa_fratelli_interno
+    note: "MANCA come entity e come directory catalogo: 9 subhook su 21 (h01a, h01b, h02a, h02b, h02c, h03a, h03b, h04a, h04b) avvengono nell'interno di casa dei fratelli, che il grafo tratta solo come qualifier di piazza_villaggio (`interno_casa_fratelli_non_cartografato`). È la prima volta nella saga che entriamo in casa loro: servono decisioni canoniche su stanza (tre letti accostati? disposizione? imposte) e cucina (cassetto, tavolo, focolare). Senza scheda, l'illustratore inventa — e l'interno tornerà in s12."
+    priority: high
+  - location: via_del_pontile
+    note: "MANCA prompt_grok.md — location di 3 hook (h06, h07, h08) e scheda ancora `status: provvisorio` con 6 sezioni `_da popolare dal grafo_`. Per s10 il danno è minimo (il buio nasconde tutto), ma h08 mostra i primi bordi della via e h08a chiede le prime sagome che riemergono: servono almeno le firme del tratto (fondo lastricato→sterrato, muretti, discesa, cosa si vede all'alba)."
+    priority: high
+  - object: lanterna_velata_s10
+    note: "DISALLINEAMENTO tra fonti sul panno asciugato: la narrazione fattuale dice «lo mette sopra una colonnetta del pontile», la prosa definitiva dice «lo posò sul pontile, ad asciugare». Ho seguito la prosa definitiva (panno steso sulle assi) in h10a. Confermare, ed eventualmente aggiungere il dettaglio della colonnetta alle firme del Pontile."
+    priority: medium
+  - character: bartolo
+    note: "DISALLINEAMENTO tra fonti sulla posizione: `_porting_grafo/output/s10/s10_canonical.json` (visual_anchors, hook alba) dice «sulle rocce piatte accanto alla struttura del Pontile, NON in acqua»; la narrazione fattuale e la prosa definitiva dicono «dentro la barca, coperta marrone, guscio dietro come schienale». Ho seguito la prosa definitiva. Il canonical json va corretto o marcato come superato, altrimenti il prossimo scenografo genera Bartolo sulle rocce."
+    priority: high
+  - character: mantenitori
+    note: "MANCA prompt_grok.md (già segnalato in s05). Per s10 serve la variante FRINGUELLO con la SCOPA all'alba sulla porta di casa (cornice s10_c2, speculare a s01_c1) — oggetto-firma diverso dalla scala a pioli del gruppo. Verificare che il fringuello sia usato solo qui in tutta la saga."
+    priority: high
+  - character: amo
+    note: "Cameo lontanissimo sull'acqua nell'istante del tuffo (h10a): verificare che `amo_canonica_v1_tuffo.jpg` funzioni come reference a distanza minima, dove la specie deve restare leggibile come cormorano senza dettaglio."
+    priority: low
+  - location: pontile_bocca
+    note: "Il `prompt_grok.md` ha tre vedute (panoramica esterna, interno capanna, POV verso il mare) ma nessuna variante ALBA/NOTTE. h09-h10 chiedono grigio-rosa di prima alba senza sole, bruma sull'acqua, luce che cresce: candidata quarta veduta o variante atmosferica dedicata."
+    priority: medium
+  - object: nido_vuoto_s08
+    note: "Prima apparizione dell'oggetto DENTRO casa (comodino di Noah, h01b): la scheda lo descrive posato dietro il Pozzo sotto una foglia in s08. Confermare che Noah lo ha portato a casa e che sta sul comodino — la prosa definitiva lo dice, la scheda va allineata nella sezione Contesto."
+    priority: medium
