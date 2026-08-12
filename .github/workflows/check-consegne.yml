@@ -1,0 +1,86 @@
+name: Consegna scene/reference — cancello tecnico
+
+# Cancello TECNICO per le PR di consegna scene/reference (una storia per PR,
+# tipicamente da una collaboratrice esterna). Verifica SOLO il lato tecnico:
+# file nel posto giusto, nomi corretti, nessuna "foto in più che è qualcos'altro".
+#
+#   consegna pulita  → check VERDE  → mergeabile senza revisione umana
+#   qualcosa fuori   → check ROSSO  → commento esplicativo sulla PR (revisione nostra)
+#
+# NON valuta la coerenza narrativa/visiva. La logica sta tutta in
+# scripts/audit/audit_delivery.py (idempotente, exit 0=PASS / 1=FAIL).
+#
+# Le PR che non toccano _annotations/ _proposte/ _scene/ non sono consegne:
+# il check passa "non applicabile" e la PR segue la normale revisione.
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: consegna-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  consegna-tecnica:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install deps
+        run: python3 -m pip install --quiet PyYAML
+
+      - name: Valida consegna (lato tecnico)
+        id: check
+        run: |
+          set +e
+          python3 scripts/audit/audit_delivery.py \
+            --base "${{ github.event.pull_request.base.sha }}" \
+            --head "${{ github.event.pull_request.head.sha }}" | tee /tmp/consegna_report.txt
+          echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Commenta la PR se bloccata
+        if: steps.check.outputs.rc != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = '(report non disponibile)';
+            try { report = fs.readFileSync('/tmp/consegna_report.txt', 'utf8').trim(); } catch (e) {}
+            const body = [
+              '🔴 **Consegna bloccata dal cancello tecnico**',
+              '',
+              'La verifica automatica ha trovato qualcosa fuori dal contratto di consegna ',
+              '(file nel posto sbagliato, una foto non documentata nel README, o roba che non ',
+              'è della storia). Serve una revisione umana prima del merge — non è un giudizio ',
+              'sulla qualità o la coerenza, solo sul lato tecnico.',
+              '',
+              '<details><summary>Report tecnico</summary>',
+              '',
+              '```',
+              report,
+              '```',
+              '</details>',
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Esito (rende rosso il check se la consegna non è pulita)
+        if: always()
+        run: exit ${{ steps.check.outputs.rc }}

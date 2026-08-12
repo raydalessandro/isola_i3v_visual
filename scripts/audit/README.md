@@ -66,3 +66,28 @@ Ogni audit:
   `[info]` = stato di migrazione
 
 L'agente blocca la pipeline se uno fallisce.
+
+## `audit_delivery.py` — cancello tecnico delle consegne scene/reference
+
+Fuori dalla famiglia 1..5 (non gira in `run_all_audits.py`): è un cancello
+**per-PR**, non un audit del grafo a riposo. Verifica solo il LATO TECNICO di
+una PR di consegna (una storia per PR): file nel posto giusto, nomi corretti,
+nessuna "foto in più che è qualcos'altro". NON valuta coerenza narrativa/visiva.
+
+Contratto ammesso (una sola `sNN` per PR):
+- `pipeline_narrativa/storie_finali/_annotations/sNN.yaml`
+- `_proposte/sNN_<slug>/**` (README.md manifest + immagini reference)
+- `pipeline_narrativa/storie_finali/_scene/sNN/_hd/**` (scene HD `{id}_hd.jpg`)
+
+Qualsiasi file fuori dal contratto, foto non citata nel README, immagine non
+valida, scena orfana o PR multi-storia → FAIL (blocca il merge, chiede
+revisione). PR che non toccano quei path → PASS "non una consegna".
+
+Gira in CI su ogni PR verso `main` (`.github/workflows/check-consegne.yml`):
+consegna pulita = check verde (mergeabile senza revisione umana), altrimenti
+check rosso + commento esplicativo sulla PR.
+
+```bash
+python3 scripts/audit/audit_delivery.py --base origin/main --head HEAD
+python3 scripts/audit/audit_delivery.py --changed a.yaml,b.png   # lista esplicita (test)
+```
