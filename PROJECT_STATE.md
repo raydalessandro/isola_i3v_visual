@@ -16,6 +16,8 @@
 - **Scene HD Vol 2 (2026-07-05, PR #51–53):** s04 (26 img), s05 (24), s06 (19) in `_scene/sNN/_hd/` (JPG q95). Le 58 scene dichiarate in prosa montano l'HD reale nel volume. ⚠️ Immagini a 1536×2304 (e alcune s05 inferiori), **sotto standard scene v1.1**: `build_volume` applica il banner "sotto spec" su ogni scena — accettato per questo giro, revisione immagini a fine ciclo. 11 subhook aggiunti alle annotations s04/s05 come placeholder ("da compilare"): registrati + immagine in `_hd/`, ma **non ancora in prosa** → fuori dal montaggio finché non ricevono marker `@subhook` + `page_book`.
 - **Fix montaggio HD-only (2026-07-05, PR #54):** `build_volume.parse_story_md` ora sonda l'HD convenzionale `_scene/sNN/_hd/{id}_hd.jpg` quando `@image` è `TBD` e manca il proxy low-res. Sblocca il Vol 2+ (branch illustratore che consegnano solo `_hd/`); Vol 1 (path espliciti + low-res) invariato.
 - **Scenografo v1.2 (2026-06-22, PR #48):** §0 contesto di sessione/cache, ordine blocchi prompt STILE → POV → SCALA GU → CAST → LUOGO → MOOD → DIVIETI, POV obbligatorio (§2-ter), blocco DIVIETI fisso, `prompt_approvati.md` come memoria viva. Template blindato in `PROMPT_TEMPLATE.md` (radice repo, v1.0).
+- **Cancello tecnico consegne (2026-07-05, CI):** `scripts/audit/audit_delivery.py` + `.github/workflows/check-consegne.yml` — gira su ogni PR verso main. Verifica SOLO il lato tecnico di una consegna (una storia/PR): file nel posto giusto, nomi corretti, nessuna foto extra "che è qualcos'altro". Contratto ammesso: `_annotations/sNN.yaml` + `_proposte/sNN_*/` + `_scene/sNN/_hd/`. Consegna pulita → check verde (mergeabile senza revisione); qualcosa fuori → check rosso + commento sulla PR. NON valuta coerenza. Per full hands-off su s11/s12 manca solo il toggle admin di Ray: rendere `consegna-tecnica` un *required check* + auto-merge.
+- **s10 annotations (2026-07-05, PR #55, collaboratrice sherinataalla-cell):** `_annotations/s10.yaml` (21 pagine, h01–h10) + 4 reference PNG *provvisorie* in `_proposte/s10_reference_mancanti/` (1536×2304, NON scene HD, NON canone). Gate `consegna-tecnica` verde (primo run). ⚠️ `s10.yaml` contiene `canon_additions_todo` con decisioni di canone in sospeso per Ray (vedi sotto).
 - **Visual / fase F.2:** in corso — 101 immagini catalogate, 15 entità canoniche complete (al 2026-06-10). 116 schede esistenti.
 - **Catalogo v2 (`web/`):** Next.js 15 su Vercel. ⚠️ TODO aperto: debug deploy fermo alle 16:23 UTC del 2026-06-10 (le PR successive non sono visibili sul sito).
 - **Standard scene v1.1 (2026-06-12, PR #22):** minimo HD **1824×2736 px** (300 DPI reali sul fit di `build_volume.py`), metadato DPI 300, coerenza reference a 360°, quiet zone alta ~25-30% per il testo di pagina, NO-TEXT rinforzato nel NEGATIVE. Fonti vive: stylesheet + skill scenografo/illustratore. Le scene s01 (1664×2496) restano valide come v1.
@@ -23,6 +25,20 @@
 - **Debito derivati — CHIUSO (2026-07-05):** `make sync` post-merge Vol 2 ha rigenerato e allineato i 12 writing_briefs (§2-bis + immagini canoniche) + `entities.json` (mirror `catalogo_web/` e `web/public/`) + `dashboard.js`. Il derivato su main è ora sincronizzato con le fonti. `docs/TODO_DERIVATI_STALE_MAIN.md` può essere archiviato.
 
 ## Ultima sessione
+
+## Sessione 2026-07-05 (cont.) — Check s10 + cancello CI consegne (manutentore)
+
+Check tecnico della PR #55 (s10, collaboratrice) + automazione per le prossime consegne, così le PR pulite passano senza revisione manuale.
+
+- **PR #55 s10** verificata a mano: `s10.yaml` YAML valido (21 subhook = 21 pagine, sequenza 1–21 completa, tutti con id/pov/note/marker, tutti `image_status: TBD`); 4 reference PNG valide, esattamente 1536×2304, match 1:1 col README, nessun extra; tocca solo `_annotations/` + nuova `_proposte/`. **Mergiata.**
+- **Cancello CI `consegna-tecnica`**: validatore `audit_delivery.py` (8 casi collaudati: consegna reale s10 PASS + mista/multi-storia/foto-intrusa/file-non-immagine/scena-orfana/png-in-hd FAIL + PR-codice non-applicabile) + workflow su ogni PR verso main. **Primo run reale sulla #55 = verde** (log CI: `6 file, s10, PASS`). Landato con commit diretto su main (niente branch nuovi da cancellare).
+- ⚠️ **Decisioni a Ray (non risolte, solo segnalate)** — `s10.yaml canon_additions_todo`:
+  - *Bartolo (HIGH, conflitto fonti):* `_porting_grafo/.../s10_canonical.json` lo mette sulle rocce, prosa definitiva "dentro la barca". La collaboratrice ha seguito la prosa. Il canonical json va corretto o marcato superato.
+  - *casa_fratelli interno (HIGH):* 9 subhook su 21 dentro casa, ma manca come entity/scheda (grafo lo tratta come qualifier di `piazza_villaggio`). Torna in s12.
+  - *via_del_pontile (HIGH):* manca `prompt_grok.md`, scheda ancora provvisoria; h08 mostra i primi bordi all'alba.
+  - *mantenitori fringuello (HIGH):* variante con scopa per il cameo s10; manca `prompt_grok.md`.
+  - + medium/low: lanterna_velata panno (colonnetta vs assi), pontile_bocca variante alba, nido_vuoto su comodino, amo cameo lontano.
+  - **Nuova convenzione `_proposte/`**: cartella top-level nuova (non in CLAUDE.md). Da benedire come luogo delle reference provvisorie, o spostare in `contributi/`.
 
 ## Sessione 2026-07-05 — Scene HD Vol 2 (s04–s06) + fix montaggio HD-only (manutentore)
 
