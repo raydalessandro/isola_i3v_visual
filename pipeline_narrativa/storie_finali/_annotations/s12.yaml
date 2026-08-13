@@ -1,0 +1,283 @@
+sid: s12
+title: Quando i Tre Venti Suonano Insieme
+note: |
+  Annotazioni operative per ogni hook (ground truth dalla prosa definitiva e dai
+  vincoli del writing brief). I 10 hook narrativi sono scomposti in 21 subhook,
+  uno per pagina libro fisica e futura immagine-scena.
+
+  Le note dei subhook sono il blocco SCENA per lo scenografo: definiscono beat,
+  inquadratura, relazioni spaziali e continuità. Non ripetono stylesheet, tratti
+  fisici o firme ambientali, che provengono rispettivamente dal canone, dalle
+  schede personaggio e dai prompt dei luoghi.
+
+  VINCOLI TRASVERSALI DI s12 (valgono per ogni subhook):
+  - Fine autunno, dalla pre-alba alla notte piena. Luce bassa e radente per tutto
+    il giorno; palette che procede da viola-blu e terracotta, a grigi di pietra e
+    oro tardo, fino al blu-nero e al giallo di candela del Forno finale.
+  - I suoni citati dalla prosa (Frrr, TOK e il Concerto) non sono lettering:
+    nessun testo, insegna, didascalia o onomatopea nell'immagine.
+  - Il Concerto di h08-h09 non è magia né suono letterale: tre correnti d'aria
+    naturali convivono senza aure, scintille o effetti fantastici.
+  - Nessun personaggio spiega il senso del giorno. Silenzi, gesti e distanze
+    restano silenzi, gesti e distanze: nessuna posa enfatica o consolazione.
+  - La fascia superiore quieta per il testo di pagina è vincolo costante dello
+    stylesheet; volti, mani e oggetti-firma restano fuori da quella fascia.
+  - Continuità di percorso: Grunto è visibile soltanto in h05. Da h06 è già
+    rientrato; può restare solo presenza sonora o memoria del luogo, mai sagoma.
+  - Il braccialetto di Noah compare soltanto nella chiusura h10b, al polso destro
+    di Gabriel; la castagna è rugata e appena leggibile alla luce della candela.
+
+book_pages_total: 21
+
+hooks:
+  s12_h01:
+    location: forno
+    location_variant: alba_partenza_cornice_apertura_saga
+    characters_in_scene: [fiamma, gabriel, elias, noah]
+    characters_offscreen_or_distant: [liu]
+    objects_in_scene: [grembiule_fiamma, pagnotta_forno]
+    canonical_details:
+      - "Apertura al Forno: fuoco acceso da ore, porta aperta sulla brina e luce prima dell'alba; Fiamma è in modalità ferma, con pochi gesti precisi."
+      - "Liù è già ripartita dalla finestra: non serve illustrarla; nessun Frrr scritto nell'immagine."
+      - "Fiamma consegna due cornetti caldi a Noah e la sacca di tela con la pagnotta a Gabriel; la pagnotta è destinata a Grunto."
+      - "Lo sguardo lungo di Fiamma verso Gabriel appartiene a h02, non a questo hook."
+    subhooks:
+      - id: s12_h01a
+        page_book: 1
+        text_split_marker: "Al Forno il fuoco era acceso da ore"
+        image_status: TBD
+        pov: "eye-level from just inside the Forno toward the open doorway, Fiamma and the three brothers grouped in the lower half of the frame"
+        note: "Tavola d'apertura al calore del Forno: Fiamma ferma davanti al banco, i tre fratelli appena pronti a partire davanti a lei. La porta aperta mette in relazione il terracotta interno con il pre-alba freddo e la brina sul selciato; il fiato dei fratelli è appena visibile. La consegna è il centro dell'azione, senza gesti celebrativi."
+      - id: s12_h01b
+        page_book: 2
+        text_split_marker: "Mise in mano a Noah due cornetti caldi"
+        image_status: TBD
+        pov: "tight three-quarter view at hand height, Fiamma passing two warm cornetti to Noah while Gabriel receives the cloth bag with the loaf beside him"
+        note: "Pagina di mani e passaggi: le due mani di Fiamma consegnano a Noah i cornetti caldi, mentre accanto Gabriel riceve la sacca di tela con la pagnotta. Elias è presente vicino ai fratelli ma non contende il gesto. L'oro dei cornetti e il marrone della sacca sono gli accenti nel calore quieto del banco."
+
+  s12_h02:
+    location: forno
+    location_variant: stipite_porta_uscita_micro_seme_fase_f
+    characters_in_scene: [fiamma, gabriel]
+    characters_offscreen_or_distant: [elias, noah]
+    objects_in_scene: [grembiule_fiamma]
+    canonical_details:
+      - "HOOK FIRMA: Fiamma sullo stipite guarda Gabriel più del normale; nessuna parola e nessuna spiegazione."
+      - "Gabriel è già un passo fuori e non si volta; Elias e Noah sono già fuori, soltanto sfocati o fuori campo."
+      - "Il Forno alle spalle di Fiamma è una bocca arancione; davanti a Gabriel l'est si apre lentamente."
+    subhooks:
+      - id: s12_h02a
+        page_book: 3
+        text_split_marker: "Fiamma, dallo stipite, si fermò"
+        image_status: TBD
+        pov: "eye-level from inside the threshold, Fiamma in three-quarter view on the dark wooden jamb looking past the reader toward Gabriel's back"
+        note: "Lo sguardo che resta: Fiamma occupa lo stipite in primo piano, ferma, con il calore arancione del Forno alle spalle. Gabriel è già oltre la soglia, di tre quarti di spalle; il suo volto non cerca il suo. Lo spazio fra loro è il soggetto, non una reazione."
+      - id: s12_h02b
+        page_book: 4
+        text_split_marker: "Gabriel non si voltò"
+        image_status: TBD
+        pov: "seen from outside at Gabriel's shoulder height, Gabriel walking into the pale eastern dawn while the warm doorway and Fiamma remain behind him"
+        note: "L'uscita senza voltarsi: da fuori, Gabriel avanza verso la luce chiara dell'est; sul bordo posteriore della tavola restano la porta e Fiamma immobile, più scure contro la bocca arancione del Forno. Elias e Noah possono essere presenze già avanti, non riconoscibili né protagoniste."
+
+  s12_h03:
+    location: pontile_bocca
+    location_variant: passaggio_verso_riva_interna_ovest_fiume
+    characters_in_scene: [bartolo, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Poco dopo l'alba: acqua della baia bassa grigia e ferma, assi del Pontile umide di brina e una foglia gialla che gira vicino al palo."
+      - "Bartolo è dentro la barca, con la coperta marrone sulle ginocchia e il guscio dietro come schienale; occhi aperti."
+      - "Gesto chiave: Bartolo alza la mano, la tiene a metà e la lascia ricadere. I fratelli rispondono soltanto con un cenno e non si fermano."
+    subhooks:
+      - id: s12_h03a
+        page_book: 5
+        text_split_marker: "Camminarono fino al Pontile"
+        image_status: TBD
+        pov: "wide establishing view from the landward end of the pier, the three brothers crossing the planks toward the north while Bartolo's moored boat sits to one side"
+        note: "Il passaggio al Pontile: campo largo sulle assi umide, Bartolo nella barca con la coperta marrone, i tre fratelli che procedono regolari senza fermarsi. La baia bassa è grigio-ferma e la luce è ancora bassa; il loro cammino punta già oltre il Pontile."
+      - id: s12_h03b
+        page_book: 6
+        text_split_marker: "La mano restò a metà"
+        image_status: TBD
+        pov: "eye-level close view from the boat side, Bartolo's raised hand lowering in the foreground while the three brothers continue away along the pier behind it"
+        note: "La mano che ricade: Bartolo resta nella barca, la mano scesa a metà del gesto in primo piano. Dietro, i tre sono già oltre sull'asse e rispondono solo con il cenno; vicino al palo la foglia gialla gira piano sull'acqua. Nessuno guarda il lettore, nessuno interrompe il proprio moto."
+
+  s12_h04:
+    location: guado_di_pietre_piatte
+    location_variant: tappa_di_passaggio_when_water_trembles_2_di_2
+    characters_in_scene: [gabriel, elias, noah, camminanti]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "I fratelli mangiano i cornetti in cammino; al guado non attraversano, ma si fermano sulla tappa da cui il sentiero sale."
+      - "Un camminante ermellino arriva da est con una carriola, saluta soltanto con la mano e prosegue nella direzione opposta."
+      - "Sull'acqua scorre una piccola piega controcorrente che non rompe il flusso; i fratelli la vedono e non la nominano."
+      - "Gli Orti del Cerchio sull'altra riva sono quasi spogli, con zolle scure di pioggia; nessun uccello acquatico."
+    subhooks:
+      - id: s12_h04a
+        page_book: 7
+        text_split_marker: "Al guado di pietre piatte, qualcuno stava passando"
+        image_status: TBD
+        pov: "eye-level from the side of the flat-stone ford, the ermine walker crossing with a wheelbarrow while the three brothers pause a few stones away"
+        note: "L'incrocio breve: il camminante ermellino passa con la carriola da est, una mano lascia il manico, sale e ricade. I tre fratelli, con i cornetti ancora nel viaggio, si fermano sulle pietre piatte e rispondono al gesto; le due direzioni restano separate."
+      - id: s12_h04b
+        page_book: 8
+        text_split_marker: "Sull'acqua, una piccola piega andava contro la corrente"
+        image_status: TBD
+        pov: "low close-up at water level beside the flat stones, the small countercurrent ripple in the foreground and the brothers' still lower legs at the frame edge"
+        note: "La piega nell'acqua: vista bassa sul flusso che continua, con l'increspatura piccola che va controcorrente ma resta dentro l'acqua. I fratelli sono soltanto margini fermi sulle pietre, senza indicare né reagire; gli Orti spogli possono restare sfocati oltre la riva."
+
+  s12_h05:
+    location: burrone
+    location_variant: cengia_grunto_pomeriggio_inoltrato
+    characters_in_scene: [grunto, gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [pagnotta_forno, cicatrice_grunto]
+    canonical_details:
+      - "HOOK FIRMA: Grunto è sulla cengia, immobile al sole; la cicatrice chiara sulla spalla deve essere leggibile."
+      - "Gabriel posa la pagnotta sulla pietra piatta e fa un passo indietro; Grunto annusa e mastica."
+      - "Lo scambio Buono?/Buono. è breve e la frase di Grunto è rivolta lontano, a se stesso o a chi non c'è; nessun nome proprio e nessuna figura del passato."
+      - "I tre fratelli non chiedono: stanno fermi, un passo indietro dalla pietra e da Grunto."
+    subhooks:
+      - id: s12_h05a
+        page_book: 9
+        text_split_marker: "Grunto era sulla cengia, dove sempre"
+        image_status: TBD
+        pov: "low wide view across the gorge ledge, Grunto standing in the sun above the arriving three brothers, the pale shoulder scar clearly readable"
+        note: "L'incontro: Grunto è già sulla cengia, fermo con i fianchi al sole e la cicatrice chiara sulla spalla. I tre arrivano dal sentiero e restano più bassi nella composizione; il Burrone dà profondità senza trasformarsi in scenario epico."
+      - id: s12_h05b
+        page_book: 10
+        text_split_marker: "Gabriel posò la pagnotta sulla pietra piatta"
+        image_status: TBD
+        pov: "eye-level close three-quarter view on the flat stone, Gabriel's hand just withdrawing after placing the loaf as Grunto lowers his muzzle to sniff it"
+        note: "Il rito della pagnotta: la pagnotta tiepida sulla pietra piatta, la mano di Gabriel che si è appena ritirata e il muso di Grunto che annusa. Elias e Noah restano un passo dietro, fermi; la distanza è pratica e rispettosa, non timorosa."
+      - id: s12_h05c
+        page_book: 11
+        text_split_marker: "Poi Grunto alzò il muso"
+        image_status: TBD
+        pov: "three-quarter medium view on Grunto after eating, his gaze directed far beyond the brothers while the three remain quiet at the opposite side of the ledge"
+        note: "Il frammento lasciato aperto: Grunto ha rialzato il muso e guarda lontano, non i fratelli. La pietra con le briciole della pagnotta resta fra loro; i tre ascoltano senza chiedere. Nessuna presenza evocata nel paesaggio e nessun elemento letterale per il passato di Grunto."
+
+  s12_h06:
+    location: burrone
+    location_variant: cengia_ripida_che_sale_verso_roccia_alta
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: [grunto]
+    objects_in_scene: []
+    canonical_details:
+      - "La cengia sale ripida verso Roccia Alta: in alcuni punti i fratelli usano le mani. Ordine invariabile: Gabriel davanti, Elias al centro, Noah ultimo."
+      - "Pietre calde al sole sopra e fredde sotto; parete in ombra a sinistra, luce obliqua che taglia la roccia a destra."
+      - "Dopo un piccolo rumore di zoccolo i fratelli si voltano una sola volta: il Burrone è vuoto, Grunto è già rientrato e non si mostra più."
+    subhooks:
+      - id: s12_h06a
+        page_book: 12
+        text_split_marker: "Salirono in fila"
+        image_status: TBD
+        pov: "low upward view from the narrow ledge, Gabriel climbing first, Elias following, Noah last, with hands placed on the rock where the path steepens"
+        note: "La salita che conoscono: vista bassa lungo la cengia stretta, i tre in fila precisa e con il peso del corpo in avanti sugli appigli. Gabriel apre la linea, Elias segue, Noah chiude; il sole obliquo e l'ombra della parete fanno sentire la differenza di temperatura della pietra."
+      - id: s12_h06b
+        page_book: 13
+        text_split_marker: "Quando si voltarono, una sola volta"
+        image_status: TBD
+        pov: "seen from just behind the three on the climbing path as they make their single look back toward the now-empty gorge below"
+        note: "L'unico voltarsi: i tre, ancora stretti sulla cengia, guardano una volta sola verso il Burrone ormai vuoto. Non compare Grunto, né una sua sagoma; il sentiero continua in alto e i loro corpi sono già orientati alla ripresa della salita."
+
+  s12_h07:
+    location: roccia_alta
+    location_variant: poggio_piatto_sopra_burrone_arrivo_e_seduta_sul_bordo
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Panorama-architrave: Roccia Alta è una piattaforma di pietra grigia con ciuffi d'erba secca tra le crepe."
+      - "L'isola è leggibile nel quadro: Foresta a ovest, Orti a nord-ovest, Villaggio con fumo sottile del Forno, Pontile e Bocca a sud, mare su tre lati, Montagne Gemelle vicinissime alle spalle."
+      - "Disposizione esatta sul bordo: Elias a sinistra, Noah al centro, Gabriel a destra; piedi nel vuoto e nessuna parola. Il Concerto non è ancora iniziato."
+    subhooks:
+      - id: s12_h07a
+        page_book: 14
+        text_split_marker: "Roccia Alta"
+        image_status: TBD
+        pov: "wide establishing view from slightly behind the rocky platform, the three brothers small on the edge and the whole island legible below them"
+        note: "L'arrivo alla vista intera: campo largo dalla piattaforma con l'isola distribuita sotto — Foresta, Orti, Villaggio, sottile fumo del Forno, Pontile, Bocca e mare. Le Montagne Gemelle restano vicine alle spalle del lettore; i tre sono piccoli e non ancora seduti, in rapporto alla scala del luogo."
+      - id: s12_h07b
+        page_book: 15
+        text_split_marker: "I tre si sedettero sul bordo"
+        image_status: TBD
+        pov: "eye-level side view along the cliff edge, Elias on the left, Noah in the centre and Gabriel on the right, their feet hanging over open space"
+        note: "La seduta muta: piano laterale sul bordo con l'ordine Elias-Noah-Gabriel inderogabile. I piedi ciondolano nel vuoto e la pietra calda tiene i tre alla stessa altezza; la vista lontana rimane presente ma non compete con la loro vicinanza silenziosa."
+
+  s12_h08:
+    location: roccia_alta
+    location_variant: concerto_tre_venti_insieme_unicum_saga
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "HOOK FIRMA e apice della saga: Taglio da est, Intreccio da ovest e dal centro, Mulinello da sud convergono sopra Roccia Alta senza annullarsi."
+      - "Il Concerto è aria piena dell'isola, non un suono letterale né un fenomeno magico; nessuna onomatopea."
+      - "I fratelli restano seduti nell'ordine Elias-Noah-Gabriel; i capelli si muovono in tre direzioni leggermente diverse."
+      - "Sole basso, dorato e non più caldo; i tre venti restano leggibili attraverso movimento naturale di aria, chiome, sale e correnti, non con effetti luminosi."
+    subhooks:
+      - id: s12_h08a
+        page_book: 16
+        text_split_marker: "Pomeriggio inoltrato. L'aria cambiò"
+        image_status: TBD
+        pov: "wide low view across Roccia Alta, the seated brothers small at the lower edge as three natural air currents converge above the platform and island"
+        note: "L'aria che si riunisce: tavola larga in cui la piattaforma e i tre seduti restano nel basso del quadro. Le correnti da est, ovest-centro e sud si leggono nella diversa direzione dell'aria e nelle masse del paesaggio, ma convivono senza scontro né ornamento fantastico."
+      - id: s12_h08b
+        page_book: 17
+        text_split_marker: "I capelli dei fratelli si mossero in tre direzioni"
+        image_status: TBD
+        pov: "medium three-quarter view from behind the seated brothers, close enough to read each head of hair moving in a subtly different direction against the late golden air"
+        note: "L'isola come corpo solo: i tre fratelli sono visti da dietro e di tre quarti sul bordo, abbastanza vicini perché i capelli mossi in direzioni lievemente diverse siano il segno del Concerto. Sotto di loro restano foresta, mare e pietra; il pieno dell'aria è silenzioso e non richiede alcun gesto dei bambini."
+
+  s12_h09:
+    location: roccia_alta
+    location_variant: bordo_seduti_momento_soglia_terna_strato_3_tenere_zero_parole
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Architrave zero-parole: Gabriel posa il palmo destro sulla pietra calda; Noah posa la propria mano sulla sua; Elias appoggia il gomito sul braccio di Gabriel."
+      - "Il gesto procede per pochi secondi e non è una soluzione né una posa. Il Concerto continua intorno a loro."
+      - "Primo piano basso sulle mani e sul gomito: il volto di Gabriel non deve diventare il primo piano; il taglio della spalla può restare presente."
+    subhooks:
+      - id: s12_h09a
+        page_book: 18
+        text_split_marker: "Gabriel appoggiò il palmo della mano sulla pietra calda"
+        image_status: TBD
+        pov: "low close-up at rock level on Gabriel's right palm newly resting on the sun-warmed stone, with the cliff edge and the other brothers only at the frame margins"
+        note: "Il primo gesto: il palmo destro di Gabriel si posa sulla pietra calda, senza enfasi. Noah ed Elias non hanno ancora risposto; le loro presenze restano ai margini e i piedi sul bordo ricordano l'altezza di Roccia Alta."
+      - id: s12_h09b
+        page_book: 19
+        text_split_marker: "Pochi secondi dopo, Noah"
+        image_status: TBD
+        pov: "tight three-quarter close-up on the three connected gestures on the rock: Noah's small hand over Gabriel's palm and Elias's elbow resting on Gabriel's arm"
+        note: "Il gesto completo: la mano piccola di Noah si posa sulla mano di Gabriel e il gomito di Elias raggiunge il braccio dall'altro lato. Non servono volti né sguardi incrociati; la pietra, le mani e il tratto delle maniche rendono la risposta fisica e muta."
+
+  s12_h10:
+    location: forno
+    location_variant: tavolo_piccolo_quattro_sedie_chiusura_saga_braccialetto_al_polso
+    characters_in_scene: [fiamma, gabriel, elias, noah]
+    characters_offscreen_or_distant: [bartolo]
+    objects_in_scene: [braccialetto_s9]
+    canonical_details:
+      - "Chiusura ad anello con h01: sera al Forno, tavolo piccolo vicino alla porta con quattro sedie, una candela, tazze fumanti e Piazza blu-nera oltre la finestra."
+      - "Fiamma è in modalità ferma: tira fuori un dolce normale, lo taglia in quattro fette uguali, versa l'infuso e si siede per la prima volta con i fratelli."
+      - "Noah ha le gambe che dondolano; Elias mastica piano; Gabriel prende una briciola dal piatto di Noah e Noah gli sposta il piatto verso di sé."
+      - "Il braccialetto di Noah è al polso destro di Gabriel, con castagna rugata appena visibile alla candela. Bartolo è soltanto presenza narrativa lontana: non appare."
+      - "Il Mulinello cala fuori; nessun sigillo scritto o discorso sul significato del giorno."
+    subhooks:
+      - id: s12_h10a
+        page_book: 20
+        text_split_marker: "Aprì il forno. Tirò fuori un dolce"
+        image_status: TBD
+        pov: "eye-level three-quarter view inside the Forno, Fiamma dividing the small cake into four equal slices on the table while the three brothers wait close by"
+        note: "Le quattro fette: Fiamma mette il piccolo dolce sul tavolo e lo divide in quattro parti uguali. I tre fratelli aspettano vicini alle quattro sedie, senza cerimonia e senza parole; il calore residuo del Forno e la candela preparano la quiete della tavola."
+      - id: s12_h10b
+        page_book: 21
+        text_split_marker: "Mangiarono in silenzio"
+        image_status: TBD
+        pov: "three-quarter view from the table corner, all four seated around the small table with the candle between them and the blue-black window beyond"
+        note: "Il sigillo visivo: Fiamma siede con i tre per la prima volta. Le tazze fumano, il dolce è già mangiato a metà; Noah dondola le gambe, Elias mastica piano, Gabriel prende una briciola dal piatto di Noah e Noah sposta il piatto verso di lui. Al polso destro di Gabriel il braccialetto con la castagna rugata è appena raggiunto dalla candela; oltre la finestra, Piazza e Albero Vecchio dormono nel blu-nero."
