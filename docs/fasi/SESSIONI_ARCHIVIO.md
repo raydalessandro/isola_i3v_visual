@@ -6,6 +6,55 @@
 
 ---
 
+## Sessione 2026-07-05 (cont.) — Check s10 + cancello CI consegne (manutentore)
+
+Check tecnico della PR #55 (s10, collaboratrice) + automazione per le prossime consegne, così le PR pulite passano senza revisione manuale.
+
+- **PR #55 s10** verificata a mano: `s10.yaml` YAML valido (21 subhook = 21 pagine, sequenza 1–21 completa, tutti con id/pov/note/marker, tutti `image_status: TBD`); 4 reference PNG valide, esattamente 1536×2304, match 1:1 col README, nessun extra; tocca solo `_annotations/` + nuova `_proposte/`. **Mergiata.**
+- **Cancello CI `consegna-tecnica`**: validatore `audit_delivery.py` (8 casi collaudati: consegna reale s10 PASS + mista/multi-storia/foto-intrusa/file-non-immagine/scena-orfana/png-in-hd FAIL + PR-codice non-applicabile) + workflow su ogni PR verso main. **Primo run reale sulla #55 = verde** (log CI: `6 file, s10, PASS`). Landato con commit diretto su main (niente branch nuovi da cancellare).
+- ⚠️ **Decisioni a Ray (non risolte, solo segnalate)** — `s10.yaml canon_additions_todo`:
+  - *Bartolo (HIGH, conflitto fonti):* `_porting_grafo/.../s10_canonical.json` lo mette sulle rocce, prosa definitiva "dentro la barca". La collaboratrice ha seguito la prosa. Il canonical json va corretto o marcato superato.
+  - *casa_fratelli interno (HIGH):* 9 subhook su 21 dentro casa, ma manca come entity/scheda (grafo lo tratta solo come qualifier di `piazza_villaggio`). Torna in s12.
+  - *via_del_pontile (HIGH):* manca `prompt_grok.md`, scheda ancora provvisoria; h08 mostra i primi bordi all'alba.
+  - *mantenitori fringuello (HIGH):* variante con scopa per il cameo s10; manca `prompt_grok.md`.
+  - + medium/low: lanterna_velata panno (colonnetta vs assi), pontile_bocca variante alba, nido_vuoto su comodino, amo cameo lontano.
+  - **Nuova convenzione `_proposte/`**: cartella top-level nuova (non in CLAUDE.md). Da benedire come luogo delle reference provvisorie, o spostare in `contributi/`.
+
+## Sessione 2026-07-05 — Scene HD Vol 2 (s04–s06) + fix montaggio HD-only (manutentore)
+
+Tre branch illustratore preparate da Ray (`claude/hd-storia-s04/05/06`) con le scene HD del Volume 2. Verifica tecnica → scoperta e fix di un bloccante del montaggio → build reale del Vol 2 → merge di tutto su main.
+
+### A. Verifica delle 3 branch (tecnicamente sane)
+
+- Immagini ↔ subhook 1:1 (s04 26/26, s05 24/24, s06 19/19), zero orfani, nessun PNG/`_v2` residuo, YAML valido, merge puliti su main HEAD.
+- ⚠️ **Dimensioni sotto standard scene v1.1** (tutte 1536×2304 o inferiori; alcune s05 a 1024×1536 / 1086×1448 / 1632×2176). Ray: banner "sotto spec" accettato per questo giro, revisione a fine ciclo.
+- 11 subhook placeholder aggiunti in annotations s04/s05 (`book_pages_total` 20→26 e 19→24) con `pov`/`page_book`/`text_split_marker` = "da compilare". Non in prosa → fuori dal montaggio (nessun crash). Pattern che si ripeterà nelle prossime storie.
+
+### B. Bloccante trovato + fix (PR #54)
+
+- **Causa:** `build_volume.parse_story_md`, con `@image TBD` in prosa, cercava solo il proxy low-res `_scene/sNN/sNN_hMMx.jpg`. Vol 1 ce l'ha; Vol 2 consegna **solo `_hd/`** → `img_path=None` → placeholder avorio su ogni scena, HD ignorati.
+- **Fix:** aggiunta la sonda dell'HD convenzionale `_scene/sNN/_hd/{id}_hd.jpg` come terzo livello. Retro-compatibile (Vol 1 invariato), durevole per le prossime branch HD-only.
+- **Verifica reale:** `build_volume.py --volume 2` (Pillow/reportlab/numpy/pymupdf installati ad hoc) → **58/58 scene montate, 0 placeholder**, PDF libro (156MB) + stampa (165MB), 96 facciate. Ispezione visiva pagine confermata.
+
+### C. Merge su main (separate 3 + fix)
+
+- PR #51 (s04), #52 (s05), #53 (s06) — contenuto illustratore. PR #54 — fix manutentore `build_volume`. Tutte mergiate su main.
+- `make sync` post-merge → chiuso il **debito derivati stale**: 12 writing_briefs + entities (mirror ×2) + dashboard rigenerati e committati.
+
+### D. Note
+
+- `check_image_quality` usa ancora la soglia v1 (1664×2496), non v1.1 (1824×2736): tutte le scene Vol 2 la mancano comunque. Soglia non toccata.
+- Ambiente remoto: Pillow/reportlab/numpy/pymupdf installati ad hoc per il build; in CI sono già previsti.
+
+### E. Prossimo passo Ray
+
+1. **Cancellare da UI GitHub** (il proxy nega la delete dei ref da CLI): `claude/hd-storia-s04`, `claude/hd-storia-s05`, `claude/hd-storia-s06`, `claude/fix-build-volume-hd-only`, `claude/volume-2-branch-verify-hebg9i`.
+2. Revisione immagini Vol 2 a fine ciclo (dimensioni sotto spec → sostituire HD ≥1824×2736 per togliere i banner).
+3. Wiring in prosa degli 11 subhook placeholder (marker `@subhook` + `page_book`) quando decisi.
+4. TODO Vercel ancora aperto (deploy fermo).
+
+---
+
 ## Sessione 2026-06-22 — Integrazione subhook pov Vol 2 + scenografo v1.2 (manutentore)
 
 Due pacchetti preparati da Ray (zip), integrati come una branch per zip, verificati e mergiati su main nell'ordine richiesto (skill prima, contenuto poi). Le due modifiche sono collegate: il campo `pov` nelle annotations alimenta il blocco POV obbligatorio del prompt scena.
