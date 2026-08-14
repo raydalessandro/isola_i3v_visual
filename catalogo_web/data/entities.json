@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-14T14:30:48",
+  "generated_at": "2026-08-14T15:18:24",
   "meta": {
-    "generated_at": "2026-08-14T14:30:48",
+    "generated_at": "2026-08-14T15:18:24",
     "graph_version": "1.2.0",
     "schema_version": 1.4,
     "graph_last_updated": "2026-06-10",
@@ -131,7 +131,7 @@
                     "famiglia": "luogo",
                     "sottotipo": "ford",
                     "status": "provvisorio",
-                    "n_images": 1,
+                    "n_images": 0,
                     "folder_path": "visual/luoghi/perimetro/fiume_che_gira/guado_di_pietre_piatte"
                   }
                 }
@@ -448,7 +448,7 @@
                 "famiglia": "luogo",
                 "sottotipo": "landmark",
                 "status": "provvisorio",
-                "n_images": 1,
+                "n_images": 0,
                 "folder_path": "visual/luoghi/quartiere_aria/roccia_alta"
               }
             },
@@ -2021,14 +2021,8 @@
         "fiume_che_gira",
         "guado_di_pietre_piatte"
       ],
-      "images": [
-        {
-          "filename": "guado_di_pietre_piatte_canonica_v1_panoramica.jpg",
-          "path": "visual/luoghi/perimetro/fiume_che_gira/guado_di_pietre_piatte/immagini/guado_di_pietre_piatte_canonica_v1_panoramica.jpg",
-          "size_kb": 7932
-        }
-      ],
-      "n_images": 1
+      "images": [],
+      "n_images": 0
     },
     {
       "id": "fiume_che_gira",
@@ -3843,14 +3837,8 @@
         "quartiere_aria",
         "roccia_alta"
       ],
-      "images": [
-        {
-          "filename": "roccia_alta_canonica_v1_panoramica.jpg",
-          "path": "visual/luoghi/quartiere_aria/roccia_alta/immagini/roccia_alta_canonica_v1_panoramica.jpg",
-          "size_kb": 7861
-        }
-      ],
-      "n_images": 1
+      "images": [],
+      "n_images": 0
     },
     {
       "id": "sentiero_al_guado",
