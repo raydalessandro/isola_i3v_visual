@@ -1,0 +1,306 @@
+sid: s11
+title: La Festa del Raccolto
+note: |
+  Annotazioni scenografiche derivate dalla prosa definitiva di s11.
+  I dieci hook narrativi sono suddivisi in 21 subhook: una pagina libro e una
+  immagine-scena per subhook. Le note definiscono beat, azione focale,
+  inquadratura, continuità e vincoli; non ripetono stylesheet, tratti fisici
+  o firme ambientali, che provengono dalle fonti canoniche richiamate dalla
+  skill scenografo.
+
+  VINCOLI TRASVERSALI DI s11 (valgono per OGNI subhook, non ripetuti nelle note):
+  - Festa del Raccolto: autunno pieno, luce naturale che evolve da alba fredda
+    a crepuscolo arancione. Il passaggio di tempo deve restare leggibile e
+    coerente tra le pagine.
+  - Il tono è corale ma non affollato: i collettivi restano figure di mondo,
+    mai una folla indistinta che nasconde l'azione focale.
+  - Le Vecchie del Mercato sono sempre tre, sedute sulla Panca di Pietra,
+    mai individuate per nome né rese come risolutrici esplicite. La centrale
+    compie il gesto dell'indicare in silenzio; le due laterali guardano avanti.
+  - I coni dipinti restano oggetti di carta leggera, con strisce, puntini e
+    piccoli motivi dipinti a mano. Il quarto cono di Elias è intenzionale,
+    non un errore, e non viene mai spiegato.
+  - Elias non deve essere illustrato come triste, escluso o rassegnato: la sua
+    traiettoria è un riconoscimento muto che diventa gesto pratico verso Bru.
+  - Non inserire testo, onomatopee, cartelli o lettering: TOK-TOK-TOK e le
+    battute sono composti tipograficamente in pagina, non dentro l'immagine.
+  - In ogni scena, la fascia superiore del frame resta quieta e poco dettagliata
+    per il testo della pagina; il formato delle immagini di scena è verticale 2:3.
+
+book_pages_total: 21
+
+hooks:
+
+  s11_h01:
+    location: orti_del_cerchio
+    location_variant: alba_raccolto_autunnale_inizio_festa
+    characters_in_scene: [coltivatori_del_cerchio, pastori]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Apertura: autunno pieno. Castagne e ghiande già cadute; l'erba alta degli Orti è tagliata e legata."
+      - "All'alba i Coltivatori chiudono i sacchi in fila sui filari; hanno il fiato bianco davanti alla bocca."
+      - "I Pastori scendono dal versante alto come puntini grigi, con mantelli e zaini: tutti convergono in piazza senza essere chiamati."
+      - "Luce bassa da est, radente sui sacchi e sulla bruma; nessun fratello è in scena."
+    subhooks:
+      - id: s11_h01a
+        page_book: 1
+        text_split_marker: "L'autunno era pieno"
+        image_status: TBD
+        pov: "wide establishing view from the low eastern edge of the orchards, looking across parallel harvest rows toward the high slope"
+        note: "Tavola d'apertura: i filari degli Orti all'alba, l'erba alta già tagliata e legata in fasci ocra, una fila di sacchi in piedi lungo il terreno. I Coltivatori chiudono gli ultimi sacchi nel terzo basso della scena; il sole basso da est taglia lateralmente la bruma e rende visibile il fiato bianco. In alto resta il versante quieto, prima che il lettore noti chi sta scendendo."
+      - id: s11_h01b
+        page_book: 2
+        text_split_marker: "Più in alto, sul versante"
+        image_status: TBD
+        pov: "telephoto-like high-slope view looking diagonally down toward the orchard rows, the descending shepherds small against the hillside"
+        note: "Il movimento verso la festa: sul versante, i Pastori scendono in una linea rada, piccoli e grigi, mantelli e zaini leggibili senza individuarli. In basso, lontani, i filari e i sacchi già pronti danno la misura della distanza. Non è una marcia né un raduno chiamato: è la discesa annuale, naturale e silenziosa."
+
+  s11_h02:
+    location: piazza_villaggio
+    location_variant: mezzogiorno_allestimento_banchi_festa_sotto_albero_vecchio
+    characters_in_scene: [nodo, elias, salvia, stria]
+    characters_offscreen_or_distant: [fiamma]
+    objects_in_scene: [corda_nodo]
+    canonical_details:
+      - "A mezzogiorno la Piazza è piena e i banchi sono sotto l'Albero Vecchio."
+      - "Nodo sta finendo un banco improvvisato; Elias gli passa una corda intrecciata con il nodo imparato da Nodo."
+      - "Salvia attraversa con un cesto a tracolla contenente una mazza di rosmarino fresco e lo posa al banco di Fiamma, poi esce."
+      - "Stria arriva dalla scuola con una scatola sotto il braccio. TOK-TOK-TOK è solo tipografia, non testo in immagine."
+    subhooks:
+      - id: s11_h02a
+        page_book: 3
+        text_split_marker: "Sotto l'Albero Vecchio"
+        image_status: TBD
+        pov: "eye-level three-quarter view under the Old Tree, focused on Nodo's improvised stall and the rope passing from Elias's hands to his"
+        note: "Il banco e la corda: Nodo sistema le assi del banco sotto l'Albero Vecchio; Elias, di lato, gli passa la corda intrecciata. La corda è la linea d'azione e il gesto di Elias è rapido ma non esibito. Nodo la stringe e fa un ulteriore giro: il suono dei colpi sul banco resta fuori dall'immagine. La piazza della festa si avverte ai bordi, senza affollare il centro."
+      - id: s11_h02b
+        page_book: 4
+        text_split_marker: "Salvia attraversò la piazza"
+        image_status: TBD
+        pov: "eye-level lateral view across the square, Salvia moving toward Fiamma's stall while Stria enters from the school side in the distance"
+        note: "L'Intreccio del mattino: Salvia attraversa la Piazza con il cesto a tracolla e il rosmarino fresco ben visibile in cima; posa la mazza sul banco di Fiamma e già continua oltre il margine. Sullo sfondo, dalla direzione della scuola, arriva Stria con la scatola sotto il braccio. I banchi e le foglie sul selciato definiscono una festa appena costruita, non ancora nel pieno."
+
+  s11_h03:
+    location: piazza_villaggio
+    location_variant: mezzogiorno_stria_distribuzione_coni_dipinti
+    characters_in_scene: [stria, gabriel, elias, noah, pun, cardo, toba, bru]
+    characters_offscreen_or_distant: [memolo, bartolo, rovo]
+    objects_in_scene: []
+    canonical_details:
+      - "Stria distribuisce un cono dipinto a mano per ogni cucciolo e per ogni bambino."
+      - "Pun riceve un cono per Mèmolo, Cardo per sé, Toba per Bartolo e Bru per Rovo."
+      - "Gabriel e Noah ne ricevono uno; Elias riceve quattro coni invece di tre."
+      - "Stria agisce in fretta, non spiega e guarda Elias mezzo secondo più del solito prima di proseguire."
+    subhooks:
+      - id: s11_h03a
+        page_book: 5
+        text_split_marker: "Tirò fuori i coni di carta"
+        image_status: TBD
+        pov: "slightly high medium view over Stria's open box, with several small hands receiving painted paper cones around its edge"
+        note: "La distribuzione: la scatola aperta di Stria domina il basso della tavola e rivela coni di carta dipinti a mano, diversi per strisce, puntini e piccoli motivi. Le mani dei cuccioli e dei bambini entrano attorno alla scatola; il gesto resta veloce, generoso e non cerimoniale. Bru riceve il cono destinato a Rovo, ma Rovo non è nell'inquadratura."
+      - id: s11_h03b
+        page_book: 6
+        text_split_marker: "A Elias mise in mano quattro coni"
+        image_status: TBD
+        pov: "tight eye-level close view on Elias's receiving hand holding four painted paper cones, Stria's hand just withdrawing and her face turning away"
+        note: "Il quarto cono: primo piano sulle quattro punte di carta nella mano di Elias, chiaramente contabili ma senza enfasi grafica. Gabriel e Noah, appena dietro o ai lati sfocati, hanno ciascuno il proprio cono. Stria ritira la mano, lo guarda un istante appena più lungo e si sta già voltando per continuare: il mistero è nel gesto che passa, non in una reazione teatrale."
+
+  s11_h04:
+    location: piazza_villaggio
+    location_variant: mezzogiorno_fondo_piazza_prova_forza_pastori
+    characters_in_scene: [gabriel, elias, pastori]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "In fondo alla Piazza i Pastori hanno posato un sacco grosso di castagne e provano a sollevarlo per scherzo."
+      - "Gabriel solleva il sacco dal ginocchio alla spalla, poi sopra la testa; riceve risate e applausi."
+      - "Un Pastore esclama: «Il maggiore dei tre, eh!». Elias sente da due banchi più in là e torna a sistemare corde sul tavolo."
+      - "Gabriel non sa cosa succede a Elias: la scena non trasforma l'applauso in conflitto esplicito."
+    subhooks:
+      - id: s11_h04a
+        page_book: 7
+        text_split_marker: "Gabriel rise. Si abbassò"
+        image_status: TBD
+        pov: "low three-quarter view from within the shepherds' loose circle, looking up at Gabriel lifting the chestnut sack overhead"
+        note: "La prova di forza: Gabriel solleva il sacco di iuta fino sopra la testa nel cerchio aperto dei Pastori. Le risate e gli applausi si leggono in posture vive, non in bocche gridate o segni testuali. Il sacco pesa davvero, ma Gabriel ride; le castagne restano appena intraviste vicino alla cucitura o alla bocca del sacco."
+      - id: s11_h04b
+        page_book: 8
+        text_split_marker: "Due banchi più in là, Elias sentì"
+        image_status: TBD
+        pov: "medium side view from Elias's stall, the celebration softened in the far background while Elias turns back to the ropes on the table"
+        note: "La pressione laterale senza dramma: in primo piano Elias gira il corpo verso il tavolo e rimette ordine nelle corde, con le mani già impegnate in un nodo. Sul fondo, oltre due banchi, Gabriel è ancora nel cerchio festoso tra i Pastori. La distanza fisica è visibile; Elias non guarda il lettore e non appare sconfitto, soltanto concentrato sul proprio gesto."
+
+  s11_h05:
+    location: mercato_del_mezzogiorno_panca_di_pietra
+    location_variant: mezzogiorno_pomo_rotola_verso_panca_di_pietra
+    characters_in_scene: [noah, cardo, mercato_del_mezzogiorno]
+    characters_offscreen_or_distant: [elias]
+    objects_in_scene: [pallone_di_stoffa_cucita]
+    canonical_details:
+      - "Tra banchi e case esterne passano carriole dei Camminanti; i tre fratelli ricambiano i saluti alzando la mano."
+      - "Lo sgabello delle mele si rovescia durante un gioco dei cuccioli; un pomo rosso rotola fino alle Vecchie del Mercato."
+      - "Una sola Vecchia abbassa la mano e ferma il pomo col palmo, poi lo tiene. Le Vecchie non sono individuate per nome."
+      - "Noah ride forte e Cardo lo prende per il braccio trascinandolo verso un altro gioco. Il pallone di stoffa cucita è presente ai margini dei giochi."
+    subhooks:
+      - id: s11_h05a
+        page_book: 9
+        text_split_marker: "Più in là, lo sgabello con sopra le mele si rovesciò"
+        image_status: TBD
+        pov: "low ground-level view following the red apple across the paving toward the stone bench, one old hand descending into the frame"
+        note: "Il pomo che rotola: lo sgabello rovesciato e alcune mele restano sfocati all'origine della traiettoria; il pomo rosso lucido percorre il selciato verso la Panca di Pietra. Il palmo di una delle Vecchie scende lentamente e lo ferma. Le tre figure sulla panca restano massa silenziosa nell'ombra: l'azione centrale è il frutto che si arresta, non un ritratto della Vecchia."
+      - id: s11_h05b
+        page_book: 10
+        text_split_marker: "Noah rise forte"
+        image_status: TBD
+        pov: "eye-level lively medium view beside the games, Cardo pulling Noah by the arm toward the next game, the sewn cloth ball at the frame edge"
+        note: "La fuga nel gioco: Noah ride apertamente mentre Cardo lo afferra per il braccio e lo tira verso un altro gioco, entrambi in moto verso il margine. Il pallone di stoffa cucita resta basso e laterale tra gli oggetti del gioco, senza diventare protagonista. Sullo sfondo la festa continua morbida; Elias può essere solo una presenza distante che torna al proprio banco, mai centro del quadro."
+
+  s11_h06:
+    location: mercato_del_mezzogiorno_panca_di_pietra
+    location_variant: pomeriggio_ombra_lunga_riconoscimento_muto_elias
+    characters_in_scene: [elias, mercato_del_mezzogiorno]
+    characters_offscreen_or_distant: []
+    objects_in_scene: [corda_nodo]
+    canonical_details:
+      - "Il pomeriggio scende, la festa rallenta e i banchi cominciano a chiudere."
+      - "Sulla Panca di Pietra, sotto l'Albero Vecchio, siedono tre Vecchie: una al centro e due ai lati."
+      - "Elias passa con quattro coni in una mano e alcune corde nell'altra, senza ricordare con precisione dove stesse andando."
+      - "La Vecchia centrale alza il braccio, indica solo Elias, lo guarda negli occhi e annuisce piano; le altre due non si voltano."
+    subhooks:
+      - id: s11_h06a
+        page_book: 11
+        text_split_marker: "Sotto l'Albero Vecchio, sulla Panca di Pietra"
+        image_status: TBD
+        pov: "eye-level wide view beneath the Old Tree, the three Old Women aligned on the stone bench while Elias approaches from the sunlit square"
+        note: "La pausa della festa: il banco e la piazza, ormai meno animati, si aprono dietro all'ombra dell'Albero Vecchio. In ombra piena, le tre Vecchie siedono sulla Panca di Pietra nella disposizione canonica, una centrale e due laterali. Elias passa davanti con i quattro coni e le corde; non è ancora fermo, e il lettore percepisce il contrasto fra la sua traiettoria e la loro immobilità."
+      - id: s11_h06b
+        page_book: 12
+        text_split_marker: "La Vecchia al centro alzò il braccio"
+        image_status: TBD
+        pov: "eye-level close three-quarter view across the stone bench, the central Old Woman's raised arm pointing at Elias as their eyes meet"
+        note: "L'indicare: la Vecchia centrale alza il braccio verso Elias e lo guarda una sola volta; il gesto è lento, netto e minimale. Elias si è fermato di tre quarti con i quattro coni ancora nella mano visibile. Le due Vecchie laterali restano rivolte avanti, non partecipano con lo sguardo. Nessun'altra figura interrompe la linea silenziosa tra gesto e ricezione."
+
+  s11_h07:
+    location: albero_vecchio
+    location_variant: pomeriggio_elias_fermo_dopo_indicazione
+    characters_in_scene: [elias]
+    characters_offscreen_or_distant: [mercato_del_mezzogiorno]
+    objects_in_scene: [corda_nodo]
+    canonical_details:
+      - "Elias resta fermo qualche istante dopo il riconoscimento; non sa precisamente che cosa sia successo, ma sa che è successo qualcosa."
+      - "Tira il fiato e dice piano: «Va bene.» Non parla a nessuno in particolare."
+      - "Ha ancora quattro coni in una mano e le corde nell'altra; li riconta: uno, due, tre, quattro."
+      - "La frase-soglia non deve diventare didascalica, rassegnata o celebrativa."
+    subhooks:
+      - id: s11_h07a
+        page_book: 13
+        text_split_marker: "Elias si fermò"
+        image_status: TBD
+        pov: "intimate eye-level medium portrait of Elias standing still under the Old Tree, the market activity softened far behind him"
+        note: "Il respiro prima delle due parole: Elias immobile sotto l'Albero Vecchio, con la festa ormai lontana e sfocata dietro. Il volto non cerca pubblico né risposta; si legge una pausa che si assesta. Le Vecchie sono fuori campo o appena una forma lontana oltre la spalla. Il senso è attenzione ricevuta, non malinconia."
+      - id: s11_h07b
+        page_book: 14
+        text_split_marker: "Aveva ancora i quattro coni in mano"
+        image_status: TBD
+        pov: "close overhead view of Elias's hands, four painted paper cone tips counted in one palm and the gathered rope in the other"
+        note: "Uno, due, tre, quattro: dettaglio ravvicinato sulle mani di Elias. I quattro coni formano una piccola sequenza chiara nel palmo; nell'altra mano restano alcune corde raccolte. Nessun volto e nessun segno grafico che numeri: il conteggio esiste nel ritmo visivo delle quattro punte, in una pagina calma e concreta."
+
+  s11_h08:
+    location: pozzo_piazza
+    location_variant: pomeriggio_tardi_quarto_cono_da_fiamma_a_bru
+    characters_in_scene: [elias, gabriel, noah, fiamma, bru]
+    characters_offscreen_or_distant: [rovo]
+    objects_in_scene: []
+    canonical_details:
+      - "Al banco di Fiamma, Gabriel e Noah mangiano una fetta di dolce di castagne. Fiamma porge a Elias un pezzo e gli sistema una ciocca con una mano infarinata, poi torna a infornare."
+      - "Elias siede, posa quattro coni sul tavolo e ne lascia uno nella mano dopo averne dato uno a Gabriel, uno a Noah e uno a sé."
+      - "Accanto al Pozzo, Bru è solo e ha già il cono ricevuto da Stria per Rovo. Elias gli mette il quarto cono in mano."
+      - "Bru prende il cono, lo guarda e annuisce una sola volta, piccolissimo. Rovo resta fuori campo."
+    subhooks:
+      - id: s11_h08a
+        page_book: 15
+        text_split_marker: "Andò al banco di Fiamma"
+        image_status: TBD
+        pov: "eye-level three-quarter view across Fiamma's stall table, Elias arriving as Gabriel and Noah eat chestnut cake and Fiamma reaches with her floury hand"
+        note: "Il banco di Fiamma: Gabriel e Noah sono già seduti o raccolti al tavolo con una fetta di dolce di castagne; Elias arriva con i quattro coni. Fiamma gli mette in mano un pezzo e gli sistema una ciocca con la mano infarinata, senza fermare il proprio lavoro né attendere una risposta. I quattro coni poi sul tavolo rendono leggibile il piccolo surplus; Elias prende i tre destinati ai fratelli e a sé, lasciandone uno nella mano."
+      - id: s11_h08b
+        page_book: 16
+        text_split_marker: "Andò al Pozzo"
+        image_status: TBD
+        pov: "low intimate view beside the well, Elias crouched to place the fourth cone in Bru's small hand, with Rovo's earlier cone resting beside him"
+        note: "Il quarto cono trova posto: accanto alla pietra del Pozzo, Bru siede solo con già vicino il cono ricevuto per Rovo. Elias si abbassa al suo livello e mette il quarto cono nella mano piccola di Bru. I due coni restano accostati e leggibili, ma l'azione è nel passaggio di mano. Bru guarda il cono e annuisce una sola volta, minuscola; Rovo non appare e non è suggerito da sagome."
+
+  s11_h09:
+    location: piazza_villaggio
+    location_variant: pomeriggio_tardi_banco_bartolo_banco_fiamma_parete_forno
+    characters_in_scene: [bartolo, fiamma, pescatori_case_basse]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Una pescatrice delle Case Basse, oggi rondine di mare, si avvicina al banco di Bartolo, prende un frutto strano e ricambia il suo cenno del mento."
+      - "Bartolo è arrivato dal Pontile a metà pomeriggio e ha posato un cesto al banco di Fiamma: contiene frutti che sull'isola non crescono."
+      - "I colori dei frutti restano sospesi fra rosa, viola e giallo, non assimilati a frutti noti dell'isola. Bartolo non dice da dove vengono."
+      - "Bartolo alza una mano in saluto e la riabbassa, poi si siede su uno sgabello accanto alla parete del Forno e guarda la Piazza."
+      - "Il collo si allunga lentamente verso il rumore dei cuccioli, poi si ferma: Bartolo osserva e non commenta."
+    subhooks:
+      - id: s11_h09a
+        page_book: 17
+        text_split_marker: "Bartolo era arrivato a metà pomeriggio dal Pontile"
+        image_status: TBD
+        pov: "eye-level three-quarter view of Bartolo setting a basket of unfamiliar fruit on Fiamma's stall, his raised hand halfway through a quiet greeting"
+        note: "L'arrivo delle cose da oltre: Bartolo posa il cesto al banco di Fiamma. I frutti dai colori insoliti — sospesi fra rosa, viola e giallo — sono ben visibili nel cesto senza somigliare a mele, castagne o altra raccolta dell'isola. Bartolo alza una mano in un saluto breve e già la riabbassa; Fiamma riceve il gesto senza trasformarlo in cerimonia. Il Pontile può restare solo evocato dalla direzione da cui Bartolo è arrivato, non come secondo luogo nel quadro."
+      - id: s11_h09b
+        page_book: 18
+        text_split_marker: "Al banco di Bartolo si avvicinò qualcuna"
+        image_status: TBD
+        pov: "eye-level medium view at Bartolo's stall, the sea-swallow fisher taking one unfamiliar fruit as Bartolo tilts the counter and nods"
+        note: "Lo scambio senza parole: una pescatrice delle Case Basse, rondine di mare, si avvicina al banco di Bartolo. Bartolo inclina appena il banco con il cenno del mento; lei sceglie un solo frutto e restituisce il cenno prima di andare via. I frutti restano il centro cromatico misurato della scena. Nessuna parola scritta o moneta in primo piano: conta la reciprocità essenziale del gesto."
+      - id: s11_h09c
+        page_book: 19
+        text_split_marker: "Si sedette su uno sgabello accanto alla parete del Forno"
+        image_status: TBD
+        pov: "quiet side view of Bartolo seated on a stool by the Forno wall, his long neck angled toward the distant sound of the cubs"
+        note: "Bartolo vede e basta: seduto sullo sgabello accanto alla parete del Forno, guarda la Piazza che procede verso la chiusura. Il collo si allunga lento verso il rumore dei cuccioli fuori quadro e poi si arresta. Non compie altro gesto e non ha interlocutori: la pagina restituisce il suo modo di essere dentro una festa senza occupare il centro della festa."
+
+  s11_h10:
+    location: piazza_villaggio
+    location_variant: crepuscolo_mulinello_verso_casa_e_interno_casa_fratelli
+    characters_in_scene: [gabriel, elias, noah]
+    characters_offscreen_or_distant: []
+    objects_in_scene: []
+    canonical_details:
+      - "Il sole cala; il Mulinello passa basso sulla Piazza mentre i banchi si smontano e le lanterne ai bordi si accendono una a una."
+      - "Ordine di cammino invariabile: Gabriel davanti, Noah in mezzo, Elias in coda. Le loro sagome sono viola contro il cielo arancione."
+      - "In casa la lampada è accesa sul tavolo; Noah gioca sul pavimento con qualcosa che ormai non guarda più."
+      - "Elias riferisce: «Oggi mi ha indicato una vecchia.» Gabriel domanda solo «Quale?»; Elias risponde «Una.» Gabriel non insiste."
+    subhooks:
+      - id: s11_h10a
+        page_book: 20
+        text_split_marker: "Cominciò a calare il sole"
+        image_status: TBD
+        pov: "wide rear view from the village square, the three brothers walking toward home beneath an orange sky while the low Mulinello moves through closing stalls"
+        note: "La chiusura esterna: la Piazza si svuota, i banchi si smontano e le lanterne ai bordi si accendono una alla volta. In basso, i tre fratelli camminano verso casa nella sequenza precisa Gabriel davanti, Noah in mezzo, Elias ultimo; le loro sagome viola avanzano contro il cielo arancione. Il Mulinello passa basso tra foglie secche e banchi, senza assumere forma o volto."
+      - id: s11_h10b
+        page_book: 21
+        text_split_marker: "A casa, la lampada accesa sul tavolo"
+        image_status: TBD
+        pov: "eye-level interior view from the far side of the warm table, Gabriel and Elias seated in quiet conversation while Noah plays on the floor in the background"
+        note: "La chiusura interna: la lampada accesa rende caldo il tavolo della casa, con Gabriel ed Elias seduti l'uno di fronte all'altro oppure leggermente di lato. Noah è dall'altra parte della stanza, a terra, impegnato in un gioco che ormai non guarda davvero. Le battute restano nel testo della pagina: nell'immagine conta che Gabriel ascolti senza incalzare, Elias non spieghi e la sera continui oltre le finestre senza figura o effetto aggiunto."
+
+canon_additions_todo:
+  - location: piazza_villaggio
+    note: "La s11 richiede una variante visiva coerente della Piazza durante la Festa del Raccolto: disposizione dei banchi sotto l'Albero Vecchio, Panca di Pietra, banco di Fiamma, banco provvisorio di Bartolo, chiusura al crepuscolo e lanterne ai bordi. Verificare se esiste una veduta canonica sufficiente prima delle generazioni."
+    priority: high
+  - character: mercato_del_mezzogiorno
+    note: "Le Vecchie del Mercato tornano come firma narrativa centrale in h05-h06: restano tre, non nominate, sedute sulla Panca di Pietra. Serve verificare disponibilità di prompt e reference canoniche del collettivo senza promuovere in autonomia singole Vecchie a entità."
+    priority: high
+  - object: coni_dipinti_festa_raccolto_s11
+    note: "I coni di carta dipinti sono centrali in h03, h06-h08 e devono restare coerenti per carta, motivi, scala e numero. Ray deve decidere se vanno promossi a oggetto canonico oppure mantenuti come prop narrativo non catalogato prima della generazione."
+    priority: high
+  - object: frutti_oltre_mare_s11
+    note: "Il cesto di Bartolo introduce frutti che non crescono sull'isola, con colori fra rosa, viola e giallo ma senza specie definita. Prima della generazione, decidere se la relativa libertà va formalizzata in una scheda o in una reference di prop per evitare che vengano confusi con frutti già canonici."
+    priority: medium
+  - location: casa_fratelli_interno
+    note: "La chiusura h10b torna nell'interno della casa dei fratelli, ancora non cartografato e già segnalato in s10. Servono almeno firme minime della stanza con tavolo e lampada per impedire invenzioni scenografiche."
+    priority: high
